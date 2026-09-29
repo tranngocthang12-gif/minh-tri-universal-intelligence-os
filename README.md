@@ -2,6 +2,10 @@
 
 **v0.1: walking skeleton của Tầng 1.** Tầng 1 giữ cách học, phản biện, dự đoán và giới hạn quyền. Tầng 2 là các miền chuyên ngành có thể gắn vào sau. Bản này chạy offline bằng Python 3.10+, không cần API key hay gói Python bên ngoài.
 
+## Cửa cộng tác bốn AI
+
+ChatGPT, Claude, Gemini và Grok có thể cùng đóng góp **qua repo GitHub này**: mỗi bên làm trên nhánh/PR riêng từ cùng mốc `main`, người khác phản biện và một người thứ ba phân xử trên bằng chứng. Cửa sổ chat hiện tại không tự đưa ba AI bên ngoài vào như bốn người tham gia trực tiếp. Bản này chưa kết nối API của họ hay xác thực ID nhà cung cấp. Xem [quy trình bốn AI](docs/FOUR_AI_COLLABORATION.md) và [mẫu PR](.github/pull_request_template.md).
+
 ## Chạy nhanh trên Windows
 
 Giải nén dự án, mở Command Prompt trong thư mục này và chạy thử **một lệnh**:

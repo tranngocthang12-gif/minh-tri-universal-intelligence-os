@@ -1,0 +1,22 @@
+name: Tier 1 tests
+
+"on":
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Compile and run guarded flow tests
+        run: |
+          python -m compileall -q src
+          PYTHONPATH=src python -m unittest discover -s tests -v
