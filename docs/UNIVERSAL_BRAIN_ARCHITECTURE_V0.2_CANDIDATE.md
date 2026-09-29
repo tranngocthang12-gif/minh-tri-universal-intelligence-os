@@ -708,10 +708,10 @@ No real-world superiority claim before this evidence exists.
 
 **Changed in this R4.5 target:** AI Commons cardinality is restored to elastic N-AI. The runtime no longer requires four occupied/distinct-family slots to freeze; it records participant and independent-family counts separately while preserving provider-family separation where critique/adjudication contracts require independence.
 
-**Structurally verified on the previous head:** Python 3.10/3.12 CI, 65 tests, end-to-end Core → R3 → R4 → workcell → R2 handoff → recompute continuity. The exact final architecture target must rerun the same CI before experiment repin.
+**Structurally verified on the pinned R4.5 architecture target `1c8c541ec2b4f545417ccef181ead0725c95b16b`:** GitHub Actions run `36605259870` passed on Python 3.10/3.12 with 67 tests, including elastic N=1, N=3, same-family independence accounting, and the existing cross-layer continuity suite.
 
 **Designed but not implemented/validated as active capability:** R5 skill lifecycle/meta-learning scorecards, provider scorecards/champion promotion, explicit Tier 3 runtime, cross-domain transfer validation, authenticated provider/Owner identity and real provider dispatch.
 
 **Real-world effectiveness:** `HOLD`. No current result proves an optimal AI count, multi-AI superiority, semantic truth, or real business value.
 
-**Next architecture gate:** run exact-target CI, repin the independent architecture review to that exact target, adjudicate material findings by evidence/test, then decide whether R5 may open in SHADOW.
+**Next architecture gate:** collect available blind provider reviews on the pinned target, adjudicate material findings by evidence/test, then decide whether R5 may open in SHADOW.
