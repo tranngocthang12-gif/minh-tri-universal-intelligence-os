@@ -48,7 +48,7 @@ Trạng thái hiện tại là `SHADOW`: [Core Protection Contract](docs/CORE_PR
 ```json
 {
   "type": "register_provider",
-  "data": {"id": "researcher_a", "name": "Researcher A", "kind": "MODEL"}
+  "data": {"id": "researcher_a", "name": "Researcher A", "kind": "MODEL", "family_id": "provider_family_a"}
 }
 ```
 
