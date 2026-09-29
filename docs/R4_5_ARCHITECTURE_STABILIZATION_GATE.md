@@ -2,7 +2,7 @@
 
 **Owner:** Trần Ngọc Thắng  
 **Status:** `CANDIDATE / UNDER TEST / NOT MERGED`  
-**Purpose:** Stabilize the brain, architecture memory, four-AI workcell and cross-chat continuity before R5 Skill Lifecycle + Meta-Learning.
+**Purpose:** Stabilize the brain, architecture memory, elastic N-AI workcell and cross-chat continuity before R5 Skill Lifecycle + Meta-Learning.
 
 ## Why R4.5 exists
 
@@ -18,8 +18,9 @@ The durable interpretation is:
 MINH TRÍ = CANONICAL BRAIN
 AI = REPLACEABLE COGNITIVE PROVIDER
 
-FOUR WORKCELL SLOTS = STABLE
-OCCUPANT MODEL/PROVIDER = REPLACEABLE
+WORKCELL PARTICIPANTS = N PER TASK
+MODEL/PROVIDER = REPLACEABLE
+PARTICIPANT COUNT != INDEPENDENT FAMILY COUNT
 
 THREE LOGICAL FUNCTIONS = PROPOSE / CRITIQUE / ADJUDICATE
 TRUTH != MAJORITY VOTE
@@ -30,7 +31,7 @@ BELONG TO MINH TRÍ, NOT TO A CHAT
 
 ## Hardened in the R4.5 candidate
 
-1. Project Law v0.2 candidate records four stable AI slots with replaceable occupants.
+1. Project Law v0.2 candidate records an elastic N-participant AI workcell with replaceable occupants and explicit independence accounting.
 2. Bootstrap/AGENTS require v0.2 architecture + continuity contract + exact current handoff before continuation.
 3. Brain Manifest pins restored v0.2, continuity, R1, R2, R3 and R4 contracts.
 4. Canonical Core provider registry includes `family_id`; proposer/critic/adjudicator family separation is enforced.
@@ -39,8 +40,8 @@ BELONG TO MINH TRÍ, NOT TO A CHAT
 7. All primary ledgers share one project writer lock; cross-ledger service validation and append happen under the shared lock.
 8. Canonical Task packet exposes a `continuation_fingerprint`; every worker must acknowledge the current packet before acquiring a lease.
 9. Explicit handoff records decisions, unknowns, blockers, verification, scope, limitations and exact next action. Terminal completion now creates an equivalent structured fingerprinted completion receipt.
-10. A separate four-seat workcell ledger requires S1-S4, distinct provider families and four blind contribution hashes before reveal.
-11. Replacement before reveal discards the replaced seat's blind contribution; replacement after reveal is explicitly marked as non-blind.
+10. The workcell ledger accepts task-specific N participants. Blind freeze requires a contribution from every currently assigned participant; provider-family diversity is measured and reported, not a fixed cardinality gate.
+11. Replacement before blind freeze discards the replaced slot's contribution; replacement after reveal is explicitly marked as non-blind.
 
 ## Mandatory finish/handoff sequence
 
@@ -74,12 +75,12 @@ READ LAW
 The following must remain visible until closed by evidence:
 
 - **Ledger schema/migration discipline:** `PASS STRUCTURAL FOR CURRENT R4.5 CONTRACTS`. Core pre-`family_id` history has a non-destructive migration verifier; Task/Epistemic/Governor/Workcell command shapes are frozen by schema-tripwire tests. Any future schema edit must deliberately update migration/compatibility evidence; this does not pre-implement future migrations.
-- **End-to-end cross-layer continuity:** `PASS STRUCTURAL` at exact head `e15ddb7a9f0801c02281ced0fd2c5ad2113a465c`: Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → four-seat blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT; all ledgers replay.
+- **End-to-end cross-layer continuity:** previous exact-head fixture PASS; the final elastic-N architecture target must rerun Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → N-AI blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT with all ledgers replayed.
 - **Independent architecture review:** current work has strong incumbent/self-review but no completed independent multi-provider blind architecture review.
-- **Multi-AI experiment:** v0.1 is superseded/HOLD. v0.2 now separates blind Round A from directed Round B, freezes incumbent baseline and pins packet/baseline blob SHAs. Collection has not yet happened; official four-seat review still awaits four distinct provider families.
-- **Official Arena↔Workcell route:** `PASS STRUCTURAL AT SERVICE/CLI BOUNDARY`. `FourSeatWorkcellService.submit_arena` and `workcell arena-apply` require a REVEALED 4/4 session and a current seat occupant. Direct Arena remains a low-level compatibility/replay surface; using it does not constitute official AI Commons execution.
+- **Multi-AI experiment:** v0.1 is superseded/HOLD. The review protocol must be repinned to the final R4.5 architecture target. Collection uses however many eligible independent providers are actually available; actual participant/family counts are provenance, not a truth vote.
+- **Official Arena↔Workcell route:** previous service/CLI boundary PASS; the final target must rerun it. `ElasticWorkcellService.submit_arena` and `workcell arena-apply` require a REVEALED session and a current participant. Direct Arena remains a low-level compatibility/replay surface.
 - **Provider/Owner identity:** still self-declared/unverified.
-- **Real-world effectiveness:** no evidence yet that four-AI workcell outperforms simpler baselines on cost/error/outcome.
+- **Real-world effectiveness:** no evidence yet about the optimal participant count or whether multi-AI outperforms simpler baselines on cost/error/outcome.
 
 ## R5 opening rule
 
