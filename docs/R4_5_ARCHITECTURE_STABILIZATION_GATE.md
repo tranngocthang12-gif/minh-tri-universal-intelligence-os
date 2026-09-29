@@ -38,7 +38,7 @@ BELONG TO MINH TRÍ, NOT TO A CHAT
 6. R4 `SATISFIED` requires resolved linked unknowns and evidence from the component's own allowlist or active linked L2+ state.
 7. All primary ledgers share one project writer lock; cross-ledger service validation and append happen under the shared lock.
 8. Canonical Task packet exposes a `continuation_fingerprint`; every worker must acknowledge the current packet before acquiring a lease.
-9. Explicit handoff records decisions, unknowns, blockers, verification, scope, limitations and exact next action.
+9. Explicit handoff records decisions, unknowns, blockers, verification, scope, limitations and exact next action. Terminal completion now creates an equivalent structured fingerprinted completion receipt.
 10. A separate four-seat workcell ledger requires S1-S4, distinct provider families and four blind contribution hashes before reveal.
 11. Replacement before reveal discards the replaced seat's blind contribution; replacement after reveal is explicitly marked as non-blind.
 
@@ -73,10 +73,11 @@ READ LAW
 
 The following must remain visible until closed by evidence:
 
-- **Ledger schema/migration discipline for R2-R4/workcell:** Arena legacy migration exists, but every new mutable ledger needs versioned compatibility fixtures/migration policy before canonical schema evolution.
-- **End-to-end R1→R4 continuity test:** one deterministic scenario must traverse Goal → R3 Unknown → R4 SELECT → R2 Task → checkpoint/handoff → outcome/review → R3 update → R4 recompute.
+- **Ledger schema/migration discipline:** policy is now pinned in `docs/LEDGER_SCHEMA_COMPATIBILITY_V0.1.md`, but frozen compatibility fixtures/migration readers are still required for Core family-schema change and future Task/Epistemic/Governor/Workcell evolution.
+- **End-to-end cross-layer continuity:** `PASS STRUCTURAL` at exact head `e15ddb7a9f0801c02281ced0fd2c5ad2113a465c`: Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → four-seat blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT; all ledgers replay.
 - **Independent architecture review:** current work has strong incumbent/self-review but no completed independent multi-provider blind architecture review.
-- **Multi-AI experiment protocol v0.1:** HOLD after protocol critique; a truly blind Round A, frozen incumbent baseline, packet hash/provenance and executable BLOCKER/HIGH reproducers are still required before collection.
+- **Multi-AI experiment:** v0.1 is superseded/HOLD. v0.2 now separates blind Round A from directed Round B, freezes incumbent baseline and pins packet/baseline blob SHAs. Collection has not yet happened; official four-seat review still awaits four distinct provider families.
+- **Official Arena↔Workcell enforcement:** four-seat workcell is structurally enforced in its own ledger, but low-level Arena proposal/critique/adjudication submissions are not yet cryptographically bound to a REVEALED four-seat session. Official policy requires the workcell, but low-level bypass remains a runtime gap.
 - **Provider/Owner identity:** still self-declared/unverified.
 - **Real-world effectiveness:** no evidence yet that four-AI workcell outperforms simpler baselines on cost/error/outcome.
 
