@@ -44,7 +44,7 @@ Một task AI phải ghim tối thiểu ba mốc độc lập về ý nghĩa:
 - `brain_fingerprint`: SHA-256 của manifest các artifact lõi được chỉ định;
 - `runtime_state_head`: đầu chuỗi event của trạng thái runtime lúc task mở.
 
-Manifest v0.1 bao phủ: `PHILOSOPHY`, `ARCHITECTURE`, hợp đồng bảo vệ lõi, kiến trúc Universal Brain, AI Commons, `PROJECT_STATE` và `ROADMAP`. Thay đổi bất kỳ artifact này hoặc runtime head làm task cũ stale trong SHADOW.
+Manifest v0.1 bao phủ `PROJECT_LAW.md`, `BOOTSTRAP.md`, `AGENTS.md`, `PHILOSOPHY`, `ARCHITECTURE`, hợp đồng bảo vệ lõi, kiến trúc Universal Brain, AI Commons, `PROJECT_STATE` và `ROADMAP`. Thay đổi bất kỳ artifact này hoặc runtime head làm task cũ stale trong SHADOW.
 
 Hash/schema chỉ kiểm **đúng cấu trúc và đúng phiên bản**. Nó không chứng minh nội dung đúng, không xác thực danh tính Owner/provider và không chứng minh Git revision do người nhập khai là revision thật nếu chạy ngoài một Git checkout.
 
@@ -75,7 +75,8 @@ Tứ Diệu Đế/Bát Chánh Đạo có thể làm lăng kính ứng dụng hi�
 - thay một brain artifact → task cũ bị chặn;
 - đổi Git revision → task cũ bị chặn;
 - đổi runtime core head → task cũ bị chặn;
-- task packet xuất được manifest/fingerprint nhưng chỉ gửi evidence được phép;
+- task packet xuất được Project Law + Bootstrap + manifest/fingerprint nhưng chỉ gửi evidence được phép;
+- participant chưa có acknowledgement receipt đúng Law/Bootstrap/Brain/Task bị chặn trước proposal/critique/adjudication;
 - thay model/participant không làm thay brain contract;
 - không có đường từ SHADOW output sang canonical lesson hoặc external action.
 
