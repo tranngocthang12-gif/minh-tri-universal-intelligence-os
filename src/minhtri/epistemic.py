@@ -405,66 +405,70 @@ class EpistemicService:
                 raise GateError("Epistemic evidence cannot cross domain boundaries")
 
     def apply(self, command: dict) -> dict:
-        core_state, _, _ = self.core.verify()
-        if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
-            raise GateError("Command must contain exactly type and data object")
-        command = copy.deepcopy(command)
-        kind, d = command["type"], command["data"]
-        state, _, _ = self.ledger.verify()
+        self.ledger.acquire_project_lock()
+        try:
+                core_state, _, _ = self.core.verify()
+            if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+                raise GateError("Command must contain exactly type and data object")
+            command = copy.deepcopy(command)
+            kind, d = command["type"], command["data"]
+            state, _, _ = self.ledger.verify()
 
-        if kind == "register_item":
-            ref(core_state, "domains", d.get("domain_id"))
-        elif kind == "support_item":
-            item = ref(state, "items", d.get("item_id"))
-            self._same_domain_evidence(core_state, item["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
-        elif kind == "link_prediction":
-            item = ref(state, "items", d.get("item_id"))
-            prediction = ref(core_state, "predictions", d.get("prediction_id"))
-            claim = ref(core_state, "claims", prediction["claim_id"])
-            if prediction["domain_id"] != item["domain_id"] or claim["domain_id"] != item["domain_id"]:
-                raise GateError("Prediction cannot cross epistemic domain boundaries")
-            if prediction["status"] not in ("FROZEN", "RESOLVED"):
-                raise GateError("L3 requires a frozen preregistered prediction")
-            d["claim_id"] = prediction["claim_id"]
-        elif kind == "record_validation":
-            item = ref(state, "items", d.get("item_id"))
-            if not item.get("prediction"):
-                raise GateError("Validation requires a linked prediction")
-            resolution = ref(core_state, "resolutions", d.get("resolution_id"))
-            if resolution["prediction_id"] != item["prediction"]["prediction_id"]:
-                raise GateError("Resolution does not belong to the linked prediction")
-            evidence = ref(core_state, "evidence", resolution["evidence_id"])
-            source = ref(core_state, "sources", evidence["source_id"])
-            if evidence["domain_id"] != item["domain_id"]:
-                raise GateError("Validation evidence cannot cross domain boundaries")
-            if source["kind"] == "SYNTHETIC":
-                raise GateError("L5 validation requires non-synthetic observed outcome evidence")
-            d["outcome_evidence_id"] = evidence["id"]
-            d["verification_status"] = evidence.get("verification", "UNKNOWN")
-        elif kind == "link_critique":
-            item = ref(state, "items", d.get("item_id"))
-            if not item.get("prediction"):
-                raise GateError("Critique requires a linked prediction")
-            review = ref(core_state, "reviews", d.get("review_id"))
-            if review["claim_id"] != item["prediction"]["claim_id"]:
-                raise GateError("Review belongs to another claim")
-            if review["domain_id"] != item["domain_id"]:
-                raise GateError("Critique cannot cross domain boundaries")
-            d["critic_provider_id"] = review["critic_provider_id"]
-            d["verdict"] = review["verdict"]
-        elif kind == "revalidate_item":
-            item = ref(state, "items", d.get("item_id"))
-            self._same_domain_evidence(core_state, item["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
-        elif kind == "register_unknown":
-            ref(core_state, "domains", d.get("domain_id"))
-        elif kind == "resolve_unknown":
-            unknown = ref(state, "unknowns", d.get("unknown_id"))
-            self._same_domain_evidence(core_state, unknown["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
-        elif kind == "record_provider_error":
-            ref(core_state, "domains", d.get("domain_id"))
-            self._same_domain_evidence(core_state, d["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
+            if kind == "register_item":
+                ref(core_state, "domains", d.get("domain_id"))
+            elif kind == "support_item":
+                item = ref(state, "items", d.get("item_id"))
+                self._same_domain_evidence(core_state, item["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
+            elif kind == "link_prediction":
+                item = ref(state, "items", d.get("item_id"))
+                prediction = ref(core_state, "predictions", d.get("prediction_id"))
+                claim = ref(core_state, "claims", prediction["claim_id"])
+                if prediction["domain_id"] != item["domain_id"] or claim["domain_id"] != item["domain_id"]:
+                    raise GateError("Prediction cannot cross epistemic domain boundaries")
+                if prediction["status"] not in ("FROZEN", "RESOLVED"):
+                    raise GateError("L3 requires a frozen preregistered prediction")
+                d["claim_id"] = prediction["claim_id"]
+            elif kind == "record_validation":
+                item = ref(state, "items", d.get("item_id"))
+                if not item.get("prediction"):
+                    raise GateError("Validation requires a linked prediction")
+                resolution = ref(core_state, "resolutions", d.get("resolution_id"))
+                if resolution["prediction_id"] != item["prediction"]["prediction_id"]:
+                    raise GateError("Resolution does not belong to the linked prediction")
+                evidence = ref(core_state, "evidence", resolution["evidence_id"])
+                source = ref(core_state, "sources", evidence["source_id"])
+                if evidence["domain_id"] != item["domain_id"]:
+                    raise GateError("Validation evidence cannot cross domain boundaries")
+                if source["kind"] == "SYNTHETIC":
+                    raise GateError("L5 validation requires non-synthetic observed outcome evidence")
+                d["outcome_evidence_id"] = evidence["id"]
+                d["verification_status"] = evidence.get("verification", "UNKNOWN")
+            elif kind == "link_critique":
+                item = ref(state, "items", d.get("item_id"))
+                if not item.get("prediction"):
+                    raise GateError("Critique requires a linked prediction")
+                review = ref(core_state, "reviews", d.get("review_id"))
+                if review["claim_id"] != item["prediction"]["claim_id"]:
+                    raise GateError("Review belongs to another claim")
+                if review["domain_id"] != item["domain_id"]:
+                    raise GateError("Critique cannot cross domain boundaries")
+                d["critic_provider_id"] = review["critic_provider_id"]
+                d["verdict"] = review["verdict"]
+            elif kind == "revalidate_item":
+                item = ref(state, "items", d.get("item_id"))
+                self._same_domain_evidence(core_state, item["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
+            elif kind == "register_unknown":
+                ref(core_state, "domains", d.get("domain_id"))
+            elif kind == "resolve_unknown":
+                unknown = ref(state, "unknowns", d.get("unknown_id"))
+                self._same_domain_evidence(core_state, unknown["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
+            elif kind == "record_provider_error":
+                ref(core_state, "domains", d.get("domain_id"))
+                self._same_domain_evidence(core_state, d["domain_id"], _ids(d.get("evidence_ids"), "evidence_ids"))
 
-        return self.ledger.apply(command)
+            return self.ledger.apply(command, project_lock_held=True)
+        finally:
+            self.ledger.release_project_lock()
 
     def status(self, now: str | None = None) -> dict:
         state, count, head = self.ledger.verify()
