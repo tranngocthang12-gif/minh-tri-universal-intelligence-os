@@ -264,8 +264,9 @@ class ArenaService:
         self._brain()
         self.ledger.init()
 
-    def apply(self, command: dict) -> dict:
-        self.ledger.acquire_project_lock()
+    def apply(self, command: dict, *, project_lock_held: bool = False) -> dict:
+        if not project_lock_held:
+            self.ledger.acquire_project_lock()
         try:
             core_state, _, runtime_state_head = self.core.verify()
             brain = self._brain()
@@ -302,7 +303,8 @@ class ArenaService:
                 self._assert_current_task(task, runtime_state_head, brain)
             return self.ledger.apply(command, project_lock_held=True)
         finally:
-            self.ledger.release_project_lock()
+            if not project_lock_held:
+                self.ledger.release_project_lock()
 
     def status(self) -> dict:
         self.core.verify()
