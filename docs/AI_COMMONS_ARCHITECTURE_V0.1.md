@@ -1,10 +1,10 @@
-# MINH TRÍ AI Commons — kiến trúc workcell bốn ghế AI thay thế được
+# MINH TRÍ AI Commons — kiến trúc workcell N-AI co giãn, AI thay thế được
 
 **Loại:** quyết định kiến trúc ứng viên · **Trạng thái:** `SHADOW_ONLY` · **Ngày:** 2026-09-29
 
 ## 1. Quyết định sản phẩm
 
-MINH TRÍ hoàn thiện mục tiêu, hệ tư tưởng, lõi học và cổng Owner trước; sau đó AI đủ điều kiện có thể **chiếm một trong bốn ghế S1–S4** của workcell nhiệm vụ. Bốn ghế là cấu hình vận hành ổn định do Owner làm rõ; danh tính/model/provider trên ghế không cố định và có thể thay. Nhiều AI là lực lượng nhận việc, không phải nhiều bộ não sở hữu luật dự án. Không xem bốn PR/bốn persona/bốn lượt trả lời của cùng một provider family là bốn đóng góp độc lập.
+MINH TRÍ hoàn thiện mục tiêu, hệ tư tưởng, lõi học và cổng Owner trước; sau đó bất kỳ AI đủ điều kiện nào cũng có thể tham gia một nhiệm vụ có giới hạn. Workcell dùng **N participant theo task**, không hard-code số ghế hay tên provider. Nhiều AI là lực lượng nhận việc, không phải nhiều bộ não sở hữu luật dự án. Participant count và independent provider-family count phải được ghi riêng; nhiều persona/lượt trả lời cùng family không tạo thêm độc lập.
 
 GitHub là nơi kiểm soát phiên bản và xét thay đổi của **phần mềm**. AI Commons là giao thức **thực thi nhiệm vụ** bên trong sản phẩm. Một AI có thể dùng API, agent A2A, công cụ tương thích hoặc đầu ra được người dùng chuyển vào; mọi đường đều phải nộp cùng hợp đồng dữ liệu và qua cùng cổng.
 
@@ -24,7 +24,7 @@ Tứ Diệu Đế/Bát Chánh Đạo ở đây chỉ là lăng kính ứng dụn
 ```text
 OWNER / CONSTITUTION / TIER 1 (canonical)
              ↓ task + permission + bounded context
-AI COMMONS GATEWAY → FOUR SLOTS S1–S4 (replaceable occupants)
+AI COMMONS GATEWAY → ELASTIC N PARTICIPANTS (replaceable)
              ↓ proposals / critiques / abstentions
 DETERMINISTIC VALIDATION → ADJUDICATION → OWNER GATE
              ↓ only accepted, scoped receipts
@@ -57,7 +57,7 @@ Một ID khác của cùng provider family không thành phản biện độc l�
 - `CONTROLLED`: sau khi Tầng 1 có kiểm chứng thật, xác thực Owner và provider, nguồn/rights/privacy gate, budget governor và benchmark; chỉ nhiệm vụ cụ thể được Owner mở.
 - `ACTIVE`: mở từng capability khi có thành tích qua thử nghiệm so với baseline, giám sát sai số và đường dừng/rollback. Không tự động mở toàn bộ quyền.
 
-Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên rủi ro, chia sẻ dữ liệu nhạy cảm hay mở quyền tác động bên ngoài. Cổng `SHADOW` không được mô tả là bốn AI đã kết nối.
+Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên rủi ro, chia sẻ dữ liệu nhạy cảm hay mở quyền tác động bên ngoài. Cổng `SHADOW` không được mô tả là live multi-AI nếu provider chưa thật sự được kết nối/xác thực.
 
 ## 6. Giao thức ngoài và kinh nghiệm tham khảo
 
@@ -74,7 +74,7 @@ Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên 
 | Lỗi | Cổng |
 | --- | --- |
 | Prompt injection trong tài liệu | Đầu vào là dữ liệu; chỉ task/constitution có thẩm quyền, tool scope ở host |
-| Một model đóng ba ghế | Provider family tách vai; không đủ ghế thì `HOLD` |
+| Nhiều participant cùng family bị trình bày như nhiều nguồn độc lập | Ghi riêng participant count và independent-family count; không quảng bá độc lập giả |
 | Chọn một critique thuận lợi, giấu critique bất lợi | Trọng tài phải nhìn toàn bộ phản biện của proposal |
 | Tự nới quyền qua task packet | Cổng đọc trạng thái core và risk floor; task chỉ yêu cầu quyền trong giới hạn Owner |
 | Đổi model làm mất trí nhớ | Mốc core/task/fingerprint và receipt nằm ở tổ chức, không trong phiên model |
@@ -84,27 +84,25 @@ Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên 
 
 ## 8. Điều kiện nghiệm thu bản `SHADOW`
 
-1. Workcell chính thức có đúng bốn slot S1–S4; thay model/provider occupant không được yêu cầu sửa luật lõi.
+1. Workcell dùng N participant theo task; thêm/bớt participant hoặc đổi provider không yêu cầu sửa luật lõi.
 2. Cùng một task fingerprint, Git brain revision, brain manifest fingerprint, Law hash, Bootstrap hash, runtime state head và danh sách evidence cho phép; sai bất kỳ mốc nào bị từ chối.
 3. Participant phải có Brain Acknowledgement Receipt cho exact task trước khi proposal/critique/adjudication được nhận; receipt không chứng minh semantic understanding.
-3. Cùng provider family không ngồi hai ghế; thiếu ba family thì không có adjudication đủ điều kiện.
-4. Critique `CHALLENGE`/`ABSTAIN` không bị lờ đi để tạo `CANDIDATE`.
-5. Miền khác, dữ liệu không được phép, task hết hiệu lực hoặc cổng chưa mở đều fail closed.
-6. Sổ event khôi phục được sau cache lỗi, nhưng self-declared identity và source chưa được xác thực nên không được gọi là live multi-AI.
-7. Đổi bất kỳ artifact lõi trong Brain Manifest, đổi Git revision hoặc đổi runtime state head làm task cũ stale; task phải được mở lại từ trạng thái hiện hành.
-
-Mốc kế tiếp sau `SHADOW`: một pilot read-only có Owner cấp quyền, đo một việc thật so với một AI/baseline, ghi cả chi phí và sai số, rồi mới xét tích hợp provider API.
-
+4. Participant count và independent provider-family count phải được báo cáo riêng. Same-family participation được phép ở workcell, nhưng không tạo independent evidence; Arena/Core vẫn áp family separation khi contract yêu cầu critique/adjudication độc lập.
+5. Blind freeze chỉ yêu cầu mọi participant đã được giao trong session hiện tại nộp contribution; không có cổng `4/4`.
+6. Critique `CHALLENGE`/`ABSTAIN` không bị lờ đi để tạo `CANDIDATE`.
+7. Miền khác, dữ liệu không được phép, task hết hiệu lực hoặc cổng chưa mở đều fail closed.
+8. Sổ event khôi phục được sau cache lỗi, nhưng self-declared identity và source chưa được xác thực nên không được gọi là live multi-AI.
+9. Đổi bất kỳ artifact lõi trong Brain Manifest, đổi Git revision hoặc đổi runtime state head làm task cũ stale; task phải được mở lại từ trạng thái hiện hành.
 
 ## 9. Official submission route
 
 Sau khi workcell đạt `REVEALED`, proposal/critique/adjudication chính thức phải đi qua:
 
 ```text
-workcell S1-S4
-→ 4/4 blind freeze
+elastic workcell P1..PN
+→ freeze all currently assigned blind contributions
 → reveal
-→ FourSeatWorkcellService.submit_arena
+→ ElasticWorkcellService.submit_arena
 → Arena structural gates
 ```
 
@@ -112,4 +110,4 @@ CLI tương ứng:
 
 `minhtri ... workcell arena-apply <session_id> <command.json>`
 
-Direct `arena apply` được giữ để replay/compatibility và test low-level reducer; nó **không phải bằng chứng** rằng official four-seat workcell protocol đã được thực hiện.
+Direct `arena apply` được giữ để replay/compatibility và test low-level reducer; nó **không phải bằng chứng** rằng official N-AI workcell protocol đã được thực hiện.
