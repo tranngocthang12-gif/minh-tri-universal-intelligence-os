@@ -13,7 +13,7 @@ For every mutable ledger:
 - Canonical Task
 - Epistemic
 - Bottleneck Governor
-- Four-seat Workcell
+- Elastic N-AI Workcell
 - future Skill/Meta-Learning ledgers
 
 the project must maintain an explicit schema generation and compatibility decision.
@@ -40,7 +40,7 @@ Before changing a command shape, initial state shape, reducer meaning or fingerp
 | Task | `task-v1-continuity-hardened` | freeze fixture at R4.5 before future change |
 | Epistemic | `epistemic-v1-reopen-hardened` | freeze fixture at R4.5 before future change |
 | Governor | `governor-v1-relevance-hardened` | freeze fixture at R4.5 before future change |
-| Workcell | `workcell-v1-four-seat` | first generation; freeze fixture before v2 |
+| Workcell | `workcell-v1-elastic-n` | command shape preserved; legacy fixed-four events replay; freeze fixture before future shape change |
 | Skill/Meta | not created | must start versioned |
 
 ## R5 gate
@@ -60,3 +60,7 @@ R4.5 adds:
 Therefore, a future edit to these command contracts must deliberately update the compatibility test and migration policy; silent schema drift should fail CI.
 
 This is a **forward-change guard**, not evidence that every future migration is already implemented.
+
+## Elastic workcell semantic transition
+
+R4.5 changes Workcell cardinality from fixed four to task-specific N without changing event command shapes. Legacy S1-S4 labels remain accepted for replay/backward compatibility; new lower-case slot labels may be added dynamically. Provider-family provenance is preserved; family uniqueness is reported rather than used as a universal freeze gate.
