@@ -85,6 +85,8 @@ A voluntary release records a checkpoint-derived handoff and leaves the task OPE
 
 For normal intentional transfer, use the structured `handoff_task` path after checkpointing. It records decisions, unknowns, blockers, verification, scope, limitations and the exact next action, then fingerprints the receipt and releases the lease.
 
+For terminal completion, `complete_task` must likewise create a structured `completion_receipt` containing the accepted checkpoint, artifacts/evidence, decisions, remaining unknowns/blockers, verification, scope, limitations and completion summary. Completion without this fingerprinted receipt is not a valid terminal handoff.
+
 The finish order is:
 
 ```text
@@ -142,8 +144,9 @@ R2 PASS requires:
 7. stale checkpoint writes fail closed;
 8. wrong worker cannot checkpoint/complete;
 9. blocked goal or stale Brain blocks continuation;
-10. completed task is terminal;
-11. Python 3.10/3.12 CI passes.
+10. terminal completion contains a structured fingerprinted completion receipt;
+11. completed task is terminal and no continuation acknowledgement is required;
+12. Python 3.10/3.12 CI passes.
 
 ## Not yet implemented
 
