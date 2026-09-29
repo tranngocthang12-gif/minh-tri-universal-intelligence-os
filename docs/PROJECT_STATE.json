@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "R3_CI_PASS_THEN_GOAL_DECOMPOSITION_AND_BOTTLENECK_R4",
+  "next_checkpoint": "R4_CI_PASS_THEN_SKILL_LIFECYCLE_AND_META_LEARNING_R5",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -34,9 +34,9 @@
     "arena-v1-core-constitution",
     "arena-v2-github-brain"
   ],
-  "arena_migration_status": "R1_CANDIDATE_UNDER_TEST",
+  "arena_migration_status": "R1_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
   "canonical_task_contract": "docs/CANONICAL_TASK_HANDOFF_V0.1.md",
-  "canonical_task_status": "R2_CANDIDATE_UNDER_TEST",
+  "canonical_task_status": "R2_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
   "task_handoff_features": [
     "CHECKPOINT_SEQ_CAS",
     "LEASE",
@@ -45,7 +45,7 @@
     "BRAIN_LAW_STALENESS_GATE"
   ],
   "epistemic_contract": "docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md",
-  "epistemic_status": "R3_CANDIDATE_UNDER_TEST",
+  "epistemic_status": "R3_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
   "learning_maturity_runtime": "L0_TO_L6_EVIDENCE_DERIVED_L7_TO_L9_FUTURE_GATED",
   "unknown_registry": "IMPLEMENTED_IN_R3_CANDIDATE",
   "knowledge_reopen_triggers": [
@@ -57,5 +57,13 @@
     "POLICY_CHANGE",
     "ENVIRONMENT_CHANGE"
   ],
-  "provider_error_profile": "OBSERVATIONS_ONLY_NOT_SCORED"
+  "provider_error_profile": "OBSERVATIONS_ONLY_NOT_SCORED",
+  "bottleneck_contract": "docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md",
+  "bottleneck_status": "R4_CANDIDATE_UNDER_TEST",
+  "bottleneck_selection_method": "ORDINAL_LEXICOGRAPHIC_NO_CALIBRATED_SCORE",
+  "bottleneck_outputs": [
+    "SELECT",
+    "WAIT",
+    "HOLD_AMBIGUOUS"
+  ]
 }
