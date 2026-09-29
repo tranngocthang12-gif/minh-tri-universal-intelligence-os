@@ -21,7 +21,7 @@ def main():
     for name in ("01-domain-youtube", "02-goal-youtube"):
         core.apply(json.loads((project / "examples" / f"{name}.json").read_text(encoding="utf-8")))
 
-    arena = ArenaService(home, project / "docs" / "PHILOSOPHY.md")
+    arena = ArenaService(home, project)
     arena.init()
     for n in range(1, 5):
         arena.apply(command("register_participant", id=f"simulated{n}", family_id=f"testfamily{n}",
@@ -29,13 +29,14 @@ def main():
                             capabilities=["PROPOSE", "CRITIQUE", "ADJUDICATE"]))
 
     goal_id = "youtube-pilot"
-    fingerprint = arena.apply(command(
+    task = arena.apply(command(
         "open_task", id="sample_task", goal_id=goal_id,
         brief="Compare two hypothetical ways to measure a content experiment",
         acceptance="State a falsifiable claim and independent criticism",
         allowed_evidence_ids=[],
         expires_at=(datetime.now(timezone.utc) + timedelta(days=1)).isoformat(),
-    ))["state"]["tasks"]["sample_task"]["fingerprint"]
+    ))["state"]["tasks"]["sample_task"]
+    fingerprint = task["fingerprint"]
     arena.apply(command("submit_proposal", id="proposal1", task_id="sample_task",
                         participant_id="simulated1", task_fingerprint=fingerprint,
                         claim="Compare the two measurements on the same synthetic cohort",
@@ -53,6 +54,9 @@ def main():
                                   reason="An open challenge requires a real, independent test"))
     arena.ledger.verify()
     print(json.dumps({"phase": receipt["state"]["phase"], "participants": 4,
+                      "brain_revision": task["brain_revision"],
+                      "brain_fingerprint": task["brain_fingerprint"],
+                      "runtime_state_head": task["runtime_state_head"],
                       "task_fingerprint": fingerprint,
                       "adjudication": receipt["state"]["adjudications"]["decision1"]["outcome"],
                       "canonical_lessons": len(core.verify()[0]["lessons"]),
