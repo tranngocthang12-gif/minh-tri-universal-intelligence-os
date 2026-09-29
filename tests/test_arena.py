@@ -7,6 +7,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from minhtri.arena import ArenaService
+from minhtri.brain import BRAIN_ARTIFACTS
 from minhtri.cli import main
 from minhtri.core import GateError, Ledger
 
@@ -20,10 +21,15 @@ class ShadowArenaTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         root = Path(self.tmp.name)
-        self.constitution = root / "PHILOSOPHY.md"
-        self.constitution.write_text("Owner-approved candidate for shadow test", encoding="utf-8")
+        self.brain_root = root / "repo"
+        for index, relative in enumerate(BRAIN_ARTIFACTS, start=1):
+            path = self.brain_root / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            text = "Owner-approved candidate for shadow test" if relative == "docs/PHILOSOPHY.md" else f"brain-artifact-{index}"
+            path.write_text(text, encoding="utf-8")
+        self.brain_revision = "a" * 40
         self.core = Ledger(root / "brain")
-        self.arena = ArenaService(root / "brain", self.constitution)
+        self.arena = ArenaService(root / "brain", self.brain_root, self.brain_revision)
         self.expiry = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()
 
     def ready(self, risk="NORMAL"):
@@ -111,16 +117,26 @@ class ShadowArenaTests(unittest.TestCase):
         with self.assertRaisesRegex(GateError, "frozen"):
             self.critique(actor="actor4", critique_id="late-critique")
 
-    def test_core_or_constitution_drift_blocks_old_task(self):
+    def test_runtime_or_any_brain_drift_blocks_old_task(self):
         self.ready()
         self.participants()
         self.fp = self.task()
-        self.constitution.write_text("changed constitution", encoding="utf-8")
-        with self.assertRaisesRegex(GateError, "stale"):
+        architecture = self.brain_root / "docs" / "ARCHITECTURE.md"
+        original = architecture.read_text(encoding="utf-8")
+        architecture.write_text("changed architecture", encoding="utf-8")
+        with self.assertRaisesRegex(GateError, "brain version is stale"):
             self.proposal()
-        self.constitution.write_text("Owner-approved candidate for shadow test", encoding="utf-8")
+        architecture.write_text(original, encoding="utf-8")
         self.core.apply(command("set_goal_status", goal_id="goal1", status="BLOCKED", reason="Owner stopped"))
-        with self.assertRaisesRegex(GateError, "stale"):
+        with self.assertRaisesRegex(GateError, "runtime state is stale"):
+            self.proposal()
+
+    def test_git_revision_drift_blocks_old_task(self):
+        self.ready()
+        self.participants()
+        self.fp = self.task()
+        self.arena.brain_revision = "b" * 40
+        with self.assertRaisesRegex(GateError, "brain version is stale"):
             self.proposal()
 
     def test_risk_and_context_are_derived_from_core(self):
@@ -132,6 +148,9 @@ class ShadowArenaTests(unittest.TestCase):
         self.assertEqual(task["budget_cap"], 0)
         self.assertEqual(task["mode"], "SHADOW")
         self.assertEqual(task["sensitivity"], "PUBLIC")
+        self.assertEqual(task["brain_revision"], self.brain_revision)
+        self.assertEqual(len(task["brain_fingerprint"]), 64)
+        self.assertEqual(len(task["runtime_state_head"]), 64)
         with self.assertRaisesRegex(GateError, "unexpected fields"):
             self.arena.apply(command("open_task", id="task2", goal_id="goal1", brief="Override",
                                      acceptance="No", allowed_evidence_ids=[], expires_at=self.expiry,
@@ -151,14 +170,16 @@ class ShadowArenaTests(unittest.TestCase):
         packet = self.arena.task_packet("task1")
         self.assertEqual([e["id"] for e in packet["evidence"]], ["evidence1"])
         self.assertEqual(packet["constitution"], "Owner-approved candidate for shadow test")
+        self.assertEqual(packet["brain"]["manifest"]["brain_revision"], self.brain_revision)
+        self.assertEqual([item["path"] for item in packet["brain"]["manifest"]["artifacts"]], list(BRAIN_ARTIFACTS))
         output = io.StringIO()
         with contextlib.redirect_stdout(output):
-            exit_code = main(["--home", str(self.core.home), "arena", "--constitution",
-                              str(self.constitution), "task", "task1"])
+            exit_code = main(["--home", str(self.core.home), "arena", "--brain-root", str(self.brain_root),
+                              "--brain-revision", self.brain_revision, "task", "task1"])
         self.assertEqual(exit_code, 0)
         self.assertEqual(json.loads(output.getvalue()), packet)
-        self.constitution.write_text("changed", encoding="utf-8")
-        with self.assertRaisesRegex(GateError, "stale"):
+        (self.brain_root / "docs" / "ROADMAP.md").write_text("changed", encoding="utf-8")
+        with self.assertRaisesRegex(GateError, "brain version is stale"):
             self.arena.task_packet("task1")
 
 
