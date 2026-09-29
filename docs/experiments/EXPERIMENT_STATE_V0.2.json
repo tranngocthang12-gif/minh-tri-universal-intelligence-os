@@ -1,49 +1,25 @@
 {
-  "experiment_id": "ARCH-CORE-R4-PRE-R5-2026-09-29-V2",
-  "status": "PACKET_PINNED_AWAITING_FOUR_BLIND_PROVIDER_FAMILIES",
-  "frozen_target_sha": "50a0444ed20ae2415c9ee31e622a0b6b8575d4c9",
+  "experiment_id": "ARCH-CORE-R4_5-PRE-R5-2026-09-29-V2",
+  "status": "PACKET_PINNED_AWAITING_AVAILABLE_BLIND_PROVIDER_FAMILIES",
+  "frozen_target_sha": "1c8c541ec2b4f545417ccef181ead0725c95b16b",
   "round_a_packet_path": "docs/experiments/ARCHITECTURE_REVIEW_ROUND_A_BLIND_V0.2.md",
-  "round_a_packet_blob_sha": "b02d98d20961eeb165b2febc74ee66152e85362f",
+  "round_a_packet_blob_sha": "a40fa68f5dde689f2def86f3c645172f69e5983f",
   "round_b_packet_path": "docs/experiments/ARCHITECTURE_REVIEW_ROUND_B_DIRECTED_V0.2.md",
   "incumbent_baseline_path": "docs/experiments/INCUMBENT_ARCHITECTURE_REVIEW_BASELINE_V0.1.md",
   "incumbent_baseline_blob_sha": "14d7dc97280428188a1445d0a2c9bbef53fa5c91",
   "previous_protocol_v0_1": "SUPERSEDED_HOLD_DO_NOT_USE_FOR_BLIND_COLLECTION",
-  "seats": {
-    "S1": {
-      "provider_family": null,
-      "model": null,
-      "round_a_frozen": false,
-      "round_b_complete": false
-    },
-    "S2": {
-      "provider_family": null,
-      "model": null,
-      "round_a_frozen": false,
-      "round_b_complete": false
-    },
-    "S3": {
-      "provider_family": null,
-      "model": null,
-      "round_a_frozen": false,
-      "round_b_complete": false
-    },
-    "S4": {
-      "provider_family": null,
-      "model": null,
-      "round_a_frozen": false,
-      "round_b_complete": false
-    }
-  },
   "excluded_from_blind_seats": [
     {
       "provider_family": "OpenAI",
-      "reason": "INCUMBENT_CONTROL_FOR_THIS_EXPERIMENT"
+      "reason": "INCUMBENT_CONTROL_FOR_THIS_EXPERIMENT_NOT_BLIND_INDEPENDENT_REVIEW"
     },
     {
       "provider_family": "Anthropic",
-      "reason": "ONLY_THE_SPECIFIC_CLAUDE_PROTOCOL_CRITIQUE_SESSION_IS_EXCLUDED;A_FRESH_BLIND_SESSION_MAY_FILL_A_SEAT"
+      "reason": "ONLY_PRIOR_PROTOCOL_CRITIQUE_SESSION_EXCLUDED;FRESH_BLIND_SESSION_MAY_PARTICIPATE"
     }
   ],
   "truth_rule": "NO_MAJORITY_VOTE_EVIDENCE_TEST_ADJUDICATION",
-  "r5_gate": "HOLD_UNTIL_R4_5_AND_FOUR_SEAT_REVIEW_DISPOSITIONS"
+  "r5_gate": "HOLD_UNTIL_R4_5_REVIEW_DISPOSITIONS",
+  "participation_policy": "ELASTIC_N_NO_FIXED_MINIMUM_RECORD_ACTUAL_PARTICIPANT_AND_INDEPENDENT_FAMILY_COUNTS",
+  "participants": []
 }
