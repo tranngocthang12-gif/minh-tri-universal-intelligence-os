@@ -297,7 +297,26 @@ def epistemic_evolve(state: dict, command: dict, at: str) -> dict:
         if d["trigger"] not in REOPEN_TRIGGERS:
             raise GateError("Invalid reopen trigger")
         reason = string(d["reason"], "reason")
-        item["reopen_history"].append({"trigger": d["trigger"], "reason": reason, "at": at})
+        item["reopen_history"].append({
+            "trigger": d["trigger"],
+            "reason": reason,
+            "previous_effective_level": item["effective_level"],
+            "invalidated_chain": {
+                "understanding": copy.deepcopy(item.get("understanding")),
+                "prediction": copy.deepcopy(item.get("prediction")),
+                "application": copy.deepcopy(item.get("application")),
+                "validation": copy.deepcopy(item.get("validation")),
+                "critique": copy.deepcopy(item.get("critique")),
+            },
+            "at": at,
+        })
+        # Preserve historical evidence and highest demonstrated level, but invalidate
+        # the active reasoning chain. Revalidation must rebuild each downstream gate.
+        item["understanding"] = None
+        item["prediction"] = None
+        item["application"] = None
+        item["validation"] = None
+        item["critique"] = None
         item["status"] = "REOPENED"
         _refresh_maturity(item)
 
