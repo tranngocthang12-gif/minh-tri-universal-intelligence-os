@@ -265,40 +265,44 @@ class ArenaService:
         self.ledger.init()
 
     def apply(self, command: dict) -> dict:
-        core_state, _, runtime_state_head = self.core.verify()
-        brain = self._brain()
-        if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
-            raise GateError("Command must contain exactly type and data object")
-        command = copy.deepcopy(command)
-        kind, d = command["type"], command["data"]
-        if kind == "open_task":
-            need(d, "goal_id", "id", "brief", "acceptance", "allowed_evidence_ids", "expires_at")
-            if set(d) != {"goal_id", "id", "brief", "acceptance", "allowed_evidence_ids", "expires_at"}:
-                raise GateError("open_task input has unexpected fields")
-            goal = ref(core_state, "goals", d["goal_id"])
-            if goal["status"] != "OPEN":
-                raise GateError("Goal is blocked or closed")
-            domain = ref(core_state, "domains", goal["domain_id"])
-            for eid in _ids(d["allowed_evidence_ids"], "allowed_evidence_ids"):
-                evidence = ref(core_state, "evidence", eid)
-                source = ref(core_state, "sources", evidence["source_id"])
-                if evidence["domain_id"] != goal["domain_id"] or source["kind"] != "SYNTHETIC" or source["rights_status"] != "CLEAR":
-                    raise GateError("Shadow task context must be same-domain synthetic evidence with clear rights")
-            manifest = brain["manifest"]
-            d.update({"domain_id": goal["domain_id"], "runtime_state_head": runtime_state_head,
-                      "brain_revision": manifest["brain_revision"], "brain_fingerprint": brain["fingerprint"],
-                      "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
-                      "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
-                      "risk_class": domain["risk_class"], "sensitivity": "PUBLIC",
-                      "mode": "SHADOW", "budget_cap": 0})
-        elif kind not in ("register_participant",):
-            arena_state, _, _ = self.ledger.verify()
-            task_id = d.get("task_id")
-            if kind in ("submit_critique", "submit_adjudication"):
-                task_id = ref(arena_state, "proposals", d.get("proposal_id"))["task_id"]
-            task = ref(arena_state, "tasks", task_id)
-            self._assert_current_task(task, runtime_state_head, brain)
-        return self.ledger.apply(command)
+        self.ledger.acquire_project_lock()
+        try:
+            core_state, _, runtime_state_head = self.core.verify()
+            brain = self._brain()
+            if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+                raise GateError("Command must contain exactly type and data object")
+            command = copy.deepcopy(command)
+            kind, d = command["type"], command["data"]
+            if kind == "open_task":
+                need(d, "goal_id", "id", "brief", "acceptance", "allowed_evidence_ids", "expires_at")
+                if set(d) != {"goal_id", "id", "brief", "acceptance", "allowed_evidence_ids", "expires_at"}:
+                    raise GateError("open_task input has unexpected fields")
+                goal = ref(core_state, "goals", d["goal_id"])
+                if goal["status"] != "OPEN":
+                    raise GateError("Goal is blocked or closed")
+                domain = ref(core_state, "domains", goal["domain_id"])
+                for eid in _ids(d["allowed_evidence_ids"], "allowed_evidence_ids"):
+                    evidence = ref(core_state, "evidence", eid)
+                    source = ref(core_state, "sources", evidence["source_id"])
+                    if evidence["domain_id"] != goal["domain_id"] or source["kind"] != "SYNTHETIC" or source["rights_status"] != "CLEAR":
+                        raise GateError("Shadow task context must be same-domain synthetic evidence with clear rights")
+                manifest = brain["manifest"]
+                d.update({"domain_id": goal["domain_id"], "runtime_state_head": runtime_state_head,
+                          "brain_revision": manifest["brain_revision"], "brain_fingerprint": brain["fingerprint"],
+                          "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
+                          "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
+                          "risk_class": domain["risk_class"], "sensitivity": "PUBLIC",
+                          "mode": "SHADOW", "budget_cap": 0})
+            elif kind not in ("register_participant",):
+                arena_state, _, _ = self.ledger.verify()
+                task_id = d.get("task_id")
+                if kind in ("submit_critique", "submit_adjudication"):
+                    task_id = ref(arena_state, "proposals", d.get("proposal_id"))["task_id"]
+                task = ref(arena_state, "tasks", task_id)
+                self._assert_current_task(task, runtime_state_head, brain)
+            return self.ledger.apply(command, project_lock_held=True)
+        finally:
+            self.ledger.release_project_lock()
 
     def status(self) -> dict:
         self.core.verify()
