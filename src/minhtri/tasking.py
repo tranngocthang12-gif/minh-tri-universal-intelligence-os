@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any
 
 from .brain import brain_bundle, manifest_artifact_sha
-from .core import GateError, Ledger, identifier, need, parse_time, ref, string
+from .core import GateError, Ledger, digest, identifier, need, parse_time, ref, string
 
 
 TASK_FIELDS = {
@@ -20,10 +20,16 @@ TASK_FIELDS = {
         "architecture_law_sha256", "bootstrap_sha256", "core_state_head_at_open",
         "brief", "acceptance", "allowed_evidence_ids", "risk_class",
     },
-    "acquire_lease": {"task_id", "worker_id", "lease_id", "expires_at", "expected_checkpoint_seq"},
+    "acknowledge_continuation": {"id", "task_id", "worker_id", "continuation_fingerprint"},
+    "acquire_lease": {"task_id", "worker_id", "lease_id", "expires_at", "expected_checkpoint_seq",
+                      "continuation_ack_id"},
     "checkpoint_task": {
         "task_id", "worker_id", "lease_id", "expected_checkpoint_seq",
         "summary", "artifact_refs", "evidence_ids", "next_action",
+    },
+    "handoff_task": {
+        "task_id", "worker_id", "lease_id", "expected_checkpoint_seq", "decisions", "unknowns",
+        "blockers", "verification", "scope", "limitations",
     },
     "release_lease": {"task_id", "worker_id", "lease_id", "reason"},
     "complete_task": {
@@ -60,6 +66,35 @@ def _texts(values: Any, label: str) -> list[str]:
 
 def _task(state: dict, task_id: str) -> dict:
     return ref(state, "tasks", task_id)
+
+
+def _continuation_view(task: dict) -> dict:
+    latest_handoff = task["handoffs"][-1] if task.get("handoffs") else None
+    return {
+        "task_id": task["id"],
+        "brain_revision": task["brain_revision"],
+        "brain_fingerprint": task["brain_fingerprint"],
+        "architecture_law_sha256": task["architecture_law_sha256"],
+        "bootstrap_sha256": task["bootstrap_sha256"],
+        "checkpoint_seq": task["checkpoint_seq"],
+        "checkpoint": copy.deepcopy(task["checkpoint"]),
+        "latest_handoff_fingerprint": latest_handoff.get("fingerprint") if latest_handoff else None,
+    }
+
+
+def continuation_fingerprint(task: dict) -> str:
+    return digest(_continuation_view(task))
+
+
+def _continuation_ack(task: dict, ack_id: str, worker_id: str) -> dict:
+    ack = task.get("continuation_acknowledgements", {}).get(ack_id)
+    if not ack:
+        raise GateError("Current continuation acknowledgement is required before acquiring a lease")
+    if ack["worker_id"] != worker_id:
+        raise GateError("Continuation acknowledgement belongs to another worker")
+    if ack["continuation_fingerprint"] != continuation_fingerprint(task):
+        raise GateError("Continuation acknowledgement is stale; reread current packet")
+    return ack
 
 
 def _lease(task: dict, worker_id: str, lease_id: str, at: str) -> dict:
@@ -116,8 +151,26 @@ def task_evolve(state: dict, command: dict, at: str) -> dict:
         }
         d["lease"] = None
         d["handoffs"] = []
+        d["continuation_acknowledgements"] = {}
         d["created_at"] = at
         out["tasks"][task_id] = d
+
+    elif kind == "acknowledge_continuation":
+        need(d, *TASK_FIELDS[kind])
+        task = _task(out, d["task_id"])
+        ack_id = identifier(d["id"], "continuation acknowledgement ID")
+        worker = identifier(d["worker_id"], "worker_id")
+        if ack_id in task["continuation_acknowledgements"]:
+            raise GateError(f"Duplicate continuation acknowledgement ID: {ack_id}")
+        expected = continuation_fingerprint(task)
+        if d["continuation_fingerprint"] != expected:
+            raise GateError("Continuation acknowledgement must match the current task/checkpoint/handoff packet")
+        task["continuation_acknowledgements"][ack_id] = {
+            "id": ack_id,
+            "worker_id": worker,
+            "continuation_fingerprint": expected,
+            "acknowledged_at": at,
+        }
 
     elif kind == "acquire_lease":
         need(d, *TASK_FIELDS[kind])
@@ -126,6 +179,7 @@ def task_evolve(state: dict, command: dict, at: str) -> dict:
             raise GateError("Cannot lease a terminal task")
         worker = identifier(d["worker_id"], "worker_id")
         lease_id = identifier(d["lease_id"], "lease_id")
+        _continuation_ack(task, d["continuation_ack_id"], worker)
         if type(d["expected_checkpoint_seq"]) is not int or d["expected_checkpoint_seq"] != task["checkpoint_seq"]:
             raise GateError("Checkpoint sequence mismatch; refresh task before claiming")
         if parse_time(d["expires_at"]) <= parse_time(at):
@@ -172,18 +226,62 @@ def task_evolve(state: dict, command: dict, at: str) -> dict:
             "updated_at": at,
         }
 
+    elif kind == "handoff_task":
+        need(d, *TASK_FIELDS[kind])
+        task = _task(out, d["task_id"])
+        lease = _lease(task, d["worker_id"], d["lease_id"], at)
+        if type(d["expected_checkpoint_seq"]) is not int or d["expected_checkpoint_seq"] != task["checkpoint_seq"]:
+            raise GateError("Checkpoint sequence mismatch; handoff must use the latest checkpoint")
+        decisions = _texts(d["decisions"], "decisions")
+        unknowns = _texts(d["unknowns"], "unknowns")
+        blockers = _texts(d["blockers"], "blockers")
+        verification = _texts(d["verification"], "verification")
+        limitations = _texts(d["limitations"], "limitations")
+        scope = string(d["scope"], "scope")
+        body = {
+            "from_worker": lease["worker_id"],
+            "reason": "EXPLICIT_HANDOFF",
+            "checkpoint_seq": task["checkpoint_seq"],
+            "checkpoint_summary": task["checkpoint"]["summary"],
+            "artifact_refs": copy.deepcopy(task["checkpoint"]["artifact_refs"]),
+            "evidence_ids": copy.deepcopy(task["checkpoint"]["evidence_ids"]),
+            "next_action": task["checkpoint"]["next_action"],
+            "decisions": decisions,
+            "unknowns": unknowns,
+            "blockers": blockers,
+            "verification": verification,
+            "scope": scope,
+            "limitations": limitations,
+            "at": at,
+        }
+        body["fingerprint"] = digest(body)
+        task["handoffs"].append(body)
+        task["lease"] = None
+        task["status"] = "OPEN"
+
     elif kind == "release_lease":
         need(d, *TASK_FIELDS[kind])
         task = _task(out, d["task_id"])
         lease = _lease(task, d["worker_id"], d["lease_id"], at)
         reason = string(d["reason"], "reason")
-        task["handoffs"].append({
+        body = {
             "from_worker": lease["worker_id"],
-            "to_worker": None,
-            "reason": reason,
+            "reason": "CHECKPOINT_ONLY_RELEASE:" + reason,
             "checkpoint_seq": task["checkpoint_seq"],
+            "checkpoint_summary": task["checkpoint"]["summary"],
+            "artifact_refs": copy.deepcopy(task["checkpoint"]["artifact_refs"]),
+            "evidence_ids": copy.deepcopy(task["checkpoint"]["evidence_ids"]),
+            "next_action": task["checkpoint"]["next_action"],
+            "decisions": [],
+            "unknowns": [],
+            "blockers": [],
+            "verification": [],
+            "scope": "CHECKPOINT_ONLY_RELEASE",
+            "limitations": ["No explicit structured handoff was supplied; successor must treat missing context as unknown."],
             "at": at,
-        })
+        }
+        body["fingerprint"] = digest(body)
+        task["handoffs"].append(body)
         task["lease"] = None
         task["status"] = "OPEN"
 
@@ -300,8 +398,15 @@ class TaskService:
         evidence = [copy.deepcopy(ref(core_state, "evidence", eid)) for eid in task["allowed_evidence_ids"]]
         return {
             "task": copy.deepcopy(task),
+            "continuation": {
+                "fingerprint": continuation_fingerprint(task),
+                "checkpoint": copy.deepcopy(task["checkpoint"]),
+                "latest_handoff": copy.deepcopy(task["handoffs"][-1]) if task["handoffs"] else None,
+                "acknowledgement_required": True,
+            },
             "brain": brain,
             "project_law": (self.brain_root / "PROJECT_LAW.md").read_text(encoding="utf-8"),
             "bootstrap": (self.brain_root / "BOOTSTRAP.md").read_text(encoding="utf-8"),
+            "continuity_contract": (self.brain_root / "docs" / "ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md").read_text(encoding="utf-8"),
             "evidence": evidence,
         }
