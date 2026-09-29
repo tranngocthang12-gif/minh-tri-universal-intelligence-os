@@ -48,3 +48,15 @@ Before changing a command shape, initial state shape, reducer meaning or fingerp
 R5 must not alter R2-R4 ledger semantics as a side effect. If R5 needs a schema change, migration/replay work precedes that change.
 
 Structural replay compatibility does not validate semantic truth.
+
+
+## R4.5 compatibility enforcement
+
+R4.5 adds:
+
+- `src/minhtri/core_migration.py` — read-only verifier for the pre-`family_id` Core provider schema. It verifies the original hash chain, maps legacy provider IDs to deterministic legacy family identifiers in memory, normalizes the old cached state, compares migrated derived state, and does not rewrite source bytes.
+- `tests/test_schema_compatibility.py` — frozen schema tripwires for Core provider registration, Task, Epistemic, Governor and Workcell command contracts.
+
+Therefore, a future edit to these command contracts must deliberately update the compatibility test and migration policy; silent schema drift should fail CI.
+
+This is a **forward-change guard**, not evidence that every future migration is already implemented.
