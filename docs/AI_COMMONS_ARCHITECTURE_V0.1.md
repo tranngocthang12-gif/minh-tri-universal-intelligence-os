@@ -94,3 +94,22 @@ Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên 
 7. Đổi bất kỳ artifact lõi trong Brain Manifest, đổi Git revision hoặc đổi runtime state head làm task cũ stale; task phải được mở lại từ trạng thái hiện hành.
 
 Mốc kế tiếp sau `SHADOW`: một pilot read-only có Owner cấp quyền, đo một việc thật so với một AI/baseline, ghi cả chi phí và sai số, rồi mới xét tích hợp provider API.
+
+
+## 9. Official submission route
+
+Sau khi workcell đạt `REVEALED`, proposal/critique/adjudication chính thức phải đi qua:
+
+```text
+workcell S1-S4
+→ 4/4 blind freeze
+→ reveal
+→ FourSeatWorkcellService.submit_arena
+→ Arena structural gates
+```
+
+CLI tương ứng:
+
+`minhtri ... workcell arena-apply <session_id> <command.json>`
+
+Direct `arena apply` được giữ để replay/compatibility và test low-level reducer; nó **không phải bằng chứng** rằng official four-seat workcell protocol đã được thực hiện.
