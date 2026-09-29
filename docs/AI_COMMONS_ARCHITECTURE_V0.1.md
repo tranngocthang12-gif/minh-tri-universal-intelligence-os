@@ -1,10 +1,10 @@
-# MINH TRÍ AI Commons — kiến trúc sân chơi cho N AI
+# MINH TRÍ AI Commons — kiến trúc workcell bốn ghế AI thay thế được
 
 **Loại:** quyết định kiến trúc ứng viên · **Trạng thái:** `SHADOW_ONLY` · **Ngày:** 2026-09-29
 
 ## 1. Quyết định sản phẩm
 
-MINH TRÍ hoàn thiện mục tiêu, hệ tư tưởng, lõi học và cổng Owner trước; sau đó bất kỳ AI đủ điều kiện nào cũng có thể tham gia một nhiệm vụ có giới hạn. Nhiều AI là lực lượng nhận việc, không phải nhiều bộ não sở hữu luật dự án. Số lượng không viết cứng là bốn. Không xem bốn PR hoặc bốn lượt trả lời của cùng một model là một hệ nhiều AI đã vận hành.
+MINH TRÍ hoàn thiện mục tiêu, hệ tư tưởng, lõi học và cổng Owner trước; sau đó AI đủ điều kiện có thể **chiếm một trong bốn ghế S1–S4** của workcell nhiệm vụ. Bốn ghế là cấu hình vận hành ổn định do Owner làm rõ; danh tính/model/provider trên ghế không cố định và có thể thay. Nhiều AI là lực lượng nhận việc, không phải nhiều bộ não sở hữu luật dự án. Không xem bốn PR/bốn persona/bốn lượt trả lời của cùng một provider family là bốn đóng góp độc lập.
 
 GitHub là nơi kiểm soát phiên bản và xét thay đổi của **phần mềm**. AI Commons là giao thức **thực thi nhiệm vụ** bên trong sản phẩm. Một AI có thể dùng API, agent A2A, công cụ tương thích hoặc đầu ra được người dùng chuyển vào; mọi đường đều phải nộp cùng hợp đồng dữ liệu và qua cùng cổng.
 
@@ -24,7 +24,7 @@ Tứ Diệu Đế/Bát Chánh Đạo ở đây chỉ là lăng kính ứng dụn
 ```text
 OWNER / CONSTITUTION / TIER 1 (canonical)
              ↓ task + permission + bounded context
-AI COMMONS GATEWAY → N PARTICIPANTS (replaceable)
+AI COMMONS GATEWAY → FOUR SLOTS S1–S4 (replaceable occupants)
              ↓ proposals / critiques / abstentions
 DETERMINISTIC VALIDATION → ADJUDICATION → OWNER GATE
              ↓ only accepted, scoped receipts
@@ -84,7 +84,7 @@ Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên 
 
 ## 8. Điều kiện nghiệm thu bản `SHADOW`
 
-1. Bất kỳ số participant nào cũng dùng một contract; thêm model mới không sửa reducer.
+1. Workcell chính thức có đúng bốn slot S1–S4; thay model/provider occupant không được yêu cầu sửa luật lõi.
 2. Cùng một task fingerprint, Git brain revision, brain manifest fingerprint, Law hash, Bootstrap hash, runtime state head và danh sách evidence cho phép; sai bất kỳ mốc nào bị từ chối.
 3. Participant phải có Brain Acknowledgement Receipt cho exact task trước khi proposal/critique/adjudication được nhận; receipt không chứng minh semantic understanding.
 3. Cùng provider family không ngồi hai ghế; thiếu ba family thì không có adjudication đủ điều kiện.
