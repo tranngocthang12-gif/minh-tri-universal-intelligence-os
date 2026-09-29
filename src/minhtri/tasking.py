@@ -34,6 +34,7 @@ TASK_FIELDS = {
     "release_lease": {"task_id", "worker_id", "lease_id", "reason"},
     "complete_task": {
         "task_id", "worker_id", "lease_id", "expected_checkpoint_seq", "completion_summary",
+        "decisions", "unknowns", "blockers", "verification", "scope", "limitations",
     },
 }
 
@@ -79,6 +80,7 @@ def _continuation_view(task: dict) -> dict:
         "checkpoint_seq": task["checkpoint_seq"],
         "checkpoint": copy.deepcopy(task["checkpoint"]),
         "latest_handoff_fingerprint": latest_handoff.get("fingerprint") if latest_handoff else None,
+        "completion_receipt_fingerprint": task.get("completion_receipt", {}).get("fingerprint"),
     }
 
 
@@ -288,10 +290,29 @@ def task_evolve(state: dict, command: dict, at: str) -> dict:
     elif kind == "complete_task":
         need(d, *TASK_FIELDS[kind])
         task = _task(out, d["task_id"])
-        _lease(task, d["worker_id"], d["lease_id"], at)
+        lease = _lease(task, d["worker_id"], d["lease_id"], at)
         if type(d["expected_checkpoint_seq"]) is not int or d["expected_checkpoint_seq"] != task["checkpoint_seq"]:
             raise GateError("Checkpoint sequence mismatch; refusing stale completion")
-        task["completion_summary"] = string(d["completion_summary"], "completion_summary")
+        completion_summary = string(d["completion_summary"], "completion_summary")
+        body = {
+            "task_id": task["id"],
+            "completed_by": lease["worker_id"],
+            "checkpoint_seq": task["checkpoint_seq"],
+            "checkpoint_summary": task["checkpoint"]["summary"],
+            "artifact_refs": copy.deepcopy(task["checkpoint"]["artifact_refs"]),
+            "evidence_ids": copy.deepcopy(task["checkpoint"]["evidence_ids"]),
+            "completion_summary": completion_summary,
+            "decisions": _texts(d["decisions"], "decisions"),
+            "unknowns": _texts(d["unknowns"], "unknowns"),
+            "blockers": _texts(d["blockers"], "blockers"),
+            "verification": _texts(d["verification"], "verification"),
+            "scope": string(d["scope"], "scope"),
+            "limitations": _texts(d["limitations"], "limitations"),
+            "at": at,
+        }
+        body["fingerprint"] = digest(body)
+        task["completion_summary"] = completion_summary
+        task["completion_receipt"] = body
         task["completed_at"] = at
         task["completed_by"] = d["worker_id"]
         task["status"] = "COMPLETED"
@@ -406,7 +427,8 @@ class TaskService:
                 "fingerprint": continuation_fingerprint(task),
                 "checkpoint": copy.deepcopy(task["checkpoint"]),
                 "latest_handoff": copy.deepcopy(task["handoffs"][-1]) if task["handoffs"] else None,
-                "acknowledgement_required": True,
+                "completion_receipt": copy.deepcopy(task.get("completion_receipt")),
+                "acknowledgement_required": task["status"] not in TERMINAL,
             },
             "brain": brain,
             "project_law": (self.brain_root / "PROJECT_LAW.md").read_text(encoding="utf-8"),
