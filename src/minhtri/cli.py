@@ -14,7 +14,7 @@ from .core import GateError, Ledger, next_goal
 from .core_migration import verify_legacy_core_family_migration
 from .epistemic import EpistemicService
 from .tasking import TaskService
-from .workcell import FourSeatWorkcellService
+from .workcell import ElasticWorkcellService
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -97,19 +97,19 @@ def main(argv: list[str] | None = None) -> int:
     governor_sub.add_parser("verify", help="Replay bottleneck governor ledger")
     governor_sub.add_parser("repair-snapshot", help="Repair governor cache after audit")
 
-    workcell = sub.add_parser("workcell", help="Four-seat replaceable AI Commons workcell")
+    workcell = sub.add_parser("workcell", help="Elastic N-AI replaceable AI Commons workcell")
     workcell.add_argument("--brain-root", default=".", help="Repository root containing canonical brain artifacts")
     workcell.add_argument("--brain-revision", default=None,
                           help="Pinned 40-character Git SHA; defaults to git rev-parse HEAD")
     workcell_sub = workcell.add_subparsers(dest="workcell_action", required=True)
-    workcell_sub.add_parser("init", help="Create four-seat workcell ledger")
+    workcell_sub.add_parser("init", help="Create elastic workcell ledger")
     workcell_apply = workcell_sub.add_parser("apply", help="Apply one workcell command")
     workcell_apply.add_argument("json_file", type=Path)
     workcell_status = workcell_sub.add_parser("status", help="Show one workcell session status")
     workcell_status.add_argument("session_id")
     workcell_packet = workcell_sub.add_parser("packet", help="Export one workcell + frozen Arena task packet")
     workcell_packet.add_argument("session_id")
-    workcell_arena = workcell_sub.add_parser("arena-apply", help="Official proposal/critique/adjudication route after four-seat reveal")
+    workcell_arena = workcell_sub.add_parser("arena-apply", help="Official proposal/critique/adjudication route after workcell reveal")
     workcell_arena.add_argument("session_id")
     workcell_arena.add_argument("json_file", type=Path)
     workcell_sub.add_parser("verify", help="Replay workcell ledger")
@@ -118,7 +118,7 @@ def main(argv: list[str] | None = None) -> int:
     ledger = Ledger(args.home)
     try:
         if args.action == "workcell":
-            service = FourSeatWorkcellService(args.home, args.brain_root, args.brain_revision)
+            service = ElasticWorkcellService(args.home, args.brain_root, args.brain_revision)
             if args.workcell_action == "init":
                 service.init()
                 result = {"status": "WORKCELL_LEDGER_INITIALIZED", "home": str(service.ledger.home)}
