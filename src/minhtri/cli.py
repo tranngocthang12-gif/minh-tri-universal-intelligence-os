@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .arena import ArenaService
 from .arena_migration import archive_legacy_arena, verify_legacy_arena
+from .bottleneck import BottleneckService
 from .core import GateError, Ledger, next_goal
 from .epistemic import EpistemicService
 from .tasking import TaskService
@@ -75,10 +76,44 @@ def main(argv: list[str] | None = None) -> int:
     epistemic_item.add_argument("item_id")
     epistemic_sub.add_parser("verify", help="Replay epistemic ledger")
     epistemic_sub.add_parser("repair-snapshot", help="Repair epistemic cache after audit")
+
+    governor = sub.add_parser("governor", help="Goal decomposition and bottleneck governor")
+    governor_sub = governor.add_subparsers(dest="governor_action", required=True)
+    governor_sub.add_parser("init", help="Create bottleneck governor ledger")
+    governor_apply = governor_sub.add_parser("apply", help="Apply one decomposition/governor command")
+    governor_apply.add_argument("json_file", type=Path)
+    governor_recommend = governor_sub.add_parser("recommend", help="Recommend SELECT/WAIT/HOLD for one plan")
+    governor_recommend.add_argument("plan_id")
+    governor_commit = governor_sub.add_parser("commit-focus", help="Record the current recommendation with source heads")
+    governor_commit.add_argument("plan_id")
+    governor_sub.add_parser("status", help="Show decomposition counts")
+    governor_sub.add_parser("verify", help="Replay bottleneck governor ledger")
+    governor_sub.add_parser("repair-snapshot", help="Repair governor cache after audit")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
     try:
-        if args.action == "epistemic":
+        if args.action == "governor":
+            service = BottleneckService(args.home)
+            if args.governor_action == "init":
+                service.init()
+                result = {"status": "GOVERNOR_LEDGER_INITIALIZED", "home": str(service.ledger.home)}
+            elif args.governor_action == "apply":
+                payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+                receipt = service.apply(payload)
+                result = {"status": "GOVERNOR_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
+            elif args.governor_action == "recommend":
+                result = service.recommend(args.plan_id)
+            elif args.governor_action == "commit-focus":
+                result = service.commit_focus(args.plan_id)
+            elif args.governor_action == "status":
+                result = service.status()
+            elif args.governor_action == "repair-snapshot":
+                count, head = service.ledger.repair_snapshot()
+                result = {"status": "GOVERNOR_CACHE_REPAIRED", "event_count": count, "head": head}
+            else:
+                state, count, head = service.ledger.verify()
+                result = {"status": "VALID_GOVERNOR_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+        elif args.action == "epistemic":
             service = EpistemicService(args.home)
             if args.epistemic_action == "init":
                 service.init()
