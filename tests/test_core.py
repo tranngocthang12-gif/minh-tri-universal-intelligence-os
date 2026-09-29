@@ -27,8 +27,9 @@ class CoreGates(unittest.TestCase):
                    target="Get a reliable measurement", intervention="Run a bounded comparison",
                    unknowns=["Base rate"], control="Test design", influence="Audience exposure",
                    responsibility="Owner decides", harm_checks=["Do not mislead viewers"])
+        families = {"maker": "family-maker", "critic": "family-critic", "judge": "family-judge"}
         for pid in ("maker", "critic", "judge"):
-            self.apply("register_provider", id=pid, name=pid, kind="MODEL")
+            self.apply("register_provider", id=pid, name=pid, kind="MODEL", family_id=families[pid])
         self.apply("register_procedure", id="p1", domain_id="media", provider_id="maker", version="1", method="Range forecast")
         self.apply("propose_claim", id="h1", problem_id="problem1", provider_id="maker", statement="Test hypothesis",
                    evidence_ids=[], alternative="Seasonal audience difference", falsifier="Intervals miss on independent outcomes")
@@ -197,6 +198,20 @@ class CoreGates(unittest.TestCase):
         with self.assertRaisesRegex(GateError, "Goal is blocked"):
             self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
                        scope="One pilot")
+
+    def test_same_provider_family_cannot_fake_independent_core_seats(self):
+        self.base()
+        self.apply("register_provider", id="critic-alias", name="critic alias", kind="MODEL", family_id="family-maker")
+        with self.assertRaisesRegex(GateError, "provider family"):
+            self.apply("review_claim", id="bad-family-review", claim_id="h1",
+                       critic_provider_id="critic-alias", verdict="HOLD", reason="Not independent")
+
+        self.apply("review_claim", id="review1", claim_id="h1", critic_provider_id="critic",
+                   verdict="HOLD", reason="Independent family")
+        self.apply("register_provider", id="judge-alias", name="judge alias", kind="MODEL", family_id="family-critic")
+        with self.assertRaisesRegex(GateError, "provider family"):
+            self.apply("adjudicate_claim", id="bad-family-adj", claim_id="h1", review_id="review1",
+                       adjudicator_provider_id="judge-alias", verdict="HOLD", reason="Not independent")
 
 
 if __name__ == "__main__":
