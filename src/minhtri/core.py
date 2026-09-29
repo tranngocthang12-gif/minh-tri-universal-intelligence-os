@@ -1,0 +1,465 @@
+"""Small, deterministic learning ledger. Evidence quality remains a human judgment."""
+
+from __future__ import annotations
+
+import copy
+import hashlib
+import json
+import os
+import re
+import tempfile
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+class GateError(ValueError):
+    """An operation fails a contract or governance gate."""
+
+
+def canonical(value: Any) -> bytes:
+    return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False).encode("utf-8")
+
+
+def digest(value: Any) -> str:
+    return hashlib.sha256(canonical(value)).hexdigest()
+
+
+def utcnow() -> str:
+    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def parse_time(value: str) -> datetime:
+    if not isinstance(value, str):
+        raise GateError("Expected ISO 8601 timestamp")
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError as exc:
+        raise GateError("Invalid ISO 8601 timestamp") from exc
+    if parsed.tzinfo is None:
+        raise GateError("Timestamp needs a timezone")
+    return parsed.astimezone(timezone.utc)
+
+
+def identifier(value: Any, label: str) -> str:
+    if not isinstance(value, str) or not re.fullmatch(r"[a-z][a-z0-9_-]{1,63}", value):
+        raise GateError(f"{label} must be a lowercase identifier (2–64 characters)")
+    return value
+
+
+def string(value: Any, label: str) -> str:
+    if not isinstance(value, str) or not value.strip():
+        raise GateError(f"{label} must be nonempty text")
+    return value.strip()
+
+
+def number(value: Any, label: str) -> float:
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        raise GateError(f"{label} must be a number")
+    result = float(value)
+    if not (-1e100 < result < 1e100):
+        raise GateError(f"{label} must be finite")
+    return result
+
+
+def need(d: dict, *fields: str) -> None:
+    missing = [field for field in fields if field not in d]
+    if missing:
+        raise GateError("Missing: " + ", ".join(missing))
+
+
+def ref(state: dict, collection: str, key: str) -> dict:
+    identifier(key, collection + " ID")
+    if key not in state[collection]:
+        raise GateError(f"Unknown {collection} ID: {key}")
+    return state[collection][key]
+
+
+def add(state: dict, collection: str, data: dict) -> None:
+    key = identifier(data["id"], collection + " ID")
+    if key in state[collection]:
+        raise GateError(f"Duplicate {collection} ID: {key}")
+    state[collection][key] = data
+
+
+def initial_state() -> dict:
+    return {
+        "format_version": 1,
+        "domains": {}, "providers": {}, "goals": {}, "problems": {}, "sources": {},
+        "evidence": {}, "procedures": {}, "claims": {}, "predictions": {},
+        "resolutions": {}, "reviews": {}, "adjudications": {}, "lessons": {},
+    }
+
+
+ALLOWED_FIELDS = {
+    "register_domain": {"id", "name", "risk_class", "measurement_contract"},
+    "register_provider": {"id", "name", "kind"},
+    "open_goal": {"id", "domain_id", "objective", "priority", "owner_boundary"},
+    "set_goal_status": {"goal_id", "status", "reason"},
+    "frame_problem": {"id", "goal_id", "reality", "conditions", "target", "intervention", "unknowns", "control", "influence", "responsibility", "harm_checks"},
+    "record_source": {"id", "domain_id", "uri", "captured_at", "kind", "rights_status"},
+    "record_evidence": {"id", "domain_id", "source_id", "statement", "observed_at", "value", "metric"},
+    "register_procedure": {"id", "domain_id", "provider_id", "version", "method"},
+    "propose_claim": {"id", "problem_id", "provider_id", "statement", "evidence_ids", "alternative", "falsifier"},
+    "register_prediction": {"id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method"},
+    "freeze_prediction": {"prediction_id"},
+    "record_resolution": {"id", "prediction_id", "evidence_id"},
+    "review_claim": {"id", "claim_id", "critic_provider_id", "verdict", "reason"},
+    "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
+    "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id"},
+    "activate_trial_lesson": {"lesson_id", "owner_ack", "scope"},
+}
+
+
+def _list_of_refs(state: dict, collection: str, values: Any) -> list[str]:
+    if not isinstance(values, list) or any(not isinstance(v, str) for v in values) or len(set(values)) != len(values):
+        raise GateError(f"{collection} references must be a unique list")
+    for value in values:
+        ref(state, collection, value)
+    return values
+
+
+def evolve(state: dict, command: dict, event_time: str) -> dict:
+    """Replay one event. A replay never consults a language model or current time."""
+    if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+        raise GateError("Command must contain exactly type and data object")
+    kind, d = command["type"], copy.deepcopy(command["data"])
+    if kind not in ALLOWED_FIELDS:
+        raise GateError(f"Unknown command type: {kind}")
+    extra = set(d) - ALLOWED_FIELDS[kind]
+    if extra:
+        raise GateError("Unexpected fields: " + ", ".join(sorted(extra)))
+    out = copy.deepcopy(state)
+    parse_time(event_time)
+
+    if kind == "register_domain":
+        need(d, "id", "name", "risk_class", "measurement_contract")
+        if d["risk_class"] not in ("NORMAL", "HIGH_STAKES"):
+            raise GateError("risk_class must be NORMAL or HIGH_STAKES")
+        string(d["name"], "name")
+        string(d["measurement_contract"], "measurement_contract")
+        add(out, "domains", d)
+
+    elif kind == "register_provider":
+        need(d, "id", "name", "kind")
+        if d["kind"] not in ("MODEL", "HUMAN", "TOOL"):
+            raise GateError("Invalid provider kind")
+        string(d["name"], "name")
+        add(out, "providers", d)
+
+    elif kind == "open_goal":
+        need(d, "id", "domain_id", "objective", "priority", "owner_boundary")
+        ref(out, "domains", d["domain_id"])
+        string(d["objective"], "objective")
+        string(d["owner_boundary"], "owner_boundary")
+        if type(d["priority"]) is not int or not 1 <= d["priority"] <= 5:
+            raise GateError("priority must be an integer from 1 to 5")
+        d["status"] = "OPEN"
+        add(out, "goals", d)
+
+    elif kind == "set_goal_status":
+        need(d, "goal_id", "status", "reason")
+        goal = ref(out, "goals", d["goal_id"])
+        if d["status"] not in ("OPEN", "BLOCKED", "CLOSED"):
+            raise GateError("Invalid goal status")
+        string(d["reason"], "reason")
+        goal["status"] = d["status"]
+        goal["status_reason"] = d["reason"]
+
+    elif kind == "frame_problem":
+        need(d, "id", "goal_id", "reality", "conditions", "target", "intervention", "unknowns",
+             "control", "influence", "responsibility", "harm_checks")
+        goal = ref(out, "goals", d["goal_id"])
+        if goal["status"] != "OPEN":
+            raise GateError("Cannot frame a blocked or closed goal")
+        for key in ("reality", "target", "intervention", "control", "influence", "responsibility"):
+            string(d[key], key)
+        for key in ("unknowns", "harm_checks"):
+            if not isinstance(d[key], list) or not d[key] or any(not isinstance(v, str) or not v.strip() for v in d[key]):
+                raise GateError(f"{key} must be a nonempty text list")
+        if not isinstance(d["conditions"], list) or not d["conditions"]:
+            raise GateError("conditions must be a nonempty list")
+        for condition in d["conditions"]:
+            if not isinstance(condition, dict) or set(condition) != {"description", "role", "status"}:
+                raise GateError("Condition needs description, role and status")
+            string(condition["description"], "condition description")
+            if condition["role"] not in ("CAUSE", "CONDITION", "TRIGGER", "MAINTAINER", "AMPLIFIER", "FEEDBACK", "UNKNOWN"):
+                raise GateError("Invalid condition role")
+            if condition["status"] != "HYPOTHESIS":
+                raise GateError("A condition cannot be declared proven in this first version")
+        d["domain_id"] = goal["domain_id"]
+        d["status"] = "OPEN_HYPOTHESES"
+        add(out, "problems", d)
+
+    elif kind == "record_source":
+        need(d, "id", "domain_id", "uri", "captured_at", "kind", "rights_status")
+        ref(out, "domains", d["domain_id"])
+        string(d["uri"], "uri")
+        if parse_time(d["captured_at"]) > parse_time(event_time):
+            raise GateError("Source capture time cannot be in the future")
+        if d["kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "SYNTHETIC"):
+            raise GateError("Invalid source kind")
+        if d["rights_status"] not in ("CLEAR", "UNKNOWN", "RESTRICTED"):
+            raise GateError("Invalid rights status")
+        add(out, "sources", d)
+
+    elif kind == "record_evidence":
+        need(d, "id", "domain_id", "source_id", "statement", "observed_at")
+        source = ref(out, "sources", d["source_id"])
+        if d["domain_id"] != source["domain_id"]:
+            raise GateError("Evidence cannot cross domain boundaries")
+        string(d["statement"], "statement")
+        if parse_time(d["observed_at"]) > parse_time(event_time):
+            raise GateError("Evidence observation time cannot be in the future")
+        if "value" in d:
+            d["value"] = number(d["value"], "value")
+            string(d.get("metric"), "metric")
+        d["verification"] = "DECLARED_UNVERIFIED"
+        add(out, "evidence", d)
+
+    elif kind == "register_procedure":
+        need(d, "id", "domain_id", "provider_id", "version", "method")
+        ref(out, "domains", d["domain_id"])
+        ref(out, "providers", d["provider_id"])
+        string(d["version"], "version")
+        string(d["method"], "method")
+        add(out, "procedures", d)
+
+    elif kind == "propose_claim":
+        need(d, "id", "problem_id", "provider_id", "statement", "evidence_ids", "alternative", "falsifier")
+        problem = ref(out, "problems", d["problem_id"])
+        if out["goals"][problem["goal_id"]]["status"] != "OPEN":
+            raise GateError("Cannot propose under a blocked or closed goal")
+        ref(out, "providers", d["provider_id"])
+        for key in ("statement", "alternative", "falsifier"):
+            string(d[key], key)
+        for eid in _list_of_refs(out, "evidence", d["evidence_ids"]):
+            if out["evidence"][eid]["domain_id"] != problem["domain_id"]:
+                raise GateError("Claim evidence cannot cross domain boundaries")
+        d["domain_id"] = problem["domain_id"]
+        d["epistemic_status"] = "HYPOTHESIS"
+        add(out, "claims", d)
+
+    elif kind == "register_prediction":
+        need(d, "id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method")
+        claim = ref(out, "claims", d["claim_id"])
+        procedure = ref(out, "procedures", d["procedure_id"])
+        if procedure["domain_id"] != claim["domain_id"]:
+            raise GateError("Procedure cannot predict in another domain")
+        for key in ("metric", "unit", "resolution_method"):
+            string(d[key], key)
+        lower, upper = number(d["lower"], "lower"), number(d["upper"], "upper")
+        if lower > upper:
+            raise GateError("Prediction interval is inverted")
+        if parse_time(d["due_at"]) <= parse_time(event_time):
+            raise GateError("Prediction due_at must be later than preregistration")
+        d["lower"], d["upper"] = lower, upper
+        d["domain_id"] = claim["domain_id"]
+        d["registered_at"] = event_time
+        d["status"] = "REGISTERED"
+        add(out, "predictions", d)
+
+    elif kind == "freeze_prediction":
+        need(d, "prediction_id")
+        prediction = ref(out, "predictions", d["prediction_id"])
+        if prediction["status"] != "REGISTERED":
+            raise GateError("Prediction must be registered and unresolved")
+        prediction["status"] = "FROZEN"
+        prediction["frozen_at"] = event_time
+
+    elif kind == "record_resolution":
+        need(d, "id", "prediction_id", "evidence_id")
+        prediction = ref(out, "predictions", d["prediction_id"])
+        evidence = ref(out, "evidence", d["evidence_id"])
+        if prediction["status"] != "FROZEN":
+            raise GateError("A frozen preregistration is required before resolution")
+        if evidence["domain_id"] != prediction["domain_id"] or evidence.get("metric") != prediction["metric"]:
+            raise GateError("Outcome evidence domain/metric mismatch")
+        if "value" not in evidence:
+            raise GateError("Outcome evidence must include a numeric value")
+        if parse_time(evidence["observed_at"]) <= parse_time(prediction["frozen_at"]):
+            raise GateError("Outcome observation must be after prediction freeze")
+        if parse_time(evidence["observed_at"]) < parse_time(prediction["due_at"]):
+            raise GateError("Cannot resolve before the preregistered due time")
+        actual = evidence["value"]
+        d.update({"claim_id": prediction["claim_id"], "domain_id": prediction["domain_id"],
+                  "actual": actual, "interval_hit": prediction["lower"] <= actual <= prediction["upper"],
+                  "absolute_midpoint_error": abs(actual - (prediction["lower"] + prediction["upper"]) / 2),
+                  "scored_at": event_time, "attribution": "NOT_ESTABLISHED"})
+        add(out, "resolutions", d)
+        prediction["status"] = "RESOLVED"
+
+    elif kind == "review_claim":
+        need(d, "id", "claim_id", "critic_provider_id", "verdict", "reason")
+        claim = ref(out, "claims", d["claim_id"])
+        ref(out, "providers", d["critic_provider_id"])
+        predictors = {out["procedures"][p["procedure_id"]]["provider_id"]
+                      for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
+        if d["critic_provider_id"] == claim["provider_id"] or d["critic_provider_id"] in predictors:
+            raise GateError("Proposer or predictor cannot critique their own claim")
+        if d["verdict"] not in ("ACCEPT_FOR_TRIAL", "HOLD", "REVISE"):
+            raise GateError("Invalid review verdict")
+        string(d["reason"], "reason")
+        d["domain_id"] = claim["domain_id"]
+        add(out, "reviews", d)
+
+    elif kind == "adjudicate_claim":
+        need(d, "id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason")
+        claim = ref(out, "claims", d["claim_id"])
+        review = ref(out, "reviews", d["review_id"])
+        ref(out, "providers", d["adjudicator_provider_id"])
+        if review["claim_id"] != d["claim_id"]:
+            raise GateError("Review belongs to another claim")
+        predictors = {out["procedures"][p["procedure_id"]]["provider_id"]
+                      for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
+        if d["adjudicator_provider_id"] in (claim["provider_id"], review["critic_provider_id"]) or d["adjudicator_provider_id"] in predictors:
+            raise GateError("Adjudicator must occupy a distinct seat")
+        if d["verdict"] not in ("ACCEPT_FOR_TRIAL", "HOLD", "REVISE"):
+            raise GateError("Invalid adjudication verdict")
+        if d["verdict"] == "ACCEPT_FOR_TRIAL" and review["verdict"] != "ACCEPT_FOR_TRIAL":
+            raise GateError("An unresolved critical objection blocks acceptance")
+        string(d["reason"], "reason")
+        d["domain_id"] = claim["domain_id"]
+        add(out, "adjudications", d)
+
+    elif kind == "propose_lesson":
+        need(d, "id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id")
+        claim = ref(out, "claims", d["claim_id"])
+        adj = ref(out, "adjudications", d["adjudication_id"])
+        if adj["claim_id"] != d["claim_id"]:
+            raise GateError("Adjudication belongs to another claim")
+        for key in ("statement", "limits"):
+            string(d[key], key)
+        pids = _list_of_refs(out, "predictions", d["prediction_ids"])
+        if not pids or any(out["predictions"][p]["claim_id"] != d["claim_id"] for p in pids):
+            raise GateError("Lesson needs predictions of its claim")
+        d["domain_id"] = claim["domain_id"]
+        d["status"] = "CANDIDATE"
+        add(out, "lessons", d)
+
+    elif kind == "activate_trial_lesson":
+        need(d, "lesson_id", "owner_ack", "scope")
+        lesson = ref(out, "lessons", d["lesson_id"])
+        if lesson["status"] != "CANDIDATE" or d["owner_ack"] != "HUMAN_OWNER_APPROVED":
+            raise GateError("Only the human Owner may authorize a candidate trial rule")
+        string(d["scope"], "scope")
+        adj = out["adjudications"][lesson["adjudication_id"]]
+        if adj["verdict"] != "ACCEPT_FOR_TRIAL":
+            raise GateError("Adjudication has not accepted this claim for trial")
+        pids = lesson["prediction_ids"]
+        if len(pids) < 2 or any(out["predictions"][p]["status"] != "RESOLVED" for p in pids):
+            raise GateError("At least two resolved preregistered predictions are required")
+        outcome_sources = []
+        for pid in pids:
+            resolution = next(r for r in out["resolutions"].values() if r["prediction_id"] == pid)
+            source_id = out["evidence"][resolution["evidence_id"]]["source_id"]
+            outcome_sources.append(source_id)
+        if len(set(outcome_sources)) < 2 or any(
+            out["sources"][sid]["kind"] != "FIRST_PARTY" or out["sources"][sid]["rights_status"] != "CLEAR"
+            for sid in outcome_sources
+        ):
+            raise GateError("Trial rule needs distinct declared first-party outcome sources with clear rights")
+        if out["domains"][lesson["domain_id"]]["risk_class"] == "HIGH_STAKES":
+            raise GateError("High-stakes domain rules need a separate expert and Owner gate; not implemented in v0.1")
+        lesson["status"] = "TRIAL_RULE"
+        lesson["scope"] = d["scope"]
+        lesson["activated_at"] = event_time
+        lesson["validation"] = "DECLARED_DATA_ONLY_NOT_CAUSAL_PROOF"
+
+    else:
+        raise GateError(f"Unknown command type: {kind}")
+    return out
+
+
+class Ledger:
+    """Single-writer JSONL hash chain; the state file is a derived cache."""
+
+    def __init__(self, home: str | Path):
+        self.home = Path(home)
+        self.events = self.home / "events.jsonl"
+        self.snapshot = self.home / "state.json"
+        self.lock = self.home / ".writer.lock"
+
+    def init(self) -> None:
+        if self.home.exists() and any(self.home.iterdir()):
+            raise GateError("Home is not empty; refusing to overwrite")
+        self.home.mkdir(parents=True, exist_ok=True)
+        self.events.write_bytes(b"")
+        self._save(initial_state(), 0, "0" * 64)
+
+    def replay(self) -> tuple[dict, int, str]:
+        if not self.events.exists():
+            raise GateError("Ledger missing; run init")
+        state, previous, count = initial_state(), "0" * 64, 0
+        with self.events.open("r", encoding="utf-8") as fh:
+            for raw in fh:
+                count += 1
+                try:
+                    event = json.loads(raw)
+                    if set(event) != {"seq", "prev", "at", "command", "hash"}:
+                        raise GateError("Unexpected event fields")
+                    body = {k: event[k] for k in ("seq", "prev", "at", "command")}
+                    if event["seq"] != count or event["prev"] != previous or digest(body) != event["hash"]:
+                        raise GateError("Event chain mismatch")
+                    state = evolve(state, event["command"], event["at"])
+                    previous = event["hash"]
+                except (ValueError, TypeError, KeyError) as exc:
+                    raise GateError(f"Invalid event at line {count}: {exc}") from exc
+        return state, count, previous
+
+    def verify(self) -> tuple[dict, int, str]:
+        state, count, head = self.replay()
+        try:
+            cached = json.loads(self.snapshot.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            raise GateError("Snapshot missing or invalid; run repair_snapshot") from exc
+        if cached != {"event_count": count, "head": head, "state": state}:
+            raise GateError("Snapshot differs from event ledger; run repair_snapshot after audit")
+        return state, count, head
+
+    def _save(self, state: dict, count: int, head: str) -> None:
+        contents = {"event_count": count, "head": head, "state": state}
+        fd, path = tempfile.mkstemp(prefix="state-", suffix=".tmp", dir=self.home)
+        try:
+            with os.fdopen(fd, "wb") as fh:
+                fh.write(canonical(contents) + b"\n")
+                fh.flush()
+                os.fsync(fh.fileno())
+            os.replace(path, self.snapshot)
+        finally:
+            if os.path.exists(path):
+                os.unlink(path)
+
+    def repair_snapshot(self) -> tuple[int, str]:
+        state, count, head = self.replay()
+        self._save(state, count, head)
+        return count, head
+
+    def apply(self, command: dict) -> dict:
+        self.home.mkdir(parents=True, exist_ok=True)
+        try:
+            fd = os.open(self.lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+        except FileExistsError as exc:
+            raise GateError("Another writer holds the ledger lock") from exc
+        try:
+            os.close(fd)
+            state, count, head = self.verify()
+            at = utcnow()
+            updated = evolve(state, command, at)
+            body = {"seq": count + 1, "prev": head, "at": at, "command": command}
+            event = {**body, "hash": digest(body)}
+            with self.events.open("ab") as fh:
+                fh.write(canonical(event) + b"\n")
+                fh.flush()
+                os.fsync(fh.fileno())
+            self._save(updated, count + 1, event["hash"])
+            return {"event_count": count + 1, "head": event["hash"], "state": updated}
+        finally:
+            self.lock.unlink(missing_ok=True)
+
+
+def next_goal(state: dict) -> dict:
+    eligible = [g for g in state["goals"].values() if g["status"] == "OPEN"]
+    if not eligible:
+        return {"status": "WAIT", "reason": "No eligible open goal"}
+    return {"status": "READY", "goal": sorted(eligible, key=lambda g: (-g["priority"], g["id"]))[0]}

@@ -1,0 +1,18 @@
+{
+  "type": "frame_problem",
+  "data": {
+    "id": "youtube-first-loop",
+    "goal_id": "youtube-pilot",
+    "reality": "Chưa nhập dữ liệu analytics đã cấp quyền; hiệu quả kinh doanh của vòng này chưa biết",
+    "conditions": [
+      {"description": "Thiếu số liệu first-party có thể cản việc chấm dự đoán", "role": "CONDITION", "status": "HYPOTHESIS"}
+    ],
+    "target": "Một dự đoán được ghi trước và chấm bằng dữ liệu thực có nguồn gốc",
+    "intervention": "Xin phép truy cập chỉ đọc, đặt metric và ngưỡng trước khi xem kết quả",
+    "unknowns": ["Nguồn dữ liệu Owner sẽ cho phép", "Quy mô mẫu đủ để so baseline"],
+    "control": "Cách đặt câu hỏi, khoảng dự đoán và thời điểm đóng băng",
+    "influence": "Chất lượng thí nghiệm và cách sản xuất trong phạm vi được duyệt",
+    "responsibility": "Owner quyết định dữ liệu, phát hành, chi phí và thay đổi chiến lược",
+    "harm_checks": ["Không bịa số liệu", "Không tối ưu click bằng lời hứa đánh lừa người xem"]
+  }
+}

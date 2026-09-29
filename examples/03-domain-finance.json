@@ -1,0 +1,9 @@
+{
+  "type": "register_domain",
+  "data": {
+    "id": "finance",
+    "name": "Tài chính (minh họa)",
+    "risk_class": "HIGH_STAKES",
+    "measurement_contract": "Dữ liệu thị trường có timestamp, nguồn gốc và phương pháp tính; không có quyền giao dịch"
+  }
+}

@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minh-tri-universal-intelligence-os"
+version = "0.1.0"
+description = "A provider-neutral, evidence-first learning control plane"
+requires-python = ">=3.10"
+
+[project.scripts]
+minhtri = "minhtri.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

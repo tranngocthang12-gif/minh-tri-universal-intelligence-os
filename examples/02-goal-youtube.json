@@ -1,0 +1,10 @@
+{
+  "type": "open_goal",
+  "data": {
+    "id": "youtube-pilot",
+    "domain_id": "youtube",
+    "objective": "Thiết kế một vòng dự đoán và đo lường có dữ liệu thực do Owner cho phép",
+    "priority": 4,
+    "owner_boundary": "Không đăng video, chi tiền hoặc dùng dữ liệu tài khoản nếu chưa được Owner cấp quyền cụ thể"
+  }
+}

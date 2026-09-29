@@ -1,0 +1,9 @@
+{
+  "type": "register_domain",
+  "data": {
+    "id": "youtube",
+    "name": "YouTube (minh họa)",
+    "risk_class": "NORMAL",
+    "measurement_contract": "Chỉ dùng số liệu first-party từ analytics có nguồn và thời điểm; không suy lợi nhuận từ views"
+  }
+}
