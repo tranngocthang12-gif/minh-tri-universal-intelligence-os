@@ -185,6 +185,8 @@ class CanonicalTaskTests(unittest.TestCase):
             self.service.apply(command(
                 "complete_task", task_id="task1", worker_id="worker-b", lease_id="lease-a",
                 expected_checkpoint_seq=0, completion_summary="No",
+                decisions=[], unknowns=[], blockers=[], verification=[], scope="Wrong worker attempt",
+                limitations=["Expected to fail before completion."],
             ))
 
     def test_goal_closure_and_brain_drift_block_continuation(self):
@@ -216,8 +218,17 @@ class CanonicalTaskTests(unittest.TestCase):
         state = self.service.apply(command(
             "complete_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
             expected_checkpoint_seq=0, completion_summary="Accepted bounded result",
+            decisions=["Bounded unit accepted."], unknowns=[], blockers=[],
+            verification=["Structural task tests passed."], scope="Task fixture",
+            limitations=["No real-world effectiveness claim."],
         ))["state"]
         self.assertEqual(state["tasks"]["task1"]["status"], "COMPLETED")
+        receipt = state["tasks"]["task1"]["completion_receipt"]
+        self.assertEqual(receipt["completion_summary"], "Accepted bounded result")
+        self.assertEqual(len(receipt["fingerprint"]), 64)
+        packet = self.service.packet("task1")
+        self.assertEqual(packet["continuation"]["completion_receipt"]["fingerprint"], receipt["fingerprint"])
+        self.assertFalse(packet["continuation"]["acknowledgement_required"])
         with self.assertRaisesRegex(GateError, "terminal"):
             self.service.apply(command(
                 "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
