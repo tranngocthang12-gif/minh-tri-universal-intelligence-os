@@ -180,6 +180,45 @@ class FourSeatWorkcellTests(unittest.TestCase):
                 contribution_ref="artifact://s1", contribution_sha256="1" * 64,
             ))
 
+    def test_official_arena_submission_requires_revealed_four_seat_session(self):
+        self.fill_four()
+        proposal = command(
+            "submit_proposal", id="proposal1", task_id="task1", participant_id="actor1",
+            acknowledgement_id="ack1", task_fingerprint=self.task["fingerprint"],
+            claim="Bounded proposal", alternative="Alternative",
+            uncertainties=["No real outcome"], evidence_ids=[],
+            discriminating_test="Compare evidence", method_ref="method@1",
+        )
+        with self.assertRaisesRegex(GateError, "REVEALED"):
+            self.workcell.submit_arena("session1", proposal)
+
+        self.submit_four()
+        self.workcell.apply(command("freeze_blind", session_id="session1"))
+        self.workcell.apply(command("reveal", session_id="session1"))
+        receipt = self.workcell.submit_arena("session1", proposal)
+        self.assertIn("proposal1", receipt["state"]["proposals"])
+
+        self.arena.apply(command(
+            "register_participant", id="outsider", family_id="outside-family",
+            model="outside-model", version="test", adapter="MANUAL",
+            capabilities=["PROPOSE", "CRITIQUE", "ADJUDICATE"],
+        ))
+        self.arena.apply(command(
+            "acknowledge_brain", id="ack-outsider", task_id="task1", participant_id="outsider",
+            task_fingerprint=self.task["fingerprint"], brain_revision=self.task["brain_revision"],
+            brain_fingerprint=self.task["brain_fingerprint"],
+            architecture_law_sha256=self.task["architecture_law_sha256"],
+            bootstrap_sha256=self.task["bootstrap_sha256"],
+        ))
+        outsider = command(
+            "submit_proposal", id="proposal2", task_id="task1", participant_id="outsider",
+            acknowledgement_id="ack-outsider", task_fingerprint=self.task["fingerprint"],
+            claim="Outsider proposal", alternative="Alternative", uncertainties=["Unknown"],
+            evidence_ids=[], discriminating_test="Test", method_ref="method@2",
+        )
+        with self.assertRaisesRegex(GateError, "four revealed workcell seats"):
+            self.workcell.submit_arena("session1", outsider)
+
 
 if __name__ == "__main__":
     unittest.main()
