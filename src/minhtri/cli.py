@@ -11,6 +11,7 @@ from .arena import ArenaService
 from .arena_migration import archive_legacy_arena, verify_legacy_arena
 from .bottleneck import BottleneckService
 from .core import GateError, Ledger, next_goal
+from .core_migration import verify_legacy_core_family_migration
 from .epistemic import EpistemicService
 from .tasking import TaskService
 from .workcell import FourSeatWorkcellService
@@ -51,6 +52,11 @@ def main(argv: list[str] | None = None) -> int:
     migration_archive.add_argument("archive_root", type=Path)
     migration_archive.add_argument("--schema", default=None,
                                    choices=["arena-v1-core-constitution", "arena-v2-github-brain"])
+
+    core_migration = sub.add_parser("core-migration", help="Verify pre-family Core ledger without rewriting history")
+    core_migration_sub = core_migration.add_subparsers(dest="core_migration_action", required=True)
+    core_migration_verify = core_migration_sub.add_parser("verify", help="Replay legacy provider-ID-only Core ledger")
+    core_migration_verify.add_argument("legacy_home", type=Path)
 
     tasks = sub.add_parser("tasks", help="Canonical task/checkpoint/lease control plane")
     tasks.add_argument("--brain-root", default=".", help="Repository root containing the canonical brain artifacts")
@@ -196,6 +202,8 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 state, count, head = service.ledger.verify()
                 result = {"status": "VALID_TASK_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+        elif args.action == "core-migration":
+            result = verify_legacy_core_family_migration(args.legacy_home)
         elif args.action == "arena-migration":
             if args.migration_action == "verify":
                 result = verify_legacy_arena(args.legacy_home, args.schema)
