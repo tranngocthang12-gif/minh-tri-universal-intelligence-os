@@ -1,20 +1,16 @@
 # MINH TRÍ — MULTI-AI CORE ARCHITECTURE REVIEW EXPERIMENT v0.2
 
-**Experiment ID:** `ARCH-CORE-R4-PRE-R5-2026-09-29-V2`  
-**Status:** `SHADOW / FOUR-SEAT / NOT MERGED`  
-**Frozen architecture target:** `50a0444ed20ae2415c9ee31e622a0b6b8575d4c9`  
-**Round A packet Git blob SHA:** `b02d98d20961eeb165b2febc74ee66152e85362f`  
+**Experiment ID:** `ARCH-CORE-R4_5-PRE-R5-2026-09-29-V2`  
+**Status:** `SHADOW / ELASTIC-N / NOT MERGED`  
+**Frozen architecture target:** `1c8c541ec2b4f545417ccef181ead0725c95b16b`  
+**Round A packet Git blob SHA:** `a40fa68f5dde689f2def86f3c645172f69e5983f`  
 **Incumbent baseline Git blob SHA:** `14d7dc97280428188a1445d0a2c9bbef53fa5c91`
 
 ## Purpose
 
-Measure whether four genuinely independent AI provider families can improve the evidence-backed architecture decision before R5, without leaking the incumbent suspected-blocker list into the blind discovery round.
+Measure whether available independent AI provider families can improve the evidence-backed architecture decision before R5, without leaking the incumbent suspected-blocker list into the blind discovery round.
 
-This experiment uses the Owner's restored four-seat workcell:
-
-`S1 | S2 | S3 | S4`
-
-The four seats are stable; occupants are replaceable.
+This experiment uses the Owner's elastic N-AI workcell. Participant count is determined by actual eligible/available reviewers; provider/model identities remain replaceable. Participant count and independent-family count are recorded separately.
 
 ## Round A — blind discovery
 
@@ -32,26 +28,25 @@ If a seat must be replaced before Round A freeze, the replacement receives only 
 
 ## Freeze barrier
 
-Round A cannot close until:
+Round A for a given collection batch cannot close until:
 
-- all four seats are occupied;
-- all four provider families are distinct;
-- all four submission hashes are recorded;
+- every participant assigned to that batch has submitted;
+- each submission hash is recorded;
 - provider/model/version/session provenance is recorded;
 - each submission states it did not see other reviews or Round B before completion.
 
-Missing one independent seat => `HOLD / WAIT_FOR_REPLACEMENT`.
+There is no fixed four-participant requirement. If only three independent providers are available, the experiment may proceed with three and must report that exact independence level. Same-family participants may contribute but do not increase the independent-family count.
 
 ## Round B — directed challenge
 
-Only after Round A 4/4 freeze:
+Only after the assigned Round A batch is frozen:
 
 1. reveal the frozen incumbent baseline;
 2. reveal the Round B directed packet;
 3. keep Round A novelty metrics separate from Round B confirmation metrics;
 4. ask each participant to CONFIRM / REFUTE / NEEDS_TEST the directed concerns.
 
-The incumbent OpenAI/ChatGPT review is a control baseline, not one of the four independent seats for this experiment.
+The incumbent OpenAI/ChatGPT review is a control baseline and must not be counted as an independent blind review for this experiment.
 
 The Claude session that critiqued protocol v0.1 is classified `PROTOCOL_CRITIC`, not an Anthropic blind-review seat.
 
