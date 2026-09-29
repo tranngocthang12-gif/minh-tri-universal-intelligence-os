@@ -75,10 +75,10 @@ READ LAW
 The following must remain visible until closed by evidence:
 
 - **Ledger schema/migration discipline:** `PASS STRUCTURAL FOR CURRENT R4.5 CONTRACTS`. Core pre-`family_id` history has a non-destructive migration verifier; Task/Epistemic/Governor/Workcell command shapes are frozen by schema-tripwire tests. Any future schema edit must deliberately update migration/compatibility evidence; this does not pre-implement future migrations.
-- **End-to-end cross-layer continuity:** previous exact-head fixture PASS; the final elastic-N architecture target must rerun Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → N-AI blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT with all ledgers replayed.
+- **End-to-end cross-layer continuity:** `PASS STRUCTURAL` on pinned architecture target `1c8c541ec2b4f545417ccef181ead0725c95b16b`; GitHub Actions run `36605259870` passed 67 tests on Python 3.10/3.12, including elastic workcell regressions and the cross-layer continuity suite.
 - **Independent architecture review:** current work has strong incumbent/self-review but no completed independent multi-provider blind architecture review.
-- **Multi-AI experiment:** v0.1 is superseded/HOLD. The review protocol must be repinned to the final R4.5 architecture target. Collection uses however many eligible independent providers are actually available; actual participant/family counts are provenance, not a truth vote.
-- **Official Arena↔Workcell route:** previous service/CLI boundary PASS; the final target must rerun it. `ElasticWorkcellService.submit_arena` and `workcell arena-apply` require a REVEALED session and a current participant. Direct Arena remains a low-level compatibility/replay surface.
+- **Multi-AI experiment:** v0.1 is superseded/HOLD. v0.2 is repinned to architecture target `1c8c541ec2b4f545417ccef181ead0725c95b16b`. Collection uses however many eligible independent providers are actually available; actual participant/family counts are provenance, not a truth vote.
+- **Official Arena↔Workcell route:** `PASS STRUCTURAL` on the pinned architecture target. `ElasticWorkcellService.submit_arena` and `workcell arena-apply` require a REVEALED session and a current participant. Direct Arena remains a low-level compatibility/replay surface.
 - **Provider/Owner identity:** still self-declared/unverified.
 - **Real-world effectiveness:** no evidence yet about the optimal participant count or whether multi-AI outperforms simpler baselines on cost/error/outcome.
 
