@@ -6,22 +6,24 @@ import copy
 from pathlib import Path
 from typing import Any
 
-from .brain import BRAIN_ARTIFACTS, brain_bundle
+from .brain import BRAIN_ARTIFACTS, brain_bundle, manifest_artifact_sha
 from .core import GateError, Ledger, digest, identifier, need, parse_time, ref, string, utcnow
 
 
 ARENA_FIELDS = {
     "register_participant": {"id", "family_id", "model", "version", "adapter", "capabilities"},
     "open_task": {"id", "goal_id", "domain_id", "runtime_state_head", "brain_revision", "brain_fingerprint",
-                  "brief", "acceptance", "allowed_evidence_ids", "expires_at", "risk_class", "sensitivity",
-                  "mode", "budget_cap"},
+                  "architecture_law_sha256", "bootstrap_sha256", "brief", "acceptance", "allowed_evidence_ids",
+                  "expires_at", "risk_class", "sensitivity", "mode", "budget_cap"},
+    "acknowledge_brain": {"id", "task_id", "participant_id", "task_fingerprint", "brain_revision",
+                          "brain_fingerprint", "architecture_law_sha256", "bootstrap_sha256"},
     "close_task": {"task_id", "reason"},
-    "submit_proposal": {"id", "task_id", "participant_id", "task_fingerprint", "claim", "alternative",
-                        "uncertainties", "evidence_ids", "discriminating_test", "method_ref"},
-    "submit_critique": {"id", "proposal_id", "participant_id", "task_fingerprint", "verdict", "reason",
-                        "evidence_ids", "test"},
-    "submit_adjudication": {"id", "proposal_id", "participant_id", "task_fingerprint", "critique_ids",
-                             "outcome", "reason"},
+    "submit_proposal": {"id", "task_id", "participant_id", "acknowledgement_id", "task_fingerprint", "claim",
+                        "alternative", "uncertainties", "evidence_ids", "discriminating_test", "method_ref"},
+    "submit_critique": {"id", "proposal_id", "participant_id", "acknowledgement_id", "task_fingerprint",
+                        "verdict", "reason", "evidence_ids", "test"},
+    "submit_adjudication": {"id", "proposal_id", "participant_id", "acknowledgement_id", "task_fingerprint",
+                             "critique_ids", "outcome", "reason"},
 }
 
 CAPABILITIES = {"PROPOSE", "CRITIQUE", "ADJUDICATE"}
@@ -29,7 +31,7 @@ CAPABILITIES = {"PROPOSE", "CRITIQUE", "ADJUDICATE"}
 
 def initial_arena_state() -> dict:
     return {"format_version": 1, "phase": "SHADOW", "participants": {}, "tasks": {},
-            "proposals": {}, "critiques": {}, "adjudications": {}}
+            "acknowledgements": {}, "proposals": {}, "critiques": {}, "adjudications": {}}
 
 
 def _add(state: dict, collection: str, data: dict) -> None:
@@ -61,9 +63,9 @@ def _hex(value: Any, length: int, label: str) -> str:
     return value
 
 
-def _participant(state: dict, participant_id: str, role: str) -> dict:
+def _participant(state: dict, participant_id: str, role: str | None = None) -> dict:
     actor = ref(state, "participants", participant_id)
-    if role not in actor["capabilities"]:
+    if role is not None and role not in actor["capabilities"]:
         raise GateError(f"Participant lacks {role} capability")
     return actor
 
@@ -80,6 +82,18 @@ def _task(state: dict, task_id: str, fingerprint: str, at: str) -> dict:
 def _evidence(task: dict, evidence_ids: Any) -> None:
     if not set(_ids(evidence_ids, "evidence_ids")).issubset(task["allowed_evidence_ids"]):
         raise GateError("Evidence reference is outside the task packet")
+
+
+def _acknowledgement(state: dict, acknowledgement_id: str, task: dict, participant_id: str) -> dict:
+    ack = ref(state, "acknowledgements", acknowledgement_id)
+    if ack["task_id"] != task["id"] or ack["participant_id"] != participant_id:
+        raise GateError("Brain acknowledgement does not belong to this participant and task")
+    if ack["task_fingerprint"] != task["fingerprint"]:
+        raise GateError("Brain acknowledgement is for a different task fingerprint")
+    for key in ("brain_revision", "brain_fingerprint", "architecture_law_sha256", "bootstrap_sha256"):
+        if ack[key] != task[key]:
+            raise GateError("Brain acknowledgement is stale or mismatched")
+    return ack
 
 
 def arena_evolve(state: dict, command: dict, at: str) -> dict:
@@ -118,6 +132,8 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
         _hex(d["runtime_state_head"], 64, "runtime_state_head")
         _hex(d["brain_revision"], 40, "brain_revision")
         _hex(d["brain_fingerprint"], 64, "brain_fingerprint")
+        _hex(d["architecture_law_sha256"], 64, "architecture_law_sha256")
+        _hex(d["bootstrap_sha256"], 64, "bootstrap_sha256")
         for key in ("brief", "acceptance"):
             string(d[key], key)
         _ids(d["allowed_evidence_ids"], "allowed_evidence_ids")
@@ -134,6 +150,19 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
         d["opened_at"] = at
         _add(out, "tasks", d)
 
+    elif kind == "acknowledge_brain":
+        need(d, *ARENA_FIELDS[kind])
+        task = _task(out, d["task_id"], d["task_fingerprint"], at)
+        _participant(out, d["participant_id"])
+        for key, length in (("brain_revision", 40), ("brain_fingerprint", 64),
+                            ("architecture_law_sha256", 64), ("bootstrap_sha256", 64)):
+            _hex(d[key], length, key)
+            if d[key] != task[key]:
+                raise GateError("Brain acknowledgement must match the frozen task packet")
+        d["status"] = "ACKNOWLEDGED_RECEIPT_ONLY"
+        d["acknowledged_at"] = at
+        _add(out, "acknowledgements", d)
+
     elif kind == "close_task":
         need(d, "task_id", "reason")
         task = ref(out, "tasks", d["task_id"])
@@ -147,6 +176,7 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
         need(d, *ARENA_FIELDS[kind])
         task = _task(out, d["task_id"], d["task_fingerprint"], at)
         _participant(out, d["participant_id"], "PROPOSE")
+        _acknowledgement(out, d["acknowledgement_id"], task, d["participant_id"])
         for key in ("claim", "alternative", "discriminating_test", "method_ref"):
             string(d[key], key)
         _strings(d["uncertainties"], "uncertainties")
@@ -162,6 +192,7 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
             raise GateError("Review is frozen after adjudication; open a new task to reconsider")
         task = _task(out, proposal["task_id"], d["task_fingerprint"], at)
         critic = _participant(out, d["participant_id"], "CRITIQUE")
+        _acknowledgement(out, d["acknowledgement_id"], task, d["participant_id"])
         maker = ref(out, "participants", proposal["participant_id"])
         if critic["family_id"] == maker["family_id"]:
             raise GateError("Critic must be from another provider family")
@@ -179,8 +210,9 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
         proposal = ref(out, "proposals", d["proposal_id"])
         if any(a["proposal_id"] == d["proposal_id"] for a in out["adjudications"].values()):
             raise GateError("Proposal already has an adjudication receipt")
-        _task(out, proposal["task_id"], d["task_fingerprint"], at)
+        task = _task(out, proposal["task_id"], d["task_fingerprint"], at)
         judge = _participant(out, d["participant_id"], "ADJUDICATE")
+        _acknowledgement(out, d["acknowledgement_id"], task, d["participant_id"])
         relevant = {cid for cid, critique in out["critiques"].items() if critique["proposal_id"] == d["proposal_id"]}
         provided = set(_ids(d["critique_ids"], "critique_ids"))
         if not relevant or provided != relevant:
@@ -222,6 +254,10 @@ class ArenaService:
         manifest = brain["manifest"]
         if task["brain_revision"] != manifest["brain_revision"] or task["brain_fingerprint"] != brain["fingerprint"]:
             raise GateError("Task brain version is stale; open a new task from current GitHub brain")
+        if task["architecture_law_sha256"] != manifest_artifact_sha(manifest, "PROJECT_LAW.md"):
+            raise GateError("Task architecture law is stale; open a new task from current GitHub brain")
+        if task["bootstrap_sha256"] != manifest_artifact_sha(manifest, "BOOTSTRAP.md"):
+            raise GateError("Task bootstrap is stale; open a new task from current GitHub brain")
 
     def init(self) -> None:
         self.core.verify()
@@ -248,10 +284,13 @@ class ArenaService:
                 source = ref(core_state, "sources", evidence["source_id"])
                 if evidence["domain_id"] != goal["domain_id"] or source["kind"] != "SYNTHETIC" or source["rights_status"] != "CLEAR":
                     raise GateError("Shadow task context must be same-domain synthetic evidence with clear rights")
+            manifest = brain["manifest"]
             d.update({"domain_id": goal["domain_id"], "runtime_state_head": runtime_state_head,
-                      "brain_revision": brain["manifest"]["brain_revision"],
-                      "brain_fingerprint": brain["fingerprint"], "risk_class": domain["risk_class"],
-                      "sensitivity": "PUBLIC", "mode": "SHADOW", "budget_cap": 0})
+                      "brain_revision": manifest["brain_revision"], "brain_fingerprint": brain["fingerprint"],
+                      "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
+                      "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
+                      "risk_class": domain["risk_class"], "sensitivity": "PUBLIC",
+                      "mode": "SHADOW", "budget_cap": 0})
         elif kind not in ("register_participant",):
             arena_state, _, _ = self.ledger.verify()
             task_id = d.get("task_id")
@@ -265,9 +304,11 @@ class ArenaService:
         self.core.verify()
         state, count, head = self.ledger.verify()
         brain = self._brain()
+        manifest = brain["manifest"]
         return {"phase": state["phase"], "event_count": count, "head": head,
-                "brain_revision": brain["manifest"]["brain_revision"],
-                "brain_fingerprint": brain["fingerprint"],
+                "brain_revision": manifest["brain_revision"], "brain_fingerprint": brain["fingerprint"],
+                "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
+                "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
                 "counts": {key: len(value) for key, value in state.items() if isinstance(value, dict)}}
 
     def task_packet(self, task_id: str) -> dict:
@@ -285,5 +326,15 @@ class ArenaService:
             evidence.append({key: item[key] for key in ("id", "statement", "observed_at", "value", "metric")
                              if key in item} | {"source_kind": source["kind"],
                                                "rights_status": source["rights_status"]})
-        constitution = (self.brain_root / BRAIN_ARTIFACTS[0]).read_text(encoding="utf-8")
-        return {"task": copy.deepcopy(task), "brain": brain, "constitution": constitution, "evidence": evidence}
+        constitution = (self.brain_root / "docs" / "PHILOSOPHY.md").read_text(encoding="utf-8")
+        law = (self.brain_root / "PROJECT_LAW.md").read_text(encoding="utf-8")
+        bootstrap = (self.brain_root / "BOOTSTRAP.md").read_text(encoding="utf-8")
+        return {"task": copy.deepcopy(task), "brain": brain, "project_law": law, "bootstrap": bootstrap,
+                "constitution": constitution, "evidence": evidence,
+                "acknowledgement_required": {
+                    "brain_revision": task["brain_revision"],
+                    "brain_fingerprint": task["brain_fingerprint"],
+                    "architecture_law_sha256": task["architecture_law_sha256"],
+                    "bootstrap_sha256": task["bootstrap_sha256"],
+                    "task_fingerprint": task["fingerprint"],
+                }}
