@@ -25,7 +25,16 @@ class ShadowArenaTests(unittest.TestCase):
         for index, relative in enumerate(BRAIN_ARTIFACTS, start=1):
             path = self.brain_root / relative
             path.parent.mkdir(parents=True, exist_ok=True)
-            text = "Owner-approved candidate for shadow test" if relative == "docs/PHILOSOPHY.md" else f"brain-artifact-{index}"
+            if relative == "PROJECT_LAW.md":
+                text = "# PROJECT_LAW\nREAD BEFORE WORK\n"
+            elif relative == "BOOTSTRAP.md":
+                text = "# BOOTSTRAP\nREAD BEFORE RECONSTRUCT\n"
+            elif relative == "AGENTS.md":
+                text = "# AGENTS\nRead PROJECT_LAW.md and BOOTSTRAP.md\n"
+            elif relative == "docs/PHILOSOPHY.md":
+                text = "Owner-approved candidate for shadow test"
+            else:
+                text = f"brain-artifact-{index}"
             path.write_text(text, encoding="utf-8")
         self.brain_revision = "a" * 40
         self.core = Ledger(root / "brain")
