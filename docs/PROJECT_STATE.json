@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "R1_CI_PASS_THEN_CANONICAL_TASK_HANDOFF_R2",
+  "next_checkpoint": "R2_CI_PASS_THEN_EPISTEMIC_AND_L0_L9_STATE_R3",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -34,5 +34,14 @@
     "arena-v1-core-constitution",
     "arena-v2-github-brain"
   ],
-  "arena_migration_status": "R1_CANDIDATE_UNDER_TEST"
+  "arena_migration_status": "R1_CANDIDATE_UNDER_TEST",
+  "canonical_task_contract": "docs/CANONICAL_TASK_HANDOFF_V0.1.md",
+  "canonical_task_status": "R2_CANDIDATE_UNDER_TEST",
+  "task_handoff_features": [
+    "CHECKPOINT_SEQ_CAS",
+    "LEASE",
+    "VOLUNTARY_HANDOFF",
+    "LEASE_EXPIRY_FAILOVER",
+    "BRAIN_LAW_STALENESS_GATE"
+  ]
 }
