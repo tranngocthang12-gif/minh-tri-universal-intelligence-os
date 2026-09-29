@@ -1,7 +1,7 @@
 # MINH TRÍ — ROUND B DIRECTED ARCHITECTURE CHALLENGE PACKET v0.2
 
-**Experiment:** `ARCH-CORE-R4-PRE-R5-2026-09-29-V2`  
-**Frozen target:** `50a0444ed20ae2415c9ee31e622a0b6b8575d4c9`
+**Experiment:** `ARCH-CORE-R4_5-PRE-R5-2026-09-29-V2`  
+**Frozen target:** `1c8c541ec2b4f545417ccef181ead0725c95b16b`
 
 Use this packet **only after** the participant's Round A output is frozen.
 
