@@ -213,6 +213,7 @@ Không có outcome thật thì không được gọi kết quả là “đã ch�
 - `ABSTAIN` là kết quả hợp lệ.
 - Không bỏ phiếu 4-0/3-1 để tạo truth. Bất đồng vật chất chưa giải quyết giữ `HOLD`.
 - AI khác có thể thay occupant hỏng nếu nhận đúng Brain/Task/Checkpoint/Handoff. Replacement trước reveal không được xem blind output của ghế khác; replacement sau reveal nhận canonical revealed state.
+- Đường official cho proposal/critique/adjudication là **FourSeatWorkcell → Arena gateway sau REVEALED**. Direct Arena API/ledger được giữ như low-level compatibility/replay surface và không được dùng để tuyên bố một official four-AI session đã hoàn thành.
 - Chi tiết bền nằm ở `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md`.
 
 ## 8. Luật kiến trúc khi sửa hệ
