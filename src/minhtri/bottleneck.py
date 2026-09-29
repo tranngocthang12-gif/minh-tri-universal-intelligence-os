@@ -441,33 +441,37 @@ class BottleneckService:
         }
 
     def commit_focus(self, plan_id: str) -> dict:
-        recommendation = self.recommend(plan_id)
-        snapshot = {
-            "decision": recommendation["decision"],
-            "component_id": recommendation["component_id"],
-            "candidate_ids": recommendation["candidate_ids"],
-            "reason": recommendation["reason"],
-            "selection_method": recommendation["selection_method"],
-            "rubric": recommendation.get("rubric"),
-            "task_candidate": recommendation.get("task_candidate"),
-        }
-        command = {
-            "type": "record_focus",
-            "data": {
-                "plan_id": plan_id,
+        self.ledger.acquire_project_lock()
+        try:
+            recommendation = self.recommend(plan_id)
+            snapshot = {
                 "decision": recommendation["decision"],
                 "component_id": recommendation["component_id"],
-                "reason": recommendation["reason"],
-                "core_head": recommendation["core_head"],
-                "epistemic_head": recommendation["epistemic_head"],
-                "plan_head_before": recommendation["plan_head"],
                 "candidate_ids": recommendation["candidate_ids"],
+                "reason": recommendation["reason"],
                 "selection_method": recommendation["selection_method"],
-                "selection_snapshot_hash": digest(snapshot),
-            },
-        }
-        receipt = self.ledger.apply(command)
-        return {"recommendation": recommendation, "receipt": receipt}
+                "rubric": recommendation.get("rubric"),
+                "task_candidate": recommendation.get("task_candidate"),
+            }
+            command = {
+                "type": "record_focus",
+                "data": {
+                    "plan_id": plan_id,
+                    "decision": recommendation["decision"],
+                    "component_id": recommendation["component_id"],
+                    "reason": recommendation["reason"],
+                    "core_head": recommendation["core_head"],
+                    "epistemic_head": recommendation["epistemic_head"],
+                    "plan_head_before": recommendation["plan_head"],
+                    "candidate_ids": recommendation["candidate_ids"],
+                    "selection_method": recommendation["selection_method"],
+                    "selection_snapshot_hash": digest(snapshot),
+                },
+            }
+            receipt = self.ledger.apply(command, project_lock_held=True)
+            return {"recommendation": recommendation, "receipt": receipt}
+        finally:
+            self.ledger.release_project_lock()
 
     def status(self) -> dict:
         state, count, head = self.ledger.verify()
