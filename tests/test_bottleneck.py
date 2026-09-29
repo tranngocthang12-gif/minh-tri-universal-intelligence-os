@@ -174,7 +174,7 @@ class BottleneckGovernorTests(unittest.TestCase):
 
     def test_wait_when_nothing_is_eligible_or_all_work_is_done(self):
         self.add_component("foundation", epistemic_item_ids=["audience-item"], unknown_ids=[])
-        self.add_component("blocked-next", dependency_ids=["foundation"], target_role="BLOCKER")
+        self.add_component("blocked-next", dependency_ids=["foundation"], target_role="BLOCKER", unknown_ids=[])
         self.governor.apply(command(
             "set_component_status", component_id="foundation",
             status="HOLD", reason="Need a new source", evidence_ids=[],
@@ -269,6 +269,43 @@ class BottleneckGovernorTests(unittest.TestCase):
         self.assertEqual(rec["decision"], "SELECT")
         self.assertIsNotNone(rec["task_candidate"])
         self.assertFalse((self.home / "tasks" / "events.jsonl").exists())
+
+    def test_satisfied_rejects_irrelevant_or_unresolved_evidence(self):
+        self.add_component(
+            "format-gap",
+            unknown_ids=["format-unknown"],
+            allowed_evidence_ids=["evidence1"],
+        )
+        with self.assertRaisesRegex(GateError, "unknowns remain OPEN"):
+            self.governor.apply(command(
+                "set_component_status", component_id="format-gap",
+                status="SATISFIED", reason="Too early", evidence_ids=["evidence1"],
+            ))
+
+        self.epistemic.apply(command(
+            "resolve_unknown", unknown_id="format-unknown",
+            answer="Resolved for this bounded pilot.", evidence_ids=["evidence1"],
+        ))
+        self.core.apply(command(
+            "record_source", id="source2", domain_id="media", uri="internal://other",
+            captured_at="2026-01-02T00:00:00Z", kind="FIRST_PARTY", rights_status="CLEAR",
+        ))
+        self.core.apply(command(
+            "record_evidence", id="evidence2", domain_id="media", source_id="source2",
+            statement="Same domain but not allowlisted for this component",
+            observed_at="2026-01-02T00:00:00Z",
+        ))
+        with self.assertRaisesRegex(GateError, "allowlist"):
+            self.governor.apply(command(
+                "set_component_status", component_id="format-gap",
+                status="SATISFIED", reason="Irrelevant evidence", evidence_ids=["evidence2"],
+            ))
+
+        self.governor.apply(command(
+            "set_component_status", component_id="format-gap",
+            status="SATISFIED", reason="Bounded unknown resolved with allowed evidence",
+            evidence_ids=["evidence1"],
+        ))
 
 
 if __name__ == "__main__":
