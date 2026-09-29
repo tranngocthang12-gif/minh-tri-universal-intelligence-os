@@ -103,6 +103,9 @@ def main(argv: list[str] | None = None) -> int:
     workcell_status.add_argument("session_id")
     workcell_packet = workcell_sub.add_parser("packet", help="Export one workcell + frozen Arena task packet")
     workcell_packet.add_argument("session_id")
+    workcell_arena = workcell_sub.add_parser("arena-apply", help="Official proposal/critique/adjudication route after four-seat reveal")
+    workcell_arena.add_argument("session_id")
+    workcell_arena.add_argument("json_file", type=Path)
     workcell_sub.add_parser("verify", help="Replay workcell ledger")
     workcell_sub.add_parser("repair-snapshot", help="Repair workcell cache after audit")
     args = parser.parse_args(argv)
@@ -121,6 +124,10 @@ def main(argv: list[str] | None = None) -> int:
                 result = service.status(args.session_id)
             elif args.workcell_action == "packet":
                 result = service.packet(args.session_id)
+            elif args.workcell_action == "arena-apply":
+                payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+                receipt = service.submit_arena(args.session_id, payload)
+                result = {"status": "OFFICIAL_ARENA_SUBMISSION_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
             elif args.workcell_action == "repair-snapshot":
                 count, head = service.ledger.repair_snapshot()
                 result = {"status": "WORKCELL_CACHE_REPAIRED", "event_count": count, "head": head}
