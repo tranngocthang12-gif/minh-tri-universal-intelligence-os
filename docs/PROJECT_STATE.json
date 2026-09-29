@@ -1,6 +1,6 @@
 {
   "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
-  "version": "0.1.0",
+  "version": "0.2.0-candidate-r4.5",
   "phase": "FOUNDATION_PROTOTYPE",
   "tier_1": "OFFLINE_LEDGER_AND_STRUCTURAL_GATES_IMPLEMENTED",
   "core_design_alignment": "PARTIAL_CONFORMANT_FOUNDATION_PROTOTYPE",
@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "COLLECT_BLIND_MULTI_PROVIDER_ARCHITECTURE_REVIEWS_THEN_CROSS_CRITIQUE_AND_ADJUDICATE_R4_5",
+  "next_checkpoint": "R4_5_TEST_FIXTURES_SCHEMA_COMPATIBILITY_END_TO_END_THEN_INDEPENDENT_REVIEW",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -36,16 +36,19 @@
   ],
   "arena_migration_status": "R1_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
   "canonical_task_contract": "docs/CANONICAL_TASK_HANDOFF_V0.1.md",
-  "canonical_task_status": "R2_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
+  "canonical_task_status": "R2_HARDENED_CONTINUATION_ACK_AND_HANDOFF_UNDER_TEST",
   "task_handoff_features": [
     "CHECKPOINT_SEQ_CAS",
+    "PROJECT_SHARED_WRITER_LOCK",
+    "CONTINUATION_FINGERPRINT_ACK",
+    "STRUCTURED_HANDOFF_RECEIPT",
     "LEASE",
     "VOLUNTARY_HANDOFF",
     "LEASE_EXPIRY_FAILOVER",
     "BRAIN_LAW_STALENESS_GATE"
   ],
   "epistemic_contract": "docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md",
-  "epistemic_status": "R3_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
+  "epistemic_status": "R3_HARDENED_REOPEN_INVALIDATES_ACTIVE_L2_L6_CHAIN_UNDER_TEST",
   "learning_maturity_runtime": "L0_TO_L6_EVIDENCE_DERIVED_L7_TO_L9_FUTURE_GATED",
   "unknown_registry": "IMPLEMENTED_IN_R3_CANDIDATE",
   "knowledge_reopen_triggers": [
@@ -59,7 +62,7 @@
   ],
   "provider_error_profile": "OBSERVATIONS_ONLY_NOT_SCORED",
   "bottleneck_contract": "docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md",
-  "bottleneck_status": "R4_CANDIDATE_UNDER_TEST",
+  "bottleneck_status": "R4_HARDENED_RELEVANCE_AND_PROJECT_LOCK_UNDER_TEST",
   "bottleneck_selection_method": "ORDINAL_LEXICOGRAPHIC_NO_CALIBRATED_SCORE",
   "bottleneck_outputs": [
     "SELECT",
@@ -68,6 +71,20 @@
   ],
   "architecture_multi_ai_experiment": "docs/experiments/ARCHITECTURE_MULTI_AI_EXPERIMENT_V0.1.md",
   "architecture_review_task_packet": "docs/experiments/ARCHITECTURE_REVIEW_TASK_PACKET_V0.1.md",
-  "architecture_multi_ai_experiment_status": "SHADOW_PACKET_READY_MANUAL_PROVIDERS_NOT_YET_COLLECTED",
-  "r5_status": "HOLD_PENDING_MULTI_AI_ARCHITECTURE_REVIEW_AND_R4_5_DECISION"
+  "architecture_multi_ai_experiment_status": "V0_1_PROTOCOL_HOLD_PENDING_BLIND_PROTOCOL_HARDENING",
+  "r5_status": "HOLD_PENDING_R4_5_STABILIZATION_AND_INDEPENDENT_REVIEW",
+  "architecture_memory_contract": "docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md",
+  "architecture_stabilization_gate": "docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md",
+  "r4_5_status": "UNDER_TEST_NOT_MERGED",
+  "brain_manifest_scope": "LAW_BOOTSTRAP_V0_2_CONTINUITY_R1_R4_STATE_ROADMAP",
+  "ai_commons_workcell": "FOUR_STABLE_SLOTS_REPLACEABLE_OCCUPANTS_SHADOW",
+  "ai_commons_blind_gate": "FOUR_OF_FOUR_DISTINCT_FAMILIES_REQUIRED_BEFORE_REVEAL",
+  "core_provider_family_separation": "IMPLEMENTED_CANDIDATE_UNDER_TEST",
+  "r4_5_open_holds": [
+    "LEDGER_SCHEMA_MIGRATION_POLICY_R2_R4_WORKCELL",
+    "END_TO_END_R1_R4_CONTINUITY_TEST",
+    "INDEPENDENT_MULTI_PROVIDER_ARCHITECTURE_REVIEW",
+    "PROVIDER_OWNER_IDENTITY_UNVERIFIED",
+    "REAL_WORLD_EFFECTIVENESS_UNVALIDATED"
+  ]
 }
