@@ -1,4 +1,6 @@
-# Kiến trúc Tầng 1 v0.1
+# MINH TRÍ — Tier 1 Architecture
+
+> **Authority/entrypoint:** đọc `PROJECT_LAW.md` và `BOOTSTRAP.md` trước tài liệu này. Tài liệu này mô tả kiến trúc Tầng 1; nếu có xung đột, thứ bậc trong PROJECT_LAW áp dụng. Mọi AI Commons task phải pin exact Brain/Law/Bootstrap/runtime và participant phải acknowledgement trước khi làm.
 
 ```text
 OWNER PURPOSE / BOUNDARY
