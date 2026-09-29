@@ -96,7 +96,7 @@ the effective level falls to `L0_MEMORY` with:
 
 The historical maximum is not erased.
 
-After evidence-backed revalidation, the effective level can return to the level still supported by the retained chain.
+Reopen preserves the historical maximum and an audit snapshot of the invalidated chain, but clears the **active** understanding → prediction → application → validation → critique chain. Evidence-backed revalidation restores only the knowledge layer (L1); every higher level must be demonstrated again through its normal gate. This prevents one new evidence reference from silently restoring an obsolete L6 state.
 
 ## Unknown registry
 
