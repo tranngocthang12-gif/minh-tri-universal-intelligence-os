@@ -10,6 +10,7 @@ from pathlib import Path
 from .arena import ArenaService
 from .arena_migration import archive_legacy_arena, verify_legacy_arena
 from .core import GateError, Ledger, next_goal
+from .epistemic import EpistemicService
 from .tasking import TaskService
 
 
@@ -62,10 +63,41 @@ def main(argv: list[str] | None = None) -> int:
     task_packet.add_argument("task_id")
     task_sub.add_parser("verify", help="Replay canonical task ledger")
     task_sub.add_parser("repair-snapshot", help="Repair canonical task cache after audit")
+
+    epistemic = sub.add_parser("epistemic", help="Epistemic registry and learning maturity ledger")
+    epistemic_sub = epistemic.add_subparsers(dest="epistemic_action", required=True)
+    epistemic_sub.add_parser("init", help="Create epistemic ledger after core init")
+    epistemic_apply = epistemic_sub.add_parser("apply", help="Apply one epistemic command")
+    epistemic_apply.add_argument("json_file", type=Path)
+    epistemic_status = epistemic_sub.add_parser("status", help="Show maturity/unknown/review status")
+    epistemic_status.add_argument("--now", default=None, help="Optional ISO timestamp for due-review calculation")
+    epistemic_item = epistemic_sub.add_parser("item", help="Show one epistemic item")
+    epistemic_item.add_argument("item_id")
+    epistemic_sub.add_parser("verify", help="Replay epistemic ledger")
+    epistemic_sub.add_parser("repair-snapshot", help="Repair epistemic cache after audit")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
     try:
-        if args.action == "tasks":
+        if args.action == "epistemic":
+            service = EpistemicService(args.home)
+            if args.epistemic_action == "init":
+                service.init()
+                result = {"status": "EPISTEMIC_LEDGER_INITIALIZED", "home": str(service.ledger.home)}
+            elif args.epistemic_action == "apply":
+                payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+                receipt = service.apply(payload)
+                result = {"status": "EPISTEMIC_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
+            elif args.epistemic_action == "status":
+                result = service.status(args.now)
+            elif args.epistemic_action == "item":
+                result = service.item(args.item_id)
+            elif args.epistemic_action == "repair-snapshot":
+                count, head = service.ledger.repair_snapshot()
+                result = {"status": "EPISTEMIC_CACHE_REPAIRED", "event_count": count, "head": head}
+            else:
+                state, count, head = service.ledger.verify()
+                result = {"status": "VALID_EPISTEMIC_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+        elif args.action == "tasks":
             service = TaskService(args.home, args.brain_root, args.brain_revision)
             if args.task_action == "init":
                 service.init()
