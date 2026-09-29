@@ -3,17 +3,18 @@
 from __future__ import annotations
 
 import copy
-import hashlib
 from pathlib import Path
 from typing import Any
 
+from .brain import BRAIN_ARTIFACTS, brain_bundle
 from .core import GateError, Ledger, digest, identifier, need, parse_time, ref, string, utcnow
 
 
 ARENA_FIELDS = {
     "register_participant": {"id", "family_id", "model", "version", "adapter", "capabilities"},
-    "open_task": {"id", "goal_id", "domain_id", "core_head", "constitution_sha256", "brief", "acceptance",
-                  "allowed_evidence_ids", "expires_at", "risk_class", "sensitivity", "mode", "budget_cap"},
+    "open_task": {"id", "goal_id", "domain_id", "runtime_state_head", "brain_revision", "brain_fingerprint",
+                  "brief", "acceptance", "allowed_evidence_ids", "expires_at", "risk_class", "sensitivity",
+                  "mode", "budget_cap"},
     "close_task": {"task_id", "reason"},
     "submit_proposal": {"id", "task_id", "participant_id", "task_fingerprint", "claim", "alternative",
                         "uncertainties", "evidence_ids", "discriminating_test", "method_ref"},
@@ -52,6 +53,12 @@ def _strings(values: Any, label: str) -> list[str]:
     for value in values:
         string(value, label)
     return values
+
+
+def _hex(value: Any, length: int, label: str) -> str:
+    if not isinstance(value, str) or len(value) != length or any(c not in "0123456789abcdef" for c in value):
+        raise GateError(f"{label} must be a {length}-character lowercase hex digest")
+    return value
 
 
 def _participant(state: dict, participant_id: str, role: str) -> dict:
@@ -108,9 +115,9 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
         need(d, *ARENA_FIELDS[kind])
         identifier(d["goal_id"], "goal_id")
         identifier(d["domain_id"], "domain_id")
-        for key in ("core_head", "constitution_sha256"):
-            if not isinstance(d[key], str) or len(d[key]) != 64 or any(c not in "0123456789abcdef" for c in d[key]):
-                raise GateError(f"{key} must be a SHA-256 hex digest")
+        _hex(d["runtime_state_head"], 64, "runtime_state_head")
+        _hex(d["brain_revision"], 40, "brain_revision")
+        _hex(d["brain_fingerprint"], 64, "brain_fingerprint")
         for key in ("brief", "acceptance"):
             string(d[key], key)
         _ids(d["allowed_evidence_ids"], "allowed_evidence_ids")
@@ -197,25 +204,33 @@ def arena_evolve(state: dict, command: dict, at: str) -> dict:
     return out
 
 
-def constitution_hash(path: str | Path) -> str:
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
-
-
 class ArenaService:
-    """Boundary between the canonical core and shadow arena ledger."""
+    """Boundary between the canonical core, GitHub brain contract and shadow arena."""
 
-    def __init__(self, core_home: str | Path, constitution_path: str | Path):
+    def __init__(self, core_home: str | Path, brain_root: str | Path = ".", brain_revision: str | None = None):
         self.core = Ledger(core_home)
         self.ledger = Ledger(Path(core_home) / "arena", reducer=arena_evolve, initial=initial_arena_state)
-        self.constitution_path = Path(constitution_path)
+        self.brain_root = Path(brain_root)
+        self.brain_revision = brain_revision
+
+    def _brain(self) -> dict:
+        return brain_bundle(self.brain_root, self.brain_revision)
+
+    def _assert_current_task(self, task: dict, runtime_state_head: str, brain: dict) -> None:
+        if task["runtime_state_head"] != runtime_state_head:
+            raise GateError("Task runtime state is stale; open a new task from current core state")
+        manifest = brain["manifest"]
+        if task["brain_revision"] != manifest["brain_revision"] or task["brain_fingerprint"] != brain["fingerprint"]:
+            raise GateError("Task brain version is stale; open a new task from current GitHub brain")
 
     def init(self) -> None:
         self.core.verify()
-        constitution_hash(self.constitution_path)
+        self._brain()
         self.ledger.init()
 
     def apply(self, command: dict) -> dict:
-        core_state, _, core_head = self.core.verify()
+        core_state, _, runtime_state_head = self.core.verify()
+        brain = self._brain()
         if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
             raise GateError("Command must contain exactly type and data object")
         command = copy.deepcopy(command)
@@ -233,33 +248,35 @@ class ArenaService:
                 source = ref(core_state, "sources", evidence["source_id"])
                 if evidence["domain_id"] != goal["domain_id"] or source["kind"] != "SYNTHETIC" or source["rights_status"] != "CLEAR":
                     raise GateError("Shadow task context must be same-domain synthetic evidence with clear rights")
-            d.update({"domain_id": goal["domain_id"], "core_head": core_head,
-                      "constitution_sha256": constitution_hash(self.constitution_path),
-                      "risk_class": domain["risk_class"], "sensitivity": "PUBLIC", "mode": "SHADOW", "budget_cap": 0})
+            d.update({"domain_id": goal["domain_id"], "runtime_state_head": runtime_state_head,
+                      "brain_revision": brain["manifest"]["brain_revision"],
+                      "brain_fingerprint": brain["fingerprint"], "risk_class": domain["risk_class"],
+                      "sensitivity": "PUBLIC", "mode": "SHADOW", "budget_cap": 0})
         elif kind not in ("register_participant",):
             arena_state, _, _ = self.ledger.verify()
             task_id = d.get("task_id")
             if kind in ("submit_critique", "submit_adjudication"):
                 task_id = ref(arena_state, "proposals", d.get("proposal_id"))["task_id"]
             task = ref(arena_state, "tasks", task_id)
-            if task["core_head"] != core_head or task["constitution_sha256"] != constitution_hash(self.constitution_path):
-                raise GateError("Task snapshot is stale; open a new task from current core/constitution")
+            self._assert_current_task(task, runtime_state_head, brain)
         return self.ledger.apply(command)
 
     def status(self) -> dict:
         self.core.verify()
         state, count, head = self.ledger.verify()
+        brain = self._brain()
         return {"phase": state["phase"], "event_count": count, "head": head,
+                "brain_revision": brain["manifest"]["brain_revision"],
+                "brain_fingerprint": brain["fingerprint"],
                 "counts": {key: len(value) for key, value in state.items() if isinstance(value, dict)}}
 
     def task_packet(self, task_id: str) -> dict:
         """Export one current, bounded packet for manual delivery; no model is called."""
-        core_state, _, core_head = self.core.verify()
+        core_state, _, runtime_state_head = self.core.verify()
         arena_state, _, _ = self.ledger.verify()
+        brain = self._brain()
         task = ref(arena_state, "tasks", task_id)
-        constitution = self.constitution_path.read_bytes()
-        if task["core_head"] != core_head or hashlib.sha256(constitution).hexdigest() != task["constitution_sha256"]:
-            raise GateError("Task snapshot is stale; open a new task from current core/constitution")
+        self._assert_current_task(task, runtime_state_head, brain)
         _task(arena_state, task_id, task["fingerprint"], utcnow())
         evidence = []
         for eid in task["allowed_evidence_ids"]:
@@ -268,5 +285,5 @@ class ArenaService:
             evidence.append({key: item[key] for key in ("id", "statement", "observed_at", "value", "metric")
                              if key in item} | {"source_kind": source["kind"],
                                                "rights_status": source["rights_status"]})
-        return {"task": copy.deepcopy(task), "constitution": constitution.decode("utf-8"),
-                "evidence": evidence}
+        constitution = (self.brain_root / BRAIN_ARTIFACTS[0]).read_text(encoding="utf-8")
+        return {"task": copy.deepcopy(task), "brain": brain, "constitution": constitution, "evidence": evidence}
