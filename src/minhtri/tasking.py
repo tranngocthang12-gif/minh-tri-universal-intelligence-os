@@ -330,39 +330,43 @@ class TaskService:
             raise GateError("Task Bootstrap is stale")
 
     def apply(self, command: dict) -> dict:
-        core_state, _, core_head = self.core.verify()
-        brain = self._brain()
-        if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
-            raise GateError("Command must contain exactly type and data object")
-        command = copy.deepcopy(command)
-        kind, d = command["type"], command["data"]
-        if kind == "create_task":
-            need(d, "id", "goal_id", "brief", "acceptance", "allowed_evidence_ids")
-            if set(d) != {"id", "goal_id", "brief", "acceptance", "allowed_evidence_ids"}:
-                raise GateError("create_task input has unexpected fields")
-            goal = ref(core_state, "goals", d["goal_id"])
-            if goal["status"] != "OPEN":
-                raise GateError("Cannot create a task for a blocked or closed goal")
-            domain = ref(core_state, "domains", goal["domain_id"])
-            for evidence_id in _ids(d["allowed_evidence_ids"], "allowed_evidence_ids"):
-                evidence = ref(core_state, "evidence", evidence_id)
-                if evidence["domain_id"] != goal["domain_id"]:
-                    raise GateError("Task evidence cannot cross domain boundaries")
-            manifest = brain["manifest"]
-            d.update({
-                "domain_id": goal["domain_id"],
-                "brain_revision": manifest["brain_revision"],
-                "brain_fingerprint": brain["fingerprint"],
-                "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
-                "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
-                "core_state_head_at_open": core_head,
-                "risk_class": domain["risk_class"],
-            })
-        else:
-            task_state, _, _ = self.ledger.verify()
-            task = ref(task_state, "tasks", d.get("task_id"))
-            self._assert_task_current(task, core_state, brain)
-        return self.ledger.apply(command)
+        self.ledger.acquire_project_lock()
+        try:
+            core_state, _, core_head = self.core.verify()
+            brain = self._brain()
+            if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+                raise GateError("Command must contain exactly type and data object")
+            command = copy.deepcopy(command)
+            kind, d = command["type"], command["data"]
+            if kind == "create_task":
+                need(d, "id", "goal_id", "brief", "acceptance", "allowed_evidence_ids")
+                if set(d) != {"id", "goal_id", "brief", "acceptance", "allowed_evidence_ids"}:
+                    raise GateError("create_task input has unexpected fields")
+                goal = ref(core_state, "goals", d["goal_id"])
+                if goal["status"] != "OPEN":
+                    raise GateError("Cannot create a task for a blocked or closed goal")
+                domain = ref(core_state, "domains", goal["domain_id"])
+                for evidence_id in _ids(d["allowed_evidence_ids"], "allowed_evidence_ids"):
+                    evidence = ref(core_state, "evidence", evidence_id)
+                    if evidence["domain_id"] != goal["domain_id"]:
+                        raise GateError("Task evidence cannot cross domain boundaries")
+                manifest = brain["manifest"]
+                d.update({
+                    "domain_id": goal["domain_id"],
+                    "brain_revision": manifest["brain_revision"],
+                    "brain_fingerprint": brain["fingerprint"],
+                    "architecture_law_sha256": manifest_artifact_sha(manifest, "PROJECT_LAW.md"),
+                    "bootstrap_sha256": manifest_artifact_sha(manifest, "BOOTSTRAP.md"),
+                    "core_state_head_at_open": core_head,
+                    "risk_class": domain["risk_class"],
+                })
+            else:
+                task_state, _, _ = self.ledger.verify()
+                task = ref(task_state, "tasks", d.get("task_id"))
+                self._assert_task_current(task, core_state, brain)
+            return self.ledger.apply(command, project_lock_held=True)
+        finally:
+            self.ledger.release_project_lock()
 
     def status(self) -> dict:
         core_state, _, _ = self.core.verify()
