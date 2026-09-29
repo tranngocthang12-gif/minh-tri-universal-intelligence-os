@@ -77,7 +77,7 @@ The following must remain visible until closed by evidence:
 - **End-to-end cross-layer continuity:** `PASS STRUCTURAL` at exact head `e15ddb7a9f0801c02281ced0fd2c5ad2113a465c`: Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → four-seat blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT; all ledgers replay.
 - **Independent architecture review:** current work has strong incumbent/self-review but no completed independent multi-provider blind architecture review.
 - **Multi-AI experiment:** v0.1 is superseded/HOLD. v0.2 now separates blind Round A from directed Round B, freezes incumbent baseline and pins packet/baseline blob SHAs. Collection has not yet happened; official four-seat review still awaits four distinct provider families.
-- **Official Arena↔Workcell enforcement:** four-seat workcell is structurally enforced in its own ledger, but low-level Arena proposal/critique/adjudication submissions are not yet cryptographically bound to a REVEALED four-seat session. Official policy requires the workcell, but low-level bypass remains a runtime gap.
+- **Official Arena↔Workcell route:** `PASS STRUCTURAL AT SERVICE/CLI BOUNDARY`. `FourSeatWorkcellService.submit_arena` and `workcell arena-apply` require a REVEALED 4/4 session and a current seat occupant. Direct Arena remains a low-level compatibility/replay surface; using it does not constitute official AI Commons execution.
 - **Provider/Owner identity:** still self-declared/unverified.
 - **Real-world effectiveness:** no evidence yet that four-AI workcell outperforms simpler baselines on cost/error/outcome.
 
