@@ -111,12 +111,13 @@ WAIT is a valid intelligence outcome.
 
 ## Component satisfaction
 
-A component may be set `SATISFIED` only with:
+A component may be set `SATISFIED` only when:
 
-- same-domain evidence; or
-- an active R3 item at L2+.
+- every linked unknown is no longer OPEN;
+- any supplied evidence is same-domain **and belongs to the component's own evidence allowlist**; and
+- there is either allowed evidence or an active linked R3 item at L2+.
 
-This is a structural gate only. It does not prove the dependency was semantically solved correctly.
+This blocks unrelated same-domain evidence from closing a dependency. It is still a structural relevance gate, not proof that the dependency was semantically solved correctly; acceptance criteria may require additional domain tests.
 
 ## Focus receipt
 
