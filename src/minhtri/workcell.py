@@ -1,8 +1,8 @@
-"""Four-seat AI workcell coordination for MINH TRI.
+"""Elastic N-AI workcell coordination for MINH TRI.
 
-This ledger preserves the Owner's original requirement that four real AI
-participants contribute on the same frozen task while keeping model/provider
-identity replaceable. It is SHADOW-only and grants no external authority.
+The workcell contract is stable while participant count, model and provider are
+replaceable per task. Participant count and independent provider-family count
+are tracked separately. It is SHADOW-only and grants no external authority.
 """
 
 from __future__ import annotations
@@ -15,7 +15,8 @@ from .arena import ArenaService
 from .core import GateError, Ledger, digest, identifier, need, ref, string
 
 
-SEATS = ("S1", "S2", "S3", "S4")
+DEFAULT_SLOT_LABELS = ("S1", "S2", "S3", "S4")
+SEATS = DEFAULT_SLOT_LABELS  # Backward-compatible labels only; not a cardinality rule.
 
 WORKCELL_FIELDS = {
     "open_session": {
@@ -50,9 +51,9 @@ def _session(state: dict, session_id: str) -> dict:
 
 
 def _seat(value: Any) -> str:
-    if value not in SEATS:
-        raise GateError("seat_id must be one of S1, S2, S3, S4")
-    return value
+    if value in DEFAULT_SLOT_LABELS:
+        return value
+    return identifier(value, "seat_id")
 
 
 def _slot_families(session: dict, exclude_seat: str | None = None) -> set[str]:
@@ -94,7 +95,7 @@ def workcell_evolve(state: dict, command: dict, at: str) -> dict:
         _hex(d["brain_revision"], 40, "brain_revision")
         for key in ("brain_fingerprint", "architecture_law_sha256", "bootstrap_sha256"):
             _hex(d[key], 64, key)
-        d["slots"] = {seat: None for seat in SEATS}
+        d["slots"] = {seat: None for seat in DEFAULT_SLOT_LABELS}
         d["blind_contributions"] = {}
         d["replacement_history"] = []
         d["round_state"] = "BLIND_OPEN"
@@ -107,14 +108,12 @@ def workcell_evolve(state: dict, command: dict, at: str) -> dict:
         if session["round_state"] != "BLIND_OPEN":
             raise GateError("Initial slot assignment is allowed only before blind freeze")
         seat = _seat(d["seat_id"])
-        if session["slots"][seat] is not None:
-            raise GateError("Workcell seat is already occupied")
+        if session["slots"].get(seat) is not None:
+            raise GateError("Workcell slot is already occupied")
         participant = identifier(d["participant_id"], "participant_id")
         family = identifier(d["family_id"], "family_id")
         if participant in _assigned_participants(session):
             raise GateError("One participant cannot occupy multiple workcell seats")
-        if family in _slot_families(session):
-            raise GateError("One provider family cannot occupy multiple independent workcell seats")
         model = string(d["model"], "model")
         version = string(d["version"], "version")
         session["slots"][seat] = {
@@ -129,15 +128,13 @@ def workcell_evolve(state: dict, command: dict, at: str) -> dict:
         need(d, *WORKCELL_FIELDS[kind])
         session = _session(out, d["session_id"])
         seat = _seat(d["seat_id"])
-        current = session["slots"][seat]
+        current = session["slots"].get(seat)
         if current is None or current["participant_id"] != d["old_participant_id"]:
             raise GateError("Replacement must name the current seat occupant")
         participant = identifier(d["participant_id"], "participant_id")
         family = identifier(d["family_id"], "family_id")
         if participant in _assigned_participants(session, seat):
             raise GateError("Replacement participant already occupies another seat")
-        if family in _slot_families(session, seat):
-            raise GateError("Replacement provider family already occupies another seat")
         reason = string(d["reason"], "reason")
         replacement = {
             "participant_id": participant,
@@ -186,13 +183,11 @@ def workcell_evolve(state: dict, command: dict, at: str) -> dict:
         session = _session(out, d["session_id"])
         if session["round_state"] != "BLIND_OPEN":
             raise GateError("Blind round is not open")
-        if any(session["slots"][seat] is None for seat in SEATS):
-            raise GateError("Four occupied independent seats are required before blind freeze")
-        if set(session["blind_contributions"]) != set(SEATS):
-            raise GateError("Four blind contributions are required before blind freeze")
-        families = {session["slots"][seat]["family_id"] for seat in SEATS}
-        if len(families) != 4:
-            raise GateError("Four distinct provider families are required for independent blind freeze")
+        occupied = {seat: slot for seat, slot in session["slots"].items() if slot is not None}
+        if not occupied:
+            raise GateError("At least one assigned participant is required before blind freeze")
+        if set(session["blind_contributions"]) != set(occupied):
+            raise GateError("Every assigned participant must submit one blind contribution before freeze")
         body = {
             "session_id": session["id"],
             "task_fingerprint": session["task_fingerprint"],
@@ -207,15 +202,15 @@ def workcell_evolve(state: dict, command: dict, at: str) -> dict:
         need(d, *WORKCELL_FIELDS[kind])
         session = _session(out, d["session_id"])
         if session["round_state"] != "BLIND_FROZEN":
-            raise GateError("Reveal requires a four-of-four frozen blind round")
+            raise GateError("Reveal requires all assigned blind contributions to be frozen")
         session["round_state"] = "REVEALED"
         session["revealed_at"] = at
 
     return out
 
 
-class FourSeatWorkcellService:
-    """Binds four-seat coordination to the current Arena task and participant receipts."""
+class ElasticWorkcellService:
+    """Binds elastic N-participant coordination to the current Arena task and receipts."""
 
     def __init__(self, core_home: str | Path, brain_root: str | Path = ".", brain_revision: str | None = None):
         self.arena = ArenaService(core_home, brain_root, brain_revision)
@@ -283,13 +278,13 @@ class FourSeatWorkcellService:
 
 
     def submit_arena(self, session_id: str, command: dict) -> dict:
-        """Official four-seat gateway for Arena proposal/critique/adjudication after reveal."""
+        """Official elastic-workcell gateway for Arena submissions after reveal."""
         self.ledger.acquire_project_lock()
         try:
             state = self.ledger.verify()[0]
             session = ref(state, "sessions", session_id)
             if session["round_state"] != "REVEALED":
-                raise GateError("Official Arena submission requires a REVEALED four-seat workcell session")
+                raise GateError("Official Arena submission requires a REVEALED workcell session")
             if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
                 raise GateError("Arena command must contain exactly type and data object")
             kind = command["type"]
@@ -306,7 +301,7 @@ class FourSeatWorkcellService:
                 if slot is not None
             }
             if participant_id not in occupants:
-                raise GateError("Arena submitter must occupy one of the four revealed workcell seats")
+                raise GateError("Arena submitter must be a current participant in the revealed workcell")
             if kind == "submit_proposal":
                 task_id = data.get("task_id")
             else:
@@ -324,12 +319,17 @@ class FourSeatWorkcellService:
     def status(self, session_id: str) -> dict:
         state, count, head = self.ledger.verify()
         session = ref(state, "sessions", session_id)
+        occupied = [slot for slot in session["slots"].values() if slot is not None]
+        families = {slot["family_id"] for slot in occupied}
         return {
             "event_count": count,
             "head": head,
             "session_id": session_id,
             "round_state": session["round_state"],
-            "occupied_seats": sum(1 for seat in SEATS if session["slots"][seat] is not None),
+            "occupied_seats": len(occupied),
+            "participant_count": len(occupied),
+            "independent_family_count": len(families),
+            "independence_status": "MULTI_PROVIDER_FAMILY" if len(families) > 1 else "SINGLE_PROVIDER_FAMILY",
             "blind_contributions": len(session["blind_contributions"]),
             "blind_round_fingerprint": session.get("blind_round_fingerprint"),
         }
@@ -339,3 +339,7 @@ class FourSeatWorkcellService:
         session = copy.deepcopy(ref(state, "sessions", session_id))
         arena_packet = self.arena.task_packet(session["arena_task_id"])
         return {"session": session, "arena_task_packet": arena_packet}
+
+
+# Backward-compatible import name for callers created before the elastic-N restoration.
+FourSeatWorkcellService = ElasticWorkcellService
