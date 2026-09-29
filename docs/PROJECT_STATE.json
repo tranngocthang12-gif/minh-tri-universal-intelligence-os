@@ -5,6 +5,10 @@
   "tier_1": "OFFLINE_LEDGER_AND_STRUCTURAL_GATES_IMPLEMENTED",
   "core_design_alignment": "PARTIAL_CONFORMANT_FOUNDATION_PROTOTYPE",
   "core_audit": "docs/CORE_AUDIT_2026-09-29.md",
+  "core_protection_contract": "CANDIDATE_SHADOW",
+  "universal_brain_architecture": "CANDIDATE_SHADOW",
+  "brain_manifest_schema": 1,
+  "brain_task_pinning": "GIT_REVISION_PLUS_MANIFEST_FINGERPRINT_PLUS_RUNTIME_STATE_HEAD",
   "tier_2": "DOMAIN_REGISTRATION_ONLY",
   "ai_commons_phase": "SHADOW_PROTOTYPE",
   "ai_commons_adapter": "MANUAL_SELF_DECLARED_ONLY",
@@ -14,5 +18,5 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "ONE_READ_ONLY_REAL_DOMAIN_PILOT_WITH_PROVENANCE_AND_OWNER_GATE"
+  "next_checkpoint": "INDEPENDENT_REVIEW_AND_REPLAY_COMPATIBILITY_FOR_GITHUB_BRAIN_CONTRACT"
 }
