@@ -18,9 +18,9 @@ def build_core_fixture(home: Path) -> None:
             "register_domain", id="media", name="Media", risk_class="NORMAL",
             measurement_contract="Observed rate",
         )),
-        ("2026-01-01T00:01:00Z", command("register_provider", id="maker", name="Maker", kind="MODEL")),
-        ("2026-01-01T00:02:00Z", command("register_provider", id="critic", name="Critic", kind="MODEL")),
-        ("2026-01-01T00:03:00Z", command("register_provider", id="judge", name="Judge", kind="HUMAN")),
+        ("2026-01-01T00:01:00Z", command("register_provider", id="maker", name="Maker", kind="MODEL", family_id="family-maker")),
+        ("2026-01-01T00:02:00Z", command("register_provider", id="critic", name="Critic", kind="MODEL", family_id="family-critic")),
+        ("2026-01-01T00:03:00Z", command("register_provider", id="judge", name="Judge", kind="HUMAN", family_id="family-judge")),
         ("2026-01-01T00:04:00Z", command(
             "open_goal", id="goal1", domain_id="media", objective="Learn a testable relationship",
             priority=4, owner_boundary="Research only",
