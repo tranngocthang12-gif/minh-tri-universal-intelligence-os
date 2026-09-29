@@ -415,7 +415,9 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
 
 
 class Ledger:
-    """Single-writer JSONL hash chain; the state file is a derived cache."""
+    """Hash-chain ledger with a shared project writer lock plus per-ledger lock."""
+
+    SUBLEDGER_NAMES = {"arena", "tasks", "epistemic", "governor", "workcell"}
 
     def __init__(self, home: str | Path, reducer=None, initial=None):
         self.home = Path(home)
@@ -424,6 +426,8 @@ class Ledger:
         self.events = self.home / "events.jsonl"
         self.snapshot = self.home / "state.json"
         self.lock = self.home / ".writer.lock"
+        self.project_root = self.home.parent if self.home.name in self.SUBLEDGER_NAMES else self.home
+        self.project_lock = self.project_root / ".project.writer.lock"
 
     def init(self) -> None:
         if self.home.exists() and any(self.home.iterdir()):
@@ -480,14 +484,24 @@ class Ledger:
         self._save(state, count, head)
         return count, head
 
-    def apply(self, command: dict) -> dict:
-        self.home.mkdir(parents=True, exist_ok=True)
+    def _acquire_lock_file(self, path: Path, label: str) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
         try:
-            fd = os.open(self.lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+            fd = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
         except FileExistsError as exc:
-            raise GateError("Another writer holds the ledger lock") from exc
+            raise GateError(f"Another writer holds the {label} lock") from exc
+        os.close(fd)
+
+    def acquire_project_lock(self) -> None:
+        self._acquire_lock_file(self.project_lock, "project")
+
+    def release_project_lock(self) -> None:
+        self.project_lock.unlink(missing_ok=True)
+
+    def _apply_with_ledger_lock(self, command: dict) -> dict:
+        self.home.mkdir(parents=True, exist_ok=True)
+        self._acquire_lock_file(self.lock, "ledger")
         try:
-            os.close(fd)
             state, count, head = self.verify()
             at = utcnow()
             updated = self.reducer(state, command, at)
@@ -501,6 +515,17 @@ class Ledger:
             return {"event_count": count + 1, "head": event["hash"], "state": updated}
         finally:
             self.lock.unlink(missing_ok=True)
+
+    def apply(self, command: dict, *, project_lock_held: bool = False) -> dict:
+        if project_lock_held:
+            if not self.project_lock.exists():
+                raise GateError("Project lock must be held for locked apply")
+            return self._apply_with_ledger_lock(command)
+        self.acquire_project_lock()
+        try:
+            return self._apply_with_ledger_lock(command)
+        finally:
+            self.release_project_lock()
 
 
 def next_goal(state: dict) -> dict:
