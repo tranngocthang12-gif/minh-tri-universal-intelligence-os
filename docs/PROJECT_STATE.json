@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "RUN_EXACT_HEAD_CI_THEN_FOUR_PROVIDER_BLIND_ARCHITECTURE_REVIEW",
+  "next_checkpoint": "RUN_FINAL_R4_5_ARCHITECTURE_TARGET_CI_THEN_REPIN_ELASTIC_N_AI_ARCHITECTURE_REVIEW",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -27,7 +27,7 @@
   "restoration_blueprint": "docs/UNIVERSAL_BRAIN_ARCHITECTURE_V0.2_CANDIDATE.md",
   "restoration_matrix": "docs/ARCHITECTURE_RESTORATION_MATRIX_2026-09-29.md",
   "project_law_v0_2_delta": "docs/PROJECT_LAW_V0.2_RESTORATION_DELTA_CANDIDATE.md",
-  "restoration_status": "OWNER_DIRECTED_DESIGN_CANDIDATE_NOT_IMPLEMENTED",
+  "restoration_status": "R1_R4_5_IMPLEMENTED_CANDIDATE_STRUCTURAL_VERIFICATION_IN_PROGRESS",
   "arena_migration_contract": "docs/ARENA_SCHEMA_MIGRATION_V0.1.md",
   "arena_schema_current": "arena-v3-law-ack",
   "arena_legacy_replay_support": [
@@ -36,7 +36,7 @@
   ],
   "arena_migration_status": "R1_STRUCTURAL_PASS_CANDIDATE_NOT_MERGED",
   "canonical_task_contract": "docs/CANONICAL_TASK_HANDOFF_V0.1.md",
-  "canonical_task_status": "R2_HARDENED_CONTINUATION_ACK_AND_HANDOFF_UNDER_TEST",
+  "canonical_task_status": "R2_HARDENED_CONTINUATION_ACK_AND_HANDOFF_STRUCTURAL_PASS_PREVIOUS_HEAD",
   "task_handoff_features": [
     "CHECKPOINT_SEQ_CAS",
     "PROJECT_SHARED_WRITER_LOCK",
@@ -48,7 +48,7 @@
     "BRAIN_LAW_STALENESS_GATE"
   ],
   "epistemic_contract": "docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md",
-  "epistemic_status": "R3_HARDENED_REOPEN_INVALIDATES_ACTIVE_L2_L6_CHAIN_UNDER_TEST",
+  "epistemic_status": "R3_HARDENED_REOPEN_INVALIDATES_ACTIVE_L2_L6_CHAIN_STRUCTURAL_PASS_PREVIOUS_HEAD",
   "learning_maturity_runtime": "L0_TO_L6_EVIDENCE_DERIVED_L7_TO_L9_FUTURE_GATED",
   "unknown_registry": "IMPLEMENTED_IN_R3_CANDIDATE",
   "knowledge_reopen_triggers": [
@@ -62,7 +62,7 @@
   ],
   "provider_error_profile": "OBSERVATIONS_ONLY_NOT_SCORED",
   "bottleneck_contract": "docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md",
-  "bottleneck_status": "R4_HARDENED_RELEVANCE_AND_PROJECT_LOCK_UNDER_TEST",
+  "bottleneck_status": "R4_HARDENED_RELEVANCE_AND_PROJECT_LOCK_STRUCTURAL_PASS_PREVIOUS_HEAD",
   "bottleneck_selection_method": "ORDINAL_LEXICOGRAPHIC_NO_CALIBRATED_SCORE",
   "bottleneck_outputs": [
     "SELECT",
@@ -71,14 +71,14 @@
   ],
   "architecture_multi_ai_experiment": "docs/experiments/ARCHITECTURE_MULTI_AI_EXPERIMENT_V0.2.md",
   "architecture_review_task_packet": "docs/experiments/ARCHITECTURE_REVIEW_ROUND_A_BLIND_V0.2.md",
-  "architecture_multi_ai_experiment_status": "V0_2_PACKET_PINNED_AWAITING_FOUR_BLIND_PROVIDER_FAMILIES",
-  "r5_status": "HOLD_PENDING_R4_5_STABILIZATION_AND_INDEPENDENT_REVIEW",
+  "architecture_multi_ai_experiment_status": "REPIN_PENDING_FINAL_R4_5_ARCHITECTURE_TARGET_CI_ELASTIC_N_AI",
+  "r5_status": "HOLD_PENDING_R4_5_FINAL_TARGET_CI_AND_INDEPENDENT_REVIEW",
   "architecture_memory_contract": "docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md",
   "architecture_stabilization_gate": "docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md",
   "r4_5_status": "STRUCTURAL_CONTINUITY_PASS_WITH_OPEN_HOLDS_NOT_MERGED",
   "brain_manifest_scope": "LAW_BOOTSTRAP_V0_2_CONTINUITY_R1_R4_STATE_ROADMAP",
-  "ai_commons_workcell": "FOUR_STABLE_SLOTS_REPLACEABLE_OCCUPANTS_SHADOW",
-  "ai_commons_blind_gate": "FOUR_OF_FOUR_DISTINCT_FAMILIES_REQUIRED_BEFORE_REVEAL",
+  "ai_commons_workcell": "ELASTIC_N_PARTICIPANTS_REPLACEABLE_OCCUPANTS_SHADOW",
+  "ai_commons_blind_gate": "ALL_CURRENTLY_ASSIGNED_PARTICIPANTS_REQUIRED_BEFORE_REVEAL_INDEPENDENCE_RECORDED_NOT_ASSUMED",
   "core_provider_family_separation": "IMPLEMENTED_CANDIDATE_UNDER_TEST",
   "r4_5_open_holds": [
     "INDEPENDENT_MULTI_PROVIDER_ARCHITECTURE_REVIEW",
@@ -86,18 +86,19 @@
     "REAL_WORLD_EFFECTIVENESS_UNVALIDATED"
   ],
   "r4_5_ci": {
-    "exact_head": "e15ddb7a9f0801c02281ced0fd2c5ad2113a465c",
-    "workflow_run_id": 36597488720,
-    "python_3_10": "PASS",
-    "python_3_12": "PASS",
-    "tests": 62,
-    "ai_commons_demo_adjudication": "HOLD",
-    "canonical_lessons": 0
+    "status": "PENDING_FINAL_ARCHITECTURE_TARGET_CI",
+    "previous_verified_head": "8e0a5628b2eb346f75e224f2b992ec3e556f5108",
+    "previous_workflow_run_id": 36598678637,
+    "previous_python_3_10": "PASS",
+    "previous_python_3_12": "PASS",
+    "previous_tests": 65,
+    "previous_ai_commons_demo_adjudication": "HOLD",
+    "previous_canonical_lessons": 0
   },
-  "end_to_end_architecture_continuity": "PASS_STRUCTURAL_GOAL_R3_R4_FOUR_SEAT_R2_HANDOFF_RECOMPUTE",
+  "end_to_end_architecture_continuity": "PREVIOUS_HEAD_PASS_FINAL_TARGET_REVERIFY_PENDING_WITH_ELASTIC_N_AI",
   "task_completion_receipt": "STRUCTURED_FINGERPRINTED_IMPLEMENTED_CANDIDATE",
   "architecture_experiment_state": "docs/experiments/EXPERIMENT_STATE_V0.2.json",
-  "ai_commons_official_submission_route": "WORKCELL_REVEALED_GATEWAY_TO_ARENA",
-  "ai_commons_direct_arena_status": "LOW_LEVEL_COMPATIBILITY_REPLAY_NOT_OFFICIAL_FOUR_AI_ROUTE",
+  "ai_commons_official_submission_route": "ELASTIC_WORKCELL_REVEALED_GATEWAY_TO_ARENA",
+  "ai_commons_direct_arena_status": "LOW_LEVEL_COMPATIBILITY_REPLAY_NOT_OFFICIAL_N_AI_ROUTE",
   "ledger_schema_compatibility": "POLICY_PLUS_R4_5_SCHEMA_TRIPWIRES_AND_LEGACY_CORE_FAMILY_MIGRATION_VERIFIER_IMPLEMENTED_CANDIDATE"
 }
