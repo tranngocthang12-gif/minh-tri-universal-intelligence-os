@@ -103,9 +103,9 @@ REMEMBER
                              ▼
                     ┌──────────────────┐
                     │ AI COMMONS PLANE │
-                    │ N replaceable    │
-                    │ cognitive        │
-                    │ providers        │
+                    │ FOUR SLOTS       │
+                    │ replaceable      │
+                    │ AI occupants     │
                     └────────┬─────────┘
                              ▼
           ┌──────────────── TIER 3 ────────────────────┐
@@ -563,11 +563,15 @@ ADJUDICATION
 HOLD / REVISE / OWNER CANDIDATE
 ```
 
-Number of participants is dynamic.
+The official AI Commons workcell has four stable cognitive slots: S1–S4. The **slot count is stable; model/provider identity is replaceable**.
 
-Use one provider for simple work when additional providers do not justify cost. Use more when uncertainty, risk or expected information value warrants it.
+All four slots receive the same frozen Brain/Task/Evidence packet before the blind round. Four valid blind contributions are frozen before reveal; one provider family cannot impersonate multiple independent slots. If an independent slot cannot be filled, the official workcell returns `HOLD / WAIT_FOR_REPLACEMENT`.
 
-Benchmark must compare AI Commons against simpler baselines before claiming “synergy”.
+The three universal logical seats (proposer / critic / adjudicator) rotate over the four slot outputs; they are not permanent model identities. Material disagreement is resolved by counterevidence/discriminating test, never by a 4-0 or 3-1 vote.
+
+Replacement before blind freeze receives only the frozen task packet. Replacement after reveal receives the canonical revealed session state plus durable handoff/checkpoint.
+
+Benchmark must still compare the four-AI workcell against simpler baselines before claiming “synergy”; fixed four-seat policy does not itself prove four providers are more effective.
 
 ---
 
@@ -603,7 +607,7 @@ Do **not** import as universal law:
 - `PROJECT_CHATGPT` as Primary Brain;
 - YouTube department/org chart;
 - finance-specific valuation/accounting vocabulary;
-- a fixed set of four AIs;
+- a fixed **identity/brand set** of four AIs (the four workcell slots are stable, but their occupants are replaceable);
 - domain-specific academy/exam details;
 - immediate champion/challenger activation;
 - numerical value scores without calibration;
