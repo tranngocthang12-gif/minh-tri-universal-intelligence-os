@@ -13,6 +13,7 @@ from .bottleneck import BottleneckService
 from .core import GateError, Ledger, next_goal
 from .epistemic import EpistemicService
 from .tasking import TaskService
+from .workcell import FourSeatWorkcellService
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -89,10 +90,44 @@ def main(argv: list[str] | None = None) -> int:
     governor_sub.add_parser("status", help="Show decomposition counts")
     governor_sub.add_parser("verify", help="Replay bottleneck governor ledger")
     governor_sub.add_parser("repair-snapshot", help="Repair governor cache after audit")
+
+    workcell = sub.add_parser("workcell", help="Four-seat replaceable AI Commons workcell")
+    workcell.add_argument("--brain-root", default=".", help="Repository root containing canonical brain artifacts")
+    workcell.add_argument("--brain-revision", default=None,
+                          help="Pinned 40-character Git SHA; defaults to git rev-parse HEAD")
+    workcell_sub = workcell.add_subparsers(dest="workcell_action", required=True)
+    workcell_sub.add_parser("init", help="Create four-seat workcell ledger")
+    workcell_apply = workcell_sub.add_parser("apply", help="Apply one workcell command")
+    workcell_apply.add_argument("json_file", type=Path)
+    workcell_status = workcell_sub.add_parser("status", help="Show one workcell session status")
+    workcell_status.add_argument("session_id")
+    workcell_packet = workcell_sub.add_parser("packet", help="Export one workcell + frozen Arena task packet")
+    workcell_packet.add_argument("session_id")
+    workcell_sub.add_parser("verify", help="Replay workcell ledger")
+    workcell_sub.add_parser("repair-snapshot", help="Repair workcell cache after audit")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
     try:
-        if args.action == "governor":
+        if args.action == "workcell":
+            service = FourSeatWorkcellService(args.home, args.brain_root, args.brain_revision)
+            if args.workcell_action == "init":
+                service.init()
+                result = {"status": "WORKCELL_LEDGER_INITIALIZED", "home": str(service.ledger.home)}
+            elif args.workcell_action == "apply":
+                payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+                receipt = service.apply(payload)
+                result = {"status": "WORKCELL_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
+            elif args.workcell_action == "status":
+                result = service.status(args.session_id)
+            elif args.workcell_action == "packet":
+                result = service.packet(args.session_id)
+            elif args.workcell_action == "repair-snapshot":
+                count, head = service.ledger.repair_snapshot()
+                result = {"status": "WORKCELL_CACHE_REPAIRED", "event_count": count, "head": head}
+            else:
+                state, count, head = service.ledger.verify()
+                result = {"status": "VALID_WORKCELL_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+        elif args.action == "governor":
             service = BottleneckService(args.home)
             if args.governor_action == "init":
                 service.init()
