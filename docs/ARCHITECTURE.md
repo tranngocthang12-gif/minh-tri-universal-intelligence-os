@@ -70,7 +70,7 @@ Verdict là `ACCEPT_FOR_TRIAL`, `HOLD` hoặc `REVISE`. Xác nhận Owner mẫu 
 
 Current candidate architecture also requires:
 
-- four stable AI Commons slots S1–S4 with replaceable occupants;
+- elastic N-participant AI Commons workcells with replaceable occupants; participant count and independent-family count are tracked separately;
 - provider-family separation in canonical Core;
 - latest Task continuation/handoff acknowledgement before lease acquisition;
 - shared project writer lock for cross-ledger validation+append;
