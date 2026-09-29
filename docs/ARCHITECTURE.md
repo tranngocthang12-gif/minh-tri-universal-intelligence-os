@@ -41,7 +41,7 @@ Mỗi JSON có đúng `{"type": "...", "data": {...}}`. Các kiểu và trườn
 | Lệnh | Trường bắt buộc trong `data` |
 | --- | --- |
 | `register_domain` | `id`, `name`, `risk_class`, `measurement_contract` |
-| `register_provider` | `id`, `name`, `kind` |
+| `register_provider` | `id`, `name`, `kind`, `family_id` |
 | `open_goal` | `id`, `domain_id`, `objective`, `priority`, `owner_boundary` |
 | `set_goal_status` | `goal_id`, `status`, `reason` |
 | `frame_problem` | `id`, `goal_id`, `reality`, `conditions`, `target`, `intervention`, `unknowns`, `control`, `influence`, `responsibility`, `harm_checks` |
@@ -64,3 +64,17 @@ Verdict là `ACCEPT_FOR_TRIAL`, `HOLD` hoặc `REVISE`. Xác nhận Owner mẫu 
 1. Chọn một vấn đề thật và kho dữ liệu Owner cho phép; xây adapter chỉ đọc có provenance và timestamp kiểm được.
 2. Xác thực danh tính Owner/provider, quyền tư liệu, nguồn gốc file và chứng thực mốc dự đoán trước khi cho tác vụ tác động bên ngoài.
 3. Dùng một pilot đo dự đoán so với baseline; phê duyệt thay đổi procedure bằng dữ liệu thật. Chỉ thêm meta-learning/champion khi đủ số mẫu và thấy nút thắt.
+
+
+## R4.5 continuity additions
+
+Current candidate architecture also requires:
+
+- four stable AI Commons slots S1–S4 with replaceable occupants;
+- provider-family separation in canonical Core;
+- latest Task continuation/handoff acknowledgement before lease acquisition;
+- shared project writer lock for cross-ledger validation+append;
+- fail-closed R3 revalidation and R4 satisfaction relevance gates;
+- schema compatibility discipline in `docs/LEDGER_SCHEMA_COMPATIBILITY_V0.1.md`.
+
+See `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md` and `docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md`.
