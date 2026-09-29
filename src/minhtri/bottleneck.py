@@ -187,6 +187,18 @@ def governor_evolve(state: dict, command: dict, at: str) -> dict:
             if not isinstance(d[key], str) or len(d[key]) != 64 or any(c not in "0123456789abcdef" for c in d[key]):
                 raise GateError(f"{key} must be a SHA-256 digest")
         d["candidate_ids"] = _ids(d["candidate_ids"], "candidate_ids")
+        for candidate_id in d["candidate_ids"]:
+            candidate = _component(out, candidate_id)
+            if candidate["plan_id"] != d["plan_id"]:
+                raise GateError("Focus candidate belongs to another plan")
+        if d["decision"] == "SELECT":
+            if d["component_id"] is None or d["component_id"] not in d["candidate_ids"]:
+                raise GateError("SELECT requires the selected component in candidate_ids")
+        elif d["decision"] == "HOLD_AMBIGUOUS":
+            if d["component_id"] is not None or len(d["candidate_ids"]) < 2:
+                raise GateError("HOLD_AMBIGUOUS requires at least two tied candidates and no selection")
+        elif d["component_id"] is not None:
+            raise GateError("WAIT cannot carry a selected component")
         d["selection_method"] = string(d["selection_method"], "selection_method")
         d["recorded_at"] = at
         plan["focus_history"].append(d)
