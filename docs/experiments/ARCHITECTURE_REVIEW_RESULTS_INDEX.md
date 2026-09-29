@@ -1,44 +1,44 @@
-# MINH TRÍ — FOUR-SEAT ARCHITECTURE REVIEW RESULTS INDEX v0.2
+# MINH TRÍ — ELASTIC N-AI ARCHITECTURE REVIEW RESULTS INDEX v0.2
 
-**Experiment:** `ARCH-CORE-R4-PRE-R5-2026-09-29-V2`  
-**Frozen target:** `50a0444ed20ae2415c9ee31e622a0b6b8575d4c9`  
-**Status:** `AWAITING FOUR BLIND PROVIDER FAMILIES`
+**Experiment:** `ARCH-CORE-R4_5-PRE-R5-2026-09-29-V2`  
+**Frozen target:** `1c8c541ec2b4f545417ccef181ead0725c95b16b`  
+**Status:** `AWAITING AVAILABLE BLIND PROVIDER FAMILIES`
 
-Canonical experiment state for collection progress:
+Canonical collection state:
 
 `docs/experiments/EXPERIMENT_STATE_V0.2.json`
 
-## Do not use v0.1 for blind collection
+## Collection rule
 
-The v0.1 packet leaked directed incumbent hypotheses and is retained only as historical experiment design evidence.
-
-## Four-seat collection
-
-| Seat | Provider family | Model/session | Round A frozen | Round B | Adjudicated |
-| --- | --- | --- | --- | --- | --- |
-| S1 | TBD | TBD | NO | NO | NO |
-| S2 | TBD | TBD | NO | NO | NO |
-| S3 | TBD | TBD | NO | NO | NO |
-| S4 | TBD | TBD | NO | NO | NO |
-
-Rules:
-
-- exactly four independent provider-family seats for the official workcell experiment;
-- all four receive the same pinned Round A packet;
-- Round A outputs freeze before any reveal;
-- one family cannot fill multiple seats;
-- replacement before freeze must remain blind;
+- no fixed participant count;
+- any eligible AI/provider may join a collection batch;
+- every assigned participant in that batch receives the same pinned Round A packet;
+- all assigned Round A outputs freeze before reveal;
+- participant count and independent provider-family count are reported separately;
+- same-family submissions may contribute but do not create fake independence;
 - no majority vote;
 - BLOCKER/HIGH code claims require executable reproduction when feasible or remain `NEEDS_TEST`.
 
-## Non-seat participants
+## Current collection
 
-- OpenAI/ChatGPT current architecture review = `INCUMBENT_CONTROL`, not an independent seat.
-- The Claude/Anthropic session that critiqued protocol v0.1 = `PROTOCOL_CRITIC`, not a blind seat.
-- A fresh Anthropic session that has not seen the critique/incumbent findings may occupy one seat if it receives only the pinned Round A packet.
+No blind submission has yet been frozen for the repinned R4.5 target.
+
+Append each accepted blind submission with:
+
+```text
+participant_id:
+provider_family:
+model/version/session:
+round_a_blob_or_hash:
+blindness_attestation:
+round_b_status:
+adjudication_status:
+```
+
+## Non-blind control
+
+OpenAI/ChatGPT current architecture review is retained as `INCUMBENT_CONTROL`, not as an independent blind reviewer.
 
 ## Decision
 
-Until all four Round A submissions are frozen and material disputes receive evidence/test disposition:
-
-`R5 = HOLD`.
+R5 remains `HOLD` until material architecture findings affecting lesson/skill inputs have evidence/test dispositions. Lack of an arbitrary fourth AI is not itself a HOLD condition.
