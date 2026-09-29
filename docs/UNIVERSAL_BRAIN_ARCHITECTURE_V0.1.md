@@ -12,7 +12,7 @@ MINH TRÍ là bộ não tổ chức độc lập với một model cụ thể. G
                   purpose / authority / risk
                              ▼
                  GITHUB CANONICAL BRAIN
-      constitution · architecture · state · roadmap · code
+ PROJECT_LAW · BOOTSTRAP · constitution · architecture · state · code
                              │
                        BRAIN MANIFEST
                              │
@@ -125,7 +125,7 @@ Owner định hướng con đường kiếm tiền bằng lăng kính ứng dụ
 
 ## 8. Mốc triển khai
 
-1. **Brain Contract v0.1:** pin Git revision + brain fingerprint + runtime state cho AI Commons SHADOW.
+1. **Brain/Law Contract v0.1:** pin Project Law + Bootstrap + Git revision + brain fingerprint + runtime state; participant phải acknowledgement exact packet trước khi làm trong AI Commons SHADOW.
 2. **Canonical Task/Handoff:** task queue, checkpoint, lease, retry/failover; chưa gọi model thật.
 3. **Provider Gateway SHADOW:** một adapter model read-only, identity/cost log, không tool authority.
 4. **Multi-AI SHADOW:** blind round + cross-critique; benchmark 1 AI vs Commons.
