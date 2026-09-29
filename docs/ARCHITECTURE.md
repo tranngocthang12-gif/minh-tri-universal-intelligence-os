@@ -27,10 +27,10 @@ Một lệnh JSON được kiểm rồi mới thêm đúng một dòng `events.j
 ## Luồng học có cổng
 
 1. Mở domain và goal, lập khung vấn đề, ghi nguồn/evidence; claim khởi đầu luôn là `HYPOTHESIS`. Vai trò điều kiện trong khung chỉ là giả thuyết, chưa phải nhân quả đã chứng minh.
-2. Khai procedure và dự đoán có metric, đơn vị, khoảng, hạn và cách đo. `freeze_prediction` trước hạn. Chụp mốc Git trước khi số liệu kết quả xuất hiện nếu muốn chứng minh đăng ký trước với bên thứ ba.
+2. Khai procedure và dự đoán có metric, đơn vị, khoảng, hạn và cách đo khi goal còn `OPEN`. `freeze_prediction` bị chặn khi đã đến hạn hoặc goal không còn mở. Chụp mốc Git trước khi số liệu kết quả xuất hiện nếu muốn chứng minh đăng ký trước với bên thứ ba.
 3. Ghi kết quả vào evidence mới với thời điểm quan sát sau khi đóng băng và đến hạn, rồi `record_resolution` để code chấm khoảng. Phép chấm chưa chứng minh nguyên nhân hay chất lượng nguồn.
-4. Provider khác phản biện, provider thứ ba phân xử. Bất đồng chưa xử lý chặn chấp nhận.
-5. Tạo lesson `CANDIDATE`; chỉ có thể thành `TRIAL_RULE` với hai kết quả từ hai nguồn first-party khai báo khác nhau và xác nhận Owner. Không tự đổi thành `VERIFIED`.
+4. Provider khác phản biện, provider thứ ba phân xử. Mọi phiếu phản biện của cùng claim đều phải thuận mới được phân xử `ACCEPT_FOR_TRIAL`; phiếu bất đồng đến sau vẫn chặn kích hoạt.
+5. Tạo lesson `CANDIDATE`; chỉ có thể thành `TRIAL_RULE` khi goal còn mở, không còn phiếu bất đồng, có hai kết quả từ hai nguồn first-party khai báo khác nhau và xác nhận Owner. Nếu goal bị chặn/đóng hoặc phát sinh phản biện bất lợi, quy tắc thử đang có chuyển sang `SUSPENDED` và không tự mở lại. Không tự đổi thành `VERIFIED`.
 
 ## Hợp đồng lệnh
 

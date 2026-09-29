@@ -125,6 +125,79 @@ class CoreGates(unittest.TestCase):
             with self.assertRaisesRegex(GateError, "chain mismatch"):
                 ledger.verify()
 
+    def test_prediction_cannot_be_frozen_after_due_or_under_blocked_goal(self):
+        self.base()
+        self.apply("register_prediction", id="f1", claim_id="h1", procedure_id="p1", metric="rate",
+                   unit="percent", lower=5, upper=7, due_at="2026-01-03T00:00:00Z",
+                   resolution_method="Approved report")
+        with self.assertRaisesRegex(GateError, "before its due time"):
+            self.apply("freeze_prediction", at="2026-01-04T00:00:00Z", prediction_id="f1")
+        with self.assertRaisesRegex(GateError, "before its due time"):
+            self.apply("freeze_prediction", at="2026-01-03T00:00:00Z", prediction_id="f1")
+        self.apply("set_goal_status", goal_id="goal1", status="BLOCKED", reason="Owner stopped")
+        with self.assertRaisesRegex(GateError, "Goal is blocked"):
+            self.apply("freeze_prediction", prediction_id="f1")
+        with self.assertRaisesRegex(GateError, "Goal is blocked"):
+            self.apply("register_prediction", id="f2", claim_id="h1", procedure_id="p1", metric="rate",
+                       unit="percent", lower=5, upper=7, due_at="2026-01-03T00:00:00Z",
+                       resolution_method="Approved report")
+
+    def test_every_objection_blocks_acceptance_and_activation(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.at = "2026-01-09T00:00:00Z"
+        self.apply("review_claim", id="hold-review", claim_id="h1", critic_provider_id="critic",
+                   verdict="HOLD", reason="Open methodological objection")
+        self.apply("review_claim", id="good-review", claim_id="h1", critic_provider_id="critic",
+                   verdict="ACCEPT_FOR_TRIAL", reason="A second review looked favorable")
+        with self.assertRaisesRegex(GateError, "unresolved critical objection"):
+            self.apply("adjudicate_claim", id="adj1", claim_id="h1", review_id="good-review",
+                       adjudicator_provider_id="judge", verdict="ACCEPT_FOR_TRIAL", reason="Ignore HOLD")
+
+        self.setUp()
+        self.base()
+        self.predictions_and_outcomes()
+        self.at = "2026-01-09T00:00:00Z"
+        self.review_and_lesson()
+        self.apply("review_claim", id="late-review", claim_id="h1", critic_provider_id="critic",
+                   verdict="HOLD", reason="New objection before trial")
+        with self.assertRaisesRegex(GateError, "unresolved critical objection"):
+            self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
+                       scope="One pilot")
+
+    def test_stopping_goal_or_opening_objection_suspends_existing_trial(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.at = "2026-01-09T00:00:00Z"
+        self.review_and_lesson()
+        self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
+                   scope="One pilot")
+        self.apply("review_claim", id="late-review", claim_id="h1", critic_provider_id="critic",
+                   verdict="REVISE", reason="Found a counterexample")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "SUSPENDED")
+        self.assertEqual(self.state["lessons"]["lesson1"]["suspension_reason"], "OPEN_REVIEW_OBJECTION")
+
+        self.setUp()
+        self.base()
+        self.predictions_and_outcomes()
+        self.at = "2026-01-09T00:00:00Z"
+        self.review_and_lesson()
+        self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
+                   scope="One pilot")
+        self.apply("set_goal_status", goal_id="goal1", status="CLOSED", reason="Owner closed the goal")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "SUSPENDED")
+        self.assertEqual(self.state["lessons"]["lesson1"]["suspension_reason"], "GOAL_NOT_OPEN")
+
+    def test_goal_closed_before_activation_cannot_promote_lesson(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.at = "2026-01-09T00:00:00Z"
+        self.review_and_lesson()
+        self.apply("set_goal_status", goal_id="goal1", status="BLOCKED", reason="Owner stopped")
+        with self.assertRaisesRegex(GateError, "Goal is blocked"):
+            self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
+                       scope="One pilot")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -26,7 +26,7 @@ def digest(value: Any) -> str:
 
 
 def utcnow() -> str:
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    return datetime.now(timezone.utc).isoformat(timespec="microseconds").replace("+00:00", "Z")
 
 
 def parse_time(value: str) -> datetime:
@@ -119,6 +119,20 @@ def _list_of_refs(state: dict, collection: str, values: Any) -> list[str]:
     return values
 
 
+def _open_goal_for_claim(state: dict, claim: dict) -> None:
+    problem = ref(state, "problems", claim["problem_id"])
+    if ref(state, "goals", problem["goal_id"])["status"] != "OPEN":
+        raise GateError("Goal is blocked or closed")
+
+
+def _suspend_trial_lessons(state: dict, claim_id: str, reason: str, at: str) -> None:
+    for lesson in state["lessons"].values():
+        if lesson["claim_id"] == claim_id and lesson["status"] == "TRIAL_RULE":
+            lesson["status"] = "SUSPENDED"
+            lesson["suspension_reason"] = reason
+            lesson["suspended_at"] = at
+
+
 def evolve(state: dict, command: dict, event_time: str) -> dict:
     """Replay one event. A replay never consults a language model or current time."""
     if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
@@ -165,6 +179,10 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         string(d["reason"], "reason")
         goal["status"] = d["status"]
         goal["status_reason"] = d["reason"]
+        if d["status"] != "OPEN":
+            for claim in out["claims"].values():
+                if out["problems"][claim["problem_id"]]["goal_id"] == d["goal_id"]:
+                    _suspend_trial_lessons(out, claim["id"], "GOAL_NOT_OPEN", event_time)
 
     elif kind == "frame_problem":
         need(d, "id", "goal_id", "reality", "conditions", "target", "intervention", "unknowns",
@@ -243,6 +261,7 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
     elif kind == "register_prediction":
         need(d, "id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method")
         claim = ref(out, "claims", d["claim_id"])
+        _open_goal_for_claim(out, claim)
         procedure = ref(out, "procedures", d["procedure_id"])
         if procedure["domain_id"] != claim["domain_id"]:
             raise GateError("Procedure cannot predict in another domain")
@@ -264,6 +283,9 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         prediction = ref(out, "predictions", d["prediction_id"])
         if prediction["status"] != "REGISTERED":
             raise GateError("Prediction must be registered and unresolved")
+        _open_goal_for_claim(out, ref(out, "claims", prediction["claim_id"]))
+        if parse_time(event_time) >= parse_time(prediction["due_at"]):
+            raise GateError("Prediction must be frozen before its due time")
         prediction["status"] = "FROZEN"
         prediction["frozen_at"] = event_time
 
@@ -302,6 +324,8 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         string(d["reason"], "reason")
         d["domain_id"] = claim["domain_id"]
         add(out, "reviews", d)
+        if d["verdict"] != "ACCEPT_FOR_TRIAL":
+            _suspend_trial_lessons(out, d["claim_id"], "OPEN_REVIEW_OBJECTION", event_time)
 
     elif kind == "adjudicate_claim":
         need(d, "id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason")
@@ -316,11 +340,16 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
             raise GateError("Adjudicator must occupy a distinct seat")
         if d["verdict"] not in ("ACCEPT_FOR_TRIAL", "HOLD", "REVISE"):
             raise GateError("Invalid adjudication verdict")
-        if d["verdict"] == "ACCEPT_FOR_TRIAL" and review["verdict"] != "ACCEPT_FOR_TRIAL":
-            raise GateError("An unresolved critical objection blocks acceptance")
+        if d["verdict"] == "ACCEPT_FOR_TRIAL":
+            _open_goal_for_claim(out, claim)
+            if any(r["verdict"] != "ACCEPT_FOR_TRIAL" for r in out["reviews"].values()
+                   if r["claim_id"] == d["claim_id"]):
+                raise GateError("An unresolved critical objection blocks acceptance")
         string(d["reason"], "reason")
         d["domain_id"] = claim["domain_id"]
         add(out, "adjudications", d)
+        if d["verdict"] != "ACCEPT_FOR_TRIAL":
+            _suspend_trial_lessons(out, d["claim_id"], "ADJUDICATION_OBJECTION", event_time)
 
     elif kind == "propose_lesson":
         need(d, "id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id")
@@ -346,6 +375,13 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         adj = out["adjudications"][lesson["adjudication_id"]]
         if adj["verdict"] != "ACCEPT_FOR_TRIAL":
             raise GateError("Adjudication has not accepted this claim for trial")
+        _open_goal_for_claim(out, ref(out, "claims", lesson["claim_id"]))
+        if any(r["verdict"] != "ACCEPT_FOR_TRIAL" for r in out["reviews"].values()
+               if r["claim_id"] == lesson["claim_id"]) or any(
+            a["verdict"] != "ACCEPT_FOR_TRIAL" for a in out["adjudications"].values()
+            if a["claim_id"] == lesson["claim_id"]
+        ):
+            raise GateError("An unresolved critical objection blocks trial activation")
         pids = lesson["prediction_ids"]
         if len(pids) < 2 or any(out["predictions"][p]["status"] != "RESOLVED" for p in pids):
             raise GateError("At least two resolved preregistered predictions are required")

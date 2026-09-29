@@ -37,7 +37,7 @@ Trạng thái hiện tại là `SHADOW`: danh tính nhà cung cấp tự khai; e
 - Mở một miền mới mà không sửa lõi; mở mục tiêu và khung vấn đề (thực trạng, điều kiện giả định, đích, can thiệp, trách nhiệm, rủi ro), đặt ưu tiên, tạm chặn hoặc đóng. Không có mục tiêu hợp lệ thì trả `WAIT`.
 - Ghi `SOURCE → EVIDENCE → CLAIM → PREDICTION → RESOLUTION → LESSON`, kèm `PROCEDURE` và danh tính provider khai báo. Dự đoán phải được đóng băng trước khi có kết quả; code tự tính điểm trúng khoảng và sai số điểm giữa.
 - Tách vai đề xuất, phản biện và trọng tài bằng ID provider; chặn cùng một provider chiếm hai ghế của cùng nhận định.
-- Chỉ cho kích hoạt một bài học ở trạng thái `TRIAL_RULE` khi có ít nhất hai dự đoán đã giải quyết, hai nguồn kết quả first-party khác nhau, phản biện/trọng tài chấp nhận và Owner ghi xác nhận. Không có đường tự động nâng thành `VERIFIED`.
+- Chỉ cho kích hoạt một bài học ở trạng thái `TRIAL_RULE` khi goal còn mở, có ít nhất hai dự đoán đã giải quyết, hai nguồn kết quả first-party khác nhau, mọi phản biện/trọng tài chấp nhận và Owner ghi xác nhận. Goal bị chặn/đóng hoặc có phản biện mới bất lợi thì quy tắc thử thành `SUSPENDED`; không có đường tự động nâng thành `VERIFIED`.
 - Từ chối kích hoạt quy tắc trong miền rủi ro cao ở bản này. Không có chức năng chi tiền, giao dịch, phát hành hoặc tự sửa luật.
 - Kiểm sổ JSONL bằng chuỗi SHA-256, tái dựng trạng thái và so với cache. File Git cần được commit để tạo mốc độc lập chống việc viết lại cả chuỗi.
 
