@@ -31,7 +31,7 @@ DETERMINISTIC VALIDATION → ADJUDICATION → OWNER GATE
 LEARNING MEMORY / BENCHMARK / PROCEDURE VERSIONS
 ```
 
-Không gửi toàn bộ bộ nhớ cho mỗi AI. Task packet ghim mốc core, fingerprint của đề bài, nguồn cho phép, phân loại dữ liệu và tiêu chí đạt; manifest của participant khai năng lực đề xuất, phản biện hay phân xử. AI mới vào đọc bản nhiệm vụ tương ứng; nó không được đọc bí mật hoặc nội dung ngoài phạm vi chỉ vì có kết nối. Một provider mất kết nối có thể thay bằng provider khác mà không làm mất trạng thái nhiệm vụ.
+Không gửi toàn bộ bộ nhớ cho mỗi AI. Task packet ghim ba mốc: Git `brain_revision`, `brain_fingerprint` của bộ artifact lõi và `runtime_state_head`; đồng thời ghim fingerprint của đề bài, nguồn cho phép, phân loại dữ liệu và tiêu chí đạt; manifest của participant khai năng lực đề xuất, phản biện hay phân xử. AI mới vào đọc bản nhiệm vụ tương ứng; nó không được đọc bí mật hoặc nội dung ngoài phạm vi chỉ vì có kết nối. Một provider mất kết nối có thể thay bằng provider khác mà không làm mất trạng thái nhiệm vụ.
 
 Trong `SHADOW`, `arena task ID` xuất bản tư tưởng, đề bài và các evidence ID đã cho phép. Nội dung evidence là **dữ liệu không đáng tin**, kể cả khi chứa câu mệnh lệnh; adapter tương lai không được trao quyền công cụ chỉ vì câu chữ trong evidence. Nhãn `PUBLIC` và `rights_status=CLEAR` hiện dựa vào khai báo, chưa được xác thực để tự động gửi ra nhà cung cấp bên ngoài. Mọi bài nộp đi qua `arena apply` bằng tay.
 
@@ -40,7 +40,7 @@ Trong `SHADOW`, `arena task ID` xuất bản tư tưởng, đề bài và các e
 | Đối tượng | Nội dung tối thiểu | Ai được sửa |
 | --- | --- | --- |
 | Participant manifest | ID bất biến theo phiên bản, provider family, model, adapter, năng lực, trạng thái, nguồn nhận dạng | Gateway/Owner; thông tin model giai đoạn này chỉ là khai báo |
-| Task packet | Goal/domain, core head, bản hiến chương, fingerprint, scope, dữ liệu cho phép, risk, rubric, budget/timebox | Tầng 1/Owner; AI nhận việc chỉ đọc |
+| Task packet | Goal/domain, Git brain revision, brain manifest fingerprint, runtime state head, task fingerprint, scope, dữ liệu cho phép, risk, rubric, budget/timebox | Tầng 1/Owner; AI nhận việc chỉ đọc |
 | Proposal | Task fingerprint, participant, claim, evidence refs, alternative, uncertainty, test phân định | Participant được giao |
 | Critique | Proposal ref, lỗi cụ thể hoặc `ABSTAIN`, phản chứng, giới hạn | Participant khác provider family |
 | Adjudication | Proposal + toàn bộ critique liên quan, căn cứ phân định, `CANDIDATE` / `REVISE` / `HOLD` / `OWNER_REVIEW_REQUIRED` | Ghế thứ ba khác cả proposer và critic |
@@ -85,10 +85,11 @@ Chỉ Owner có thể duyệt nâng giai đoạn, thay mục tiêu, sửa biên 
 ## 8. Điều kiện nghiệm thu bản `SHADOW`
 
 1. Bất kỳ số participant nào cũng dùng một contract; thêm model mới không sửa reducer.
-2. Cùng một task fingerprint, core head và danh sách evidence cho phép; sai bản bị từ chối.
+2. Cùng một task fingerprint, Git brain revision, brain manifest fingerprint, runtime state head và danh sách evidence cho phép; sai bất kỳ mốc nào bị từ chối.
 3. Cùng provider family không ngồi hai ghế; thiếu ba family thì không có adjudication đủ điều kiện.
 4. Critique `CHALLENGE`/`ABSTAIN` không bị lờ đi để tạo `CANDIDATE`.
 5. Miền khác, dữ liệu không được phép, task hết hiệu lực hoặc cổng chưa mở đều fail closed.
 6. Sổ event khôi phục được sau cache lỗi, nhưng self-declared identity và source chưa được xác thực nên không được gọi là live multi-AI.
+7. Đổi bất kỳ artifact lõi trong Brain Manifest, đổi Git revision hoặc đổi runtime state head làm task cũ stale; task phải được mở lại từ trạng thái hiện hành.
 
 Mốc kế tiếp sau `SHADOW`: một pilot read-only có Owner cấp quyền, đo một việc thật so với một AI/baseline, ghi cả chi phí và sai số, rồi mới xét tích hợp provider API.
