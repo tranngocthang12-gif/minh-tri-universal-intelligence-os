@@ -17,6 +17,9 @@ from .core import GateError, digest
 
 BRAIN_SCHEMA_VERSION = 1
 BRAIN_ARTIFACTS = (
+    "PROJECT_LAW.md",
+    "BOOTSTRAP.md",
+    "AGENTS.md",
     "docs/PHILOSOPHY.md",
     "docs/ARCHITECTURE.md",
     "docs/CORE_PROTECTION_CONTRACT_V0.1.md",
@@ -88,3 +91,11 @@ def verify_brain_manifest(root: str | Path, manifest: dict) -> str:
     if expected != manifest:
         raise GateError("Brain manifest does not match current repository artifacts")
     return digest(manifest)
+
+
+def manifest_artifact_sha(manifest: dict, path: str) -> str:
+    """Return one pinned artifact digest from a validated manifest-shaped object."""
+    for artifact in manifest.get("artifacts", []):
+        if artifact.get("path") == path:
+            return artifact["sha256"]
+    raise GateError(f"Brain manifest does not contain required artifact: {path}")
