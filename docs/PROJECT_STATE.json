@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "R4_5_TEST_FIXTURES_SCHEMA_COMPATIBILITY_END_TO_END_THEN_INDEPENDENT_REVIEW",
+  "next_checkpoint": "FREEZE_SCHEMA_FIXTURES_AND_BIND_OFFICIAL_ARENA_SUBMISSION_TO_FOUR_SEAT_SESSION_THEN_RUN_FOUR_PROVIDER_REVIEW",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -69,22 +69,34 @@
     "WAIT",
     "HOLD_AMBIGUOUS"
   ],
-  "architecture_multi_ai_experiment": "docs/experiments/ARCHITECTURE_MULTI_AI_EXPERIMENT_V0.1.md",
-  "architecture_review_task_packet": "docs/experiments/ARCHITECTURE_REVIEW_TASK_PACKET_V0.1.md",
-  "architecture_multi_ai_experiment_status": "V0_1_PROTOCOL_HOLD_PENDING_BLIND_PROTOCOL_HARDENING",
+  "architecture_multi_ai_experiment": "docs/experiments/ARCHITECTURE_MULTI_AI_EXPERIMENT_V0.2.md",
+  "architecture_review_task_packet": "docs/experiments/ARCHITECTURE_REVIEW_ROUND_A_BLIND_V0.2.md",
+  "architecture_multi_ai_experiment_status": "V0_2_PACKET_PINNED_AWAITING_FOUR_BLIND_PROVIDER_FAMILIES",
   "r5_status": "HOLD_PENDING_R4_5_STABILIZATION_AND_INDEPENDENT_REVIEW",
   "architecture_memory_contract": "docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md",
   "architecture_stabilization_gate": "docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md",
-  "r4_5_status": "UNDER_TEST_NOT_MERGED",
+  "r4_5_status": "STRUCTURAL_CONTINUITY_PASS_WITH_OPEN_HOLDS_NOT_MERGED",
   "brain_manifest_scope": "LAW_BOOTSTRAP_V0_2_CONTINUITY_R1_R4_STATE_ROADMAP",
   "ai_commons_workcell": "FOUR_STABLE_SLOTS_REPLACEABLE_OCCUPANTS_SHADOW",
   "ai_commons_blind_gate": "FOUR_OF_FOUR_DISTINCT_FAMILIES_REQUIRED_BEFORE_REVEAL",
   "core_provider_family_separation": "IMPLEMENTED_CANDIDATE_UNDER_TEST",
   "r4_5_open_holds": [
-    "LEDGER_SCHEMA_MIGRATION_POLICY_R2_R4_WORKCELL",
-    "END_TO_END_R1_R4_CONTINUITY_TEST",
+    "LEDGER_SCHEMA_COMPATIBILITY_FIXTURES_FOR_CORE_TASK_EPISTEMIC_GOVERNOR_WORKCELL",
+    "OFFICIAL_ARENA_SUBMISSION_NOT_YET_HARD_BOUND_TO_REVEALED_FOUR_SEAT_WORKCELL",
     "INDEPENDENT_MULTI_PROVIDER_ARCHITECTURE_REVIEW",
     "PROVIDER_OWNER_IDENTITY_UNVERIFIED",
     "REAL_WORLD_EFFECTIVENESS_UNVALIDATED"
-  ]
+  ],
+  "r4_5_ci": {
+    "exact_head": "e15ddb7a9f0801c02281ced0fd2c5ad2113a465c",
+    "workflow_run_id": 36597488720,
+    "python_3_10": "PASS",
+    "python_3_12": "PASS",
+    "tests": 62,
+    "ai_commons_demo_adjudication": "HOLD",
+    "canonical_lessons": 0
+  },
+  "end_to_end_architecture_continuity": "PASS_STRUCTURAL_GOAL_R3_R4_FOUR_SEAT_R2_HANDOFF_RECOMPUTE",
+  "task_completion_receipt": "STRUCTURED_FINGERPRINTED_IMPLEMENTED_CANDIDATE",
+  "architecture_experiment_state": "docs/experiments/EXPERIMENT_STATE_V0.2.json"
 }
