@@ -22,12 +22,14 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("verify", help="Replay the hash chain and compare the state cache")
     sub.add_parser("repair-snapshot", help="Rebuild state cache from the event chain after audit")
     arena = sub.add_parser("arena", help="Shadow-only, provider-neutral AI Commons")
-    arena.add_argument("--constitution", default="docs/PHILOSOPHY.md", help="Approved philosophy file to pin")
+    arena.add_argument("--brain-root", default=".", help="Repository root containing the canonical brain artifacts")
+    arena.add_argument("--brain-revision", default=None,
+                       help="Pinned 40-character Git SHA; defaults to git rev-parse HEAD in --brain-root")
     arena_sub = arena.add_subparsers(dest="arena_action", required=True)
     arena_sub.add_parser("init", help="Create an arena ledger after core init")
     arena_apply = arena_sub.add_parser("apply", help="Apply one shadow arena command")
     arena_apply.add_argument("json_file", type=Path)
-    arena_sub.add_parser("status", help="Show shadow arena status")
+    arena_sub.add_parser("status", help="Show shadow arena status and pinned GitHub brain version")
     arena_sub.add_parser("verify", help="Replay shadow arena ledger")
     arena_sub.add_parser("repair-snapshot", help="Rebuild arena cache from the audited event chain")
     arena_task = arena_sub.add_parser("task", help="Export a current bounded task packet")
@@ -36,7 +38,7 @@ def main(argv: list[str] | None = None) -> int:
     ledger = Ledger(args.home)
     try:
         if args.action == "arena":
-            service = ArenaService(args.home, args.constitution)
+            service = ArenaService(args.home, args.brain_root, args.brain_revision)
             if args.arena_action == "init":
                 service.init()
                 result = {"status": "SHADOW_INITIALIZED", "home": str(service.ledger.home)}
@@ -46,7 +48,10 @@ def main(argv: list[str] | None = None) -> int:
                 result = {"status": "SHADOW_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
                 if payload.get("type") == "open_task":
                     task_id = payload["data"]["id"]
-                    result["task_fingerprint"] = receipt["state"]["tasks"][task_id]["fingerprint"]
+                    task = receipt["state"]["tasks"][task_id]
+                    result["task_fingerprint"] = task["fingerprint"]
+                    result["brain_revision"] = task["brain_revision"]
+                    result["brain_fingerprint"] = task["brain_fingerprint"]
             elif args.arena_action == "status":
                 result = service.status()
             elif args.arena_action == "task":
@@ -57,7 +62,10 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 state, count, head = service.ledger.verify()
                 ledger.verify()
-                result = {"status": "VALID_SHADOW_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+                brain = service.status()
+                result = {"status": "VALID_SHADOW_LEDGER", "event_count": count, "head": head,
+                          "phase": state["phase"], "brain_revision": brain["brain_revision"],
+                          "brain_fingerprint": brain["brain_fingerprint"]}
         elif args.action == "init":
             ledger.init()
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
