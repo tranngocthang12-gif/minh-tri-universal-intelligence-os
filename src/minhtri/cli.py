@@ -10,6 +10,7 @@ from pathlib import Path
 from .arena import ArenaService
 from .arena_migration import archive_legacy_arena, verify_legacy_arena
 from .core import GateError, Ledger, next_goal
+from .tasking import TaskService
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -47,10 +48,46 @@ def main(argv: list[str] | None = None) -> int:
     migration_archive.add_argument("archive_root", type=Path)
     migration_archive.add_argument("--schema", default=None,
                                    choices=["arena-v1-core-constitution", "arena-v2-github-brain"])
+
+    tasks = sub.add_parser("tasks", help="Canonical task/checkpoint/lease control plane")
+    tasks.add_argument("--brain-root", default=".", help="Repository root containing the canonical brain artifacts")
+    tasks.add_argument("--brain-revision", default=None,
+                       help="Pinned 40-character Git SHA; defaults to git rev-parse HEAD in --brain-root")
+    task_sub = tasks.add_subparsers(dest="task_action", required=True)
+    task_sub.add_parser("init", help="Create canonical task ledger after core init")
+    task_apply = task_sub.add_parser("apply", help="Apply one canonical task command")
+    task_apply.add_argument("json_file", type=Path)
+    task_sub.add_parser("status", help="Show canonical task counts and stale tasks")
+    task_packet = task_sub.add_parser("packet", help="Export one current task/checkpoint packet")
+    task_packet.add_argument("task_id")
+    task_sub.add_parser("verify", help="Replay canonical task ledger")
+    task_sub.add_parser("repair-snapshot", help="Repair canonical task cache after audit")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
     try:
-        if args.action == "arena-migration":
+        if args.action == "tasks":
+            service = TaskService(args.home, args.brain_root, args.brain_revision)
+            if args.task_action == "init":
+                service.init()
+                result = {"status": "TASK_LEDGER_INITIALIZED", "home": str(service.ledger.home)}
+            elif args.task_action == "apply":
+                payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+                receipt = service.apply(payload)
+                result = {"status": "TASK_RECORDED", "event_count": receipt["event_count"], "head": receipt["head"]}
+                if payload.get("type") == "create_task":
+                    task_id = payload["data"]["id"]
+                    result["task"] = receipt["state"]["tasks"][task_id]
+            elif args.task_action == "status":
+                result = service.status()
+            elif args.task_action == "packet":
+                result = service.packet(args.task_id)
+            elif args.task_action == "repair-snapshot":
+                count, head = service.ledger.repair_snapshot()
+                result = {"status": "TASK_CACHE_REPAIRED", "event_count": count, "head": head}
+            else:
+                state, count, head = service.ledger.verify()
+                result = {"status": "VALID_TASK_LEDGER", "event_count": count, "head": head, "phase": state["phase"]}
+        elif args.action == "arena-migration":
             if args.migration_action == "verify":
                 result = verify_legacy_arena(args.legacy_home, args.schema)
             else:
