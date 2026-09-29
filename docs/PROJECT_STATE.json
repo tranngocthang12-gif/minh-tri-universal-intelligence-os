@@ -18,8 +18,10 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "FULL_ARCHITECTURE_REPLAY_AND_INDEPENDENT_REVIEW_OF_LAW_BOOTSTRAP_ACK_GATE",
+  "next_checkpoint": "ARENA_SCHEMA_MIGRATION_AND_OLD_LEDGER_REPLAY_BEFORE_CANONICAL_MERGE",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
-  "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE"
+  "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
+  "architecture_full_review": "docs/ARCHITECTURE_FULL_REVIEW_2026-09-29.md",
+  "architecture_review_result": "STRUCTURAL_PASS_REAL_EFFECTIVENESS_HOLD"
 }
