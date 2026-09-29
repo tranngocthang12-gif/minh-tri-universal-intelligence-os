@@ -1,18 +1,18 @@
 # MINH TRÍ — ROUND A BLIND ARCHITECTURE DISCOVERY PACKET v0.2
 
-**Experiment:** `ARCH-CORE-R4-PRE-R5-2026-09-29-V2`  
-**Frozen architecture target:** `50a0444ed20ae2415c9ee31e622a0b6b8575d4c9`  
+**Experiment:** `ARCH-CORE-R4_5-PRE-R5-2026-09-29-V2`  
+**Frozen architecture target:** `1c8c541ec2b4f545417ccef181ead0725c95b16b`  
 **Round:** A — blind discovery
 
 ## Role
 
-You are an independent architecture critic. Review the frozen repository state without access to any incumbent suspected-blocker list or other reviewer output.
+You are an independent architecture critic. Review the frozen repository state without access to incumbent suspected-blocker lists or other reviewer output.
 
 ## Core question
 
 > What material architecture defects, unsafe state transitions, governance inconsistencies, continuity failures or missing gates could make it unsafe to begin R5 Skill Lifecycle + Meta-Learning in SHADOW mode?
 
-Do not assume tests passing means the architecture is semantically safe.
+Do not assume tests passing means semantic safety.
 
 ## Frozen source set
 
@@ -22,34 +22,37 @@ Read these exact files at the frozen target:
 2. `BOOTSTRAP.md`
 3. `docs/PROJECT_STATE.json`
 4. `docs/UNIVERSAL_BRAIN_ARCHITECTURE_V0.2_CANDIDATE.md`
-5. `docs/PROJECT_LAW_V0.2_RESTORATION_DELTA_CANDIDATE.md`
-6. `docs/ARENA_SCHEMA_MIGRATION_V0.1.md`
-7. `docs/CANONICAL_TASK_HANDOFF_V0.1.md`
-8. `docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md`
-9. `docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md`
-10. `src/minhtri/brain.py`
-11. `src/minhtri/core.py`
-12. `src/minhtri/arena.py`
-13. `src/minhtri/arena_migration.py`
-14. `src/minhtri/tasking.py`
-15. `src/minhtri/epistemic.py`
-16. `src/minhtri/bottleneck.py`
-17. relevant files under `tests/`.
+5. `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md`
+6. `docs/AI_COMMONS_ARCHITECTURE_V0.1.md`
+7. `docs/ARENA_SCHEMA_MIGRATION_V0.1.md`
+8. `docs/CANONICAL_TASK_HANDOFF_V0.1.md`
+9. `docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md`
+10. `docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md`
+11. `docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md`
+12. `docs/LEDGER_SCHEMA_COMPATIBILITY_V0.1.md`
+13. `src/minhtri/brain.py`
+14. `src/minhtri/core.py`
+15. `src/minhtri/arena.py`
+16. `src/minhtri/tasking.py`
+17. `src/minhtri/epistemic.py`
+18. `src/minhtri/bottleneck.py`
+19. `src/minhtri/workcell.py`
+20. relevant files under `tests/`.
 
 You may inspect a direct dependency outside the list, but disclose it.
 
 ## Invariants to verify
 
-These are project requirements, not hints about where bugs exist:
-
 - Owner sovereignty;
 - AI/provider replaceability;
+- elastic N-AI cardinality, with no fixed participant-count truth rule;
+- participant count != independent provider-family count;
 - project memory != model memory;
 - read before reconstruct;
 - evidence before belief;
 - prediction before outcome;
 - dissent preserved;
-- independent logical roles;
+- logical role separation where required;
 - domain isolation;
 - fail closed;
 - no automatic truth promotion;
@@ -100,12 +103,8 @@ For BLOCKER/HIGH findings that claim a code/gate defect, provide an executable p
 
 ## Blindness rule
 
-Do not read:
+Do not read incumbent architecture review, suspected blocker lists, other provider reviews, Round B directed challenge packet, or synthesized/adjudicated results until your Round A answer is frozen.
 
-- incumbent architecture review;
-- suspected blocker lists;
-- other provider reviews;
-- Round B directed challenge packet;
-- synthesized/adjudicated results
+## Participation rule
 
-until your Round A answer is frozen.
+There is no fixed four-seat requirement. Any eligible provider may participate. Record the actual provider/model/session provenance. Multiple participants from the same provider family do not become multiple independent sources.
