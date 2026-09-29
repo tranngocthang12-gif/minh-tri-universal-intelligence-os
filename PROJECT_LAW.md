@@ -1,7 +1,7 @@
 # MINH TRÍ — PROJECT LAW / LUẬT KIẾN TRÚC
 
 **Owner:** Trần Ngọc Thắng  
-**Phiên bản ứng viên:** 0.1 · **Ngày:** 2026-09-29  
+**Phiên bản ứng viên:** 0.2 · **Ngày:** 2026-09-29  
 **Trạng thái Git hiện tại:** `OWNER-DIRECTED CANDIDATE / NOT MERGED / NO NEW EXTERNAL AUTHORITY`
 
 > **READ BEFORE WORK.** Bất kỳ chat, AI, agent, người đóng góp hoặc tiến trình nào muốn đưa ra nhận định trạng thái, sửa kiến trúc, tạo code hoặc xử lý task cho MINH TRÍ phải đọc luật này, `BOOTSTRAP.md`, `docs/PROJECT_STATE.json`, Brain Manifest hiện hành và context của task trước khi làm việc.
@@ -55,6 +55,13 @@ Một file có mặt trên GitHub, một branch, một PR, một câu AI nói ha
 13. **Measured learning** — “tự học/tốt hơn” phải đo so baseline bằng outcome thật, kể cả chi phí và sai lầm.
 14. **No silent architecture mutation** — AI không được tự đổi luật lõi trong lúc xử lý task; chỉ được mở change proposal/PR để review.
 15. **Structural != semantic != effectiveness** — test xanh chỉ chứng minh điều test đo; không tự chứng minh hiểu đúng hay tạo giá trị thật.
+16. **Four-seat AI workcell** — công việc chính thức qua AI Commons dùng bốn ghế nhận thức S1–S4. Bốn ghế là ổn định; danh tính/model/provider ngồi ghế là thay thế được.
+17. **Four real contributions** — một AI/model/provider family không được giả thành nhiều ghế độc lập. Blind round chỉ hoàn tất khi đủ bốn đóng góp hợp lệ hoặc trạng thái chuyển HOLD/WAIT.
+18. **Three logical roles, not three permanent AIs** — proposer/critic/adjudicator là chức năng áp trên từng proposal; không khóa vĩnh viễn một model vào một vai.
+19. **Handoff before continuation** — task/checkpoint/handoff thuộc MINH TRÍ. Chat/AI mới phải đọc và xác nhận handoff bền hiện hành trước khi tiếp tục.
+20. **Checkpoint last** — durable delta và validation phải được ghi trước; checkpoint/handoff/completion receipt là bước chốt cuối của một đơn vị công việc.
+21. **Architecture memory is durable** — ý tưởng/lô-gic lõi đã được Owner chấp thuận phải nằm trong luật/contract/versioned state, không dựa vào trí nhớ một chat.
+22. **External cases are priors, not local proof** — case thành công/thất bại bên ngoài có thể tạo hypothesis/prior và cảnh báo lỗi, nhưng không tự chứng minh transfer vào bối cảnh hiện tại.
 
 ## 4. Bản kiến trúc công việc bắt buộc
 
@@ -131,7 +138,9 @@ VERIFY Brain Manifest / revision
           │
 READ exact Task Packet + allowed evidence
           │
-ACKNOWLEDGE exact Brain/Law/Bootstrap hashes
+READ latest durable handoff / checkpoint
+          │
+ACKNOWLEDGE exact Brain/Law/Bootstrap + handoff hashes
           │
           ▼
 ONLY THEN: propose / critique / adjudicate / code
@@ -192,15 +201,19 @@ SCOPED LESSON
 
 Không có outcome thật thì không được gọi kết quả là “đã chứng minh hiệu quả”. Một lần đúng không đủ thành luật.
 
-## 7. AI Commons
+## 7. AI Commons — bốn ghế, AI thay thế được
 
-- Số participant là `N`, không hard-code bốn vào lõi.
-- Bốn AI là một cấu hình hữu ích cho task quan trọng, không phải định luật.
-- Trước khi cross-critique, task quan trọng nên có **blind independent round** để giảm anchoring.
-- Sau reveal, AI được phép tìm phản chứng, counter-evidence, alternative và test phân biệt.
+- AI Commons official workcell có **bốn ghế nhận thức S1–S4**.
+- Không hard-code tên GPT/Claude/Gemini/Grok vào ghế. Model/provider hiện tại chỉ là occupant có thể thay.
+- Cả bốn ghế nhận cùng frozen Brain/Task/Evidence packet trước blind round.
+- Một provider family không được chiếm nhiều ghế và được tính là độc lập.
+- Blind round phải lưu bốn đóng góp có provenance trước reveal; thiếu ghế độc lập thì `HOLD / WAIT_FOR_REPLACEMENT`.
+- Ba vai proposer/critic/adjudicator là chức năng logic xoay trên từng proposal, không phải ba AI cố định.
+- Sau reveal, các ghế cross-critique, tìm counter-evidence/alternative và đề xuất discriminating test.
 - `ABSTAIN` là kết quả hợp lệ.
-- Không bỏ phiếu để tạo truth.
-- AI khác có thể thay participant hỏng nếu nhận đúng brain/task/checkpoint; handoff/lease tự động là mốc chưa triển khai.
+- Không bỏ phiếu 4-0/3-1 để tạo truth. Bất đồng vật chất chưa giải quyết giữ `HOLD`.
+- AI khác có thể thay occupant hỏng nếu nhận đúng Brain/Task/Checkpoint/Handoff. Replacement trước reveal không được xem blind output của ghế khác; replacement sau reveal nhận canonical revealed state.
+- Chi tiết bền nằm ở `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md`.
 
 ## 8. Luật kiến trúc khi sửa hệ
 
