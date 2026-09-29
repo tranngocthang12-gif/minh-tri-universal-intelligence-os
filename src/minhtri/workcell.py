@@ -243,39 +243,43 @@ class FourSeatWorkcellService:
         return participant
 
     def apply(self, command: dict) -> dict:
-        if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
-            raise GateError("Command must contain exactly type and data object")
-        command = copy.deepcopy(command)
-        kind, d = command["type"], command["data"]
-        arena_state = self._arena_state()
+        self.ledger.acquire_project_lock()
+        try:
+            if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+                raise GateError("Command must contain exactly type and data object")
+            command = copy.deepcopy(command)
+            kind, d = command["type"], command["data"]
+            arena_state = self._arena_state()
 
-        if kind == "open_session":
-            if set(d) != {"id", "arena_task_id"}:
-                raise GateError("open_session input has unexpected fields")
-            packet = self.arena.task_packet(d["arena_task_id"])
-            task = packet["task"]
-            d.update({
-                "task_fingerprint": task["fingerprint"],
-                "brain_revision": task["brain_revision"],
-                "brain_fingerprint": task["brain_fingerprint"],
-                "architecture_law_sha256": task["architecture_law_sha256"],
-                "bootstrap_sha256": task["bootstrap_sha256"],
-            })
-        elif kind in ("assign_slot", "replace_slot"):
-            state = self.ledger.verify()[0]
-            session = ref(state, "sessions", d.get("session_id"))
-            task = ref(arena_state, "tasks", session["arena_task_id"])
-            participant = self._participant_acknowledged(arena_state, task, d.get("participant_id"))
-            if d.get("family_id") != participant["family_id"]:
-                raise GateError("Workcell family_id must match the registered Arena participant family")
-            if d.get("model") != participant["model"] or d.get("version") != participant["version"]:
-                raise GateError("Workcell model/version must match the registered Arena participant")
-        elif kind in ("submit_blind", "freeze_blind", "reveal"):
-            state = self.ledger.verify()[0]
-            session = ref(state, "sessions", d.get("session_id"))
-            self.arena.task_packet(session["arena_task_id"])
+            if kind == "open_session":
+                if set(d) != {"id", "arena_task_id"}:
+                    raise GateError("open_session input has unexpected fields")
+                packet = self.arena.task_packet(d["arena_task_id"])
+                task = packet["task"]
+                d.update({
+                    "task_fingerprint": task["fingerprint"],
+                    "brain_revision": task["brain_revision"],
+                    "brain_fingerprint": task["brain_fingerprint"],
+                    "architecture_law_sha256": task["architecture_law_sha256"],
+                    "bootstrap_sha256": task["bootstrap_sha256"],
+                })
+            elif kind in ("assign_slot", "replace_slot"):
+                state = self.ledger.verify()[0]
+                session = ref(state, "sessions", d.get("session_id"))
+                task = ref(arena_state, "tasks", session["arena_task_id"])
+                participant = self._participant_acknowledged(arena_state, task, d.get("participant_id"))
+                if d.get("family_id") != participant["family_id"]:
+                    raise GateError("Workcell family_id must match the registered Arena participant family")
+                if d.get("model") != participant["model"] or d.get("version") != participant["version"]:
+                    raise GateError("Workcell model/version must match the registered Arena participant")
+            elif kind in ("submit_blind", "freeze_blind", "reveal"):
+                state = self.ledger.verify()[0]
+                session = ref(state, "sessions", d.get("session_id"))
+                self.arena.task_packet(session["arena_task_id"])
 
-        return self.ledger.apply(command)
+            return self.ledger.apply(command, project_lock_held=True)
+        finally:
+            self.ledger.release_project_lock()
 
     def status(self, session_id: str) -> dict:
         state, count, head = self.ledger.verify()
