@@ -189,7 +189,12 @@ class EpistemicStateTests(unittest.TestCase):
             review_due_at="2027-01-01T00:00:00Z",
         ))
         item = self.service.item("item1")
-        self.assertEqual(item["effective_level"], "L6_SELF_CRITICISM")
+        self.assertEqual(item["effective_level"], "L1_KNOWLEDGE")
+        self.assertEqual(item["highest_demonstrated_level"], "L6_SELF_CRITICISM")
+        self.assertIsNone(item["understanding"])
+        self.assertIsNone(item["prediction"])
+        self.assertIsNone(item["validation"])
+        self.assertIsNone(item["critique"])
         self.assertEqual(item["status"], "ACTIVE")
 
     def test_unknown_registry_resolves_and_reopens_on_valid_trigger(self):
