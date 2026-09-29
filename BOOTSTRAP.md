@@ -10,7 +10,7 @@
 4. `docs/ARCHITECTURE.md` — contract Tầng 1.
 5. `docs/CORE_PROTECTION_CONTRACT_V0.1.md`.
 6. `docs/UNIVERSAL_BRAIN_ARCHITECTURE_V0.2_CANDIDATE.md` — kiến trúc phục dựng hiện hành; v0.1 chỉ dùng như lịch sử khi cần đối chiếu.
-7. `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md` — bất biến gốc, bốn ghế AI, replacement và handoff.
+7. `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md` — bất biến gốc, N-AI co giãn, replacement và handoff.
 8. `docs/AI_COMMONS_ARCHITECTURE_V0.1.md`.
 9. `docs/ARENA_SCHEMA_MIGRATION_V0.1.md`.
 10. `docs/CANONICAL_TASK_HANDOFF_V0.1.md`.
