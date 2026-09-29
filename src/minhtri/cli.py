@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from .arena import ArenaService
+from .arena_migration import archive_legacy_arena, verify_legacy_arena
 from .core import GateError, Ledger, next_goal
 
 
@@ -34,10 +35,27 @@ def main(argv: list[str] | None = None) -> int:
     arena_sub.add_parser("repair-snapshot", help="Rebuild arena cache from the audited event chain")
     arena_task = arena_sub.add_parser("task", help="Export a current bounded task packet")
     arena_task.add_argument("task_id")
+
+    migration = sub.add_parser("arena-migration", help="Verify/archive a pre-law AI Commons ledger without rewriting history")
+    migration_sub = migration.add_subparsers(dest="migration_action", required=True)
+    migration_verify = migration_sub.add_parser("verify", help="Replay a legacy PR #2/PR #3 Arena ledger")
+    migration_verify.add_argument("legacy_home", type=Path)
+    migration_verify.add_argument("--schema", default=None,
+                                  choices=["arena-v1-core-constitution", "arena-v2-github-brain"])
+    migration_archive = migration_sub.add_parser("archive", help="Verify and copy a legacy Arena ledger to an immutable archive")
+    migration_archive.add_argument("legacy_home", type=Path)
+    migration_archive.add_argument("archive_root", type=Path)
+    migration_archive.add_argument("--schema", default=None,
+                                   choices=["arena-v1-core-constitution", "arena-v2-github-brain"])
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
     try:
-        if args.action == "arena":
+        if args.action == "arena-migration":
+            if args.migration_action == "verify":
+                result = verify_legacy_arena(args.legacy_home, args.schema)
+            else:
+                result = archive_legacy_arena(args.legacy_home, args.archive_root, args.schema)
+        elif args.action == "arena":
             service = ArenaService(args.home, args.brain_root, args.brain_revision)
             if args.arena_action == "init":
                 service.init()
