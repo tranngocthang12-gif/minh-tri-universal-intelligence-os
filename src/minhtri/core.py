@@ -374,8 +374,10 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
 class Ledger:
     """Single-writer JSONL hash chain; the state file is a derived cache."""
 
-    def __init__(self, home: str | Path):
+    def __init__(self, home: str | Path, reducer=None, initial=None):
         self.home = Path(home)
+        self.reducer = reducer or evolve
+        self.initial = initial or initial_state
         self.events = self.home / "events.jsonl"
         self.snapshot = self.home / "state.json"
         self.lock = self.home / ".writer.lock"
@@ -385,12 +387,12 @@ class Ledger:
             raise GateError("Home is not empty; refusing to overwrite")
         self.home.mkdir(parents=True, exist_ok=True)
         self.events.write_bytes(b"")
-        self._save(initial_state(), 0, "0" * 64)
+        self._save(self.initial(), 0, "0" * 64)
 
     def replay(self) -> tuple[dict, int, str]:
         if not self.events.exists():
             raise GateError("Ledger missing; run init")
-        state, previous, count = initial_state(), "0" * 64, 0
+        state, previous, count = self.initial(), "0" * 64, 0
         with self.events.open("r", encoding="utf-8") as fh:
             for raw in fh:
                 count += 1
@@ -401,7 +403,7 @@ class Ledger:
                     body = {k: event[k] for k in ("seq", "prev", "at", "command")}
                     if event["seq"] != count or event["prev"] != previous or digest(body) != event["hash"]:
                         raise GateError("Event chain mismatch")
-                    state = evolve(state, event["command"], event["at"])
+                    state = self.reducer(state, event["command"], event["at"])
                     previous = event["hash"]
                 except (ValueError, TypeError, KeyError) as exc:
                     raise GateError(f"Invalid event at line {count}: {exc}") from exc
@@ -445,7 +447,7 @@ class Ledger:
             os.close(fd)
             state, count, head = self.verify()
             at = utcnow()
-            updated = evolve(state, command, at)
+            updated = self.reducer(state, command, at)
             body = {"seq": count + 1, "prev": head, "at": at, "command": command}
             event = {**body, "hash": digest(body)}
             with self.events.open("ab") as fh:

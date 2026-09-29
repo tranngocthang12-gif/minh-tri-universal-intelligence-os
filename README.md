@@ -24,6 +24,14 @@ minhtri.bat verify
 
 Trên macOS/Linux: `PYTHONPATH=src python3 -m minhtri init` và thay `minhtri.bat` bằng `PYTHONPATH=src python3 -m minhtri` ở các lệnh còn lại. Dữ liệu cục bộ nằm trong `brain/` và được loại khỏi gói Git công khai. Mỗi file JSON trong `examples/` là **một lệnh**, được thực thi riêng và lưu thành một sự kiện.
 
+## Sân chơi cho nhiều AI — bản thử có kiểm soát
+
+Sau khi khởi tạo lõi, chạy `demo_arena.bat` trên Windows hoặc `PYTHONPATH=src python3 demo_arena.py` trên macOS/Linux. Demo tạo một sổ tạm, bốn **participant giả lập**, một nhiệm vụ, hai phản biện và kết luận `HOLD` vì một phản biện còn mở. Không gọi ChatGPT, Claude, Gemini, Grok hay API nào; kiểm tra bảy participant trong bộ test chứng minh số ghế không bị viết cứng thành bốn.
+
+Để nhập đầu ra AI bằng tay trong sổ của anh: chạy `minhtri.bat init` nếu chưa có `brain/`, rồi `minhtri.bat arena init`. Mỗi lệnh `minhtri.bat arena apply duong-dan\lenh.json` nhận một JSON `{"type":"...","data":{...}}`; trước tiên đăng ký `register_participant`, mở `open_task`, rồi nộp `submit_proposal`, `submit_critique`, `submit_adjudication`. Lệnh mở nhiệm vụ trả `task_fingerprint`; `minhtri.bat arena task ID` xuất gói nhiệm vụ, bản tư tưởng đã ghim và duy nhất các evidence được phép để chuyển cho AI theo cách thủ công. Xem [hợp đồng sân chơi](docs/AI_COMMONS_ARCHITECTURE_V0.1.md) để biết ý nghĩa các trường và cổng quyền. `arena status` và `arena verify` kiểm tra sổ riêng; `arena repair-snapshot` tái dựng cache sau khi kiểm sổ. Không lệnh nào tự ghi bài học vào lõi.
+
+Trạng thái hiện tại là `SHADOW`: danh tính nhà cung cấp tự khai; evidence được phép chỉ từ nguồn giả lập cùng miền và quyền `CLEAR` do người nhập khai báo. Chưa có kết nối model, xác thực Owner, chi phí API hay hành động bên ngoài. Sân chơi này là hợp đồng và cổng thử nghiệm để chuẩn bị mở cho N AI sau khi lõi và vòng dữ liệu thật được kiểm chứng.
+
 ## Bản đầu tiên làm được gì
 
 - Mở một miền mới mà không sửa lõi; mở mục tiêu và khung vấn đề (thực trạng, điều kiện giả định, đích, can thiệp, trách nhiệm, rủi ro), đặt ưu tiên, tạm chặn hoặc đóng. Không có mục tiêu hợp lệ thì trả `WAIT`.
