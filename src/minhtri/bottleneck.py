@@ -321,18 +321,28 @@ class BottleneckService:
             component = ref(state, "components", d.get("component_id"))
             plan = ref(state, "plans", component["plan_id"])
             self._assert_goal_open(core_state, plan)
-            for evidence_id in d.get("evidence_ids", []):
+            evidence_ids = d.get("evidence_ids", [])
+            for evidence_id in evidence_ids:
                 evidence = ref(core_state, "evidence", evidence_id)
                 if evidence["domain_id"] != plan["domain_id"]:
                     raise GateError("Component status evidence cannot cross domain boundaries")
             if d.get("status") == "SATISFIED":
+                if not set(evidence_ids).issubset(set(component["allowed_evidence_ids"])):
+                    raise GateError("SATISFIED evidence must come from the component evidence allowlist")
+                unresolved_unknowns = [
+                    unknown_id for unknown_id in component["unknown_ids"]
+                    if ref(epistemic_state, "unknowns", unknown_id)["status"] == "OPEN"
+                ]
+                if unresolved_unknowns:
+                    raise GateError("SATISFIED is blocked while linked component unknowns remain OPEN")
                 mature = any(
-                    MATURITY_LEVELS.index(ref(epistemic_state, "items", item_id)["effective_level"])
+                    ref(epistemic_state, "items", item_id)["status"] == "ACTIVE"
+                    and MATURITY_LEVELS.index(ref(epistemic_state, "items", item_id)["effective_level"])
                     >= MATURITY_LEVELS.index("L2_UNDERSTANDING")
                     for item_id in component["epistemic_item_ids"]
                 )
-                if not d.get("evidence_ids") and not mature:
-                    raise GateError("SATISFIED requires same-domain evidence or an active L2+ epistemic item")
+                if not evidence_ids and not mature:
+                    raise GateError("SATISFIED requires allowed evidence or an active L2+ linked epistemic item")
 
         elif kind == "record_focus":
             raise GateError("record_focus is governor-generated; use commit_focus")
