@@ -49,7 +49,10 @@ A task stores:
 - checkpoint sequence;
 - last accepted checkpoint;
 - current lease;
-- handoff history.
+- structured handoff history;
+- continuation acknowledgements.
+
+A deterministic `continuation_fingerprint` binds the current Brain pins, checkpoint and latest handoff. A worker/chat must acknowledge the exact current fingerprint before acquiring a lease.
 
 ## Checkpoint law
 
@@ -78,7 +81,22 @@ When a lease has expired, a new worker may claim the task **only from the same c
 
 `from_worker → to_worker → LEASE_EXPIRED → checkpoint_seq`.
 
-A voluntary release records a handoff and leaves the task OPEN.
+A voluntary release records a checkpoint-derived handoff and leaves the task OPEN.
+
+For normal intentional transfer, use the structured `handoff_task` path after checkpointing. It records decisions, unknowns, blockers, verification, scope, limitations and the exact next action, then fingerprints the receipt and releases the lease.
+
+The finish order is:
+
+```text
+PERSIST DURABLE DELTA
+→ TEST / VALIDATE
+→ CHECKPOINT
+→ STRUCTURED HANDOFF RECEIPT
+→ REPLAY / VERIFY
+→ REPORT
+```
+
+A successor must read the packet and submit an exact continuation acknowledgement before acquiring the task.
 
 ## Brain and Owner gates
 
@@ -116,13 +134,16 @@ minhtri --home brain tasks --brain-root . verify
 R2 PASS requires:
 
 1. checkpoint survives worker replacement;
-2. active lease blocks a second worker;
-3. expired lease permits failover;
-4. stale checkpoint writes fail closed;
-5. wrong worker cannot checkpoint/complete;
-6. blocked goal or stale Brain blocks continuation;
-7. completed task is terminal;
-8. Python 3.10/3.12 CI passes.
+2. every worker acknowledges the exact current continuation fingerprint before lease acquisition;
+3. structured handoff preserves decisions/unknowns/blockers/verification/scope/next action;
+4. stale continuation acknowledgement is rejected after checkpoint/handoff changes;
+5. active lease blocks a second worker;
+6. expired lease permits failover from durable checkpoint state;
+7. stale checkpoint writes fail closed;
+8. wrong worker cannot checkpoint/complete;
+9. blocked goal or stale Brain blocks continuation;
+10. completed task is terminal;
+11. Python 3.10/3.12 CI passes.
 
 ## Not yet implemented
 
