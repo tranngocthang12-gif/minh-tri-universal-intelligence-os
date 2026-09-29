@@ -18,5 +18,8 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "INDEPENDENT_REVIEW_AND_REPLAY_COMPATIBILITY_FOR_GITHUB_BRAIN_CONTRACT"
+  "next_checkpoint": "FULL_ARCHITECTURE_REPLAY_AND_INDEPENDENT_REVIEW_OF_LAW_BOOTSTRAP_ACK_GATE",
+  "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
+  "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
+  "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE"
 }
