@@ -93,7 +93,7 @@ def initial_state() -> dict:
 
 ALLOWED_FIELDS = {
     "register_domain": {"id", "name", "risk_class", "measurement_contract"},
-    "register_provider": {"id", "name", "kind"},
+    "register_provider": {"id", "name", "kind", "family_id"},
     "open_goal": {"id", "domain_id", "objective", "priority", "owner_boundary"},
     "set_goal_status": {"goal_id", "status", "reason"},
     "frame_problem": {"id", "goal_id", "reality", "conditions", "target", "intervention", "unknowns", "control", "influence", "responsibility", "harm_checks"},
@@ -155,10 +155,11 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         add(out, "domains", d)
 
     elif kind == "register_provider":
-        need(d, "id", "name", "kind")
+        need(d, "id", "name", "kind", "family_id")
         if d["kind"] not in ("MODEL", "HUMAN", "TOOL"):
             raise GateError("Invalid provider kind")
         string(d["name"], "name")
+        identifier(d["family_id"], "family_id")
         add(out, "providers", d)
 
     elif kind == "open_goal":
@@ -314,11 +315,13 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
     elif kind == "review_claim":
         need(d, "id", "claim_id", "critic_provider_id", "verdict", "reason")
         claim = ref(out, "claims", d["claim_id"])
-        ref(out, "providers", d["critic_provider_id"])
-        predictors = {out["procedures"][p["procedure_id"]]["provider_id"]
-                      for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
-        if d["critic_provider_id"] == claim["provider_id"] or d["critic_provider_id"] in predictors:
-            raise GateError("Proposer or predictor cannot critique their own claim")
+        critic = ref(out, "providers", d["critic_provider_id"])
+        proposer = ref(out, "providers", claim["provider_id"])
+        predictor_ids = {out["procedures"][p["procedure_id"]]["provider_id"]
+                         for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
+        predictor_families = {ref(out, "providers", pid)["family_id"] for pid in predictor_ids}
+        if critic["family_id"] == proposer["family_id"] or critic["family_id"] in predictor_families:
+            raise GateError("Critic must be independent of proposer/predictor provider family")
         if d["verdict"] not in ("ACCEPT_FOR_TRIAL", "HOLD", "REVISE"):
             raise GateError("Invalid review verdict")
         string(d["reason"], "reason")
@@ -331,13 +334,17 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         need(d, "id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason")
         claim = ref(out, "claims", d["claim_id"])
         review = ref(out, "reviews", d["review_id"])
-        ref(out, "providers", d["adjudicator_provider_id"])
+        judge = ref(out, "providers", d["adjudicator_provider_id"])
         if review["claim_id"] != d["claim_id"]:
             raise GateError("Review belongs to another claim")
-        predictors = {out["procedures"][p["procedure_id"]]["provider_id"]
-                      for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
-        if d["adjudicator_provider_id"] in (claim["provider_id"], review["critic_provider_id"]) or d["adjudicator_provider_id"] in predictors:
-            raise GateError("Adjudicator must occupy a distinct seat")
+        proposer = ref(out, "providers", claim["provider_id"])
+        critic = ref(out, "providers", review["critic_provider_id"])
+        predictor_ids = {out["procedures"][p["procedure_id"]]["provider_id"]
+                         for p in out["predictions"].values() if p["claim_id"] == d["claim_id"]}
+        occupied_families = {proposer["family_id"], critic["family_id"]}
+        occupied_families.update(ref(out, "providers", pid)["family_id"] for pid in predictor_ids)
+        if judge["family_id"] in occupied_families:
+            raise GateError("Adjudicator must occupy a distinct provider family")
         if d["verdict"] not in ("ACCEPT_FOR_TRIAL", "HOLD", "REVISE"):
             raise GateError("Invalid adjudication verdict")
         if d["verdict"] == "ACCEPT_FOR_TRIAL":
