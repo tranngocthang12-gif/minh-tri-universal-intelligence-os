@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "FREEZE_LEDGER_COMPATIBILITY_FIXTURES_THEN_RUN_FOUR_PROVIDER_BLIND_REVIEW",
+  "next_checkpoint": "RUN_EXACT_HEAD_CI_THEN_FOUR_PROVIDER_BLIND_ARCHITECTURE_REVIEW",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -81,7 +81,6 @@
   "ai_commons_blind_gate": "FOUR_OF_FOUR_DISTINCT_FAMILIES_REQUIRED_BEFORE_REVEAL",
   "core_provider_family_separation": "IMPLEMENTED_CANDIDATE_UNDER_TEST",
   "r4_5_open_holds": [
-    "LEDGER_SCHEMA_COMPATIBILITY_FIXTURES_FOR_CORE_TASK_EPISTEMIC_GOVERNOR_WORKCELL",
     "INDEPENDENT_MULTI_PROVIDER_ARCHITECTURE_REVIEW",
     "PROVIDER_OWNER_IDENTITY_UNVERIFIED",
     "REAL_WORLD_EFFECTIVENESS_UNVALIDATED"
@@ -99,5 +98,6 @@
   "task_completion_receipt": "STRUCTURED_FINGERPRINTED_IMPLEMENTED_CANDIDATE",
   "architecture_experiment_state": "docs/experiments/EXPERIMENT_STATE_V0.2.json",
   "ai_commons_official_submission_route": "WORKCELL_REVEALED_GATEWAY_TO_ARENA",
-  "ai_commons_direct_arena_status": "LOW_LEVEL_COMPATIBILITY_REPLAY_NOT_OFFICIAL_FOUR_AI_ROUTE"
+  "ai_commons_direct_arena_status": "LOW_LEVEL_COMPATIBILITY_REPLAY_NOT_OFFICIAL_FOUR_AI_ROUTE",
+  "ledger_schema_compatibility": "POLICY_PLUS_R4_5_SCHEMA_TRIPWIRES_AND_LEGACY_CORE_FAMILY_MIGRATION_VERIFIER_IMPLEMENTED_CANDIDATE"
 }
