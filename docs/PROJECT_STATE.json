@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "R2_CI_PASS_THEN_EPISTEMIC_AND_L0_L9_STATE_R3",
+  "next_checkpoint": "R3_CI_PASS_THEN_GOAL_DECOMPOSITION_AND_BOTTLENECK_R4",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -43,5 +43,19 @@
     "VOLUNTARY_HANDOFF",
     "LEASE_EXPIRY_FAILOVER",
     "BRAIN_LAW_STALENESS_GATE"
-  ]
+  ],
+  "epistemic_contract": "docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md",
+  "epistemic_status": "R3_CANDIDATE_UNDER_TEST",
+  "learning_maturity_runtime": "L0_TO_L6_EVIDENCE_DERIVED_L7_TO_L9_FUTURE_GATED",
+  "unknown_registry": "IMPLEMENTED_IN_R3_CANDIDATE",
+  "knowledge_reopen_triggers": [
+    "NEW_EVIDENCE",
+    "STALENESS",
+    "REGRESSION",
+    "OWNER_REOPEN",
+    "DEPENDENCY_CHANGE",
+    "POLICY_CHANGE",
+    "ENVIRONMENT_CHANGE"
+  ],
+  "provider_error_profile": "OBSERVATIONS_ONLY_NOT_SCORED"
 }
