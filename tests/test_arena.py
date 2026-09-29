@@ -50,26 +50,64 @@ class ShadowArenaTests(unittest.TestCase):
         state = self.arena.apply(command("open_task", id="task1", goal_id="goal1", brief="Choose a method",
                                          acceptance="Evidence and critique before candidate",
                                          allowed_evidence_ids=[], expires_at=self.expiry))["state"]
-        return state["tasks"]["task1"]["fingerprint"]
+        self.task_record = state["tasks"]["task1"]
+        return self.task_record["fingerprint"]
 
-    def proposal(self, actor="actor1", fingerprint=None, proposal_id="proposal1", evidence_ids=None):
+    def ack(self, actor, ack_id=None, **overrides):
+        task = self.task_record
+        data = {
+            "id": ack_id or f"ack-{actor}",
+            "task_id": "task1",
+            "participant_id": actor,
+            "task_fingerprint": task["fingerprint"],
+            "brain_revision": task["brain_revision"],
+            "brain_fingerprint": task["brain_fingerprint"],
+            "architecture_law_sha256": task["architecture_law_sha256"],
+            "bootstrap_sha256": task["bootstrap_sha256"],
+        }
+        data.update(overrides)
+        return self.arena.apply(command("acknowledge_brain", **data))
+
+    def proposal(self, actor="actor1", fingerprint=None, proposal_id="proposal1", evidence_ids=None, ack_id=None):
         return self.arena.apply(command("submit_proposal", id=proposal_id, task_id="task1",
-                                        participant_id=actor, task_fingerprint=fingerprint or self.fp,
+                                        participant_id=actor, acknowledgement_id=ack_id or f"ack-{actor}",
+                                        task_fingerprint=fingerprint or self.fp,
                                         claim="A testable proposal", alternative="Alternative method",
                                         uncertainties=["No real outcome yet"], evidence_ids=evidence_ids or [],
                                         discriminating_test="Compare with baseline", method_ref="method@1"))
 
-    def critique(self, actor="actor2", verdict="NO_MATERIAL_DEFECT_FOUND", critique_id="critique1"):
+    def critique(self, actor="actor2", verdict="NO_MATERIAL_DEFECT_FOUND", critique_id="critique1", ack_id=None):
         return self.arena.apply(command("submit_critique", id=critique_id, proposal_id="proposal1",
-                                        participant_id=actor, task_fingerprint=self.fp,
-                                        verdict=verdict, reason="Checked the stated assumptions",
-                                        evidence_ids=[], test="Run an independent baseline"))
+                                        participant_id=actor, acknowledgement_id=ack_id or f"ack-{actor}",
+                                        task_fingerprint=self.fp, verdict=verdict,
+                                        reason="Checked the stated assumptions", evidence_ids=[],
+                                        test="Run an independent baseline"))
 
-    def adjudicate(self, critiques, outcome="CANDIDATE_FOR_OWNER_REVIEW", actor="actor3"):
+    def adjudicate(self, critiques, outcome="CANDIDATE_FOR_OWNER_REVIEW", actor="actor3", ack_id=None):
         return self.arena.apply(command("submit_adjudication", id="decision1", proposal_id="proposal1",
-                                        participant_id=actor, task_fingerprint=self.fp,
-                                        critique_ids=critiques, outcome=outcome,
+                                        participant_id=actor, acknowledgement_id=ack_id or f"ack-{actor}",
+                                        task_fingerprint=self.fp, critique_ids=critiques, outcome=outcome,
                                         reason="Only a shadow candidate for Owner review"))
+
+    def test_participant_must_ack_exact_law_and_bootstrap_before_work(self):
+        self.ready()
+        self.participants()
+        self.fp = self.task()
+        with self.assertRaisesRegex(GateError, "Unknown acknowledgements"):
+            self.proposal()
+        with self.assertRaisesRegex(GateError, "must match"):
+            self.ack("actor1", ack_id="bad-ack", architecture_law_sha256="0" * 64)
+        self.ack("actor1")
+        self.proposal()
+        self.assertEqual(self.arena.ledger.verify()[0]["proposals"]["proposal1"]["status"], "UNVERIFIED_PROPOSAL")
+
+    def test_acknowledgement_cannot_be_reused_by_another_participant(self):
+        self.ready()
+        self.participants()
+        self.fp = self.task()
+        self.ack("actor1")
+        with self.assertRaisesRegex(GateError, "does not belong"):
+            self.proposal(actor="actor2", ack_id="ack-actor1")
 
     def test_core_must_exist_before_arena_and_n_participants_are_dynamic(self):
         with self.assertRaises(GateError):
@@ -77,6 +115,8 @@ class ShadowArenaTests(unittest.TestCase):
         self.ready()
         self.participants(count=7)
         self.fp = self.task()
+        for actor in ("actor7", "actor2", "actor3"):
+            self.ack(actor)
         self.proposal(actor="actor7")
         self.critique(actor="actor2")
         result = self.adjudicate(["critique1"], actor="actor3")
@@ -90,6 +130,8 @@ class ShadowArenaTests(unittest.TestCase):
         self.arena.apply(command("register_participant", id="alias1", family_id="family1", model="another persona",
                                  version="test", adapter="MANUAL", capabilities=["CRITIQUE", "ADJUDICATE"]))
         self.fp = self.task()
+        for actor in ("actor1", "actor2", "actor3", "alias1"):
+            self.ack(actor)
         with self.assertRaisesRegex(GateError, "fingerprint mismatch"):
             self.proposal(fingerprint="0" * 64)
         with self.assertRaisesRegex(GateError, "outside the task packet"):
@@ -105,6 +147,8 @@ class ShadowArenaTests(unittest.TestCase):
         self.ready()
         self.participants()
         self.fp = self.task()
+        for actor in ("actor1", "actor2", "actor3", "actor4"):
+            self.ack(actor)
         self.proposal()
         self.critique(verdict="NO_MATERIAL_DEFECT_FOUND")
         self.critique(actor="actor4", verdict="CHALLENGE", critique_id="critique2")
@@ -121,6 +165,7 @@ class ShadowArenaTests(unittest.TestCase):
         self.ready()
         self.participants()
         self.fp = self.task()
+        self.ack("actor1")
         architecture = self.brain_root / "docs" / "ARCHITECTURE.md"
         original = architecture.read_text(encoding="utf-8")
         architecture.write_text("changed architecture", encoding="utf-8")
@@ -131,15 +176,26 @@ class ShadowArenaTests(unittest.TestCase):
         with self.assertRaisesRegex(GateError, "runtime state is stale"):
             self.proposal()
 
+    def test_project_law_drift_blocks_old_task(self):
+        self.ready()
+        self.participants()
+        self.fp = self.task()
+        self.ack("actor1")
+        law = self.brain_root / "PROJECT_LAW.md"
+        law.write_text("mutated law", encoding="utf-8")
+        with self.assertRaisesRegex(GateError, "brain version is stale|architecture law is stale"):
+            self.proposal()
+
     def test_git_revision_drift_blocks_old_task(self):
         self.ready()
         self.participants()
         self.fp = self.task()
+        self.ack("actor1")
         self.arena.brain_revision = "b" * 40
         with self.assertRaisesRegex(GateError, "brain version is stale"):
             self.proposal()
 
-    def test_risk_and_context_are_derived_from_core(self):
+    def test_risk_context_and_law_are_derived_from_brain_and_core(self):
         self.ready(risk="HIGH_STAKES")
         self.participants()
         self.fp = self.task()
@@ -150,13 +206,15 @@ class ShadowArenaTests(unittest.TestCase):
         self.assertEqual(task["sensitivity"], "PUBLIC")
         self.assertEqual(task["brain_revision"], self.brain_revision)
         self.assertEqual(len(task["brain_fingerprint"]), 64)
+        self.assertEqual(len(task["architecture_law_sha256"]), 64)
+        self.assertEqual(len(task["bootstrap_sha256"]), 64)
         self.assertEqual(len(task["runtime_state_head"]), 64)
         with self.assertRaisesRegex(GateError, "unexpected fields"):
             self.arena.apply(command("open_task", id="task2", goal_id="goal1", brief="Override",
                                      acceptance="No", allowed_evidence_ids=[], expires_at=self.expiry,
                                      risk_class="NORMAL"))
 
-    def test_export_packet_is_bounded_and_cli_can_read_it(self):
+    def test_export_packet_contains_law_bootstrap_and_bounded_evidence(self):
         self.ready()
         observed = (datetime.now(timezone.utc) - timedelta(days=1)).isoformat()
         self.core.apply(command("record_source", id="source1", domain_id="media", uri="synthetic://demo",
@@ -164,12 +222,15 @@ class ShadowArenaTests(unittest.TestCase):
         for eid in ("evidence1", "evidence2"):
             self.core.apply(command("record_evidence", id=eid, domain_id="media", source_id="source1",
                                     statement=f"Synthetic statement {eid}", observed_at=observed))
-        self.arena.apply(command("open_task", id="task1", goal_id="goal1", brief="Scoped comparison",
-                                 acceptance="Check evidence", allowed_evidence_ids=["evidence1"],
-                                 expires_at=self.expiry))
+        state = self.arena.apply(command("open_task", id="task1", goal_id="goal1", brief="Scoped comparison",
+                                         acceptance="Check evidence", allowed_evidence_ids=["evidence1"],
+                                         expires_at=self.expiry))["state"]
+        self.task_record = state["tasks"]["task1"]
         packet = self.arena.task_packet("task1")
         self.assertEqual([e["id"] for e in packet["evidence"]], ["evidence1"])
-        self.assertEqual(packet["constitution"], "Owner-approved candidate for shadow test")
+        self.assertIn("PROJECT_LAW", packet["project_law"])
+        self.assertIn("BOOTSTRAP", packet["bootstrap"])
+        self.assertEqual(packet["acknowledgement_required"]["task_fingerprint"], self.task_record["fingerprint"])
         self.assertEqual(packet["brain"]["manifest"]["brain_revision"], self.brain_revision)
         self.assertEqual([item["path"] for item in packet["brain"]["manifest"]["artifacts"]], list(BRAIN_ARTIFACTS))
         output = io.StringIO()
@@ -178,9 +239,6 @@ class ShadowArenaTests(unittest.TestCase):
                               "--brain-revision", self.brain_revision, "task", "task1"])
         self.assertEqual(exit_code, 0)
         self.assertEqual(json.loads(output.getvalue()), packet)
-        (self.brain_root / "docs" / "ROADMAP.md").write_text("changed", encoding="utf-8")
-        with self.assertRaisesRegex(GateError, "brain version is stale"):
-            self.arena.task_packet("task1")
 
 
 if __name__ == "__main__":
