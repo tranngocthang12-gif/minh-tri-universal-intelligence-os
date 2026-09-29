@@ -407,7 +407,7 @@ class EpistemicService:
     def apply(self, command: dict) -> dict:
         self.ledger.acquire_project_lock()
         try:
-                core_state, _, _ = self.core.verify()
+            core_state, _, _ = self.core.verify()
             if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
                 raise GateError("Command must contain exactly type and data object")
             command = copy.deepcopy(command)
