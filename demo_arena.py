@@ -37,19 +37,39 @@ def main():
         expires_at=(datetime.now(timezone.utc) + timedelta(days=1)).isoformat(),
     ))["state"]["tasks"]["sample_task"]
     fingerprint = task["fingerprint"]
+
+    def acknowledge(participant_id):
+        arena.apply(command(
+            "acknowledge_brain",
+            id=f"ack-{participant_id}",
+            task_id="sample_task",
+            participant_id=participant_id,
+            task_fingerprint=fingerprint,
+            brain_revision=task["brain_revision"],
+            brain_fingerprint=task["brain_fingerprint"],
+            architecture_law_sha256=task["architecture_law_sha256"],
+            bootstrap_sha256=task["bootstrap_sha256"],
+        ))
+
+    for participant_id in ("simulated1", "simulated2", "simulated3", "simulated4"):
+        acknowledge(participant_id)
+
     arena.apply(command("submit_proposal", id="proposal1", task_id="sample_task",
-                        participant_id="simulated1", task_fingerprint=fingerprint,
+                        participant_id="simulated1", acknowledgement_id="ack-simulated1",
+                        task_fingerprint=fingerprint,
                         claim="Compare the two measurements on the same synthetic cohort",
                         alternative="Use separate cohorts", uncertainties=["No real outcome was measured"],
                         evidence_ids=[], discriminating_test="Predefine and compare error on held-out data",
                         method_ref="offline-demo-v1"))
     for n, verdict in ((2, "NO_MATERIAL_DEFECT_FOUND"), (3, "CHALLENGE")):
         arena.apply(command("submit_critique", id=f"critique{n}", proposal_id="proposal1",
-                            participant_id=f"simulated{n}", task_fingerprint=fingerprint,
+                            participant_id=f"simulated{n}", acknowledgement_id=f"ack-simulated{n}",
+                            task_fingerprint=fingerprint,
                             verdict=verdict, reason="The synthetic example cannot settle the real-world outcome",
                             evidence_ids=[], test="Run a preregistered read-only pilot"))
     receipt = arena.apply(command("submit_adjudication", id="decision1", proposal_id="proposal1",
-                                  participant_id="simulated4", task_fingerprint=fingerprint,
+                                  participant_id="simulated4", acknowledgement_id="ack-simulated4",
+                                  task_fingerprint=fingerprint,
                                   critique_ids=["critique2", "critique3"], outcome="HOLD",
                                   reason="An open challenge requires a real, independent test"))
     arena.ledger.verify()
@@ -57,6 +77,9 @@ def main():
                       "brain_revision": task["brain_revision"],
                       "brain_fingerprint": task["brain_fingerprint"],
                       "runtime_state_head": task["runtime_state_head"],
+                      "architecture_law_sha256": task["architecture_law_sha256"],
+                      "bootstrap_sha256": task["bootstrap_sha256"],
+                      "acknowledgements": len(receipt["state"]["acknowledgements"]),
                       "task_fingerprint": fingerprint,
                       "adjudication": receipt["state"]["adjudications"]["decision1"]["outcome"],
                       "canonical_lessons": len(core.verify()[0]["lessons"]),
