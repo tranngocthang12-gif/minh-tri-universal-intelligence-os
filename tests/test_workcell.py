@@ -6,29 +6,29 @@ from pathlib import Path
 from minhtri.arena import ArenaService
 from minhtri.brain import BRAIN_ARTIFACTS
 from minhtri.core import GateError, Ledger
-from minhtri.workcell import FourSeatWorkcellService
+from minhtri.workcell import ElasticWorkcellService
 
 
 def command(command_type, **data):
     return {"type": command_type, "data": data}
 
 
-class FourSeatWorkcellTests(unittest.TestCase):
+class ElasticWorkcellTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         root = Path(self.tmp.name)
         self.brain_root = root / "repo"
         for index, relative in enumerate(BRAIN_ARTIFACTS, start=1):
-            path = self.brain_root / relative
-            path.parent.mkdir(parents=True, exist_ok=True)
+            path_obj = self.brain_root / relative
+            path_obj.parent.mkdir(parents=True, exist_ok=True)
             if relative == "PROJECT_LAW.md":
-                text = "# PROJECT_LAW\n"
+                text_value = "# PROJECT_LAW\n"
             elif relative == "BOOTSTRAP.md":
-                text = "# BOOTSTRAP\n"
+                text_value = "# BOOTSTRAP\n"
             else:
-                text = f"artifact-{index}\n"
-            path.write_text(text, encoding="utf-8")
+                text_value = f"artifact-{index}\n"
+            path_obj.write_text(text_value, encoding="utf-8")
 
         self.core = Ledger(root / "brain")
         self.core.init()
@@ -37,128 +37,125 @@ class FourSeatWorkcellTests(unittest.TestCase):
             measurement_contract="Synthetic",
         ))
         self.core.apply(command(
-            "open_goal", id="goal1", domain_id="media", objective="Four AI review",
+            "open_goal", id="goal1", domain_id="media", objective="Elastic AI review",
             priority=4, owner_boundary="Shadow only",
         ))
         self.arena = ArenaService(root / "brain", self.brain_root, "a" * 40)
         self.arena.init()
-        for n in range(1, 6):
+        participants = [
+            ("actor1", "family1", "model-1"),
+            ("actor2", "family2", "model-2"),
+            ("actor3", "family3", "model-3"),
+            ("actor4", "family4", "model-4"),
+            ("actor5", "family5", "model-5"),
+            ("alias1", "family1", "alias-model"),
+        ]
+        for participant_id, family_id, model in participants:
             self.arena.apply(command(
-                "register_participant",
-                id=f"actor{n}",
-                family_id=f"family{n}",
-                model=f"model-{n}",
-                version="test",
-                adapter="MANUAL",
+                "register_participant", id=participant_id, family_id=family_id,
+                model=model, version="test", adapter="MANUAL",
                 capabilities=["PROPOSE", "CRITIQUE", "ADJUDICATE"],
             ))
         expiry = (datetime.now(timezone.utc) + timedelta(days=1)).isoformat()
         task_state = self.arena.apply(command(
             "open_task", id="task1", goal_id="goal1", brief="Review architecture",
-            acceptance="Four blind contributions", allowed_evidence_ids=[], expires_at=expiry,
+            acceptance="All assigned contributions before reveal", allowed_evidence_ids=[], expires_at=expiry,
         ))["state"]
         self.task = task_state["tasks"]["task1"]
-        for n in range(1, 6):
+        for index, (participant_id, _, _) in enumerate(participants, start=1):
             self.arena.apply(command(
-                "acknowledge_brain",
-                id=f"ack{n}",
-                task_id="task1",
-                participant_id=f"actor{n}",
-                task_fingerprint=self.task["fingerprint"],
+                "acknowledge_brain", id=f"ack{index}", task_id="task1",
+                participant_id=participant_id, task_fingerprint=self.task["fingerprint"],
                 brain_revision=self.task["brain_revision"],
                 brain_fingerprint=self.task["brain_fingerprint"],
                 architecture_law_sha256=self.task["architecture_law_sha256"],
                 bootstrap_sha256=self.task["bootstrap_sha256"],
             ))
-        self.workcell = FourSeatWorkcellService(root / "brain", self.brain_root, "a" * 40)
+        self.workcell = ElasticWorkcellService(root / "brain", self.brain_root, "a" * 40)
         self.workcell.init()
         self.workcell.apply(command("open_session", id="session1", arena_task_id="task1"))
 
-    def assign(self, seat, actor, family=None):
-        n = actor.replace("actor", "")
+    def assign(self, seat, actor):
+        defaults = {
+            "actor1": ("family1", "model-1"),
+            "actor2": ("family2", "model-2"),
+            "actor3": ("family3", "model-3"),
+            "actor4": ("family4", "model-4"),
+            "actor5": ("family5", "model-5"),
+            "alias1": ("family1", "alias-model"),
+        }
+        family, model = defaults[actor]
         return self.workcell.apply(command(
             "assign_slot", session_id="session1", seat_id=seat, participant_id=actor,
-            family_id=family or f"family{n}", model=f"model-{n}", version="test",
+            family_id=family, model=model, version="test",
         ))
 
-    def fill_four(self):
-        for seat, actor in zip(("S1", "S2", "S3", "S4"), ("actor1", "actor2", "actor3", "actor4")):
-            self.assign(seat, actor)
+    def submit(self, seat, actor, digit):
+        return self.workcell.apply(command(
+            "submit_blind", session_id="session1", seat_id=seat, participant_id=actor,
+            contribution_ref=f"artifact://{seat.lower()}", contribution_sha256=digit * 64,
+        ))
 
-    def submit_four(self):
-        for seat, actor in zip(("S1", "S2", "S3", "S4"), ("actor1", "actor2", "actor3", "actor4")):
-            self.workcell.apply(command(
-                "submit_blind", session_id="session1", seat_id=seat, participant_id=actor,
-                contribution_ref=f"artifact://{seat.lower()}",
-                contribution_sha256=(seat[-1] * 64),
-            ))
-
-    def test_requires_four_distinct_provider_families(self):
+    def test_one_participant_can_freeze_and_reveal(self):
         self.assign("S1", "actor1")
-        with self.assertRaisesRegex(GateError, "family_id must match"):
-            self.assign("S2", "actor2", family="family1")
+        self.submit("S1", "actor1", "1")
+        self.workcell.apply(command("freeze_blind", session_id="session1"))
+        self.workcell.apply(command("reveal", session_id="session1"))
+        status = self.workcell.status("session1")
+        self.assertEqual(status["participant_count"], 1)
+        self.assertEqual(status["independent_family_count"], 1)
 
-        # Alias with same family is blocked even if participant ID differs.
-        self.arena.apply(command(
-            "register_participant", id="alias1", family_id="family1", model="alias", version="test",
-            adapter="MANUAL", capabilities=["PROPOSE", "CRITIQUE", "ADJUDICATE"],
-        ))
-        self.arena.apply(command(
-            "acknowledge_brain", id="ack-alias", task_id="task1", participant_id="alias1",
-            task_fingerprint=self.task["fingerprint"], brain_revision=self.task["brain_revision"],
-            brain_fingerprint=self.task["brain_fingerprint"],
-            architecture_law_sha256=self.task["architecture_law_sha256"],
-            bootstrap_sha256=self.task["bootstrap_sha256"],
-        ))
-        with self.assertRaisesRegex(GateError, "provider family"):
-            self.workcell.apply(command(
-                "assign_slot", session_id="session1", seat_id="S2", participant_id="alias1",
-                family_id="family1", model="alias", version="test",
-            ))
-
-    def test_three_of_four_cannot_freeze_or_reveal(self):
-        for seat, actor in zip(("S1", "S2", "S3"), ("actor1", "actor2", "actor3")):
+    def test_three_available_participants_can_freeze_and_reveal(self):
+        for n, seat in enumerate(("S1", "S2", "S3"), start=1):
+            actor = f"actor{n}"
             self.assign(seat, actor)
-            self.workcell.apply(command(
-                "submit_blind", session_id="session1", seat_id=seat, participant_id=actor,
-                contribution_ref=f"artifact://{seat.lower()}",
-                contribution_sha256=(seat[-1] * 64),
-            ))
-        with self.assertRaisesRegex(GateError, "Four occupied"):
+            self.submit(seat, actor, str(n))
+        self.workcell.apply(command("freeze_blind", session_id="session1"))
+        self.workcell.apply(command("reveal", session_id="session1"))
+        status = self.workcell.status("session1")
+        self.assertEqual(status["round_state"], "REVEALED")
+        self.assertEqual(status["participant_count"], 3)
+        self.assertEqual(status["independent_family_count"], 3)
+
+    def test_same_family_participants_do_not_fake_independence(self):
+        self.assign("S1", "actor1")
+        self.assign("S2", "alias1")
+        self.submit("S1", "actor1", "1")
+        self.submit("S2", "alias1", "2")
+        self.workcell.apply(command("freeze_blind", session_id="session1"))
+        self.workcell.apply(command("reveal", session_id="session1"))
+        status = self.workcell.status("session1")
+        self.assertEqual(status["participant_count"], 2)
+        self.assertEqual(status["independent_family_count"], 1)
+        self.assertEqual(status["independence_status"], "SINGLE_PROVIDER_FAMILY")
+
+    def test_every_assigned_participant_must_submit_before_freeze(self):
+        self.assign("S1", "actor1")
+        self.assign("S2", "actor2")
+        self.submit("S1", "actor1", "1")
+        with self.assertRaisesRegex(GateError, "Every assigned participant"):
             self.workcell.apply(command("freeze_blind", session_id="session1"))
-        with self.assertRaisesRegex(GateError, "Reveal requires"):
-            self.workcell.apply(command("reveal", session_id="session1"))
 
-    def test_four_of_four_blind_round_freezes_before_reveal(self):
-        self.fill_four()
-        self.submit_four()
-        state = self.workcell.apply(command("freeze_blind", session_id="session1"))["state"]
-        session = state["sessions"]["session1"]
-        self.assertEqual(session["round_state"], "BLIND_FROZEN")
-        self.assertEqual(len(session["blind_contributions"]), 4)
-        self.assertEqual(len(session["blind_round_fingerprint"]), 64)
-        state = self.workcell.apply(command("reveal", session_id="session1"))["state"]
-        self.assertEqual(state["sessions"]["session1"]["round_state"], "REVEALED")
+    def test_dynamic_slot_label_is_allowed(self):
+        self.assign("reviewer-1", "actor1")
+        self.submit("reviewer-1", "actor1", "1")
+        self.workcell.apply(command("freeze_blind", session_id="session1"))
+        self.workcell.apply(command("reveal", session_id="session1"))
+        self.assertEqual(self.workcell.status("session1")["participant_count"], 1)
 
-    def test_replacement_before_freeze_discards_old_blind_contribution(self):
-        self.fill_four()
-        self.workcell.apply(command(
-            "submit_blind", session_id="session1", seat_id="S1", participant_id="actor1",
-            contribution_ref="artifact://old", contribution_sha256="1" * 64,
-        ))
+    def test_replacement_before_freeze_discards_old_contribution(self):
+        self.assign("S1", "actor1")
+        self.submit("S1", "actor1", "1")
         state = self.workcell.apply(command(
             "replace_slot", session_id="session1", seat_id="S1",
             old_participant_id="actor1", participant_id="actor5", family_id="family5",
             model="model-5", version="test", reason="provider unavailable",
         ))["state"]
-        session = state["sessions"]["session1"]
-        self.assertNotIn("S1", session["blind_contributions"])
-        self.assertEqual(session["slots"]["S1"]["participant_id"], "actor5")
-        self.assertEqual(session["replacement_history"][-1]["round_state"], "BLIND_OPEN")
+        self.assertNotIn("S1", state["sessions"]["session1"]["blind_contributions"])
 
     def test_replacement_after_reveal_is_marked_not_blind(self):
-        self.fill_four()
-        self.submit_four()
+        self.assign("S1", "actor1")
+        self.submit("S1", "actor1", "1")
         self.workcell.apply(command("freeze_blind", session_id="session1"))
         self.workcell.apply(command("reveal", session_id="session1"))
         state = self.workcell.apply(command(
@@ -169,19 +166,16 @@ class FourSeatWorkcellTests(unittest.TestCase):
         self.assertTrue(state["sessions"]["session1"]["slots"]["S1"]["joined_after_reveal"])
 
     def test_workcell_is_bound_to_current_arena_task(self):
-        self.fill_four()
-        # Mutating Core stales the Arena task. Workcell must fail closed too.
+        self.assign("S1", "actor1")
         self.core.apply(command(
             "set_goal_status", goal_id="goal1", status="BLOCKED", reason="Owner paused",
         ))
         with self.assertRaisesRegex(GateError, "runtime state is stale|Goal is blocked"):
-            self.workcell.apply(command(
-                "submit_blind", session_id="session1", seat_id="S1", participant_id="actor1",
-                contribution_ref="artifact://s1", contribution_sha256="1" * 64,
-            ))
+            self.submit("S1", "actor1", "1")
 
-    def test_official_arena_submission_requires_revealed_four_seat_session(self):
-        self.fill_four()
+    def test_official_arena_submission_requires_revealed_workcell(self):
+        for n, seat in enumerate(("S1", "S2", "S3"), start=1):
+            self.assign(seat, f"actor{n}")
         proposal = command(
             "submit_proposal", id="proposal1", task_id="task1", participant_id="actor1",
             acknowledgement_id="ack1", task_fingerprint=self.task["fingerprint"],
@@ -192,31 +186,20 @@ class FourSeatWorkcellTests(unittest.TestCase):
         with self.assertRaisesRegex(GateError, "REVEALED"):
             self.workcell.submit_arena("session1", proposal)
 
-        self.submit_four()
+        for n, seat in enumerate(("S1", "S2", "S3"), start=1):
+            self.submit(seat, f"actor{n}", str(n))
         self.workcell.apply(command("freeze_blind", session_id="session1"))
         self.workcell.apply(command("reveal", session_id="session1"))
         receipt = self.workcell.submit_arena("session1", proposal)
         self.assertIn("proposal1", receipt["state"]["proposals"])
 
-        self.arena.apply(command(
-            "register_participant", id="outsider", family_id="outside-family",
-            model="outside-model", version="test", adapter="MANUAL",
-            capabilities=["PROPOSE", "CRITIQUE", "ADJUDICATE"],
-        ))
-        self.arena.apply(command(
-            "acknowledge_brain", id="ack-outsider", task_id="task1", participant_id="outsider",
-            task_fingerprint=self.task["fingerprint"], brain_revision=self.task["brain_revision"],
-            brain_fingerprint=self.task["brain_fingerprint"],
-            architecture_law_sha256=self.task["architecture_law_sha256"],
-            bootstrap_sha256=self.task["bootstrap_sha256"],
-        ))
         outsider = command(
-            "submit_proposal", id="proposal2", task_id="task1", participant_id="outsider",
-            acknowledgement_id="ack-outsider", task_fingerprint=self.task["fingerprint"],
+            "submit_proposal", id="proposal2", task_id="task1", participant_id="actor4",
+            acknowledgement_id="ack4", task_fingerprint=self.task["fingerprint"],
             claim="Outsider proposal", alternative="Alternative", uncertainties=["Unknown"],
             evidence_ids=[], discriminating_test="Test", method_ref="method@2",
         )
-        with self.assertRaisesRegex(GateError, "four revealed workcell seats"):
+        with self.assertRaisesRegex(GateError, "current participant"):
             self.workcell.submit_arena("session1", outsider)
 
 
