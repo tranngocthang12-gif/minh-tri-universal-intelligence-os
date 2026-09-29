@@ -16,10 +16,12 @@
 10. `docs/CANONICAL_TASK_HANDOFF_V0.1.md`.
 11. `docs/EPISTEMIC_STATE_LEARNING_MATURITY_V0.1.md`.
 12. `docs/GOAL_DECOMPOSITION_BOTTLENECK_GOVERNOR_V0.1.md`.
-13. `docs/ROADMAP.md`.
-14. Code/tests/PR liên quan tới task hiện tại.
-15. Exact Task Packet + allowed evidence.
-16. **Latest durable checkpoint/handoff receipt** của task; nếu task đã có lịch sử mà không tìm thấy handoff/checkpoint hợp lệ → `HOLD / MISSING_HANDOFF`.
+13. `docs/R4_5_ARCHITECTURE_STABILIZATION_GATE.md`.
+14. `docs/LEDGER_SCHEMA_COMPATIBILITY_V0.1.md`.
+15. `docs/ROADMAP.md`.
+16. Code/tests/PR liên quan tới task hiện tại.
+17. Exact Task Packet + allowed evidence.
+18. **Latest durable checkpoint/handoff/completion receipt** của task; nếu task đã có lịch sử mà không tìm thấy handoff/checkpoint hợp lệ → `HOLD / MISSING_HANDOFF`.
 
 **Không được đảo thành:** nhớ từ chat cũ → đoán trạng thái → xây.
 
