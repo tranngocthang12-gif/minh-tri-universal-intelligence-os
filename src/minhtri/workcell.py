@@ -281,6 +281,46 @@ class FourSeatWorkcellService:
         finally:
             self.ledger.release_project_lock()
 
+
+    def submit_arena(self, session_id: str, command: dict) -> dict:
+        """Official four-seat gateway for Arena proposal/critique/adjudication after reveal."""
+        self.ledger.acquire_project_lock()
+        try:
+            state = self.ledger.verify()[0]
+            session = ref(state, "sessions", session_id)
+            if session["round_state"] != "REVEALED":
+                raise GateError("Official Arena submission requires a REVEALED four-seat workcell session")
+            if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
+                raise GateError("Arena command must contain exactly type and data object")
+            kind = command["type"]
+            if kind not in ("submit_proposal", "submit_critique", "submit_adjudication"):
+                raise GateError("Workcell gateway accepts only proposal/critique/adjudication submissions")
+            arena_state = self._arena_state()
+            data = command["data"]
+            participant_id = data.get("participant_id")
+            if not participant_id:
+                raise GateError("Arena submission must name participant_id")
+            occupants = {
+                slot["participant_id"]
+                for slot in session["slots"].values()
+                if slot is not None
+            }
+            if participant_id not in occupants:
+                raise GateError("Arena submitter must occupy one of the four revealed workcell seats")
+            if kind == "submit_proposal":
+                task_id = data.get("task_id")
+            else:
+                proposal = ref(arena_state, "proposals", data.get("proposal_id"))
+                task_id = proposal["task_id"]
+            if task_id != session["arena_task_id"]:
+                raise GateError("Arena submission belongs to another task/workcell session")
+            task = ref(arena_state, "tasks", task_id)
+            if task["fingerprint"] != session["task_fingerprint"]:
+                raise GateError("Workcell session is stale for the Arena task")
+            return self.arena.apply(command, project_lock_held=True)
+        finally:
+            self.ledger.release_project_lock()
+
     def status(self, session_id: str) -> dict:
         state, count, head = self.ledger.verify()
         session = ref(state, "sessions", session_id)
