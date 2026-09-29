@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "R4_CI_PASS_THEN_SKILL_LIFECYCLE_AND_META_LEARNING_R5",
+  "next_checkpoint": "COLLECT_BLIND_MULTI_PROVIDER_ARCHITECTURE_REVIEWS_THEN_CROSS_CRITIQUE_AND_ADJUDICATE_R4_5",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -65,5 +65,9 @@
     "SELECT",
     "WAIT",
     "HOLD_AMBIGUOUS"
-  ]
+  ],
+  "architecture_multi_ai_experiment": "docs/experiments/ARCHITECTURE_MULTI_AI_EXPERIMENT_V0.1.md",
+  "architecture_review_task_packet": "docs/experiments/ARCHITECTURE_REVIEW_TASK_PACKET_V0.1.md",
+  "architecture_multi_ai_experiment_status": "SHADOW_PACKET_READY_MANUAL_PROVIDERS_NOT_YET_COLLECTED",
+  "r5_status": "HOLD_PENDING_MULTI_AI_ARCHITECTURE_REVIEW_AND_R4_5_DECISION"
 }
