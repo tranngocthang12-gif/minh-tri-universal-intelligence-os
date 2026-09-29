@@ -5,7 +5,7 @@ from pathlib import Path
 
 from minhtri.brain import BRAIN_ARTIFACTS
 from minhtri.core import GateError, Ledger
-from minhtri.tasking import TaskService, initial_task_state, task_evolve
+from minhtri.tasking import TaskService, continuation_fingerprint, initial_task_state, task_evolve
 
 
 def command(command_type, **data):
@@ -54,12 +54,24 @@ class CanonicalTaskTests(unittest.TestCase):
             allowed_evidence_ids=[],
         ))
 
+    def ack(self, worker, ack_id=None):
+        packet = self.service.packet("task1")
+        ack_id = ack_id or f"continue-{worker}-{packet['task']['checkpoint_seq']}-{len(packet['task']['handoffs'])}"
+        self.service.apply(command(
+            "acknowledge_continuation",
+            id=ack_id,
+            task_id="task1",
+            worker_id=worker,
+            continuation_fingerprint=packet["continuation"]["fingerprint"],
+        ))
+        return ack_id
+
     def test_task_state_belongs_to_system_not_worker(self):
         self.create()
         expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
         self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
-            expires_at=expires, expected_checkpoint_seq=0,
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-a"),
         ))
         self.service.apply(command(
             "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
@@ -72,7 +84,7 @@ class CanonicalTaskTests(unittest.TestCase):
         ))
         state = self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
-            expires_at=expires, expected_checkpoint_seq=1,
+            expires_at=expires, expected_checkpoint_seq=1, continuation_ack_id=self.ack("worker-b"),
         ))["state"]
         task = state["tasks"]["task1"]
         self.assertEqual(task["checkpoint"]["seq"], 1)
@@ -85,12 +97,12 @@ class CanonicalTaskTests(unittest.TestCase):
         expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
         self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
-            expires_at=expires, expected_checkpoint_seq=0,
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-a"),
         ))
         with self.assertRaisesRegex(GateError, "active lease"):
             self.service.apply(command(
                 "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
-                expires_at=expires, expected_checkpoint_seq=0,
+                expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-b"),
             ))
 
     def test_expired_lease_allows_failover_without_losing_checkpoint(self):
@@ -105,18 +117,30 @@ class CanonicalTaskTests(unittest.TestCase):
             core_state_head_at_open="e" * 64, brief="Task", acceptance="Done",
             allowed_evidence_ids=[], risk_class="NORMAL",
         ), at0)
+        fp0 = continuation_fingerprint(state["tasks"]["task1"])
+        state = task_evolve(state, command(
+            "acknowledge_continuation", id="ack-a", task_id="task1", worker_id="worker-a",
+            continuation_fingerprint=fp0,
+        ), "2026-09-29T10:05:00+00:00")
         state = task_evolve(state, command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
             expires_at="2026-09-29T10:15:00+00:00", expected_checkpoint_seq=0,
+            continuation_ack_id="ack-a",
         ), at1)
         state = task_evolve(state, command(
             "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
             expected_checkpoint_seq=0, summary="Checkpoint one", artifact_refs=[],
             evidence_ids=[], next_action="Continue",
         ), "2026-09-29T10:12:00+00:00")
+        fp1 = continuation_fingerprint(state["tasks"]["task1"])
+        state = task_evolve(state, command(
+            "acknowledge_continuation", id="ack-b", task_id="task1", worker_id="worker-b",
+            continuation_fingerprint=fp1,
+        ), "2026-09-29T10:19:00+00:00")
         state = task_evolve(state, command(
             "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
             expires_at="2026-09-29T11:00:00+00:00", expected_checkpoint_seq=1,
+            continuation_ack_id="ack-b",
         ), at2)
         task = state["tasks"]["task1"]
         self.assertEqual(task["lease"]["worker_id"], "worker-b")
@@ -130,7 +154,7 @@ class CanonicalTaskTests(unittest.TestCase):
         expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
         self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
-            expires_at=expires, expected_checkpoint_seq=0,
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-a"),
         ))
         self.service.apply(command(
             "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
@@ -149,7 +173,7 @@ class CanonicalTaskTests(unittest.TestCase):
         expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
         self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
-            expires_at=expires, expected_checkpoint_seq=0,
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-a"),
         ))
         with self.assertRaisesRegex(GateError, "does not hold"):
             self.service.apply(command(
@@ -187,7 +211,7 @@ class CanonicalTaskTests(unittest.TestCase):
         expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
         self.service.apply(command(
             "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
-            expires_at=expires, expected_checkpoint_seq=0,
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-a"),
         ))
         state = self.service.apply(command(
             "complete_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
@@ -197,7 +221,92 @@ class CanonicalTaskTests(unittest.TestCase):
         with self.assertRaisesRegex(GateError, "terminal"):
             self.service.apply(command(
                 "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
-                expires_at=expires, expected_checkpoint_seq=0,
+                expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=self.ack("worker-b"),
+            ))
+
+    def test_worker_must_ack_current_continuation_before_lease(self):
+        self.create()
+        expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
+        with self.assertRaisesRegex(GateError, "continuation acknowledgement"):
+            self.service.apply(command(
+                "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+                expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id="missing",
+            ))
+
+        stale_packet = self.service.packet("task1")
+        stale_fp = stale_packet["continuation"]["fingerprint"]
+        ack_id = self.ack("worker-a")
+        self.service.apply(command(
+            "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=ack_id,
+        ))
+        self.service.apply(command(
+            "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expected_checkpoint_seq=0, summary="Changed checkpoint", artifact_refs=[],
+            evidence_ids=[], next_action="Continue",
+        ))
+        self.assertNotEqual(stale_fp, self.service.packet("task1")["continuation"]["fingerprint"])
+
+    def test_explicit_handoff_preserves_decisions_unknowns_and_requires_successor_ack(self):
+        self.create()
+        expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
+        ack_a = self.ack("worker-a")
+        self.service.apply(command(
+            "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=ack_a,
+        ))
+        self.service.apply(command(
+            "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expected_checkpoint_seq=0, summary="Implemented bounded unit",
+            artifact_refs=["artifact://r45"], evidence_ids=[], next_action="Run semantic review",
+        ))
+        state = self.service.apply(command(
+            "handoff_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expected_checkpoint_seq=1,
+            decisions=["Four workcell slots are stable; occupants are replaceable."],
+            unknowns=["Provider identity is still self-declared."],
+            blockers=["Independent provider review not yet collected."],
+            verification=["Unit tests must pass on Python 3.10 and 3.12."],
+            scope="R4.5 architecture continuity only",
+            limitations=["No external provider connection or real-world effectiveness proof."],
+        ))["state"]
+        handoff = state["tasks"]["task1"]["handoffs"][-1]
+        self.assertEqual(handoff["next_action"], "Run semantic review")
+        self.assertEqual(len(handoff["fingerprint"]), 64)
+        packet = self.service.packet("task1")
+        self.assertEqual(packet["continuation"]["latest_handoff"]["fingerprint"], handoff["fingerprint"])
+        with self.assertRaisesRegex(GateError, "continuation acknowledgement"):
+            self.service.apply(command(
+                "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
+                expires_at=expires, expected_checkpoint_seq=1, continuation_ack_id="missing",
+            ))
+        ack_b = self.ack("worker-b")
+        state = self.service.apply(command(
+            "acquire_lease", task_id="task1", worker_id="worker-b", lease_id="lease-b",
+            expires_at=expires, expected_checkpoint_seq=1, continuation_ack_id=ack_b,
+        ))["state"]
+        self.assertEqual(state["tasks"]["task1"]["lease"]["worker_id"], "worker-b")
+
+    def test_old_continuation_ack_cannot_be_reused_after_checkpoint_changes(self):
+        self.create()
+        expires = (datetime.now(timezone.utc) + timedelta(hours=1)).isoformat()
+        ack_a = self.ack("worker-a", "ack-a")
+        self.service.apply(command(
+            "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expires_at=expires, expected_checkpoint_seq=0, continuation_ack_id=ack_a,
+        ))
+        self.service.apply(command(
+            "checkpoint_task", task_id="task1", worker_id="worker-a", lease_id="lease-a",
+            expected_checkpoint_seq=0, summary="One", artifact_refs=[], evidence_ids=[],
+            next_action="Two",
+        ))
+        self.service.apply(command(
+            "release_lease", task_id="task1", worker_id="worker-a", lease_id="lease-a", reason="handoff",
+        ))
+        with self.assertRaisesRegex(GateError, "stale"):
+            self.service.apply(command(
+                "acquire_lease", task_id="task1", worker_id="worker-a", lease_id="lease-b",
+                expires_at=expires, expected_checkpoint_seq=1, continuation_ack_id="ack-a",
             ))
 
 
