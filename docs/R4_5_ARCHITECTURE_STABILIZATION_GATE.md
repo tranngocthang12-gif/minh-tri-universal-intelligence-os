@@ -73,7 +73,7 @@ READ LAW
 
 The following must remain visible until closed by evidence:
 
-- **Ledger schema/migration discipline:** policy is now pinned in `docs/LEDGER_SCHEMA_COMPATIBILITY_V0.1.md`, but frozen compatibility fixtures/migration readers are still required for Core family-schema change and future Task/Epistemic/Governor/Workcell evolution.
+- **Ledger schema/migration discipline:** `PASS STRUCTURAL FOR CURRENT R4.5 CONTRACTS`. Core pre-`family_id` history has a non-destructive migration verifier; Task/Epistemic/Governor/Workcell command shapes are frozen by schema-tripwire tests. Any future schema edit must deliberately update migration/compatibility evidence; this does not pre-implement future migrations.
 - **End-to-end cross-layer continuity:** `PASS STRUCTURAL` at exact head `e15ddb7a9f0801c02281ced0fd2c5ad2113a465c`: Goal/Core outcome+review → R3 L6+Unknown → R4 SELECT → four-seat blind workcell → R2 Task/checkpoint/handoff A→B → R3 unknown resolution → R4 recompute WAIT; all ledgers replay.
 - **Independent architecture review:** current work has strong incumbent/self-review but no completed independent multi-provider blind architecture review.
 - **Multi-AI experiment:** v0.1 is superseded/HOLD. v0.2 now separates blind Round A from directed Round B, freezes incumbent baseline and pins packet/baseline blob SHAs. Collection has not yet happened; official four-seat review still awaits four distinct provider families.
