@@ -103,7 +103,7 @@ REMEMBER
                              ▼
                     ┌──────────────────┐
                     │ AI COMMONS PLANE │
-                    │ FOUR SLOTS       │
+                    │ ELASTIC N-AI     │
                     │ replaceable      │
                     │ AI occupants     │
                     └────────┬─────────┘
@@ -541,14 +541,18 @@ Future canonical task/handoff needs:
 
 # 7. AI COMMONS — COGNITIVE SYNERGY
 
-AI Commons is not “four votes”.
+AI Commons is not a vote and has no universal fixed participant count.
 
 For a material task, one target pattern is:
 
 ```text
 FREEZE TASK / EVIDENCE
         ↓
-BLIND INDEPENDENT ROUND
+ASSIGN N AVAILABLE/ELIGIBLE PARTICIPANTS
+        ↓
+BLIND INDEPENDENT ROUND WHEN USEFUL
+        ↓
+FREEZE ALL CURRENTLY ASSIGNED OUTPUTS
         ↓
 REVEAL
         ↓
@@ -563,17 +567,17 @@ ADJUDICATION
 HOLD / REVISE / OWNER CANDIDATE
 ```
 
-The official AI Commons workcell has four stable cognitive slots: S1–S4. The **slot count is stable; model/provider identity is replaceable**.
+The official AI Commons workcell is **elastic**: N is chosen per task rather than hard-coded globally. Provider/model identity is replaceable.
 
-All four slots receive the same frozen Brain/Task/Evidence packet before the blind round. Four valid blind contributions are frozen before reveal; one provider family cannot impersonate multiple independent slots. If an independent slot cannot be filled, the official workcell returns `HOLD / WAIT_FOR_REPLACEMENT`.
+Participant count and independent provider-family count are different measurements. Multiple participants from one family may contribute, but they do not become multiple independent sources merely by using different IDs/personas/sessions.
 
-The three universal logical seats (proposer / critic / adjudicator) rotate over the four slot outputs; they are not permanent model identities. Material disagreement is resolved by counterevidence/discriminating test, never by a 4-0 or 3-1 vote.
+If blind discovery is used, every participant assigned to that session receives the same frozen Brain/Task/Evidence packet and every assigned contribution is frozen before reveal. A missing arbitrary fourth participant does not create HOLD; HOLD is driven by the task's evidence/risk/independence requirements and unresolved material uncertainty.
+
+The three universal logical functions (proposer / critic / adjudicator) are not permanent model identities. Where independent critique/adjudication is required, provider-family separation remains enforced. Material disagreement is resolved by counterevidence/discriminating test, never by majority.
 
 Replacement before blind freeze receives only the frozen task packet. Replacement after reveal receives the canonical revealed session state plus durable handoff/checkpoint.
 
-Benchmark must still compare the four-AI workcell against simpler baselines before claiming “synergy”; fixed four-seat policy does not itself prove four providers are more effective.
-
----
+Benchmark must compare different participant-count/routing strategies against simpler baselines before claiming “synergy” or an optimal N.
 
 # 8. MONEY-MAKING GUIDANCE & DHAMMA BOUNDARY
 
@@ -607,7 +611,7 @@ Do **not** import as universal law:
 - `PROJECT_CHATGPT` as Primary Brain;
 - YouTube department/org chart;
 - finance-specific valuation/accounting vocabulary;
-- a fixed **identity/brand set** of four AIs (the four workcell slots are stable, but their occupants are replaceable);
+- a fixed AI count or fixed identity/brand set of providers;
 - domain-specific academy/exam details;
 - immediate champion/challenger activation;
 - numerical value scores without calibration;
@@ -700,10 +704,14 @@ No real-world superiority claim before this evidence exists.
 
 # 12. CURRENT STATUS
 
-**Implemented/tested today:** offline ledger, evidence/claim/prediction/resolution/lesson, strengthened gates on candidate branches, AI Commons SHADOW, GitHub Brain pinning, Project Law/Bootstrap acknowledgement candidate.
+**Implemented as candidate code and structurally exercised before this final-target rerun:** offline ledger; evidence/claim/prediction/resolution/lesson gates; Arena migration/replay; canonical Task/checkpoint/lease/handoff; Epistemic state with evidence-derived L0–L6 and L7–L9 future-gated; Goal Decomposition/Bottleneck Governor; shared project writer lock; Brain/Law/Bootstrap pinning; and AI Commons workcell coordination.
 
-**Designed/restored here, not yet implemented:** L0–L9 maturity, epistemic registry, universal bottleneck governor, skill lifecycle, meta-learning scorecards, provider scorecards/champion gates, automatic handoff/failover, explicit Tier 3 runtime, cross-domain transfer test.
+**Changed in this R4.5 target:** AI Commons cardinality is restored to elastic N-AI. The runtime no longer requires four occupied/distinct-family slots to freeze; it records participant and independent-family counts separately while preserving provider-family separation where critique/adjudication contracts require independence.
 
-**Real-world effectiveness:** `HOLD`.
+**Structurally verified on the previous head:** Python 3.10/3.12 CI, 65 tests, end-to-end Core → R3 → R4 → workcell → R2 handoff → recompute continuity. The exact final architecture target must rerun the same CI before experiment repin.
 
-**Next architecture gate:** Owner review of v0.2 restoration, then Arena migration/replay before implementation expansion.
+**Designed but not implemented/validated as active capability:** R5 skill lifecycle/meta-learning scorecards, provider scorecards/champion promotion, explicit Tier 3 runtime, cross-domain transfer validation, authenticated provider/Owner identity and real provider dispatch.
+
+**Real-world effectiveness:** `HOLD`. No current result proves an optimal AI count, multi-AI superiority, semantic truth, or real business value.
+
+**Next architecture gate:** run exact-target CI, repin the independent architecture review to that exact target, adjudicate material findings by evidence/test, then decide whether R5 may open in SHADOW.
