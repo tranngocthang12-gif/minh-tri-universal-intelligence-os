@@ -18,7 +18,7 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "OWNER_REVIEW_V0_2_RESTORATION_THEN_ARENA_SCHEMA_MIGRATION_AND_OLD_LEDGER_REPLAY",
+  "next_checkpoint": "R1_CI_PASS_THEN_CANONICAL_TASK_HANDOFF_R2",
   "architecture_law": "OWNER_DIRECTED_CANDIDATE_NOT_MERGED",
   "bootstrap_contract": "READ_BEFORE_WORK_CANDIDATE",
   "ai_commons_brain_acknowledgement": "REQUIRED_IN_CANDIDATE",
@@ -27,5 +27,12 @@
   "restoration_blueprint": "docs/UNIVERSAL_BRAIN_ARCHITECTURE_V0.2_CANDIDATE.md",
   "restoration_matrix": "docs/ARCHITECTURE_RESTORATION_MATRIX_2026-09-29.md",
   "project_law_v0_2_delta": "docs/PROJECT_LAW_V0.2_RESTORATION_DELTA_CANDIDATE.md",
-  "restoration_status": "OWNER_DIRECTED_DESIGN_CANDIDATE_NOT_IMPLEMENTED"
+  "restoration_status": "OWNER_DIRECTED_DESIGN_CANDIDATE_NOT_IMPLEMENTED",
+  "arena_migration_contract": "docs/ARENA_SCHEMA_MIGRATION_V0.1.md",
+  "arena_schema_current": "arena-v3-law-ack",
+  "arena_legacy_replay_support": [
+    "arena-v1-core-constitution",
+    "arena-v2-github-brain"
+  ],
+  "arena_migration_status": "R1_CANDIDATE_UNDER_TEST"
 }
