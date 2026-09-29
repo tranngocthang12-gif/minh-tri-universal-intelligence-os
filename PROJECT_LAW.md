@@ -55,8 +55,8 @@ Một file có mặt trên GitHub, một branch, một PR, một câu AI nói ha
 13. **Measured learning** — “tự học/tốt hơn” phải đo so baseline bằng outcome thật, kể cả chi phí và sai lầm.
 14. **No silent architecture mutation** — AI không được tự đổi luật lõi trong lúc xử lý task; chỉ được mở change proposal/PR để review.
 15. **Structural != semantic != effectiveness** — test xanh chỉ chứng minh điều test đo; không tự chứng minh hiểu đúng hay tạo giá trị thật.
-16. **Four-seat AI workcell** — công việc chính thức qua AI Commons dùng bốn ghế nhận thức S1–S4. Bốn ghế là ổn định; danh tính/model/provider ngồi ghế là thay thế được.
-17. **Four real contributions** — một AI/model/provider family không được giả thành nhiều ghế độc lập. Blind round chỉ hoàn tất khi đủ bốn đóng góp hợp lệ hoặc trạng thái chuyển HOLD/WAIT.
+16. **Elastic N-AI workcell** — AI Commons dùng số participant phù hợp với từng nhiệm vụ; không hard-code số ghế, tên model hay provider. Participant/model/provider đều thay thế được.
+17. **Independence is measured, not assumed** — số participant và số provider family độc lập phải được ghi riêng. Nhiều participant cùng family có thể cùng làm việc nhưng không được tính giả thành nhiều nguồn độc lập.
 18. **Three logical roles, not three permanent AIs** — proposer/critic/adjudicator là chức năng áp trên từng proposal; không khóa vĩnh viễn một model vào một vai.
 19. **Handoff before continuation** — task/checkpoint/handoff thuộc MINH TRÍ. Chat/AI mới phải đọc và xác nhận handoff bền hiện hành trước khi tiếp tục.
 20. **Checkpoint last** — durable delta và validation phải được ghi trước; checkpoint/handoff/completion receipt là bước chốt cuối của một đơn vị công việc.
@@ -201,19 +201,20 @@ SCOPED LESSON
 
 Không có outcome thật thì không được gọi kết quả là “đã chứng minh hiệu quả”. Một lần đúng không đủ thành luật.
 
-## 7. AI Commons — bốn ghế, AI thay thế được
+## 7. AI Commons — N participant co giãn, AI thay thế được
 
-- AI Commons official workcell có **bốn ghế nhận thức S1–S4**.
-- Không hard-code tên GPT/Claude/Gemini/Grok vào ghế. Model/provider hiện tại chỉ là occupant có thể thay.
-- Cả bốn ghế nhận cùng frozen Brain/Task/Evidence packet trước blind round.
-- Một provider family không được chiếm nhiều ghế và được tính là độc lập.
-- Blind round phải lưu bốn đóng góp có provenance trước reveal; thiếu ghế độc lập thì `HOLD / WAIT_FOR_REPLACEMENT`.
-- Ba vai proposer/critic/adjudicator là chức năng logic xoay trên từng proposal, không phải ba AI cố định.
-- Sau reveal, các ghế cross-critique, tìm counter-evidence/alternative và đề xuất discriminating test.
+- AI Commons official workcell dùng **N participant** được giao cho từng task; `N` không phải hằng số toàn dự án.
+- Không hard-code GPT/Claude/Gemini/Grok hay bất kỳ provider/model nào.
+- Số participant và số provider family độc lập là hai đại lượng khác nhau và phải được báo cáo riêng.
+- Nhiều participant cùng provider family được phép cùng làm việc, nhưng không được tính giả thành nhiều nguồn độc lập.
+- Blind round, khi task cần, chỉ được freeze sau khi **mọi participant đã được giao trong session hiện tại** nộp contribution; không có luật `4/4`.
+- Mức độc lập tối thiểu, nếu task cần, thuộc contract/risk của chính task; không dùng một con số cố định làm chân lý kiến trúc.
+- Ba vai proposer/critic/adjudicator là chức năng logic xoay theo proposal; family separation vẫn áp dụng ở nơi contract yêu cầu phản biện/phân xử độc lập.
+- Sau reveal, participant được phép cross-critique, tìm counter-evidence/alternative và đề xuất discriminating test.
 - `ABSTAIN` là kết quả hợp lệ.
-- Không bỏ phiếu 4-0/3-1 để tạo truth. Bất đồng vật chất chưa giải quyết giữ `HOLD`.
-- AI khác có thể thay occupant hỏng nếu nhận đúng Brain/Task/Checkpoint/Handoff. Replacement trước reveal không được xem blind output của ghế khác; replacement sau reveal nhận canonical revealed state.
-- Đường official cho proposal/critique/adjudication là **FourSeatWorkcell → Arena gateway sau REVEALED**. Direct Arena API/ledger được giữ như low-level compatibility/replay surface và không được dùng để tuyên bố một official four-AI session đã hoàn thành.
+- Không bỏ phiếu để tạo truth. Bất đồng vật chất chưa giải quyết giữ `HOLD`.
+- Replacement trước blind freeze chỉ nhận frozen packet và không được xem contribution khác; replacement sau reveal nhận canonical revealed state và phải được ghi là non-blind.
+- Đường official cho proposal/critique/adjudication là **ElasticWorkcell → Arena gateway sau REVEALED**. Direct Arena API/ledger là low-level compatibility/replay surface và không chứng minh một phiên multi-AI chính thức đã hoàn thành.
 - Chi tiết bền nằm ở `docs/ARCHITECTURE_MEMORY_AND_CONTINUITY_V0.1.md`.
 
 ## 8. Luật kiến trúc khi sửa hệ
