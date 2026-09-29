@@ -174,7 +174,8 @@ class BottleneckGovernorTests(unittest.TestCase):
 
     def test_wait_when_nothing_is_eligible_or_all_work_is_done(self):
         self.add_component("foundation", epistemic_item_ids=["audience-item"], unknown_ids=[])
-        self.add_component("blocked-next", dependency_ids=["foundation"], target_role="BLOCKER", unknown_ids=[])
+        self.add_component("blocked-next", dependency_ids=["foundation"], target_role="BLOCKER",
+                           epistemic_item_ids=["audience-item"], unknown_ids=[])
         self.governor.apply(command(
             "set_component_status", component_id="foundation",
             status="HOLD", reason="Need a new source", evidence_ids=[],
