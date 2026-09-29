@@ -8,6 +8,7 @@ must be reopened under the current Brain/Law contract before new work continues.
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import shutil
 from pathlib import Path
@@ -301,8 +302,8 @@ def archive_legacy_arena(source_home: str | Path, archive_root: str | Path, sche
             **report,
             "archive_format_version": 1,
             "source_files": {
-                "events.jsonl_sha256": digest((destination / "events.jsonl").read_text(encoding="utf-8")),
-                "state.json_sha256": digest((destination / "state.json").read_text(encoding="utf-8")),
+                "events.jsonl_sha256": hashlib.sha256((destination / "events.jsonl").read_bytes()).hexdigest(),
+                "state.json_sha256": hashlib.sha256((destination / "state.json").read_bytes()).hexdigest(),
             },
         }
         (destination / "migration_manifest.json").write_bytes(canonical(manifest) + b"\n")
