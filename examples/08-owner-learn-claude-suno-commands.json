@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-claude-viet-lenh-suno-owner-cham-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 3 của Owner. Owner quyết học: Claude viết prompt Suno + checklist Suno Studio; Owner chấm; Claude KHÔNG xuất nhạc. Claude là một ghế văn bản thay được (có thể đổi sang AI khác), không phải máy tạo nhạc; Owner là người chấm. Không crawler. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 07 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): khi một ghế văn bản viết prompt và checklist, còn Owner tự chạy Suno/Suno Studio và tự chấm, Owner sẽ biết prompt/checklist nào giúp ra bài đúng brief, mà không phụ thuộc vào một AI cụ thể.",
+    "uncertainty": "CAO: Owner chưa thử; chưa có tiêu chí chấm cố định; chất lượng prompt tùy AI và phiên bản, có thể khác khi đổi ghế; tính năng, điều khoản và quyền của Suno có thể thay đổi; không ghi tính năng, giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
