@@ -13,6 +13,8 @@ class CliLearn(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.home = str(Path(self.tmp.name) / "brain")
+        self.config = Path(self.tmp.name) / "owner.json"
+        self.config.write_text('{"owner_id": "test-owner"}', encoding="utf-8")
         self.run_cli("init")
 
     def tearDown(self):
@@ -21,7 +23,7 @@ class CliLearn(unittest.TestCase):
     def run_cli(self, *argv, expect=0):
         out, err = io.StringIO(), io.StringIO()
         with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
-            code = main(["--home", self.home, *argv])
+            code = main(["--home", self.home, "--owner-config", str(self.config), "--owner-id", "test-owner", *argv])
         self.assertEqual(code, expect, err.getvalue())
         return json.loads(out.getvalue() or err.getvalue())
 

@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
+from .owner import SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, require_owner
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -63,6 +64,8 @@ def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str) -> d
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="minhtri", description="MINH TRÍ v0.1 learning ledger")
     parser.add_argument("--home", default="brain", help="Local ledger directory (default: brain)")
+    parser.add_argument("--owner-id", help="Declared actor ID for Owner-only commands (not identity verification)")
+    parser.add_argument("--owner-config", help="Owner config path (default: $MINHTRI_OWNER_CONFIG or config/owner.json)")
     sub = parser.add_subparsers(dest="action", required=True)
     sub.add_parser("init", help="Create a new empty ledger")
     command = sub.add_parser("apply", help="Apply one JSON command from a file")
@@ -86,15 +89,22 @@ def main(argv: list[str] | None = None) -> int:
     unfocus.add_argument("--reason", default="Owner dừng tập trung", help="Why the focus stops")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
+
+    def gate() -> None:
+        require_owner(args.owner_id, config_path(args.owner_config))
+
     try:
         if args.action == "init":
             ledger.init()
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
         elif args.action == "apply":
             payload = json.loads(args.json_file.read_text(encoding="utf-8"))
+            if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES:
+                gate()
             result = ledger.apply(payload)
             result = {"status": "APPLIED", "event_count": result["event_count"], "head": result["head"]}
         elif args.action == "learn":
+            gate()
             state, _, _ = ledger.verify()
             now = utcnow()
             focus_id, commands = _learn_commands(state, args, now)
@@ -108,6 +118,7 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "VALID", "event_count": count, "head": head,
                       "focus": focus if focus else "NO_ACTIVE_FOCUS"}
         elif args.action == "unfocus":
+            gate()
             state, _, _ = ledger.verify()
             focus = current_focus(state)
             if not focus:
@@ -127,6 +138,9 @@ def main(argv: list[str] | None = None) -> int:
                 result["counts"] = {key: len(value) for key, value in state.items() if isinstance(value, dict)}
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
+    except OwnerGateError as exc:
+        print(json.dumps({"status": "BLOCKED", "reason": exc.code, "detail": exc.detail}, ensure_ascii=False), file=sys.stderr)
+        return 2
     except (GateError, OSError, ValueError) as exc:
         print(json.dumps({"status": "BLOCKED", "reason": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 2
