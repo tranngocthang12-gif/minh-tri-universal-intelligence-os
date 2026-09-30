@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-tong-hop-2026-yt-mv-ai-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "GIẢ ĐỊNH / tổng hợp nguồn công khai 2026 — KHÔNG VERIFIED. Owner muốn học thị trường YouTube và luật/chính sách cho MV/nhạc tạo bằng AI (tầm nhìn: phim, MV, hoạt hình trên YouTube, sản xuất chỉ trên PC). source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Trang chính sách công khai Owner cần tự đọc (chỉ kiểm tồn tại ngày 2026-10-01, chưa trích nội dung): https://support.google.com/youtube/answer/14328491 (công bố nội dung GenAI/chỉnh sửa, tổng hợp) và https://support.google.com/youtube/answer/1311392 (chính sách kiếm tiền của kênh, có mục inauthentic/repetitious content).",
+    "expected_lesson": "Giả thuyết chưa kiểm: MV/nhạc/hoạt hình làm bằng AI cần tuân thủ quy định công bố nội dung tổng hợp và tránh nội dung lặp lại hàng loạt thì mới giữ được khả năng kiếm tiền; cần tự đo nhu cầu thị trường bằng dữ liệu first-party trước khi đầu tư.",
+    "uncertainty": "CAO: không có số liệu thị trường hay doanh thu nào được ghi; chính sách công bố nội dung AI và chính sách kiếm tiền của YouTube có thể thay đổi bất kỳ lúc nào; quyền nhạc/giọng/hình ảnh chưa rõ (rights UNKNOWN); nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
