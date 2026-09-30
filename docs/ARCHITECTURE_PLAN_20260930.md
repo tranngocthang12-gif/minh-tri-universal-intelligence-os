@@ -106,6 +106,7 @@ Mục này là **kế hoạch**, chưa đổi code. Nó chỉ dùng lệnh và e
 ### Đối chiếu trung thực với code hiện có
 
 - `record_source.kind` hiện chỉ nhận `FIRST_PARTY`, `THIRD_PARTY`, `SYNTHETIC`. **`THIRD_PARTY` đã có. `PUBLIC` chưa có trong code**: nó chỉ là **nhãn dự kiến / khoảng trống**. Trong v0.1, case công khai được ghi bằng `kind: "THIRD_PARTY"`. Kế hoạch này không thêm enum.
+  > Cập nhật 2026-10-01 sau #30 (AI review, KHÔNG VERIFIED): `PUBLIC` đã có trong `record_source.kind` (cùng `FIRST_PARTY`, `THIRD_PARTY`, `SYNTHETIC`). `PUBLIC` không bao giờ dẫn tới `VERIFIED` và không kích hoạt được trial lesson.
 - `record_source` chỉ có các trường `id`, `domain_id`, `uri`, `captured_at`, `kind`, `rights_status`, và trường thừa bị từ chối. URL và ngày có chỗ ghi (`uri`, `captured_at`); **"ai đo" chưa có trường riêng**. Tạm thời ghi vào văn bản `statement` của `record_evidence`. Đây là khoảng trống.
 - `activate_trial_lesson` hiện **bắt buộc** các nguồn kết quả của dự đoán phải là `FIRST_PARTY` và `rights_status` `CLEAR`, từ ít nhất hai nguồn khác nhau. Vì vậy, **với code hiện tại, một bài học chỉ dựa trên kết quả `THIRD_PARTY` không thể thành `TRIAL_RULE`, kể cả khi Owner đã ký**. Điều này chặt hơn nguyên tắc "cấm biến câu chuyện mạng thành TRIAL_RULE" và nhất quán với nó. Nếu muốn nới cổng này thì phải có quyết định riêng của Owner và PR code riêng; tài liệu này không đề xuất nới.
 - `register_prediction` bắt buộc `due_at` sau thời điểm đăng ký. Kết quả **đã xảy ra** của case xã hội vì thế chỉ làm được SOURCE/EVIDENCE/CLAIM. PREDICTION phải nhắm vào kết quả công khai **tương lai**, rồi dùng `freeze_prediction` trước khi có kết quả.
@@ -123,6 +124,8 @@ Mục này là **kế hoạch**, chưa đổi code. Nó chỉ dùng lệnh và e
 | v0.1 chỉ nhận thủ công | CLI `apply <file.json>` cho từng lệnh | Không có crawler/API và không thêm vào |
 | Cầu sang v0.2 đọc-only | `register_domain` (một miền mới, ví dụ id do Owner đặt cho "public business outcomes"), `open_goal` | Chỉ bắt đầu khi Owner chọn; v0.2 **chưa bắt đầu** |
 
+> Cập nhật 2026-10-01 sau #30 (AI review, KHÔNG VERIFIED): ở dòng "Case công khai có provenance", `PUBLIC` nay đã có (không dẫn tới `VERIFIED`, không kích hoạt được trial lesson). "Ai đo" vẫn chưa có trường riêng.
+
 ## Hợp đồng học của Owner
 
 Chi tiết nằm ở [OWNER_LEARNING_CONTRACT_20260930.md](OWNER_LEARNING_CONTRACT_20260930.md). Tóm tắt:
@@ -130,7 +133,9 @@ Chi tiết nằm ở [OWNER_LEARNING_CONTRACT_20260930.md](OWNER_LEARNING_CONTRA
 - **Owner chọn điều học.** Không tự quét mạng. Học xã hội bằng cách Owner dán case, không crawler.
 - **Một não.** Đổi nghề thì dùng `register_domain` cho miền mới trên cùng lõi Tầng 1, không xây não thứ hai.
 - **Mô hình ghế.** Provider/model là ghế thay được, không phải đa AI hay bầy agent. Code chặn một provider ID vừa đề vừa phản/phân xử cùng claim (`review_claim`, `adjudicate_claim`). Khoảng trống: ID chỉ là khai báo, không có trường "seat" riêng, và `register_prediction` không kiểm lại ghế.
+  > Cập nhật 2026-10-01 sau #30 (AI review, KHÔNG VERIFIED): `register_prediction` nay kiểm ghế: provider của procedure phải khác người đề, critic và trọng tài của cùng claim. Quy tắc này được bỏ qua khi replay sổ cũ. ID vẫn chỉ là khai báo và vẫn không có trường "seat" riêng.
 - **Chỉ Owner mới `activate_trial_lesson`.** `owner_ack` là chữ ký khai báo, chưa xác thực. Không chi tiền, không tự VERIFIED, không đụng `sieu-du-an`.
+  > Cập nhật 2026-10-01 sau #30 (AI review, KHÔNG VERIFIED): `owner_ack` vẫn là chuỗi cố định, nhưng `apply` một lệnh `activate_trial_lesson` nay còn cần `--owner-id` khai báo trùng `config/owner.json` (chỉ so ID, chưa xác thực danh tính).
 
 ## Ghi chú trung thực
 
