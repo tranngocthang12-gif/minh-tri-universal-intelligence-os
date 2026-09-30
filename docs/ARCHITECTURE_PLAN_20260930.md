@@ -123,6 +123,15 @@ Mục này là **kế hoạch**, chưa đổi code. Nó chỉ dùng lệnh và e
 | v0.1 chỉ nhận thủ công | CLI `apply <file.json>` cho từng lệnh | Không có crawler/API và không thêm vào |
 | Cầu sang v0.2 đọc-only | `register_domain` (một miền mới, ví dụ id do Owner đặt cho "public business outcomes"), `open_goal` | Chỉ bắt đầu khi Owner chọn; v0.2 **chưa bắt đầu** |
 
+## Hợp đồng học của Owner
+
+Chi tiết nằm ở [OWNER_LEARNING_CONTRACT_20260930.md](OWNER_LEARNING_CONTRACT_20260930.md). Tóm tắt:
+
+- **Owner chọn điều học.** Không tự quét mạng. Học xã hội bằng cách Owner dán case, không crawler.
+- **Một não.** Đổi nghề thì dùng `register_domain` cho miền mới trên cùng lõi Tầng 1, không xây não thứ hai.
+- **Mô hình ghế.** Provider/model là ghế thay được, không phải đa AI hay bầy agent. Code chặn một provider ID vừa đề vừa phản/phân xử cùng claim (`review_claim`, `adjudicate_claim`). Khoảng trống: ID chỉ là khai báo, không có trường "seat" riêng, và `register_prediction` không kiểm lại ghế.
+- **Chỉ Owner mới `activate_trial_lesson`.** `owner_ack` là chữ ký khai báo, chưa xác thực. Không chi tiền, không tự VERIFIED, không đụng `sieu-du-an`.
+
 ## Ghi chú trung thực
 
 - Thuật ngữ "8 chi" không xuất hiện nguyên văn trong repo. Bảng ở mục (c) dựa trên bảng tám phạm vi soi xét trong `docs/PHILOSOPHY.md`.
