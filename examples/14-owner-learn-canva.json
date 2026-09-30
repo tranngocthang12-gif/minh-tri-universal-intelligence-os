@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-canva-anh-chu-thumbnail-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 9 của Owner: Canva = ảnh + chữ. Thumbnail 1280x720. Không nhạc. Không dựng tập. Học hiểu, chưa đăng. Sau thạc sĩ. Ghi chú này chỉ chép lời Owner, không khẳng định thêm tính năng nào của sản phẩm. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 13 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): dùng Canva cho ảnh + chữ (thumbnail 1280x720), không dùng nó cho nhạc hay để dựng tập, sẽ giúp Owner hiểu đúng vai trò của công cụ trước khi thực hành sau thạc sĩ.",
+    "uncertainty": "CAO: Owner chưa đăng hay sản xuất; kích thước thumbnail là quy ước Owner ghi, chưa được máy kiểm với yêu cầu hiện hành của nền tảng; tính năng, điều khoản và quyền dùng của Canva có thể thay đổi; không ghi ngày tốt nghiệp thạc sĩ; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
