@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-hoc-hieu-nay-thuc-hanh-sau-thac-si-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 5 của Owner: ranh giới học và làm. Phần hiện tại = HỌC HIỂU. Thực hành sản xuất (đăng YouTube, album, phim 20–30 tập × 40 phút) = SAU khi tốt nghiệp thạc sĩ. Tầm nhìn giữ. Không mở dây chuyền xuất bản lúc này. Đạo diễn/dàn dựng = học cấu trúc (kinh 1 trang, tên file), chưa quay tập 0. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 09 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): học hiểu trước, gồm cấu trúc đạo diễn/dàn dựng (kinh 1 trang, cách đặt tên file), và hoãn sản xuất/xuất bản đến sau khi tốt nghiệp thạc sĩ sẽ giữ được tầm nhìn mà không mở dây chuyền quá sớm.",
+    "uncertainty": "CAO: không ghi ngày tốt nghiệp thạc sĩ; nền tảng, chính sách và công cụ có thể thay đổi trước lúc thực hành; chưa kiểm hiểu biết bằng sản phẩm thật; không ghi số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
