@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-suno-studio-mot-bai-tap-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 2 của Owner: Suno + Suno Studio. Owner quyết định học qua đúng MỘT bài tập: 1 bài đúng brief → tách stem → sửa 1 lớp → xuất. Không crawler; Owner tự làm và tự ghi kết quả. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Trang chính thức Owner cần tự đọc (chỉ kiểm HTTP 200 ngày 2026-10-01, chưa đọc hay trích nội dung): https://suno.com/studio, https://suno.com/pricing, https://suno.com/terms. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 06 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): làm trọn một vòng brief → stem → sửa một lớp → xuất sẽ cho Owner biết Suno Studio làm được gì và không làm được gì cho MV YouTube, tốt hơn đọc giới thiệu tính năng.",
+    "uncertainty": "CAO: Owner chưa tự thử; tính năng, điều khoản và quyền (quyền dùng thương mại phụ thuộc gói) có thể thay đổi; chưa xác nhận Suno Studio hỗ trợ đúng từng bước của bài tập; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
