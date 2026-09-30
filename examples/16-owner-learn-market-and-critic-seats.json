@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-hai-ghe-thi-truong-phan-bien-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 11 của Owner: Hai ghế hỏi, không hai AI riêng. Thị trường: ai xem, clip cùng loại, khác gì, luật YT/Content ID; ≥2 nguồn; không biến 1 clip triệu view thành luật; Owner chọn đề. Phản biện: nguồn? nóng/tham? chắc hơn chứng? phá cấm tuần?; không vừa đề vừa chấm. Học hiểu. Thực hành sau thạc sĩ. Không đa AI. Đối chiếu code hiện có: review_claim đã từ chối khi critic_provider_id trùng provider_id của người đề claim (hoặc trùng provider của procedure đã dự đoán cho claim đó); việc tách ghế dựa trên ID provider khai báo, chưa xác thực danh tính. Không URL, không khẳng định thêm tính năng nào. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 15 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): hai ghế hỏi (thị trường và phản biện), do bất kỳ AI thay được nào ngồi, cộng với ≥2 nguồn và quy tắc không vừa đề vừa chấm, sẽ giúp Owner chọn đề mà không biến một clip triệu view thành luật và không cần hệ đa AI.",
+    "uncertainty": "CAO: chưa có vòng thật nào được ghi; luật YouTube/Content ID có thể thay đổi và chưa được trích; ≥2 nguồn chưa được code kiểm cho claim; tách ghế chỉ dựa trên ID khai báo; không ghi ngày tốt nghiệp thạc sĩ; không ghi số liệu thị trường nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
