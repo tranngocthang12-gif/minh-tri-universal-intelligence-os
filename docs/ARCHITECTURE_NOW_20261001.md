@@ -64,3 +64,8 @@ Không thêm example (18 trở đi) trừ khi Owner nêu tên bài học.
 ## Quản trị
 
 Owner merge. Kiến trúc sư không tự merge PR này.
+
+## Luật kinh nghiệm (2026-10-01)
+
+- Xem [LAW_EVIDENCE_AND_HUMILITY_20261001.md](LAW_EVIDENCE_AND_HUMILITY_20261001.md): 5 luật nguyên văn của Owner, trạng thái UNTESTED.
+- Không lấy lời AI làm VERIFIED; không biết thì nói KHÔNG BIẾT; áp dụng ghế phản biện cho mọi claim trên chat và sổ.
