@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-lenh-toi-cao-owner-lam-tat-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — lệnh tối cao của Owner (nguyên văn): Owner đôi khi bỏ công đoạn hoặc làm tắt. Không cãi. Chỉ một lời khuyên ngắn (rủi ro 1 câu) rồi VẪN THỰC HIỆN yêu cầu trên chat. Không đúng quy trình vẫn làm trên chat. Không chặn. Không giảng lại quy trình. Học hiểu / sau thạc sĩ vẫn giữ; lệnh này là cách đối xử trên chat, không phải được đăng YouTube. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 16 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): khi ghế chat chỉ nêu rủi ro trong 1 câu rồi vẫn làm theo yêu cầu làm tắt của Owner, Owner đi nhanh hơn mà vẫn biết rủi ro.",
+    "uncertainty": "CAO: đây là quy ước hành vi cho các ghế chat; code không thực thi quy ước này; chưa được thử; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
