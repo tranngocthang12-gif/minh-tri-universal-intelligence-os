@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-vong-nhac-ngu-suno-gpt-bat-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 4 của Owner: vòng làm nhạc ngủ. Quy trình Owner ghi: Suno làm đoạn ngắn → chat GPT chỉ viết prompt + nhớ số đoạn (mỗi chat dán luật) → file tên NGU_YYMMDD_NN vào thư mục máy → ghép bằng bat sẵn có. Cấm chat xuất/gộp file >1GB. Lỗi tải = chia nhỏ. GPT hay quên = không dùng chat làm sổ: sổ/thư mục trên máy mới là bản ghi, chat chỉ là ghế thay được. File bat ghép là bat sẵn có trên máy Owner, không nằm trong repo này. Không crawler. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 08 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): khi đặt tên file theo NGU_YYMMDD_NN, giữ bản ghi trong thư mục máy thay vì trong chat, chia nhỏ đoạn và ghép bằng bat trên máy, Owner làm được bản nhạc ngủ dài mà không bị lỗi tải, không phụ thuộc trí nhớ của chat.",
+    "uncertainty": "CAO: vòng này chưa được ghi kết quả vào sổ; chưa kiểm bat ghép (không nằm trong repo); tính năng, giới hạn, điều khoản và quyền dùng thương mại của Suno có thể thay đổi; chưa có dữ liệu thị trường nhạc ngủ; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
