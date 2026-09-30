@@ -61,6 +61,21 @@ Không thêm example (18 trở đi) trừ khi Owner nêu tên bài học.
 - `register_prediction` không kiểm lại ghế: critic có thể thành người dự đoán qua một procedure đăng ký sau review (đã đối chiếu `src/minhtri/core.py` tại mốc trên).
 - `learn` / `unfocus` không kiểm ai đang chạy CLI.
 
+#### Cập nhật trạng thái 2026-10-01, sau PR #30 (AI review, KHÔNG VERIFIED)
+
+Đối chiếu với code trên `main` tại `603435f0ee936539465bb802fd8126a7106dd489`. Danh sách lỗ ở trên được giữ nguyên làm lịch sử.
+
+- **ĐÃ VÁ (#30)**, cổng Owner qua `owner_id`: `learn`, `unfocus`, và `apply` với `set_learning_focus` / `activate_trial_lesson` phải có `--owner-id` trùng `config/owner.json`. Thiếu config thì bị chặn với `MISSING_OWNER_CONFIG` (fail closed); khi bị chặn, sổ không bị ghi (`src/minhtri/owner.py`, `src/minhtri/cli.py`).
+- **ĐÃ VÁ (#30)**, `PUBLIC`: `record_source.kind` nhận `FIRST_PARTY`, `THIRD_PARTY`, `PUBLIC`, `SYNTHETIC`. `PUBLIC` không dẫn tới `VERIFIED` và không kích hoạt được trial lesson.
+- **ĐÃ VÁ (#30)**, ghế dự đoán: `register_prediction` từ chối khi provider của procedure trùng người đề, critic hoặc trọng tài của cùng claim. Lưu ý: khi replay sổ cũ (`new_write=False`), quy tắc này được bỏ qua để sổ ghi trước #30 vẫn `verify` được, nên các dòng cũ không bị kiểm lại.
+- **CÒN LẠI**, provider ID tự khai: một model đăng ký hai ID vẫn qua cổng.
+- **CÒN LẠI**, cổng Owner chỉ so ID khai báo, không xác thực danh tính thật (`owner_identity_verified: false`).
+- **CÒN LẠI**, gọi thẳng `Ledger.apply` trong Python hoặc sửa file sổ bằng tay thì đi vòng qua cổng CLI.
+- **CÒN LẠI**, sổ không ghi `owner_id` nào đã duyệt một sự kiện (định dạng sự kiện không đổi).
+- **CÒN LẠI**, `owner_ack` vẫn là chuỗi cố định `HUMAN_OWNER_APPROVED`.
+- **CÒN LẠI**, `register_domain`, `record_source` (và các kiểu `apply` khác ngoài hai kiểu trên) không qua cổng Owner.
+- **Không phải lỗ (cố ý)**: `activate_trial_lesson` vẫn cần kết quả từ nguồn `FIRST_PARTY` + `CLEAR`.
+
 ## Quản trị
 
 Owner merge. Kiến trúc sư không tự merge PR này.
