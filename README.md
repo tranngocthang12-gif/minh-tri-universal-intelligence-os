@@ -24,6 +24,16 @@ minhtri.bat verify
 
 Trên macOS/Linux: `PYTHONPATH=src python3 -m minhtri init` và thay `minhtri.bat` bằng `PYTHONPATH=src python3 -m minhtri` ở các lệnh còn lại. Dữ liệu cục bộ nằm trong `brain/` và được loại khỏi gói Git công khai. Mỗi file JSON trong `examples/` là **một lệnh**, được thực thi riêng và lưu thành một sự kiện.
 
+## Cốt lõi là sổ của Owner
+
+- Giá trị nằm ở **sổ sự kiện của Owner** (`brain/events.jsonl`), không nằm ở AI nào. Đổi Claude, ChatGPT, Gemini hay Grok thì sổ vẫn còn; AI chỉ là ghế thay được.
+- Hôm nay Owner chọn học gì thì ghi lại nguồn, bài học mong đợi và độ chắc: `minhtri.bat learn --domain-id youtube --uri <link> --text "<case>" --note "<vì sao học>" --expected-lesson "<điều mong học>" --uncertainty "<độ chắc>"`. Link chỉ được lưu, không được tải về.
+- Mai đổi nghề thì `learn --domain-id <miền-mới> --domain-name "<Tên>"`. Focus cũ chuyển sang `SUPERSEDED`; cùng một lõi Tầng 1, không xây não mới.
+- `minhtri.bat focus` xem đang học gì. `minhtri.bat unfocus` dừng focus. Không xóa dòng nào trong sổ; `verify` vẫn kiểm được toàn bộ lịch sử.
+- Nguồn mặc định là `THIRD_PARTY`, quyền `UNKNOWN`, và evidence là `DECLARED_UNVERIFIED`. Bài học mong đợi chỉ là `UNTESTED_EXPECTATION`, không phải lesson hay `VERIFIED`.
+- **Không tự học ban đêm:** không có tiến trình nền, lịch chạy, crawler hay gọi mạng. Sổ chỉ đổi khi Owner chạy một lệnh.
+- `examples/05-owner-learn-social-case.json` là nguồn **GIẢ ĐỊNH/hư cấu** (`example.invalid`), không nói về công ty thật.
+
 ## Bản đầu tiên làm được gì
 
 - Mở một miền mới mà không sửa lõi; mở mục tiêu và khung vấn đề (thực trạng, điều kiện giả định, đích, can thiệp, trách nhiệm, rủi ro), đặt ưu tiên, tạm chặn hoặc đóng. Không có mục tiêu hợp lệ thì trả `WAIT`.
