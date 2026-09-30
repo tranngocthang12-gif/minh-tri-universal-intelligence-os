@@ -137,3 +137,7 @@ Chi tiết nằm ở [OWNER_LEARNING_CONTRACT_20260930.md](OWNER_LEARNING_CONTRA
 - Thuật ngữ "8 chi" không xuất hiện nguyên văn trong repo. Bảng ở mục (c) dựa trên bảng tám phạm vi soi xét trong `docs/PHILOSOPHY.md`.
 - File lộ trình nằm ở `docs/ROADMAP.md`, không phải ở thư mục gốc.
 - Tại thời điểm viết, repo không có CI (`.github/workflows` không tồn tại). Kiểm thử cục bộ chỉ có `tests/test_core.py` (unittest).
+
+## Cập nhật 2026-10-01
+
+Trạng thái sau các ví dụ 06–17 (đóng học hiểu tạm, trang ghế × tool, đề xuất kho thư mục, lỗ code đã biết) nằm ở [ARCHITECTURE_NOW_20261001.md](ARCHITECTURE_NOW_20261001.md). Các dòng ở trên giữ nguyên.
