@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-dao-dien-kinh-mot-trang-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 6 của Owner: đạo diễn (học hiểu, chưa quay). Kinh 1 trang. Tên file PHIM_Txx_Cxx (T = tập, C = cảnh). 8–12 cảnh/tập. Không take 40 phút liền. Thực hành sau thạc sĩ. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 10 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): một kinh 1 trang, tên file PHIM_Txx_Cxx và chia mỗi tập thành 8–12 cảnh thay vì một take 40 phút liền sẽ giúp Owner hiểu và quản lý cấu trúc phim dài tập trước khi thực hành sau thạc sĩ.",
+    "uncertainty": "CAO: Owner chưa quay tập nào; số cảnh/tập là quy ước Owner đặt để học, chưa được kiểm bằng sản phẩm thật; không ghi ngày tốt nghiệp thạc sĩ; công cụ và nền tảng có thể thay đổi trước lúc thực hành; không ghi số liệu thị trường nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
