@@ -78,7 +78,7 @@ def main(argv: list[str] | None = None) -> int:
     learn.add_argument("--uncertainty", default=UNSTATED, help="How unsure the Owner is and why")
     learn.add_argument("--domain-id", help="Domain ID; defaults to the current focus domain")
     learn.add_argument("--domain-name", help="Register --domain-id as a new NORMAL domain with this name")
-    learn.add_argument("--source-kind", choices=("THIRD_PARTY", "FIRST_PARTY"), default="THIRD_PARTY")
+    learn.add_argument("--source-kind", choices=("THIRD_PARTY", "PUBLIC", "FIRST_PARTY"), default="THIRD_PARTY")
     learn.add_argument("--rights", choices=("UNKNOWN", "CLEAR", "RESTRICTED"), default="UNKNOWN")
     learn.add_argument("--id", help="Optional focus ID (lowercase); generated from time if omitted")
     sub.add_parser("focus", help="Show the current learning focus")

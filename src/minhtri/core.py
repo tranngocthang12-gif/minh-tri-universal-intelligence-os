@@ -201,7 +201,7 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         string(d["uri"], "uri")
         if parse_time(d["captured_at"]) > parse_time(event_time):
             raise GateError("Source capture time cannot be in the future")
-        if d["kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "SYNTHETIC"):
+        if d["kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "PUBLIC", "SYNTHETIC"):
             raise GateError("Invalid source kind")
         if d["rights_status"] not in ("CLEAR", "UNKNOWN", "RESTRICTED"):
             raise GateError("Invalid rights status")
