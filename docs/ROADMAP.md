@@ -9,3 +9,7 @@
 | Sau đó — hành động có giới hạn | Quyền cụ thể cho từng adapter, Owner gate được xác thực, rollback và giám sát | Có ích hơn baseline trong thí nghiệm thật, vượt kiểm rủi ro và quyền |
 
 Không dùng số lượng tài liệu, số agent hay tần suất tự học làm thước đo năng lực. Mỗi mốc được mở khi có bằng chứng giải quyết nút thắt trước đó. Chi phí thật, dữ liệu cá nhân, quyền nội dung và các hành động khó đảo ngược luôn thuộc quyết định Owner.
+
+## Kế hoạch kiến trúc liên quan
+
+- [Kế hoạch kiến trúc MINH TRÍ — 2026-09-30](ARCHITECTURE_PLAN_20260930.md): 8 phạm vi soi xét là lăng kính, map vào lệnh Tầng 1 đã có, các điều cấm, trạng thái lộ trình (hiện tại v0.1; v0.2 chưa bắt đầu) và `next_checkpoint`.
