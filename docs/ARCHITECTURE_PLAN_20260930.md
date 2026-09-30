@@ -62,7 +62,7 @@ Thêm vào đó: không kết nối provider hay integration bên ngoài trong v
 | Mốc | Nội dung theo kế hoạch này | Trạng thái |
 | --- | --- | --- |
 | v0.1 — đứng vững | Lõi độc lập miền, sổ sự kiện, problem frame, dự đoán, ba ghế, `WAIT`, gate thử; ca kiểm offline | **Đang ở đây** (`FOUNDATION_PROTOTYPE`) |
-| v0.2 — một miền đọc-only | Một miền, một adapter **chỉ đọc**, **chỉ khi Owner chọn** miền và nguồn dữ liệu; có provenance, dự đoán ghi trước | **Chưa bắt đầu**; chưa có miền nào được Owner chọn |
+| v0.2 — một miền đọc-only | Một miền, một adapter **chỉ đọc**, **chỉ khi Owner chọn** miền và nguồn dữ liệu; có provenance, dự đoán ghi trước | **Chưa bắt đầu**; chưa có miền nào được Owner chọn. Miền đầu có thể là "public business outcomes" (xem mục HỌC TỪ XÃ HỘI) |
 | v0.3 — sai số / error-awareness | Baseline, bảng điểm theo procedure/provider, review lỗi, đề xuất sửa quy trình từ sai số thật | Chưa bắt đầu |
 | v0.4 — chuyển miền | Miền thứ hai dùng cùng hợp đồng lõi, không rò dữ liệu/luật miền | Chưa bắt đầu |
 
@@ -84,6 +84,44 @@ Ghi chú: checkpoint này là cổng để **vào** v0.2. Nó chưa đạt, và 
 - **Kiến trúc sư (người hoặc agent) không tự merge**, không push thẳng `main`, không force-push.
 - Owner giữ mục tiêu, vốn, rủi ro, thương hiệu, quyền dùng tư liệu và chiến lược lớn (PHILOSOPHY.md). Provider và agent chỉ đề xuất.
 - Mỗi commit một ý. Kết quả kiểm thử được báo đúng như đã chạy, không phóng đại.
+
+## HỌC TỪ XÃ HỘI (không chờ Owner đủ vết riêng)
+
+Owner viết (trích nguyên văn):
+
+> "Thêm học từ thành công thất bại ngoài xã hội. Chờ kinh nghiệm mình đủ dữ liệu thì lâu."
+
+Mục này là **kế hoạch**, chưa đổi code. Nó chỉ dùng lệnh và enum đang có trong `src/minhtri/core.py` tại `d4237384ad8a89b968edd6b9194f867dc70364e7`.
+
+### Nguyên tắc
+
+- Thành công/thất bại công khai = SOURCE/EVIDENCE loại PUBLIC / THIRD_PARTY, có provenance (URL, ngày, ai đo).
+- Được phép đề CLAIM + PREDICTION từ case xã hội để học nhanh.
+- Cấm biến một câu chuyện mạng thành TRIAL_RULE hay VERIFIED.
+- Cổng: ≥2 nguồn độc lập; ghi rõ thiên lệch sống sót (survivorship); tách tương quan ≠ nhân quả.
+- Owner vẫn ký mới được `activate_trial_lesson`.
+- v0.1: chỉ nhận case thủ công (Owner/provider dán JSON). Chưa crawler, chưa API mạng.
+- Việc này LÀ cách sang v0.2 đọc-only: miền đầu có thể là "public business outcomes" chứ không bắt buộc YouTube.
+
+### Đối chiếu trung thực với code hiện có
+
+- `record_source.kind` hiện chỉ nhận `FIRST_PARTY`, `THIRD_PARTY`, `SYNTHETIC`. **`THIRD_PARTY` đã có. `PUBLIC` chưa có trong code**: nó chỉ là **nhãn dự kiến / khoảng trống**. Trong v0.1, case công khai được ghi bằng `kind: "THIRD_PARTY"`. Kế hoạch này không thêm enum.
+- `record_source` chỉ có các trường `id`, `domain_id`, `uri`, `captured_at`, `kind`, `rights_status`, và trường thừa bị từ chối. URL và ngày có chỗ ghi (`uri`, `captured_at`); **"ai đo" chưa có trường riêng**. Tạm thời ghi vào văn bản `statement` của `record_evidence`. Đây là khoảng trống.
+- `activate_trial_lesson` hiện **bắt buộc** các nguồn kết quả của dự đoán phải là `FIRST_PARTY` và `rights_status` `CLEAR`, từ ít nhất hai nguồn khác nhau. Vì vậy, **với code hiện tại, một bài học chỉ dựa trên kết quả `THIRD_PARTY` không thể thành `TRIAL_RULE`, kể cả khi Owner đã ký**. Điều này chặt hơn nguyên tắc "cấm biến câu chuyện mạng thành TRIAL_RULE" và nhất quán với nó. Nếu muốn nới cổng này thì phải có quyết định riêng của Owner và PR code riêng; tài liệu này không đề xuất nới.
+- `register_prediction` bắt buộc `due_at` sau thời điểm đăng ký. Kết quả **đã xảy ra** của case xã hội vì thế chỉ làm được SOURCE/EVIDENCE/CLAIM. PREDICTION phải nhắm vào kết quả công khai **tương lai**, rồi dùng `freeze_prediction` trước khi có kết quả.
+- Code **chưa kiểm** "≥2 nguồn độc lập" cho claim (`evidence_ids` chỉ cần danh sách tham chiếu hợp lệ cùng miền), **chưa có trường** thiên lệch sống sót, và **chưa có trường** tách tương quan/nhân quả ở claim. Hiện chỉ gần đúng qua `alternative`/`falsifier` của `propose_claim`, `conditions[].role` (luôn `HYPOTHESIS`) của `frame_problem`, và việc phản biện trong `review_claim`/`adjudicate_claim`. Các cổng này hiện là **quy ước cho người phản biện**, chưa phải cổng máy.
+
+### Map nguyên tắc → lệnh đã có
+
+| Nguyên tắc | Lệnh đã có | Khoảng trống |
+| --- | --- | --- |
+| Case công khai có provenance | `record_source` (`uri`, `captured_at`, `kind: "THIRD_PARTY"`, `rights_status`), `record_evidence` (`statement`, `observed_at`, `value`, `metric`; tự gắn `verification: "DECLARED_UNVERIFIED"`) | `PUBLIC` chưa có; "ai đo" chưa có trường |
+| Đề CLAIM + PREDICTION từ case | `frame_problem`, `propose_claim` (claim luôn `HYPOTHESIS`), `register_procedure`, `register_prediction`, `freeze_prediction`, `record_resolution` | Chỉ dự đoán được kết quả tương lai |
+| Cấm câu chuyện mạng → TRIAL_RULE/VERIFIED | `activate_trial_lesson` chỉ chấp nhận nguồn kết quả `FIRST_PARTY` + `CLEAR`; không có đường nào dẫn tới `VERIFIED` | Không có |
+| ≥2 nguồn độc lập; survivorship; tương quan ≠ nhân quả | `propose_claim` (`evidence_ids`, `alternative`, `falsifier`), `review_claim`, `adjudicate_claim` | Code chưa có cổng máy cho cả ba điều này |
+| Owner ký mới activate | `activate_trial_lesson` (`owner_ack: "HUMAN_OWNER_APPROVED"`, chữ ký khai báo, chưa xác thực danh tính) | `owner_identity_verified: false` |
+| v0.1 chỉ nhận thủ công | CLI `apply <file.json>` cho từng lệnh | Không có crawler/API và không thêm vào |
+| Cầu sang v0.2 đọc-only | `register_domain` (một miền mới, ví dụ id do Owner đặt cho "public business outcomes"), `open_goal` | Chỉ bắt đầu khi Owner chọn; v0.2 **chưa bắt đầu** |
 
 ## Ghi chú trung thực
 
