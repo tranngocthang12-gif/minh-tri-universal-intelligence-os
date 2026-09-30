@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-google-flow-ban-anh-clip-ngan-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 7 của Owner: Google Flow = bàn ảnh + clip ngắn. Không 40 phút. Không nhạc. Không dựng tập. Học hiểu, chưa sản xuất. Sau thạc sĩ mới thực hành. Ghi chú này chỉ chép lời Owner, không khẳng định thêm tính năng nào của sản phẩm. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 11 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): coi Google Flow là bàn ảnh + clip ngắn, không dùng nó cho 40 phút, cho nhạc hay để dựng tập, sẽ giúp Owner hiểu đúng vai trò của công cụ trong cấu trúc phim trước khi thực hành sau thạc sĩ.",
+    "uncertainty": "CAO: Owner chưa dùng để sản xuất; tính năng, giới hạn, điều khoản và quyền dùng của Google Flow có thể thay đổi; chưa kiểm bằng sản phẩm thật; không ghi ngày tốt nghiệp thạc sĩ; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
