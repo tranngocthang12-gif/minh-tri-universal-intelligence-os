@@ -5,3 +5,4 @@ __pycache__/
 brain/
 dist/
 *.egg-info/
+config/owner.json

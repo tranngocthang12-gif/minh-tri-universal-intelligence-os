@@ -123,8 +123,13 @@ def _list_of_refs(state: dict, collection: str, values: Any) -> list[str]:
     return values
 
 
-def evolve(state: dict, command: dict, event_time: str) -> dict:
-    """Replay one event. A replay never consults a language model or current time."""
+def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = True) -> dict:
+    """Replay one event. A replay never consults a language model or current time.
+
+    `new_write=False` is used only when replaying an existing ledger. It skips gates added
+    after v0.1 shipped (currently: predictor seat separation) so ledgers written earlier
+    still verify; every new append is checked with the full rule set.
+    """
     if not isinstance(command, dict) or set(command) != {"type", "data"} or not isinstance(command["data"], dict):
         raise GateError("Command must contain exactly type and data object")
     kind, d = command["type"], copy.deepcopy(command["data"])
@@ -201,7 +206,7 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         string(d["uri"], "uri")
         if parse_time(d["captured_at"]) > parse_time(event_time):
             raise GateError("Source capture time cannot be in the future")
-        if d["kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "SYNTHETIC"):
+        if d["kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "PUBLIC", "SYNTHETIC"):
             raise GateError("Invalid source kind")
         if d["rights_status"] not in ("CLEAR", "UNKNOWN", "RESTRICTED"):
             raise GateError("Invalid rights status")
@@ -250,6 +255,12 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         procedure = ref(out, "procedures", d["procedure_id"])
         if procedure["domain_id"] != claim["domain_id"]:
             raise GateError("Procedure cannot predict in another domain")
+        if new_write:
+            seated = {claim["provider_id"]}
+            seated |= {r["critic_provider_id"] for r in out["reviews"].values() if r["claim_id"] == d["claim_id"]}
+            seated |= {a["adjudicator_provider_id"] for a in out["adjudications"].values() if a["claim_id"] == d["claim_id"]}
+            if procedure["provider_id"] in seated:
+                raise GateError("Predictor must not be the proposer, critic or adjudicator of the same claim")
         for key in ("metric", "unit", "resolution_method"):
             string(d[key], key)
         lower, upper = number(d["lower"], "lower"), number(d["upper"], "upper")
@@ -435,7 +446,7 @@ class Ledger:
                     body = {k: event[k] for k in ("seq", "prev", "at", "command")}
                     if event["seq"] != count or event["prev"] != previous or digest(body) != event["hash"]:
                         raise GateError("Event chain mismatch")
-                    state = evolve(state, event["command"], event["at"])
+                    state = evolve(state, event["command"], event["at"], new_write=False)
                     previous = event["hash"]
                 except (ValueError, TypeError, KeyError) as exc:
                     raise GateError(f"Invalid event at line {count}: {exc}") from exc

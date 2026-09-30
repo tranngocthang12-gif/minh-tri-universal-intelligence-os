@@ -27,9 +27,9 @@ class CoreGates(unittest.TestCase):
                    target="Get a reliable measurement", intervention="Run a bounded comparison",
                    unknowns=["Base rate"], control="Test design", influence="Audience exposure",
                    responsibility="Owner decides", harm_checks=["Do not mislead viewers"])
-        for pid in ("maker", "critic", "judge"):
+        for pid in ("maker", "forecaster", "critic", "judge"):
             self.apply("register_provider", id=pid, name=pid, kind="MODEL")
-        self.apply("register_procedure", id="p1", domain_id="media", provider_id="maker", version="1", method="Range forecast")
+        self.apply("register_procedure", id="p1", domain_id="media", provider_id="forecaster", version="1", method="Range forecast")
         self.apply("propose_claim", id="h1", problem_id="problem1", provider_id="maker", statement="Test hypothesis",
                    evidence_ids=[], alternative="Seasonal audience difference", falsifier="Intervals miss on independent outcomes")
 
