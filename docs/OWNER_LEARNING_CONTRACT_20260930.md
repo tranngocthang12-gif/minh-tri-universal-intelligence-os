@@ -47,6 +47,12 @@ Nếu chỉ muốn **ghi nhận** điều đã học mà chưa cần thành quy 
 | 6. Không chi tiền, không tự VERIFIED, không đụng sieu-du-an | Không có lệnh chi tiền, giao dịch hay phát hành. Không có đường nào dẫn tới `VERIFIED`: mức cao nhất là `TRIAL_RULE`, gắn `validation: "DECLARED_DATA_ONLY_NOT_CAUSAL_PROOF"`. Code không tham chiếu `sieu-du-an` | Là quy ước quản trị cho repo và agent, không phải cổng máy |
 | Chỉ Owner activate | `activate_trial_lesson` yêu cầu `owner_ack == "HUMAN_OWNER_APPROVED"` cùng các cổng dự đoán, nguồn và phân xử ở trên | `owner_ack` là **chuỗi khai báo**; ai chạy được CLI đều gõ được. `owner_identity_verified: false` |
 
+> Cập nhật 2026-10-01 sau #30 (AI review, KHÔNG VERIFIED): các dòng dưới đây của bảng trên đã lỗi thời một phần:
+> - Dòng 1: `apply` với `set_learning_focus` / `activate_trial_lesson`, cùng `learn` / `unfocus`, nay kiểm `--owner-id` khai báo trùng `config/owner.json`; thiếu config thì bị chặn (`MISSING_OWNER_CONFIG`). Các kiểu `apply` khác vẫn không kiểm ai chạy.
+> - Dòng 3: `register_prediction` nay từ chối khi provider của procedure trùng người đề, critic hoặc trọng tài của cùng claim (bỏ qua khi replay sổ cũ). Provider ID vẫn tự khai.
+> - Dòng 5: `PUBLIC` nay đã có trong `record_source.kind`; không dẫn tới `VERIFIED` và không kích hoạt được trial lesson.
+> - Dòng "Chỉ Owner activate": `owner_ack` vẫn là chuỗi cố định, nhưng `apply` lệnh kích hoạt nay còn cần `--owner-id` khai báo; vẫn chưa xác thực danh tính (`owner_identity_verified: false`).
+
 ## Quản trị
 
 Owner merge. Kiến trúc sư hay agent không tự merge, không push thẳng `main`. Mọi thay đổi code để lấp khoảng trống ở trên phải có quyết định riêng của Owner và PR riêng.
