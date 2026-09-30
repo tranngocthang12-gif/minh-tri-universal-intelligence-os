@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-capcut-dung-ghep-clip-nhac-chu-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 8 của Owner: CapCut = dựng ghép clip + nhạc + chữ. Không ra nhạc. Không 40 phút một prompt. File 9h dùng bat (bat sẵn có trên máy Owner, không nằm trong repo này). Học hiểu, chưa đăng. Sau thạc sĩ. Ghi chú này chỉ chép lời Owner, không khẳng định thêm tính năng nào của sản phẩm. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 12 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): dùng CapCut để dựng ghép clip + nhạc + chữ, không dùng nó để ra nhạc hay làm 40 phút bằng một prompt, và để file 9h cho bat trên máy xử lý, sẽ giúp Owner hiểu đúng vai trò của từng công cụ trước khi thực hành sau thạc sĩ.",
+    "uncertainty": "CAO: Owner chưa đăng hay sản xuất; tính năng, giới hạn, điều khoản và quyền dùng của CapCut có thể thay đổi; bat ghép file 9h chưa được kiểm (không nằm trong repo); không ghi ngày tốt nghiệp thạc sĩ; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
