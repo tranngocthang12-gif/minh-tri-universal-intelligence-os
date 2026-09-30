@@ -1,0 +1,11 @@
+{
+  "type": "record_source",
+  "data": {
+    "id": "gia-dinh-kenh-a-case",
+    "domain_id": "youtube",
+    "uri": "https://example.invalid/GIA-DINH-hu-cau/kenh-a-doi-tieu-de-that-bai",
+    "captured_at": "2026-09-30T00:00:00Z",
+    "kind": "THIRD_PARTY",
+    "rights_status": "UNKNOWN"
+  }
+}
