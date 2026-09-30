@@ -1,0 +1,12 @@
+{
+  "type": "set_learning_focus",
+  "data": {
+    "id": "gia-dinh-fl-studio-ban-sua-nhac-sau-suno-third-party",
+    "status": "ACTIVE",
+    "domain_id": "youtube",
+    "source_id": "gia-dinh-kenh-a-case",
+    "note": "KHÔNG VERIFIED — bài học 10 của Owner: FL Studio 2026 = bàn sửa nhạc sau Suno (kéo wav, extract stems, sửa 1 lớp, export). Không ghép file 9h (dùng bat trên máy Owner, không nằm trong repo này). Không thay CapCut/Canva/Flow. Học hiểu, chưa sản xuất. Sau thạc sĩ mới thực hành. Việc FL Studio 2026 tách được stem là lời Owner, chưa được kiểm chứng; ghi chú này không khẳng định thêm tính năng nào. source_id trỏ tới nguồn giữ chỗ hư cấu THIRD_PARTY, rights UNKNOWN của ví dụ 05, không phải nguồn thật. Khi apply theo thứ tự, focus này thay thế (SUPERSEDED) focus 14 — đó là hành vi mong đợi.",
+    "expected_lesson": "Giả thuyết chưa kiểm (UNTESTED_EXPECTATION): dùng FL Studio 2026 làm bàn sửa nhạc sau Suno (kéo wav → extract stems → sửa 1 lớp → export), không dùng nó để ghép file 9h hay thay CapCut/Canva/Flow, sẽ giúp Owner hiểu đúng vai trò của từng công cụ trước khi thực hành sau thạc sĩ.",
+    "uncertainty": "CAO: khả năng tách stem của FL Studio 2026 là lời Owner, chưa kiểm; Owner chưa sản xuất; tính năng, phiên bản, giấy phép và điều khoản có thể thay đổi; quyền với bản Suno đã sửa chưa rõ; bat ghép 9h chưa được kiểm (không nằm trong repo); không ghi ngày tốt nghiệp thạc sĩ; không ghi giá hay số liệu nào; rights UNKNOWN; nguồn THIRD_PARTY chưa được máy kiểm chứng."
+  }
+}
