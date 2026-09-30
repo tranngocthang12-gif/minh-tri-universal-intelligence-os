@@ -108,7 +108,11 @@ ALLOWED_FIELDS = {
     "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
     "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id"},
     "activate_trial_lesson": {"lesson_id", "owner_ack", "scope"},
+    "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
+
+FOCUS_ACTIVE_FIELDS = {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty"}
+FOCUS_STOPPED_FIELDS = {"id", "status", "reason"}
 
 
 def _list_of_refs(state: dict, collection: str, values: Any) -> list[str]:
@@ -366,6 +370,36 @@ def evolve(state: dict, command: dict, event_time: str) -> dict:
         lesson["activated_at"] = event_time
         lesson["validation"] = "DECLARED_DATA_ONLY_NOT_CAUSAL_PROOF"
 
+    elif kind == "set_learning_focus":
+        # The collection is created lazily so ledgers written before this type still replay
+        # to a state identical to their existing snapshot.
+        focuses = out.setdefault("learning_focuses", {})
+        if d.get("status") == "ACTIVE":
+            if set(d) != FOCUS_ACTIVE_FIELDS:
+                raise GateError("ACTIVE focus needs exactly: " + ", ".join(sorted(FOCUS_ACTIVE_FIELDS)))
+            ref(out, "domains", d["domain_id"])
+            source = ref(out, "sources", d["source_id"])
+            if source["domain_id"] != d["domain_id"]:
+                raise GateError("Focus source cannot cross domain boundaries")
+            for key in ("note", "expected_lesson", "uncertainty"):
+                string(d[key], key)
+            for previous in focuses.values():
+                if previous["status"] == "ACTIVE":
+                    previous.update({"status": "SUPERSEDED", "ended_at": event_time, "superseded_by": d["id"]})
+            d["started_at"] = event_time
+            d["expectation_status"] = "UNTESTED_EXPECTATION"
+            add(out, "learning_focuses", d)
+        elif d.get("status") == "STOPPED":
+            if set(d) != FOCUS_STOPPED_FIELDS:
+                raise GateError("STOPPED focus needs exactly: " + ", ".join(sorted(FOCUS_STOPPED_FIELDS)))
+            focus = ref(out, "learning_focuses", d["id"])
+            if focus["status"] != "ACTIVE":
+                raise GateError("Only the active focus can be stopped")
+            string(d["reason"], "reason")
+            focus.update({"status": "STOPPED", "ended_at": event_time, "stop_reason": d["reason"]})
+        else:
+            raise GateError("Focus status must be ACTIVE or STOPPED")
+
     else:
         raise GateError(f"Unknown command type: {kind}")
     return out
@@ -456,6 +490,14 @@ class Ledger:
             return {"event_count": count + 1, "head": event["hash"], "state": updated}
         finally:
             self.lock.unlink(missing_ok=True)
+
+
+def current_focus(state: dict) -> dict | None:
+    """Return the single ACTIVE learning focus, or None. History is never removed."""
+    for focus in state.get("learning_focuses", {}).values():
+        if focus["status"] == "ACTIVE":
+            return focus
+    return None
 
 
 def next_goal(state: dict) -> dict:
