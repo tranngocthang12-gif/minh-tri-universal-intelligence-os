@@ -13,10 +13,16 @@
   "current_law_index": "docs/LAW_INDEX_20261002.md",
   "current_architecture": "docs/ARCHITECTURE_NOW_20261002.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "ARCHITECTURE_SECURITY_SYNCHRONIZATION",
+  "active_workstream": "TRUSTED_RECOVERY_AND_AUTONOMOUS_LEARNING_PREPARATION",
+  "security_p0": "MERGED_CI_PASS",
+  "brain_readonly_core": "MERGED_CI_PASS",
+  "zero_chat_local_recovery": "MERGED_CI_PASS",
+  "external_anchor_verifier": "MERGED_CI_PASS",
+  "external_anchor_publication": false,
+  "end_to_end_chat_brain_transport": false,
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "SECURE_CURRENT_STATE_SYNC_AND_READ_ONLY_BRAIN_BRIDGE"
+  "next_checkpoint": "ATOMIC_RECOVERY_PACKET_AND_ANCHOR_CHAIN_HARDENING"
 }
