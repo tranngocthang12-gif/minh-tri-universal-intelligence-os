@@ -142,7 +142,7 @@ def main(argv: list[str] | None = None) -> int:
                       "event_count": applied["event_count"], "head": applied["head"]}
         elif args.action == "repair-snapshot":
             approver = gate()
-            count, head = ledger.repair_snapshot(approved_by=approver)
+            count, head = ledger.repair_snapshot(approved_by=approver, _gate_token=WRITE_GATE_TOKEN)
             result = {"status": "REPAIRED", "event_count": count, "head": head}
         else:
             state, count, head = ledger.verify()
