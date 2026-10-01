@@ -479,18 +479,24 @@ class Ledger:
             if os.path.exists(path):
                 os.unlink(path)
 
-    def repair_snapshot(self) -> tuple[int, str]:
+    def repair_snapshot(self, *, approved_by: str | None = None) -> tuple[int, str]:
+        """Rebuild derived state only after an authenticated Owner gate."""
+        if approved_by is None:
+            raise GateError("Owner approval required to repair snapshot")
+        identifier(approved_by, "approved_by")
         state, count, head = self.replay()
         self._save(state, count, head)
         return count, head
 
     def apply(self, command: dict, approved_by: str | None = None) -> dict:
-        """Append one command. `approved_by` is the gate-matched owner_id (never a secret).
+        """Append one command.
 
-        This Python API itself does not run the Owner gate; the CLI does.
+        Every durable write requires a gate-matched Owner id. This closes the old
+        direct-Python bypass where callers could invoke Ledger.apply without the CLI.
         """
-        if approved_by is not None:
-            identifier(approved_by, "approved_by")
+        if approved_by is None:
+            raise GateError("Owner approval required for ledger write")
+        identifier(approved_by, "approved_by")
         self.home.mkdir(parents=True, exist_ok=True)
         try:
             fd = os.open(self.lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
