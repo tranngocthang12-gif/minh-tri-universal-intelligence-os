@@ -64,7 +64,7 @@ Không dùng auto-write hai chiều không kiểm soát giữa chat, GitHub, Lib
 - ChatGPT seat → GitHub: AVAILABLE khi được Owner/permission cho phép.
 - Project/Library sources → seat: AVAILABLE.
 - Project Instructions → chats in Project: AVAILABLE.
-- local `brain/` → seat: NOT CONNECTED.
+- local `brain/` → seat: NOT CONNECTED as a real transport. A read-only Python `BrainReader` module is implemented and CI-tested locally.
 - seat → local `brain/`: NOT CONNECTED.
 
 ## 5. Learning and critique
@@ -91,13 +91,14 @@ Chưa có runtime tự trị:
 
 Security remains first-order.
 
-Known open risks:
-- Owner Gate is not real-person identity verification.
-- caller-controlled owner config path is a trust-boundary risk.
-- direct Python `Ledger.apply` bypasses CLI gate.
-- full ledger rewrite is not detected without an external anchor.
-- provider IDs are declared identities.
-- current GitHub protection/CI is not yet sufficient for autonomous mutation.
+Current security status:
+- CLOSED P0: caller-controlled Owner config authority selector is blocked.
+- CLOSED P0: direct Python `Ledger.apply` and snapshot repair authenticate inside the mutation boundary.
+- PARTIAL: external-anchor verifier exists, but no independently protected external publication target exists yet.
+- OPEN: Owner Gate is not real-person identity verification; shared-secret trust remains local.
+- OPEN: provider IDs are declared identities, not proof of independent actors.
+- UNKNOWN in current audit: detailed GitHub protection enforcement could not be read through the integration.
+- OPEN: autonomous mutation remains blocked until the remaining trust chain is proven.
 
 Until those are hardened, autonomous write/publish/spend/delete remains blocked unless Owner explicitly authorizes the specific action.
 
@@ -126,4 +127,4 @@ A seat recovering from zero chat memory should read, in order:
 4. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
 5. task/domain-specific source
 
-That is the minimum recovery route.
+That is the minimum GitHub recovery route. The merged zero-chat test proves a local Python recovery contract only; it does not prove end-to-end ChatGPT-to-local-brain transport.
