@@ -8,10 +8,21 @@ from __future__ import annotations
 
 import hashlib
 import json
+from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 SCHEMA = "minhtri-ledger-anchor/v1"
 PROJECT = "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS"
+
+
+def _utc_time(value: Any) -> datetime:
+    if not isinstance(value, str) or not value.endswith("Z"):
+        raise ValueError("timestamp must be UTC Z form")
+    parsed = datetime.fromisoformat(value[:-1] + "+00:00")
+    if parsed.tzinfo is None or parsed.utcoffset() != timezone.utc.utcoffset(parsed):
+        raise ValueError("timestamp must be UTC")
+    return parsed.astimezone(timezone.utc)
 
 
 def _digest(record: dict[str, Any]) -> str:
@@ -24,8 +35,7 @@ def make_anchor(event_count: int, head: str, created_at: str, previous_anchor: s
         raise ValueError("event_count must be a nonnegative integer")
     if not isinstance(head, str) or len(head) != 64 or any(c not in "0123456789abcdef" for c in head):
         raise ValueError("head must be lowercase sha256 hex")
-    if not isinstance(created_at, str) or not created_at:
-        raise ValueError("created_at is required")
+    _utc_time(created_at)
     if previous_anchor is not None and (
         not isinstance(previous_anchor, str)
         or len(previous_anchor) != 64
@@ -61,6 +71,10 @@ def verify_anchor(local_count: int, local_head: str, anchor: dict[str, Any] | No
                 or type(local_count) is not int or local_count < 0
                 or not _valid_hex(local_head)):
             return {"status": "FAIL", "reason": "MALFORMED_ANCHOR"}
+        try:
+            _utc_time(record["created_at"])
+        except ValueError:
+            return {"status": "FAIL", "reason": "MALFORMED_ANCHOR"}
         if local_count < record["event_count"]:
             return {"status": "FAIL", "reason": "LOCAL_LEDGER_ROLLBACK"}
         if local_count == record["event_count"] and local_head != record["head"]:
@@ -82,6 +96,7 @@ def verify_anchor_chain(anchors: list[dict[str, Any]]) -> dict[str, Any]:
         return {"status": "UNKNOWN", "reason": "MISSING_EXTERNAL_ANCHOR"}
     previous_id = None
     previous_count = -1
+    previous_time = None
     for index, anchor in enumerate(anchors):
         if not isinstance(anchor, dict):
             return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
@@ -93,8 +108,14 @@ def verify_anchor_chain(anchors: list[dict[str, Any]]) -> dict[str, Any]:
             return {"status": "FAIL", "reason": "ANCHOR_IDENTITY_MISMATCH", "index": index}
         if type(record["event_count"]) is not int or record["event_count"] < 0 or record["event_count"] <= previous_count:
             return {"status": "FAIL", "reason": "ANCHOR_COUNT_NOT_INCREASING", "index": index}
-        if not _valid_hex(record["head"]) or not isinstance(record["created_at"], str) or not record["created_at"]:
+        if not _valid_hex(record["head"]):
             return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
+        try:
+            current_time = _utc_time(record["created_at"])
+        except (TypeError, ValueError):
+            return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
+        if previous_time is not None and current_time <= previous_time:
+            return {"status": "FAIL", "reason": "ANCHOR_TIME_NOT_INCREASING", "index": index}
         if index == 0:
             if record["previous_anchor"] is not None:
                 return {"status": "FAIL", "reason": "BROKEN_ANCHOR_CHAIN", "index": index}
@@ -105,4 +126,52 @@ def verify_anchor_chain(anchors: list[dict[str, Any]]) -> dict[str, Any]:
             return {"status": "FAIL", "reason": "ANCHOR_DIGEST_MISMATCH", "index": index}
         previous_id = expected
         previous_count = record["event_count"]
+        previous_time = current_time
     return {"status": "PASS", "reason": "ANCHOR_CHAIN_VALID", "anchor_count": len(anchors), "head_anchor_id": previous_id}
+
+
+def ledger_prefix_head(events_path: str | Path, event_count: int) -> str:
+    """Return the verified hash-chain head at an exact historical event count."""
+    if type(event_count) is not int or event_count < 0:
+        raise ValueError("event_count must be a nonnegative integer")
+    previous = "0" * 64
+    count = 0
+    path = Path(events_path)
+    if not path.is_file():
+        raise ValueError("ledger events missing")
+    from .core import digest, identifier
+    with path.open("r", encoding="utf-8") as fh:
+        for raw in fh:
+            count += 1
+            try:
+                event = json.loads(raw)
+                if set(event) - {"approved_by"} != {"seq", "prev", "at", "command", "hash"}:
+                    raise ValueError("unexpected event fields")
+                body = {k: event[k] for k in ("seq", "prev", "at", "command", "approved_by") if k in event}
+                if "approved_by" in event:
+                    identifier(event["approved_by"], "approved_by")
+                if event["seq"] != count or event["prev"] != previous or digest(body) != event["hash"]:
+                    raise ValueError("event chain mismatch")
+                previous = event["hash"]
+            except (KeyError, TypeError, ValueError) as exc:
+                raise ValueError(f"invalid event at line {count}") from exc
+            if count == event_count:
+                return previous
+    if event_count == 0:
+        return "0" * 64
+    raise ValueError("ledger shorter than requested event_count")
+
+
+def verify_historical_anchor(events_path: str | Path, anchor: dict[str, Any] | None) -> dict[str, Any]:
+    """Verify an anchor against the exact historical prefix of a current ledger."""
+    if anchor is None:
+        return {"status": "UNKNOWN", "reason": "MISSING_EXTERNAL_ANCHOR"}
+    try:
+        count = anchor["event_count"]
+        prefix = ledger_prefix_head(events_path, count)
+    except (KeyError, TypeError, ValueError):
+        return {"status": "FAIL", "reason": "HISTORICAL_PREFIX_UNVERIFIABLE"}
+    result = verify_anchor(count, prefix, anchor)
+    if result.get("status") == "PASS":
+        return {**result, "reason": "HISTORICAL_PREFIX_MATCH"}
+    return result
