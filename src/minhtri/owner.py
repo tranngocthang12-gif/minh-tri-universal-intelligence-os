@@ -94,6 +94,24 @@ def load_owner_config(path: Path) -> dict:
             raise OwnerGateError("INVALID_OWNER_CONFIG", "owner_secret_sha256 must be 64 lowercase hex characters")
         if digest == PLACEHOLDER_SECRET_SHA256:
             raise OwnerGateError("INVALID_OWNER_CONFIG", "owner_secret_sha256 is still the example placeholder")
+    else:
+        credential = data["credential"]
+        if not isinstance(credential, dict) or credential.get("version") != 2 or credential.get("scheme") != V2_SCHEME:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "unsupported credential version or scheme")
+        required = {"version", "scheme", "iterations", "salt", "verifier", "credential_id", "revoked"}
+        if set(credential) != required:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "v2 credential fields are incomplete or unsupported")
+        if type(credential["iterations"]) is not int or credential["iterations"] < V2_ITERATIONS_MIN:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential iterations below v2 minimum")
+        salt = credential["salt"]
+        if not isinstance(salt, str) or not re.fullmatch(r"[0-9a-f]+", salt) or len(salt) < 32 or len(salt) % 2:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential salt must be at least 16 bytes of lowercase hex")
+        if not isinstance(credential["verifier"], str) or not re.fullmatch(r"[0-9a-f]{64}", credential["verifier"]):
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential verifier must be 64 lowercase hex characters")
+        if not isinstance(credential["credential_id"], str) or not credential["credential_id"]:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential_id is required")
+        if type(credential["revoked"]) is not bool:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential revoked must be boolean")
     return data
 
 
