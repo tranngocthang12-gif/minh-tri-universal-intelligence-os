@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from minhtri.core import GateError, Ledger, evolve, initial_state, next_goal
+from tests.support import ledger_apply, ledger_repair, write_owner_config
 
 
 def cmd(command_type, **data):
@@ -112,13 +113,14 @@ class CoreGates(unittest.TestCase):
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
+            config = write_owner_config(tmp)
             ledger.init()
-            ledger.apply(cmd("register_domain", id="youtube", name="YouTube", risk_class="NORMAL", measurement_contract="CTR"))
+            ledger_apply(ledger, cmd("register_domain", id="youtube", name="YouTube", risk_class="NORMAL", measurement_contract="CTR"), config)
             self.assertEqual(ledger.verify()[1], 1)
             ledger.snapshot.write_text("{}", encoding="utf-8")
             with self.assertRaisesRegex(GateError, "Snapshot differs"):
                 ledger.verify()
-            ledger.repair_snapshot()
+            ledger_repair(ledger, config)
             self.assertEqual(ledger.verify()[1], 1)
             lines = ledger.events.read_text(encoding="utf-8").replace("YouTube", "Finance")
             ledger.events.write_text(lines, encoding="utf-8")
