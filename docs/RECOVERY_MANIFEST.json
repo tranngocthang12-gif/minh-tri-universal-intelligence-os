@@ -14,11 +14,18 @@
     "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
     "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
     "external_anchor_publication": false,
-    "end_to_end_seat_brain_transport": false
+    "end_to_end_seat_brain_transport": false,
+    "readonly_brain_transport_dispatcher": "IMPLEMENTED_AND_MERGED",
+    "brain_http_host": "IMPLEMENTED_AND_MERGED",
+    "brain_http_e2e_test": "CI_PROVEN",
+    "external_witness_receipt_verifier": "IMPLEMENTED_AND_MERGED",
+    "whole_history_rewrite_detection": "CI_PROVEN"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
     "recovery_packet": "BrainReader.recovery_packet/v1",
-    "brain_transport": "CONTRACT_ONLY"
+    "brain_transport": "CONTRACT_ONLY",
+    "brain_http": "minhtri-brain-http/v1",
+    "external_witness": "minhtri-external-witness/v1"
   }
 }
