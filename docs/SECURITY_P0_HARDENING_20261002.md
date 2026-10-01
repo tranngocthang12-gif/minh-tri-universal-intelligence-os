@@ -1,6 +1,6 @@
 # SECURITY P0 HARDENING — 2026-10-02
 
-Status: CANDIDATE PATCH / EXACT-SHA CI PASS ON 5cfc5073b80226c2e7024f35e8f8c2aea4087791 / CURRENT HEAD REQUIRES NEW CI
+Status: CANDIDATE PATCH / EXACT-SHA CI PASS THROUGH c5c9f8df06cb6b8d4d357f36af13d0abc2d310a0 / CURRENT HEAD REQUIRES NEW CI
 
 Scope is deliberately narrow. No music/MV files are touched.
 
@@ -53,3 +53,12 @@ GitHub Actions workflow `Security P0 / test` completed successfully for exact SH
 
 That proves the full unittest discovery command passed on that exact commit only.
 Subsequent commits must receive their own successful check before this branch is treated as test-verified.
+
+
+## P0 checkpoint
+
+Exact SHA `c5c9f8df06cb6b8d4d357f36af13d0abc2d310a0` completed GitHub Actions
+`Security P0 / test` successfully. At that checkpoint PR #40 was mergeable with a clean merge state.
+
+The next unresolved P0 architecture item is full-ledger rewrite resistance. Candidate design is recorded in
+`EXTERNAL_LEDGER_ANCHOR_DESIGN_20261002.md`. It is design-only and does not claim an external anchor exists.
