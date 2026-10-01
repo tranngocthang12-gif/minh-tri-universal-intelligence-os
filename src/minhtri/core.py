@@ -479,26 +479,22 @@ class Ledger:
             if os.path.exists(path):
                 os.unlink(path)
 
-    def repair_snapshot(self, *, approved_by: str | None = None, _gate_token: object | None = None) -> tuple[int, str]:
-        """Rebuild derived state only through the authenticated write boundary."""
-        from .owner import WRITE_GATE_TOKEN
-        if _gate_token is not WRITE_GATE_TOKEN:
-            raise GateError("Authenticated write boundary required")
-        if approved_by is None:
-            raise GateError("Owner approval required to repair snapshot")
-        identifier(approved_by, "approved_by")
+    def repair_snapshot(self, *, actor: str | None = None, secret: str | None = None) -> tuple[int, str]:
+        """Rebuild derived state only after authenticating against the fixed Owner config."""
+        from .owner import config_path, require_owner
+        approved_by = require_owner(actor, secret, config_path(None))
         state, count, head = self.replay()
         self._save(state, count, head)
         return count, head
 
-    def apply(self, command: dict, approved_by: str | None = None, *, _gate_token: object | None = None) -> dict:
-        """Append one command only through the authenticated write boundary."""
-        from .owner import WRITE_GATE_TOKEN
-        if _gate_token is not WRITE_GATE_TOKEN:
-            raise GateError("Authenticated write boundary required")
-        if approved_by is None:
-            raise GateError("Owner approval required for ledger write")
-        identifier(approved_by, "approved_by")
+    def apply(self, command: dict, *, actor: str | None = None, secret: str | None = None) -> dict:
+        """Append one command only after authenticating against the fixed Owner config.
+
+        The authentication happens inside the mutation boundary, so direct Python callers
+        cannot bypass the Owner gate merely by supplying an owner id.
+        """
+        from .owner import config_path, require_owner
+        approved_by = require_owner(actor, secret, config_path(None))
         self.home.mkdir(parents=True, exist_ok=True)
         try:
             fd = os.open(self.lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
