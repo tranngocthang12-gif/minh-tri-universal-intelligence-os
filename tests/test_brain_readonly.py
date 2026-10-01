@@ -34,7 +34,7 @@ class BrainReadonlyBridge(unittest.TestCase):
             "id": "youtube", "name": "YouTube", "risk_class": "NORMAL", "measurement_contract": "CTR"}})
         self.apply({"type": "record_source", "data": {
             "id": "source-one", "domain_id": "youtube", "uri": "owner-text:x",
-            "captured_at": "2026-10-02T00:00:00Z", "kind": "FIRST_PARTY", "rights_status": "CLEAR"}})
+            "captured_at": "2026-01-01T00:00:00Z", "kind": "FIRST_PARTY", "rights_status": "CLEAR"}})
         self.apply({"type": "set_learning_focus", "data": {
             "id": "focus-one", "status": "ACTIVE", "domain_id": "youtube", "source_id": "source-one",
             "note": "chat quen so khong", "expected_lesson": "recover state", "uncertainty": "untested"}})
