@@ -51,9 +51,16 @@ class LedgerApprover(unittest.TestCase):
         self.assertEqual(self.ledger.verify()[1], 2)
 
     def test_old_ledger_without_field_still_verifies(self):
-        ledger_apply(self.ledger, DOMAIN, self.config)
-        ledger_apply(self.ledger, SOURCE, self.config)
-        self.assertTrue(all(e.get("approved_by") == TEST_OWNER for e in self.lines()))
+        # Historical ledgers may predate approved_by. Replay remains backward compatible.
+        at = "2026-01-01T00:00:00Z"
+        first_body = {"seq": 1, "prev": "0" * 64, "at": at, "command": DOMAIN}
+        first = {**first_body, "hash": digest(first_body)}
+        second_body = {"seq": 2, "prev": first["hash"], "at": at, "command": SOURCE}
+        second = {**second_body, "hash": digest(second_body)}
+        self.rewrite([first, second])
+        state, count, head = self.ledger.replay()
+        self.ledger._save(state, count, head)
+        self.assertTrue(all("approved_by" not in e for e in self.lines()))
         self.assertEqual(self.ledger.verify()[1], 2)
 
     def test_editing_removing_or_adding_approver_breaks_the_chain(self):
@@ -63,7 +70,7 @@ class LedgerApprover(unittest.TestCase):
         for mutate in (
             lambda ev: ev[1].__setitem__("approved_by", "intruder"),
             lambda ev: ev[1].pop("approved_by"),
-            lambda ev: ev[0].__setitem__("approved_by", "test-owner"),
+            lambda ev: ev[0].__setitem__("approved_by", "intruder"),
             lambda ev: ev[1]["command"]["data"].__setitem__("uri", "https://example.invalid/forged"),
         ):
             events = json.loads(json.dumps(original))
