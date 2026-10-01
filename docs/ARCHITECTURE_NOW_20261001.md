@@ -95,3 +95,5 @@ Owner merge. Kiến trúc sư không tự merge PR này.
 - **CÒN LẠI**, vẫn không xác thực danh tính thật: ai giữ config + secret đều qua. SHA-256 không salt.
 
 - 2026-10-01: Owner chọn MỘT CỬA (ChatGPT project MINH TRÍ) — xem `ONE_DOOR_20261001.md`.
+
+- 2026-10-01: Bàn giao kiến trúc cho GPT — xem `HANDOFF_GPT_20261001.md`.
