@@ -1,0 +1,24 @@
+{
+  "schema": "minhtri-recovery-manifest/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "authority_order": [
+    "docs/PROJECT_STATE.json",
+    "docs/LAW_INDEX_20261002.md",
+    "docs/ARCHITECTURE_NOW_20261002.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md"
+  ],
+  "required_state": {
+    "durable_project_memory": "GITHUB_FIRST",
+    "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
+    "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
+    "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
+    "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
+    "external_anchor_publication": false,
+    "end_to_end_seat_brain_transport": false
+  },
+  "protocols": {
+    "external_anchor": "minhtri-ledger-anchor/v1",
+    "recovery_packet": "BrainReader.recovery_packet/v1",
+    "brain_transport": "CONTRACT_ONLY"
+  }
+}
