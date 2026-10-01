@@ -1,6 +1,6 @@
 # SECURITY P0 HARDENING — 2026-10-02
 
-Status: CANDIDATE PATCH / EXACT-SHA CI PASS THROUGH c5c9f8df06cb6b8d4d357f36af13d0abc2d310a0 / CURRENT HEAD REQUIRES NEW CI
+Status: MERGED TO MAIN / P0 MUTATION-BOUNDARY HARDENING IMPLEMENTED / LATER MAIN CI PASS
 
 Scope is deliberately narrow. No music/MV files are touched.
 
@@ -62,3 +62,8 @@ Exact SHA `c5c9f8df06cb6b8d4d357f36af13d0abc2d310a0` completed GitHub Actions
 
 The next unresolved P0 architecture item is full-ledger rewrite resistance. Candidate design is recorded in
 `EXTERNAL_LEDGER_ANCHOR_DESIGN_20261002.md`. It is design-only and does not claim an external anchor exists.
+
+
+## Canonical status update — 2026-10-02
+
+The P0 patch was merged to `main`. Later canonical main CI has passed after the BrainReader, zero-chat recovery and anchor-verifier changes. This does not close the remaining identity, credential-strength, external-anchor-publication or branch-governance risks listed above.
