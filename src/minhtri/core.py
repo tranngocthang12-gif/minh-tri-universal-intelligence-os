@@ -488,12 +488,11 @@ class Ledger:
         self._save(state, count, head)
         return count, head
 
-    def apply(self, command: dict, approved_by: str | None = None) -> dict:
-        """Append one command.
-
-        Every durable write requires a gate-matched Owner id. This closes the old
-        direct-Python bypass where callers could invoke Ledger.apply without the CLI.
-        """
+    def apply(self, command: dict, approved_by: str | None = None, *, _gate_token: object | None = None) -> dict:
+        """Append one command only through the authenticated write boundary."""
+        from .owner import WRITE_GATE_TOKEN
+        if _gate_token is not WRITE_GATE_TOKEN:
+            raise GateError("Authenticated write boundary required")
         if approved_by is None:
             raise GateError("Owner approval required for ledger write")
         identifier(approved_by, "approved_by")
