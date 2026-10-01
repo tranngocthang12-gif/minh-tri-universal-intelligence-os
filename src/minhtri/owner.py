@@ -22,6 +22,7 @@ PLACEHOLDER_ID = "doi-ten-owner"
 PLACEHOLDER_SECRET_SHA256 = "0" * 64
 SENSITIVE_APPLY_TYPES = frozenset({"activate_trial_lesson", "set_learning_focus"})
 CONFIG_FIELDS = {"owner_id", "owner_secret_sha256"}
+WRITE_GATE_TOKEN = object()
 
 
 class OwnerGateError(GateError):
