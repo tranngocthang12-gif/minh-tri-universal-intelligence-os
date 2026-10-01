@@ -86,4 +86,12 @@ Owner merge. Kiến trúc sư không tự merge PR này.
 - Không lấy lời AI làm VERIFIED; không biết thì nói KHÔNG BIẾT; áp dụng ghế phản biện cho mọi claim trên chat và sổ.
 - Luật động: tool là ghế/dụng cụ, không phải luật — xem [LAW_DYNAMIC_TOOLS_20261001.md](LAW_DYNAMIC_TOOLS_20261001.md).
 
+## Cập nhật 2026-10-01 sau PR fix/owner-secret-approver-20261001 (AI review, KHÔNG VERIFIED)
+
+- **ĐÃ VÁ (PR này)**, cổng secret: ngoài `--owner-id`, các lệnh có cổng cần secret có SHA-256 trùng `owner_secret_sha256` (`MINHTRI_OWNER_SECRET` hoặc `--owner-secret`; `hash-secret` để tạo hash).
+- **ĐÃ VÁ một phần (PR này)**, mục "sổ không ghi owner_id": các đường ghi có cổng của CLI giờ ghi `approved_by` vào sự kiện, có nằm trong hash. Sự kiện cũ không có trường này và replay không bắt buộc nó.
+- **CÒN LẠI**, `owner_ack` vẫn là chuỗi cố định.
+- **CÒN LẠI**, gọi thẳng `Ledger.apply` / sửa file sổ vẫn đi vòng qua cổng (và có thể tự khai `approved_by`). Viết lại toàn bộ chuỗi + snapshot thì không phát hiện được nếu không có mốc bên ngoài.
+- **CÒN LẠI**, vẫn không xác thực danh tính thật: ai giữ config + secret đều qua. SHA-256 không salt.
+
 - 2026-10-01: Owner chọn MỘT CỬA (ChatGPT project MINH TRÍ) — xem `ONE_DOOR_20261001.md`.

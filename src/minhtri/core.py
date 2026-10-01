@@ -441,9 +441,13 @@ class Ledger:
                 count += 1
                 try:
                     event = json.loads(raw)
-                    if set(event) != {"seq", "prev", "at", "command", "hash"}:
+                    if set(event) - {"approved_by"} != {"seq", "prev", "at", "command", "hash"}:
                         raise GateError("Unexpected event fields")
-                    body = {k: event[k] for k in ("seq", "prev", "at", "command")}
+                    # approved_by is optional (absent in ledgers written before it existed) and,
+                    # when present, is part of the hashed body so editing it breaks the chain.
+                    body = {k: event[k] for k in ("seq", "prev", "at", "command", "approved_by") if k in event}
+                    if "approved_by" in event:
+                        identifier(event["approved_by"], "approved_by")
                     if event["seq"] != count or event["prev"] != previous or digest(body) != event["hash"]:
                         raise GateError("Event chain mismatch")
                     state = evolve(state, event["command"], event["at"], new_write=False)
@@ -480,7 +484,13 @@ class Ledger:
         self._save(state, count, head)
         return count, head
 
-    def apply(self, command: dict) -> dict:
+    def apply(self, command: dict, approved_by: str | None = None) -> dict:
+        """Append one command. `approved_by` is the gate-matched owner_id (never a secret).
+
+        This Python API itself does not run the Owner gate; the CLI does.
+        """
+        if approved_by is not None:
+            identifier(approved_by, "approved_by")
         self.home.mkdir(parents=True, exist_ok=True)
         try:
             fd = os.open(self.lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
@@ -492,6 +502,8 @@ class Ledger:
             at = utcnow()
             updated = evolve(state, command, at)
             body = {"seq": count + 1, "prev": head, "at": at, "command": command}
+            if approved_by is not None:
+                body["approved_by"] = approved_by
             event = {**body, "hash": digest(body)}
             with self.events.open("ab") as fh:
                 fh.write(canonical(event) + b"\n")
