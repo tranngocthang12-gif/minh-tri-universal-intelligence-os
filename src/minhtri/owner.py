@@ -21,7 +21,9 @@ ENV_SECRET = "MINHTRI_OWNER_SECRET"
 PLACEHOLDER_ID = "doi-ten-owner"
 PLACEHOLDER_SECRET_SHA256 = "0" * 64
 SENSITIVE_APPLY_TYPES = frozenset({"activate_trial_lesson", "set_learning_focus"})
-CONFIG_FIELDS = {"owner_id", "owner_secret_sha256"}
+CONFIG_FIELDS = {"owner_id", "owner_secret_sha256", "credential"}
+V2_SCHEME = "pbkdf2-sha256"
+V2_ITERATIONS_MIN = 200_000
 WRITE_GATE_TOKEN = object()
 
 
@@ -46,6 +48,29 @@ def hash_secret(secret: str) -> str:
     return hashlib.sha256(secret.encode("utf-8")).hexdigest()
 
 
+def derive_v2(secret: str, salt_hex: str, iterations: int) -> str:
+    try:
+        salt = bytes.fromhex(salt_hex)
+    except ValueError as exc:
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "credential salt must be hex") from exc
+    if len(salt) < 16 or type(iterations) is not int or iterations < V2_ITERATIONS_MIN:
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "credential salt/iterations below v2 minimum")
+    return hashlib.pbkdf2_hmac("sha256", secret.encode("utf-8"), salt, iterations).hex()
+
+
+def verify_v2(secret: str, credential: dict) -> bool:
+    if not isinstance(credential, dict) or credential.get("version") != 2 or credential.get("scheme") != V2_SCHEME:
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "unsupported credential version or scheme")
+    if credential.get("revoked") is not False or not isinstance(credential.get("credential_id"), str):
+        raise OwnerGateError("OWNER_CREDENTIAL_REVOKED", "credential is revoked or invalid")
+    verifier = credential.get("verifier")
+    salt = credential.get("salt")
+    iterations = credential.get("iterations")
+    if not isinstance(verifier, str) or not re.fullmatch(r"[0-9a-f]{64}", verifier) or not isinstance(salt, str):
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "malformed v2 credential")
+    return hmac.compare_digest(derive_v2(secret, salt, iterations), verifier)
+
+
 def load_owner_config(path: Path) -> dict:
     if not path.is_file():
         raise OwnerGateError("MISSING_OWNER_CONFIG", f"{path} not found; copy config/owner.example.json and fill it in")
@@ -54,7 +79,9 @@ def load_owner_config(path: Path) -> dict:
     except (OSError, ValueError) as exc:
         raise OwnerGateError("INVALID_OWNER_CONFIG", f"{path} is not valid JSON") from exc
     if not isinstance(data, dict) or "owner_id" not in data or set(data) - CONFIG_FIELDS:
-        raise OwnerGateError("INVALID_OWNER_CONFIG", "config fields must be owner_id and owner_secret_sha256")
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "unsupported owner config fields")
+    if ("owner_secret_sha256" in data) == ("credential" in data):
+        raise OwnerGateError("INVALID_OWNER_CONFIG", "configure exactly one credential version")
     try:
         identifier(data["owner_id"], "owner_id")
     except GateError as exc:
@@ -67,6 +94,24 @@ def load_owner_config(path: Path) -> dict:
             raise OwnerGateError("INVALID_OWNER_CONFIG", "owner_secret_sha256 must be 64 lowercase hex characters")
         if digest == PLACEHOLDER_SECRET_SHA256:
             raise OwnerGateError("INVALID_OWNER_CONFIG", "owner_secret_sha256 is still the example placeholder")
+    else:
+        credential = data["credential"]
+        if not isinstance(credential, dict) or credential.get("version") != 2 or credential.get("scheme") != V2_SCHEME:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "unsupported credential version or scheme")
+        required = {"version", "scheme", "iterations", "salt", "verifier", "credential_id", "revoked"}
+        if set(credential) != required:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "v2 credential fields are incomplete or unsupported")
+        if type(credential["iterations"]) is not int or credential["iterations"] < V2_ITERATIONS_MIN:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential iterations below v2 minimum")
+        salt = credential["salt"]
+        if not isinstance(salt, str) or not re.fullmatch(r"[0-9a-f]+", salt) or len(salt) < 32 or len(salt) % 2:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential salt must be at least 16 bytes of lowercase hex")
+        if not isinstance(credential["verifier"], str) or not re.fullmatch(r"[0-9a-f]{64}", credential["verifier"]):
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential verifier must be 64 lowercase hex characters")
+        if not isinstance(credential["credential_id"], str) or not credential["credential_id"]:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential_id is required")
+        if type(credential["revoked"]) is not bool:
+            raise OwnerGateError("INVALID_OWNER_CONFIG", "credential revoked must be boolean")
     return data
 
 
@@ -77,10 +122,12 @@ def require_owner(actor: str | None, secret: str | None, path: Path) -> str:
         raise OwnerGateError("OWNER_ID_REQUIRED", "pass --owner-id for this command")
     if actor != config["owner_id"]:
         raise OwnerGateError("OWNER_MISMATCH", "--owner-id does not match the configured owner_id")
-    if "owner_secret_sha256" not in config:
-        raise OwnerGateError("MISSING_OWNER_SECRET", "config has no owner_secret_sha256; run hash-secret and add it")
     if not secret:
         raise OwnerGateError("OWNER_SECRET_REQUIRED", f"pass --owner-secret or set {ENV_SECRET}")
-    if not hmac.compare_digest(hash_secret(secret), config["owner_secret_sha256"]):
-        raise OwnerGateError("OWNER_SECRET_MISMATCH", "secret does not match owner_secret_sha256")
+    if "credential" in config:
+        matched = verify_v2(secret, config["credential"])
+    else:
+        matched = hmac.compare_digest(hash_secret(secret), config["owner_secret_sha256"])
+    if not matched:
+        raise OwnerGateError("OWNER_SECRET_MISMATCH", "secret does not match configured Owner credential")
     return config["owner_id"]
