@@ -18,5 +18,10 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "SECURE_CURRENT_STATE_SYNC_AND_READ_ONLY_BRAIN_BRIDGE"
+  "next_checkpoint": "ATOMIC_RECOVERY_PACKET_AND_ANCHOR_HARDENING",
+  "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
+  "zero_chat_local_recovery_contract": "CI_PROVEN",
+  "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
+  "external_anchor_publication": false,
+  "end_to_end_seat_brain_transport": false
 }
