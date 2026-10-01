@@ -33,13 +33,12 @@ class OwnerGateError(GateError):
 def config_path(explicit: str | None) -> Path:
     """Return the fixed Owner config path.
 
-    Production authorization must not trust a caller-selected config. The optional
-    argument remains only so older callers fail closed instead of silently switching
-    authority files.
+    The authority file is resolved from the package/repository root, not caller CWD,
+    command-line input, or environment variables.
     """
     if explicit is not None:
         raise OwnerGateError("OWNER_CONFIG_OVERRIDE_BLOCKED", "Owner config path is fixed at config/owner.json")
-    return DEFAULT_CONFIG
+    return Path(__file__).resolve().parents[2] / DEFAULT_CONFIG
 
 
 def hash_secret(secret: str) -> str:
