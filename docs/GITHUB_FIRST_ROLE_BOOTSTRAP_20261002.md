@@ -255,3 +255,26 @@ This file is a governance/architecture record created from the Owner instruction
 It preserves the current findings without modifying Tier-1 runtime code.
 
 No claim in this document is automatically VERIFIED merely because it is in GitHub.
+
+
+## 10. SYNCHRONIZATION UPDATE — 2026-10-02
+
+Owner ordered an immediate architecture/law synchronization.
+
+The durable bootstrap route is now:
+
+```text
+PROJECT_STATE.json
+→ LAW_INDEX_20261002.md
+→ ARCHITECTURE_NOW_20261002.md
+→ GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md
+→ task/domain source
+```
+
+Rules:
+- `LAW_INDEX_20261002.md` routes stable law and labels historical aids.
+- `ARCHITECTURE_NOW_20261002.md` is the current architecture record.
+- `PROJECT_STATE.json` is the machine-readable pointer to current authority.
+- Old files remain for provenance and are not deleted.
+- A seat must fresh-read live authority rather than trust a SHA copied into an old chat.
+- Synchronization here means GitHub records are aligned. It does **not** claim local `brain/` synchronization, because that bridge is not connected.
