@@ -13,7 +13,7 @@
   "current_law_index": "docs/LAW_INDEX_20261002.md",
   "current_architecture": "docs/ARCHITECTURE_NOW_20261002.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "ARCHITECTURE_SECURITY_SYNCHRONIZATION",
+  "active_workstream": "LOCAL_BRAIN_TRANSPORT_AND_EXTERNAL_WITNESS",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -31,5 +31,10 @@
   "owner_credential_v2": "VERIFIER_IMPLEMENTED_AND_MERGED",
   "owner_credential_v1": "MIGRATION_COMPATIBILITY_ACTIVE",
   "historical_anchor_prefix_verification": "IMPLEMENTED_AND_MERGED",
-  "anchor_timestamp_policy": "UTC_Z_STRICT_MONOTONIC_IMPLEMENTED"
+  "anchor_timestamp_policy": "UTC_Z_STRICT_MONOTONIC_IMPLEMENTED",
+  "readonly_brain_transport_dispatcher": "IMPLEMENTED_AND_MERGED_BASELINE",
+  "brain_http_host": "IMPLEMENTED_PENDING_CI_AND_MERGE",
+  "brain_http_e2e_test": "PENDING_CI",
+  "owner_pc_brain_http_host_running": "UNKNOWN",
+  "chatgpt_to_owner_pc_brain_connector": "NOT_CONNECTED"
 }
