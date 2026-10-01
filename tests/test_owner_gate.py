@@ -1,4 +1,5 @@
 import contextlib
+import hashlib
 import io
 import json
 import os
@@ -19,7 +20,16 @@ class OwnerGate(unittest.TestCase):
         root = Path(self.tmp.name)
         self.home = str(root / "brain")
         self.config = root / "owner.json"
-        self.config.write_text('{"owner_id": "test-owner"}', encoding="utf-8")
+        self.config.write_text(json.dumps({"owner_id": "test-owner",
+                                           "owner_secret_sha256": hashlib.sha256(b"test-secret").hexdigest()}),
+                               encoding="utf-8")
+        self.no_secret = root / "no-secret.json"
+        self.no_secret.write_text('{"owner_id": "test-owner"}', encoding="utf-8")
+        env = mock.patch.dict(os.environ)
+        env.start()
+        self.addCleanup(env.stop)
+        os.environ.pop("MINHTRI_OWNER_SECRET", None)
+        os.environ.pop("MINHTRI_OWNER_CONFIG", None)
         self.missing = root / "missing.json"
         self.cli("init")
         self.cli("apply", str(EXAMPLES / "01-domain-youtube.json"))
@@ -27,12 +37,14 @@ class OwnerGate(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def cli(self, *argv, config=None, owner=None, expect=0):
+    def cli(self, *argv, config=None, owner=None, secret="test-secret", expect=0):
         prefix = ["--home", self.home]
         if config is not None:
             prefix += ["--owner-config", str(config)]
         if owner is not None:
             prefix += ["--owner-id", owner]
+        if secret is not None:
+            prefix += ["--owner-secret", secret]
         out, err = io.StringIO(), io.StringIO()
         with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
             code = main([*prefix, *argv])
@@ -98,6 +110,45 @@ class OwnerGate(unittest.TestCase):
         bad = Path(self.tmp.name) / "bad.json"
         bad.write_text('{"owner_id": "Test Owner", "extra": 1}', encoding="utf-8")
         self.assertEqual(self.cli(*self.learn_args(), config=bad, owner="x", expect=2)["reason"], "INVALID_OWNER_CONFIG")
+
+    def test_secret_checks_in_order_and_block_without_writing(self):
+        before = self.events()
+        reasons = [
+            self.cli(*self.learn_args(), config=self.missing, owner=None, secret=None, expect=2)["reason"],
+            self.cli(*self.learn_args(), config=self.no_secret, owner="test-owner", expect=2)["reason"],
+            self.cli(*self.learn_args(), config=self.config, owner="test-owner", secret=None, expect=2)["reason"],
+            self.cli(*self.learn_args(), config=self.config, owner="test-owner", secret="wrong", expect=2)["reason"],
+            self.cli("unfocus", config=self.config, owner="test-owner", secret="wrong", expect=2)["reason"],
+            self.cli("apply", str(EXAMPLES / "05-owner-learn-social-case.json"), secret=None)["status"],
+        ]
+        self.assertEqual(reasons, ["MISSING_OWNER_CONFIG", "MISSING_OWNER_SECRET", "OWNER_SECRET_REQUIRED",
+                                   "OWNER_SECRET_MISMATCH", "OWNER_SECRET_MISMATCH", "APPLIED"])
+        focus = EXAMPLES / "06-owner-learn-youtube-mv-market.json"
+        self.assertEqual(self.cli("apply", str(focus), config=self.config, owner="test-owner", secret="wrong",
+                                  expect=2)["reason"], "OWNER_SECRET_MISMATCH")
+        self.assertEqual(self.events(), before + 1)  # only the ungated record_source
+
+    def test_secret_from_env_and_read_only_commands_need_no_secret(self):
+        os.environ["MINHTRI_OWNER_SECRET"] = "test-secret"
+        self.assertEqual(self.cli(*self.learn_args(), config=self.config, owner="test-owner", secret=None)["status"],
+                         "FOCUS_SET")
+        os.environ.pop("MINHTRI_OWNER_SECRET")
+        for action in ("focus", "status", "verify"):
+            self.assertEqual(self.cli(action, secret=None)["status"], "VALID")
+
+    def test_placeholder_secret_hash_is_rejected(self):
+        bad = Path(self.tmp.name) / "zero.json"
+        bad.write_text(json.dumps({"owner_id": "test-owner", "owner_secret_sha256": "0" * 64}), encoding="utf-8")
+        self.assertEqual(self.cli(*self.learn_args(), config=bad, owner="test-owner", expect=2)["reason"],
+                         "INVALID_OWNER_CONFIG")
+
+    def test_hash_secret_reads_stdin_and_prints_only_the_hash(self):
+        out = io.StringIO()
+        with mock.patch("sys.stdin", io.StringIO("test-secret\n")), contextlib.redirect_stdout(out):
+            self.assertEqual(main(["hash-secret"]), 0)
+        printed = out.getvalue()
+        self.assertEqual(json.loads(printed)["owner_secret_sha256"], hashlib.sha256(b"test-secret").hexdigest())
+        self.assertNotIn("test-secret", printed)
 
 
 if __name__ == "__main__":

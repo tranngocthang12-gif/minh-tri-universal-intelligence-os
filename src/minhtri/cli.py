@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import getpass
 import json
+import os
 import sys
 from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
-from .owner import SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, require_owner
+from .owner import ENV_SECRET, SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, hash_secret, require_owner
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -66,6 +68,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--home", default="brain", help="Local ledger directory (default: brain)")
     parser.add_argument("--owner-id", help="Declared actor ID for Owner-only commands (not identity verification)")
     parser.add_argument("--owner-config", help="Owner config path (default: $MINHTRI_OWNER_CONFIG or config/owner.json)")
+    parser.add_argument("--owner-secret", help=f"Owner secret (prefer ${ENV_SECRET}; a flag can end up in shell history)")
     sub = parser.add_subparsers(dest="action", required=True)
     sub.add_parser("init", help="Create a new empty ledger")
     command = sub.add_parser("apply", help="Apply one JSON command from a file")
@@ -84,16 +87,27 @@ def main(argv: list[str] | None = None) -> int:
     learn.add_argument("--source-kind", choices=("THIRD_PARTY", "PUBLIC", "FIRST_PARTY"), default="THIRD_PARTY")
     learn.add_argument("--rights", choices=("UNKNOWN", "CLEAR", "RESTRICTED"), default="UNKNOWN")
     learn.add_argument("--id", help="Optional focus ID (lowercase); generated from time if omitted")
+    sub.add_parser("hash-secret", help="Print the SHA-256 of a secret read without echo (or from piped stdin)")
     sub.add_parser("focus", help="Show the current learning focus")
     unfocus = sub.add_parser("unfocus", help="Stop the current focus; history is kept")
     unfocus.add_argument("--reason", default="Owner dừng tập trung", help="Why the focus stops")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
 
-    def gate() -> None:
-        require_owner(args.owner_id, config_path(args.owner_config))
+    def gate() -> str:
+        secret = args.owner_secret or os.environ.get(ENV_SECRET)
+        return require_owner(args.owner_id, secret, config_path(args.owner_config))
 
     try:
+        if args.action == "hash-secret":
+            if sys.stdin.isatty():
+                secret = getpass.getpass("Owner secret (not shown): ")
+            else:
+                secret = sys.stdin.readline().rstrip("\r\n")
+            if not secret:
+                raise GateError("Empty secret")
+            print(json.dumps({"owner_secret_sha256": hash_secret(secret)}))
+            return 0
         if args.action == "init":
             ledger.init()
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
