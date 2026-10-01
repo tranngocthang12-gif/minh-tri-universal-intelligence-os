@@ -13,12 +13,12 @@
   "current_law_index": "docs/LAW_INDEX_20261002.md",
   "current_architecture": "docs/ARCHITECTURE_NOW_20261002.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "LOCAL_BRAIN_TRANSPORT_AND_EXTERNAL_WITNESS",
+  "active_workstream": "OWNER_PC_TRANSPORT_ACTIVATION_AND_FIRST_EXTERNAL_WITNESS",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "INDEPENDENT_EXTERNAL_WITNESS_REQUIRES_OWNER_APPROVED_SEPARATE_WRITE_AUTHORITY",
+  "next_checkpoint": "OBSERVE_OWNER_PC_BRAIN_HOST_THEN_PUBLISH_AND_READ_BACK_FIRST_REAL_EXTERNAL_WITNESS",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -26,7 +26,7 @@
   "end_to_end_seat_brain_transport": false,
   "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
   "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
-  "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
+  "external_anchor_publication_blocker": "OWNER_PC_TRANSPORT_NOT_CONNECTED_AND_NO_REAL_REMOTE_RECEIPT_YET",
   "readonly_brain_transport_contract": "RECORDED_NOT_IMPLEMENTED",
   "owner_credential_v2": "VERIFIER_IMPLEMENTED_AND_MERGED",
   "owner_credential_v1": "MIGRATION_COMPATIBILITY_ACTIVE",
@@ -36,5 +36,8 @@
   "brain_http_host": "IMPLEMENTED_PENDING_CI_AND_MERGE",
   "brain_http_e2e_test": "PENDING_CI",
   "owner_pc_brain_http_host_running": "UNKNOWN",
-  "chatgpt_to_owner_pc_brain_connector": "NOT_CONNECTED"
+  "chatgpt_to_owner_pc_brain_connector": "NOT_CONNECTED",
+  "external_witness_receipt_verifier": "IMPLEMENTED_PENDING_CI_AND_MERGE",
+  "whole_history_rewrite_detection": "TESTED_PENDING_CI",
+  "external_witness_publication_authority": "CLOUD_CONNECTOR_DESIGNATED_NOT_ACTIVATED_ON_OWNER_BRAIN"
 }
