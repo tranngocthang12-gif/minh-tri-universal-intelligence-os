@@ -85,3 +85,5 @@ Owner merge. Kiến trúc sư không tự merge PR này.
 - Xem [LAW_EVIDENCE_AND_HUMILITY_20261001.md](LAW_EVIDENCE_AND_HUMILITY_20261001.md): 5 luật nguyên văn của Owner, trạng thái UNTESTED.
 - Không lấy lời AI làm VERIFIED; không biết thì nói KHÔNG BIẾT; áp dụng ghế phản biện cho mọi claim trên chat và sổ.
 - Luật động: tool là ghế/dụng cụ, không phải luật — xem [LAW_DYNAMIC_TOOLS_20261001.md](LAW_DYNAMIC_TOOLS_20261001.md).
+
+- 2026-10-01: Owner chọn MỘT CỬA (ChatGPT project MINH TRÍ) — xem `ONE_DOOR_20261001.md`.
