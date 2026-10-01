@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from minhtri.core import GateError, Ledger, current_focus, evolve, initial_state
+from tests.support import ledger_apply, ledger_repair, write_owner_config
 
 
 def cmd(command_type, **data):
@@ -77,20 +78,21 @@ class LearningFocus(unittest.TestCase):
     def test_ledger_verify_and_snapshot_stay_consistent(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
+            config = write_owner_config(tmp)
             ledger.init()
-            ledger.apply(cmd("register_domain", id="alpha", name="Alpha", risk_class="NORMAL", measurement_contract="Log"))
-            ledger.apply(cmd("record_source", id="s1", domain_id="alpha", uri="https://example.invalid/a",
-                             captured_at="2026-01-01T00:00:00Z", kind="THIRD_PARTY", rights_status="UNKNOWN"))
+            ledger_apply(ledger, cmd("register_domain", id="alpha", name="Alpha", risk_class="NORMAL", measurement_contract="Log"), config)
+            ledger_apply(ledger, cmd("record_source", id="s1", domain_id="alpha", uri="https://example.invalid/a",
+                             captured_at="2026-01-01T00:00:00Z", kind="THIRD_PARTY", rights_status="UNKNOWN"), config)
             before = json.loads(ledger.snapshot.read_text(encoding="utf-8"))
             self.assertNotIn("learning_focuses", before["state"])
-            ledger.apply(cmd("set_learning_focus", id="f1", status="ACTIVE", domain_id="alpha", source_id="s1",
-                             note="n", expected_lesson="e", uncertainty="u"))
-            ledger.apply(cmd("set_learning_focus", id="f1", status="STOPPED", reason="done"))
+            ledger_apply(ledger, cmd("set_learning_focus", id="f1", status="ACTIVE", domain_id="alpha", source_id="s1",
+                             note="n", expected_lesson="e", uncertainty="u"), config)
+            ledger_apply(ledger, cmd("set_learning_focus", id="f1", status="STOPPED", reason="done"), config)
             state, count, _ = ledger.verify()
             self.assertEqual(count, 4)
             self.assertEqual(state["learning_focuses"]["f1"]["status"], "STOPPED")
             ledger.snapshot.write_text("{}", encoding="utf-8")
-            ledger.repair_snapshot()
+            ledger_repair(ledger, config)
             self.assertEqual(ledger.verify()[0], state)
 
 
