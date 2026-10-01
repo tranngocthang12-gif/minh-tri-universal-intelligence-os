@@ -19,7 +19,7 @@ Scope is deliberately narrow. No music/MV files are touched.
 
 ## Still open
 
-- `approved_by` is an identifier, not cryptographic proof inside the Ledger API. Code with arbitrary Python execution can still call the API with a forged non-empty id. Full in-process capability security needs a stronger design.
+- Direct `Ledger.apply` and `repair_snapshot` now authenticate actor+secret internally against the fixed Owner config. Arbitrary Python execution that can read the Owner secret/config remains outside this local-process trust boundary.
 - Shared secret storage remains unsalted SHA-256; migrate to a password KDF or keyed verifier in a compatibility-safe change.
 - Local ledger hash chain still lacks an immutable/external anchor, so an attacker with full filesystem write can rewrite the complete history and recompute hashes.
 - Provider IDs remain declared identities.
@@ -43,4 +43,4 @@ The pre-existing tests still encode the old security contract in several places:
 
 Those expectations must not be preserved because they are the bypasses this patch is closing.
 
-A dedicated `tests/test_security_p0.py` now asserts the new fail-closed boundary. The full legacy suite has not been executed on this branch and is expected to require migration to a test-only authenticated fixture before the branch can be VERIFIED.
+A dedicated `tests/test_security_p0.py` now asserts authentication inside the mutation boundary. The full legacy suite has not been executed on this branch and still requires migration to test-only authenticated fixtures before the branch can be VERIFIED.
