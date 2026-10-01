@@ -1,6 +1,6 @@
 # SECURITY P0 HARDENING — 2026-10-02
 
-Status: CANDIDATE PATCH / NOT VERIFIED BY TEST RUN
+Status: CANDIDATE PATCH / REGRESSION TESTS ADDED / TEST RUN NOT VERIFIED
 
 Scope is deliberately narrow. No music/MV files are touched.
 
@@ -31,3 +31,16 @@ Scope is deliberately narrow. No music/MV files are touched.
 This patch intentionally changes write semantics: formerly ungated `apply` calls are now gated. Existing ledger replay remains readable because historical events are not rewritten.
 
 No claim here is VERIFIED until tests are run on the exact branch commit.
+
+
+## Test compatibility audit
+
+The pre-existing tests still encode the old security contract in several places:
+- caller-selected `--owner-config`;
+- ungated `Ledger.apply`;
+- ungated `repair_snapshot`;
+- ungated non-sensitive CLI `apply`.
+
+Those expectations must not be preserved because they are the bypasses this patch is closing.
+
+A dedicated `tests/test_security_p0.py` now asserts the new fail-closed boundary. The full legacy suite has not been executed on this branch and is expected to require migration to a test-only authenticated fixture before the branch can be VERIFIED.
