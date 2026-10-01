@@ -9,5 +9,14 @@
   "real_business_loop_validated": false,
   "external_actions_enabled": false,
   "owner_identity_verified": false,
-  "next_checkpoint": "ONE_READ_ONLY_REAL_DOMAIN_PILOT_WITH_PROVENANCE_AND_OWNER_GATE"
+  "durable_project_memory": "GITHUB_FIRST",
+  "current_law_index": "docs/LAW_INDEX_20261002.md",
+  "current_architecture": "docs/ARCHITECTURE_NOW_20261002.md",
+  "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+  "active_workstream": "ARCHITECTURE_SECURITY_SYNCHRONIZATION",
+  "autonomous_learning_runtime": false,
+  "automatic_self_critique_runtime": false,
+  "meta_learning_runtime": false,
+  "local_brain_connected": false,
+  "next_checkpoint": "SECURE_CURRENT_STATE_SYNC_AND_READ_ONLY_BRAIN_BRIDGE"
 }
