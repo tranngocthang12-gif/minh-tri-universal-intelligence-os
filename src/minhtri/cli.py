@@ -52,14 +52,14 @@ def _learn_commands(state: dict, args: argparse.Namespace, now: str) -> tuple[st
     return base, commands
 
 
-def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str) -> dict:
+def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str, approved_by: str) -> dict:
     """Dry-run every command first so a rejected request appends nothing."""
     trial = state
     for command in commands:
         trial = evolve(trial, command, now)
     result = {}
     for command in commands:
-        result = ledger.apply(command)
+        result = ledger.apply(command, approved_by=approved_by)
     return result
 
 
@@ -113,16 +113,15 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
         elif args.action == "apply":
             payload = json.loads(args.json_file.read_text(encoding="utf-8"))
-            if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES:
-                gate()
-            result = ledger.apply(payload)
+            approver = gate() if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES else None
+            result = ledger.apply(payload, approved_by=approver)
             result = {"status": "APPLIED", "event_count": result["event_count"], "head": result["head"]}
         elif args.action == "learn":
-            gate()
+            approver = gate()
             state, _, _ = ledger.verify()
             now = utcnow()
             focus_id, commands = _learn_commands(state, args, now)
-            applied = _apply_all(ledger, state, commands, now)
+            applied = _apply_all(ledger, state, commands, now, approver)
             result = {"status": "FOCUS_SET", "focus": applied["state"]["learning_focuses"][focus_id],
                       "events_appended": len(commands), "event_count": applied["event_count"],
                       "head": applied["head"]}
@@ -132,13 +131,14 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "VALID", "event_count": count, "head": head,
                       "focus": focus if focus else "NO_ACTIVE_FOCUS"}
         elif args.action == "unfocus":
-            gate()
+            approver = gate()
             state, _, _ = ledger.verify()
             focus = current_focus(state)
             if not focus:
                 raise GateError("No active focus to stop")
             applied = ledger.apply({"type": "set_learning_focus",
-                                    "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}})
+                                    "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}},
+                                   approved_by=approver)
             result = {"status": "FOCUS_STOPPED", "focus": applied["state"]["learning_focuses"][focus["id"]],
                       "event_count": applied["event_count"], "head": applied["head"]}
         elif args.action == "repair-snapshot":

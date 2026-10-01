@@ -150,6 +150,21 @@ class OwnerGate(unittest.TestCase):
         self.assertEqual(json.loads(printed)["owner_secret_sha256"], hashlib.sha256(b"test-secret").hexdigest())
         self.assertNotIn("test-secret", printed)
 
+    def test_gated_events_record_approver_never_the_secret(self):
+        self.cli("apply", str(EXAMPLES / "05-owner-learn-social-case.json"), secret=None)
+        self.cli("apply", str(EXAMPLES / "06-owner-learn-youtube-mv-market.json"), config=self.config, owner="test-owner")
+        self.cli(*self.learn_args(), config=self.config, owner="test-owner")
+        self.cli("unfocus", config=self.config, owner="test-owner")
+        raw = Ledger(self.home).events.read_text(encoding="utf-8")
+        events = [json.loads(line) for line in raw.splitlines()]
+        self.assertNotIn("approved_by", events[0])  # 01 domain: ungated
+        self.assertNotIn("approved_by", events[1])  # 05 record_source via apply: ungated
+        self.assertTrue(all(e.get("approved_by") == "test-owner" for e in events[2:]))
+        self.assertGreaterEqual(len(events[2:]), 4)  # 06 focus, learn (source + focus), unfocus
+        self.assertNotIn("test-secret", raw)
+        self.assertNotIn(hashlib.sha256(b"test-secret").hexdigest(), raw)
+        self.assertEqual(self.cli("verify", secret=None)["status"], "VALID")
+
 
 if __name__ == "__main__":
     unittest.main()
