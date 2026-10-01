@@ -34,7 +34,7 @@ The bridge is a Python/local contract only. It is **not yet connected to ChatGPT
 
 ## Security dependency
 
-This branch is based on Security P0 PR #40 head `214aa063dde7ea30d1b7b26ee92e7ea0b37a672f` rather than current `main`. It must not be merged before the required security base is canonical or otherwise reconciled.
+This reconciled branch is based on canonical main after Security P0 PR #40 and governance PR #39 were merged. Security dependency is therefore satisfied at branch creation; exact-head CI is still required.
 
 ## Acceptance tests
 
