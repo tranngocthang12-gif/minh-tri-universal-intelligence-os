@@ -17,12 +17,12 @@ from pathlib import Path
 from .core import GateError, identifier
 
 DEFAULT_CONFIG = Path("config") / "owner.json"
-ENV_CONFIG = "MINHTRI_OWNER_CONFIG"
 ENV_SECRET = "MINHTRI_OWNER_SECRET"
 PLACEHOLDER_ID = "doi-ten-owner"
 PLACEHOLDER_SECRET_SHA256 = "0" * 64
 SENSITIVE_APPLY_TYPES = frozenset({"activate_trial_lesson", "set_learning_focus"})
 CONFIG_FIELDS = {"owner_id", "owner_secret_sha256"}
+WRITE_GATE_TOKEN = object()
 
 
 class OwnerGateError(GateError):
@@ -32,7 +32,14 @@ class OwnerGateError(GateError):
 
 
 def config_path(explicit: str | None) -> Path:
-    return Path(explicit or os.environ.get(ENV_CONFIG) or DEFAULT_CONFIG)
+    """Return the fixed Owner config path.
+
+    The authority file is resolved from the package/repository root, not caller CWD,
+    command-line input, or environment variables.
+    """
+    if explicit is not None:
+        raise OwnerGateError("OWNER_CONFIG_OVERRIDE_BLOCKED", "Owner config path is fixed at config/owner.json")
+    return Path(__file__).resolve().parents[2] / DEFAULT_CONFIG
 
 
 def hash_secret(secret: str) -> str:

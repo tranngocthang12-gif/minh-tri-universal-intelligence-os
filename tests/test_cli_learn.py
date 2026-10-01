@@ -5,6 +5,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 from minhtri.cli import main
 from minhtri.core import Ledger
@@ -17,6 +18,9 @@ class CliLearn(unittest.TestCase):
         self.config = Path(self.tmp.name) / "owner.json"
         secret_hash = hashlib.sha256(b"test-secret").hexdigest()
         self.config.write_text(json.dumps({"owner_id": "test-owner", "owner_secret_sha256": secret_hash}), encoding="utf-8")
+        self.config_patch = mock.patch("minhtri.owner.config_path", return_value=self.config)
+        self.config_patch.start()
+        self.addCleanup(self.config_patch.stop)
         self.run_cli("init")
 
     def tearDown(self):
@@ -25,8 +29,7 @@ class CliLearn(unittest.TestCase):
     def run_cli(self, *argv, expect=0):
         out, err = io.StringIO(), io.StringIO()
         with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
-            code = main(["--home", self.home, "--owner-config", str(self.config), "--owner-id", "test-owner",
-                         "--owner-secret", "test-secret", *argv])
+            code = main(["--home", self.home, "--owner-id", "test-owner", "--owner-secret", "test-secret", *argv])
         self.assertEqual(code, expect, err.getvalue())
         return json.loads(out.getvalue() or err.getvalue())
 

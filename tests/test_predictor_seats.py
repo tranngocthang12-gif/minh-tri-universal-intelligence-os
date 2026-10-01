@@ -3,6 +3,7 @@ import unittest
 from pathlib import Path
 
 from minhtri.core import GateError, Ledger, canonical, digest, evolve, initial_state
+from tests.support import ledger_apply, ledger_repair, write_owner_config
 
 
 def cmd(command_type, **data):
@@ -64,18 +65,19 @@ class PredictorSeats(unittest.TestCase):
     def test_ledger_written_before_the_rule_still_verifies_but_new_append_is_blocked(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
+            config = write_owner_config(tmp)
             ledger.init()
             for command in SETUP:
-                ledger.apply(command)
+                ledger_apply(ledger, command, config)
             # Simulate an older ledger line where the proposer also predicted (allowed before this rule).
             state, count, head = ledger.verify()
             body = {"seq": count + 1, "prev": head, "at": "2026-01-01T00:00:00Z", "command": prediction("old", "proc-maker")}
             with ledger.events.open("ab") as fh:
                 fh.write(canonical({**body, "hash": digest(body)}) + b"\n")
-            ledger.repair_snapshot()
+            ledger_repair(ledger, config)
             self.assertEqual(ledger.verify()[1], count + 1)
             with self.assertRaisesRegex(GateError, "Predictor must not be"):
-                ledger.apply(prediction("new", "proc-maker"))
+                ledger_apply(ledger, prediction("new", "proc-maker"), config)
             self.assertEqual(ledger.verify()[1], count + 1)
 
 

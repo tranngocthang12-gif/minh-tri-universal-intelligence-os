@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
-from .owner import ENV_SECRET, SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, hash_secret, require_owner
+from .owner import ENV_SECRET, OwnerGateError, hash_secret
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -52,14 +52,15 @@ def _learn_commands(state: dict, args: argparse.Namespace, now: str) -> tuple[st
     return base, commands
 
 
-def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str, approved_by: str) -> dict:
+def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str,
+               actor: str | None, secret: str | None) -> dict:
     """Dry-run every command first so a rejected request appends nothing."""
     trial = state
     for command in commands:
         trial = evolve(trial, command, now)
     result = {}
     for command in commands:
-        result = ledger.apply(command, approved_by=approved_by)
+        result = ledger.apply(command, actor=actor, secret=secret)
     return result
 
 
@@ -67,7 +68,6 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="minhtri", description="MINH TRÍ v0.1 learning ledger")
     parser.add_argument("--home", default="brain", help="Local ledger directory (default: brain)")
     parser.add_argument("--owner-id", help="Declared actor ID for Owner-only commands (not identity verification)")
-    parser.add_argument("--owner-config", help="Owner config path (default: $MINHTRI_OWNER_CONFIG or config/owner.json)")
     parser.add_argument("--owner-secret", help=f"Owner secret (prefer ${ENV_SECRET}; a flag can end up in shell history)")
     sub = parser.add_subparsers(dest="action", required=True)
     sub.add_parser("init", help="Create a new empty ledger")
@@ -94,9 +94,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
 
-    def gate() -> str:
-        secret = args.owner_secret or os.environ.get(ENV_SECRET)
-        return require_owner(args.owner_id, secret, config_path(args.owner_config))
+    def credentials() -> tuple[str | None, str | None]:
+        return args.owner_id, args.owner_secret or os.environ.get(ENV_SECRET)
 
     try:
         if args.action == "hash-secret":
@@ -113,15 +112,15 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
         elif args.action == "apply":
             payload = json.loads(args.json_file.read_text(encoding="utf-8"))
-            approver = gate() if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES else None
-            result = ledger.apply(payload, approved_by=approver)
+            actor, secret = credentials()
+            result = ledger.apply(payload, actor=actor, secret=secret)
             result = {"status": "APPLIED", "event_count": result["event_count"], "head": result["head"]}
         elif args.action == "learn":
-            approver = gate()
+            actor, secret = credentials()
             state, _, _ = ledger.verify()
             now = utcnow()
             focus_id, commands = _learn_commands(state, args, now)
-            applied = _apply_all(ledger, state, commands, now, approver)
+            applied = _apply_all(ledger, state, commands, now, actor, secret)
             result = {"status": "FOCUS_SET", "focus": applied["state"]["learning_focuses"][focus_id],
                       "events_appended": len(commands), "event_count": applied["event_count"],
                       "head": applied["head"]}
@@ -131,18 +130,19 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "VALID", "event_count": count, "head": head,
                       "focus": focus if focus else "NO_ACTIVE_FOCUS"}
         elif args.action == "unfocus":
-            approver = gate()
+            actor, secret = credentials()
             state, _, _ = ledger.verify()
             focus = current_focus(state)
             if not focus:
                 raise GateError("No active focus to stop")
             applied = ledger.apply({"type": "set_learning_focus",
                                     "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}},
-                                   approved_by=approver)
+                                   actor=actor, secret=secret)
             result = {"status": "FOCUS_STOPPED", "focus": applied["state"]["learning_focuses"][focus["id"]],
                       "event_count": applied["event_count"], "head": applied["head"]}
         elif args.action == "repair-snapshot":
-            count, head = ledger.repair_snapshot()
+            actor, secret = credentials()
+            count, head = ledger.repair_snapshot(actor=actor, secret=secret)
             result = {"status": "REPAIRED", "event_count": count, "head": head}
         else:
             state, count, head = ledger.verify()

@@ -4,6 +4,7 @@ import unittest
 from pathlib import Path
 
 from minhtri.core import Ledger, current_focus
+from tests.support import ledger_apply, ledger_repair, write_owner_config
 
 EXAMPLES = Path(__file__).resolve().parent.parent / "examples"
 
@@ -14,9 +15,10 @@ class Examples(unittest.TestCase):
         self.assertGreaterEqual(len(files), 8)
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
+            config = write_owner_config(tmp)
             ledger.init()
             for path in files:
-                ledger.apply(json.loads(path.read_text(encoding="utf-8")))
+                ledger_apply(ledger, json.loads(path.read_text(encoding="utf-8")), config)
             state, count, _ = ledger.verify()
             self.assertEqual(count, len(files))
             focus = current_focus(state)
