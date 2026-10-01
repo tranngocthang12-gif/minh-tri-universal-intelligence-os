@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "OWNER_CREDENTIAL_V2_IMPLEMENTATION_THEN_HISTORICAL_PREFIX_ANCHOR",
+  "next_checkpoint": "INDEPENDENT_EXTERNAL_WITNESS_REQUIRES_OWNER_APPROVED_SEPARATE_WRITE_AUTHORITY",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -28,6 +28,8 @@
   "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
   "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
   "readonly_brain_transport_contract": "RECORDED_NOT_IMPLEMENTED",
-  "owner_credential_v2": "DESIGNED_NOT_IMPLEMENTED",
-  "owner_credential_v1": "ACTIVE_RAW_SHA256_PROTOTYPE"
+  "owner_credential_v2": "VERIFIER_IMPLEMENTED_AND_MERGED",
+  "owner_credential_v1": "MIGRATION_COMPATIBILITY_ACTIVE",
+  "historical_anchor_prefix_verification": "IMPLEMENTED_AND_MERGED",
+  "anchor_timestamp_policy": "UTC_Z_STRICT_MONOTONIC_IMPLEMENTED"
 }
