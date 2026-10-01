@@ -52,6 +52,49 @@ class BrainReader:
             "focus": focus if focus is not None else "NO_ACTIVE_FOCUS",
         }
 
+    def recovery_packet(self, query: str | None = None, limit: int = 20) -> dict[str, Any]:
+        """Return bootstrap state from one verified ledger replay/head.
+
+        Unlike composing get_head/get_current_focus/search_lessons calls, this method
+        cannot mix records from different legitimate ledger heads.
+        """
+        if query is not None and (not isinstance(query, str) or not query.strip()):
+            raise BrainReadError("query must be nonempty text when provided")
+        if type(limit) is not int or not 1 <= limit <= 100:
+            raise BrainReadError("limit must be an integer from 1 to 100")
+
+        state, count, head = self._verified()
+        focus = current_focus(state)
+        matches = []
+        if query is not None:
+            needle = query.casefold()
+            for lesson_id in sorted(state.get("lessons", {})):
+                lesson = state["lessons"][lesson_id]
+                haystack = " ".join(
+                    str(lesson.get(key, ""))
+                    for key in ("id", "statement", "limits", "status", "scope", "validation")
+                ).casefold()
+                if needle in haystack:
+                    matches.append({
+                        "id": lesson_id,
+                        "statement": lesson.get("statement"),
+                        "limits": lesson.get("limits"),
+                        "status": lesson.get("status"),
+                        "scope": lesson.get("scope"),
+                        "validation": lesson.get("validation"),
+                    })
+                    if len(matches) >= limit:
+                        break
+
+        return {
+            "status": "VALID",
+            "event_count": count,
+            "head": head,
+            "focus": focus if focus is not None else "NO_ACTIVE_FOCUS",
+            "lesson_query": query,
+            "lesson_matches": matches,
+        }
+
     def search_lessons(self, query: str, limit: int = 20) -> dict[str, Any]:
         """Search verified lesson records using deterministic case-insensitive text matching."""
         if not isinstance(query, str) or not query.strip():
