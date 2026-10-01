@@ -38,3 +38,5 @@ Trạng thái: UNTESTED. KHÔNG VERIFIED. Đây là bàn giao của Owner; ngư�
 - Cổng Owner có owner_id + secret SHA-256 (#30, #33); sổ ghi `approved_by`.
 - Lỗ còn lại: chưa có căn cước thật; gọi thẳng `Ledger.apply` hoặc sửa sổ tay đi vòng qua cổng.
 - Không merge PR #2–#11. Không crawler. Không commit secret.
+
+> Cập nhật 2026-10-01: Owner sửa — bàn giao riêng cho GPT là sai kế hoạch; AI là ghế thay được — xem `SEAT_SWAP_20261001.md`.
