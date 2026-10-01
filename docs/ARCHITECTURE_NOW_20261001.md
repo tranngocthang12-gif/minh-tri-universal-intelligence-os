@@ -93,3 +93,5 @@ Owner merge. Kiến trúc sư không tự merge PR này.
 - **CÒN LẠI**, `owner_ack` vẫn là chuỗi cố định.
 - **CÒN LẠI**, gọi thẳng `Ledger.apply` / sửa file sổ vẫn đi vòng qua cổng (và có thể tự khai `approved_by`). Viết lại toàn bộ chuỗi + snapshot thì không phát hiện được nếu không có mốc bên ngoài.
 - **CÒN LẠI**, vẫn không xác thực danh tính thật: ai giữ config + secret đều qua. SHA-256 không salt.
+
+- 2026-10-01: Owner chọn MỘT CỬA (ChatGPT project MINH TRÍ) — xem `ONE_DOOR_20261001.md`.
