@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "INDEPENDENT_EXTERNAL_ANCHOR_TARGET_THEN_END_TO_END_READONLY_BRAIN_TRANSPORT",
+  "next_checkpoint": "INSTALL_PRIVATE_READONLY_BRAIN_TRANSPORT_AND_RUN_FRESH_SEAT_E2E",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -26,5 +26,6 @@
   "end_to_end_seat_brain_transport": false,
   "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
   "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
-  "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN"
+  "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
+  "readonly_brain_transport_contract": "RECORDED_NOT_IMPLEMENTED"
 }
