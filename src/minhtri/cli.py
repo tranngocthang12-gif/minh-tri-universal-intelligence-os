@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
-from .owner import ENV_SECRET, OwnerGateError, config_path, hash_secret, require_owner
+from .owner import ENV_SECRET, WRITE_GATE_TOKEN, OwnerGateError, config_path, hash_secret, require_owner
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -59,7 +59,7 @@ def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str, appr
         trial = evolve(trial, command, now)
     result = {}
     for command in commands:
-        result = ledger.apply(command, approved_by=approved_by)
+        result = ledger.apply(command, approved_by=approved_by, _gate_token=WRITE_GATE_TOKEN)
     return result
 
 
@@ -113,7 +113,7 @@ def main(argv: list[str] | None = None) -> int:
         elif args.action == "apply":
             payload = json.loads(args.json_file.read_text(encoding="utf-8"))
             approver = gate()
-            result = ledger.apply(payload, approved_by=approver)
+            result = ledger.apply(payload, approved_by=approver, _gate_token=WRITE_GATE_TOKEN)
             result = {"status": "APPLIED", "event_count": result["event_count"], "head": result["head"]}
         elif args.action == "learn":
             approver = gate()
@@ -137,7 +137,7 @@ def main(argv: list[str] | None = None) -> int:
                 raise GateError("No active focus to stop")
             applied = ledger.apply({"type": "set_learning_focus",
                                     "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}},
-                                   approved_by=approver)
+                                   approved_by=approver, _gate_token=WRITE_GATE_TOKEN)
             result = {"status": "FOCUS_STOPPED", "focus": applied["state"]["learning_focuses"][focus["id"]],
                       "event_count": applied["event_count"], "head": applied["head"]}
         elif args.action == "repair-snapshot":
