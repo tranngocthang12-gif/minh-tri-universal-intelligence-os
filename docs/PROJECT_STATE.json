@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "INSTALL_PRIVATE_READONLY_BRAIN_TRANSPORT_AND_RUN_FRESH_SEAT_E2E",
+  "next_checkpoint": "OWNER_CREDENTIAL_V2_IMPLEMENTATION_THEN_HISTORICAL_PREFIX_ANCHOR",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -27,5 +27,7 @@
   "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
   "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
   "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
-  "readonly_brain_transport_contract": "RECORDED_NOT_IMPLEMENTED"
+  "readonly_brain_transport_contract": "RECORDED_NOT_IMPLEMENTED",
+  "owner_credential_v2": "DESIGNED_NOT_IMPLEMENTED",
+  "owner_credential_v1": "ACTIVE_RAW_SHA256_PROTOTYPE"
 }
