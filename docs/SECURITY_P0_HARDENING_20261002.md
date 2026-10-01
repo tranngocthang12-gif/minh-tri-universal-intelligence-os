@@ -1,6 +1,6 @@
 # SECURITY P0 HARDENING — 2026-10-02
 
-Status: CANDIDATE PATCH / REGRESSION TESTS ADDED / TEST RUN NOT VERIFIED
+Status: CANDIDATE PATCH / EXACT-SHA CI PASS ON 5cfc5073b80226c2e7024f35e8f8c2aea4087791 / CURRENT HEAD REQUIRES NEW CI
 
 Scope is deliberately narrow. No music/MV files are touched.
 
@@ -44,3 +44,12 @@ The pre-existing tests still encode the old security contract in several places:
 Those expectations must not be preserved because they are the bypasses this patch is closing.
 
 A dedicated `tests/test_security_p0.py` now asserts authentication inside the mutation boundary. The full legacy suite has not been executed on this branch and still requires migration to test-only authenticated fixtures before the branch can be VERIFIED.
+
+
+## CI evidence
+
+GitHub Actions workflow `Security P0 / test` completed successfully for exact SHA
+`5cfc5073b80226c2e7024f35e8f8c2aea4087791` on 2026-10-01 UTC.
+
+That proves the full unittest discovery command passed on that exact commit only.
+Subsequent commits must receive their own successful check before this branch is treated as test-verified.
