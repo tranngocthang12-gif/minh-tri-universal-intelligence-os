@@ -1,6 +1,6 @@
 # EXTERNAL LEDGER ANCHOR — DESIGN v0.1 — 2026-10-02
 
-**Status:** CANDIDATE DESIGN / NOT IMPLEMENTED / NOT VERIFIED
+**Status:** VERIFIER CANDIDATE IMPLEMENTED / PUBLICATION NOT IMPLEMENTED / NOT VERIFIED
 
 ## Threat addressed
 
@@ -72,3 +72,10 @@ Implementation cannot be promoted until:
 - Owner approves the external publication boundary.
 
 This design deliberately does not select a provider yet. Provider choice is replaceable; the invariant is not.
+
+
+## Implementation checkpoint — 2026-10-02
+
+A provider-neutral pure verifier now exists as `src/minhtri/anchor.py` with deterministic tests for exact match, missing anchor, mismatch, rollback, local-ahead, malformed/tampered records, and chained anchor pointers.
+
+This does **not** complete the security control. No independent external publication target has been selected or permission-reviewed, and no `anchor publish` mutation exists. Until an anchor is actually stored outside the local-ledger write authority, runtime protection against full local rewrite remains incomplete.
