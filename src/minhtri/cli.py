@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import getpass
 import json
+import os
 import sys
 from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
-from .owner import SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, require_owner
+from .owner import ENV_SECRET, SENSITIVE_APPLY_TYPES, OwnerGateError, config_path, hash_secret, require_owner
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -50,14 +52,14 @@ def _learn_commands(state: dict, args: argparse.Namespace, now: str) -> tuple[st
     return base, commands
 
 
-def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str) -> dict:
+def _apply_all(ledger: Ledger, state: dict, commands: list[dict], now: str, approved_by: str) -> dict:
     """Dry-run every command first so a rejected request appends nothing."""
     trial = state
     for command in commands:
         trial = evolve(trial, command, now)
     result = {}
     for command in commands:
-        result = ledger.apply(command)
+        result = ledger.apply(command, approved_by=approved_by)
     return result
 
 
@@ -66,6 +68,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--home", default="brain", help="Local ledger directory (default: brain)")
     parser.add_argument("--owner-id", help="Declared actor ID for Owner-only commands (not identity verification)")
     parser.add_argument("--owner-config", help="Owner config path (default: $MINHTRI_OWNER_CONFIG or config/owner.json)")
+    parser.add_argument("--owner-secret", help=f"Owner secret (prefer ${ENV_SECRET}; a flag can end up in shell history)")
     sub = parser.add_subparsers(dest="action", required=True)
     sub.add_parser("init", help="Create a new empty ledger")
     command = sub.add_parser("apply", help="Apply one JSON command from a file")
@@ -84,31 +87,41 @@ def main(argv: list[str] | None = None) -> int:
     learn.add_argument("--source-kind", choices=("THIRD_PARTY", "PUBLIC", "FIRST_PARTY"), default="THIRD_PARTY")
     learn.add_argument("--rights", choices=("UNKNOWN", "CLEAR", "RESTRICTED"), default="UNKNOWN")
     learn.add_argument("--id", help="Optional focus ID (lowercase); generated from time if omitted")
+    sub.add_parser("hash-secret", help="Print the SHA-256 of a secret read without echo (or from piped stdin)")
     sub.add_parser("focus", help="Show the current learning focus")
     unfocus = sub.add_parser("unfocus", help="Stop the current focus; history is kept")
     unfocus.add_argument("--reason", default="Owner dừng tập trung", help="Why the focus stops")
     args = parser.parse_args(argv)
     ledger = Ledger(args.home)
 
-    def gate() -> None:
-        require_owner(args.owner_id, config_path(args.owner_config))
+    def gate() -> str:
+        secret = args.owner_secret or os.environ.get(ENV_SECRET)
+        return require_owner(args.owner_id, secret, config_path(args.owner_config))
 
     try:
+        if args.action == "hash-secret":
+            if sys.stdin.isatty():
+                secret = getpass.getpass("Owner secret (not shown): ")
+            else:
+                secret = sys.stdin.readline().rstrip("\r\n")
+            if not secret:
+                raise GateError("Empty secret")
+            print(json.dumps({"owner_secret_sha256": hash_secret(secret)}))
+            return 0
         if args.action == "init":
             ledger.init()
             result = {"status": "INITIALIZED", "home": str(ledger.home)}
         elif args.action == "apply":
             payload = json.loads(args.json_file.read_text(encoding="utf-8"))
-            if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES:
-                gate()
-            result = ledger.apply(payload)
+            approver = gate() if isinstance(payload, dict) and payload.get("type") in SENSITIVE_APPLY_TYPES else None
+            result = ledger.apply(payload, approved_by=approver)
             result = {"status": "APPLIED", "event_count": result["event_count"], "head": result["head"]}
         elif args.action == "learn":
-            gate()
+            approver = gate()
             state, _, _ = ledger.verify()
             now = utcnow()
             focus_id, commands = _learn_commands(state, args, now)
-            applied = _apply_all(ledger, state, commands, now)
+            applied = _apply_all(ledger, state, commands, now, approver)
             result = {"status": "FOCUS_SET", "focus": applied["state"]["learning_focuses"][focus_id],
                       "events_appended": len(commands), "event_count": applied["event_count"],
                       "head": applied["head"]}
@@ -118,13 +131,14 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "VALID", "event_count": count, "head": head,
                       "focus": focus if focus else "NO_ACTIVE_FOCUS"}
         elif args.action == "unfocus":
-            gate()
+            approver = gate()
             state, _, _ = ledger.verify()
             focus = current_focus(state)
             if not focus:
                 raise GateError("No active focus to stop")
             applied = ledger.apply({"type": "set_learning_focus",
-                                    "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}})
+                                    "data": {"id": focus["id"], "status": "STOPPED", "reason": args.reason}},
+                                   approved_by=approver)
             result = {"status": "FOCUS_STOPPED", "focus": applied["state"]["learning_focuses"][focus["id"]],
                       "event_count": applied["event_count"], "head": applied["head"]}
         elif args.action == "repair-snapshot":
