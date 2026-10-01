@@ -53,7 +53,13 @@ def verify_anchor(local_count: int, local_head: str, anchor: dict[str, Any] | No
             return {"status": "FAIL", "reason": "ANCHOR_DIGEST_MISMATCH"}
         if record["schema"] != SCHEMA or record["project"] != PROJECT:
             return {"status": "FAIL", "reason": "ANCHOR_IDENTITY_MISMATCH"}
-        if type(record["event_count"]) is not int or record["event_count"] < 0:
+        if (type(record["event_count"]) is not int or record["event_count"] < 0
+                or not _valid_hex(record["head"])
+                or not isinstance(record["created_at"], str) or not record["created_at"]
+                or (record["previous_anchor"] is not None and not _valid_hex(record["previous_anchor"]))
+                or not _valid_hex(anchor.get("anchor_id"))
+                or type(local_count) is not int or local_count < 0
+                or not _valid_hex(local_head)):
             return {"status": "FAIL", "reason": "MALFORMED_ANCHOR"}
         if local_count < record["event_count"]:
             return {"status": "FAIL", "reason": "LOCAL_LEDGER_ROLLBACK"}
@@ -64,3 +70,39 @@ def verify_anchor(local_count: int, local_head: str, anchor: dict[str, Any] | No
         return {"status": "PASS", "reason": "EXACT_EXTERNAL_ANCHOR_MATCH", "anchor_id": expected_id}
     except (KeyError, TypeError, ValueError):
         return {"status": "FAIL", "reason": "MALFORMED_ANCHOR"}
+
+
+def _valid_hex(value: Any) -> bool:
+    return isinstance(value, str) and len(value) == 64 and all(ch in "0123456789abcdef" for ch in value)
+
+
+def verify_anchor_chain(anchors: list[dict[str, Any]]) -> dict[str, Any]:
+    """Verify anchor schema/digests and exact previous-anchor continuity."""
+    if not isinstance(anchors, list) or not anchors:
+        return {"status": "UNKNOWN", "reason": "MISSING_EXTERNAL_ANCHOR"}
+    previous_id = None
+    previous_count = -1
+    for index, anchor in enumerate(anchors):
+        if not isinstance(anchor, dict):
+            return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
+        try:
+            record = {k: anchor[k] for k in ("schema", "project", "event_count", "head", "created_at", "previous_anchor")}
+        except KeyError:
+            return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
+        if record["schema"] != SCHEMA or record["project"] != PROJECT:
+            return {"status": "FAIL", "reason": "ANCHOR_IDENTITY_MISMATCH", "index": index}
+        if type(record["event_count"]) is not int or record["event_count"] < 0 or record["event_count"] <= previous_count:
+            return {"status": "FAIL", "reason": "ANCHOR_COUNT_NOT_INCREASING", "index": index}
+        if not _valid_hex(record["head"]) or not isinstance(record["created_at"], str) or not record["created_at"]:
+            return {"status": "FAIL", "reason": "MALFORMED_ANCHOR", "index": index}
+        if index == 0:
+            if record["previous_anchor"] is not None:
+                return {"status": "FAIL", "reason": "BROKEN_ANCHOR_CHAIN", "index": index}
+        elif record["previous_anchor"] != previous_id:
+            return {"status": "FAIL", "reason": "BROKEN_ANCHOR_CHAIN", "index": index}
+        expected = _digest(record)
+        if not _valid_hex(anchor.get("anchor_id")) or anchor["anchor_id"] != expected:
+            return {"status": "FAIL", "reason": "ANCHOR_DIGEST_MISMATCH", "index": index}
+        previous_id = expected
+        previous_count = record["event_count"]
+    return {"status": "PASS", "reason": "ANCHOR_CHAIN_VALID", "anchor_count": len(anchors), "head_anchor_id": previous_id}
