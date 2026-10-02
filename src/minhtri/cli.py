@@ -137,7 +137,7 @@ def main(argv: list[str] | None = None) -> int:
                 "status": "BRAIN_HTTP_SERVING",
                 "url": host.url,
                 "home": str(ledger.home),
-                "write_capability": false
+                "write_capability": False
             }, ensure_ascii=False), flush=True)
             host.serve_forever()
             return 0
