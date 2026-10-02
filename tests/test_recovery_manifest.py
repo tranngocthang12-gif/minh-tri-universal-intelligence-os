@@ -33,7 +33,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(state["readonly_brain_transport_contract"], "IMPLEMENTED_AND_MERGED")
         self.assertEqual(state["readonly_brain_transport_dispatcher"], "IMPLEMENTED_AND_MERGED")
         self.assertEqual(state["brain_http_host"], "IMPLEMENTED_AND_MERGED")
-        self.assertNotEqual(state["chatgpt_to_owner_pc_brain_connector"], "CONNECTED_READONLY")
+        if state["local_brain_connected"]:
+            self.assertEqual(state["chatgpt_to_owner_pc_brain_connector"], "CONNECTED_READONLY")
 
     def test_published_anchor_state_has_canonical_witness_file(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
@@ -59,7 +60,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
             state["research_adapter_gate"],
             "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS",
         )
-        self.assertFalse(state["local_brain_connected"])
+        self.assertTrue(state["local_brain_connected"])
+        self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
         self.assertFalse(state["end_to_end_seat_brain_transport"])
 
     def test_secure_mcp_tunnel_is_required_before_chatgpt_connector(self):
