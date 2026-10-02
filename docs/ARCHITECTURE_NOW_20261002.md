@@ -139,6 +139,8 @@ Canonical runtime state uses two non-interchangeable layers:
 
 A one-time live check is not persistence proof. CI success is not deployment proof. An implemented design is not runtime proof. No `LIVE_CURRENT`-style canonical claim is allowed without continuous heartbeat evidence.
 
+For liveness, `current_runtime_liveness` is the sole authoritative field. Older fields whose names contain `current`, `live`, or `active` are retained only for backward-compatible historical evidence and must not override the liveness layer.
+
 At the 2026-10-02 21:35 +07 observation, Desktop Commander was offline and the Local Brain connector reported that tunnel-client had not been seen for more than 300 seconds. Therefore tunnel/connector liveness is DOWN, Owner-PC liveness itself is UNKNOWN, and the earlier PASS evidence remains historical proof rather than current liveness.
 
 ### 5.9 Canonical research gate

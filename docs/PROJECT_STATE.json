@@ -155,5 +155,8 @@
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
   "owner_pc_write_runtime_deployment": "BLOCKED_OWNER_PC_OFFLINE",
   "research_adapter_gate_source": "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
-  "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL"
+  "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL",
+  "runtime_liveness_authoritative_field": "current_runtime_liveness",
+  "legacy_runtime_current_fields_liveness_authority": false,
+  "legacy_runtime_current_fields_note": "Backward-compatible historical observations only; do not use them to infer present liveness."
 }

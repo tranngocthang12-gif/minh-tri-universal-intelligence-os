@@ -84,6 +84,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
             state["current_runtime_liveness"]["secure_mcp_tunnel"],
             "DOWN",
         )
+        self.assertEqual(
+            state["runtime_liveness_authoritative_field"],
+            "current_runtime_liveness",
+        )
+        self.assertFalse(state["legacy_runtime_current_fields_liveness_authority"])
 
     def test_research_gate_source_is_canonical_and_fail_closed(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
