@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "ACTIVATE_SUPERVISOR_ON_NEXT_TUNNEL_RESTART_THEN_OBSERVE_PERSISTENCE_THEN_FRESH_SEAT_PASS",
+  "next_checkpoint": "CI_FRESH_SEAT_VALIDATOR_THEN_SEPARATE_CHAT_UI_EXECUTION",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -115,5 +115,7 @@
   "owner_pc_tunnel_supervised_launcher": "STAGED_PARSE_OK_NOT_YET_ACTIVE",
   "owner_pc_tunnel_current_session": "LIVE_READONLY_UNSUPERVISED_SESSION_VALID",
   "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02",
-  "owner_pc_autonomy_readonly_smoke_test": "PASS_WRITE_FALSE_RESEARCH_BLOCKED_FOCUS_YOUTUBE_2026-10-02"
+  "owner_pc_autonomy_readonly_smoke_test": "PASS_WRITE_FALSE_RESEARCH_BLOCKED_FOCUS_YOUTUBE_2026-10-02",
+  "fresh_chat_seat_protocol": "docs/FRESH_SEAT_VALIDATION_PROTOCOL_20261002.md",
+  "fresh_chat_seat_validator": "IMPLEMENTED_CANDIDATE_AWAITING_CI"
 }
