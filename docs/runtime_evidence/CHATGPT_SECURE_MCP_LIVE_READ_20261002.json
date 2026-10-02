@@ -1,0 +1,30 @@
+{
+  "schema": "minhtri-runtime-evidence/v1",
+  "kind": "chatgpt-secure-mcp-live-read",
+  "date": "2026-10-02",
+  "connector_namespace": "MINH_TRI_LOCAL_BRAIN",
+  "discovered_tools": [
+    "brain.verify",
+    "brain.recovery_packet"
+  ],
+  "exact_tool_count": 2,
+  "mutation_shell_filesystem_tools_discovered": false,
+  "verify": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+  },
+  "recovery_packet": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+    "focus": {
+      "domain_id": "youtube",
+      "expected_lesson": "chat quen, so khong",
+      "status": "ACTIVE",
+      "expectation_status": "UNTESTED_EXPECTATION"
+    }
+  },
+  "fresh_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+  "end_to_end_seat_brain_transport": false
+}
