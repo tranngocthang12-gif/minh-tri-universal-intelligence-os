@@ -72,6 +72,31 @@ class RecoveryManifestConsistency(unittest.TestCase):
         )
         self.assertFalse(state["local_brain_connected"])
 
+    def test_runtime_planes_are_separated(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["runtime_plane_model"], "FORMALIZED_V1")
+        self.assertIn("SECURE_MCP", state["brain_read_plane"])
+        self.assertIn("OWNER_GATED_LEDGER_MUTATION", state["brain_write_plane"])
+        self.assertIn("BREAK_GLASS", state["maintenance_plane"])
+        self.assertFalse(state["desktop_commander_can_prove_readonly_connector"])
+
+    def test_connector_promotion_gates_fail_closed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertTrue(state["connector_promotion_requires_secure_path"])
+        self.assertTrue(state["end_to_end_promotion_requires_exact_readonly_toolset_and_fresh_seat"])
+        if state["local_brain_connected"]:
+            self.assertEqual(state["secure_mcp_tunnel_status"], "READY")
+            self.assertEqual(
+                state["chatgpt_to_owner_pc_brain_connector"],
+                "CONNECTED_READONLY",
+            )
+        if state["end_to_end_seat_brain_transport"]:
+            self.assertEqual(state["fresh_chat_seat_validation"], "PASS")
+            self.assertEqual(
+                state["dedicated_readonly_mcp_tool_allowlist"],
+                "PASS_EXACT_TWO_TOOLS",
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

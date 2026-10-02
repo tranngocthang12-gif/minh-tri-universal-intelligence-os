@@ -69,5 +69,15 @@
   "secure_mcp_tunnel_success_gate": "TUNNEL_READY_AND_CHATGPT_CONNECTOR_DISCOVERY_AND_READONLY_TOOLSET_PASS",
   "github_cli_token_owner_pc_policy": "OWNER_EXPLICIT_COMMAND_REQUIRED_FOR_ANY_MUTATION",
   "github_cli_token_owner_pc_action": "LEAVE_UNCHANGED",
-  "github_cli_token_owner_pc_decision": "docs/OWNER_SECURITY_DECISION_GITHUB_CLI_TOKEN_20261002.md"
+  "github_cli_token_owner_pc_decision": "docs/OWNER_SECURITY_DECISION_GITHUB_CLI_TOKEN_20261002.md",
+  "runtime_plane_model": "FORMALIZED_V1",
+  "authority_plane": "OWNER_TO_GITHUB_AUTHORITY_CHAIN",
+  "brain_read_plane": "CHATGPT_TO_SECURE_MCP_TO_DEDICATED_MCP_TO_BRAINREADER",
+  "brain_write_plane": "OWNER_GATED_LEDGER_MUTATION_SEPARATE_FROM_READ_PLANE",
+  "maintenance_plane": "DESKTOP_COMMANDER_BREAK_GLASS_NOT_CANONICAL_BRAIN_TRANSPORT",
+  "witness_plane": "ANCHOR_PUBLICATION_READBACK_HISTORICAL_PREFIX_CHECK",
+  "recovery_proof_plane": "ZERO_CHAT_PASS_FRESH_CHAT_PENDING",
+  "desktop_commander_can_prove_readonly_connector": false,
+  "connector_promotion_requires_secure_path": true,
+  "end_to_end_promotion_requires_exact_readonly_toolset_and_fresh_seat": true
 }

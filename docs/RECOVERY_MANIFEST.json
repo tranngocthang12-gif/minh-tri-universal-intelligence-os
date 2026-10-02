@@ -39,7 +39,12 @@
     "secure_mcp_tunnel_required": true,
     "secure_mcp_tunnel_status": "NOT_PROVISIONED",
     "github_cli_token_owner_pc_policy": "OWNER_EXPLICIT_COMMAND_REQUIRED_FOR_ANY_MUTATION",
-    "github_cli_token_owner_pc_action": "LEAVE_UNCHANGED"
+    "github_cli_token_owner_pc_action": "LEAVE_UNCHANGED",
+    "runtime_plane_model": "FORMALIZED_V1",
+    "maintenance_plane": "DESKTOP_COMMANDER_BREAK_GLASS_NOT_CANONICAL_BRAIN_TRANSPORT",
+    "desktop_commander_can_prove_readonly_connector": false,
+    "connector_promotion_requires_secure_path": true,
+    "end_to_end_promotion_requires_exact_readonly_toolset_and_fresh_seat": true
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
