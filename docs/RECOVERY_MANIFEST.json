@@ -30,12 +30,14 @@
     "dedicated_readonly_mcp_server": "IMPLEMENTED_AND_RUNTIME_PROVEN",
     "dedicated_readonly_mcp_tool_allowlist": "PASS_EXACT_TWO_TOOLS",
     "dedicated_readonly_mcp_mutation_rejection": "PASS_UNKNOWN_TOOL",
-    "chatgpt_custom_readonly_connector_registration": "PENDING_PLATFORM_UI_OR_REGISTRATION_PATH",
+    "chatgpt_custom_readonly_connector_registration": "BLOCKED_UNTIL_SECURE_MCP_TUNNEL_PROVISIONED",
     "local_brain_connected": false,
     "github_main_required_status_check": "ENFORCED_TEST_STRICT",
     "github_main_pr_required": true,
     "external_witness_full_device_independence": false,
-    "research_adapter_gate": "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS"
+    "research_adapter_gate": "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS",
+    "secure_mcp_tunnel_required": true,
+    "secure_mcp_tunnel_status": "NOT_PROVISIONED"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
@@ -43,6 +45,7 @@
     "brain_transport": "minhtri-brain-readonly/v1",
     "brain_http": "minhtri-brain-http/v1",
     "external_witness": "minhtri-external-witness/v1",
-    "dedicated_mcp": "mcp/2.x stdio"
+    "dedicated_mcp": "mcp/2.x stdio",
+    "secure_mcp_tunnel": "OpenAI Secure MCP Tunnel"
   }
 }
