@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "PROVISION_SECURE_MCP_TUNNEL_THEN_CONNECT_CHATGPT_AND_RUN_FRESH_SEAT",
+  "next_checkpoint": "PROVISION_SECURE_MCP_TUNNEL_WITH_OWNER_ORG_TUNNEL_ID_AND_RUNTIME_KEY",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -79,5 +79,9 @@
   "recovery_proof_plane": "ZERO_CHAT_PASS_FRESH_CHAT_PENDING",
   "desktop_commander_can_prove_readonly_connector": false,
   "connector_promotion_requires_secure_path": true,
-  "end_to_end_promotion_requires_exact_readonly_toolset_and_fresh_seat": true
+  "end_to_end_promotion_requires_exact_readonly_toolset_and_fresh_seat": true,
+  "secure_mcp_tunnel_client": "OPENAI_TUNNEL_CLIENT_V0.0.15_INSTALLED_AND_HASH_VERIFIED",
+  "secure_mcp_tunnel_client_sha256": "3b53133a1e24d43f63088d843860cb1701a4c3ed6390de2e19f69089e43bddc1",
+  "secure_mcp_tunnel_client_runtime_test": "VERSION_AND_QUICKSTART_PASS",
+  "secure_mcp_tunnel_blocker": "MISSING_OPENAI_TUNNEL_ID_AND_RUNTIME_API_KEY"
 }
