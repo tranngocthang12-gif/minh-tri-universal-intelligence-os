@@ -58,7 +58,7 @@ class RecoveryManifestConsistency(unittest.TestCase):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         self.assertEqual(
             state["research_adapter_gate"],
-            "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS",
+            "BLOCKED_UNTIL_FRESH_SEAT_PASS",
         )
         self.assertTrue(state["local_brain_connected"])
         self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
