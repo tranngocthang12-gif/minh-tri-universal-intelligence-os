@@ -113,5 +113,6 @@
   "local_brain_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-02",
   "owner_pc_maintenance_plane_latest": "ONLINE_OBSERVED_2026-10-02",
   "owner_pc_tunnel_supervised_launcher": "STAGED_PARSE_OK_NOT_YET_ACTIVE",
-  "owner_pc_tunnel_current_session": "LIVE_READONLY_UNSUPERVISED_SESSION_VALID"
+  "owner_pc_tunnel_current_session": "LIVE_READONLY_UNSUPERVISED_SESSION_VALID",
+  "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02"
 }
