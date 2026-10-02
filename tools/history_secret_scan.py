@@ -27,6 +27,12 @@ PATTERNS = {
     ),
 }
 
+# Narrow fixture exception: the repository's scanner test intentionally stores this exact header.
+# Do not exempt the whole file or any other rule.
+RULE_PATH_ALLOWLIST = {
+    ("tests/test_secret_hygiene.py", "private-key"),
+}
+
 
 def git(*args: str) -> bytes:
     return subprocess.check_output(["git", *args], stderr=subprocess.DEVNULL)
@@ -62,6 +68,8 @@ def main() -> int:
         if b"\x00" in data:
             continue
         for rule, pattern in PATTERNS.items():
+            if (path, rule) in RULE_PATH_ALLOWLIST:
+                continue
             if pattern.search(data):
                 findings.append((oid[:12], path, rule))
 
