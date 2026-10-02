@@ -57,7 +57,10 @@
     "secure_mcp_tunnel_persistence": "NOT_PROVEN",
     "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
     "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
-    "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN"
+    "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN",
+    "runtime_state_model_version": "V2_EVIDENCE_PLUS_LIVENESS",
+    "research_adapter_gate_source": "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
+    "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",

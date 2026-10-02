@@ -128,9 +128,29 @@ Current proof level is process-separated only. It does not prove full-device-com
 
 ### 5.7 Promotion invariants
 A state promotion is valid only when its prerequisites are proven:
-1. `local_brain_connected=true` requires a ready secure remote/tunnel path plus ChatGPT connector discovery; this gate is now satisfied for the current seat.
+1. `local_brain_connected=true` records a proven connector capability; current reachability is tracked separately under `current_runtime_liveness`.
 2. `end_to_end_seat_brain_transport=true` requires the discovered toolset to remain exactly the two read-only brain tools and a fresh-seat recovery PASS.
 3. Desktop Commander evidence cannot satisfy either promotion gate.
+
+### 5.8 Runtime evidence versus liveness
+Canonical runtime state uses two non-interchangeable layers:
+- `last_proven_runtime_evidence`: durable observations that were actually witnessed and must not be erased merely because a PC, tunnel, or connector later goes offline;
+- `current_runtime_liveness`: the latest reachability observation only, with values such as `UP`, `DOWN`, `UNKNOWN`, or `TRANSIENT`.
+
+A one-time live check is not persistence proof. CI success is not deployment proof. An implemented design is not runtime proof. No `LIVE_CURRENT`-style canonical claim is allowed without continuous heartbeat evidence.
+
+At the 2026-10-02 21:35 +07 observation, Desktop Commander was offline and the Local Brain connector reported that tunnel-client had not been seen for more than 300 seconds. Therefore tunnel/connector liveness is DOWN, Owner-PC liveness itself is UNKNOWN, and the earlier PASS evidence remains historical proof rather than current liveness.
+
+### 5.9 Canonical research gate
+The autonomy runtime may not accept a caller-provided string or CLI flag to open research. It derives the gate from canonical `docs/PROJECT_STATE.json` and opens only when all three are true simultaneously:
+- `fresh_chat_seat_validation == PASS`;
+- `end_to_end_seat_brain_transport == true`;
+- `research_adapter_gate == OPEN_AFTER_FRESH_SEAT_PASS`.
+
+Unreadable or malformed canonical state fails closed. Autonomy remains proposal-only with `write_capability=false`, no automatic VERIFIED promotion, and no automatic trial activation.
+
+### 5.10 Independent witness gate
+The witness adapter contract already defines the interface boundary, but full-device-independent witness promotion remains blocked until authority, provider, and credentials are genuinely independent from both GitHub authority and the Owner PC. Same-authority GitHub evidence remains useful process-separated evidence only.
 
 ## 6. Learning and critique
 

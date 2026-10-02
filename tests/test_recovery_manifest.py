@@ -71,6 +71,37 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
         self.assertFalse(state["end_to_end_seat_brain_transport"])
 
+    def test_runtime_evidence_is_separate_from_liveness(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["runtime_state_model_version"], "V2_EVIDENCE_PLUS_LIVENESS")
+        self.assertIn("last_proven_runtime_evidence", state)
+        self.assertIn("current_runtime_liveness", state)
+        self.assertEqual(
+            state["last_proven_runtime_evidence"]["persistence"],
+            "NOT_PROVEN",
+        )
+        self.assertEqual(
+            state["current_runtime_liveness"]["secure_mcp_tunnel"],
+            "DOWN",
+        )
+
+    def test_research_gate_source_is_canonical_and_fail_closed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            state["research_adapter_gate_source"],
+            "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
+        )
+        self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
+        self.assertFalse(state["end_to_end_seat_brain_transport"])
+
+    def test_independent_witness_promotion_is_blocked_without_independent_authority(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertFalse(state["external_witness_full_device_independence"])
+        self.assertEqual(
+            state["independent_witness_interface_gate"],
+            "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL",
+        )
+
     def test_secure_mcp_tunnel_is_required_before_chatgpt_connector(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         self.assertTrue(state["secure_mcp_tunnel_required"])

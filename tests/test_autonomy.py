@@ -1,10 +1,13 @@
 import unittest
 from datetime import datetime, timezone
+from unittest.mock import patch
 
 from minhtri.autonomy import (
     RESEARCH_GATE_OPEN,
+    RESEARCH_GATE_BLOCKED,
     AutonomyError,
     ProposalOnlyAutonomyRuntime,
+    _derive_research_gate,
     automatic_critique_plan,
     autonomous_learning_plan,
     build_autonomy_packet,
@@ -107,7 +110,6 @@ class AutonomyTests(unittest.TestCase):
         packet = build_autonomy_packet(
             base_state(),
             critic_provider_id="critic",
-            research_gate="BLOCKED_UNTIL_FRESH_SEAT_PASS",
         )
         self.assertEqual(packet["research"]["status"], "BLOCKED")
         self.assertFalse(packet["write_capability"])
@@ -115,12 +117,33 @@ class AutonomyTests(unittest.TestCase):
         self.assertFalse(packet["automatic_trial_activation"])
 
     def test_research_open_without_adapter_still_does_not_invent_results(self):
-        packet = build_autonomy_packet(
-            base_state(),
-            critic_provider_id="critic",
-            research_gate=RESEARCH_GATE_OPEN,
-        )
+        with patch("minhtri.autonomy.canonical_research_gate", return_value=RESEARCH_GATE_OPEN):
+            packet = build_autonomy_packet(
+                base_state(),
+                critic_provider_id="critic",
+            )
         self.assertEqual(packet["research"]["status"], "BLOCKED_NO_ADAPTER")
+
+    def test_research_gate_derives_only_from_canonical_proofs(self):
+        blocked = {
+            "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+            "end_to_end_seat_brain_transport": False,
+            "research_adapter_gate": RESEARCH_GATE_OPEN,
+        }
+        self.assertEqual(_derive_research_gate(blocked), RESEARCH_GATE_BLOCKED)
+
+        opened = {
+            "fresh_chat_seat_validation": "PASS",
+            "end_to_end_seat_brain_transport": True,
+            "research_adapter_gate": RESEARCH_GATE_OPEN,
+        }
+        self.assertEqual(_derive_research_gate(opened), RESEARCH_GATE_OPEN)
+
+    def test_cli_cannot_override_research_gate(self):
+        from minhtri.autonomy import main
+
+        with self.assertRaises(SystemExit):
+            main(["--research-gate", RESEARCH_GATE_OPEN, "--once"])
 
     def test_due_prediction_becomes_read_only_action(self):
         state = base_state()
@@ -130,7 +153,6 @@ class AutonomyTests(unittest.TestCase):
         }
         actions = autonomous_learning_plan(
             state,
-            research_gate="BLOCKED_UNTIL_FRESH_SEAT_PASS",
             now=datetime(2026, 1, 3, tzinfo=timezone.utc),
         )
         due = next(a for a in actions if a["action"] == "AWAIT_OUTCOME_EVIDENCE")
