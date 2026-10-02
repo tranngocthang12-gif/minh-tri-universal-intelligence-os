@@ -100,7 +100,7 @@
   "same_authority_github_anchor_published": true,
   "secure_mcp_tunnel_persistence": "NOT_PROVEN",
   "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
-  "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN_OLD_KEY_REVOCATION_NOT_VERIFIED",
+  "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
   "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN",
   "automatic_self_critique_engine": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_BACKGROUND_ACTIVE",
   "autonomous_learning_engine": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_BACKGROUND_ACTIVE",
@@ -129,5 +129,6 @@
   "owner_pc_legacy_write_runtime": "DETECTED_UNGATED_CODE_DEPRECATED_NOT_CANONICAL",
   "owner_pc_secure_write_launcher_v2": "STAGED_NOT_END_TO_END_PROVEN_TOOL_SAFETY_BLOCKED",
   "owner_pc_write_plane_operational": "PARTIAL_CREDENTIAL_PASS_LAUNCHER_E2E_PENDING",
-  "github_main_branch_protection_live_verify": "PASS_STRICT_TEST_ENFORCE_ADMINS_NO_FORCE_PUSH_NO_DELETE_2026-10-02"
+  "github_main_branch_protection_live_verify": "PASS_STRICT_TEST_ENFORCE_ADMINS_NO_FORCE_PUSH_NO_DELETE_2026-10-02",
+  "secure_mcp_tunnel_old_key_revocation": "NOT_VERIFIED"
 }
