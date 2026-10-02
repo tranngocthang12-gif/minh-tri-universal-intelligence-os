@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "FRESH_CHAT_SEAT_VALIDATION_OVER_CANONICAL_READONLY_CONNECTOR",
+  "next_checkpoint": "CI_AUTONOMY_PROPOSAL_RUNTIME_THEN_OWNER_PC_SUPERVISOR_DEPLOY_AND_FRESH_SEAT_PASS",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -101,5 +101,15 @@
   "secure_mcp_tunnel_persistence": "NOT_PROVEN",
   "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
   "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
-  "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN"
+  "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN",
+  "automatic_self_critique_engine": "IMPLEMENTED_CANDIDATE_PROPOSAL_ONLY_AWAITING_CI",
+  "autonomous_learning_engine": "IMPLEMENTED_CANDIDATE_PROPOSAL_ONLY_AWAITING_CI",
+  "meta_learning_engine": "IMPLEMENTED_CANDIDATE_PROPOSAL_ONLY_AWAITING_CI",
+  "autonomy_write_capability": false,
+  "autonomy_automatic_verified_promotion": false,
+  "autonomy_automatic_trial_activation": false,
+  "autonomy_research_runtime": "FAIL_CLOSED_UNTIL_FRESH_SEAT_PASS",
+  "secure_mcp_tunnel_supervisor": "IMPLEMENTED_CANDIDATE_LOCAL_ONLY_AWAITING_CI_AND_DEPLOYMENT",
+  "local_brain_live_check_latest": "FAIL_TUNNEL_CLIENT_NOT_SEEN_300_SECONDS",
+  "owner_pc_maintenance_plane_latest": "OFFLINE_OBSERVED_2026-10-02"
 }

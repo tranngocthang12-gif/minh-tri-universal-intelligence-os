@@ -13,6 +13,8 @@ mcp = ["mcp>=2,<3"]
 
 [project.scripts]
 minhtri = "minhtri.cli:main"
+minhtri-autonomy = "minhtri.autonomy:main"
+minhtri-runtime-supervisor = "minhtri.runtime_supervisor:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
