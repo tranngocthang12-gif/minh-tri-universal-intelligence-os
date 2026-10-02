@@ -71,7 +71,67 @@ Không dùng auto-write hai chiều không kiểm soát giữa chat, GitHub, Lib
 - Desktop Commander is a maintenance/break-glass plane with broader machine authority; it must not be treated as the canonical read-only brain transport.
 - seat → local `brain/` durable mutation: NOT CONNECTED / BLOCKED.
 
-## 5. Learning and critique
+## 5. Runtime planes and trust boundaries
+
+### 5.1 Authority plane
+```text
+OWNER
+→ STABLE LAW / GOVERNANCE
+→ PROJECT_STATE
+→ CURRENT ARCHITECTURE
+→ APPROVED GITHUB RECORDS
+```
+This plane decides what is authoritative; it is not a runtime data transport.
+
+### 5.2 Brain read plane
+```text
+ChatGPT seat
+→ Secure MCP Tunnel / supported remote MCP path
+→ dedicated MCP
+→ BrainReader
+→ fixed local brain/
+```
+Allowed surface: exactly `brain.verify` and `brain.recovery_packet`.
+No shell, arbitrary filesystem, caller-selected brain path, ledger mutation, publication, spending, or deletion.
+
+### 5.3 Brain write plane
+```text
+explicit write-authorized workflow
+→ Owner gate
+→ Ledger.apply / repair boundary
+→ local brain/
+```
+The write plane is separate from the read plane. It must never be reachable through the dedicated read-only MCP connector.
+
+### 5.4 Maintenance / break-glass plane
+Desktop Commander belongs only to maintenance/break-glass operations. It can have broader machine authority for installation, diagnosis, runtime repair, or explicit Owner-authorized maintenance. It is NOT evidence that the canonical read-only connector is connected.
+
+Invariant: Desktop Commander success alone must never set `local_brain_connected=true`, `chatgpt_to_owner_pc_brain_connector=CONNECTED_READONLY`, or `end_to_end_seat_brain_transport=true`.
+
+### 5.5 Witness plane
+```text
+verified local ledger head
+→ anchor
+→ external witness publication
+→ canonical read-back
+→ historical-prefix comparison
+```
+Current proof level is process-separated only. It does not prove full-device-compromise independence.
+
+### 5.6 Recovery-proof plane
+- zero-chat process harness: PASS;
+- dedicated MCP local runtime: PASS;
+- first external anchor read-back: PASS;
+- fresh ChatGPT seat over the canonical read-only connector: PENDING;
+- therefore end-to-end seat transport remains false.
+
+### 5.7 Promotion invariants
+A state promotion is valid only when its prerequisites are proven:
+1. `local_brain_connected=true` requires a ready secure remote/tunnel path plus ChatGPT connector discovery.
+2. `end_to_end_seat_brain_transport=true` requires the discovered toolset to remain exactly the two read-only brain tools and a fresh-seat recovery PASS.
+3. Desktop Commander evidence cannot satisfy either promotion gate.
+
+## 6. Learning and critique
 
 Tier-1 đã có:
 - SOURCE → EVIDENCE → CLAIM/HYPOTHESIS;
@@ -91,7 +151,7 @@ Chưa có runtime tự trị:
 - automatic procedure promotion;
 - direct durable write to local brain.
 
-## 6. Security state
+## 7. Security state
 
 Security remains first-order.
 
@@ -107,7 +167,7 @@ Current security status:
 
 Until those are hardened, autonomous write/publish/spend/delete remains blocked unless Owner explicitly authorizes the specific action.
 
-## 7. Current operational rules
+## 8. Current operational rules
 
 - GitHub first for material project memory.
 - Fresh-read live authority before important work.
@@ -117,13 +177,13 @@ Until those are hardened, autonomous write/publish/spend/delete remains blocked 
 - Publication, spending, destructive changes, rights uncertainty and security-sensitive changes remain gated.
 - Every material task leaves a handoff.
 
-## 8. Current focus
+## 9. Current focus
 
 Current workstream: governance and MCP CI are now hardened; next is Secure MCP Tunnel provisioning → ChatGPT connector discovery → fresh-seat recovery. Research Adapter remains blocked until those runtime gates pass.
 
 Production/domain work may proceed only under current Owner instruction and relevant gates.
 
-## 9. Required bootstrap files
+## 10. Required bootstrap files
 
 A seat recovering from zero chat memory should read, in order:
 1. `docs/PROJECT_STATE.json`
