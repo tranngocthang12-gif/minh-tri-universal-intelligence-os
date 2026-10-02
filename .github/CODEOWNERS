@@ -1,0 +1,5 @@
+# Ownership metadata only. Enforcement remains a separate ruleset decision.
+* @tranngocthang12-gif
+/.github/ @tranngocthang12-gif
+/src/minhtri/ @tranngocthang12-gif
+/docs/PROJECT_STATE.json @tranngocthang12-gif
