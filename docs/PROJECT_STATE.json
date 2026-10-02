@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "PROVE_OWNER_WRITE_LAUNCHER_E2E_AND_TUNNEL_RESTART_PERSISTENCE_THEN_FRESH_SEAT_PASS",
+  "next_checkpoint": "RESTORE_OWNER_PC_RUNTIME_THEN_PROVE_SUPERVISOR_PERSISTENCE_READYZ_EXACT_TWO_TOOLS_BRAIN_VERIFY_KEY_REVOCATION_WRITE_E2E_HOST_AUDIT_INDEPENDENT_WITNESS",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -142,14 +142,14 @@
     "key_rotation": "NOT_PROVEN_OLD_KEY_REVOCATION_NOT_VERIFIED"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-02T21:35:00+07:00",
+    "observed_at": "2026-10-02T23:35:35+07:00",
     "owner_pc": "UNKNOWN",
     "maintenance_plane": "DOWN",
     "secure_mcp_tunnel": "DOWN",
     "local_brain_connector": "DOWN",
     "evidence": [
-      "Desktop Commander device reported Offline",
-      "Local Brain connector returned tunnel-client not seen for 300 seconds"
+      "Desktop Commander WIN-VBIQNFFDKIR reported Offline and explicit ping failed: no device online",
+      "Local Brain brain.verify returned tunnel-client not seen for 300 seconds"
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
