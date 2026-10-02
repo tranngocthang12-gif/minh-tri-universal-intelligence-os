@@ -13,7 +13,7 @@
     "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
     "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
     "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
-    "external_anchor_publication": true,
+    "external_anchor_publication": false,
     "end_to_end_seat_brain_transport": false,
     "readonly_brain_transport_dispatcher": "IMPLEMENTED_AND_MERGED",
     "brain_http_host": "IMPLEMENTED_AND_MERGED",
@@ -51,7 +51,9 @@
     "secure_mcp_tunnel_wrapper_precheck": "PASS_STAYS_ALIVE_AFTER_FIX",
     "secure_mcp_tunnel_readyz": "PASS_HTTP_200_READY_2026-10-02",
     "chatgpt_to_owner_pc_brain_connector": "CONNECTED_READONLY",
-    "chatgpt_custom_readonly_connector_toolset": "PASS_EXACT_TWO_TOOLS"
+    "chatgpt_custom_readonly_connector_toolset": "PASS_EXACT_TWO_TOOLS",
+    "same_authority_github_anchor_published": true,
+    "external_witness_publication_authority": "GITHUB_CLOUD_SAME_AUTHORITY_ANCHOR_NOT_INDEPENDENT_WITNESS"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",

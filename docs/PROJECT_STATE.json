@@ -22,11 +22,11 @@
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
-  "external_anchor_publication": true,
+  "external_anchor_publication": false,
   "end_to_end_seat_brain_transport": false,
   "atomic_recovery_packet": "IMPLEMENTED_AND_MERGED",
   "external_anchor_chain_verification": "IMPLEMENTED_AND_MERGED",
-  "external_anchor_publication_blocker": "NONE_FOR_FIRST_PUBLISHED_OWNER_PC_ANCHOR; STRONGER_DEVICE_INDEPENDENCE_NOT_PROVEN",
+  "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
   "readonly_brain_transport_contract": "IMPLEMENTED_AND_MERGED",
   "owner_credential_v2": "VERIFIER_IMPLEMENTED_AND_MERGED",
   "owner_credential_v1": "MIGRATION_COMPATIBILITY_ACTIVE",
@@ -39,7 +39,7 @@
   "chatgpt_to_owner_pc_brain_connector": "CONNECTED_READONLY",
   "external_witness_receipt_verifier": "IMPLEMENTED_AND_MERGED",
   "whole_history_rewrite_detection": "CI_PROVEN",
-  "external_witness_publication_authority": "GITHUB_CLOUD_PUBLISHED_OWNER_PC_ANCHOR",
+  "external_witness_publication_authority": "GITHUB_CLOUD_SAME_AUTHORITY_ANCHOR_NOT_INDEPENDENT_WITNESS",
   "owner_pc_runtime_activation_cli": "IMPLEMENTED_AND_MERGED",
   "owner_pc_brain_http_runtime_test": "PASS_2026-10-02",
   "owner_pc_brain_http_recovery_packet": "PASS_EVENT_3_HEAD_EF299F726F0B8330",
@@ -96,5 +96,6 @@
   ],
   "chatgpt_custom_readonly_connector_live_verify": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330",
   "chatgpt_custom_readonly_connector_live_recovery": "PASS_FOCUS_YOUTUBE_CHAT_QUEN_SO_KHONG_UNTESTED_EXPECTATION",
-  "chatgpt_custom_readonly_connector_runtime_evidence": "docs/runtime_evidence/CHATGPT_SECURE_MCP_LIVE_READ_20261002.json"
+  "chatgpt_custom_readonly_connector_runtime_evidence": "docs/runtime_evidence/CHATGPT_SECURE_MCP_LIVE_READ_20261002.json",
+  "same_authority_github_anchor_published": true
 }
