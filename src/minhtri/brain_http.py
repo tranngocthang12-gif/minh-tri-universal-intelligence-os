@@ -12,6 +12,7 @@ import json
 import threading
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -142,7 +143,26 @@ class BrainHTTPClient:
     """Minimal authenticated client suitable for a local connector process."""
 
     def __init__(self, url: str, token: str, timeout: float = 5.0):
-        if not isinstance(url, str) or not url.startswith(("http://127.0.0.1:", "http://[::1]:")):
+        if not isinstance(url, str):
+            raise BrainHTTPError("client URL must target loopback")
+        try:
+            parsed = urlsplit(url)
+            port = parsed.port
+            host = parsed.hostname
+            address = ipaddress.ip_address(host) if host is not None else None
+        except ValueError as exc:
+            raise BrainHTTPError("client URL must target loopback") from exc
+        if (
+            parsed.scheme != "http"
+            or address is None
+            or not address.is_loopback
+            or port is None
+            or parsed.username is not None
+            or parsed.password is not None
+            or parsed.path != PATH
+            or parsed.query
+            or parsed.fragment
+        ):
             raise BrainHTTPError("client URL must target loopback")
         if not isinstance(token, str) or len(token) < MIN_TOKEN_CHARS:
             raise BrainHTTPError(f"token must be at least {MIN_TOKEN_CHARS} characters")
