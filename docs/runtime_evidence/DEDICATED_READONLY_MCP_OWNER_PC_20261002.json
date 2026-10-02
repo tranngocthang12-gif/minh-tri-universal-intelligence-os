@@ -1,0 +1,29 @@
+{
+  "schema": "minhtri-dedicated-readonly-mcp-runtime-proof/v1",
+  "date": "2026-10-02",
+  "device": "WIN-VBIQNFFDKIR",
+  "runtime_dir": "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current",
+  "sdk": "mcp 2.2.0",
+  "tool_list": [
+    "brain.verify",
+    "brain.recovery_packet"
+  ],
+  "forbidden_tool": "ledger.apply",
+  "forbidden_tool_result": "is_error=true; Unknown tool: ledger.apply",
+  "verify": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+  },
+  "recovery": {
+    "status": "VALID",
+    "event_count": 3,
+    "focus_domain_id": "youtube",
+    "expected_lesson": "chat quen, so khong",
+    "expectation_status": "UNTESTED_EXPECTATION",
+    "lesson_matches": []
+  },
+  "trust_boundary": "DEDICATED_MCP_SERVER_LOCAL_PASS",
+  "chatgpt_custom_connector_registration": "NOT_AVAILABLE_TO_AUTOMATE_IN_THIS_CHAT",
+  "end_to_end_chatgpt_readonly_connector": false
+}

@@ -8,6 +8,9 @@ version = "0.1.0"
 description = "A provider-neutral, evidence-first learning control plane"
 requires-python = ">=3.10"
 
+[project.optional-dependencies]
+mcp = ["mcp>=2,<3"]
+
 [project.scripts]
 minhtri = "minhtri.cli:main"
 
