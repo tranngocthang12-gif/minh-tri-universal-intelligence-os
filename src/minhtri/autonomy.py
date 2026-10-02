@@ -5,7 +5,8 @@ snapshot, produce critique commands as proposals, compute historical diagnostics
 emit a learning plan. A caller must pass any proposed command through the existing
 Owner-gated Ledger.apply boundary.
 
-External research is additionally fail-closed behind an explicit runtime gate.
+External research is additionally fail-closed behind canonical PROJECT_STATE proof.
+A caller cannot open research through a string, CLI flag, or runtime constructor option.
 """
 from __future__ import annotations
 
@@ -21,11 +22,39 @@ from .core import Ledger, current_focus
 
 AUTONOMY_PROTOCOL = "minhtri-autonomy/v1"
 RESEARCH_GATE_OPEN = "OPEN_AFTER_FRESH_SEAT_PASS"
+RESEARCH_GATE_BLOCKED = "BLOCKED_UNTIL_FRESH_SEAT_PASS"
+CANONICAL_PROJECT_STATE = Path(__file__).resolve().parents[2] / "docs" / "PROJECT_STATE.json"
 DEFAULT_INTERVAL_SECONDS = 300.0
 
 
 class AutonomyError(ValueError):
     pass
+
+
+def _derive_research_gate(project_state: dict[str, Any]) -> str:
+    """Derive the research gate only from canonical proof fields.
+
+    This helper is deterministic and intentionally ignores caller wishes. Runtime code
+    obtains its input only from CANONICAL_PROJECT_STATE.
+    """
+    if (
+        project_state.get("fresh_chat_seat_validation") == "PASS"
+        and project_state.get("end_to_end_seat_brain_transport") is True
+        and project_state.get("research_adapter_gate") == RESEARCH_GATE_OPEN
+    ):
+        return RESEARCH_GATE_OPEN
+    return RESEARCH_GATE_BLOCKED
+
+
+def canonical_research_gate() -> str:
+    """Read canonical PROJECT_STATE and fail closed on any error or unmet proof."""
+    try:
+        data = json.loads(CANONICAL_PROJECT_STATE.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError):
+        return RESEARCH_GATE_BLOCKED
+    if not isinstance(data, dict):
+        return RESEARCH_GATE_BLOCKED
+    return _derive_research_gate(data)
 
 
 class ResearchAdapter(Protocol):
@@ -239,9 +268,9 @@ def meta_learning_report(state: dict[str, Any], minimum_resolutions: int = 2) ->
 def autonomous_learning_plan(
     state: dict[str, Any],
     *,
-    research_gate: str,
     now: datetime | None = None,
 ) -> list[dict[str, Any]]:
+    research_gate = canonical_research_gate()
     now = now or datetime.now(timezone.utc)
     actions: list[dict[str, Any]] = []
     focus = current_focus(state)
@@ -300,9 +329,9 @@ def build_autonomy_packet(
     state: dict[str, Any],
     *,
     critic_provider_id: str | None = None,
-    research_gate: str = "BLOCKED_UNTIL_FRESH_SEAT_PASS",
     research_adapter: ResearchAdapter | None = None,
 ) -> dict[str, Any]:
+    research_gate = canonical_research_gate()
     focus = current_focus(state)
     research: dict[str, Any]
     if research_gate != RESEARCH_GATE_OPEN:
@@ -327,9 +356,7 @@ def build_autonomy_packet(
         "automatic_trial_activation": False,
         "critique": automatic_critique_plan(state, critic_provider_id),
         "meta_learning": meta_learning_report(state),
-        "learning_plan": autonomous_learning_plan(
-            state, research_gate=research_gate
-        ),
+        "learning_plan": autonomous_learning_plan(state),
         "research": research,
     }
 
@@ -341,14 +368,12 @@ class ProposalOnlyAutonomyRuntime:
     state_loader: Callable[[], dict[str, Any]]
     report_sink: Callable[[dict[str, Any]], None]
     critic_provider_id: str | None = None
-    research_gate: str = "BLOCKED_UNTIL_FRESH_SEAT_PASS"
     research_adapter: ResearchAdapter | None = None
 
     def tick(self) -> dict[str, Any]:
         packet = build_autonomy_packet(
             self.state_loader(),
             critic_provider_id=self.critic_provider_id,
-            research_gate=self.research_gate,
             research_adapter=self.research_adapter,
         )
         self.report_sink(packet)
@@ -372,11 +397,6 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument("--home", default="brain")
     parser.add_argument("--critic-provider-id")
-    parser.add_argument(
-        "--research-gate",
-        default="BLOCKED_UNTIL_FRESH_SEAT_PASS",
-        help="External research remains blocked unless explicitly promoted.",
-    )
     parser.add_argument("--interval", type=float, default=DEFAULT_INTERVAL_SECONDS)
     parser.add_argument("--once", action="store_true")
     args = parser.parse_args(argv)
@@ -394,7 +414,6 @@ def main(argv: list[str] | None = None) -> int:
         load_state,
         emit,
         critic_provider_id=args.critic_provider_id,
-        research_gate=args.research_gate,
     )
     if args.once:
         runtime.tick()
