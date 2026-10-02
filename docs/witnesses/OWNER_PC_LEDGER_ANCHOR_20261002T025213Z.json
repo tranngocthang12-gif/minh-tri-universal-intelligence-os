@@ -1,0 +1,9 @@
+{
+  "schema": "minhtri-ledger-anchor/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "event_count": 3,
+  "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+  "created_at": "2026-10-02T02:52:13Z",
+  "previous_anchor": null,
+  "anchor_id": "209280fb87c0d31bc576a35c233334bfa25843ef290038497082efa15d750b28"
+}
