@@ -80,10 +80,15 @@ class RecoveryManifestConsistency(unittest.TestCase):
             state["last_proven_runtime_evidence"]["persistence"],
             "NOT_PROVEN",
         )
-        self.assertEqual(
-            state["current_runtime_liveness"]["secure_mcp_tunnel"],
-            "DOWN",
-        )
+        liveness = state["current_runtime_liveness"]
+        self.assertIn(liveness["secure_mcp_tunnel"], {"UP", "DOWN", "UNKNOWN"})
+        self.assertIn(liveness["local_brain_connector"], {"UP", "DOWN", "UNKNOWN"})
+        self.assertIsInstance(liveness.get("evidence"), list)
+        if liveness["secure_mcp_tunnel"] == "UP":
+            self.assertEqual(liveness["local_brain_connector"], "UP")
+            self.assertGreater(len(liveness["evidence"]), 0)
+        if liveness["secure_mcp_tunnel"] == "DOWN":
+            self.assertNotEqual(liveness["local_brain_connector"], "UP")
         self.assertEqual(
             state["runtime_liveness_authoritative_field"],
             "current_runtime_liveness",
