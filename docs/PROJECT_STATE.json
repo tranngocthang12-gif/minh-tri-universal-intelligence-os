@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "FRESH_SEAT_BOOTSTRAP_FROM_GITHUB_AUTHORITY_AND_OWNER_PC_BRAIN",
+  "next_checkpoint": "FRESH_CHAT_SEAT_ZERO_HISTORY_VALIDATION",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -47,5 +47,8 @@
   "first_owner_pc_external_anchor": "docs/witnesses/OWNER_PC_LEDGER_ANCHOR_20261002T025213Z.json",
   "first_owner_pc_external_anchor_id": "209280fb87c0d31bc576a35c233334bfa25843ef290038497082efa15d750b28",
   "first_owner_pc_external_anchor_readback": "PASS_HISTORICAL_PREFIX_MATCH",
-  "external_witness_independence_scope": "PROCESS_SEPARATED_NOT_FULL_DEVICE_COMPROMISE_PROOF"
+  "external_witness_independence_scope": "PROCESS_SEPARATED_NOT_FULL_DEVICE_COMPROMISE_PROOF",
+  "zero_chat_runtime_harness": "PASS_2026-10-02",
+  "zero_chat_runtime_evidence": "docs/runtime_evidence/ZERO_CHAT_BOOTSTRAP_OWNER_PC_20261002.json",
+  "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI"
 }

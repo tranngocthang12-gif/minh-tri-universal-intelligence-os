@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-zero-chat-runtime-proof/v1",
+  "date": "2026-10-02",
+  "source_boundary": "GITHUB_MAIN_PLUS_LOCAL_BRAIN_HTTP_ONLY",
+  "owner_pc_device": "WIN-VBIQNFFDKIR",
+  "brain_http_runtime": "PASS_ON_DEMAND",
+  "mutation_attempt": "ledger.apply",
+  "mutation_result": "REJECTED_METHOD_NOT_ALLOWED",
+  "recovered": {
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+    "focus_domain_id": "youtube",
+    "focus_status": "ACTIVE",
+    "expected_lesson": "chat quen, so khong",
+    "expectation_status": "UNTESTED_EXPECTATION",
+    "uncertainty": "chua doi AI thu"
+  },
+  "canonical_external_anchor": {
+    "path": "docs/witnesses/OWNER_PC_LEDGER_ANCHOR_20261002T025213Z.json",
+    "anchor_id": "209280fb87c0d31bc576a35c233334bfa25843ef290038497082efa15d750b28",
+    "readback": "PASS_HISTORICAL_PREFIX_MATCH"
+  },
+  "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+  "end_to_end_seat_brain_transport": false,
+  "note": "Harness used a fresh process with no chat transcript. This is not equivalent to a brand-new ChatGPT conversation."
+}
