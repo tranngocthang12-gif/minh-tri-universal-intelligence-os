@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "DEPLOY_TUNNEL_SUPERVISOR_AND_PROVE_PERSISTENCE_THEN_FRESH_SEAT_PASS",
+  "next_checkpoint": "ACTIVATE_SUPERVISOR_ON_NEXT_TUNNEL_RESTART_THEN_OBSERVE_PERSISTENCE_THEN_FRESH_SEAT_PASS",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -109,7 +109,9 @@
   "autonomy_automatic_verified_promotion": false,
   "autonomy_automatic_trial_activation": false,
   "autonomy_research_runtime": "FAIL_CLOSED_UNTIL_FRESH_SEAT_PASS",
-  "secure_mcp_tunnel_supervisor": "IMPLEMENTED_MERGED_CI_PROVEN_LOCAL_ONLY_NOT_DEPLOYED",
+  "secure_mcp_tunnel_supervisor": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_ACTIVE",
   "local_brain_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-02",
-  "owner_pc_maintenance_plane_latest": "ONLINE_OBSERVED_2026-10-02"
+  "owner_pc_maintenance_plane_latest": "ONLINE_OBSERVED_2026-10-02",
+  "owner_pc_tunnel_supervised_launcher": "STAGED_PARSE_OK_NOT_YET_ACTIVE",
+  "owner_pc_tunnel_current_session": "LIVE_READONLY_UNSUPERVISED_SESSION_VALID"
 }
