@@ -10,15 +10,15 @@
   "external_actions_enabled": false,
   "owner_identity_verified": false,
   "durable_project_memory": "GITHUB_FIRST",
-  "current_law_index": "docs/LAW_INDEX_20261002.md",
-  "current_architecture": "docs/ARCHITECTURE_NOW_20261002.md",
+  "current_law_index": "docs/LAW_INDEX_20261003.md",
+  "current_architecture": "docs/ARCHITECTURE_NOW_20261003.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "ZERO_CHAT_RECOVERY_E2E_AND_READONLY_CONNECTOR_BOUNDARY",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "VERIFY_OLD_TUNNEL_KEY_REVOCATION_THEN_BOOT_PERSISTENCE_BITLOCKER_AND_INDEPENDENT_WITNESS",
+  "next_checkpoint": "VERIFY_OLD_TUNNEL_KEY_REVOCATION_THEN_DESKTOP_COMMANDER_HARDENING_BOOT_PERSISTENCE_FRESH_SEAT_AND_INDEPENDENT_WITNESS",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -87,7 +87,7 @@
   "secure_mcp_tunnel_runtime_failure_20261002": "ROOT_CAUSE_CONFIRMED_MISSING_MODULE_MINHTRI_MCP_READONLY",
   "secure_mcp_tunnel_runtime_fix_20261002": "COPIED_CANONICAL_SRC_MINHTRI_MCP_READONLY_PY_TO_OWNER_PC_RUNTIME",
   "secure_mcp_tunnel_wrapper_precheck": "PASS_STAYS_ALIVE_AFTER_FIX",
-  "secure_mcp_tunnel_readyz": "PASS_HTTP_200_READY_2026-10-02",
+  "secure_mcp_tunnel_readyz": "PASS_HTTP_200_READY_2026-10-03",
   "secure_mcp_tunnel_health_url": "LOOPBACK_DYNAMIC_PORT",
   "chatgpt_custom_readonly_connector_toolset": "PASS_EXACT_TWO_TOOLS",
   "chatgpt_custom_readonly_connector_tools": [
@@ -119,12 +119,12 @@
   "fresh_chat_seat_protocol": "docs/FRESH_SEAT_VALIDATION_PROTOCOL_20261002.md",
   "fresh_chat_seat_validator": "IMPLEMENTED_MERGED_CI_PROVEN",
   "owner_pc_tunnel_live_check_latest": "PASS_READYZ_AND_BRAIN_VERIFY_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
-  "secure_mcp_tunnel_runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-02",
+  "secure_mcp_tunnel_runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-03",
   "owner_pc_credential_v2_runtime": "PROVISIONED_DPAPI_SEALED_VERIFY_PASS",
   "owner_pc_credential_v2_credential_id": "owner-v2-097ed3ff5a704c66",
   "owner_pc_credential_v2_iterations": 600000,
   "owner_pc_owner_secret_plaintext_persisted": false,
-  "owner_pc_write_runtime_canonical_clone": "MAIN_SHA_0120318FF8D79530009C62F267D38F27FA1F1C88",
+  "owner_pc_write_runtime_canonical_clone": "MAIN_SHA_0C7B12DC9660098E76D1420E1ADCE2874789076F",
   "owner_pc_write_gate_v2_auth": "PASS_REQUIRE_OWNER_ON_CANONICAL_CODE",
   "owner_pc_legacy_write_runtime": "DETECTED_UNGATED_CODE_DEPRECATED_NOT_CANONICAL",
   "owner_pc_secure_write_launcher_v2": "PASS_E2E_REPAIR_SNAPSHOT_OWNER_GATE_V2_2026-10-03",
@@ -135,7 +135,7 @@
   "last_proven_runtime_evidence": {
     "secure_mcp_tunnel": "PASS_READYZ_AND_BRAIN_VERIFY_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
     "readonly_toolset": "PASS_EXACT_TWO_TOOLS",
-    "runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-02",
+    "runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-03",
     "owner_credential_v2": "PROVISIONED_DPAPI_SEALED_VERIFY_PASS",
     "owner_gate_v2": "PASS_WRONG_SECRET_FAIL_CLOSED_AND_DPAPI_OWNER_SECRET_REPAIR_SNAPSHOT_E2E_2026-10-03",
     "persistence": "NOT_PROVEN",
@@ -143,30 +143,32 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T00:08:17+07:00",
+    "observed_at": "2026-10-03T01:04:00+07:00",
     "owner_pc": "ONLINE",
     "maintenance_plane": "ONLINE",
     "secure_mcp_tunnel": "UP",
     "local_brain_connector": "UP",
     "evidence": [
-      "Desktop Commander WIN-VBIQNFFDKIR Online and ping returned pong",
-      "Secure tunnel readyz returned HTTP 200 ready",
+      "Desktop Commander maintenance plane remained reachable during 2026-10-03 audit",
+      "Secure tunnel process present and readyz returned HTTP 200 ready after replacement runtime key entry",
       "Connector surface exposed exactly brain.verify and brain.recovery_packet",
       "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
-      "Controlled tunnel-client termination was recovered by supervisor with a new child PID and readyz/brain.verify remained valid"
+      "Earlier controlled tunnel-client child termination was recovered by supervisor in-session"
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
-  "owner_pc_write_runtime_deployment": "BLOCKED_OWNER_PC_OFFLINE",
+  "owner_pc_write_runtime_deployment": "SYNCED_CLEAN_TO_GITHUB_MAIN_0C7B12DC9660098E76D1420E1ADCE2874789076F_2026-10-03",
   "research_adapter_gate_source": "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
   "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL",
   "runtime_liveness_authoritative_field": "current_runtime_liveness",
   "legacy_runtime_current_fields_liveness_authority": false,
   "legacy_runtime_current_fields_note": "Backward-compatible historical observations only; do not use them to infer present liveness.",
   "owner_pc_host_audit_latest": {
-    "observed_at": "2026-10-03T00:08:17+07:00",
+    "observed_at": "2026-10-03T01:04:00+07:00",
     "defender_antivirus_enabled": true,
     "defender_realtime_protection_enabled": false,
+    "defender_behavior_monitor_enabled": false,
+    "defender_network_inspection_enabled": false,
     "firewall_profiles_enabled": [
       "Domain",
       "Private",
@@ -176,7 +178,9 @@
       "Windows Defender",
       "McAfee"
     ],
-    "bitlocker_status": "UNKNOWN_NO_RESULT_FROM_READ_ONLY_QUERY",
+    "mcafee_framework_host": "RUNNING_AUTO",
+    "mcafee_realtime_protection": "UNKNOWN_GENERIC_WINDOWS_APIS_INSUFFICIENT",
+    "bitlocker_status": "UNKNOWN_NO_ENCRYPTABLE_VOLUME_RESULT_AND_MANAGE_BDE_NO_VOLUME_DETAIL",
     "latest_observed_security_update": "KB5129195_2026-09-15",
     "tunnel_health_bind": "127.0.0.1",
     "environment_secret_persistence": "NOT_SET_AT_USER_OR_MACHINE_SCOPE_FOR_CHECKED_RUNTIME_SECRETS",
@@ -184,5 +188,10 @@
     "brain_acl_note": "Owner SYSTEM Administrators full control; CodexSandboxUsers read-execute; inherited deny-delete-child present",
     "boot_persistence": "NOT_PROVEN"
   },
-  "secure_mcp_tunnel_supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
+  "secure_mcp_tunnel_supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03",
+  "desktop_commander_allowed_directories": "EMPTY_ARRAY_MEANS_FULL_FILESYSTEM_ACCESS",
+  "desktop_commander_telemetry_enabled": true,
+  "desktop_commander_hardening": "PENDING_SEPARATE_CHAT_REQUIRED_BY_TOOL_SAFETY",
+  "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
+  "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE"
 }
