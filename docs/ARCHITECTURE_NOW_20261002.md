@@ -66,7 +66,8 @@ Không dùng auto-write hai chiều không kiểm soát giữa chat, GitHub, Lib
 - Project Instructions → chats in Project: AVAILABLE.
 - Local brain read stack is IMPLEMENTED: `BrainReader → BrainTransport → BrainHTTP → dedicated MCP`.
 - Dedicated MCP runtime on the Owner PC is PROVEN and exposes exactly `brain.verify` + `brain.recovery_packet`; mutation is not exposed.
-- ChatGPT → dedicated local MCP is NOT YET CONNECTED end-to-end. The current MCP server is local stdio and still needs a secure remote/tunnel registration path before `local_brain_connected` can become true.
+- ChatGPT → dedicated local MCP is NOT YET CONNECTED end-to-end. ChatGPT cannot directly consume the local stdio MCP boundary; the required transport is OpenAI Secure MCP Tunnel (or another supported remote MCP endpoint) before `local_brain_connected` can become true.
+- Secure MCP Tunnel gate: tunnel must be provisioned with a tunnel ID and runtime API key, the tunnel client must report healthy/ready, ChatGPT connector discovery must expose exactly the two read-only brain tools, and mutation must remain unavailable.
 - Desktop Commander is a maintenance/break-glass plane with broader machine authority; it must not be treated as the canonical read-only brain transport.
 - seat → local `brain/` durable mutation: NOT CONNECTED / BLOCKED.
 
@@ -118,7 +119,7 @@ Until those are hardened, autonomous write/publish/spend/delete remains blocked 
 
 ## 8. Current focus
 
-Current workstream: enforce governance + prove MCP boundary in CI + establish a secure ChatGPT↔MCP remote path + fresh-seat recovery before any Research Adapter or autonomous learning runtime.
+Current workstream: governance and MCP CI are now hardened; next is Secure MCP Tunnel provisioning → ChatGPT connector discovery → fresh-seat recovery. Research Adapter remains blocked until those runtime gates pass.
 
 Production/domain work may proceed only under current Owner instruction and relevant gates.
 
