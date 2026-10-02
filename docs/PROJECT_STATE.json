@@ -66,5 +66,8 @@
   "secure_mcp_tunnel_transport_target": "CHATGPT_REMOTE_MCP_TO_OWNER_PC_STDIO_MCP",
   "secure_mcp_tunnel_status": "NOT_PROVISIONED",
   "secure_mcp_tunnel_required_inputs": "OPENAI_TUNNEL_ID_AND_RUNTIME_API_KEY",
-  "secure_mcp_tunnel_success_gate": "TUNNEL_READY_AND_CHATGPT_CONNECTOR_DISCOVERY_AND_READONLY_TOOLSET_PASS"
+  "secure_mcp_tunnel_success_gate": "TUNNEL_READY_AND_CHATGPT_CONNECTOR_DISCOVERY_AND_READONLY_TOOLSET_PASS",
+  "github_cli_token_owner_pc_policy": "OWNER_EXPLICIT_COMMAND_REQUIRED_FOR_ANY_MUTATION",
+  "github_cli_token_owner_pc_action": "LEAVE_UNCHANGED",
+  "github_cli_token_owner_pc_decision": "docs/OWNER_SECURITY_DECISION_GITHUB_CLI_TOKEN_20261002.md"
 }
