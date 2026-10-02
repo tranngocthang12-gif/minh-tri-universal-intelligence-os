@@ -31,7 +31,7 @@ class BrainTransport:
             raise BrainTransportError("unsupported protocol")
         method = request["method"]
         params = request["params"]
-        if method not in ALLOWED_METHODS or not isinstance(params, dict):
+        if not isinstance(method, str) or method not in ALLOWED_METHODS or not isinstance(params, dict):
             raise BrainTransportError("method not allowed")
         try:
             if method == "brain.verify":

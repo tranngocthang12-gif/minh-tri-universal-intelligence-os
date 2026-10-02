@@ -23,6 +23,12 @@ class BrainTransportContract(unittest.TestCase):
         with self.assertRaises(BrainTransportError):
             self.transport.dispatch({"protocol": PROTOCOL, "method": "ledger.apply", "params": {}})
 
+    def test_non_string_method_is_rejected_fail_closed(self):
+        for method in ([], {}):
+            with self.subTest(method=method):
+                with self.assertRaises(BrainTransportError):
+                    self.transport.dispatch({"protocol": PROTOCOL, "method": method, "params": {}})
+
     def test_unknown_protocol_is_rejected(self):
         with self.assertRaises(BrainTransportError):
             self.transport.dispatch({"protocol": "other", "method": "brain.verify", "params": {}})
