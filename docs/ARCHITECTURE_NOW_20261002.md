@@ -66,8 +66,8 @@ Không dùng auto-write hai chiều không kiểm soát giữa chat, GitHub, Lib
 - Project Instructions → chats in Project: AVAILABLE.
 - Local brain read stack is IMPLEMENTED: `BrainReader → BrainTransport → BrainHTTP → dedicated MCP`.
 - Dedicated MCP runtime on the Owner PC is PROVEN and exposes exactly `brain.verify` + `brain.recovery_packet`; mutation is not exposed.
-- ChatGPT → dedicated local MCP is NOT YET CONNECTED end-to-end. ChatGPT cannot directly consume the local stdio MCP boundary; the required transport is OpenAI Secure MCP Tunnel (or another supported remote MCP endpoint) before `local_brain_connected` can become true.
-- Secure MCP Tunnel gate: tunnel must be provisioned with a tunnel ID and runtime API key, the tunnel client must report healthy/ready, ChatGPT connector discovery must expose exactly the two read-only brain tools, and mutation must remain unavailable.
+- ChatGPT → dedicated local MCP is CONNECTED through OpenAI Secure MCP Tunnel for the current seat. Live connector discovery exposes exactly `brain.verify` + `brain.recovery_packet`, and both tools successfully read the fixed Owner-PC brain.
+- Secure MCP Tunnel transport is READY and connector discovery is PROVEN for the current seat. Fresh-seat recovery remains a separate promotion gate before `end_to_end_seat_brain_transport` may become true.
 - Desktop Commander is a maintenance/break-glass plane with broader machine authority; it must not be treated as the canonical read-only brain transport.
 - seat → local `brain/` durable mutation: NOT CONNECTED / BLOCKED.
 
@@ -122,12 +122,13 @@ Current proof level is process-separated only. It does not prove full-device-com
 - zero-chat process harness: PASS;
 - dedicated MCP local runtime: PASS;
 - first external anchor read-back: PASS;
-- fresh ChatGPT seat over the canonical read-only connector: PENDING;
+- current ChatGPT seat over the canonical read-only connector: PASS;
+- fresh ChatGPT seat over the same connector: PENDING;
 - therefore end-to-end seat transport remains false.
 
 ### 5.7 Promotion invariants
 A state promotion is valid only when its prerequisites are proven:
-1. `local_brain_connected=true` requires a ready secure remote/tunnel path plus ChatGPT connector discovery.
+1. `local_brain_connected=true` requires a ready secure remote/tunnel path plus ChatGPT connector discovery; this gate is now satisfied for the current seat.
 2. `end_to_end_seat_brain_transport=true` requires the discovered toolset to remain exactly the two read-only brain tools and a fresh-seat recovery PASS.
 3. Desktop Commander evidence cannot satisfy either promotion gate.
 
@@ -179,7 +180,7 @@ Until those are hardened, autonomous write/publish/spend/delete remains blocked 
 
 ## 9. Current focus
 
-Current workstream: governance and MCP CI are now hardened; next is Secure MCP Tunnel provisioning → ChatGPT connector discovery → fresh-seat recovery. Research Adapter remains blocked until those runtime gates pass.
+Current workstream: Secure MCP Tunnel + ChatGPT connector discovery are now PASS for the current seat; next is fresh-seat recovery over the canonical read-only connector. Research Adapter remains blocked until the fresh-seat gate passes.
 
 Production/domain work may proceed only under current Owner instruction and relevant gates.
 
