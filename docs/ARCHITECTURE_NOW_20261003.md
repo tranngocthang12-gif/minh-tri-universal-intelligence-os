@@ -94,3 +94,7 @@ Read in order:
 3. `docs/ARCHITECTURE_NOW_20261003.md`
 4. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
 5. task/domain source.
+
+## 11. Non-self-referential deployment evidence
+
+A recorded local deployment SHA is historical evidence only. It must never be interpreted as a requirement that the local clone equal the repository's forever-current main SHA, because merging a state update creates a newer main commit by definition. Operational alignment is instead expressed as a clean tracking relationship to `origin/main` at the time of observation; exact SHA is retained only as bounded evidence.

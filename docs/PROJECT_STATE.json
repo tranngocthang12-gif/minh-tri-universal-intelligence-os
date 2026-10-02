@@ -124,7 +124,7 @@
   "owner_pc_credential_v2_credential_id": "owner-v2-097ed3ff5a704c66",
   "owner_pc_credential_v2_iterations": 600000,
   "owner_pc_owner_secret_plaintext_persisted": false,
-  "owner_pc_write_runtime_canonical_clone": "MAIN_SHA_0C7B12DC9660098E76D1420E1ADCE2874789076F",
+  "owner_pc_write_runtime_canonical_clone": "GITHUB_MAIN_TRACKING_CLEAN_AT_LAST_OBSERVATION",
   "owner_pc_write_gate_v2_auth": "PASS_REQUIRE_OWNER_ON_CANONICAL_CODE",
   "owner_pc_legacy_write_runtime": "DETECTED_UNGATED_CODE_DEPRECATED_NOT_CANONICAL",
   "owner_pc_secure_write_launcher_v2": "PASS_E2E_REPAIR_SNAPSHOT_OWNER_GATE_V2_2026-10-03",
@@ -157,7 +157,7 @@
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
-  "owner_pc_write_runtime_deployment": "SYNCED_CLEAN_TO_GITHUB_MAIN_0C7B12DC9660098E76D1420E1ADCE2874789076F_2026-10-03",
+  "owner_pc_write_runtime_deployment": "SYNCED_CLEAN_TO_ORIGIN_MAIN_AT_LAST_OBSERVATION_2026-10-03",
   "research_adapter_gate_source": "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
   "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL",
   "runtime_liveness_authoritative_field": "current_runtime_liveness",
@@ -193,5 +193,7 @@
   "desktop_commander_telemetry_enabled": true,
   "desktop_commander_hardening": "PENDING_SEPARATE_CHAT_REQUIRED_BY_TOOL_SAFETY",
   "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
-  "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE"
+  "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE",
+  "owner_pc_write_runtime_last_observed_sha": "70B91E737DD80C1996F537E3D17D4E3A2A1356A9",
+  "owner_pc_write_runtime_sha_semantics": "HISTORICAL_OBSERVATION_NOT_CURRENT_MAIN_INVARIANT"
 }
