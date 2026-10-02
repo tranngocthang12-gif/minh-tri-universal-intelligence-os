@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "REGISTER_DEDICATED_READONLY_MCP_WITH_CHATGPT_THEN_RUN_FRESH_CHAT_SEAT_VALIDATION",
+  "next_checkpoint": "MCP_INTEGRATION_CI_THEN_SECURE_REMOTE_MCP_PATH_THEN_FRESH_CHAT_SEAT",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -55,5 +55,11 @@
   "dedicated_readonly_mcp_tool_allowlist": "PASS_EXACT_TWO_TOOLS",
   "dedicated_readonly_mcp_mutation_rejection": "PASS_UNKNOWN_TOOL",
   "dedicated_readonly_mcp_runtime_evidence": "docs/runtime_evidence/DEDICATED_READONLY_MCP_OWNER_PC_20261002.json",
-  "chatgpt_custom_readonly_connector_registration": "PENDING_PLATFORM_UI_OR_REGISTRATION_PATH"
+  "chatgpt_custom_readonly_connector_registration": "PENDING_PLATFORM_UI_OR_REGISTRATION_PATH",
+  "github_main_required_status_check": "ENFORCED_TEST_STRICT",
+  "github_main_required_status_check_context": "test",
+  "github_main_pr_required": true,
+  "external_witness_full_device_independence": false,
+  "external_witness_threat_model": "PROCESS_SEPARATED_ONLY; LOCAL_DEVICE_COMPROMISE_CAN_REACH_CURRENT_WITNESS_AUTHORITY",
+  "research_adapter_gate": "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS"
 }
