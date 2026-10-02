@@ -44,6 +44,24 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertEqual(data["anchor_id"], state["first_owner_pc_external_anchor_id"])
             self.assertEqual(state["first_owner_pc_external_anchor_readback"], "PASS_HISTORICAL_PREFIX_MATCH")
 
+    def test_witness_scope_never_claims_full_device_independence_without_proof(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            state["external_witness_independence_scope"],
+            "PROCESS_SEPARATED_NOT_FULL_DEVICE_COMPROMISE_PROOF",
+        )
+        self.assertFalse(state["external_witness_full_device_independence"])
+        self.assertIn("PROCESS_SEPARATED_ONLY", state["external_witness_threat_model"])
+
+    def test_research_adapter_remains_blocked_before_runtime_recovery_gates(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            state["research_adapter_gate"],
+            "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS",
+        )
+        self.assertFalse(state["local_brain_connected"])
+        self.assertFalse(state["end_to_end_seat_brain_transport"])
+
 
 if __name__ == "__main__":
     unittest.main()
