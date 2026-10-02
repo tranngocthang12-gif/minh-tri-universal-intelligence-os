@@ -74,6 +74,19 @@ class BrainHTTPE2E(unittest.TestCase):
         with self.assertRaises(BrainHTTPError):
             BrainHTTPHost(self.home, TOKEN, host="0.0.0.0")
 
+    def test_client_rejects_userinfo_host_confusion_and_noncanonical_urls(self):
+        bad_urls = (
+            "http://127.0.0.1:80@evil.invalid/v1/brain",
+            "http://[::1]@evil.invalid:80/v1/brain",
+            "http://127.0.0.1:8765/v1/brain?next=http://evil.invalid",
+            "http://127.0.0.1:8765/other",
+            "https://127.0.0.1:8765/v1/brain",
+        )
+        for url in bad_urls:
+            with self.subTest(url=url):
+                with self.assertRaises(BrainHTTPError):
+                    BrainHTTPClient(url, TOKEN)
+
 
 if __name__ == "__main__":
     unittest.main()
