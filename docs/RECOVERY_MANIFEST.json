@@ -19,7 +19,8 @@
     "brain_http_host": "IMPLEMENTED_AND_MERGED",
     "brain_http_e2e_test": "CI_PROVEN",
     "external_witness_receipt_verifier": "IMPLEMENTED_AND_MERGED",
-    "whole_history_rewrite_detection": "CI_PROVEN"
+    "whole_history_rewrite_detection": "CI_PROVEN",
+    "owner_pc_runtime_activation_cli": "IMPLEMENTED_PENDING_CI_AND_MERGE"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
