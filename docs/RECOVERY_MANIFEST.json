@@ -31,7 +31,11 @@
     "dedicated_readonly_mcp_tool_allowlist": "PASS_EXACT_TWO_TOOLS",
     "dedicated_readonly_mcp_mutation_rejection": "PASS_UNKNOWN_TOOL",
     "chatgpt_custom_readonly_connector_registration": "PENDING_PLATFORM_UI_OR_REGISTRATION_PATH",
-    "local_brain_connected": false
+    "local_brain_connected": false,
+    "github_main_required_status_check": "ENFORCED_TEST_STRICT",
+    "github_main_pr_required": true,
+    "external_witness_full_device_independence": false,
+    "research_adapter_gate": "BLOCKED_UNTIL_READONLY_CONNECTOR_AND_FRESH_SEAT_PASS"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",

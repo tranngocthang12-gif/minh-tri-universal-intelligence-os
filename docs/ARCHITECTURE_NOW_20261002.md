@@ -64,8 +64,11 @@ Không dùng auto-write hai chiều không kiểm soát giữa chat, GitHub, Lib
 - ChatGPT seat → GitHub: AVAILABLE khi được Owner/permission cho phép.
 - Project/Library sources → seat: AVAILABLE.
 - Project Instructions → chats in Project: AVAILABLE.
-- local `brain/` → seat: NOT CONNECTED as a real transport. A read-only Python `BrainReader` module is implemented and CI-tested locally.
-- seat → local `brain/`: NOT CONNECTED.
+- Local brain read stack is IMPLEMENTED: `BrainReader → BrainTransport → BrainHTTP → dedicated MCP`.
+- Dedicated MCP runtime on the Owner PC is PROVEN and exposes exactly `brain.verify` + `brain.recovery_packet`; mutation is not exposed.
+- ChatGPT → dedicated local MCP is NOT YET CONNECTED end-to-end. The current MCP server is local stdio and still needs a secure remote/tunnel registration path before `local_brain_connected` can become true.
+- Desktop Commander is a maintenance/break-glass plane with broader machine authority; it must not be treated as the canonical read-only brain transport.
+- seat → local `brain/` durable mutation: NOT CONNECTED / BLOCKED.
 
 ## 5. Learning and critique
 
@@ -94,10 +97,11 @@ Security remains first-order.
 Current security status:
 - CLOSED P0: caller-controlled Owner config authority selector is blocked.
 - CLOSED P0: direct Python `Ledger.apply` and snapshot repair authenticate inside the mutation boundary.
-- PARTIAL: external-anchor verifier exists, but no independently protected external publication target exists yet.
+- CLOSED P0 governance: `main` requires PRs and the GitHub Actions `test` check is now required with strict/up-to-date enforcement; no bypass actors are configured.
+- PARTIAL: first real external anchor is published and read-back against the Owner-PC ledger passes, but the present witness proves process separation only, not full-device-compromise independence.
+- OPEN: a compromise of the Owner PC can still reach the current GitHub witness authority; therefore no state may claim fully independent witness protection yet.
 - OPEN: Owner Gate is not real-person identity verification; shared-secret trust remains local.
 - OPEN: provider IDs are declared identities, not proof of independent actors.
-- UNKNOWN in current audit: detailed GitHub protection enforcement could not be read through the integration.
 - OPEN: autonomous mutation remains blocked until the remaining trust chain is proven.
 
 Until those are hardened, autonomous write/publish/spend/delete remains blocked unless Owner explicitly authorizes the specific action.
@@ -114,7 +118,7 @@ Until those are hardened, autonomous write/publish/spend/delete remains blocked 
 
 ## 8. Current focus
 
-Current workstream: architecture/security/synchronization hardening before autonomous learning runtime.
+Current workstream: enforce governance + prove MCP boundary in CI + establish a secure ChatGPT↔MCP remote path + fresh-seat recovery before any Research Adapter or autonomous learning runtime.
 
 Production/domain work may proceed only under current Owner instruction and relevant gates.
 
