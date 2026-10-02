@@ -97,5 +97,9 @@
   "chatgpt_custom_readonly_connector_live_verify": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330",
   "chatgpt_custom_readonly_connector_live_recovery": "PASS_FOCUS_YOUTUBE_CHAT_QUEN_SO_KHONG_UNTESTED_EXPECTATION",
   "chatgpt_custom_readonly_connector_runtime_evidence": "docs/runtime_evidence/CHATGPT_SECURE_MCP_LIVE_READ_20261002.json",
-  "same_authority_github_anchor_published": true
+  "same_authority_github_anchor_published": true,
+  "secure_mcp_tunnel_persistence": "NOT_PROVEN",
+  "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
+  "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
+  "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN"
 }

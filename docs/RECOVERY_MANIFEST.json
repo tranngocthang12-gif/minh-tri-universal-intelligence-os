@@ -53,7 +53,11 @@
     "chatgpt_to_owner_pc_brain_connector": "CONNECTED_READONLY",
     "chatgpt_custom_readonly_connector_toolset": "PASS_EXACT_TWO_TOOLS",
     "same_authority_github_anchor_published": true,
-    "external_witness_publication_authority": "GITHUB_CLOUD_SAME_AUTHORITY_ANCHOR_NOT_INDEPENDENT_WITNESS"
+    "external_witness_publication_authority": "GITHUB_CLOUD_SAME_AUTHORITY_ANCHOR_NOT_INDEPENDENT_WITNESS",
+    "secure_mcp_tunnel_persistence": "NOT_PROVEN",
+    "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
+    "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
+    "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
