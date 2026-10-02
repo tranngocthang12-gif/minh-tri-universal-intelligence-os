@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": false,
-  "next_checkpoint": "CONNECT_REAL_OWNER_PC_BRAIN_HOST_THEN_PUBLISH_AND_READ_BACK_FIRST_REAL_EXTERNAL_WITNESS",
+  "next_checkpoint": "CONNECT_DESKTOP_BRIDGE_THEN_START_SERVE_BRAIN_AND_VERIFY_REAL_OWNER_PC_HEAD",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -39,5 +39,6 @@
   "chatgpt_to_owner_pc_brain_connector": "NOT_CONNECTED",
   "external_witness_receipt_verifier": "IMPLEMENTED_AND_MERGED",
   "whole_history_rewrite_detection": "CI_PROVEN",
-  "external_witness_publication_authority": "CLOUD_CONNECTOR_DESIGNATED_NOT_ACTIVATED_ON_OWNER_BRAIN"
+  "external_witness_publication_authority": "CLOUD_CONNECTOR_DESIGNATED_NOT_ACTIVATED_ON_OWNER_BRAIN",
+  "owner_pc_runtime_activation_cli": "IMPLEMENTED_PENDING_CI_AND_MERGE"
 }
