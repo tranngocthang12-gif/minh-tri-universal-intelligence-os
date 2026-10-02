@@ -11,6 +11,7 @@ from pathlib import Path
 
 from .core import GateError, Ledger, current_focus, evolve, next_goal, utcnow
 from .owner import ENV_SECRET, OwnerGateError, hash_secret
+from .brain_http import BRAIN_TOKEN_ENV, BrainHTTPError, BrainHTTPHost
 
 UNSTATED = "CHƯA NÊU"
 LEARN_DOMAIN_CONTRACT = "CHƯA ĐẶT: sổ học của Owner, chưa có hợp đồng đo kết quả"
@@ -89,6 +90,9 @@ def main(argv: list[str] | None = None) -> int:
     learn.add_argument("--id", help="Optional focus ID (lowercase); generated from time if omitted")
     sub.add_parser("hash-secret", help="Print the SHA-256 of a secret read without echo (or from piped stdin)")
     sub.add_parser("focus", help="Show the current learning focus")
+    serve = sub.add_parser("serve-brain", help="Run authenticated read-only brain HTTP host on loopback")
+    serve.add_argument("--host", default="127.0.0.1", help="Loopback IP only")
+    serve.add_argument("--port", type=int, default=8765, help="Loopback TCP port (default: 8765)")
     unfocus = sub.add_parser("unfocus", help="Stop the current focus; history is kept")
     unfocus.add_argument("--reason", default="Owner dừng tập trung", help="Why the focus stops")
     args = parser.parse_args(argv)
@@ -124,6 +128,19 @@ def main(argv: list[str] | None = None) -> int:
             result = {"status": "FOCUS_SET", "focus": applied["state"]["learning_focuses"][focus_id],
                       "events_appended": len(commands), "event_count": applied["event_count"],
                       "head": applied["head"]}
+        elif args.action == "serve-brain":
+            token = os.environ.get(BRAIN_TOKEN_ENV)
+            if not token:
+                raise GateError(f"{BRAIN_TOKEN_ENV} is required")
+            host = BrainHTTPHost(ledger.home, token, host=args.host, port=args.port)
+            print(json.dumps({
+                "status": "BRAIN_HTTP_SERVING",
+                "url": host.url,
+                "home": str(ledger.home),
+                "write_capability": False
+            }, ensure_ascii=False), flush=True)
+            host.serve_forever()
+            return 0
         elif args.action == "focus":
             state, count, head = ledger.verify()
             focus = current_focus(state)
@@ -155,6 +172,6 @@ def main(argv: list[str] | None = None) -> int:
     except OwnerGateError as exc:
         print(json.dumps({"status": "BLOCKED", "reason": exc.code, "detail": exc.detail}, ensure_ascii=False), file=sys.stderr)
         return 2
-    except (GateError, OSError, ValueError) as exc:
+    except (GateError, BrainHTTPError, OSError, ValueError) as exc:
         print(json.dumps({"status": "BLOCKED", "reason": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 2
