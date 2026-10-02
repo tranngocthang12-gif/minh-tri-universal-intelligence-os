@@ -62,6 +62,16 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertFalse(state["local_brain_connected"])
         self.assertFalse(state["end_to_end_seat_brain_transport"])
 
+    def test_secure_mcp_tunnel_is_required_before_chatgpt_connector(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertTrue(state["secure_mcp_tunnel_required"])
+        self.assertEqual(state["secure_mcp_tunnel_status"], "NOT_PROVISIONED")
+        self.assertEqual(
+            state["chatgpt_custom_readonly_connector_registration"],
+            "BLOCKED_UNTIL_SECURE_MCP_TUNNEL_PROVISIONED",
+        )
+        self.assertFalse(state["local_brain_connected"])
+
 
 if __name__ == "__main__":
     unittest.main()
