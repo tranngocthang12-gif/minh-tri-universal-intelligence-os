@@ -26,13 +26,19 @@
     "owner_pc_brain_http_mutation_rejection": "PASS_METHOD_NOT_ALLOWED",
     "first_owner_pc_external_anchor_readback": "PASS_HISTORICAL_PREFIX_MATCH",
     "zero_chat_runtime_harness": "PASS_2026-10-02",
-    "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI"
+    "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+    "dedicated_readonly_mcp_server": "IMPLEMENTED_AND_RUNTIME_PROVEN",
+    "dedicated_readonly_mcp_tool_allowlist": "PASS_EXACT_TWO_TOOLS",
+    "dedicated_readonly_mcp_mutation_rejection": "PASS_UNKNOWN_TOOL",
+    "chatgpt_custom_readonly_connector_registration": "PENDING_PLATFORM_UI_OR_REGISTRATION_PATH",
+    "local_brain_connected": false
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
     "recovery_packet": "BrainReader.recovery_packet/v1",
     "brain_transport": "minhtri-brain-readonly/v1",
     "brain_http": "minhtri-brain-http/v1",
-    "external_witness": "minhtri-external-witness/v1"
+    "external_witness": "minhtri-external-witness/v1",
+    "dedicated_mcp": "mcp/2.x stdio"
   }
 }
