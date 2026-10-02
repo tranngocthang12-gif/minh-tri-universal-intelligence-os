@@ -45,6 +45,13 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertEqual(data["anchor_id"], state["first_owner_pc_external_anchor_id"])
             self.assertEqual(state["first_owner_pc_external_anchor_readback"], "PASS_HISTORICAL_PREFIX_MATCH")
 
+    def test_independent_publication_fails_closed_without_independent_authority(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        if not state["external_witness_full_device_independence"]:
+            self.assertFalse(state["external_anchor_publication"])
+        self.assertTrue(state["same_authority_github_anchor_published"])
+        self.assertIn("NOT_INDEPENDENT_WITNESS", state["external_witness_publication_authority"])
+
     def test_witness_scope_never_claims_full_device_independence_without_proof(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         self.assertEqual(
