@@ -23,6 +23,7 @@ PATH = "/v1/brain"
 MAX_REQUEST_BYTES = 16 * 1024
 MAX_RESPONSE_BYTES = 256 * 1024
 MIN_TOKEN_CHARS = 32
+BRAIN_TOKEN_ENV = "MINHTRI_BRAIN_TOKEN"
 
 
 class BrainHTTPError(ValueError):
@@ -113,6 +114,15 @@ class BrainHTTPHost:
         self._thread = threading.Thread(target=self._server.serve_forever, name="minhtri-brain-http", daemon=True)
         self._thread.start()
         return self
+
+    def serve_forever(self) -> None:
+        """Run the local host in the current process until interrupted."""
+        if self._thread is not None:
+            raise BrainHTTPError("host already started in background")
+        try:
+            self._server.serve_forever()
+        finally:
+            self._server.server_close()
 
     def close(self) -> None:
         if self._thread is not None:
