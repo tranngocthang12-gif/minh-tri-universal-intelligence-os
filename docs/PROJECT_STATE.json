@@ -102,9 +102,9 @@
   "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
   "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
   "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN",
-  "automatic_self_critique_engine": "IMPLEMENTED_MERGED_CI_PROVEN_PROPOSAL_ONLY_NOT_DEPLOYED",
-  "autonomous_learning_engine": "IMPLEMENTED_MERGED_CI_PROVEN_PROPOSAL_ONLY_NOT_DEPLOYED",
-  "meta_learning_engine": "IMPLEMENTED_MERGED_CI_PROVEN_PROPOSAL_ONLY_NOT_DEPLOYED",
+  "automatic_self_critique_engine": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_BACKGROUND_ACTIVE",
+  "autonomous_learning_engine": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_BACKGROUND_ACTIVE",
+  "meta_learning_engine": "IMPLEMENTED_MERGED_CI_PROVEN_STAGED_ON_OWNER_PC_NOT_BACKGROUND_ACTIVE",
   "autonomy_write_capability": false,
   "autonomy_automatic_verified_promotion": false,
   "autonomy_automatic_trial_activation": false,
@@ -114,5 +114,6 @@
   "owner_pc_maintenance_plane_latest": "ONLINE_OBSERVED_2026-10-02",
   "owner_pc_tunnel_supervised_launcher": "STAGED_PARSE_OK_NOT_YET_ACTIVE",
   "owner_pc_tunnel_current_session": "LIVE_READONLY_UNSUPERVISED_SESSION_VALID",
-  "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02"
+  "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02",
+  "owner_pc_autonomy_readonly_smoke_test": "PASS_WRITE_FALSE_RESEARCH_BLOCKED_FOCUS_YOUTUBE_2026-10-02"
 }
