@@ -88,6 +88,7 @@ def initial_state() -> dict:
         "domains": {}, "providers": {}, "goals": {}, "problems": {}, "sources": {},
         "evidence": {}, "procedures": {}, "claims": {}, "predictions": {},
         "resolutions": {}, "reviews": {}, "adjudications": {}, "lessons": {},
+        "runtime_audit_events": {},
     }
 
 
@@ -122,6 +123,7 @@ ALLOWED_FIELDS = {
     "record_research_trace": {"id", "domain_id", "query", "source_id", "source_role", "claim_id", "citation_locator", "conflict_status", "note"},
     "record_context_capsule": {"id", "domain_id", "artifact_refs", "summary", "refresh_after", "context_purpose"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
+    "record_runtime_audit_event": {"id", "event_type", "lease_id", "occurred_at", "details"},
 }
 
 FOCUS_ACTIVE_FIELDS = {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty"}
@@ -192,7 +194,22 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
     out = copy.deepcopy(state)
     parse_time(event_time)
 
-    if kind == "register_domain":
+    if kind == "record_runtime_audit_event":
+        need(d, "id", "event_type", "lease_id", "occurred_at", "details")
+        identifier(d["id"], "runtime audit event ID")
+        if d["event_type"] not in ("LEASE_CREATED", "LEASE_ACTIVATED", "LEASE_EXPIRED", "LEASE_REVOKED"):
+            raise GateError("Invalid runtime audit event_type")
+        string(d["lease_id"], "lease_id")
+        occurred = parse_time(d["occurred_at"])
+        if occurred > parse_time(event_time):
+            raise GateError("Runtime audit event cannot occur in the future")
+        if not isinstance(d["details"], dict):
+            raise GateError("runtime audit details must be an object")
+        d["recorded_at"] = event_time
+        d["status"] = "AUDIT_ONLY_NOT_AUTHORITY"
+        add(out, "runtime_audit_events", d)
+
+    elif kind == "register_domain":
         need(d, "id", "name", "risk_class", "measurement_contract")
         if d["risk_class"] not in ("NORMAL", "HIGH_STAKES"):
             raise GateError("risk_class must be NORMAL or HIGH_STAKES")
