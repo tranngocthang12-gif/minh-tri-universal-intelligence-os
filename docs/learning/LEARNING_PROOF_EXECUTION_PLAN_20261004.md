@@ -122,3 +122,51 @@ preregistered outcome metrics versus concurrent control.
 - automatic learning mutation OFF;
 - Research Adapter blocked;
 - Local Brain runtime currently DOWN/OFFLINE at last fresh observation.
+
+
+## Causal-proof hardening update
+
+### Stage 1 provenance
+- Every new prediction intended for learning must preregister an `outcome_source_spec` before due time:
+  source URI, source kind, value selector, and capture rule.
+- Historical predictions without immutable preregistered outcome-source proof are pilot-only and are not eligible for meta-learning.
+- Resolver B must retrieve/inspect the raw preregistered source snapshot, not a model-authored bundle.
+- Report both raw agreement and Cohen's kappa for interval-hit labels.
+- Eligibility criteria, minimum agreement, and maximum OUT rate are frozen before opening outcomes.
+- If OUT rate exceeds the preregistered ceiling, the audited corpus fails as a whole.
+
+### Stage 2 canary
+- Canary datasets are single-use per critic.
+- At least half of canary provenance should come from Owner-contributed or historical real defects when available; this is a target for the frozen dataset, not a retroactive claim.
+- Do not publish per-defect-type performance when sample size is too small; only aggregate metrics are inferential unless type-specific power was preregistered.
+- Candidate A remains rejected by policy hardening and is not revived as an enforcement-path candidate.
+
+### Stage 3 v1.4 benchmark
+- Baseline must be named before execution: `V1_3` or `NO_ASSURANCE`; mixing baselines invalidates the run.
+- Use paired tasks: the same frozen task goes through baseline and treatment.
+- Gold labels and evaluator rubric are completed and hashed before generation.
+- Primary endpoints are frozen before unblinding. For the first benchmark use factual accuracy as primary and unsupported-claim rate as safety; all other metrics are secondary/descriptive.
+- Cost-adjusted utility, latency, and token/API cost are retained as deployment constraints, not post-hoc winning metrics.
+
+### Stage 4 causal behavioral trial
+- Trial uses three interleaved randomized arms:
+  A = control,
+  B = lesson-targeted treatment,
+  C = compute-matched non-targeted control.
+- A learning claim requires B to outperform C on the preregistered primary endpoint while satisfying the safety endpoint. B > A alone only shows that extra compute may help.
+- Rollback threshold and evaluation window are numeric and frozen before unblinding.
+- Outcome scoring must use the Stage-1 resolver contract.
+- The first trial may route only by system-coded domain_id/procedure_id.
+- Runtime consumption of TRIAL_RULE as data is currently NOT IMPLEMENTED. Until a tested reader exists, Stage 4 is a measurement design only and cannot establish closed-loop learning.
+
+## Operational order
+
+1. Hash/preregister Stage 1 and Stage 2 criteria before observing results.
+2. Obtain provider-side proof that the old tunnel key is revoked.
+3. When filesystem access is available, create a frozen verified ledger export without starting Brain/autonomy.
+4. Run provenance audit on the export.
+5. Build a frozen, single-use canary set with Owner/historical contributions and independent human adjudication.
+6. Run blind external critics.
+7. Run paired v1.4 benchmark with frozen baseline/gold labels/endpoints.
+8. Implement and test a data-plane TRIAL_RULE reader.
+9. Only then run three-arm interleaved A/B/C behavioral trial.
