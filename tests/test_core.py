@@ -214,6 +214,68 @@ class CoreGates(unittest.TestCase):
         self.assertEqual(self.state["resolutions"]["r1"]["interval_hit"], True)
         self.assertEqual(self.state["claims"]["h1"]["epistemic_status"], "HYPOTHESIS")
 
+    def test_owner_can_activate_structured_machine_readable_trial_rule(self):
+        from minhtri.learning_experiment import validate_preregistration
+        from minhtri.trial_rule_runtime import preregistration_digest
+
+        self.base()
+        self.predictions_and_outcomes()
+        self.review_and_lesson()
+        experiment = {
+            "experiment_id": "trial-1",
+            "frozen_at_utc": "2026-01-08T00:00:00Z",
+            "primary_endpoint": "task_utility",
+            "safety_endpoint": "unsupported_claim_rate",
+            "primary_success_rule": "treatment > compute_matched",
+            "safety_failure_rule": "unsupported_claim_rate must not worsen",
+            "rollback_rule": "rollback on safety failure",
+            "assignment_unit": "TASK_ID",
+            "assignment_seed_hash": "a" * 64,
+            "control_pipeline_hash": "b" * 64,
+            "treatment_pipeline_hash": "c" * 64,
+            "compute_matched_pipeline_hash": "d" * 64,
+            "frozen_evaluator_hash": "e" * 64,
+            "gold_labels_hash": "f" * 64,
+            "baseline_definition": "V1_3",
+            "compute_budget_contract": {
+                "control": {"retrieval_calls": 1, "critic_calls": 1},
+                "treatment": {"retrieval_calls": 2, "critic_calls": 2},
+                "compute_matched": {"retrieval_calls": 2, "critic_calls": 2},
+            },
+            "primary_window_tasks": 30,
+            "rollback_threshold": 0.05,
+            "trial_rule_id": "lesson1",
+            "trial_rule_ttl_seconds": 3600,
+            "routing_keys": ["domain_id", "procedure_id"],
+        }
+        validate_preregistration(experiment)
+        trial_spec = {
+            "experiment_id": "trial-1",
+            "preregistration_hash": preregistration_digest(experiment),
+            "domain_id": "media",
+            "procedure_id": "p1",
+            "overlay_id": "COUNTEREVIDENCE_FIRST",
+            "expires_at": "2026-01-09T00:00:00Z",
+        }
+        self.apply("activate_trial_lesson", at="2026-01-08T00:00:00Z",
+                   lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED",
+                   scope="Media/p1 bounded A/B/C trial", trial_spec=trial_spec)
+        lesson = self.state["lessons"]["lesson1"]
+        self.assertEqual(lesson["runtime_trial_status"], "EXECUTABLE_DECLARATIVE_OVERLAY")
+        self.assertEqual(lesson["trial_spec"]["overlay_id"], "COUNTEREVIDENCE_FIRST")
+        self.assertEqual(len(lesson["trial_spec_hash"]), 64)
+
+    def test_legacy_trial_scope_is_not_runtime_executable(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.review_and_lesson()
+        self.apply("activate_trial_lesson", lesson_id="lesson1",
+                   owner_ack="HUMAN_OWNER_APPROVED", scope="Legacy text-only pilot")
+        self.assertEqual(
+            self.state["lessons"]["lesson1"]["runtime_trial_status"],
+            "LEGACY_NONEXECUTABLE_SCOPE_ONLY",
+        )
+
     def test_lesson_cannot_freeze_without_resolved_preregistration(self):
         self.base()
         self.apply("register_prediction", id="f1", claim_id="h1", procedure_id="p1", metric="rate",
