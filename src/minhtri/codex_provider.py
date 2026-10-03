@@ -60,6 +60,7 @@ class CodexCandidateProvider:
         return subprocess.run(
             cmd,
             cwd=self.candidate_root,
+            stdin=subprocess.DEVNULL,
             capture_output=True,
             text=True,
             timeout=self.timeout_seconds,
