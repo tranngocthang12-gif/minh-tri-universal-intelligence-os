@@ -313,3 +313,25 @@ Bounded real-clock evidence:
 - OS sandbox containment proven: false.
 
 This proves elapsed-time expiry at the CI runtime/controller boundary. It does not prove Owner-PC execution, 24-hour expiry, arbitrary candidate-code containment, or safe autonomous activation on the host. The live 24H lease remains OFF.
+
+
+## 21. Lease-bound Codex provider live binding
+
+The bounded self-upgrade path now has live Owner-PC evidence through the candidate mutation boundary:
+
+- Codex CLI 0.160.0 is installed on the Owner PC and authenticated through ChatGPT;
+- planning runs with Codex `read-only` sandbox;
+- candidate apply runs with Codex `workspace-write` sandbox;
+- the adapter closes stdin for true non-interactive execution;
+- explicit `candidate_objective` and optional exact `required_changed_paths` are enforced before write;
+- self-upgrade control-plane files are protected from Candidate mutation;
+- provider blocked/no-change results cannot be mislabeled as successful candidates;
+- Owner-PC controlled smoke created exactly `docs/CODEX_WORKSPACE_WRITE_SMOKE.md` in an isolated candidate worktree, with the declared path equal to the actual path;
+- the smoke did not commit, push, merge, auto-renew, auto-promote or mark VERIFIED;
+- integrated Owner revoke is proven on the Owner PC without weakening Windows Execution Policy.
+
+Current boundary remains explicit: a live 24-hour lease is still OFF. The next missing end-to-end layer is the candidate lifecycle `TEST → CRITIC → FREEZE` after a successful workspace mutation. OS-level containment of arbitrary candidate code is also not proven. No 24H activation claim is permitted until those remaining boundaries are resolved or explicitly accepted by Owner governance.
+
+Runtime evidence:
+- `docs/runtime_evidence/SELF_UPGRADE_OWNER_REVOKE_E2E_20261003T191700_PLUS0700.json`
+- `docs/runtime_evidence/SELF_UPGRADE_CODEX_WORKSPACE_WRITE_20261003T201243_PLUS0700.json`
