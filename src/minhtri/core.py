@@ -107,7 +107,8 @@ ALLOWED_FIELDS = {
     "record_resolution": {"id", "prediction_id", "evidence_id"},
     "review_claim": {"id", "claim_id", "critic_provider_id", "verdict", "reason"},
     "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
-    "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id"},
+    "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id", "counterevidence_ids", "counterevidence_search_note", "applicability"},
+    "freeze_lesson": {"lesson_id"},
     "activate_trial_lesson": {"lesson_id", "owner_ack", "scope"},
     "record_external_case": {"id", "domain_id", "evidence_ids", "outcome", "context", "mechanism_hypothesis", "transfer_limits", "uncertainty"},
     "freeze_learning_packet": {"id", "trace_id", "claim_id", "counterevidence_ids", "external_case_ids", "counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint"},
@@ -406,48 +407,72 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         add(out, "adjudications", d)
 
     elif kind == "propose_lesson":
-        need(d, "id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id")
+        need(d, "id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id",
+             "counterevidence_ids", "counterevidence_search_note", "applicability")
         claim = ref(out, "claims", d["claim_id"])
         adj = ref(out, "adjudications", d["adjudication_id"])
         if adj["claim_id"] != d["claim_id"]:
             raise GateError("Adjudication belongs to another claim")
-        for key in ("statement", "limits"):
+        for key in ("statement", "limits", "counterevidence_search_note", "applicability"):
             string(d[key], key)
         pids = _list_of_refs(out, "predictions", d["prediction_ids"])
         if not pids or any(out["predictions"][p]["claim_id"] != d["claim_id"] for p in pids):
             raise GateError("Lesson needs predictions of its claim")
+        counter_ids = _list_of_refs(out, "evidence", d["counterevidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != claim["domain_id"] for eid in counter_ids):
+            raise GateError("Lesson counterevidence cannot cross domain boundaries")
         d["domain_id"] = claim["domain_id"]
-        d["status"] = "CANDIDATE"
+        d["source_claim_id"] = claim["id"]
+        d["hypothesis"] = d["statement"]
+        d["evidence_ids"] = []
+        d["status"] = "HYPOTHESIS"
+        d["owner_acceptance"] = "NOT_REVIEWED"
+        d["verified"] = False
         add(out, "lessons", d)
 
-    elif kind == "activate_trial_lesson":
-        need(d, "lesson_id", "owner_ack", "scope")
+    elif kind == "freeze_lesson":
+        need(d, "lesson_id")
         lesson = ref(out, "lessons", d["lesson_id"])
-        if lesson["status"] != "CANDIDATE" or d["owner_ack"] != "HUMAN_OWNER_APPROVED":
-            raise GateError("Only the human Owner may authorize a candidate trial rule")
-        string(d["scope"], "scope")
+        if lesson["status"] != "HYPOTHESIS":
+            raise GateError("Only a lesson HYPOTHESIS can be frozen")
         adj = out["adjudications"][lesson["adjudication_id"]]
         if adj["verdict"] != "ACCEPT_FOR_TRIAL":
             raise GateError("Adjudication has not accepted this claim for trial")
         pids = lesson["prediction_ids"]
         if len(pids) < 2 or any(out["predictions"][p]["status"] != "RESOLVED" for p in pids):
-            raise GateError("At least two resolved preregistered predictions are required")
+            raise GateError("At least two resolved preregistered predictions are required before lesson freeze")
         outcome_sources = []
+        evidence_ids = []
         for pid in pids:
             resolution = next(r for r in out["resolutions"].values() if r["prediction_id"] == pid)
-            source_id = out["evidence"][resolution["evidence_id"]]["source_id"]
+            evidence_id = resolution["evidence_id"]
+            evidence_ids.append(evidence_id)
+            source_id = out["evidence"][evidence_id]["source_id"]
             outcome_sources.append(source_id)
         if len(set(outcome_sources)) < 2 or any(
             out["sources"][sid]["kind"] != "FIRST_PARTY" or out["sources"][sid]["rights_status"] != "CLEAR"
             for sid in outcome_sources
         ):
-            raise GateError("Trial rule needs distinct declared first-party outcome sources with clear rights")
+            raise GateError("Frozen lesson needs distinct declared first-party outcome sources with clear rights")
+        lesson["evidence_ids"] = evidence_ids
+        lesson["status"] = "FROZEN_PENDING_OWNER"
+        lesson["frozen_at"] = event_time
+        lesson["verified"] = False
+
+    elif kind == "activate_trial_lesson":
+        need(d, "lesson_id", "owner_ack", "scope")
+        lesson = ref(out, "lessons", d["lesson_id"])
+        if lesson["status"] != "FROZEN_PENDING_OWNER" or d["owner_ack"] != "HUMAN_OWNER_APPROVED":
+            raise GateError("Only the human Owner may authorize a frozen lesson trial rule")
+        string(d["scope"], "scope")
         if out["domains"][lesson["domain_id"]]["risk_class"] == "HIGH_STAKES":
             raise GateError("High-stakes domain rules need a separate expert and Owner gate; not implemented in v0.1")
         lesson["status"] = "TRIAL_RULE"
+        lesson["owner_acceptance"] = "OWNER_ACCEPTED"
         lesson["scope"] = d["scope"]
         lesson["activated_at"] = event_time
         lesson["validation"] = "DECLARED_DATA_ONLY_NOT_CAUSAL_PROOF"
+        lesson["verified"] = False
 
     elif kind == "record_external_case":
         need(d, "id", "domain_id", "evidence_ids", "outcome", "context",
