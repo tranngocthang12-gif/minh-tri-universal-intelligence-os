@@ -404,5 +404,18 @@
   "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
   "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
   "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
-  "learning_proof_next_checkpoint": "RUN_OFFLINE_PROVENANCE_FIXTURES_AND_BUILD_FROZEN_CANARY_DATASET_THEN_RESTORE_RUNTIME_FOR_REAL_LEDGER_AUDIT"
+  "learning_proof_next_checkpoint": "EXPORT_FROZEN_LEDGER_THEN_RUN_PROVENANCE_AUDIT_AND_BUILD_HUMAN_ADJUDICATED_CANARY_SET",
+  "frozen_ledger_audit_export": "IMPLEMENTED_READ_ONLY_VERIFY_COPY_HASH_NO_BRAIN_START",
+  "resolution_resolver_input": "RAW_SOURCE_ONLY_NO_MODEL_TRACE_NO_CAPSULE_NO_ORIGINAL_RESOLUTION",
+  "resolution_corpus_out_rate_gate": "PREREGISTERED_REQUIRED",
+  "canary_ground_truth_governance": "DISTINCT_TRAP_AUTHOR_RUBRIC_AUTHOR_HUMAN_ADJUDICATOR",
+  "canary_hard_negative_required": true,
+  "behavioral_trial_preregistration": "PRIMARY_ENDPOINT_PLUS_SAFETY_ENDPOINT_FROZEN_BEFORE_UNBLINDING",
+  "behavioral_trial_assignment": "INTERLEAVED_TASK_ID_RANDOMIZED",
+  "behavioral_trial_first_routing_keys": [
+    "domain_id",
+    "procedure_id"
+  ],
+  "behavioral_trial_failure_class_routing": false,
+  "stale_capability_replay_test": "REMAINS_REQUIRED_BEFORE_BACKGROUND_AUTONOMY"
 }
