@@ -3,6 +3,7 @@ import unittest
 from minhtri.critic_canary import (
     score_canary_case,
     summarize_canary_scores,
+    validate_canary_dataset_metadata,
 )
 
 
@@ -60,6 +61,18 @@ class CriticCanaryTests(unittest.TestCase):
         score = score_canary_case(case, result)
         self.assertTrue(score["correct_verdict"])
         self.assertFalse(score["localization_hit"])
+
+    def test_canary_dataset_is_single_use_and_tracks_owner_contribution(self):
+        result = validate_canary_dataset_metadata({
+            "dataset_id": "canary-1",
+            "frozen_hash": "a" * 64,
+            "owner_contribution_fraction": 0.5,
+            "single_use_per_critic": True,
+            "critic_id": "claude-run-1",
+            "prior_use_count": 0,
+        })
+        self.assertEqual(result["status"], "FROZEN_SINGLE_USE")
+        self.assertTrue(result["owner_half_target_met"])
 
     def test_summary_reports_far_and_subtle_detection(self):
         rows = [

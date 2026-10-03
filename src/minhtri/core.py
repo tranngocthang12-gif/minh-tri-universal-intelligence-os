@@ -102,7 +102,7 @@ ALLOWED_FIELDS = {
     "record_evidence": {"id", "domain_id", "source_id", "statement", "observed_at", "value", "metric"},
     "register_procedure": {"id", "domain_id", "provider_id", "version", "method"},
     "propose_claim": {"id", "problem_id", "provider_id", "statement", "evidence_ids", "alternative", "falsifier"},
-    "register_prediction": {"id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method"},
+    "register_prediction": {"id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method", "outcome_source_spec"},
     "freeze_prediction": {"prediction_id"},
     "record_resolution": {"id", "prediction_id", "evidence_id"},
     "review_claim": {"id", "claim_id", "critic_provider_id", "verdict", "reason"},
@@ -379,6 +379,19 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
             raise GateError("Prediction interval is inverted")
         if parse_time(d["due_at"]) <= parse_time(event_time):
             raise GateError("Prediction due_at must be later than preregistration")
+        source_spec = d.get("outcome_source_spec")
+        if source_spec is None:
+            d["outcome_source_spec_status"] = "UNSPECIFIED_NOT_META_LEARNING_ELIGIBLE"
+            d["outcome_source_spec_hash"] = None
+        else:
+            if not isinstance(source_spec, dict) or set(source_spec) != {"source_uri", "source_kind", "value_selector", "capture_rule"}:
+                raise GateError("outcome_source_spec needs source_uri, source_kind, value_selector, capture_rule")
+            for key in ("source_uri", "value_selector", "capture_rule"):
+                string(source_spec[key], "outcome_source_spec." + key)
+            if source_spec["source_kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "PUBLIC", "SYNTHETIC"):
+                raise GateError("outcome_source_spec.source_kind is invalid")
+            d["outcome_source_spec_status"] = "PREREGISTERED"
+            d["outcome_source_spec_hash"] = digest(source_spec)
         d["lower"], d["upper"] = lower, upper
         d["domain_id"] = claim["domain_id"]
         d["registered_at"] = event_time
@@ -407,11 +420,23 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
             raise GateError("Outcome observation must be after prediction freeze")
         if parse_time(evidence["observed_at"]) < parse_time(prediction["due_at"]):
             raise GateError("Cannot resolve before the preregistered due time")
+        source = ref(out, "sources", evidence["source_id"])
+        source_spec = prediction.get("outcome_source_spec")
+        if source_spec is not None:
+            if source["uri"] != source_spec["source_uri"] or source["kind"] != source_spec["source_kind"]:
+                raise GateError("Outcome source does not match preregistered outcome_source_spec")
+            if parse_time(source["captured_at"]) < parse_time(prediction["due_at"]):
+                raise GateError("Preregistered outcome source was captured before due time")
+            provenance_status = "OUTCOME_SOURCE_PREREGISTERED"
+        else:
+            provenance_status = "LEGACY_OUTCOME_SOURCE_UNSPECIFIED_NOT_META_LEARNING_ELIGIBLE"
         actual = evidence["value"]
         d.update({"claim_id": prediction["claim_id"], "domain_id": prediction["domain_id"],
                   "actual": actual, "interval_hit": prediction["lower"] <= actual <= prediction["upper"],
                   "absolute_midpoint_error": abs(actual - (prediction["lower"] + prediction["upper"]) / 2),
-                  "scored_at": event_time, "attribution": "NOT_ESTABLISHED"})
+                  "scored_at": event_time, "attribution": "NOT_ESTABLISHED",
+                  "learning_provenance_status": provenance_status,
+                  "outcome_source_spec_hash": prediction.get("outcome_source_spec_hash")})
         add(out, "resolutions", d)
         prediction["status"] = "RESOLVED"
 

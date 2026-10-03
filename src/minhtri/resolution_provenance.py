@@ -151,6 +151,19 @@ def compare_independent_resolution(
     }
 
 
+
+def cohens_kappa_binary(pairs: Iterable[tuple[bool, bool]]) -> float | None:
+    rows = list(pairs)
+    if not rows:
+        return None
+    observed = sum(1 for a, b in rows if a == b) / len(rows)
+    p_a_true = sum(1 for a, _ in rows if a) / len(rows)
+    p_b_true = sum(1 for _, b in rows if b) / len(rows)
+    expected = p_a_true * p_b_true + (1 - p_a_true) * (1 - p_b_true)
+    if expected == 1.0:
+        return 1.0 if observed == 1.0 else 0.0
+    return (observed - expected) / (1 - expected)
+
 def audit_batch(
     pairs: Iterable[tuple[dict[str, Any], dict[str, Any]]],
     *,
@@ -183,6 +196,13 @@ def audit_batch(
 
     agree = sum(1 for item in eligible if item["agreement"])
     agreement_rate = agree / len(eligible)
+    kappa_pairs = [
+        (bool(a["interval_hit"]), bool(b["interval_hit"]))
+        for a, b in pairs
+        if validate_resolution_provenance(a)["status"] == "VALID_PROVENANCE"
+        and validate_resolution_provenance(b)["status"] == "VALID_PROVENANCE"
+    ]
+    kappa = cohens_kappa_binary(kappa_pairs)
     out_ok = out_rate is not None and out_rate <= preregistered_max_out_rate
     passed = agreement_rate >= preregistered_min_agreement and out_ok
     return {
@@ -193,6 +213,7 @@ def audit_batch(
         "out_rate": out_rate,
         "agreement_count": agree,
         "agreement_rate": agreement_rate,
+        "cohens_kappa_interval_hit": kappa,
         "preregistered_min_agreement": preregistered_min_agreement,
         "preregistered_max_out_rate": preregistered_max_out_rate,
         "corpus_eligible_for_meta_learning": passed,

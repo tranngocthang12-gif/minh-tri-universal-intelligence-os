@@ -30,7 +30,13 @@ def validate_preregistration(record: dict[str, Any]) -> dict[str, Any]:
         "assignment_seed_hash",
         "control_pipeline_hash",
         "treatment_pipeline_hash",
+        "compute_matched_pipeline_hash",
         "frozen_evaluator_hash",
+        "gold_labels_hash",
+        "baseline_definition",
+        "compute_budget_contract",
+        "primary_window_tasks",
+        "rollback_threshold",
         "trial_rule_id",
         "trial_rule_ttl_seconds",
         "routing_keys",
@@ -55,11 +61,22 @@ def validate_preregistration(record: dict[str, Any]) -> dict[str, Any]:
     if not set(routing).issubset({"domain_id", "procedure_id"}):
         raise ExperimentContractError("first learning trial may route only on domain_id/procedure_id")
 
+    if record["baseline_definition"] not in {"NO_ASSURANCE", "V1_3"}:
+        raise ExperimentContractError("baseline_definition must be NO_ASSURANCE or V1_3")
+    if not isinstance(record["primary_window_tasks"], int) or record["primary_window_tasks"] < 1:
+        raise ExperimentContractError("primary_window_tasks must be positive")
+    if not isinstance(record["rollback_threshold"], (int, float)):
+        raise ExperimentContractError("rollback_threshold must be numeric")
+    if not isinstance(record["compute_budget_contract"], dict) or set(record["compute_budget_contract"]) != {"control", "treatment", "compute_matched"}:
+        raise ExperimentContractError("compute_budget_contract must define control/treatment/compute_matched")
+
     for key in (
         "assignment_seed_hash",
         "control_pipeline_hash",
         "treatment_pipeline_hash",
+        "compute_matched_pipeline_hash",
         "frozen_evaluator_hash",
+        "gold_labels_hash",
     ):
         value = record[key]
         if not isinstance(value, str) or len(value) != 64 or any(ch not in "0123456789abcdef" for ch in value):
@@ -82,4 +99,4 @@ def assign_arm(task_id: str, assignment_secret: str) -> str:
     if not isinstance(assignment_secret, str) or not assignment_secret:
         raise ExperimentContractError("assignment_secret is required")
     digest = hashlib.sha256((assignment_secret + "|" + task_id).encode("utf-8")).digest()
-    return "TREATMENT" if digest[0] & 1 else "CONTROL"
+    return ("CONTROL", "TREATMENT", "COMPUTE_MATCHED")[digest[0] % 3]

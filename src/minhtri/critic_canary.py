@@ -76,6 +76,32 @@ def score_canary_case(case: dict[str, Any], critic_result: dict[str, Any]) -> di
     }
 
 
+
+def validate_canary_dataset_metadata(metadata: dict[str, Any]) -> dict[str, Any]:
+    required = {
+        "dataset_id",
+        "frozen_hash",
+        "owner_contribution_fraction",
+        "single_use_per_critic",
+        "critic_id",
+        "prior_use_count",
+    }
+    if not isinstance(metadata, dict) or set(metadata) != required:
+        raise CanaryScoringError("invalid canary dataset metadata")
+    if not isinstance(metadata["owner_contribution_fraction"], (int, float)):
+        raise CanaryScoringError("owner_contribution_fraction must be numeric")
+    if not 0.0 <= float(metadata["owner_contribution_fraction"]) <= 1.0:
+        raise CanaryScoringError("owner_contribution_fraction must be between 0 and 1")
+    if metadata["single_use_per_critic"] is not True:
+        raise CanaryScoringError("canary dataset must be single-use per critic")
+    if metadata["prior_use_count"] != 0:
+        raise CanaryScoringError("critic has already seen this canary dataset")
+    return {
+        "status": "FROZEN_SINGLE_USE",
+        "owner_contribution_fraction": float(metadata["owner_contribution_fraction"]),
+        "owner_half_target_met": float(metadata["owner_contribution_fraction"]) >= 0.5,
+    }
+
 def summarize_canary_scores(
     scored: Iterable[dict[str, Any]],
     *,
