@@ -145,15 +145,20 @@
   "current_runtime_liveness": {
     "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
     "owner_pc": "UNKNOWN_DEGRADED",
-    "maintenance_plane": "UNKNOWN_DEGRADED_TIMEOUT",
-    "secure_mcp_tunnel": "UNKNOWN_DEGRADED_NO_POLL",
-    "local_brain_connector": "UNKNOWN_DEGRADED_NO_POLL",
+    "maintenance_plane": "UNKNOWN",
+    "secure_mcp_tunnel": "UNKNOWN",
+    "local_brain_connector": "UNKNOWN",
     "evidence": [
       "Fresh brain.verify during AUTO audit failed because tunnel-client did not poll after the request was enqueued.",
       "Fresh Desktop Commander state read and follow-up ping timed out after the device had previously appeared online.",
       "Historical PASS evidence remains preserved under last_proven_runtime_evidence and is not current-liveness proof."
     ],
-    "recovery_condition": "REQUIRE_FRESH_MAINTENANCE_PING_READYZ_BRAIN_VERIFY_RECOVERY_PACKET"
+    "recovery_condition": "REQUIRE_FRESH_MAINTENANCE_PING_READYZ_BRAIN_VERIFY_RECOVERY_PACKET",
+    "detail": {
+      "maintenance_plane": "DEGRADED_TIMEOUT",
+      "secure_mcp_tunnel": "NO_POLL",
+      "local_brain_connector": "NO_POLL"
+    }
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
   "owner_pc_write_runtime_deployment": "SYNCED_CLEAN_TO_ORIGIN_MAIN_AT_LAST_OBSERVATION_2026-10-03",
