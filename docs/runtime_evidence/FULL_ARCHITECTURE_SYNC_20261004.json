@@ -1,0 +1,46 @@
+{
+  "schema": "minhtri-full-architecture-sync/v1",
+  "observed_at": "2026-10-04T02:04:29+07:00",
+  "source_main_sha": "f7721c9b77dc44ed754023e6e9f865d32660e397",
+  "current_authority": {
+    "project_state": "docs/PROJECT_STATE.json",
+    "law_index": "docs/LAW_INDEX_20261003.md",
+    "architecture": "docs/ARCHITECTURE_NOW_20261003.md",
+    "recovery_manifest": "docs/RECOVERY_MANIFEST.json",
+    "bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md"
+  },
+  "fresh_runtime_observation": {
+    "owner_pc": "UNKNOWN",
+    "maintenance_plane": "OFFLINE",
+    "secure_mcp_tunnel": "DOWN",
+    "local_brain_connector": "DOWN",
+    "desktop_commander": "WIN-VBIQNFFDKIR offline; last seen 34m before observation",
+    "brain_verify": "FAILED_TUNNEL_CLIENT_NOT_SEEN_300_SECONDS"
+  },
+  "synchronized": [
+    "PROJECT_STATE",
+    "RECOVERY_MANIFEST",
+    "ARCHITECTURE_NOW",
+    "GITHUB_FIRST_ROLE_BOOTSTRAP",
+    "README",
+    "SECURITY",
+    "FOUNDATION_GATE_EXECUTION_RUNBOOK",
+    "OWNER_DECISION_24H_SELF_UPGRADE_LEASE",
+    "ARCHITECTURE_AUDIT_COMPLETION_PLAN",
+    "ECONOMICS_PHD_LEARNING_ROUTE",
+    "RECOVERY_CONSISTENCY_TESTS"
+  ],
+  "unchanged_stable_law_reason": "LAW_INDEX already routes dynamic state to PROJECT_STATE/current architecture and contains no conflicting current-liveness claim.",
+  "lease_interpretation": {
+    "authorization_expires_at_utc": "2026-10-04T17:56:45.124745Z",
+    "authorization_window_at_observation": "OPEN",
+    "runtime_state": "UNKNOWN_NOT_CURRENTLY_OBSERVED",
+    "inference_rule": "unexpired authorization does not prove in-memory lease process exists"
+  },
+  "candidate_a": "PENDING_EXTERNAL_CRITIC",
+  "economics_phd_track": "M0_1_STARTED_UNTESTED_NOT_ACCREDITED_DEGREE",
+  "automatic_verified_promotion": false,
+  "background_autonomy": false,
+  "research_adapter": "BLOCKED_UNTIL_FRESH_SEAT_PASS",
+  "runtime_mutation": false
+}
