@@ -1,0 +1,16 @@
+{
+  "schema": "minhtri-self-upgrade-owner-revoke-e2e/v1",
+  "observed_at": "2026-10-03T19:17:00+07:00",
+  "device": "WIN-VBIQNFFDKIR",
+  "canonical_main_sha_at_probe": "22c0694089c3689eb3e96ad0bf62c3d751c8345c",
+  "status": "PASS_OWNER_REVOKE_E2E",
+  "runtime_status": "REVOKED",
+  "post_revoke_mutation_blocked": true,
+  "automatic_renewal": false,
+  "automatic_candidate_promotion": false,
+  "automatic_verified_promotion": false,
+  "execution_policy_changed": false,
+  "plaintext_secret_persisted": false,
+  "probe": "ops/windows/self_upgrade_owner_revoke_probe.py",
+  "claim_boundary": "Proves integrated Owner revoke on the Owner PC and mutation blocking after revoke. Does not prove arbitrary candidate OS containment or a completed live 24-hour run."
+}
