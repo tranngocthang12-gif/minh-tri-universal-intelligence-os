@@ -252,6 +252,35 @@ class CoreGates(unittest.TestCase):
                        outcome="RETAIN", reason="Too early", limits="None",
                        trigger="SCHEDULED")
 
+    def test_learning_failure_is_metadata_only(self):
+        self.base()
+        self.apply("record_source", id="s1", domain_id="media", uri="internal://source",
+                   captured_at=self.at, kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", id="e1", domain_id="media", source_id="s1",
+                   statement="Observation", observed_at=self.at)
+        self.apply("record_learning_failure", id="lf1", domain_id="media",
+                   artifact_type="EVIDENCE", artifact_id="e1",
+                   failure_class="SOURCE_ERROR", severity="HIGH",
+                   evidence_ids=["e1"], description="Source interpretation may be wrong",
+                   remediation="Reopen source and collect independent evidence",
+                   detected_by="HUMAN")
+        failure = self.state["learning_failures"]["lf1"]
+        self.assertEqual(failure["status"], "OPEN")
+        self.assertFalse(failure["automatic_remediation"])
+        self.assertEqual(len(failure["artifact_digest"]), 64)
+        self.assertEqual(self.state["evidence"]["e1"]["verification"], "DECLARED_UNVERIFIED")
+
+    def test_learning_failure_rejects_cross_domain_artifact(self):
+        self.base()
+        self.apply("register_domain", id="other", name="Other", risk_class="NORMAL",
+                   measurement_contract="Other data")
+        with self.assertRaisesRegex(GateError, "cross domain"):
+            self.apply("record_learning_failure", id="lf1", domain_id="other",
+                       artifact_type="CLAIM", artifact_id="h1",
+                       failure_class="SCOPE_OVERREACH", severity="MEDIUM",
+                       evidence_ids=[], description="Wrong scope",
+                       remediation="Keep domain boundary", detected_by="MODEL")
+
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
