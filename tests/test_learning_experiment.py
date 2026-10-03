@@ -3,6 +3,7 @@ import unittest
 from minhtri.learning_experiment import (
     ExperimentContractError,
     assign_arm,
+    assign_block_arm,
     validate_preregistration,
 )
 
@@ -50,8 +51,8 @@ class LearningExperimentTests(unittest.TestCase):
             validate_preregistration(value)
 
     def test_assignment_is_deterministic_per_task_and_seed(self):
-        self.assertEqual(assign_arm("task-1", "seed"), assign_arm("task-1", "seed"))
-        self.assertIn(assign_arm("task-2", "seed"), {"CONTROL", "TREATMENT", "COMPUTE_MATCHED"})
+        self.assertEqual(assign_arm("TRIAL001-B01-T01", "seed"), assign_arm("TRIAL001-B01-T01", "seed"))
+        self.assertIn(assign_arm("TRIAL001-B01-T02", "seed"), {"CONTROL", "TREATMENT", "COMPUTE_MATCHED"})
 
 
 if __name__ == "__main__":
@@ -95,7 +96,7 @@ class TrialRuleRuntimeTests(unittest.TestCase):
         from datetime import datetime, timezone
         from minhtri.trial_rule_runtime import build_trial_execution_plan
         state, experiment = self._state_with_rule()
-        task = {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"}
+        task = {"task_id": "TRIAL001-B01-T01", "domain_id": "media", "procedure_id": "proc"}
         plan = build_trial_execution_plan(
             state, task, experiment, assignment_secret="seed",
             now=datetime(2026, 10, 4, 0, 0, tzinfo=timezone.utc),
@@ -117,7 +118,7 @@ class TrialRuleRuntimeTests(unittest.TestCase):
         with self.assertRaises(TrialRuleRuntimeError):
             build_trial_execution_plan(
                 state,
-                {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"},
+                {"task_id": "TRIAL001-B01-T01", "domain_id": "media", "procedure_id": "proc"},
                 experiment,
                 assignment_secret="seed",
                 now=datetime(2026, 10, 6, 0, 0, tzinfo=timezone.utc),
@@ -135,8 +136,40 @@ class TrialRuleRuntimeTests(unittest.TestCase):
         with self.assertRaises(TrialRuleRuntimeError):
             build_trial_execution_plan(
                 state,
-                {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"},
+                {"task_id": "TRIAL001-B01-T01", "domain_id": "media", "procedure_id": "proc"},
                 experiment,
                 assignment_secret="seed",
                 now=datetime(2026, 10, 4, 0, 0, tzinfo=timezone.utc),
             )
+
+
+class BlockRandomizationTests(unittest.TestCase):
+    def test_each_block_has_exactly_two_of_each_arm(self):
+        prereg_hash = "9" * 64
+        arms = [
+            assign_block_arm(
+                f"TRIAL001-B01-T{i:02d}",
+                "secret",
+                experiment_id="TRIAL-001-COUNTEREVIDENCE-FIRST",
+                preregistration_hash=prereg_hash,
+            )
+            for i in range(1, 7)
+        ]
+        self.assertEqual(arms.count("CONTROL"), 2)
+        self.assertEqual(arms.count("TREATMENT"), 2)
+        self.assertEqual(arms.count("COMPUTE_MATCHED"), 2)
+
+    def test_block_assignment_is_reproducible(self):
+        kwargs = {
+            "experiment_id": "TRIAL-001-COUNTEREVIDENCE-FIRST",
+            "preregistration_hash": "8" * 64,
+        }
+        first = [
+            assign_block_arm(f"TRIAL001-B03-T{i:02d}", "secret", **kwargs)
+            for i in range(1, 7)
+        ]
+        second = [
+            assign_block_arm(f"TRIAL001-B03-T{i:02d}", "secret", **kwargs)
+            for i in range(1, 7)
+        ]
+        self.assertEqual(first, second)
