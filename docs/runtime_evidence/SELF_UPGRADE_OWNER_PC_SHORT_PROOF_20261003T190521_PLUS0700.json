@@ -1,0 +1,43 @@
+{
+  "schema": "minhtri-self-upgrade-owner-pc-short-proof/v1",
+  "observed_at": "2026-10-03T19:05:21.8751400+07:00",
+  "device": "WIN-VBIQNFFDKIR",
+  "canonical_main_sha": "fd31df3d576a50ba4bbe50ab418b7b102e197803",
+  "desktop_commander_status": "ONLINE",
+  "local_brain_verify": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+  },
+  "owner_credential_v2_verify": {
+    "status": "PASS",
+    "matched_owner": "thang",
+    "scheme": "pbkdf2-sha256",
+    "iterations": 600000,
+    "revoked": false,
+    "has_v1": false,
+    "has_v2": true
+  },
+  "owner_pc_realtime_expiry_probe": {
+    "status": "PASS_REALTIME_SHORT_LEASE_EXPIRY",
+    "duration_seconds": 60,
+    "observed_elapsed_seconds": 60.25,
+    "process_runtime_seconds": 60.37,
+    "post_expiry_mutation_blocked": true
+  },
+  "owner_pc_runtime_unit_guard": {
+    "status": "PASS",
+    "tests_run": 3,
+    "failures": 0
+  },
+  "integrated_owner_revoke_path": {
+    "status": "BLOCKED_EXECUTION_POLICY",
+    "reason": "Windows PowerShell script execution policy blocked the local helper launcher. Global execution policy was not weakened."
+  },
+  "candidate_os_sandbox_containment": "NOT_PROVEN",
+  "live_24h_lease": "OFF_NOT_ACTIVATED",
+  "automatic_renewal": false,
+  "automatic_candidate_promotion": false,
+  "automatic_verified_promotion": false,
+  "claim_boundary": "This proves real-clock lease expiry and mutation blocking on the Owner PC plus the existing Owner v2 credential verification. It does not prove the integrated Owner-revoke launcher path, OS sandbox containment, or 24-hour live expiry."
+}
