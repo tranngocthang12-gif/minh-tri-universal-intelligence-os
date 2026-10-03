@@ -281,6 +281,81 @@ class CoreGates(unittest.TestCase):
                        evidence_ids=[], description="Wrong scope",
                        remediation="Keep domain boundary", detected_by="MODEL")
 
+    def test_critic_independence_receipt_never_auto_proves_independence(self):
+        self.base()
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="None", context_contract="Blind bounded packet",
+                   instruction_version="v1", toolset_fingerprint="bundle-only")
+        self.apply("record_critic_execution", id="crit1", packet_id="packet1",
+                   critic_provider_id="critic", provider="external", model="critic-model",
+                   run_id="run1", context_mode="BLIND", output_hash="out123",
+                   verdict="NO_MATERIAL_DEFECT", reason="Bounded review", missing_evidence=[])
+        self.apply("record_source", id="proofs", domain_id="media", uri="internal://critic-receipt",
+                   captured_at=self.at, kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", id="proofe", domain_id="media", source_id="proofs",
+                   statement="External execution receipt captured", observed_at=self.at)
+        self.apply("record_critic_independence_receipt", id="cir1",
+                   critic_execution_id="crit1", execution_environment_id="external-env",
+                   project_runtime_id="project-env", session_id="session-1",
+                   provider_receipt_hash="receipt-hash", authority_scope="SEPARATE_OWNER_APPROVED_AUTHORITY",
+                   project_context_supplied=False, verification_method="EXTERNAL_EVIDENCE",
+                   evidence_ids=["proofe"])
+        receipt = self.state["critic_independence_receipts"]["cir1"]
+        self.assertEqual(
+            receipt["status"],
+            "PROCESS_SEPARATED_EXTERNAL_EVIDENCE_RECORDED_NOT_FULL_INDEPENDENCE_PROOF",
+        )
+        self.assertFalse(receipt["automatic_independence_proof"])
+
+    def test_critic_independence_same_runtime_is_blocked(self):
+        self.base()
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="None", context_contract="Blind",
+                   instruction_version="v1", toolset_fingerprint="bundle-only")
+        self.apply("record_critic_execution", id="crit1", packet_id="packet1",
+                   critic_provider_id="critic", provider="declared", model="critic-model",
+                   run_id="run1", context_mode="BLIND", output_hash="out123",
+                   verdict="FINDINGS", reason="Review", missing_evidence=[])
+        self.apply("record_critic_independence_receipt", id="cir1",
+                   critic_execution_id="crit1", execution_environment_id="same-env",
+                   project_runtime_id="same-env", session_id="session-1",
+                   provider_receipt_hash="receipt-hash", authority_scope="UNKNOWN",
+                   project_context_supplied=False, verification_method="RECEIPT_HASH_BOUND",
+                   evidence_ids=[])
+        self.assertEqual(
+            self.state["critic_independence_receipts"]["cir1"]["status"],
+            "BLOCKED_SAME_RUNTIME",
+        )
+
+    def test_eval_integrity_flags_leak_and_score_gaming_without_proving_cause(self):
+        self.base()
+        self.apply("record_eval_integrity_assessment", id="eval1", domain_id="media",
+                   artifact_type="CLAIM", artifact_id="h1", output_hash="hash1",
+                   forbidden_marker_hits=["answer-key-token"],
+                   invariant_failures=["claimed pass despite failed invariant"],
+                   claimed_pass=True, evaluator_kind="EVAL",
+                   note="Deterministic guard found leakage marker and invariant failure")
+        assessment = self.state["eval_integrity_assessments"]["eval1"]
+        self.assertEqual(
+            assessment["status"],
+            "EVAL_CONTAMINATION_AND_REWARD_HACKING_SUSPECTED",
+        )
+        self.assertFalse(assessment["automatic_proof"])
+
+    def test_eval_integrity_clean_signal_is_not_proof(self):
+        self.base()
+        self.apply("record_eval_integrity_assessment", id="eval1", domain_id="media",
+                   artifact_type="CLAIM", artifact_id="h1", output_hash="hash1",
+                   forbidden_marker_hits=[], invariant_failures=[],
+                   claimed_pass=True, evaluator_kind="TOOL",
+                   note="No configured leakage or invariant signal detected")
+        self.assertEqual(
+            self.state["eval_integrity_assessments"]["eval1"]["status"],
+            "CLEAN_NO_SIGNAL_NOT_PROOF",
+        )
+
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
