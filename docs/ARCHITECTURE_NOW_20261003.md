@@ -298,3 +298,18 @@ A runtime controller is staged on the current PR to turn the immutable lease int
 Important boundary: this controller is not an OS sandbox. It does not prove that arbitrary candidate code cannot bypass Python-level guards if executed with unrestricted host credentials. Therefore `candidate_execution_containment=NOT_PROVEN_OS_SANDBOX` remains binding until a separate process/OS containment design is implemented and tested.
 
 A real Owner-PC short lease remains required before activating the 24-hour lease.
+
+
+## 20. Real-clock lease expiry CI evidence
+
+PR #123 merged the self-upgrade runtime session controller after required Security P0 PASS.
+
+Bounded real-clock evidence:
+- duration requested: 60 seconds;
+- observed elapsed monotonic time: 60.25014910499999 seconds;
+- pre-expiry mutation: completed;
+- post-expiry mutation: blocked;
+- Owner-PC runtime proven: false;
+- OS sandbox containment proven: false.
+
+This proves elapsed-time expiry at the CI runtime/controller boundary. It does not prove Owner-PC execution, 24-hour expiry, arbitrary candidate-code containment, or safe autonomous activation on the host. The live 24H lease remains OFF.
