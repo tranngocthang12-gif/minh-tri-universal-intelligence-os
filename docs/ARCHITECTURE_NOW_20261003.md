@@ -116,6 +116,18 @@ This layer is additive to the existing ledger. It does not create a multi-agent 
 - `CLEAN_NO_SIGNAL_NOT_PROOF` is binding: absence of configured signals is not proof of cleanliness;
 - autonomy may summarize these records but receives no write power and cannot promote any claim.
 
+### Learning Assurance v1.4
+
+Provider-neutral mechanisms inspired by public Gemini/Claude/Grok documentation:
+
+- adaptive deliberation records a bounded reasoning-effort plan against an artifact; high risk or evidence conflict forces a HIGH floor, while tool-dependent or medium-risk work forces at least MEDIUM;
+- deliberation metadata never stores private chain-of-thought;
+- grounded research traces bind exact query, source role, claim, citation locator, conflict status and source/claim digests;
+- social signals are explicitly non-canonical and cannot acquire truth weight from popularity;
+- context capsules compact long-running work into summary + exact artifact references + digests + refresh deadline;
+- context capsules are always `CONTEXT_ONLY_NOT_CANONICAL_TRUTH` and cannot overwrite law/evidence/lesson truth;
+- autonomy may summarize deliberation/research/context state but has no write or truth-promotion capability.
+
 
 ## 8. Promotion gates còn mở
 
