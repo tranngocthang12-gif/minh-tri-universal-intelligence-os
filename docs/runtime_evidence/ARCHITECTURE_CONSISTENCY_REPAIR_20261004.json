@@ -1,0 +1,23 @@
+{
+  "schema": "minhtri-architecture-repair/v1",
+  "date": "2026-10-04",
+  "base_sha": "f62c7035341291b19833fe11facc032338ef34c7",
+  "scope": "CURRENT_VS_HISTORICAL_SEMANTICS_AND_RECOVERY_SAFETY",
+  "findings_repaired": [
+    "Current architecture described a 2026-10-03 runtime PASS snapshot under a current-proof heading despite canonical current liveness being UNKNOWN.",
+    "Legacy PROJECT_STATE fields containing live/current/session wording could be mistaken for authoritative current liveness.",
+    "Bootstrap repeated the historical direct Ledger.apply CLI bypass finding without its CLOSED P0 classification.",
+    "Historical self-upgrade stages containing live-lease-OFF statements were not visibly labeled historical and could conflict with later activation evidence.",
+    "Backlog hygiene text treated zero open PRs as if it were a durable completion invariant."
+  ],
+  "invariants_after_repair": [
+    "PROJECT_STATE.current_runtime_liveness is the sole current runtime-liveness authority.",
+    "Historical PASS remains evidence but never implies current UP/ONLINE.",
+    "Background autonomy remains OFF.",
+    "Research Adapter remains blocked until genuine fresh-seat PASS.",
+    "No automatic VERIFIED, automatic trial activation, automatic candidate promotion, push, or merge.",
+    "Historical architecture is preserved rather than rewritten as current truth."
+  ],
+  "runtime_mutation": false,
+  "verified_promotion": false
+}
