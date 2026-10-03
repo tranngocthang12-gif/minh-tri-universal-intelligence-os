@@ -15,6 +15,7 @@ from minhtri.autonomy import (
     meta_learning_report,
     learning_assurance_report,
     stratified_meta_learning_report,
+    assurance_integrity_report,
     structural_critique,
 )
 from minhtri.core import initial_state
@@ -166,6 +167,39 @@ class AutonomyTests(unittest.TestCase):
         self.assertEqual(report["failure_counts"]["CONFIRMATION_BIAS"], 2)
         self.assertEqual(report["failure_by_domain"]["d"]["TOOL_ERROR"], 1)
         self.assertFalse(report["automatic_rule_change"])
+
+    def test_assurance_integrity_report_never_claims_full_independence(self):
+        state = base_state()
+        state["critic_independence_receipts"] = {
+            "r1": {"status": "PROCESS_SEPARATED_EXTERNAL_EVIDENCE_RECORDED_NOT_FULL_INDEPENDENCE_PROOF"},
+            "r2": {"status": "BLOCKED_SAME_RUNTIME"},
+        }
+        state["eval_integrity_assessments"] = {
+            "e1": {"status": "EVAL_CONTAMINATION_SUSPECTED"},
+            "e2": {"status": "CLEAN_NO_SIGNAL_NOT_PROOF"},
+        }
+        report = assurance_integrity_report(state)
+        self.assertEqual(report["critic_independence_receipts"]["count"], 2)
+        self.assertFalse(report["critic_independence_receipts"]["full_independence_proven"])
+        self.assertFalse(
+            report["eval_integrity_assessments"]["automatic_contamination_detection_proven"]
+        )
+        self.assertFalse(
+            report["eval_integrity_assessments"]["automatic_reward_hacking_detection_proven"]
+        )
+        self.assertFalse(report["write_capability"])
+
+    def test_autonomy_packet_exposes_integrity_without_write_power(self):
+        state = base_state()
+        state["eval_integrity_assessments"] = {
+            "e1": {"status": "REWARD_HACKING_SUSPECTED"}
+        }
+        packet = build_autonomy_packet(state, critic_provider_id="critic")
+        self.assertEqual(
+            packet["assurance_integrity"]["eval_integrity_assessments"]["count"], 1
+        )
+        self.assertFalse(packet["assurance_integrity"]["write_capability"])
+        self.assertFalse(packet["write_capability"])
 
     def test_research_is_fail_closed_before_gate(self):
         packet = build_autonomy_packet(
