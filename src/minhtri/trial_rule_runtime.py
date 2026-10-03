@@ -12,7 +12,7 @@ from typing import Any
 
 from .learning_experiment import (
     ExperimentContractError,
-    assign_arm,
+    assign_block_arm,
     validate_preregistration,
 )
 
@@ -142,7 +142,12 @@ def build_trial_execution_plan(
     lesson = rules[0]
     spec = lesson["trial_spec"]
 
-    arm = assign_arm(task_id, assignment_secret)
+    arm = assign_block_arm(
+        task_id,
+        assignment_secret,
+        experiment_id=experiment["experiment_id"],
+        preregistration_hash=prereg_hash,
+    )
     budget = _budget_for_arm(experiment, arm)
 
     treatment_budget = experiment["compute_budget_contract"]["treatment"]

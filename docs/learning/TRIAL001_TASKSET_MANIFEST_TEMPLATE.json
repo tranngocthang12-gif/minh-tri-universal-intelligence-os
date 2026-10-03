@@ -1,0 +1,538 @@
+{
+  "schema": "minhtri-trial001-taskset-manifest/v1",
+  "trial_id": "TRIAL-001-COUNTEREVIDENCE-FIRST",
+  "status": "UNSEALED_TEMPLATE",
+  "raw_tasks_committed_to_public_repo": false,
+  "final_n": "TO_BE_FROZEN_AFTER_PILOT_POWER_ANALYSIS",
+  "block_size": 6,
+  "arm_counts_per_complete_block": {
+    "CONTROL": 2,
+    "TREATMENT": 2,
+    "COMPUTE_MATCHED": 2
+  },
+  "primary_blocks_capacity": 10,
+  "reserve_blocks": 2,
+  "task_slots": [
+    {
+      "task_id": "TRIAL001-B01-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B01-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B01-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B01-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B01-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B01-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B02-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B03-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B04-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B05-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B06-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B07-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B08-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B09-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T01",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T02",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T03",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T04",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T05",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-B10-T06",
+      "reserve": false,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T01",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T02",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T03",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T04",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T05",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R01-T06",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T01",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T02",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T03",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T04",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T05",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    },
+    {
+      "task_id": "TRIAL001-R02-T06",
+      "reserve": true,
+      "task_content_sha256": null,
+      "gold_sha256": null,
+      "eligible": null
+    }
+  ],
+  "taskset_hash": null,
+  "goldset_hash": null,
+  "evaluator_rubric_hash": null,
+  "treatment_prompt_hash": null,
+  "compute_matched_prompt_hash": null,
+  "assignment_seed_hash": null,
+  "assignment_secret_revealed": false,
+  "leakage_checks_required": [
+    "NOT_IN_PROJECT_CHAT",
+    "NOT_IN_CONTEXT_CAPSULES",
+    "NOT_USED_TO_DESIGN_OVERLAY",
+    "NOT_USED_TO_DESIGN_V14",
+    "NOT_USED_IN_CANARY_SET",
+    "NOT_PREVIOUSLY_EXECUTED_BY_GENERATOR",
+    "GOLD_NOT_EXPOSED_TO_GENERATOR"
+  ],
+  "notes": "Populate hashes only after raw task/gold artifacts are created outside execution-generator context."
+}

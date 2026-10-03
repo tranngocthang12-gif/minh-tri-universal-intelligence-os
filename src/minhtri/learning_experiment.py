@@ -102,3 +102,52 @@ def assign_arm(task_id: str, assignment_secret: str) -> str:
         raise ExperimentContractError("assignment_secret is required")
     digest = hashlib.sha256((assignment_secret + "|" + task_id).encode("utf-8")).digest()
     return ("CONTROL", "TREATMENT", "COMPUTE_MATCHED")[digest[0] % 3]
+
+
+def assign_block_arm(
+    task_id: str,
+    assignment_secret: str,
+    *,
+    experiment_id: str,
+    preregistration_hash: str,
+) -> str:
+    """Balanced 2/2/2 allocation for task IDs ending in -T01..-T06."""
+    if not isinstance(task_id, str) or "-T" not in task_id:
+        raise ExperimentContractError("task_id must encode a block and T01..T06 slot")
+    if not isinstance(assignment_secret, str) or not assignment_secret:
+        raise ExperimentContractError("assignment_secret is required")
+    if not isinstance(experiment_id, str) or not experiment_id:
+        raise ExperimentContractError("experiment_id is required")
+    if (
+        not isinstance(preregistration_hash, str)
+        or len(preregistration_hash) != 64
+        or any(ch not in "0123456789abcdef" for ch in preregistration_hash)
+    ):
+        raise ExperimentContractError("preregistration_hash must be lowercase sha256")
+
+    block_id, slot_text = task_id.rsplit("-T", 1)
+    if len(slot_text) != 2 or not slot_text.isdigit():
+        raise ExperimentContractError("task slot must be T01..T06")
+    slot = int(slot_text)
+    if slot < 1 or slot > 6:
+        raise ExperimentContractError("task slot must be T01..T06")
+
+    seed_material = "|".join(
+        (assignment_secret, experiment_id, preregistration_hash, block_id)
+    ).encode("utf-8")
+    seed = hashlib.sha256(seed_material).digest()
+
+    arms = [
+        "CONTROL",
+        "CONTROL",
+        "TREATMENT",
+        "TREATMENT",
+        "COMPUTE_MATCHED",
+        "COMPUTE_MATCHED",
+    ]
+    # Deterministic Fisher-Yates driven by domain-separated SHA-256 bytes.
+    for i in range(len(arms) - 1, 0, -1):
+        h = hashlib.sha256(seed + bytes([i])).digest()
+        j = int.from_bytes(h[:8], "big") % (i + 1)
+        arms[i], arms[j] = arms[j], arms[i]
+    return arms[slot - 1]
