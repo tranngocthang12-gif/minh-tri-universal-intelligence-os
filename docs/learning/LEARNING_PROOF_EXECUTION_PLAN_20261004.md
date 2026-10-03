@@ -9,8 +9,9 @@ granting autonomous mutation.
 
 ## Step 0 — Runtime recovery
 
-Runtime recovery is required before reading/writing the local brain, but not before creating
-or testing offline GitHub harnesses.
+Runtime recovery is not required to begin measurement design or ledger audit preparation.
+Historical ledger audit must begin from a frozen verified export created without starting
+Brain/autonomy runtimes. Runtime recovery is a separate operational workstream.
 
 Fresh runtime PASS later requires:
 1. maintenance plane online;
@@ -46,10 +47,13 @@ Disqualification:
 - resolver identity/method absent.
 
 Independent audit:
+- export/hash the ledger before audit; do not start Brain or background learning merely to read history;
 - select/freeze sample before opening original resolution labels;
-- second resolver receives the frozen prediction + exact evidence snapshot;
+- Resolver B receives only frozen prediction + exact RAW_SOURCE_SNAPSHOT;
+- Resolver B must not see original resolution, model trace, context capsule, or model-authored evidence summary;
 - compare outcome-derived metrics;
-- agreement threshold must be preregistered before audit.
+- both minimum agreement and maximum OUT rate must be preregistered;
+- if OUT rate exceeds the preregistered ceiling, the whole audited corpus is ineligible for meta-learning.
 
 No universal agreement threshold is hard-coded yet.
 
@@ -58,10 +62,12 @@ No universal agreement threshold is hard-coded yet.
 Implemented offline scorer: `src/minhtri/critic_canary.py`.
 
 Dataset design:
-- clean candidates;
+- clean hard negatives;
 - STRUCTURAL canaries;
 - SUBTLE_EPISTEMIC canaries;
+- historical real defects where available;
 - frozen ground-truth defect type + character-span coordinates;
+- trap author, rubric author and human adjudicator must be distinct;
 - ground truth must not be included in critic packet.
 
 Critic response extension for canary experiments:
@@ -81,6 +87,8 @@ or subtle detection >=80% are hypotheses, not canonical law until preregistered 
 ## Step 3 — Empirical Learning Assurance v1.4
 
 Design before execution:
+- preregister exactly one primary endpoint and one safety endpoint before unblinding;
+- changing an endpoint after unblinding invalidates that run;
 - private/fresh task set where possible;
 - baseline and treatment outputs generated independently;
 - randomized presentation order to judges;
@@ -95,11 +103,12 @@ Design before execution:
 
 Do not use simple before/after comparison.
 
-Use interleaved randomized A/B assignment on new tasks:
+Use preregistered interleaved randomized A/B assignment on new tasks:
 - Control: approved pipeline without trial rule;
 - Treatment: same frozen environment plus one bounded TRIAL_RULE;
 - independent clean session/process where practical;
-- same task distribution and frozen evaluator;
+- assignment unit = task_id; same task distribution and frozen evaluator;
+- first trial routing may use only system-coded domain_id/procedure_id, never failure_class or post-outcome labels;
 - TTL + rollback + Owner veto;
 - protected targets remain immutable.
 

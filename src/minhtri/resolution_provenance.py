@@ -1,12 +1,6 @@
-"""Offline resolution-provenance audit harness.
-
-This module never mutates canonical state. It validates whether a historical resolution is
-eligible for meta-learning evidence and compares an original resolution with a blind
-independent re-resolution.
-"""
+"""Offline resolution-provenance audit harness."""
 from __future__ import annotations
 
-from dataclasses import dataclass
 from datetime import datetime, timezone
 import hashlib
 from typing import Any, Iterable
@@ -44,6 +38,12 @@ def validate_resolution_provenance(record: dict[str, Any]) -> dict[str, Any]:
         "evidence_id",
         "evidence_content_hash",
         "evidence_cutoff_timestamp",
+        "evidence_source_kind",
+        "evidence_transform",
+        "resolver_input_contract",
+        "resolver_saw_original_resolution",
+        "resolver_saw_model_trace",
+        "resolver_saw_context_capsule",
         "outcome_captured_at",
         "observed_value",
         "resolver_actor",
@@ -79,6 +79,19 @@ def validate_resolution_provenance(record: dict[str, Any]) -> dict[str, Any]:
         value = record.get(key)
         if not isinstance(value, str) or len(value) != 64 or any(ch not in "0123456789abcdef" for ch in value):
             reasons.append(f"INVALID_{key.upper()}")
+
+    if record.get("evidence_source_kind") != "RAW_SOURCE_SNAPSHOT":
+        reasons.append("EVIDENCE_NOT_RAW_SOURCE_SNAPSHOT")
+    if record.get("evidence_transform") != "NONE":
+        reasons.append("EVIDENCE_WAS_TRANSFORMED")
+    if record.get("resolver_input_contract") != "FROZEN_PREDICTION_PLUS_RAW_SOURCE_ONLY":
+        reasons.append("RESOLVER_INPUT_CONTRACT_INVALID")
+    if record.get("resolver_saw_original_resolution") is not False:
+        reasons.append("RESOLVER_SAW_ORIGINAL_RESOLUTION")
+    if record.get("resolver_saw_model_trace") is not False:
+        reasons.append("RESOLVER_SAW_MODEL_TRACE")
+    if record.get("resolver_saw_context_capsule") is not False:
+        reasons.append("RESOLVER_SAW_CONTEXT_CAPSULE")
 
     if not str(record.get("resolver_actor", "")).strip():
         reasons.append("MISSING_RESOLVER_ACTOR")
@@ -142,25 +155,46 @@ def audit_batch(
     pairs: Iterable[tuple[dict[str, Any], dict[str, Any]]],
     *,
     preregistered_min_agreement: float,
+    preregistered_max_out_rate: float,
 ) -> dict[str, Any]:
     if not 0.0 <= preregistered_min_agreement <= 1.0:
         raise ResolutionAuditError("preregistered_min_agreement must be between 0 and 1")
+    if not 0.0 <= preregistered_max_out_rate <= 1.0:
+        raise ResolutionAuditError("preregistered_max_out_rate must be between 0 and 1")
+
     comparisons = [compare_independent_resolution(a, b) for a, b in pairs]
+    total = len(comparisons)
     eligible = [item for item in comparisons if item["status"] in {"AGREE", "DISAGREE"}]
+    out_count = total - len(eligible)
+    out_rate = (out_count / total) if total else None
+
     if not eligible:
         return {
             "status": "INSUFFICIENT_VALID_CASES",
+            "total_case_count": total,
             "valid_case_count": 0,
+            "out_count": out_count,
+            "out_rate": out_rate,
             "agreement_rate": None,
+            "preregistered_max_out_rate": preregistered_max_out_rate,
+            "corpus_eligible_for_meta_learning": False,
             "pass": False,
         }
+
     agree = sum(1 for item in eligible if item["agreement"])
-    rate = agree / len(eligible)
+    agreement_rate = agree / len(eligible)
+    out_ok = out_rate is not None and out_rate <= preregistered_max_out_rate
+    passed = agreement_rate >= preregistered_min_agreement and out_ok
     return {
-        "status": "PASS" if rate >= preregistered_min_agreement else "FAIL",
+        "status": "PASS" if passed else "FAIL",
+        "total_case_count": total,
         "valid_case_count": len(eligible),
+        "out_count": out_count,
+        "out_rate": out_rate,
         "agreement_count": agree,
-        "agreement_rate": rate,
+        "agreement_rate": agreement_rate,
         "preregistered_min_agreement": preregistered_min_agreement,
-        "pass": rate >= preregistered_min_agreement,
+        "preregistered_max_out_rate": preregistered_max_out_rate,
+        "corpus_eligible_for_meta_learning": passed,
+        "pass": passed,
     }
