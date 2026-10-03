@@ -71,7 +71,9 @@
     "provider_pattern_import_policy": "GENERIC_MECHANISMS_ONLY_NO_PROVIDER_HIDDEN_STATE_CANONICALIZATION",
     "autonomy_write_capability": false,
     "autonomy_automatic_verified_promotion": false,
-    "autonomy_automatic_trial_activation": false
+    "autonomy_automatic_trial_activation": false,
+    "desktop_commander_hardening": "PASS_RUNTIME_ONLY_ALLOWLIST_2026-10-03T12:52+07",
+    "desktop_commander_allowed_directories": "RUNTIME_ONLY_ALLOWLIST_C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
