@@ -54,7 +54,12 @@ class CoreGates(unittest.TestCase):
         self.apply("adjudicate_claim", id="adj1", claim_id="h1", review_id="review1",
                    adjudicator_provider_id="judge", verdict="ACCEPT_FOR_TRIAL", reason="Bounded trial only")
         self.apply("propose_lesson", id="lesson1", claim_id="h1", statement="Try this narrow method",
-                   limits="Two observations; confounding unresolved", prediction_ids=["f1", "f2"], adjudication_id="adj1")
+                   limits="Two observations; confounding unresolved", prediction_ids=["f1", "f2"], adjudication_id="adj1",
+                   counterevidence_ids=[], counterevidence_search_note="Searched recorded evidence; none found",
+                   applicability="Media domain under the measured conditions only")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "HYPOTHESIS")
+        self.apply("freeze_lesson", lesson_id="lesson1")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "FROZEN_PENDING_OWNER")
 
     def test_two_domains_do_not_change_core_and_wait_is_explicit(self):
         self.assertEqual(next_goal(self.state)["status"], "WAIT")
@@ -86,8 +91,26 @@ class CoreGates(unittest.TestCase):
         self.review_and_lesson()
         self.apply("activate_trial_lesson", lesson_id="lesson1", owner_ack="HUMAN_OWNER_APPROVED", scope="One internal pilot")
         self.assertEqual(self.state["lessons"]["lesson1"]["status"], "TRIAL_RULE")
+        self.assertEqual(self.state["lessons"]["lesson1"]["owner_acceptance"], "OWNER_ACCEPTED")
+        self.assertFalse(self.state["lessons"]["lesson1"]["verified"])
         self.assertEqual(self.state["resolutions"]["r1"]["interval_hit"], True)
         self.assertEqual(self.state["claims"]["h1"]["epistemic_status"], "HYPOTHESIS")
+
+    def test_lesson_cannot_freeze_without_resolved_preregistration(self):
+        self.base()
+        self.apply("register_prediction", id="f1", claim_id="h1", procedure_id="p1", metric="rate",
+                   unit="percent", lower=5, upper=7, due_at="2026-01-03T00:00:00Z", resolution_method="Report")
+        self.apply("review_claim", id="review1", claim_id="h1", critic_provider_id="critic",
+                   verdict="ACCEPT_FOR_TRIAL", reason="Bounded trial")
+        self.apply("adjudicate_claim", id="adj1", claim_id="h1", review_id="review1",
+                   adjudicator_provider_id="judge", verdict="ACCEPT_FOR_TRIAL", reason="Bounded trial")
+        self.apply("propose_lesson", id="lesson1", claim_id="h1", statement="Hypothesis only",
+                   limits="No resolved outcome", prediction_ids=["f1"], adjudication_id="adj1",
+                   counterevidence_ids=[], counterevidence_search_note="Searched; none found",
+                   applicability="Measured media conditions only")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "HYPOTHESIS")
+        with self.assertRaises(GateError):
+            self.apply("freeze_lesson", lesson_id="lesson1")
 
     def test_high_stakes_cannot_activate_even_with_two_outcomes(self):
         self.base(risk="HIGH_STAKES")
@@ -236,7 +259,7 @@ class CoreGates(unittest.TestCase):
         review = self.state["lesson_revalidations"]["rev1"]
         self.assertEqual(review["status"], "PROPOSAL_ONLY")
         self.assertFalse(review["automatic_lesson_mutation"])
-        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "CANDIDATE")
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "FROZEN_PENDING_OWNER")
 
     def test_scheduled_revalidation_cannot_run_early(self):
         self.base()
