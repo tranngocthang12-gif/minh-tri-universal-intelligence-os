@@ -26,7 +26,7 @@ Explicit write-authorized workflow → Owner gate → Ledger.apply/repair → lo
 Read plane không được chạm write plane.
 
 ### Maintenance plane
-Desktop Commander là break-glass/maintenance, không phải canonical brain transport. Hiện config `allowedDirectories=[]` nghĩa là full-filesystem access; hardening config phải làm trong chat riêng theo safety rule của chính tool.
+Desktop Commander là break-glass/maintenance, không phải canonical brain transport. PHASE A hardening 2026-10-03 đã thu `allowedDirectories` từ full-filesystem (`[]`) về đúng runtime canonical `C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current`; blocked commands không bị nới và telemetry không đổi. Config mutation được thực hiện trong chat maintenance riêng, không trộn terminal/file/reboot operations sau mutation.
 
 ### Witness plane
 Current GitHub witness chỉ process-separated; chưa độc lập trước full Owner-PC/account compromise.
@@ -41,7 +41,7 @@ Runtime evidence và current liveness là hai lớp khác nhau.
 - canonical brain read plane trả `brain.verify = VALID`, event_count=3, head `ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927`;
 - `brain.recovery_packet` trả cùng head và focus ACTIVE `youtube` / `chat quen, so khong` / `UNTESTED_EXPECTATION`;
 - bounded persistence probe không tìm thấy matching Scheduled Task/startup entry/dedicated service cho MINH TRÍ tunnel; persistence vẫn `NOT_PROVEN`;
-- Desktop Commander `allowedDirectories=[]` được xác nhận là full-filesystem access; hardening chưa thực hiện vì chính tool yêu cầu config mutation ở chat riêng;
+- Desktop Commander hardening PASS: `allowedDirectories` hiện chỉ cho `C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current`; blocked commands giữ nguyên; evidence: `docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json`;
 - Defender realtime/behavior/NIS/on-access đều report off; McAfee được Security Center đăng ký và framework host running, nhưng McAfee realtime protection vẫn `UNKNOWN`;
 - BitLocker vẫn `UNKNOWN` vì truy vấn bị access denied nếu không có admin rights;
 - old tunnel key revocation vẫn `NOT_VERIFIED` vì chưa có provider-side revocation evidence.
@@ -145,15 +145,14 @@ Provider-neutral mechanisms inspired by public Gemini/Claude/Grok documentation:
 ## 8. Promotion gates còn mở
 
 1. verify/revoke every old tunnel key;
-2. harden Desktop Commander filesystem scope under its dedicated maintenance safety boundary;
-3. establish secure boot persistence design and prove after controlled restart/reboot;
-4. resolve endpoint-protection and BitLocker UNKNOWNs with stronger evidence;
-5. perform genuine fresh-seat validation;
-6. establish independent witness authority/credential;
-7. capture a real external critic execution receipt/evidence before claiming operational critic independence;
-8. empirically validate Learning Assurance v1.4 against real work before claiming it improves accuracy;
-9. clean/resolve remaining active learning and Dependabot PRs;
-10. only then reconsider closing foundation build phase.
+2. establish secure boot persistence design and prove after controlled restart/reboot;
+3. resolve endpoint-protection and BitLocker UNKNOWNs with stronger evidence;
+4. perform genuine fresh-seat validation;
+5. establish independent witness authority/credential;
+6. capture a real external critic execution receipt/evidence before claiming operational critic independence;
+7. empirically validate Learning Assurance v1.4 against real work before claiming it improves accuracy;
+8. clean/resolve remaining active learning and Dependabot PRs;
+9. only then reconsider closing foundation build phase.
 
 ## 9. Backlog hygiene
 
@@ -192,3 +191,9 @@ Canonical evidence file:
 `docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json`
 
 This evidence proves only the bounded observations captured there. It does not prove boot/reboot persistence, old-key revocation, BitLocker state, McAfee realtime protection state, full-device independent witness, or fresh-seat recovery.
+
+## 14. Desktop Commander hardening — 2026-10-03
+
+Evidence: `docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json`.
+
+The maintenance-plane filesystem scope is now restricted to the canonical MINH TRÍ runtime directory only. This closes the Desktop Commander filesystem-scope gate, but does not prove fresh-seat recovery or boot/reboot persistence.
