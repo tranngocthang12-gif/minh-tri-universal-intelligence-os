@@ -14,6 +14,7 @@ from minhtri.autonomy import (
     claims_without_review,
     meta_learning_report,
     learning_assurance_report,
+    stratified_meta_learning_report,
     structural_critique,
 )
 from minhtri.core import initial_state
@@ -127,6 +128,44 @@ class AutonomyTests(unittest.TestCase):
         packet = build_autonomy_packet(state, critic_provider_id="critic")
         self.assertEqual(packet["learning_assurance"]["frozen_learning_packets"], 1)
         self.assertFalse(packet["write_capability"])
+
+    def test_stratified_meta_learning_keeps_domains_separate(self):
+        state = base_state()
+        state["procedures"]["proc1"] = {
+            "id": "proc1", "domain_id": "d", "provider_id": "maker",
+            "version": "1", "method": "bounded"
+        }
+        state["predictions"] = {
+            "p1": {"id": "p1", "claim_id": "c", "procedure_id": "proc1"},
+            "p2": {"id": "p2", "claim_id": "c", "procedure_id": "proc1"},
+        }
+        state["resolutions"] = {
+            "r1": {
+                "prediction_id": "p1", "domain_id": "d", "evidence_id": "e",
+                "interval_hit": True, "absolute_midpoint_error": 1.0
+            },
+            "r2": {
+                "prediction_id": "p2", "domain_id": "d", "evidence_id": "e",
+                "interval_hit": False, "absolute_midpoint_error": 3.0
+            },
+        }
+        report = stratified_meta_learning_report(state)
+        self.assertEqual(report["by_domain"]["d"]["count"], 2)
+        self.assertEqual(report["by_procedure"]["proc1"]["count"], 2)
+        self.assertFalse(report["cross_domain_transfer_established"])
+        self.assertFalse(report["automatic_rule_change"])
+
+    def test_stratified_meta_learning_counts_failure_classes_without_fixing_them(self):
+        state = base_state()
+        state["learning_failures"] = {
+            "f1": {"domain_id": "d", "failure_class": "CONFIRMATION_BIAS"},
+            "f2": {"domain_id": "d", "failure_class": "CONFIRMATION_BIAS"},
+            "f3": {"domain_id": "d", "failure_class": "TOOL_ERROR"},
+        }
+        report = stratified_meta_learning_report(state)
+        self.assertEqual(report["failure_counts"]["CONFIRMATION_BIAS"], 2)
+        self.assertEqual(report["failure_by_domain"]["d"]["TOOL_ERROR"], 1)
+        self.assertFalse(report["automatic_rule_change"])
 
     def test_research_is_fail_closed_before_gate(self):
         packet = build_autonomy_packet(

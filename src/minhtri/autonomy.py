@@ -307,6 +307,102 @@ def learning_assurance_report(state: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def stratified_meta_learning_report(
+    state: dict[str, Any],
+    minimum_group_resolutions: int = 2,
+) -> dict[str, Any]:
+    """Analyze historical calibration by bounded strata without causal claims."""
+    resolutions = list(state.get("resolutions", {}).values())
+    predictions = state.get("predictions", {})
+    procedures = state.get("procedures", {})
+    evidence = state.get("evidence", {})
+    sources = state.get("sources", {})
+
+    def _summary(rows: list[dict[str, Any]]) -> dict[str, Any]:
+        numeric = [
+            row for row in rows
+            if isinstance(row.get("interval_hit"), bool)
+            and isinstance(row.get("absolute_midpoint_error"), (int, float))
+        ]
+        count = len(numeric)
+        if not count:
+            return {"count": 0, "status": "NO_NUMERIC_HISTORY"}
+        hits = sum(1 for row in numeric if row["interval_hit"])
+        mean_error = sum(float(row["absolute_midpoint_error"]) for row in numeric) / count
+        return {
+            "count": count,
+            "status": "ANALYZED" if count >= minimum_group_resolutions else "INSUFFICIENT_HISTORY",
+            "interval_hits": hits,
+            "interval_hit_rate": hits / count,
+            "mean_absolute_midpoint_error": mean_error,
+        }
+
+    by_domain: dict[str, list[dict[str, Any]]] = {}
+    by_procedure: dict[str, list[dict[str, Any]]] = {}
+    by_source_kind: dict[str, list[dict[str, Any]]] = {}
+    for row in resolutions:
+        domain_id = str(row.get("domain_id", "UNKNOWN"))
+        by_domain.setdefault(domain_id, []).append(row)
+
+        prediction = predictions.get(row.get("prediction_id"), {})
+        procedure_id = prediction.get("procedure_id")
+        if isinstance(procedure_id, str):
+            by_procedure.setdefault(procedure_id, []).append(row)
+
+        evidence_id = row.get("evidence_id")
+        ev = evidence.get(evidence_id, {}) if isinstance(evidence_id, str) else {}
+        source = sources.get(ev.get("source_id"), {}) if isinstance(ev, dict) else {}
+        source_kind = str(source.get("kind", "UNKNOWN"))
+        by_source_kind.setdefault(source_kind, []).append(row)
+
+    failure_counts: dict[str, int] = {}
+    failure_by_domain: dict[str, dict[str, int]] = {}
+    for failure in state.get("learning_failures", {}).values():
+        failure_class = str(failure.get("failure_class", "UNKNOWN"))
+        domain_id = str(failure.get("domain_id", "UNKNOWN"))
+        failure_counts[failure_class] = failure_counts.get(failure_class, 0) + 1
+        domain_map = failure_by_domain.setdefault(domain_id, {})
+        domain_map[failure_class] = domain_map.get(failure_class, 0) + 1
+
+    procedure_meta = {}
+    for procedure_id, rows in sorted(by_procedure.items()):
+        summary = _summary(rows)
+        proc = procedures.get(procedure_id, {})
+        summary["provider_id"] = proc.get("provider_id")
+        summary["version"] = proc.get("version")
+        summary["method"] = proc.get("method")
+        procedure_meta[procedure_id] = summary
+
+    candidates = []
+    for domain_id, summary in sorted((k, _summary(v)) for k, v in by_domain.items()):
+        if summary.get("status") == "ANALYZED":
+            candidates.append({
+                "status": "META_LESSON_CANDIDATE",
+                "scope": {"domain_id": domain_id},
+                "statement": (
+                    "Historical calibration for this domain is now measurable; compare future "
+                    "procedure changes against this bounded baseline rather than generalizing "
+                    "from global averages."
+                ),
+                "limits": (
+                    "Descriptive historical summary only; no causality or cross-domain transfer "
+                    "is established."
+                ),
+            })
+
+    return {
+        "status": "ANALYZED" if resolutions or failure_counts else "INSUFFICIENT_HISTORY",
+        "by_domain": {k: _summary(v) for k, v in sorted(by_domain.items())},
+        "by_procedure": procedure_meta,
+        "by_source_kind": {k: _summary(v) for k, v in sorted(by_source_kind.items())},
+        "failure_counts": dict(sorted(failure_counts.items())),
+        "failure_by_domain": {k: dict(sorted(v.items())) for k, v in sorted(failure_by_domain.items())},
+        "lesson_candidates": candidates,
+        "automatic_rule_change": False,
+        "cross_domain_transfer_established": False,
+    }
+
+
 def autonomous_learning_plan(
     state: dict[str, Any],
     *,
@@ -399,6 +495,7 @@ def build_autonomy_packet(
         "critique": automatic_critique_plan(state, critic_provider_id),
         "meta_learning": meta_learning_report(state),
         "learning_assurance": learning_assurance_report(state),
+        "stratified_meta_learning": stratified_meta_learning_report(state),
         "learning_plan": autonomous_learning_plan(state),
         "research": research,
     }
