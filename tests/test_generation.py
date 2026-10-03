@@ -75,6 +75,7 @@ class GenerationTests(unittest.TestCase):
             "tests/test_unrelated_future_guard.py",
             "ops/windows/another_runtime_guard.py",
             "config/another-owner-control.json",
+            "src/minhtri/critic/provider_manual.py",
             "src/minhtri/candidate_executor.py",
             "src/minhtri/codex_provider.py",
             "src/minhtri/lease_bound_worker.py",
