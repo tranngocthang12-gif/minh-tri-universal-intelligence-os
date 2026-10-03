@@ -280,5 +280,14 @@
   "self_upgrade_worker_canonical_write_capability": false,
   "self_upgrade_worker_automatic_verified_promotion": false,
   "self_upgrade_worker_automatic_candidate_promotion": false,
-  "self_upgrade_full_activation_status": "BLOCKED_UNTIL_PROVIDER_ADAPTER_AND_RUNTIME_BINDING_PROVEN"
+  "self_upgrade_full_activation_status": "BLOCKED_UNTIL_CODEX_ADAPTER_CI_AND_OWNER_PC_RUNTIME_BINDING_PASS",
+  "self_upgrade_codex_provider_adapter": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_codex_cli_owner_pc": "INSTALLED_0_160_0_LOGGED_IN_USING_CHATGPT",
+  "self_upgrade_codex_plan_sandbox": "READ_ONLY",
+  "self_upgrade_codex_apply_sandbox": "WORKSPACE_WRITE",
+  "self_upgrade_codex_bypass_sandbox": false,
+  "self_upgrade_codex_auto_commit": false,
+  "self_upgrade_codex_auto_merge": false,
+  "self_upgrade_codex_auto_push": false,
+  "self_upgrade_provider_status": "CODEX_CLI_AVAILABLE_RUNTIME_BINDING_PENDING"
 }
