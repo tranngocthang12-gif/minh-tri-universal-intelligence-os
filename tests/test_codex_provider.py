@@ -47,14 +47,14 @@ class CodexProviderTests(unittest.TestCase):
         plan_json = json.dumps({
             "summary": "x",
             "hypothesis": "x",
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "tests": ["unit"],
         })
         proc = mock.Mock(returncode=0, stdout=plan_json, stderr="")
         p = self.provider()
         with mock.patch.object(p, "_run", return_value=proc):
             plan = p.plan({"write_capability": False})
-        self.assertEqual(plan["changed_paths"], ["src/minhtri/autonomy.py"])
+        self.assertEqual(plan["changed_paths"], ["src/minhtri/__init__.py"])
 
     def test_explicit_objective_and_required_paths_are_in_plan_prompt(self):
         p = CodexCandidateProvider(
@@ -96,7 +96,7 @@ class CodexProviderTests(unittest.TestCase):
         plan_json = json.dumps({
             "summary": "x",
             "hypothesis": "x",
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "tests": [],
         })
         with mock.patch.object(p, "_run", return_value=mock.Mock(returncode=0, stdout=plan_json)):
@@ -119,7 +119,7 @@ class CodexProviderTests(unittest.TestCase):
         plan_json = json.dumps({
             "summary": "x",
             "hypothesis": "x",
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "tests": [],
         })
         p = self.provider()
@@ -136,7 +136,7 @@ class CodexProviderTests(unittest.TestCase):
         plan_json = json.dumps({
             "summary": "x",
             "hypothesis": "x",
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "tests": [],
         })
         p = self.provider()
@@ -144,7 +144,7 @@ class CodexProviderTests(unittest.TestCase):
             mock.Mock(returncode=0, stdout=plan_json),
             mock.Mock(returncode=0, stdout="done"),
         ]), mock.patch.object(
-            p, "_changed_paths", return_value=["src/minhtri/autonomy.py", "README.md"]
+            p, "_changed_paths", return_value=["src/minhtri/__init__.py", "README.md"]
         ):
             proposal = p.propose({})
             result = proposal["action"]()
@@ -155,14 +155,14 @@ class CodexProviderTests(unittest.TestCase):
         plan_json = json.dumps({
             "summary": "x",
             "hypothesis": "x",
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "tests": [],
         })
         p = self.provider()
         with mock.patch.object(p, "_run", side_effect=[
             mock.Mock(returncode=0, stdout=plan_json),
             mock.Mock(returncode=0, stdout="done"),
-        ]), mock.patch.object(p, "_changed_paths", return_value=["src/minhtri/autonomy.py"]):
+        ]), mock.patch.object(p, "_changed_paths", return_value=["src/minhtri/__init__.py"]):
             proposal = p.propose({})
             result = proposal["action"]()
         self.assertEqual(result["status"], "CANDIDATE_WORKTREE_MUTATED_PENDING_TEST")
