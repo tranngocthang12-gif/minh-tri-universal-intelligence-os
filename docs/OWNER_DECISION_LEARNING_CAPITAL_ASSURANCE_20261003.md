@@ -213,3 +213,47 @@ No group statistic proves causality or transfer to another domain. Meta-learning
 ### Contamination and reward hacking boundary
 
 v1.2 can **record** `EVAL_CONTAMINATION`, `CRITIC_CONTAMINATION`, and `REWARD_HACKING` when evidence identifies them. It does not claim automatic detection is solved. Automatic detection remains a separate eval-hardening gate.
+
+## 13. Learning Assurance v1.3 candidate
+
+### Critic execution independence receipts
+
+A critic execution may receive a separate receipt that records:
+
+- execution environment ID;
+- project runtime ID;
+- session ID;
+- provider receipt hash;
+- authority scope;
+- whether Project context was supplied;
+- verification method;
+- bounded supporting evidence.
+
+Machine status is deliberately conservative:
+
+- same runtime -> `BLOCKED_SAME_RUNTIME`;
+- not blind / Project context supplied -> `BLOCKED_NOT_BLIND`;
+- process-separated + separate approved authority + external evidence -> `PROCESS_SEPARATED_EXTERNAL_EVIDENCE_RECORDED_NOT_FULL_INDEPENDENCE_PROOF`;
+- otherwise -> `EVIDENCE_BOUND_NOT_INDEPENDENCE_PROOF`.
+
+No receipt automatically proves full independence.
+
+### Eval integrity assessment
+
+A deterministic assessment may record:
+
+- output hash;
+- configured forbidden-marker hits;
+- invariant failures;
+- whether the candidate claimed a pass;
+- evaluator kind.
+
+Bounded statuses:
+
+- `EVAL_CONTAMINATION_SUSPECTED`;
+- `REWARD_HACKING_SUSPECTED`;
+- `EVAL_CONTAMINATION_AND_REWARD_HACKING_SUSPECTED`;
+- `INVARIANT_FAILURE_RECORDED`;
+- `CLEAN_NO_SIGNAL_NOT_PROOF`.
+
+This is a guard for explicit signals, not a solved universal detector. A clean result means only that configured signals were not observed.

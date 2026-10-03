@@ -116,6 +116,8 @@ ALLOWED_FIELDS = {
     "schedule_lesson_revalidation": {"id", "lesson_id", "review_after", "staleness_conditions", "reason"},
     "record_lesson_revalidation": {"id", "schedule_id", "evidence_ids", "outcome", "reason", "limits", "trigger"},
     "record_learning_failure": {"id", "domain_id", "artifact_type", "artifact_id", "failure_class", "severity", "evidence_ids", "description", "remediation", "detected_by"},
+    "record_critic_independence_receipt": {"id", "critic_execution_id", "execution_environment_id", "project_runtime_id", "session_id", "provider_receipt_hash", "authority_scope", "project_context_supplied", "verification_method", "evidence_ids"},
+    "record_eval_integrity_assessment": {"id", "domain_id", "artifact_type", "artifact_id", "output_hash", "forbidden_marker_hits", "invariant_failures", "claimed_pass", "evaluator_kind", "note"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
 
@@ -136,6 +138,8 @@ TRACE_ARTIFACT_COLLECTIONS = {
     "CRITIC_EXECUTION": "critic_executions",
     "NEGATIVE_CONTROL": "negative_controls",
     "LESSON_REVALIDATION": "lesson_revalidations",
+    "CRITIC_INDEPENDENCE_RECEIPT": "critic_independence_receipts",
+    "EVAL_INTEGRITY_ASSESSMENT": "eval_integrity_assessments",
 }
 TRACE_RELATIONS = {
     "ORIGIN", "SUPPORT", "COUNTEREVIDENCE", "PREDICTION", "OUTCOME",
@@ -620,6 +624,84 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         d["automatic_remediation"] = False
         failures = out.setdefault("learning_failures", {})
         add(out, "learning_failures", d)
+
+    elif kind == "record_critic_independence_receipt":
+        need(d, "id", "critic_execution_id", "execution_environment_id", "project_runtime_id",
+             "session_id", "provider_receipt_hash", "authority_scope", "project_context_supplied",
+             "verification_method", "evidence_ids")
+        executions = out.setdefault("critic_executions", {})
+        execution = ref(out, "critic_executions", d["critic_execution_id"])
+        for key in ("execution_environment_id", "project_runtime_id", "session_id", "provider_receipt_hash"):
+            string(d[key], key)
+        if d["authority_scope"] not in ("SAME_OWNER_AUTHORITY", "SEPARATE_OWNER_APPROVED_AUTHORITY", "UNKNOWN"):
+            raise GateError("Invalid critic authority_scope")
+        if d["verification_method"] not in ("DECLARED_ONLY", "RECEIPT_HASH_BOUND", "EXTERNAL_EVIDENCE"):
+            raise GateError("Invalid critic verification_method")
+        if type(d["project_context_supplied"]) is not bool:
+            raise GateError("project_context_supplied must be boolean")
+        eids = _list_of_refs(out, "evidence", d["evidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != execution["domain_id"] for eid in eids):
+            raise GateError("Critic independence evidence cannot cross domain boundaries")
+        if execution["context_mode"] != "BLIND" or d["project_context_supplied"]:
+            status = "BLOCKED_NOT_BLIND"
+        elif d["execution_environment_id"] == d["project_runtime_id"]:
+            status = "BLOCKED_SAME_RUNTIME"
+        elif (d["authority_scope"] == "SEPARATE_OWNER_APPROVED_AUTHORITY"
+              and d["verification_method"] == "EXTERNAL_EVIDENCE" and eids):
+            status = "PROCESS_SEPARATED_EXTERNAL_EVIDENCE_RECORDED_NOT_FULL_INDEPENDENCE_PROOF"
+        else:
+            status = "EVIDENCE_BOUND_NOT_INDEPENDENCE_PROOF"
+        d["domain_id"] = execution["domain_id"]
+        d["target_hash"] = execution["target_hash"]
+        d["evidence_bundle_hash"] = execution["evidence_bundle_hash"]
+        d["status"] = status
+        d["automatic_independence_proof"] = False
+        d["recorded_at"] = event_time
+        receipts = out.setdefault("critic_independence_receipts", {})
+        add(out, "critic_independence_receipts", d)
+
+    elif kind == "record_eval_integrity_assessment":
+        need(d, "id", "domain_id", "artifact_type", "artifact_id", "output_hash",
+             "forbidden_marker_hits", "invariant_failures", "claimed_pass", "evaluator_kind", "note")
+        ref(out, "domains", d["domain_id"])
+        if d["artifact_type"] not in TRACE_ARTIFACT_COLLECTIONS:
+            raise GateError("Invalid eval integrity artifact type")
+        collection = TRACE_ARTIFACT_COLLECTIONS[d["artifact_type"]]
+        artifact_id = identifier(d["artifact_id"], "artifact ID")
+        artifacts = out.get(collection, {})
+        if artifact_id not in artifacts:
+            raise GateError(f"Unknown eval artifact: {d['artifact_type']}:{artifact_id}")
+        artifact = artifacts[artifact_id]
+        artifact_domain = artifact.get("domain_id")
+        if artifact_domain is not None and artifact_domain != d["domain_id"]:
+            raise GateError("Eval integrity artifact cannot cross domain boundaries")
+        string(d["output_hash"], "output_hash")
+        string(d["note"], "note")
+        if type(d["claimed_pass"]) is not bool:
+            raise GateError("claimed_pass must be boolean")
+        if d["evaluator_kind"] not in ("TOOL", "HUMAN", "EVAL"):
+            raise GateError("Invalid evaluator_kind")
+        for field in ("forbidden_marker_hits", "invariant_failures"):
+            if not isinstance(d[field], list) or any(not isinstance(v, str) or not v.strip() for v in d[field]):
+                raise GateError(f"{field} must be a text list")
+        has_leak = bool(d["forbidden_marker_hits"])
+        has_invariant_failure = bool(d["invariant_failures"])
+        if has_leak and d["claimed_pass"] and has_invariant_failure:
+            status = "EVAL_CONTAMINATION_AND_REWARD_HACKING_SUSPECTED"
+        elif has_leak:
+            status = "EVAL_CONTAMINATION_SUSPECTED"
+        elif d["claimed_pass"] and has_invariant_failure:
+            status = "REWARD_HACKING_SUSPECTED"
+        elif has_invariant_failure:
+            status = "INVARIANT_FAILURE_RECORDED"
+        else:
+            status = "CLEAN_NO_SIGNAL_NOT_PROOF"
+        d["artifact_digest"] = digest(artifact)
+        d["status"] = status
+        d["automatic_proof"] = False
+        d["recorded_at"] = event_time
+        assessments = out.setdefault("eval_integrity_assessments", {})
+        add(out, "eval_integrity_assessments", d)
 
     elif kind == "set_learning_focus":
         # The collection is created lazily so ledgers written before this type still replay
