@@ -1,9 +1,9 @@
 # SECURITY HARDENING FOLLOW-UP — 2026-10-02
 
-**Status:** CANDIDATE PR / NOT YET MERGED / NOT VERIFIED  
+**Status:** HISTORICAL IMPLEMENTATION SNAPSHOT / MERGED; CURRENT STATUS LIVES IN PROJECT_STATE + CURRENT ARCHITECTURE  
 **Base main:** `832cd09c5537ab7b0a46d76f26c42e53f35a84fe`
 
-## Live blockers observed before this PR
+## Historical blockers observed before this PR
 
 1. Owner PC maintenance plane: OFFLINE at the latest probe.
 2. Local Brain connector: DOWN; tunnel-client had not been seen for more than 300 seconds.
