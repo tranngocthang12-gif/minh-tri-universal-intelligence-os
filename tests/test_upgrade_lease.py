@@ -27,6 +27,16 @@ class UpgradeLeaseTests(unittest.TestCase):
         self.config = write_owner_config(Path(self.tmp.name))
 
     def issue(self, seconds=60):
+        kwargs = {}
+        if seconds > 300:
+            kwargs = {
+                "owner_authorization_ref": "a" * 40,
+                "owner_authorized_at_utc": NOW.isoformat(),
+                "eval_packet_hash": "b" * 64,
+                "champion_sha": "c" * 40,
+                "eval_dataset_hash": "d" * 64,
+                "eval_metric": "task_utility",
+            }
         with owner_config(self.config):
             return issue_upgrade_lease(
                 actor=TEST_OWNER,
@@ -36,6 +46,7 @@ class UpgradeLeaseTests(unittest.TestCase):
                 target_generation="GEN-0002",
                 now=NOW,
                 lease_id="upgrade-test",
+                **kwargs,
             )
 
     def test_owner_gated_immutable_lease_max_24h(self):
@@ -53,6 +64,46 @@ class UpgradeLeaseTests(unittest.TestCase):
                 target_generation="GEN-0002",
                 now=NOW,
             )
+
+    def test_live_lease_rejects_prearmed_or_unpinned_activation(self):
+        with owner_config(self.config), self.assertRaises(ValueError):
+            issue_upgrade_lease(
+                actor=TEST_OWNER,
+                secret=TEST_SECRET,
+                duration_seconds=MAX_UPGRADE_LEASE_SECONDS,
+                parent_generation="GEN-0001",
+                target_generation="GEN-0002",
+                now=NOW,
+                owner_authorization_ref="a" * 40,
+                owner_authorized_at_utc=(NOW - timedelta(minutes=10)).isoformat(),
+                eval_packet_hash="b" * 64,
+                champion_sha="c" * 40,
+                eval_dataset_hash="d" * 64,
+                eval_metric="task_utility",
+            )
+        with owner_config(self.config), self.assertRaises(ValueError):
+            issue_upgrade_lease(
+                actor=TEST_OWNER,
+                secret=TEST_SECRET,
+                duration_seconds=MAX_UPGRADE_LEASE_SECONDS,
+                parent_generation="GEN-0001",
+                target_generation="GEN-0002",
+                now=NOW,
+                owner_authorization_ref="a" * 40,
+                owner_authorized_at_utc=NOW.isoformat(),
+            )
+
+    def test_live_lease_pins_owner_authorization_and_eval_packet(self):
+        lease = self.issue(MAX_UPGRADE_LEASE_SECONDS)
+        data = lease.to_dict()
+        self.assertEqual(data["owner_authorization_ref"], "a" * 40)
+        self.assertEqual(data["eval_packet_hash"], "b" * 64)
+        self.assertEqual(data["champion_sha"], "c" * 40)
+        self.assertEqual(data["eval_dataset_hash"], "d" * 64)
+        self.assertEqual(data["eval_metric"], "task_utility")
+        self.assertFalse(data["automatic_push"])
+        self.assertFalse(data["automatic_merge"])
+        self.assertFalse(data["canonical_write_capability"])
 
     def test_expiry_uses_wall_and_monotonic_limits(self):
         guard = LeaseRuntimeGuard(self.issue(60), monotonic_started=100.0)
