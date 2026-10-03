@@ -73,9 +73,11 @@ class GenerationTests(unittest.TestCase):
             "src/minhtri/candidate_executor.py",
             "src/minhtri/codex_provider.py",
             "src/minhtri/lease_bound_worker.py",
+            "src/minhtri/candidate_lifecycle.py",
             "tests/test_candidate_executor.py",
             "tests/test_codex_provider.py",
             "tests/test_lease_bound_worker.py",
+            "tests/test_candidate_lifecycle.py",
             "ops/windows/self_upgrade_owner_revoke_probe.py",
             "pyproject.toml",
         ):
