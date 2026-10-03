@@ -67,6 +67,9 @@ class CriticCanaryTests(unittest.TestCase):
                 "accepted_bad_case": False,
                 "rejected_clean_case": False,
                 "subtle_error": True,
+                "hard_negative": False,
+                "historical_defect": True,
+                "human_adjudicated": True,
             },
             {
                 "case_id": "clean",
@@ -77,6 +80,9 @@ class CriticCanaryTests(unittest.TestCase):
                 "accepted_bad_case": False,
                 "rejected_clean_case": False,
                 "subtle_error": False,
+                "hard_negative": True,
+                "historical_defect": False,
+                "human_adjudicated": True,
             },
         ]
         report = summarize_canary_scores(
@@ -86,6 +92,9 @@ class CriticCanaryTests(unittest.TestCase):
         )
         self.assertEqual(report["false_acceptance_rate"], 0.0)
         self.assertEqual(report["subtle_detection_rate"], 1.0)
+        self.assertEqual(report["human_adjudication_coverage"], 1.0)
+        self.assertEqual(report["hard_negative_count"], 1)
+        self.assertEqual(report["historical_defect_count"], 1)
         self.assertTrue(report["pass"])
 
 
