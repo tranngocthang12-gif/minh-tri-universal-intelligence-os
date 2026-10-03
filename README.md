@@ -1,63 +1,69 @@
 # MINH TRÍ — Universal Intelligence OS
 
-**v0.1: walking skeleton của Tầng 1.** Tầng 1 giữ cách học, phản biện, dự đoán và giới hạn quyền. Tầng 2 là các miền chuyên ngành có thể gắn vào sau. Bản này chạy offline bằng Python 3.10+, không cần API key hay gói Python bên ngoài.
+**Current phase:** `FOUNDATION_PROTOTYPE`.  
+**Canonical state:** [docs/PROJECT_STATE.json](docs/PROJECT_STATE.json).  
+**Current architecture:** [docs/ARCHITECTURE_NOW_20261003.md](docs/ARCHITECTURE_NOW_20261003.md).  
+**Current law router:** [docs/LAW_INDEX_20261003.md](docs/LAW_INDEX_20261003.md).
 
-## Chạy nhanh trên Windows
+MINH TRÍ is a provider-neutral, evidence-first learning/control plane built around one durable Owner ledger and replaceable AI seats. GitHub is the durable project authority; chat is not canonical truth.
 
-Giải nén dự án, mở Command Prompt trong thư mục này và chạy thử **một lệnh**:
+## Current architecture
 
-```bat
-demo.bat
-```
+The foundation now contains:
 
-Để khởi tạo sổ học thật do anh kiểm soát và nhập từng đơn vị:
+- a single-writer JSONL hash-chain ledger with derived state cache;
+- an Owner-gated write plane using the canonical `Ledger.apply` / repair boundary;
+- a separate read-only brain plane exposed through Secure MCP Tunnel;
+- exactly two remote brain tools: `brain.verify` and `brain.recovery_packet`;
+- a maintenance plane using Desktop Commander as break-glass tooling, not canonical brain transport;
+- external anchor/witness verification contracts;
+- proposal-only critique, autonomous-learning and meta-learning engines with no durable write capability;
+- GitHub branch protection, required CI, secret-history scanning, dependency audit, and pinned Actions;
+- Windows tunnel supervisor and secret-safe autostart components.
+
+The ChatGPT-to-Owner-PC read-only connector has been runtime-proven in bounded observations. That does **not** prove reboot persistence, fresh-seat independence, independent witness authority, or production readiness.
+
+## Authority and recovery
+
+For important work, read in this order:
+
+1. `docs/PROJECT_STATE.json`
+2. the Law Index referenced by PROJECT_STATE
+3. the architecture record referenced by PROJECT_STATE
+4. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
+5. the task/domain source
+
+Historical documents remain provenance only after they are superseded.
+
+## Core invariants
+
+- Chat statements are not VERIFIED evidence.
+- Implemented is not the same as deployed.
+- One live check is not persistence proof.
+- Read plane must not acquire mutation, shell, or arbitrary filesystem access.
+- Background autonomy remains OFF.
+- Research remains fail-closed until the genuine fresh-seat gate passes.
+- No automatic VERIFIED promotion, automatic trial activation, or autonomous durable mutation.
+- Tools/models/providers are replaceable; law/evidence discipline is not.
+
+## Local CLI skeleton
+
+The offline ledger CLI still exists for local development and recovery:
 
 ```bat
 minhtri.bat init
-minhtri.bat apply examples\01-domain-youtube.json
-minhtri.bat apply examples\02-goal-youtube.json
-minhtri.bat apply examples\03-domain-finance.json
-minhtri.bat apply examples\04-problem-youtube.json
 minhtri.bat status
 minhtri.bat verify
 ```
 
-Trên macOS/Linux: `PYTHONPATH=src python3 -m minhtri init` và thay `minhtri.bat` bằng `PYTHONPATH=src python3 -m minhtri` ở các lệnh còn lại. Dữ liệu cục bộ nằm trong `brain/` và được loại khỏi gói Git công khai. Mỗi file JSON trong `examples/` là **một lệnh**, được thực thi riêng và lưu thành một sự kiện.
+The simple CLI can operate without the remote connector. Secure MCP/runtime functions use their own declared dependencies and credentials; do not infer current runtime state from this quickstart.
 
-## Cốt lõi là sổ của Owner
+## Foundation status
 
-- Giá trị nằm ở **sổ sự kiện của Owner** (`brain/events.jsonl`), không nằm ở AI nào. Đổi Claude, ChatGPT, Gemini hay Grok thì sổ vẫn còn; AI chỉ là ghế thay được.
-- Hôm nay Owner chọn học gì thì ghi lại nguồn, bài học mong đợi và độ chắc: `minhtri.bat --owner-id <id> learn --domain-id youtube --uri <link> --text "<case>" --note "<vì sao học>" --expected-lesson "<điều mong học>" --uncertainty "<độ chắc>"`. Link chỉ được lưu, không được tải về.
-- Mai đổi nghề thì `learn --domain-id <miền-mới> --domain-name "<Tên>"`. Focus cũ chuyển sang `SUPERSEDED`; cùng một lõi Tầng 1, không xây não mới.
-- `minhtri.bat focus` xem đang học gì. `minhtri.bat --owner-id <id> unfocus` dừng focus. Cổng Owner cần ID + secret: chạy `minhtri.bat hash-secret` một lần, dán hash vào `config/owner.json`, rồi `set MINHTRI_OWNER_SECRET=<secret>` trước khi dùng `learn`/`unfocus`; xem [docs/OWNER_GATE.md](docs/OWNER_GATE.md). Không xóa dòng nào trong sổ; `verify` vẫn kiểm được toàn bộ lịch sử.
-- Nguồn mặc định là `THIRD_PARTY`, quyền `UNKNOWN`, và evidence là `DECLARED_UNVERIFIED`. Bài học mong đợi chỉ là `UNTESTED_EXPECTATION`, không phải lesson hay `VERIFIED`.
-- **Không tự học ban đêm:** không có tiến trình nền, lịch chạy, crawler hay gọi mạng. Sổ chỉ đổi khi Owner chạy một lệnh.
-- `examples/05-owner-learn-social-case.json` là nguồn **GIẢ ĐỊNH/hư cấu** (`example.invalid`), không nói về công ty thật.
+The foundation core is built, but runtime assurance is incomplete. The current blocking gates are maintained in `PROJECT_STATE.json` and summarized in the current architecture. As of 2026-10-03 they include old tunnel-key revocation evidence, boot/reboot persistence, endpoint-protection/BitLocker unknowns, genuine fresh-seat validation, independent witness authority, real external critic evidence, and empirical validation of Learning Assurance v1.4.
 
-## Bản đầu tiên làm được gì
+Real provider/domain integration, real-data validation, real business-loop validation, and external actions are not yet production-enabled.
 
-- Mở một miền mới mà không sửa lõi; mở mục tiêu và khung vấn đề (thực trạng, điều kiện giả định, đích, can thiệp, trách nhiệm, rủi ro), đặt ưu tiên, tạm chặn hoặc đóng. Không có mục tiêu hợp lệ thì trả `WAIT`.
-- Ghi `SOURCE → EVIDENCE → CLAIM → PREDICTION → RESOLUTION → LESSON`, kèm `PROCEDURE` và danh tính provider khai báo. Dự đoán phải được đóng băng trước khi có kết quả; code tự tính điểm trúng khoảng và sai số điểm giữa.
-- Tách vai đề xuất, phản biện và trọng tài bằng ID provider; chặn cùng một provider chiếm hai ghế của cùng nhận định.
-- Chỉ cho kích hoạt một bài học ở trạng thái `TRIAL_RULE` khi có ít nhất hai dự đoán đã giải quyết, hai nguồn kết quả first-party khác nhau, phản biện/trọng tài chấp nhận và Owner ghi xác nhận. Không có đường tự động nâng thành `VERIFIED`.
-- Từ chối kích hoạt quy tắc trong miền rủi ro cao ở bản này. Không có chức năng chi tiền, giao dịch, phát hành hoặc tự sửa luật.
-- Kiểm sổ JSONL bằng chuỗi SHA-256, tái dựng trạng thái và so với cache. File Git cần được commit để tạo mốc độc lập chống việc viết lại cả chuỗi.
+## Security
 
-## Lệnh JSON mẫu
-
-```json
-{
-  "type": "register_provider",
-  "data": {"id": "researcher_a", "name": "Researcher A", "kind": "MODEL"}
-}
-```
-
-Gọi `minhtri.bat apply duong-dan\lenh.json`. Xem [hợp đồng và luồng dữ liệu](docs/ARCHITECTURE.md) để biết các lệnh tiếp theo. Các ví dụ YouTube và tài chính chỉ chứng minh rằng cùng một lõi nhận được hai miền; chúng **không** chứa dữ liệu thị trường hay khuyến nghị đầu tư.
-
-## Ranh giới trung thực
-
-Đây là hệ **ghi nhận và kiểm soát việc học**, chưa phải AI tự suy nghĩ như người hay hệ tự cải thiện đã được chứng minh. ID nhà cung cấp và xác nhận Owner là khai báo; CLI offline không xác thực danh tính. Nguồn và số liệu người dùng nhập chưa được máy kiểm chứng. Chuỗi hash phát hiện sửa cục bộ một phần, không chống người có quyền viết lại toàn bộ sổ; Git commit hoặc mốc độc lập mới tăng sức chứng thực. Kết quả dự đoán không tự chứng minh quan hệ nhân quả. Cổng rủi ro và xác thực dữ liệu trước hành động thực cần được làm ở giai đoạn kế tiếp.
-
-## Trạng thái
-
-`FOUNDATION_PROTOTYPE`: cài đặt kiểm soát cục bộ và ca thử bằng dữ liệu giả định. Chưa kết nối Claude/ChatGPT/Gemini/Grok, YouTube, TikTok, ngân hàng hoặc dữ liệu tài chính. Chưa xác nhận vòng tạo giá trị thực.
+See [SECURITY.md](SECURITY.md). Never place live API keys, Owner credentials, private brain contents, or other secrets in GitHub records.
