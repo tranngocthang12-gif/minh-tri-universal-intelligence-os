@@ -106,16 +106,17 @@
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
-  "next_checkpoint": "RESTORE_FRESH_RUNTIME_PROOF_THEN_COMPLETE_CANDIDATE_A_EXTERNAL_CRITIC_AND_FOUNDATION_GATES",
+  "next_checkpoint": "RESTORE_RUNTIME_THEN_AUDIT_RESOLUTION_PROVENANCE_AND_CREATE_NEW_NON_ENFORCEMENT_CANDIDATE",
   "candidate_a": {
-    "status": "PENDING_EXTERNAL_CRITIC",
+    "status": "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
     "changed_paths": [
       "src/minhtri/autonomy.py"
     ],
     "packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
     "tests": "PASS_TARGETED_20_FULL_233_2026-10-04",
     "eligible_for_freeze": false,
-    "automatic_promotion": false
+    "automatic_promotion": false,
+    "rejection_reason": "autonomy.py is now a protected enforcement path after source-based external review adjudication"
   },
   "self_upgrade": {
     "authorization_window": "OPEN_UNTIL_2026-10-04T17:56:45.124745Z",
@@ -136,5 +137,14 @@
     "status": "FULL_SYNC_2026-10-04",
     "source_main_sha": "f7721c9b77dc44ed754023e6e9f865d32660e397",
     "runtime_liveness_authority": "docs/PROJECT_STATE.json#current_runtime_liveness"
-  }
+  },
+  "self_learning_system_classification": "PROPOSAL_GOVERNANCE_PIPELINE_NOT_AUTONOMOUS_BEHAVIOR_ADAPTATION",
+  "fresh_seat_validation": {
+    "protocol": "minhtri-fresh-seat-validation/v2",
+    "max_ttl_seconds": 900,
+    "current_pass": "NONE",
+    "expires_at_utc": null
+  },
+  "research_ingestion_safety_gate": "BLOCKED_NOT_IMPLEMENTED",
+  "runtime_commit_attestation": "NOT_PROVEN_CURRENTLY_OFFLINE"
 }
