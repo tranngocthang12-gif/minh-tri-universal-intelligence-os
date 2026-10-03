@@ -70,6 +70,14 @@ class GenerationTests(unittest.TestCase):
             "docs/LAW_INDEX_20261003.md",
             ".github/workflows/security.yml",
             "tests/test_upgrade_lease.py",
+            "src/minhtri/candidate_executor.py",
+            "src/minhtri/codex_provider.py",
+            "src/minhtri/lease_bound_worker.py",
+            "tests/test_candidate_executor.py",
+            "tests/test_codex_provider.py",
+            "tests/test_lease_bound_worker.py",
+            "ops/windows/self_upgrade_owner_revoke_probe.py",
+            "pyproject.toml",
         ):
             with self.assertRaises(CandidateSandboxError, msg=path):
                 self.manifest(paths=(path,))
