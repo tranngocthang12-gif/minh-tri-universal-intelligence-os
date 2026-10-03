@@ -30,7 +30,7 @@ class AuthenticatedWorkerHandoffTests(unittest.TestCase):
                 duration_seconds=300,
                 parent_generation="GEN-1",
                 target_generation="GEN-2",
-                now=datetime(2026, 10, 3, 16, 0, tzinfo=timezone.utc),
+                now=datetime.now(timezone.utc),
                 lease_id="upgrade-handoff-test",
             )
         self.session = SelfUpgradeSession(lease, monotonic_started=100.0)
