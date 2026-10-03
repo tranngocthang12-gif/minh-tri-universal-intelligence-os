@@ -61,6 +61,8 @@ def validate_preregistration(record: dict[str, Any]) -> dict[str, Any]:
     if not set(routing).issubset({"domain_id", "procedure_id"}):
         raise ExperimentContractError("first learning trial may route only on domain_id/procedure_id")
 
+    if record["primary_success_rule"] != "treatment > compute_matched":
+        raise ExperimentContractError("primary_success_rule must be treatment > compute_matched")
     if record["baseline_definition"] not in {"NO_ASSURANCE", "V1_3"}:
         raise ExperimentContractError("baseline_definition must be NO_ASSURANCE or V1_3")
     if not isinstance(record["primary_window_tasks"], int) or record["primary_window_tasks"] < 1:
