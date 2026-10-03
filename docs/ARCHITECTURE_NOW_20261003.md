@@ -373,3 +373,12 @@ Owner explicitly accepted the bounded OS-containment evidence and ordered immedi
 Evidence: `docs/runtime_evidence/SELF_UPGRADE_LIVE_24H_AND_BRAIN_AUDIT_20261003T232905_PLUS0700.json`.
 
 The live lease is empirically ACTIVE with lease id `upgrade-78bb759426dd41d4b306dc995dc47fae`, expiry `2026-10-04T15:56:05.483438Z`, and continuing heartbeat. The local brain ledger now contains append-only `LEASE_CREATED` and `LEASE_ACTIVATED` audit events; `brain.verify` reports VALID with event_count 5 and head `bbc3e5080b3e397550cbc13d319fbfccbd3888fc6fa6c9d2d5ac64a2827c4fe4`. This closes the audit gap for activation. The actual 24-hour expiry proof remains deliberately NOT PROVEN until the lease reaches its real expiry and mutation authority is observed to fail closed.
+
+
+## 26. Manual blind external critic channel — 2026-10-03
+
+Merged in `d2881608b72763d4923e366c12b3ccfc7161b0f7` after Security P0 PASS.
+
+The external critic control plane now supports a manual Owner-mediated channel only. Candidate code cannot write `src/minhtri/critic/`. A critic packet is built only after deterministic TEST and internal critic, contains bounded artifact/test output/claims plus a pinned eval hash, is redacted and hash-bound, and excludes learner reasoning, prior critic conclusions and Owner preference. The prompt is versioned and fixed in-repo; responses must match a strict JSON verdict schema.
+
+When this external gate is configured, pending, invalid or post-expiry responses do not permit FREEZE. A MEDIUM/HIGH/CRITICAL external defect blocks freeze. `NO_MATERIAL_DEFECT_FOUND` is recorded as PARTIAL independence evidence only and never promotes VERIFIED or replaces Owner review. The API/network provider remains disabled pending a future lease and separate review. Runtime execution with a real outside model has not yet been captured, so external critic independence remains PARTIAL / NOT PROVEN.
