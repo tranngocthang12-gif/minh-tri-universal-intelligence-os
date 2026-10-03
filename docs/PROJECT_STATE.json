@@ -248,5 +248,18 @@
   "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json",
   "post_reboot_remote_reachability_latest": "docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json",
   "post_reboot_runtime_diagnosis": "PROBABLE_TASK_SETTINGS_DEFECT_HARDENED_REBOOT_PROOF_PENDING",
-  "persistence_diagnosis_latest": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json"
+  "persistence_diagnosis_latest": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
+  "self_upgrade_lease_engine": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_lease_max_seconds": 86400,
+  "self_upgrade_lease_runtime": "OFF_NOT_ACTIVATED",
+  "self_upgrade_lease_automatic_renewal": false,
+  "self_upgrade_lease_owner_gated_issue_revoke": true,
+  "self_upgrade_candidate_sandbox": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_generation_lineage": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_parent_candidate_evaluator": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_automatic_verified_promotion": false,
+  "self_upgrade_automatic_candidate_promotion": false,
+  "self_upgrade_live_24h_expiry_proof": "NOT_PROVEN",
+  "self_upgrade_short_lease_runtime_proof": "NOT_PROVEN",
+  "self_upgrade_owner_decision": "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md"
 }
