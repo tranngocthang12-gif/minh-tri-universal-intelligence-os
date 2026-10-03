@@ -1,0 +1,38 @@
+{
+  "protocol": "minhtri-runtime-evidence/v1",
+  "observed_at": "2026-10-04T00:31:58+07:00",
+  "scope": "AUTHENTICATED_WORKER_HANDOFF_OWNER_PC_SMOKE_AND_PRIOR_LEASE_REVOKE",
+  "owner_pc": "WIN-VBIQNFFDKIR",
+  "prior_lease": {
+    "lease_id": "upgrade-78bb759426dd41d4b306dc995dc47fae",
+    "status": "REVOKED",
+    "ended_at_utc": "2026-10-03T17:03:16.621694Z",
+    "reason": "OWNER_COMMAND_REISSUE_WITH_AUTHENTICATED_WORKER_HANDOFF"
+  },
+  "handoff_source_sha": "3004f910cd0354c06f78b6d961c7c716bb79ec1c",
+  "smoke_lease_id": "upgrade-handoff-smoke-20261004-a",
+  "smoke_issued_at_utc": "2026-10-03T17:31:58.058581Z",
+  "smoke_expires_at_utc": "2026-10-03T17:36:58.058581Z",
+  "smoke_status": "PASS",
+  "candidate_branch": "candidate/handoff-smoke-20261004-a",
+  "transport": "LOOPBACK_AUTHENTICATED_IPC",
+  "credential_transport": "STDIN_ONE_TIME_BOOTSTRAP",
+  "worker_holds_lease": false,
+  "parent_enforced": true,
+  "argv_contains_credential": false,
+  "environment_contains_credential": false,
+  "changed_paths": [
+    "docs/HANDOFF_AUTH_SMOKE.md"
+  ],
+  "post_revoke_mutation_blocked": true,
+  "automatic_renewal": false,
+  "automatic_push": false,
+  "automatic_merge": false,
+  "canonical_write_capability": false,
+  "local_brain": {
+    "verify_status": "VALID",
+    "event_count": 9,
+    "head": "edf6572852d550959eb6cfdcad6d7a2700938673f56c18b54276c01459f39f73"
+  },
+  "next_live_lease_requirement": "FRESH_OWNER_AUTHORIZATION_WITHIN_300_SECONDS_AT_ISSUANCE"
+}

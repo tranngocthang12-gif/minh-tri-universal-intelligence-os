@@ -382,3 +382,14 @@ Merged in `d2881608b72763d4923e366c12b3ccfc7161b0f7` after Security P0 PASS.
 The external critic control plane now supports a manual Owner-mediated channel only. Candidate code cannot write `src/minhtri/critic/`. A critic packet is built only after deterministic TEST and internal critic, contains bounded artifact/test output/claims plus a pinned eval hash, is redacted and hash-bound, and excludes learner reasoning, prior critic conclusions and Owner preference. The prompt is versioned and fixed in-repo; responses must match a strict JSON verdict schema.
 
 When this external gate is configured, pending, invalid or post-expiry responses do not permit FREEZE. A MEDIUM/HIGH/CRITICAL external defect blocks freeze. `NO_MATERIAL_DEFECT_FOUND` is recorded as PARTIAL independence evidence only and never promotes VERIFIED or replaces Owner review. The API/network provider remains disabled pending a future lease and separate review. Runtime execution with a real outside model has not yet been captured, so external critic independence remains PARTIAL / NOT PROVEN.
+
+
+## 27. Authenticated worker handoff proof and live-lease transition — 2026-10-04 00:31 +07:00
+
+Evidence: `docs/runtime_evidence/AUTHENTICATED_WORKER_HANDOFF_OWNER_PC_20261004T003158_PLUS0700.json`.
+
+Owner-commanded revocation of the prior 24H lease completed at `2026-10-03T17:03:16.621694Z`; local brain now records the revoke event. PR #151 merged the authenticated parent-enforcer handoff at `3004f910cd0354c06f78b6d961c7c716bb79ec1c` after Security P0 PASS.
+
+A real Owner-PC 300-second smoke lease then proved the handoff path: one-time IPC credential delivered over stdin only, loopback authenticated IPC, worker held no authoritative lease object, parent re-checked candidate branch and paths before mutation, exactly one neutral candidate artifact was written, and post-revoke mutation was blocked. No push, merge, renewal or canonical-write capability existed.
+
+The replacement live (>300s) lease is intentionally not issued from the earlier Owner command because current law requires a contemporaneous Owner authorization reference no older than 300 seconds at issuance. A fresh Owner command is therefore required for the new live lease; this is the anti-prearm gate working as designed.
