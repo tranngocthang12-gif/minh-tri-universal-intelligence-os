@@ -18,7 +18,7 @@ class Provider:
 
     def propose(self, packet):
         return {
-            "changed_paths": ["src/minhtri/autonomy.py"],
+            "changed_paths": ["src/minhtri/__init__.py"],
             "action": lambda: self.marker.append("mutated") or {"ok": True},
         }
 
@@ -69,10 +69,10 @@ class LeaseBoundWorkerTests(unittest.TestCase):
         class Blocked:
             def propose(self, packet):
                 return {
-                    "changed_paths": ["src/minhtri/autonomy.py"],
+                    "changed_paths": ["src/minhtri/__init__.py"],
                     "action": lambda: {
                         "status": "BLOCKED_UNDECLARED_PATH",
-                        "actual_paths": ["src/minhtri/autonomy.py", "README.md"],
+                        "actual_paths": ["src/minhtri/__init__.py", "README.md"],
                     },
                 }
         worker = LeaseBoundSelfUpgradeWorker(
