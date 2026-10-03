@@ -482,5 +482,11 @@
   "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
   "trial_rule_reader_external_code_review": "REQUIRED_NOT_YET_COMPLETED",
   "trial001_arm_leakage_threshold": "TO_BE_FROZEN_BEFORE_PRIMARY_SCORING",
-  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID"
+  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID",
+  "owner_learning_track_early_buddhist_canon": "ACTIVE_SOURCE_CRITICAL_PALI_ENGLISH_VIETNAMESE",
+  "owner_learning_track_early_buddhist_canon_plan": "docs/learning/EARLY_BUDDHIST_CANON_AUTO_PROGRAM_20261004.md",
+  "owner_learning_track_early_buddhist_canon_started": "2026-10-04",
+  "owner_learning_track_early_buddhist_canon_background_runtime": false,
+  "owner_learning_track_early_buddhist_canon_status": "CORPUS_MAP_AND_TRANSLATION_PROTOCOL_ESTABLISHED_WHOLE_CANON_NOT_COMPLETE",
+  "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS"
 }
