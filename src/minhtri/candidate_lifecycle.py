@@ -230,9 +230,6 @@ class CodexReadOnlyCritic:
             "assurance_label": "AI_CONCUR" if verdict == CRITIC_NO_MATERIAL_DEFECT else "AI_FINDING",
             "proof_value": 0 if verdict == CRITIC_NO_MATERIAL_DEFECT else None,
             "owner_independent_review_required": True,
-            "external_critic_independence_status": (
-                external_receipt.get("independence_status") if external_receipt else "NOT_RUN"
-            ),
             "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8", errors="replace")),
         }
 
