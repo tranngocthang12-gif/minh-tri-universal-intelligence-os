@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
+  "next_checkpoint": "OWNER_LOCAL_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -185,7 +185,7 @@
   "desktop_commander_telemetry_enabled": true,
   "desktop_commander_hardening": "PASS_RUNTIME_ONLY_ALLOWLIST_2026-10-03T12:52+07",
   "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
-  "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE",
+  "backlog_cleanup_20261003": "PASS_NO_OPEN_PRS_AFTER_116_LEARNING_REFRESH_AND_117_SETUP_PYTHON_REFRESH",
   "owner_pc_write_runtime_last_observed_sha": "70B91E737DD80C1996F537E3D17D4E3A2A1356A9",
   "owner_pc_write_runtime_sha_semantics": "HISTORICAL_OBSERVATION_NOT_CURRENT_MAIN_INVARIANT",
   "learning_assurance_v1": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
@@ -220,8 +220,7 @@
     "PASS_GENUINE_FRESH_SEAT_VALIDATION",
     "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
-    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14",
-    "RESOLVE_OPEN_LEARNING_AND_DEPENDABOT_BACKLOG"
+    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
   "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
   "architecture_sync_latest": "AUDIT_ALIGNED_THROUGH_PR112_POWERSHELL_PERSISTENCE_CI_AND_SECRET_SAFE_AUTOSTART_DEPLOYMENT_2026-10-03",
@@ -242,5 +241,7 @@
   "architecture_audit_latest": "docs/ARCHITECTURE_AUDIT_COMPLETION_PLAN_20261003.md",
   "tunnel_persistence_source_fix": "PR112_MERGED_POWERSHELL_ACL_GRANT_FIXED_WINDOWS_PARSE_CI_PASS",
   "tunnel_persistence_corrected_script_owner_pc_deployment": "DEPLOYED_AND_READBACK_MATCHED_DURING_2026-10-03_ARCHITECTURE_AUDIT",
-  "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json"
+  "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json",
+  "foundation_gate_runbook": "docs/FOUNDATION_GATE_EXECUTION_RUNBOOK_20261003.md",
+  "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json"
 }

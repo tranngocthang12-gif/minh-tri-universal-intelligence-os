@@ -1,0 +1,37 @@
+{
+  "schema": "minhtri-foundation-gate-preflight/v1",
+  "observed_at": "2026-10-03T14:01:43+07:00",
+  "device": "WIN-VBIQNFFDKIR",
+  "tunnel_dpapi_secret_exists": false,
+  "logon_task_exists": false,
+  "provisioner_parse_errors": [],
+  "defender": {
+    "AMServiceEnabled": true,
+    "AntivirusEnabled": true,
+    "RealTimeProtectionEnabled": false,
+    "BehaviorMonitorEnabled": false,
+    "NISEnabled": false,
+    "OnAccessProtectionEnabled": false
+  },
+  "security_center_av": [
+    {
+      "displayName": "Windows Defender",
+      "productState": 393472
+    },
+    {
+      "displayName": "McAfee",
+      "productState": 266240
+    }
+  ],
+  "mcafee_framework_host": "RUNNING_AUTO",
+  "mcafee_realtime_protection": "UNKNOWN_GENERIC_WINDOWS_APIS_INSUFFICIENT",
+  "bitlocker": "UNKNOWN_ACCESS_DENIED_ADMIN_REQUIRED",
+  "tunnel_health_url": "http://127.0.0.1:58711",
+  "tunnel_client_process_present": true,
+  "conclusions": [
+    "Corrected tunnel provisioner parses cleanly on Owner PC.",
+    "Boot persistence remains blocked until Owner securely provisions the dedicated tunnel key and installs the limited logon task.",
+    "BitLocker remains UNKNOWN because current maintenance context lacks required admin access.",
+    "McAfee realtime protection is not proven by SecurityCenter registration/service state alone."
+  ]
+}
