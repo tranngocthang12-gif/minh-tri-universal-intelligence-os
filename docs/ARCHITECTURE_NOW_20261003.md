@@ -35,11 +35,12 @@ Current GitHub witness chỉ process-separated; chưa độc lập trước full
 
 Runtime evidence và current liveness là hai lớp khác nhau.
 
-**Current liveness authoritative — audit 2026-10-04:**  
-- maintenance plane = `UNKNOWN`; latest Desktop Commander probes timed out/offline;
-- secure MCP tunnel = `UNKNOWN`; fresh connector probe reported tunnel-client not seen / no poll;
-- Local Brain connector = `UNKNOWN`; fresh `brain.verify` did not complete through the tunnel;
-- recovery requires fresh maintenance ping → `/readyz` → `brain.verify` → `brain.recovery_packet`;
+**Current liveness authoritative — fresh sync observation 2026-10-04 02:04:29 +07:00:**  
+- Owner PC itself = `UNKNOWN`; remote maintenance-device state cannot prove host power state;
+- maintenance plane = `OFFLINE`; Desktop Commander reported WIN-VBIQNFFDKIR offline;
+- secure MCP tunnel = `DOWN`; control plane reported tunnel-client not seen for 300 seconds;
+- Local Brain connector = `DOWN`; fresh `brain.verify` was unreachable through the tunnel;
+- recovery requires maintenance plane online → `/readyz` → `brain.verify` → `brain.recovery_packet`;
 - historical PASS evidence below is preserved only as bounded evidence and must not be interpreted as current availability.
 
 Canonical current-liveness source is `PROJECT_STATE.current_runtime_liveness`. Any field whose name contains `live/current/session` but is explicitly marked historical is non-authoritative for liveness.
@@ -241,9 +242,9 @@ Evidence:
 
 The secret-safe tunnel autostart components are implemented, merged, CI-proven and deployed to the Owner-PC runtime, with fail-closed smoke evidence in `docs/runtime_evidence/SECRET_SAFE_AUTOSTART_DEPLOY_20261003T132600_PLUS0700.json`.
 
-The dedicated tunnel DPAPI credential is still NOT PROVISIONED, the limited logon task is NOT INSTALLED, and reboot persistence remains NOT PROVEN.
+At that historical deployment stage, the dedicated tunnel DPAPI credential was not yet provisioned and the limited logon task was not yet installed. Later evidence shows both were subsequently provisioned/installed; reboot persistence nevertheless remains NOT_PROVEN.
 
-Architecture audit PR #112 fixed an ambiguous PowerShell ACL-grant expression in the provisioner and added a Windows parser job to the required CI aggregate. This closes the source/CI defect only; the corrected runtime script still requires deployment before key provisioning.
+Architecture audit PR #112 fixed an ambiguous PowerShell ACL-grant expression in the provisioner and added a Windows parser job to the required CI aggregate. This closed the source/CI defect. Later evidence recorded corrected-script deployment and DPAPI/logon-task provisioning; those later records supersede this stage for deployment state, but do not prove reboot persistence.
 
 Full audit and ordered completion plan:
 `docs/ARCHITECTURE_AUDIT_COMPLETION_PLAN_20261003.md`.
@@ -257,7 +258,7 @@ Foundation promotion requires the current runtime-assurance, fresh-seat, witness
 Production/product completion additionally requires later Owner-authorized work for real providers/data/business loops, stronger identity before external actions, operational recovery/observability, and real-world validation. Until those later gates are explicitly defined and passed, `FOUNDATION_PROTOTYPE` remains the truthful phase.
 
 
-## 16. Post-reboot remote reachability audit — 2026-10-03 15:35 +07:00
+## 17A. HISTORICAL — Post-reboot remote reachability audit — 2026-10-03 15:35 +07:00
 
 Evidence: `docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json`.
 
@@ -426,3 +427,30 @@ This repair makes the recovery semantics explicit:
 - current architecture never treats an open-PR count, old SHA, or old runtime heartbeat as a durable invariant.
 
 Current runtime remains UNKNOWN until fresh proof re-establishes the maintenance and read planes.
+
+
+## 30. Full architecture synchronization — 2026-10-04
+
+This synchronization aligns all current authority surfaces after PR #156 and the Economics doctoral-level learning-track registration.
+
+### Current runtime
+- Owner PC: UNKNOWN.
+- Maintenance plane: OFFLINE.
+- Secure MCP tunnel: DOWN.
+- Local Brain connector: DOWN.
+- Historical connector/brain PASS evidence remains valid only as historical evidence.
+- Current runtime can be promoted back to healthy only by fresh maintenance + /readyz + brain.verify + brain.recovery_packet proof.
+
+### Self-upgrade lease semantics
+The latest 86,400-second authorization window has not expired by wall-clock at this synchronization observation, but the live parent process is not currently observable. Therefore:
+- authorization window: OPEN until `2026-10-04T17:56:45.124745Z`;
+- runtime lease state: UNKNOWN_NOT_CURRENTLY_OBSERVED;
+- historical activation proof remains preserved;
+- no mutation authority may be inferred merely from the unexpired timestamp;
+- process restart/exit semantics remain fail-closed.
+
+### Learning
+The Economics PhD-level learning track is canonical and active at `M0.1 STARTED / UNTESTED`. It is a doctoral-level self-study program, not an accredited degree. Background autonomy remains OFF and Research Adapter remains blocked until genuine fresh-seat PASS.
+
+### Synchronization invariant
+`PROJECT_STATE.json` is the machine-readable current-state authority. Recovery manifest, current architecture, bootstrap, README, SECURITY, runbook and domain-learning records must not contradict it. Historical records keep provenance but never override current state.

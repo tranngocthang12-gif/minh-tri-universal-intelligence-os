@@ -21,7 +21,7 @@ The foundation now contains:
 - GitHub branch protection, required CI, secret-history scanning, dependency audit, and pinned Actions;
 - Windows tunnel supervisor and secret-safe autostart components.
 
-The ChatGPT-to-Owner-PC read-only connector has been runtime-proven in bounded observations. That does **not** prove reboot persistence, fresh-seat independence, independent witness authority, or production readiness.
+The ChatGPT-to-Owner-PC read-only connector has been runtime-proven in bounded historical observations. **Current reachability is not inferred from those proofs.** At the 2026-10-04 synchronization observation, Desktop Commander was offline and the Secure MCP Tunnel/Local Brain read path was down. Current liveness is always read from `PROJECT_STATE.current_runtime_liveness`.
 
 ## Authority and recovery
 
@@ -60,10 +60,15 @@ The simple CLI can operate without the remote connector. Secure MCP/runtime func
 
 ## Foundation status
 
-The foundation core is built, but runtime assurance is incomplete. The current blocking gates are maintained in `PROJECT_STATE.json` and summarized in the current architecture. As of 2026-10-03 they include old tunnel-key revocation evidence, boot/reboot persistence, endpoint-protection/BitLocker unknowns, genuine fresh-seat validation, independent witness authority, real external critic evidence, and empirical validation of Learning Assurance v1.4.
+The foundation core is built, but runtime assurance is incomplete. The current blocking gates are maintained in `PROJECT_STATE.json` and summarized in the current architecture. They currently include old tunnel-key revocation evidence, boot/reboot persistence, endpoint-protection/BitLocker unknowns, genuine fresh-seat validation, independent witness authority, real external critic evidence, and empirical validation of Learning Assurance v1.4.
 
 Real provider/domain integration, real-data validation, real business-loop validation, and external actions are not yet production-enabled.
 
 ## Security
 
 See [SECURITY.md](SECURITY.md). Never place live API keys, Owner credentials, private brain contents, or other secrets in GitHub records.
+
+
+## Active learning tracks
+
+The Owner-directed Economics PhD-level self-study track is registered at `docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md`, currently `M0.1 STARTED / UNTESTED`. This is evidence-bounded doctoral-level study, not an accredited degree claim.

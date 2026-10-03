@@ -143,21 +143,21 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
-    "owner_pc": "UNKNOWN_DEGRADED",
-    "maintenance_plane": "UNKNOWN",
-    "secure_mcp_tunnel": "UNKNOWN",
-    "local_brain_connector": "UNKNOWN",
+    "observed_at": "2026-10-04T02:04:29+07:00",
+    "owner_pc": "UNKNOWN",
+    "maintenance_plane": "OFFLINE",
+    "secure_mcp_tunnel": "DOWN",
+    "local_brain_connector": "DOWN",
     "evidence": [
-      "Fresh brain.verify during AUTO audit failed because tunnel-client did not poll after the request was enqueued.",
-      "Fresh Desktop Commander state read and follow-up ping timed out after the device had previously appeared online.",
+      "Desktop Commander device WIN-VBIQNFFDKIR was reported Offline; device liveness does not prove the Owner PC itself is powered off.",
+      "Fresh brain.verify failed because tunnel-client had not been seen for 300 seconds.",
       "Historical PASS evidence remains preserved under last_proven_runtime_evidence and is not current-liveness proof."
     ],
-    "recovery_condition": "REQUIRE_FRESH_MAINTENANCE_PING_READYZ_BRAIN_VERIFY_RECOVERY_PACKET",
+    "recovery_condition": "REQUIRE_FRESH_MAINTENANCE_ONLINE_THEN_READYZ_BRAIN_VERIFY_RECOVERY_PACKET",
     "detail": {
-      "maintenance_plane": "DEGRADED_TIMEOUT",
-      "secure_mcp_tunnel": "NO_POLL",
-      "local_brain_connector": "NO_POLL"
+      "maintenance_plane": "DEVICE_OFFLINE_LAST_SEEN_34M_AGO_AT_OBSERVATION",
+      "secure_mcp_tunnel": "CONTROL_PLANE_NOT_SEEN_300S",
+      "local_brain_connector": "UNREACHABLE_THROUGH_TUNNEL"
     }
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
@@ -227,9 +227,9 @@
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
   "brain_read_plane_live_check_latest": "HISTORICAL_PASS_2026-10-03_NOT_CURRENT_LIVENESS",
-  "architecture_sync_latest": "ARCHITECTURE_REPAIRED_CURRENT_LIVENESS_UNKNOWN_2026-10-04",
+  "architecture_sync_latest": "FULL_ARCHITECTURE_SYNC_2026-10-04_CURRENT_RUNTIME_DOWN_OFFLINE",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
-  "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
+  "architecture_sync_merge_sha": "NOT_SELF_REFERENTIAL_USE_GIT_HISTORY",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/AUTO_RUNTIME_DEGRADED_20261004.json",
   "persistence_probe_latest": "LOGON_TASK_EXISTS_RUNNING_HARDENED_SETTINGS_2026-10-03T15:52+07_REBOOT_PROOF_PENDING",
   "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
@@ -253,7 +253,7 @@
   "persistence_diagnosis_latest": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
   "self_upgrade_lease_engine": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_lease_max_seconds": 86400,
-  "self_upgrade_lease_runtime": "ACTIVE",
+  "self_upgrade_lease_runtime": "UNKNOWN_NOT_CURRENTLY_OBSERVED",
   "self_upgrade_lease_automatic_renewal": false,
   "self_upgrade_lease_owner_gated_issue_revoke": true,
   "self_upgrade_candidate_sandbox": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
@@ -282,7 +282,7 @@
   "self_upgrade_worker_canonical_write_capability": false,
   "self_upgrade_worker_automatic_verified_promotion": false,
   "self_upgrade_worker_automatic_candidate_promotion": false,
-  "self_upgrade_full_activation_status": "LIVE_24H_ACTIVE_WITH_AUTHENTICATED_WORKER_HANDOFF",
+  "self_upgrade_full_activation_status": "HISTORICAL_LIVE_ACTIVATION_PROVEN_CURRENT_RUNTIME_UNKNOWN",
   "self_upgrade_codex_provider_adapter": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_codex_cli_owner_pc": "INSTALLED_0_160_0_LOGGED_IN_USING_CHATGPT",
   "self_upgrade_codex_plan_sandbox": "READ_ONLY",
@@ -330,7 +330,7 @@
   "self_upgrade_live_24h_eval_packet_hash": "3126ac3f7f211c72f057bbcd510664f3466ca4953fde41df113cf00f4b0668eb",
   "self_upgrade_live_24h_champion_sha": "fc9e7b5252773eaa5f8fc077fd5ea32febd7743f",
   "self_upgrade_live_24h_eval_dataset_hash": "181ab26d5607f679701b9c957b0271b80d9eb3410299bc54bf4fb4221e518912",
-  "self_upgrade_authenticated_worker_handoff_runtime": "ACTIVE_PARENT_ENFORCED_WORKER_NO_LEASE",
+  "self_upgrade_authenticated_worker_handoff_runtime": "HISTORICAL_ACTIVE_PROOF_CURRENT_RUNTIME_UNKNOWN",
   "self_upgrade_candidate_a_status": "PENDING_EXTERNAL_CRITIC",
   "self_upgrade_candidate_a_packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
   "self_upgrade_candidate_a_changed_paths": [
@@ -344,5 +344,22 @@
   "owner_learning_track_economics_phd_research_adapter": "BLOCKED_WITH_PROJECT_RESEARCH_ADAPTER",
   "owner_learning_track_economics_phd_status": "M0_1_STARTED_UNTESTED",
   "owner_learning_track_economics_phd_next_checkpoint": "COMPLETE_M0_DIAGNOSTIC_AND_OPTIMIZATION_COMPARATIVE_STATICS_ASSESSMENT",
-  "architecture_consistency_repair": "HISTORICAL_AND_CURRENT_RUNTIME_SEMANTICS_SEPARATED_2026-10-04"
+  "architecture_consistency_repair": "HISTORICAL_AND_CURRENT_RUNTIME_SEMANTICS_SEPARATED_2026-10-04",
+  "self_upgrade_authorization_window": "OPEN_UNTIL_2026-10-04T17:56:45.124745Z_RUNTIME_NOT_PROVEN_ACTIVE",
+  "architecture_sync_source_main_sha": "f7721c9b77dc44ed754023e6e9f865d32660e397",
+  "architecture_sync_scope": [
+    "PROJECT_STATE",
+    "LAW_INDEX",
+    "ARCHITECTURE_NOW",
+    "RECOVERY_MANIFEST",
+    "ROLE_BOOTSTRAP",
+    "README",
+    "SECURITY",
+    "FOUNDATION_RUNBOOK",
+    "SELF_UPGRADE_OWNER_DECISION",
+    "LEARNING_TRACKS",
+    "CONSISTENCY_TESTS"
+  ],
+  "owner_learning_track_economics_phd_sync": "CANONICAL_REGISTERED_M0_1_STARTED_UNTESTED",
+  "architecture_sync_sha_semantics": "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY"
 }

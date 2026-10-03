@@ -59,8 +59,8 @@ Current practical capability:
 - ChatGPT seat → GitHub: technically available through the connected GitHub tool, subject to governance and Owner authority.
 - Project Instructions → all chats in the Project: available as bootstrap context.
 - Project/Library sources → chat: readable.
-- Local `brain/` → chat: not yet directly connected.
-- Chat → local `brain/`: not yet directly connected.
+- Local `brain/` → chat: read-only connector capability has been implemented and historically runtime-proven; current reachability must come only from `PROJECT_STATE.current_runtime_liveness`.
+- Chat → local `brain/`: write access remains a separate Owner-gated write plane; the read connector never implies write capability.
 - Media assets should be synchronized by manifest/hash/provenance rather than committed as large repo media.
 
 Main architecture gap is not transport. It is the lack of one explicit synchronization contract covering:
@@ -273,3 +273,10 @@ Rules:
 - Old files remain for provenance and are not deleted.
 - A seat must fresh-read live authority rather than trust a SHA copied into an old chat.
 - Synchronization means authority records agree. Current local-brain reachability must be proved by fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
+
+
+## 11. CURRENT-STATE ROUTING CLARIFICATION — 2026-10-04
+
+This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
+
+A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.

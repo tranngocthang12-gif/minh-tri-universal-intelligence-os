@@ -1,6 +1,6 @@
 # MINH TRÍ — FOUNDATION GATE EXECUTION RUNBOOK — 2026-10-03
 
-**Status:** CURRENT / FAIL-CLOSED / OWNER-SECRET-SAFE  
+**Status:** CURRENT GATE ORDER / HISTORICAL COMMAND EXAMPLES / FAIL-CLOSED / OWNER-SECRET-SAFE  
 **Purpose:** exact remaining work and commands after backlog cleanup.  
 **Rule:** never paste live secrets into chat, GitHub, task arguments, command history, or evidence files.
 
@@ -18,8 +18,11 @@ Newer remote observation at 2026-10-03 15:35 +07:00:
 - local task/process state cannot be inspected remotely;
 - root cause remains UNKNOWN and persistence remains NOT_PROVEN.
 
-### Owner-local secure action
-Run locally on the Owner PC in a visible PowerShell window:
+### Historical/manual contingency
+
+The command examples below are retained for break-glass/manual recovery provenance. Under the current One Door operating model, the AI seat should use authorized maintenance tooling directly when available and should not require the Owner to type these commands unless the Owner asks or the tooling cannot perform the required secure local action.
+
+Historical command example:
 
 ```powershell
 Set-Location 'C:\Users\trann\OneDrive\Desktop\minhtri-runtime-current'
@@ -28,13 +31,13 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\provision_tunnel_runti
 
 Paste the **current tunnel runtime API key only into that local secure prompt**. Do not paste it into chat.
 
-Then install the limited logon task:
+Historical task-install example:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\install_tunnel_logon_task.ps1
 ```
 
-Pre-reboot verification:
+Historical/manual pre-reboot verification example:
 
 ```powershell
 Get-ScheduledTask -TaskName 'MINH_TRI_Readonly_Tunnel' | Format-List TaskName,State
@@ -167,3 +170,14 @@ Backlog hygiene gate closed on 2026-10-03:
 9. Empirical Learning Assurance v1.4 validation.
 
 No gate is promoted from prose, code existence, or CI alone.
+
+
+## Synchronization note — 2026-10-04
+
+Fresh observation at sync time:
+- Desktop Commander maintenance device: OFFLINE;
+- tunnel-client: not seen by control plane for 300 seconds;
+- Local Brain read connector: DOWN through the tunnel;
+- Owner PC host power state: UNKNOWN.
+
+Current DPAPI/task state cannot be re-read while maintenance is offline. Historical evidence says the DPAPI tunnel secret and hardened logon task were later provisioned/installed after the earliest preflight recorded above; this does not prove they still exist now and does not prove reboot persistence.

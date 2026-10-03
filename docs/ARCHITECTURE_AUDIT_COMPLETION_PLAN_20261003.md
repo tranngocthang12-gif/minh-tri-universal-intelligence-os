@@ -1,6 +1,6 @@
 # MINH TRÍ — FULL ARCHITECTURE AUDIT + COMPLETION PLAN — 2026-10-03
 
-**Status:** CURRENT AUDIT RECORD / EVIDENCE-BOUNDED  
+**Status:** HISTORICAL BOUNDED AUDIT RECORD / COMPLETION GATES STILL RELEVANT / CURRENT STATE FROM PROJECT_STATE  
 **Audit base:** live `main` after PR #112 merge  
 **Scope:** authority, ledger/write plane, read transport, maintenance, witness/recovery, CI/security, autonomy/learning assurance, documentation consistency, and remaining completion gates.
 
@@ -100,7 +100,7 @@ The foundation should not be promoted out of `FOUNDATION_PROTOTYPE` until these 
 5. **Independent witness authority** — credential and storage authority not jointly compromised with the Owner PC/GitHub write authority.
 6. **Real external critic execution evidence** — frozen target/evidence packet plus provenance/independence receipt with bounded claims.
 7. **Empirical Learning Assurance v1.4 validation** — comparative real-work evidence; implementation/CI is not evidence of improved accuracy.
-8. **Backlog hygiene** — CLOSED on 2026-10-03; current audit observed zero open PRs after the refresh/merge work.
+8. **Backlog hygiene** — CLOSED on 2026-10-03; the zero-open-PR observation was historical and is not a durable completion invariant.
 
 ## 6. Production-phase gates after foundation
 
@@ -161,3 +161,14 @@ Consequences:
 - the immediate next action is to restore maintenance-plane reachability, inspect Scheduled Task/process/health state, and then either repair the autostart path or capture a successful unattended recovery proof.
 
 Evidence: `docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json`.
+
+
+## Current-state routing update — 2026-10-04
+
+This audit remains useful for architecture debt and completion-gate rationale, but changing state is no longer read from this file. Use:
+1. `docs/PROJECT_STATE.json` for machine-readable current state and runtime liveness;
+2. current Law Index;
+3. current Architecture;
+4. `docs/RECOVERY_MANIFEST.json`.
+
+At the latest full-sync observation, maintenance is OFFLINE, tunnel/read connector are DOWN, Owner-PC host state is UNKNOWN, Candidate A is pending a real external critic, and the Economics PhD-level learning track is M0.1 STARTED/UNTESTED. Historical PASS observations in this audit remain bounded evidence only.

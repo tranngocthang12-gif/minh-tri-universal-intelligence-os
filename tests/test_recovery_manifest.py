@@ -236,12 +236,12 @@ class RecoveryManifestConsistency(unittest.TestCase):
             "brain_read_plane_live_check_latest",
         ):
             self.assertIn("HISTORICAL", state[key], key)
-        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "UNKNOWN")
-        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "UNKNOWN")
+        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "DOWN")
+        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "DOWN")
 
     def test_current_architecture_marks_current_liveness_and_historical_stages(self):
         architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
-        self.assertIn("Current liveness authoritative — audit 2026-10-04", architecture)
+        self.assertIn("Current liveness authoritative — fresh sync observation 2026-10-04", architecture)
         self.assertIn("HISTORICAL — Bounded 24H self-upgrade lease implementation stage", architecture)
         self.assertIn("PROJECT_STATE.current_runtime_liveness", architecture)
 
@@ -249,6 +249,41 @@ class RecoveryManifestConsistency(unittest.TestCase):
         bootstrap = (ROOT / "docs" / "GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
         self.assertIn("CLOSED P0: direct Python", bootstrap)
         self.assertIn("authenticates inside the mutation boundary", bootstrap)
+
+    def test_full_architecture_sync_matches_current_runtime(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["current_runtime_liveness"]["maintenance_plane"], "OFFLINE")
+        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "DOWN")
+        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "DOWN")
+        self.assertEqual(manifest["current_runtime_liveness"]["maintenance_plane"], "OFFLINE")
+        self.assertEqual(manifest["current_runtime_liveness"]["secure_mcp_tunnel"], "DOWN")
+        self.assertEqual(manifest["current_runtime_liveness"]["local_brain_connector"], "DOWN")
+        self.assertEqual(state["self_upgrade_lease_runtime"], "UNKNOWN_NOT_CURRENTLY_OBSERVED")
+        self.assertIn("OPEN_UNTIL_", state["self_upgrade_authorization_window"])
+
+    def test_economics_learning_track_is_routed_everywhere(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        plan = ROOT / state["owner_learning_track_economics_phd_plan"]
+        self.assertTrue(plan.is_file())
+        self.assertEqual(state["owner_learning_track_economics_phd_status"], "M0_1_STARTED_UNTESTED")
+        self.assertEqual(manifest["owner_learning_track_economics_phd"]["module"], "M0_1_STARTED_UNTESTED")
+        self.assertFalse(manifest["owner_learning_track_economics_phd"]["background_runtime"])
+
+    def test_readme_and_security_route_dynamic_liveness_to_project_state(self):
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        security = (ROOT / "SECURITY.md").read_text(encoding="utf-8")
+        self.assertIn("PROJECT_STATE.current_runtime_liveness", readme)
+        self.assertIn("PROJECT_STATE.current_runtime_liveness", security)
+
+    def test_architecture_sync_sha_is_not_self_referential(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["architecture_sync_merge_sha"], "NOT_SELF_REFERENTIAL_USE_GIT_HISTORY")
+        self.assertEqual(
+            state["architecture_sync_sha_semantics"],
+            "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY",
+        )
 
 
 if __name__ == "__main__":
