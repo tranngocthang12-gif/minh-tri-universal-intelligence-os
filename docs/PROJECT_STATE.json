@@ -206,9 +206,11 @@
   "learning_assurance_full_trace_id": "PARTIAL_LINK_BASED_NOT_INTRUSIVE_FULL_EVENT_PROPAGATION",
   "lesson_expiry_revalidation": "IMPLEMENTED_SCHEDULE_AND_PROPOSAL_ONLY_NO_AUTOMATIC_MUTATION",
   "critic_execution_independence": "DECLARED_SEPARATION_ONLY_NOT_PROVEN",
-  "reward_hacking_contamination_detection": "NOT_IMPLEMENTED",
-  "meta_learning_stratified_analysis": "NOT_IMPLEMENTED",
-  "learning_assurance_next_checkpoint": "CRITIC_EXECUTION_INDEPENDENCE_EVAL_CONTAMINATION_REWARD_HACKING_AND_STRATIFIED_META_LEARNING",
+  "reward_hacking_contamination_detection": "RECORDABLE_FAILURE_CLASSES_AUTOMATIC_DETECTION_NOT_IMPLEMENTED",
+  "meta_learning_stratified_analysis": "IMPLEMENTED_DOMAIN_PROCEDURE_SOURCE_KIND_FAILURE_CLASS_PROPOSAL_ONLY",
+  "learning_assurance_next_checkpoint": "OPERATIONAL_CRITIC_INDEPENDENCE_AND_AUTOMATIC_EVAL_CONTAMINATION_REWARD_HACKING_HARDENING",
   "learning_assurance_v11": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
-  "learning_assurance_trace_links": "IMPLEMENTED_TYPED_LINKS_WITH_ARTIFACT_DIGEST"
+  "learning_assurance_trace_links": "IMPLEMENTED_TYPED_LINKS_WITH_ARTIFACT_DIGEST",
+  "learning_assurance_v12": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "learning_failure_taxonomy": "IMPLEMENTED_ARTIFACT_BOUND_METADATA_ONLY_NO_AUTOMATIC_REMEDIATION"
 }
