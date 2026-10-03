@@ -124,7 +124,7 @@
     "automatic_renewal": false,
     "automatic_verified_promotion": false,
     "automatic_candidate_promotion": false,
-    "candidate_a_status": "PENDING_EXTERNAL_CRITIC"
+    "candidate_a_status": "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED"
   },
   "owner_learning_track_economics_phd": {
     "status": "ACTIVE_DOCTORAL_LEVEL_SELF_STUDY_NOT_ACCREDITED_DEGREE",
@@ -146,5 +146,17 @@
     "expires_at_utc": null
   },
   "research_ingestion_safety_gate": "BLOCKED_NOT_IMPLEMENTED",
-  "runtime_commit_attestation": "NOT_PROVEN_CURRENTLY_OFFLINE"
+  "runtime_commit_attestation": "NOT_PROVEN_CURRENTLY_OFFLINE",
+  "meta_learning_assurance": {
+    "minimum_candidate_resolutions": 50,
+    "multiplicity_control": "NOT_IMPLEMENTED",
+    "permutation_test": "REQUIRED_BEFORE_ADAPTATION",
+    "statistical_adaptation_proven": false
+  },
+  "gemini_review": {
+    "adjudication": "docs/critic/GEMINI_SELF_LEARNING_ADJUDICATION_20261004.json",
+    "stale_capability": "PARTIAL_HARDENING_GAP_NOT_PROVEN_MUTATION_AUTHORITY",
+    "critic_independence": "PARTIAL_NOT_FULL",
+    "fresh_seat_research_coupling": "ONE_WAY_NO_CIRCULAR_DEPENDENCY"
+  }
 }
