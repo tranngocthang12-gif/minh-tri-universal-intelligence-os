@@ -379,6 +379,19 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
             raise GateError("Prediction interval is inverted")
         if parse_time(d["due_at"]) <= parse_time(event_time):
             raise GateError("Prediction due_at must be later than preregistration")
+        source_spec = d.get("outcome_source_spec")
+        if source_spec is None:
+            d["outcome_source_spec_status"] = "UNSPECIFIED_NOT_META_LEARNING_ELIGIBLE"
+            d["outcome_source_spec_hash"] = None
+        else:
+            if not isinstance(source_spec, dict) or set(source_spec) != {"source_uri", "source_kind", "value_selector", "capture_rule"}:
+                raise GateError("outcome_source_spec needs source_uri, source_kind, value_selector, capture_rule")
+            for key in ("source_uri", "value_selector", "capture_rule"):
+                string(source_spec[key], "outcome_source_spec." + key)
+            if source_spec["source_kind"] not in ("FIRST_PARTY", "THIRD_PARTY", "PUBLIC", "SYNTHETIC"):
+                raise GateError("outcome_source_spec.source_kind is invalid")
+            d["outcome_source_spec_status"] = "PREREGISTERED"
+            d["outcome_source_spec_hash"] = digest(source_spec)
         d["lower"], d["upper"] = lower, upper
         d["domain_id"] = claim["domain_id"]
         d["registered_at"] = event_time
