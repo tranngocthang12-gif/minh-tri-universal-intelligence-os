@@ -1,6 +1,6 @@
 # AUTONOMY + CRITIQUE + META-LEARNING RUNTIME — 2026-10-02
 
-**Status:** IMPLEMENTED CANDIDATE / PROPOSAL-ONLY / AWAITING CI AND DEPLOYMENT  
+**Status:** HISTORICAL IMPLEMENTATION SNAPSHOT / MERGED + CI-PROVEN + STAGED; BACKGROUND AUTONOMY REMAINS OFF  
 **Branch:** `feature/autonomy-critique-meta-liveness-20261002`
 
 ## Scope
@@ -54,7 +54,7 @@ External research remains blocked while:
 
 The code can accept a future provenance-preserving adapter only after the gate becomes explicitly promoted. Retrieved material must still enter as unverified research proposals.
 
-## Brain transport finding
+## Historical brain transport finding at implementation time
 
 At implementation time, the live read-only connector returned:
 
