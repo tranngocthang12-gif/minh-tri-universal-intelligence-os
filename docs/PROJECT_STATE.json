@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "GENUINE_FRESH_SEAT_THEN_BOOT_REBOOT_PERSISTENCE_PROOF",
+  "next_checkpoint": "PROVISION_SECRET_SAFE_TUNNEL_AUTOSTART_AND_OBTAIN_SEPARATE_CONTROL_SEAT_VERIFY_BEFORE_REBOOT",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -50,7 +50,7 @@
   "external_witness_independence_scope": "PROCESS_SEPARATED_NOT_FULL_DEVICE_COMPROMISE_PROOF",
   "zero_chat_runtime_harness": "PASS_2026-10-02",
   "zero_chat_runtime_evidence": "docs/runtime_evidence/ZERO_CHAT_BOOTSTRAP_OWNER_PC_20261002.json",
-  "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+  "fresh_chat_seat_validation": "BLOCKED_NEEDS_SEPARATE_CHAT_UI_AND_INDEPENDENT_CONTROL_VERIFY",
   "dedicated_readonly_mcp_server": "IMPLEMENTED_AND_RUNTIME_PROVEN",
   "dedicated_readonly_mcp_tool_allowlist": "PASS_EXACT_TWO_TOOLS",
   "dedicated_readonly_mcp_mutation_rejection": "PASS_UNKNOWN_TOOL",
@@ -228,5 +228,11 @@
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
   "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF",
-  "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json"
+  "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
+  "fresh_chat_seat_validation_latest_attempt": "docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json",
+  "boot_persistence_latest_precheck": "docs/runtime_evidence/BOOT_PERSISTENCE_PRECHECK_20261003T125900_PLUS0700.json",
+  "boot_persistence_precheck_decision": "DO_NOT_REBOOT_NO_UNATTENDED_SECRET_SAFE_TUNNEL_CREDENTIAL_OR_BOOT_REGISTRATION",
+  "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DEDICATED_ENCRYPTED_UNATTENDED_SECRET",
+  "tunnel_boot_registration": "ABSENT_BOUNDED_PROBE",
+  "local_canonical_clone_recovery_readiness": "STALE_RELATIVE_TO_LIVE_MAIN_AT_PRECHECK"
 }
