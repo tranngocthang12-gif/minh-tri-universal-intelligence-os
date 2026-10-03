@@ -454,3 +454,24 @@ The Economics PhD-level learning track is canonical and active at `M0.1 STARTED 
 
 ### Synchronization invariant
 `PROJECT_STATE.json` is the machine-readable current-state authority. Recovery manifest, current architecture, bootstrap, README, SECURITY, runbook and domain-learning records must not contradict it. Historical records keep provenance but never override current state.
+
+
+## 31. Claude adversarial self-learning review adjudication — 2026-10-04
+
+Independent review sharpened the boundary between proposal governance and actual behavioral learning.
+
+Immediate code hardening:
+- Research Adapter cannot open from historical fresh-seat flags alone; fresh-seat PASS is TTL-bound and current tunnel + Local Brain liveness must be UP.
+- `src/minhtri/autonomy.py` and `src/minhtri/fresh_seat.py` are now protected candidate paths.
+- A recorded negative-control `FAIL` for a learning packet bound to the source claim blocks lesson freeze.
+- Candidate A is rejected under the new policy because it targeted `src/minhtri/autonomy.py`; its historical test packet remains audit evidence only.
+
+Remaining assurance gaps:
+- resolution scoring is mechanically derived from preregistered intervals and numeric outcome evidence, but outcome evidence remains `DECLARED_UNVERIFIED` and resolver identity/independence is not encoded;
+- stratified meta-learning is descriptive/proposal-only and lacks multiplicity/sample-size evidence sufficient for adaptation;
+- Research Adapter has no approved ingestion-safety implementation yet;
+- current Owner-PC commit/build attestation is not proven while runtime is offline;
+- old tunnel-key provider-side revocation, genuine fresh-seat execution, independent witness, external critic, and empirical v1.4 benefit remain open.
+
+Terminology boundary:
+Current MINH TRÍ may claim a **proposal-governance learning pipeline**. It must not claim autonomous self-learning or empirically effective meta-learning until a learned rule demonstrably changes future behavior and survives controlled evaluation.
