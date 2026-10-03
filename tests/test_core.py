@@ -110,6 +110,99 @@ class CoreGates(unittest.TestCase):
             self.apply("propose_claim", id="bad", problem_id="problem1", provider_id="maker", statement="Unknown",
                        evidence_ids=[{}], alternative="Other", falsifier="Test")
 
+    def test_external_case_is_capital_not_lesson(self):
+        self.base()
+        self.apply("record_source", id="ext1", domain_id="media", uri="https://example.test/case",
+                   captured_at=self.at, kind="PUBLIC", rights_status="CLEAR")
+        self.apply("record_evidence", id="ext-e1", domain_id="media", source_id="ext1",
+                   statement="A reported external success case", observed_at=self.at)
+        self.apply("record_external_case", id="case1", domain_id="media", evidence_ids=["ext-e1"],
+                   outcome="SUCCESS", context="External operator reported an improvement",
+                   mechanism_hypothesis="The intervention may have contributed",
+                   transfer_limits="Different operator, audience and conditions",
+                   uncertainty="No first-party reproduction by Owner")
+        case = self.state["external_cases"]["case1"]
+        self.assertEqual(case["capital_status"], "EXTERNAL_CASE_CAPITAL_UNVERIFIED")
+        self.assertFalse(case["lesson_eligible"])
+        self.assertEqual(self.state["lessons"], {})
+
+    def test_failure_external_case_is_preserved_as_learning_capital(self):
+        self.base()
+        self.apply("record_source", id="ext1", domain_id="media", uri="https://example.test/failure",
+                   captured_at=self.at, kind="PUBLIC", rights_status="UNKNOWN")
+        self.apply("record_evidence", id="ext-e1", domain_id="media", source_id="ext1",
+                   statement="A reported external failure case", observed_at=self.at)
+        self.apply("record_external_case", id="casefail", domain_id="media", evidence_ids=["ext-e1"],
+                   outcome="FAILURE", context="External attempt failed",
+                   mechanism_hypothesis="Failure mechanism is only a hypothesis",
+                   transfer_limits="Cannot infer Owner outcome",
+                   uncertainty="Third-party report; rights and causality unresolved")
+        self.assertEqual(self.state["external_cases"]["casefail"]["outcome"], "FAILURE")
+        self.assertFalse(self.state["external_cases"]["casefail"]["lesson_eligible"])
+
+    def test_learning_packet_freezes_target_evidence_and_counterevidence(self):
+        self.base()
+        self.apply("record_source", id="support", domain_id="media", uri="internal://support",
+                   captured_at=self.at, kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", id="support-e", domain_id="media", source_id="support",
+                   statement="Supporting observation", observed_at=self.at)
+        self.state["claims"]["h1"]["evidence_ids"] = ["support-e"]
+        self.apply("record_source", id="counter", domain_id="media", uri="internal://counter",
+                   captured_at=self.at, kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", id="counter-e", domain_id="media", source_id="counter",
+                   statement="Counterexample observation", observed_at=self.at)
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=["counter-e"], external_case_ids=[],
+                   counterevidence_note="Counterexample remains unresolved",
+                   context_contract="Critic receives only the frozen bounded packet",
+                   instruction_version="learning-assurance-v1",
+                   toolset_fingerprint="no-web-bundle-only")
+        packet = self.state["learning_packets"]["packet1"]
+        self.assertEqual(packet["status"], "FROZEN")
+        self.assertEqual(len(packet["target_hash"]), 64)
+        self.assertEqual(len(packet["evidence_bundle_hash"]), 64)
+        self.assertEqual(packet["supporting_evidence_ids"], ["support-e"])
+
+    def test_critic_execution_records_provenance_and_supports_abstain(self):
+        self.base()
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="No counterevidence supplied yet",
+                   context_contract="Frozen target only", instruction_version="v1",
+                   toolset_fingerprint="bundle-only")
+        self.apply("record_critic_execution", id="crit1", packet_id="packet1",
+                   critic_provider_id="critic", provider="openai", model="declared-model",
+                   run_id="run1", context_mode="BLIND", output_hash="abc123",
+                   verdict="ABSTAIN", reason="Evidence is insufficient",
+                   missing_evidence=["Independent outcome"])
+        execution = self.state["critic_executions"]["crit1"]
+        self.assertEqual(execution["verdict"], "ABSTAIN")
+        self.assertEqual(execution["target_hash"], self.state["learning_packets"]["packet1"]["target_hash"])
+        self.assertEqual(execution["evidence_bundle_hash"], self.state["learning_packets"]["packet1"]["evidence_bundle_hash"])
+
+    def test_same_seat_cannot_be_critic_execution(self):
+        self.base()
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="None yet", context_contract="Frozen", instruction_version="v1",
+                   toolset_fingerprint="bundle-only")
+        with self.assertRaisesRegex(GateError, "distinct"):
+            self.apply("record_critic_execution", id="critbad", packet_id="packet1",
+                       critic_provider_id="maker", provider="declared", model="declared",
+                       run_id="run1", context_mode="BLIND", output_hash="abc",
+                       verdict="FINDINGS", reason="Self critique", missing_evidence=[])
+
+    def test_negative_control_cannot_cross_domain(self):
+        self.base()
+        self.apply("freeze_learning_packet", id="packet1", trace_id="trace1", claim_id="h1",
+                   counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="None", context_contract="Frozen", instruction_version="v1",
+                   toolset_fingerprint="bundle-only")
+        self.apply("record_negative_control", id="nc1", packet_id="packet1",
+                   description="A tempting counter-case", expected="Claim should not overgeneralize",
+                   observed="Claim stayed bounded", result="PASS", evidence_ids=[])
+        self.assertEqual(self.state["negative_controls"]["nc1"]["result"], "PASS")
+
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")

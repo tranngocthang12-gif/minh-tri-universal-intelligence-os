@@ -265,6 +265,48 @@ def meta_learning_report(state: dict[str, Any], minimum_resolutions: int = 2) ->
     return report
 
 
+def learning_assurance_report(state: dict[str, Any]) -> dict[str, Any]:
+    """Summarize learning capital and assurance artifacts without promoting truth.
+
+    External success/failure cases are capital only. Counts are inventory, never confidence.
+    """
+    cases = list(state.get("external_cases", {}).values())
+    by_outcome = {"SUCCESS": 0, "FAILURE": 0, "MIXED": 0}
+    for case in cases:
+        outcome = case.get("outcome")
+        if outcome in by_outcome:
+            by_outcome[outcome] += 1
+    controls = list(state.get("negative_controls", {}).values())
+    control_results = {"PASS": 0, "FAIL": 0, "INCONCLUSIVE": 0}
+    for control in controls:
+        result = control.get("result")
+        if result in control_results:
+            control_results[result] += 1
+    executions = list(state.get("critic_executions", {}).values())
+    critic_verdicts: dict[str, int] = {}
+    for execution in executions:
+        verdict = str(execution.get("verdict", "UNKNOWN"))
+        critic_verdicts[verdict] = critic_verdicts.get(verdict, 0) + 1
+    return {
+        "external_case_capital": {
+            "count": len(cases),
+            "by_outcome": by_outcome,
+            "promotion_status": "CAPITAL_ONLY_NOT_LESSON_PROOF",
+        },
+        "frozen_learning_packets": len(state.get("learning_packets", {})),
+        "critic_executions": {
+            "count": len(executions),
+            "by_verdict": critic_verdicts,
+        },
+        "negative_controls": {
+            "count": len(controls),
+            "by_result": control_results,
+        },
+        "automatic_verified_promotion": False,
+        "automatic_trial_activation": False,
+    }
+
+
 def autonomous_learning_plan(
     state: dict[str, Any],
     *,
@@ -356,6 +398,7 @@ def build_autonomy_packet(
         "automatic_trial_activation": False,
         "critique": automatic_critique_plan(state, critic_provider_id),
         "meta_learning": meta_learning_report(state),
+        "learning_assurance": learning_assurance_report(state),
         "learning_plan": autonomous_learning_plan(state),
         "research": research,
     }

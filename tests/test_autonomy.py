@@ -13,6 +13,7 @@ from minhtri.autonomy import (
     build_autonomy_packet,
     claims_without_review,
     meta_learning_report,
+    learning_assurance_report,
     structural_critique,
 )
 from minhtri.core import initial_state
@@ -105,6 +106,27 @@ class AutonomyTests(unittest.TestCase):
             report["lesson_candidates"][0]["status"],
             "META_LESSON_CANDIDATE",
         )
+
+    def test_learning_assurance_treats_external_cases_as_capital_only(self):
+        state = base_state()
+        state["external_cases"] = {
+            "s": {"outcome": "SUCCESS", "capital_status": "EXTERNAL_CASE_CAPITAL_UNVERIFIED"},
+            "f": {"outcome": "FAILURE", "capital_status": "EXTERNAL_CASE_CAPITAL_UNVERIFIED"},
+        }
+        report = learning_assurance_report(state)
+        self.assertEqual(report["external_case_capital"]["count"], 2)
+        self.assertEqual(report["external_case_capital"]["by_outcome"]["SUCCESS"], 1)
+        self.assertEqual(report["external_case_capital"]["by_outcome"]["FAILURE"], 1)
+        self.assertEqual(report["external_case_capital"]["promotion_status"], "CAPITAL_ONLY_NOT_LESSON_PROOF")
+        self.assertFalse(report["automatic_verified_promotion"])
+        self.assertFalse(report["automatic_trial_activation"])
+
+    def test_autonomy_packet_includes_assurance_without_write_power(self):
+        state = base_state()
+        state["learning_packets"] = {"p": {"status": "FROZEN"}}
+        packet = build_autonomy_packet(state, critic_provider_id="critic")
+        self.assertEqual(packet["learning_assurance"]["frozen_learning_packets"], 1)
+        self.assertFalse(packet["write_capability"])
 
     def test_research_is_fail_closed_before_gate(self):
         packet = build_autonomy_packet(
