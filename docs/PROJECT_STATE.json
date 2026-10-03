@@ -312,5 +312,13 @@
   "self_upgrade_live_24h_issued_at_utc": "2026-10-03T15:56:05.483438Z",
   "self_upgrade_live_24h_expires_at_utc": "2026-10-04T15:56:05.483438Z",
   "self_upgrade_live_24h_activation_evidence": "docs/runtime_evidence/SELF_UPGRADE_LIVE_24H_AND_BRAIN_AUDIT_20261003T232905_PLUS0700.json",
-  "self_upgrade_local_brain_audit": "PASS_LEASE_CREATED_AND_LEASE_ACTIVATED_EVENT_COUNT_5_HEAD_BBC3E508"
+  "self_upgrade_local_brain_audit": "PASS_LEASE_CREATED_AND_LEASE_ACTIVATED_EVENT_COUNT_5_HEAD_BBC3E508",
+  "external_critic_manual_channel": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "external_critic_manual_channel_merge_sha": "d2881608b72763d4923e366c12b3ccfc7161b0f7",
+  "external_critic_api_channel": "NOT_ENABLED",
+  "external_critic_packet_contract": "BLIND_REDACTED_HASH_BOUND_VERSIONED_PROMPT",
+  "external_critic_independence_semantics": "PARTIAL_NOT_PROVEN",
+  "external_critic_candidate_path_protection": "SRC_MINHTRI_CRITIC_PREFIX_DENY",
+  "external_critic_freeze_gate": "OPTIONAL_INTEGRATION_FAIL_CLOSED_WHEN_CONFIGURED",
+  "external_critic_runtime_execution_evidence": "NOT_YET_CAPTURED"
 }
