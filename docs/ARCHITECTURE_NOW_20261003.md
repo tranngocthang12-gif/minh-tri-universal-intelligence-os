@@ -264,9 +264,9 @@ This newer observation supersedes the 12:42 +07:00 liveness snapshot only for cu
 
 ## 18. Bounded 24H self-upgrade lease — implementation candidate
 
-Owner authorized the architecture for a maximum 24-hour self-learning/self-upgrade capability window. The implementation is staged on a protected PR branch and **does not activate a live 24H lease**.
+Owner authorized the architecture for a maximum 24-hour self-learning/self-upgrade capability window. The implementation is merged to canonical `main` with required CI PASS and **does not activate a live 24H lease**.
 
-Implemented components on the candidate branch:
+Implemented and CI-proven components:
 - immutable Owner-gated upgrade lease capped at 86,400 seconds;
 - fail-closed UTC + monotonic runtime checks and immediate pre-mutation recheck;
 - early Owner revocation;
@@ -277,6 +277,6 @@ Implemented components on the candidate branch:
 - no automatic VERIFIED, no automatic trial activation, no automatic Candidate promotion;
 - frozen candidates require Owner promotion and still use normal PR/CI/branch protection for canonical merge.
 
-Current bounded status: source/tests implemented on PR; CI and runtime short-lease expiry proof are pending. A real 24-hour lease must not be activated until short-duration expiry/revocation/clock-rollback/child-containment tests have passed with evidence.
+Current bounded status: source/tests are merged and required CI passed; runtime short-lease expiry proof remains pending. A real 24-hour lease must not be activated until short-duration expiry/revocation/clock-rollback/child-containment tests have passed with evidence.
 
 Authority record: `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`.
