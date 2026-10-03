@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
+import re
 from time import monotonic
 from typing import Callable, Iterable, TypeVar
 from uuid import uuid4
@@ -71,6 +72,12 @@ class UpgradeLease:
     target_generation: str
     parent_generation: str
     max_duration_seconds: int
+    owner_authorization_ref: str | None = None
+    owner_authorized_at_utc: str | None = None
+    eval_packet_hash: str | None = None
+    champion_sha: str | None = None
+    eval_dataset_hash: str | None = None
+    eval_metric: str | None = None
     status: str = LEASE_ACTIVE
 
     def __post_init__(self) -> None:
@@ -94,6 +101,23 @@ class UpgradeLease:
             raise LeaseError("unknown upgrade scope: " + ", ".join(sorted(unknown)))
         if not self.target_generation or not self.parent_generation:
             raise LeaseError("parent and target generations are required")
+        if self.max_duration_seconds > 300:
+            if not isinstance(self.owner_authorization_ref, str) or not re.fullmatch(r"[0-9a-f]{40,64}", self.owner_authorization_ref):
+                raise LeaseError("live lease requires owner_authorization_ref as 40-64 lowercase hex")
+            if not isinstance(self.owner_authorized_at_utc, str):
+                raise LeaseError("live lease requires owner_authorized_at_utc")
+            authorized_at = parse_utc(self.owner_authorized_at_utc)
+            if authorized_at > issued or (issued - authorized_at).total_seconds() > 300:
+                raise LeaseError("live lease Owner authorization must be contemporaneous within 300 seconds")
+            for value, label, pattern in (
+                (self.eval_packet_hash, "eval_packet_hash", r"[0-9a-f]{64}"),
+                (self.champion_sha, "champion_sha", r"[0-9a-f]{40,64}"),
+                (self.eval_dataset_hash, "eval_dataset_hash", r"[0-9a-f]{64}"),
+            ):
+                if not isinstance(value, str) or not re.fullmatch(pattern, value):
+                    raise LeaseError(f"live lease requires pinned {label}")
+            if not isinstance(self.eval_metric, str) or not self.eval_metric.strip():
+                raise LeaseError("live lease requires pinned eval_metric")
 
     @property
     def duration_seconds(self) -> int:
@@ -109,9 +133,18 @@ class UpgradeLease:
             "target_generation": self.target_generation,
             "parent_generation": self.parent_generation,
             "max_duration_seconds": self.max_duration_seconds,
+            "owner_authorization_ref": self.owner_authorization_ref,
+            "owner_authorized_at_utc": self.owner_authorized_at_utc,
+            "eval_packet_hash": self.eval_packet_hash,
+            "champion_sha": self.champion_sha,
+            "eval_dataset_hash": self.eval_dataset_hash,
+            "eval_metric": self.eval_metric,
             "status": self.status,
             "automatic_renewal": False,
             "automatic_promotion": False,
+            "automatic_push": False,
+            "automatic_merge": False,
+            "canonical_write_capability": False,
         }
 
 
@@ -138,6 +171,12 @@ def issue_upgrade_lease(
     scope: Iterable[str] = DEFAULT_UPGRADE_SCOPES,
     now: datetime | None = None,
     lease_id: str | None = None,
+    owner_authorization_ref: str | None = None,
+    owner_authorized_at_utc: str | None = None,
+    eval_packet_hash: str | None = None,
+    champion_sha: str | None = None,
+    eval_dataset_hash: str | None = None,
+    eval_metric: str | None = None,
 ) -> UpgradeLease:
     """Issue one immutable lease after authenticating against the fixed Owner gate."""
     from .owner import config_path, require_owner
@@ -157,6 +196,12 @@ def issue_upgrade_lease(
         target_generation=target_generation,
         parent_generation=parent_generation,
         max_duration_seconds=duration_seconds,
+        owner_authorization_ref=owner_authorization_ref,
+        owner_authorized_at_utc=owner_authorized_at_utc,
+        eval_packet_hash=eval_packet_hash,
+        champion_sha=champion_sha,
+        eval_dataset_hash=eval_dataset_hash,
+        eval_metric=eval_metric,
     )
 
 
