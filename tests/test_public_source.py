@@ -44,7 +44,9 @@ class PublicSource(unittest.TestCase):
         self.apply("adjudicate_claim", id="adj", claim_id="h1", review_id="rv", adjudicator_provider_id="judge",
                    verdict="ACCEPT_FOR_TRIAL", reason="Bounded")
         self.apply("propose_lesson", id="l1", claim_id="h1", statement="Narrow", limits="Two cases",
-                   prediction_ids=["f1", "f2"], adjudication_id="adj")
+                   prediction_ids=["f1", "f2"], adjudication_id="adj",
+                   counterevidence_ids=[], counterevidence_search_note="Searched recorded evidence; none found",
+                   applicability="Media domain under measured conditions only")
 
     def all_values(self, node):
         if isinstance(node, dict):
@@ -57,6 +59,7 @@ class PublicSource(unittest.TestCase):
             yield node
 
     def activate(self):
+        self.apply("freeze_lesson", lesson_id="l1")
         self.apply("activate_trial_lesson", lesson_id="l1", owner_ack="HUMAN_OWNER_APPROVED", scope="Pilot")
 
     def test_public_source_is_accepted_and_evidence_stays_unverified(self):
@@ -72,7 +75,7 @@ class PublicSource(unittest.TestCase):
         self.build_lesson("PUBLIC")
         with self.assertRaisesRegex(GateError, "first-party"):
             self.activate()
-        self.assertEqual(self.state["lessons"]["l1"]["status"], "CANDIDATE")
+        self.assertEqual(self.state["lessons"]["l1"]["status"], "HYPOTHESIS")
         self.assertNotIn("VERIFIED", list(self.all_values(self.state)))
 
     def test_third_party_and_unclear_rights_still_blocked_first_party_clear_allowed(self):

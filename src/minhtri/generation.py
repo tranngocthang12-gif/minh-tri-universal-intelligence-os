@@ -16,6 +16,7 @@ GEN_CANDIDATE = "CANDIDATE"
 GEN_FROZEN_PENDING_OWNER = "FROZEN_PENDING_OWNER"
 GEN_PROMOTED_BY_OWNER = "PROMOTED_BY_OWNER"
 GEN_SUPERSEDED = "SUPERSEDED"
+GEN_ABANDONED_AT_EXPIRY = "ABANDONED_AT_EXPIRY"
 
 GENERATION_STATUSES = frozenset({
     GEN_DRAFT,
@@ -26,6 +27,7 @@ GENERATION_STATUSES = frozenset({
     GEN_FROZEN_PENDING_OWNER,
     GEN_PROMOTED_BY_OWNER,
     GEN_SUPERSEDED,
+    GEN_ABANDONED_AT_EXPIRY,
 })
 
 CANDIDATE_BRANCH_PREFIXES = ("candidate/", "self-upgrade/")
@@ -57,6 +59,9 @@ PROTECTED_EXACT_PATHS = frozenset({
 
 PROTECTED_PREFIXES = (
     ".github/",
+    "tests/",
+    "ops/windows/",
+    "config/",
     "docs/LAW_INDEX",
     "docs/ARCHITECTURE_NOW",
     "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE",
@@ -217,6 +222,7 @@ def transition_generation(manifest: GenerationManifest, status: str) -> Generati
         GEN_PROMOTED_BY_OWNER: {GEN_SUPERSEDED},
         GEN_REJECTED: set(),
         GEN_SUPERSEDED: set(),
+        GEN_ABANDONED_AT_EXPIRY: set(),
     }
     if status not in allowed.get(manifest.status, set()):
         raise GenerationError(f"invalid generation transition: {manifest.status} -> {status}")
@@ -246,3 +252,25 @@ def owner_promote_generation(
     if manifest.status != GEN_FROZEN_PENDING_OWNER:
         raise GenerationError("only a frozen candidate can be promoted")
     return replace(manifest, status=GEN_PROMOTED_BY_OWNER)
+
+
+def expire_generation(manifest: GenerationManifest) -> GenerationManifest:
+    """Finalize one generation when the lease ends without ranking candidates.
+
+    Every generation is handled independently. A completed CANDIDATE is frozen for
+    Owner review; unfinished DRAFT/READY_FOR_TEST/TESTING work is marked
+    ABANDONED_AT_EXPIRY. No "best candidate" selection occurs here.
+    """
+    if manifest.status == GEN_CANDIDATE:
+        return replace(manifest, status=GEN_FROZEN_PENDING_OWNER)
+    if manifest.status in {GEN_DRAFT, GEN_READY_FOR_TEST, GEN_TESTING}:
+        return replace(manifest, status=GEN_ABANDONED_AT_EXPIRY)
+    if manifest.status in {
+        GEN_FROZEN_PENDING_OWNER,
+        GEN_REJECTED,
+        GEN_PROMOTED_BY_OWNER,
+        GEN_SUPERSEDED,
+        GEN_ABANDONED_AT_EXPIRY,
+    }:
+        return manifest
+    raise GenerationError("unsupported generation status at expiry")
