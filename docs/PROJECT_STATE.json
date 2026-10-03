@@ -272,5 +272,13 @@
   "self_upgrade_owner_pc_runtime_unit_guard": "PASS_3_OF_3_2026-10-03",
   "self_upgrade_owner_pc_owner_v2_verify": "PASS_PBKDF2_SHA256_600000_DPAPI_BACKED_2026-10-03",
   "self_upgrade_owner_pc_integrated_revoke_proof": "BLOCKED_WINDOWS_EXECUTION_POLICY_NO_GLOBAL_POLICY_WEAKENING",
-  "self_upgrade_owner_pc_short_proof_evidence": "docs/runtime_evidence/SELF_UPGRADE_OWNER_PC_SHORT_PROOF_20261003T190521_PLUS0700.json"
+  "self_upgrade_owner_pc_short_proof_evidence": "docs/runtime_evidence/SELF_UPGRADE_OWNER_PC_SHORT_PROOF_20261003T190521_PLUS0700.json",
+  "self_upgrade_candidate_executor": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_lease_bound_worker": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_worker_provider_required": true,
+  "self_upgrade_worker_provider_status": "BLOCKED_NO_PROVIDER_CONNECTED",
+  "self_upgrade_worker_canonical_write_capability": false,
+  "self_upgrade_worker_automatic_verified_promotion": false,
+  "self_upgrade_worker_automatic_candidate_promotion": false,
+  "self_upgrade_full_activation_status": "BLOCKED_UNTIL_PROVIDER_ADAPTER_AND_RUNTIME_BINDING_PROVEN"
 }
