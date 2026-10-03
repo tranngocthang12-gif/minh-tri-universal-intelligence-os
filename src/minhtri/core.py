@@ -420,11 +420,23 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
             raise GateError("Outcome observation must be after prediction freeze")
         if parse_time(evidence["observed_at"]) < parse_time(prediction["due_at"]):
             raise GateError("Cannot resolve before the preregistered due time")
+        source = ref(out, "sources", evidence["source_id"])
+        source_spec = prediction.get("outcome_source_spec")
+        if source_spec is not None:
+            if source["uri"] != source_spec["source_uri"] or source["kind"] != source_spec["source_kind"]:
+                raise GateError("Outcome source does not match preregistered outcome_source_spec")
+            if parse_time(source["captured_at"]) < parse_time(prediction["due_at"]):
+                raise GateError("Preregistered outcome source was captured before due time")
+            provenance_status = "OUTCOME_SOURCE_PREREGISTERED"
+        else:
+            provenance_status = "LEGACY_OUTCOME_SOURCE_UNSPECIFIED_NOT_META_LEARNING_ELIGIBLE"
         actual = evidence["value"]
         d.update({"claim_id": prediction["claim_id"], "domain_id": prediction["domain_id"],
                   "actual": actual, "interval_hit": prediction["lower"] <= actual <= prediction["upper"],
                   "absolute_midpoint_error": abs(actual - (prediction["lower"] + prediction["upper"]) / 2),
-                  "scored_at": event_time, "attribution": "NOT_ESTABLISHED"})
+                  "scored_at": event_time, "attribution": "NOT_ESTABLISHED",
+                  "learning_provenance_status": provenance_status,
+                  "outcome_source_spec_hash": prediction.get("outcome_source_spec_hash")})
         add(out, "resolutions", d)
         prediction["status"] = "RESOLVED"
 
