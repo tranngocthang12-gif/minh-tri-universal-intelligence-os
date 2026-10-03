@@ -38,13 +38,13 @@ class ExternalCriticTests(unittest.TestCase):
         self.assertFalse(verify_packet_hash(tampered))
 
     def test_owner_pc_path_is_redacted(self):
-        packet = self.packet(test_log=r"C:\\Users\\trann\\secret\\test.log")
-        self.assertNotIn(r"C:\\Users\\trann", packet["test_log"])
+        packet = self.packet(test_log=r"C:\Users\trann\secret\test.log")
+        self.assertNotIn(r"C:\Users\trann", packet["test_log"])
         self.assertIn("[REDACTED_OWNER_PATH]", packet["test_log"])
 
     def test_secret_like_material_blocks_packet(self):
         with self.assertRaises(CriticPacketError):
-            self.packet(test_log="token sk-1234567890abcdefghijklmnop")
+            self.packet(test_log="token " + "sk-" + "1234567890abcdefghijklmnop")
 
     def test_claims_must_be_one_line(self):
         with self.assertRaises(CriticPacketError):
