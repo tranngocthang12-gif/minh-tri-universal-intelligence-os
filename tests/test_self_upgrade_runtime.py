@@ -36,9 +36,9 @@ class SelfUpgradeRuntimeTests(unittest.TestCase):
         session = SelfUpgradeSession(self.issue())
         allowed = session.authorize_candidate_mutation(
             candidate_branch="candidate/GEN-2",
-            changed_paths=["src/minhtri/autonomy.py"],
+            changed_paths=["src/minhtri/__init__.py"],
         )
-        self.assertEqual(allowed, ("src/minhtri/autonomy.py",))
+        self.assertEqual(allowed, ("src/minhtri/__init__.py",))
 
     def test_short_runtime_proof_logic_with_virtual_sleep(self):
         clock = {"mono": 100.0}
