@@ -31,16 +31,33 @@ class AutonomyError(ValueError):
     pass
 
 
-def _derive_research_gate(project_state: dict[str, Any]) -> str:
-    """Derive the research gate only from canonical proof fields.
+def _derive_research_gate(
+    project_state: dict[str, Any],
+    *,
+    now: datetime | None = None,
+) -> str:
+    """Derive the research gate only from fresh canonical proof fields.
 
-    This helper is deterministic and intentionally ignores caller wishes. Runtime code
-    obtains its input only from CANONICAL_PROJECT_STATE.
+    Historical capability proof never authorizes research. The fresh-seat attestation
+    must be unexpired and the current tunnel/brain read path must be live.
     """
+    now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    liveness = project_state.get("current_runtime_liveness")
+    if not isinstance(liveness, dict):
+        return RESEARCH_GATE_BLOCKED
+    expires_raw = project_state.get("fresh_chat_seat_validation_expires_at_utc")
+    try:
+        expires = _utc_parse(expires_raw)
+    except (AutonomyError, ValueError, TypeError):
+        return RESEARCH_GATE_BLOCKED
+    if expires <= now:
+        return RESEARCH_GATE_BLOCKED
     if (
         project_state.get("fresh_chat_seat_validation") == "PASS"
         and project_state.get("end_to_end_seat_brain_transport") is True
         and project_state.get("research_adapter_gate") == RESEARCH_GATE_OPEN
+        and liveness.get("secure_mcp_tunnel") == "UP"
+        and liveness.get("local_brain_connector") == "UP"
     ):
         return RESEARCH_GATE_OPEN
     return RESEARCH_GATE_BLOCKED

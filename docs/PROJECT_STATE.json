@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "RESTORE_FRESH_RUNTIME_PROOF_THEN_COMPLETE_CANDIDATE_A_EXTERNAL_CRITIC_AND_FOUNDATION_GATES",
+  "next_checkpoint": "RESTORE_RUNTIME_THEN_AUDIT_RESOLUTION_PROVENANCE_AND_CREATE_NEW_NON_ENFORCEMENT_CANDIDATE",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -204,7 +204,7 @@
   "critic_execution_independence": "PROCESS_SEPARATION_RECEIPTS_IMPLEMENTED_FULL_INDEPENDENCE_NOT_PROVEN",
   "reward_hacking_contamination_detection": "CONFIGURED_SIGNAL_ASSESSMENT_IMPLEMENTED_UNIVERSAL_AUTOMATIC_DETECTION_NOT_PROVEN",
   "meta_learning_stratified_analysis": "IMPLEMENTED_DOMAIN_PROCEDURE_SOURCE_KIND_FAILURE_CLASS_PROPOSAL_ONLY",
-  "learning_assurance_next_checkpoint": "REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE_FRESH_SEAT_RUNTIME_ASSURANCE_AND_EMPIRICAL_VALIDATION_OF_V14",
+  "learning_assurance_next_checkpoint": "RESOLUTION_PROVENANCE_AUDIT_THEN_EXTERNAL_CRITIC_CANARY_AND_EMPIRICAL_V14",
   "learning_assurance_v11": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "learning_assurance_trace_links": "IMPLEMENTED_TYPED_LINKS_WITH_ARTIFACT_DIGEST",
   "learning_assurance_v12": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
@@ -224,7 +224,10 @@
     "PASS_GENUINE_FRESH_SEAT_VALIDATION",
     "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
-    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
+    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14",
+    "AUDIT_RESOLUTION_PROVENANCE_INDEPENDENCE",
+    "DEFINE_AND_TEST_RESEARCH_INGESTION_SAFETY",
+    "PROVE_RUNTIME_COMMIT_BUILD_ATTESTATION"
   ],
   "brain_read_plane_live_check_latest": "HISTORICAL_PASS_2026-10-03_NOT_CURRENT_LIVENESS",
   "architecture_sync_latest": "FULL_ARCHITECTURE_SYNC_2026-10-04_CURRENT_RUNTIME_DOWN_OFFLINE",
@@ -331,7 +334,7 @@
   "self_upgrade_live_24h_champion_sha": "fc9e7b5252773eaa5f8fc077fd5ea32febd7743f",
   "self_upgrade_live_24h_eval_dataset_hash": "181ab26d5607f679701b9c957b0271b80d9eb3410299bc54bf4fb4221e518912",
   "self_upgrade_authenticated_worker_handoff_runtime": "HISTORICAL_ACTIVE_PROOF_CURRENT_RUNTIME_UNKNOWN",
-  "self_upgrade_candidate_a_status": "PENDING_EXTERNAL_CRITIC",
+  "self_upgrade_candidate_a_status": "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
   "self_upgrade_candidate_a_packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
   "self_upgrade_candidate_a_changed_paths": [
     "src/minhtri/autonomy.py"
@@ -361,5 +364,21 @@
     "CONSISTENCY_TESTS"
   ],
   "owner_learning_track_economics_phd_sync": "CANONICAL_REGISTERED_M0_1_STARTED_UNTESTED",
-  "architecture_sync_sha_semantics": "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY"
+  "architecture_sync_sha_semantics": "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY",
+  "self_learning_system_classification": "PROPOSAL_GOVERNANCE_PIPELINE_NOT_AUTONOMOUS_BEHAVIOR_ADAPTATION",
+  "fresh_chat_seat_protocol_version": "V2_TTL_BOUND",
+  "fresh_chat_seat_validation_expires_at_utc": null,
+  "fresh_chat_seat_max_ttl_seconds": 900,
+  "research_gate_requires_current_liveness": true,
+  "research_ingestion_safety_gate": "BLOCKED_NOT_IMPLEMENTED",
+  "runtime_commit_attestation": "NOT_PROVEN_CURRENTLY_OFFLINE",
+  "resolution_provenance_independence": "PARTIAL_MECHANICAL_SCORING_FROM_DECLARED_UNVERIFIED_OUTCOME_EVIDENCE_NO_RESOLVER_IDENTITY",
+  "meta_learning_inference_status": "DESCRIPTIVE_PROPOSAL_ONLY_NO_MULTIPLICITY_OR_EMPIRICAL_ADAPTATION_PROOF",
+  "negative_control_fail_blocks_lesson_freeze": true,
+  "candidate_enforcement_paths_protected": [
+    "src/minhtri/autonomy.py",
+    "src/minhtri/fresh_seat.py"
+  ],
+  "self_upgrade_candidate_a_rejection_reason": "Claude adversarial review exposed that autonomy enforcement code was candidate-mutable; current policy protects autonomy.py and fresh_seat.py. Historical Candidate A test evidence is preserved but no longer eligible for freeze.",
+  "learning_assurance_v14_effect_status": "DESIGN_AND_CI_CONTRACT_ONLY_EMPIRICAL_BENEFIT_NOT_PROVEN"
 }

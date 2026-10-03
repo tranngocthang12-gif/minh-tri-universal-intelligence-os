@@ -1,0 +1,57 @@
+{
+  "schema": "minhtri-external-review-adjudication/v1",
+  "reviewer": "Claude",
+  "date": "2026-10-04",
+  "source_scope": "review text supplied by Owner; adjudicated against canonical source/tests",
+  "findings": {
+    "MT-01": {
+      "status": "PARTIAL_VALID",
+      "note": "Resolution hit/error is mechanically computed from preregistered interval and post-due numeric evidence, but outcome evidence is DECLARED_UNVERIFIED and resolver identity/independence is absent."
+    },
+    "MT-02": {
+      "status": "VALID_FIXED_IN_PR",
+      "note": "Fresh-seat v1 lacked timestamp/TTL. v2 adds observed/control timestamps, max 900s TTL and expiry checks."
+    },
+    "MT-03": {
+      "status": "PARTIAL_VALID_FIXED_IN_PR",
+      "note": "Candidate could not change tests because tests/ is protected, but autonomy.py itself was mutable. autonomy.py and fresh_seat.py are now protected; Candidate A becomes policy-invalid."
+    },
+    "MT-04": {
+      "status": "PARTIAL_VALID_FIXED_SUBDEFECT",
+      "note": "Failure taxonomy is fixed in code and records detected_by; however negative-control FAIL previously did not block lesson freeze. That path is now blocked. Independent provenance of labels remains unproven."
+    },
+    "MT-05": {
+      "status": "VALID_ASSURANCE_GAP",
+      "note": "Default meta-learning thresholds are small and there is no multiplicity correction. Current output remains proposal-only, so this blocks adaptation claims rather than current writes."
+    },
+    "MT-06": {
+      "status": "VALID_PREOPEN_GATE",
+      "note": "No production Research Adapter is open; ingestion safety is not implemented and is now an explicit gate before opening."
+    },
+    "MT-07": {
+      "status": "VALID_RUNTIME_ASSURANCE_GAP",
+      "note": "Current Owner-PC code/build attestation is not fresh; runtime is offline."
+    },
+    "MT-08": {
+      "status": "VALID_ALREADY_OPEN_GATE",
+      "note": "Provider-side old-key revocation remains unproven and was already canonical open work."
+    },
+    "MT-09": {
+      "status": "PARTIAL",
+      "note": "Same-provider critic is explicitly proof_value=0 and external/Owner review remains required; its receipt is still present for prefilter/audit and could be misread by humans."
+    },
+    "MT-10": {
+      "status": "NEEDS_PROOF_NOT_CURRENTLY_OBSERVED",
+      "note": "Context capsules are stored/reported as noncanonical; source search found no prompt reinjection path in current code."
+    },
+    "MT-11": {
+      "status": "VALID_GOVERNANCE_GAP",
+      "note": "Owner-gated review exists but reviewer-quality/rubber-stamp measurement is not implemented."
+    },
+    "MT-12": {
+      "status": "NOT_A_CURRENT_DEFECT",
+      "note": "Code explicitly emits CLEAN_NO_SIGNAL_NOT_PROOF and automatic_proof=false; absence of signal is not promoted to PASS."
+    }
+  },
+  "automatic_verified_promotion": false
+}

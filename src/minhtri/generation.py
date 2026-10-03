@@ -42,6 +42,8 @@ PROTECTED_EXACT_PATHS = frozenset({
     "src/minhtri/candidate_lifecycle.py",
     "src/minhtri/owner.py",
     "src/minhtri/core.py",
+    "src/minhtri/autonomy.py",
+    "src/minhtri/fresh_seat.py",
     "config/owner.json",
     "docs/PROJECT_STATE.json",
     "tests/test_upgrade_lease.py",

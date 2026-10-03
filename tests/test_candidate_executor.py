@@ -26,7 +26,7 @@ class CandidateExecutorTests(unittest.TestCase):
     def test_allowed_mutation_executes(self):
         marker = []
         result = self.executor.mutate(
-            ["src/minhtri/autonomy.py"],
+            ["src/minhtri/__init__.py"],
             lambda: marker.append("ok") or "done",
         )
         self.assertEqual(result, "done")

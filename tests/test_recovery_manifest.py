@@ -285,6 +285,29 @@ class RecoveryManifestConsistency(unittest.TestCase):
             "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY",
         )
 
+    def test_claude_review_hardening_is_fail_closed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["self_learning_system_classification"],
+                         "PROPOSAL_GOVERNANCE_PIPELINE_NOT_AUTONOMOUS_BEHAVIOR_ADAPTATION")
+        self.assertEqual(state["fresh_chat_seat_protocol_version"], "V2_TTL_BOUND")
+        self.assertIsNone(state["fresh_chat_seat_validation_expires_at_utc"])
+        self.assertTrue(state["research_gate_requires_current_liveness"])
+        self.assertEqual(state["research_ingestion_safety_gate"], "BLOCKED_NOT_IMPLEMENTED")
+        self.assertEqual(state["runtime_commit_attestation"], "NOT_PROVEN_CURRENTLY_OFFLINE")
+        self.assertTrue(state["negative_control_fail_blocks_lesson_freeze"])
+        self.assertIn("src/minhtri/autonomy.py", state["candidate_enforcement_paths_protected"])
+        self.assertEqual(
+            state["self_upgrade_candidate_a_status"],
+            "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
+        )
+        self.assertEqual(
+            manifest["candidate_a"]["status"],
+            "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
+        )
+        self.assertEqual(manifest["fresh_seat_validation"]["protocol"],
+                         "minhtri-fresh-seat-validation/v2")
+
 
 if __name__ == "__main__":
     unittest.main()
