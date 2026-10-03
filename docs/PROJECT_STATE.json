@@ -389,5 +389,20 @@
   "external_critic_blind_packet_status": "IMPLEMENTED_ARTIFACT_TEST_LOG_EXPLICIT_CLAIMS_NO_LEARNER_REASONING_OR_PRIOR_CRITIC",
   "external_critic_full_epistemic_independence": "NOT_PROVEN_SHARED_PRIORS_AND_CORPUS_INDEPENDENCE_NOT_ATTESTED",
   "fresh_seat_research_coupling": "ONE_WAY_ATTESTATION_TO_RESEARCH_NO_RESEARCH_DEPENDENCY_IN_FRESH_SEAT_VALIDATOR",
-  "bitlocker_as_global_halt_gate": "NOT_ADOPTED_NO_PROVEN_REQUIREMENT"
+  "bitlocker_as_global_halt_gate": "NOT_ADOPTED_NO_PROVEN_REQUIREMENT",
+  "learning_proof_execution_plan": "docs/learning/LEARNING_PROOF_EXECUTION_PLAN_20261004.md",
+  "resolution_provenance_audit_harness": "IMPLEMENTED_OFFLINE_SANDBOX_PENDING_REAL_DATA",
+  "resolution_provenance_required_fields": [
+    "prediction_hash",
+    "evidence_content_hash",
+    "evidence_cutoff_timestamp",
+    "resolver_actor",
+    "resolver_method"
+  ],
+  "resolution_invalid_provenance_excluded_from_meta_learning": true,
+  "external_critic_canary_harness": "IMPLEMENTED_OFFLINE_SCORER_PENDING_FROZEN_DATASET",
+  "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
+  "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
+  "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
+  "learning_proof_next_checkpoint": "RUN_OFFLINE_PROVENANCE_FIXTURES_AND_BUILD_FROZEN_CANARY_DATASET_THEN_RESTORE_RUNTIME_FOR_REAL_LEDGER_AUDIT"
 }
