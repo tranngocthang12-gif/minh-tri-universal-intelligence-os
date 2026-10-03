@@ -195,5 +195,18 @@
   "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
   "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE",
   "owner_pc_write_runtime_last_observed_sha": "70B91E737DD80C1996F537E3D17D4E3A2A1356A9",
-  "owner_pc_write_runtime_sha_semantics": "HISTORICAL_OBSERVATION_NOT_CURRENT_MAIN_INVARIANT"
+  "owner_pc_write_runtime_sha_semantics": "HISTORICAL_OBSERVATION_NOT_CURRENT_MAIN_INVARIANT",
+  "learning_assurance_v1": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "external_case_capital_contract": "IMPLEMENTED_EXTERNAL_SUCCESS_FAILURE_MIXED_UNVERIFIED_NOT_LESSON_ELIGIBLE",
+  "frozen_learning_packet_contract": "IMPLEMENTED_TARGET_AND_EVIDENCE_BUNDLE_HASH_BOUND",
+  "critic_execution_provenance": "IMPLEMENTED_DECLARED_PROVIDER_MODEL_RUN_CONTEXT_OUTPUT_HASH",
+  "critic_verdict_extension": "IMPLEMENTED_FINDINGS_NO_MATERIAL_DEFECT_BLOCKED_ABSTAIN_REVIEW_INCOMPLETE",
+  "negative_control_contract": "IMPLEMENTED_PASS_FAIL_INCONCLUSIVE",
+  "learning_assurance_autonomy_report": "IMPLEMENTED_PROPOSAL_ONLY_NO_WRITE",
+  "learning_assurance_full_trace_id": "NOT_IMPLEMENTED",
+  "lesson_expiry_revalidation": "NOT_IMPLEMENTED",
+  "critic_execution_independence": "DECLARED_SEPARATION_ONLY_NOT_PROVEN",
+  "reward_hacking_contamination_detection": "NOT_IMPLEMENTED",
+  "meta_learning_stratified_analysis": "NOT_IMPLEMENTED",
+  "learning_assurance_next_checkpoint": "TRACE_LINKS_LESSON_REVALIDATION_CRITIC_INDEPENDENCE_EVAL_HARDENING"
 }
