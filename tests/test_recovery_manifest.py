@@ -176,9 +176,10 @@ class RecoveryManifestConsistency(unittest.TestCase):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         liveness = state["current_runtime_liveness"]
         self.assertEqual(liveness["local_brain_connector"], "UP")
-        self.assertEqual(liveness["secure_mcp_tunnel"], "UNKNOWN")
-        self.assertEqual(liveness["maintenance_plane"], "UNKNOWN_NOT_RECHECKED_THIS_AUDIT")
+        self.assertEqual(liveness["secure_mcp_tunnel"], "UP")
+        self.assertEqual(liveness["maintenance_plane"], "ONLINE")
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
+        self.assertIn("NO_MATCHING_BOOT_REGISTRATION", state["persistence_probe_latest"])
         self.assertEqual(state["last_proven_runtime_evidence"]["persistence"], "NOT_PROVEN")
 
     def test_current_workstream_matches_open_gates(self):

@@ -1,0 +1,64 @@
+{
+  "schema": "minhtri-runtime-assurance-evidence/v1",
+  "observed_at": "2026-10-03T12:42:15+07:00",
+  "source": "Owner PC via authorized maintenance plane + canonical brain read plane",
+  "observations": {
+    "maintenance_plane": {
+      "status": "ONLINE_PING_PASS",
+      "device": "WIN-VBIQNFFDKIR",
+      "desktop_commander_version": "0.2.52"
+    },
+    "desktop_commander_config": {
+      "allowed_directories": [],
+      "meaning": "FULL_FILESYSTEM_ACCESS",
+      "telemetry_enabled": true,
+      "hardening_status": "BLOCKED_BY_TOOL_SAFETY_REQUIRES_SEPARATE_CONFIG_CHAT"
+    },
+    "secure_mcp_tunnel": {
+      "process_present": true,
+      "executable": "minhtri-runtime-current/tunnel-client/v0.0.15/tunnel-client.exe",
+      "bind": "127.0.0.1",
+      "health_port": 58711,
+      "readyz_status_code": 200,
+      "readyz_body": "ready",
+      "current_liveness": "UP",
+      "persistence": "NOT_PROVEN"
+    },
+    "brain_read_plane": {
+      "verify_status": "VALID",
+      "event_count": 3,
+      "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+      "recovery_status": "VALID",
+      "focus_domain": "youtube",
+      "expected_lesson": "chat quen, so khong",
+      "expectation_status": "UNTESTED_EXPECTATION"
+    },
+    "persistence_probe": {
+      "matching_scheduled_tasks": 0,
+      "matching_startup_entries": 0,
+      "dedicated_matching_services": 0,
+      "conclusion": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_KEYWORD_PROBE_NOT_PERSISTENCE_PROOF"
+    },
+    "endpoint_security": {
+      "defender_antivirus_enabled": true,
+      "defender_realtime_protection_enabled": false,
+      "defender_behavior_monitor_enabled": false,
+      "defender_nis_enabled": false,
+      "defender_on_access_protection_enabled": false,
+      "mcafee_security_center_registered": true,
+      "mcafee_framework_host_running": true,
+      "mcafee_realtime_protection": "UNKNOWN_NOT_PROVEN_BY_GENERIC_APIS"
+    },
+    "bitlocker": {
+      "status": "UNKNOWN",
+      "reason": "Get-BitLockerVolume and manage-bde access denied without administrative rights"
+    },
+    "old_tunnel_key_revocation": "NOT_VERIFIED_NO_PROVIDER_SIDE_REVOCATION_EVIDENCE"
+  },
+  "nonclaims": [
+    "A current UP observation is not boot/reboot persistence proof.",
+    "McAfee registration/service presence is not proof of realtime protection state.",
+    "BitLocker remains UNKNOWN when read access is denied.",
+    "No secret values or command lines containing credentials are recorded."
+  ]
+}

@@ -35,11 +35,16 @@ Current GitHub witness chỉ process-separated; chưa độc lập trước full
 
 Runtime evidence và current liveness là hai lớp khác nhau.
 
-**Fresh observation trong đợt rà soát kiến trúc này:**
+**Fresh observation trong AUTO runtime-assurance 2026-10-03 12:42 +07:00:**
+- Desktop Commander maintenance plane ping PASS; current maintenance liveness = `ONLINE`;
+- tunnel-client process hiện diện, health bind loopback và `/readyz = HTTP 200 ready`; current tunnel liveness = `UP`;
 - canonical brain read plane trả `brain.verify = VALID`, event_count=3, head `ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927`;
 - `brain.recovery_packet` trả cùng head và focus ACTIVE `youtube` / `chat quen, so khong` / `UNTESTED_EXPECTATION`;
-- do đó local brain connector là `UP` tại thời điểm kiểm này;
-- Secure MCP `/readyz` và maintenance plane không được recheck riêng trong lượt này, nên current liveness của hai lớp đó là `UNKNOWN`, không được suy từ bằng chứng cũ.
+- bounded persistence probe không tìm thấy matching Scheduled Task/startup entry/dedicated service cho MINH TRÍ tunnel; persistence vẫn `NOT_PROVEN`;
+- Desktop Commander `allowedDirectories=[]` được xác nhận là full-filesystem access; hardening chưa thực hiện vì chính tool yêu cầu config mutation ở chat riêng;
+- Defender realtime/behavior/NIS/on-access đều report off; McAfee được Security Center đăng ký và framework host running, nhưng McAfee realtime protection vẫn `UNKNOWN`;
+- BitLocker vẫn `UNKNOWN` vì truy vấn bị access denied nếu không có admin rights;
+- old tunnel key revocation vẫn `NOT_VERIFIED` vì chưa có provider-side revocation evidence.
 
 **Historical proven evidence vẫn được giữ:**
 - connector từng chứng minh đúng hai read-only tools;
@@ -180,3 +185,10 @@ Current machine-readable state, this architecture record, the Law Index, recover
 - provider/model/tool mechanisms remaining replaceable and non-canonical.
 
 Historical documents may preserve old implementation status, but must be explicitly marked historical/superseded when they are no longer valid descriptions of current capability.
+
+## 13. Runtime assurance AUTO evidence — 2026-10-03 12:42 +07:00
+
+Canonical evidence file:
+`docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json`
+
+This evidence proves only the bounded observations captured there. It does not prove boot/reboot persistence, old-key revocation, BitLocker state, McAfee realtime protection state, full-device independent witness, or fresh-seat recovery.

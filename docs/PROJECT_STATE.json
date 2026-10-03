@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "FRESH_SEAT_VALIDATION_AND_CURRENT_RUNTIME_ASSURANCE",
+  "next_checkpoint": "SEPARATE_CHAT_DESKTOP_COMMANDER_HARDENING_THEN_FRESH_SEAT_AND_BOOT_PERSISTENCE_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -111,14 +111,14 @@
   "autonomy_research_runtime": "FAIL_CLOSED_UNTIL_FRESH_SEAT_PASS",
   "secure_mcp_tunnel_supervisor": "IMPLEMENTED_MERGED_CI_PROVEN_ACTIVE_CURRENT_OWNER_PC_SESSION",
   "local_brain_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
-  "owner_pc_maintenance_plane_latest": "ONLINE_PING_PASS_2026-10-03",
+  "owner_pc_maintenance_plane_latest": "ONLINE_PING_PASS_2026-10-03T12:42+07",
   "owner_pc_tunnel_supervised_launcher": "ACTIVE_CURRENT_SESSION",
   "owner_pc_tunnel_current_session": "LIVE_READONLY_SUPERVISED_SESSION_VALID",
   "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02",
   "owner_pc_autonomy_readonly_smoke_test": "PASS_WRITE_FALSE_RESEARCH_BLOCKED_FOCUS_YOUTUBE_2026-10-02",
   "fresh_chat_seat_protocol": "docs/FRESH_SEAT_VALIDATION_PROTOCOL_20261002.md",
   "fresh_chat_seat_validator": "IMPLEMENTED_MERGED_CI_PROVEN",
-  "owner_pc_tunnel_live_check_latest": "PASS_READYZ_AND_BRAIN_VERIFY_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
+  "owner_pc_tunnel_live_check_latest": "PASS_PROCESS_PRESENT_LOOPBACK_READYZ_200_BRAIN_VERIFY_2026-10-03T12:42+07",
   "secure_mcp_tunnel_runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-03",
   "owner_pc_credential_v2_runtime": "PROVISIONED_DPAPI_SEALED_VERIFY_PASS",
   "owner_pc_credential_v2_credential_id": "owner-v2-097ed3ff5a704c66",
@@ -130,10 +130,10 @@
   "owner_pc_secure_write_launcher_v2": "PASS_E2E_REPAIR_SNAPSHOT_OWNER_GATE_V2_2026-10-03",
   "owner_pc_write_plane_operational": "PASS_OWNER_GATE_V2_CANONICAL_MAIN_REPAIR_SNAPSHOT_E2E",
   "github_main_branch_protection_live_verify": "PASS_STRICT_TEST_ENFORCE_ADMINS_NO_FORCE_PUSH_NO_DELETE_2026-10-02",
-  "secure_mcp_tunnel_old_key_revocation": "NOT_VERIFIED",
+  "secure_mcp_tunnel_old_key_revocation": "NOT_VERIFIED_NO_PROVIDER_SIDE_REVOCATION_EVIDENCE",
   "runtime_state_model_version": "V2_EVIDENCE_PLUS_LIVENESS",
   "last_proven_runtime_evidence": {
-    "secure_mcp_tunnel": "PASS_READYZ_AND_BRAIN_VERIFY_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
+    "secure_mcp_tunnel": "PASS_READYZ_HTTP_200_READY_AND_BRAIN_VERIFY_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:42+07",
     "readonly_toolset": "PASS_EXACT_TWO_TOOLS",
     "runtime_key_replacement": "NEW_RESTRICTED_TUNNELS_READ_USE_KEY_LIVE_PASS_2026-10-03",
     "owner_credential_v2": "PROVISIONED_DPAPI_SEALED_VERIFY_PASS",
@@ -143,15 +143,17 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T12:26:00+07:00",
-    "owner_pc": "REACHABLE_VIA_CANONICAL_BRAIN_READ_PLANE",
-    "maintenance_plane": "UNKNOWN_NOT_RECHECKED_THIS_AUDIT",
-    "secure_mcp_tunnel": "UNKNOWN",
+    "observed_at": "2026-10-03T12:42:15+07:00",
+    "owner_pc": "ONLINE",
+    "maintenance_plane": "ONLINE",
+    "secure_mcp_tunnel": "UP",
     "local_brain_connector": "UP",
     "evidence": [
-      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927 in this architecture audit",
-      "brain.recovery_packet returned VALID with ACTIVE youtube focus and UNTESTED_EXPECTATION in this architecture audit",
-      "Secure MCP /readyz and maintenance plane were not separately rechecked in this audit; their current liveness remains UNKNOWN here"
+      "Desktop Commander ping PASS on WIN-VBIQNFFDKIR during current audit",
+      "tunnel-client process present and listening on loopback health port",
+      "GET /readyz returned HTTP 200 ready",
+      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+      "brain.recovery_packet returned VALID focus youtube / chat quen, so khong / UNTESTED_EXPECTATION"
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
@@ -162,34 +164,26 @@
   "legacy_runtime_current_fields_liveness_authority": false,
   "legacy_runtime_current_fields_note": "Backward-compatible historical observations only; do not use them to infer present liveness.",
   "owner_pc_host_audit_latest": {
-    "observed_at": "2026-10-03T01:04:00+07:00",
+    "observed_at": "2026-10-03T12:42:15+07:00",
     "defender_antivirus_enabled": true,
     "defender_realtime_protection_enabled": false,
     "defender_behavior_monitor_enabled": false,
     "defender_network_inspection_enabled": false,
-    "firewall_profiles_enabled": [
-      "Domain",
-      "Private",
-      "Public"
-    ],
+    "defender_on_access_protection_enabled": false,
     "security_center_antivirus_products": [
       "Windows Defender",
       "McAfee"
     ],
     "mcafee_framework_host": "RUNNING_AUTO",
     "mcafee_realtime_protection": "UNKNOWN_GENERIC_WINDOWS_APIS_INSUFFICIENT",
-    "bitlocker_status": "UNKNOWN_NO_ENCRYPTABLE_VOLUME_RESULT_AND_MANAGE_BDE_NO_VOLUME_DETAIL",
-    "latest_observed_security_update": "KB5129195_2026-09-15",
+    "bitlocker_status": "UNKNOWN_ACCESS_DENIED_WITHOUT_ADMIN_RIGHTS",
     "tunnel_health_bind": "127.0.0.1",
-    "environment_secret_persistence": "NOT_SET_AT_USER_OR_MACHINE_SCOPE_FOR_CHECKED_RUNTIME_SECRETS",
-    "owner_secret_acl": "OWNER_ACCOUNT_READ_WRITE_ONLY",
-    "brain_acl_note": "Owner SYSTEM Administrators full control; CodexSandboxUsers read-execute; inherited deny-delete-child present",
-    "boot_persistence": "NOT_PROVEN"
+    "boot_persistence": "NOT_PROVEN_NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE"
   },
   "secure_mcp_tunnel_supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03",
-  "desktop_commander_allowed_directories": "EMPTY_ARRAY_MEANS_FULL_FILESYSTEM_ACCESS",
+  "desktop_commander_allowed_directories": "EMPTY_ARRAY_MEANS_FULL_FILESYSTEM_ACCESS_CONFIRMED_2026-10-03T12:42+07",
   "desktop_commander_telemetry_enabled": true,
-  "desktop_commander_hardening": "PENDING_SEPARATE_CHAT_REQUIRED_BY_TOOL_SAFETY",
+  "desktop_commander_hardening": "BLOCKED_BY_TOOL_SAFETY_REQUIRES_SEPARATE_CONFIG_CHAT",
   "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
   "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE",
   "owner_pc_write_runtime_last_observed_sha": "70B91E737DD80C1996F537E3D17D4E3A2A1356A9",
@@ -232,5 +226,7 @@
   "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
   "architecture_sync_latest": "CURRENT_AUTHORITY_ALIGNED_THROUGH_LEARNING_ASSURANCE_V14_MERGED_CI_PROVEN_2026-10-03",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
-  "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4"
+  "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
+  "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
+  "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF"
 }
