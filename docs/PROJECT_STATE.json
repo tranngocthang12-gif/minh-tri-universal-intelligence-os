@@ -404,14 +404,14 @@
   "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
   "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
   "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
-  "learning_proof_next_checkpoint": "FREEZE_TRIAL001_THRESHOLDS_AND_PRIVATE_TASK_GOLD_MANIFEST_AFTER_PILOT_THEN_RUN_ONLY_AFTER_RUNTIME_SECURITY_GATES",
+  "learning_proof_next_checkpoint": "FREEZE_CALIBRATION_PREREGISTRATION_AND_BUILD_LIVE_ISOLATED_EXECUTOR_TELEMETRY_THEN_PROVENANCE_CANARY_BEFORE_PRIMARY_RUN",
   "frozen_ledger_audit_export": "IMPLEMENTED_READ_ONLY_VERIFY_COPY_HASH_NO_BRAIN_START",
   "resolution_resolver_input": "RAW_SOURCE_ONLY_NO_MODEL_TRACE_NO_CAPSULE_NO_ORIGINAL_RESOLUTION",
   "resolution_corpus_out_rate_gate": "PREREGISTERED_REQUIRED",
   "canary_ground_truth_governance": "DISTINCT_TRAP_AUTHOR_RUBRIC_AUTHOR_HUMAN_ADJUDICATOR",
   "canary_hard_negative_required": true,
   "behavioral_trial_preregistration": "PRIMARY_ENDPOINT_PLUS_SAFETY_ENDPOINT_FROZEN_BEFORE_UNBLINDING",
-  "behavioral_trial_assignment": "THREE_ARM_CONTROL_TREATMENT_COMPUTE_MATCHED",
+  "behavioral_trial_assignment": "PAIRED_FOUR_ARM_ORDER_RANDOMIZED_EVERY_TASK_GETS_ALL_ARMS",
   "behavioral_trial_first_routing_keys": [
     "domain_id",
     "procedure_id"
@@ -435,9 +435,10 @@
   "behavioral_trial_arms": [
     "CONTROL",
     "LESSON_TARGETED_TREATMENT",
-    "COMPUTE_MATCHED_CONTROL"
+    "COMPUTE_MATCHED_CONTROL",
+    "SHUFFLED_LEDGER_PLACEBO"
   ],
-  "behavioral_learning_success_requires": "TREATMENT_OUTPERFORMS_COMPUTE_MATCHED_ON_PREREGISTERED_PRIMARY_AND_PASSES_SAFETY",
+  "behavioral_learning_success_requires": "AUDITED_LESSON_PROVENANCE_AND_TREATMENT_OUTPERFORMS_COMPUTE_MATCHED_AND_PLACEBO_DOES_NOT_OUTPERFORM_COMPUTE_MATCHED_AND_SAFETY_COVERAGE_PASS",
   "trial_rule_data_plane_reader": "IMPLEMENTED_READ_ONLY_FAIL_CLOSED_PENDING_EMPIRICAL_EXECUTION",
   "runtime_recovery_prerequisite": "PROVE_OLD_TUNNEL_KEY_REVOCATION_BEFORE_REOPENING_TUNNEL",
   "trial_rule_machine_readable_spec": "IMPLEMENTED_OWNER_ACTIVATED_TTL_SCOPE_OVERLAY_HASH_BOUND",
@@ -447,11 +448,11 @@
   "behavioral_trial_runtime_write_capability": false,
   "behavioral_trial_automatic_verified_promotion": false,
   "behavioral_trial_empirical_status": "NOT_RUN_NOT_PROVEN",
-  "closed_loop_learning_status": "MEASUREMENT_EXECUTION_PATH_IMPLEMENTED_EMPIRICAL_CAUSAL_PROOF_PENDING",
+  "closed_loop_learning_status": "CALIBRATION_HARNESS_ONLY_LIVE_EXECUTOR_AND_AUDITED_LESSON_CAUSAL_PROOF_PENDING",
   "trial001_preregistration": "docs/learning/TRIAL001_COUNTEREVIDENCE_PREREGISTRATION_DRAFT_20261004.md",
   "trial001_taskset_protocol": "docs/learning/TRIAL001_TASKSET_PROTOCOL_20261004.md",
   "trial001_taskset_manifest_template": "docs/learning/TRIAL001_TASKSET_MANIFEST_TEMPLATE.json",
-  "trial001_status": "PREPARATION_NOT_FROZEN_NOT_RUN",
+  "trial001_status": "CALIBRATION_PREPARATION_NOT_FROZEN_NOT_RUN",
   "trial001_primary_endpoint": "FACTUAL_ACCURACY",
   "trial001_safety_endpoint": "UNSUPPORTED_CLAIM_RATE",
   "trial001_false_counterclaim_guardrail": "REQUIRED_THRESHOLD_NOT_YET_FROZEN",
@@ -460,5 +461,22 @@
   "trial001_assignment_secret": "HASH_ONLY_BEFORE_RUN_SECRET_REVEALED_AFTER_SCORE_FREEZE",
   "trial001_final_n": "TO_BE_FROZEN_AFTER_SEPARATE_PILOT_POWER_ANALYSIS",
   "trial001_raw_tasks_public_repo": false,
-  "trial001_empirical_result": "NOT_RUN"
+  "trial001_empirical_result": "NOT_RUN",
+  "trial001_claim_class": "HARNESS_CALIBRATION_ONLY_UNLESS_TREATMENT_LESSON_HAS_AUDITED_LEDGER_PROVENANCE",
+  "trial001_arm_mode": "PAIRED_FOUR_ARM_EVERY_TASK",
+  "trial001_arms": [
+    "CONTROL",
+    "TREATMENT",
+    "COMPUTE_MATCHED",
+    "PLACEBO"
+  ],
+  "trial001_placebo": "SHUFFLED_LEDGER_LABELS_SAME_SYNTHESIS_FAMILY_REQUIRED",
+  "trial001_compute_match": "DECLARED_BUDGET_PLUS_POST_RUN_TELEMETRY_PARITY_REQUIRED",
+  "trial001_compute_tolerance": "TO_BE_FROZEN_BEFORE_RUN",
+  "trial001_coverage_endpoint": "GOLD_CLAIM_COVERAGE_NONINFERIORITY",
+  "trial001_arm_leakage_test": "REQUIRED_BEFORE_ACCEPTING_BLINDED_JUDGE_CLAIM",
+  "trial001_freeze_receipt_template": "docs/learning/TRIAL001_PREREGISTRATION_FREEZE_RECEIPT_TEMPLATE.json",
+  "trial001_freeze_receipt_status": "NOT_FROZEN",
+  "trial001_lesson_provenance_required_for_learning_claim": true,
+  "trial001_executor_status": "PLAN_COMPILER_ONLY_LIVE_SANDBOX_EXECUTION_TELEMETRY_NOT_IMPLEMENTED"
 }
