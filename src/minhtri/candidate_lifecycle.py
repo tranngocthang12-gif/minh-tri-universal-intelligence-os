@@ -320,7 +320,7 @@ class CandidateLifecycleRunner:
             "canonical_write_capability": False,
         }
         self.session.guarded_mutation(lambda: _atomic_json(self.freeze_receipt_path, receipt))
-        self.session.freeze("candidate lifecycle frozen pending Owner review")
+        self.session.guard.freeze("candidate lifecycle frozen pending Owner review")
         return {
             **receipt,
             "runtime_status": self.session.guard.status,
