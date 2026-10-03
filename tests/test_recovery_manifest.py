@@ -236,12 +236,12 @@ class RecoveryManifestConsistency(unittest.TestCase):
             "brain_read_plane_live_check_latest",
         ):
             self.assertIn("HISTORICAL", state[key], key)
-        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "UNKNOWN")
-        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "UNKNOWN")
+        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "DOWN")
+        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "DOWN")
 
     def test_current_architecture_marks_current_liveness_and_historical_stages(self):
         architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
-        self.assertIn("Current liveness authoritative — audit 2026-10-04", architecture)
+        self.assertIn("Current liveness authoritative — fresh sync observation 2026-10-04", architecture)
         self.assertIn("HISTORICAL — Bounded 24H self-upgrade lease implementation stage", architecture)
         self.assertIn("PROJECT_STATE.current_runtime_liveness", architecture)
 
