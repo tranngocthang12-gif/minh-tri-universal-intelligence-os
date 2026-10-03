@@ -115,6 +115,7 @@ ALLOWED_FIELDS = {
     "record_trace_link": {"id", "trace_id", "artifact_type", "artifact_id", "relation"},
     "schedule_lesson_revalidation": {"id", "lesson_id", "review_after", "staleness_conditions", "reason"},
     "record_lesson_revalidation": {"id", "schedule_id", "evidence_ids", "outcome", "reason", "limits", "trigger"},
+    "record_learning_failure": {"id", "domain_id", "artifact_type", "artifact_id", "failure_class", "severity", "evidence_ids", "description", "remediation", "detected_by"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
 
@@ -139,6 +140,22 @@ TRACE_ARTIFACT_COLLECTIONS = {
 TRACE_RELATIONS = {
     "ORIGIN", "SUPPORT", "COUNTEREVIDENCE", "PREDICTION", "OUTCOME",
     "CRITIC", "ADJUDICATION", "LESSON", "CONTROL", "REVALIDATION",
+}
+
+LEARNING_FAILURE_CLASSES = {
+    "SOURCE_ERROR",
+    "SCOPE_OVERREACH",
+    "UNSUPPORTED_INFERENCE",
+    "CONFIRMATION_BIAS",
+    "COUNTEREVIDENCE_IGNORED",
+    "STALE_KNOWLEDGE",
+    "CRITIC_CONTAMINATION",
+    "EVAL_CONTAMINATION",
+    "REWARD_HACKING",
+    "TOOL_ERROR",
+    "HALLUCINATED_SOURCE",
+    "OVERCONFIDENCE",
+    "DOMAIN_TRANSFER_FAILURE",
 }
 
 
@@ -570,6 +587,39 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         d["automatic_lesson_mutation"] = False
         revalidations = out.setdefault("lesson_revalidations", {})
         add(out, "lesson_revalidations", d)
+
+    elif kind == "record_learning_failure":
+        need(d, "id", "domain_id", "artifact_type", "artifact_id", "failure_class",
+             "severity", "evidence_ids", "description", "remediation", "detected_by")
+        ref(out, "domains", d["domain_id"])
+        if d["artifact_type"] not in TRACE_ARTIFACT_COLLECTIONS:
+            raise GateError("Invalid learning failure artifact type")
+        collection = TRACE_ARTIFACT_COLLECTIONS[d["artifact_type"]]
+        artifact_id = identifier(d["artifact_id"], "artifact ID")
+        artifacts = out.get(collection, {})
+        if artifact_id not in artifacts:
+            raise GateError(f"Unknown failure artifact: {d['artifact_type']}:{artifact_id}")
+        artifact = artifacts[artifact_id]
+        artifact_domain = artifact.get("domain_id")
+        if artifact_domain is not None and artifact_domain != d["domain_id"]:
+            raise GateError("Learning failure artifact cannot cross domain boundaries")
+        if d["failure_class"] not in LEARNING_FAILURE_CLASSES:
+            raise GateError("Invalid learning failure class")
+        if d["severity"] not in ("LOW", "MEDIUM", "HIGH", "CRITICAL"):
+            raise GateError("Invalid learning failure severity")
+        if d["detected_by"] not in ("HUMAN", "MODEL", "TOOL", "EVAL"):
+            raise GateError("Invalid detected_by")
+        for key in ("description", "remediation"):
+            string(d[key], key)
+        eids = _list_of_refs(out, "evidence", d["evidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != d["domain_id"] for eid in eids):
+            raise GateError("Learning failure evidence cannot cross domain boundaries")
+        d["artifact_digest"] = digest(artifact)
+        d["recorded_at"] = event_time
+        d["status"] = "OPEN"
+        d["automatic_remediation"] = False
+        failures = out.setdefault("learning_failures", {})
+        add(out, "learning_failures", d)
 
     elif kind == "set_learning_focus":
         # The collection is created lazily so ledgers written before this type still replay
