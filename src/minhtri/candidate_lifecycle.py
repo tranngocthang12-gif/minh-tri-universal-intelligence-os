@@ -102,6 +102,12 @@ class CodexSandboxTestRunner:
         command = list(self.command)
         if command and command[0].lower() in {"python", "python3", "python.exe"}:
             command[0] = sys.executable
+        env = os.environ.copy()
+        src_root = str((self.candidate_root / "src").resolve())
+        existing_pythonpath = env.get("PYTHONPATH")
+        env["PYTHONPATH"] = (
+            src_root if not existing_pythonpath else src_root + os.pathsep + existing_pythonpath
+        )
         proc = subprocess.run(
             [
                 executable,
@@ -114,6 +120,7 @@ class CodexSandboxTestRunner:
                 *command,
             ],
             cwd=self.candidate_root,
+            env=env,
             stdin=subprocess.DEVNULL,
             capture_output=True,
             text=True,
