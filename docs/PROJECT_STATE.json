@@ -203,10 +203,12 @@
   "critic_verdict_extension": "IMPLEMENTED_FINDINGS_NO_MATERIAL_DEFECT_BLOCKED_ABSTAIN_REVIEW_INCOMPLETE",
   "negative_control_contract": "IMPLEMENTED_PASS_FAIL_INCONCLUSIVE",
   "learning_assurance_autonomy_report": "IMPLEMENTED_PROPOSAL_ONLY_NO_WRITE",
-  "learning_assurance_full_trace_id": "NOT_IMPLEMENTED",
-  "lesson_expiry_revalidation": "NOT_IMPLEMENTED",
+  "learning_assurance_full_trace_id": "PARTIAL_LINK_BASED_NOT_INTRUSIVE_FULL_EVENT_PROPAGATION",
+  "lesson_expiry_revalidation": "IMPLEMENTED_SCHEDULE_AND_PROPOSAL_ONLY_NO_AUTOMATIC_MUTATION",
   "critic_execution_independence": "DECLARED_SEPARATION_ONLY_NOT_PROVEN",
   "reward_hacking_contamination_detection": "NOT_IMPLEMENTED",
   "meta_learning_stratified_analysis": "NOT_IMPLEMENTED",
-  "learning_assurance_next_checkpoint": "TRACE_LINKS_LESSON_REVALIDATION_CRITIC_INDEPENDENCE_EVAL_HARDENING"
+  "learning_assurance_next_checkpoint": "CRITIC_EXECUTION_INDEPENDENCE_EVAL_CONTAMINATION_REWARD_HACKING_AND_STRATIFIED_META_LEARNING",
+  "learning_assurance_v11": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "learning_assurance_trace_links": "IMPLEMENTED_TYPED_LINKS_WITH_ARTIFACT_DIGEST"
 }
