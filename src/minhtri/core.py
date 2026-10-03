@@ -496,6 +496,18 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
             for sid in outcome_sources
         ):
             raise GateError("Frozen lesson needs distinct declared first-party outcome sources with clear rights")
+        packet_ids = {
+            packet_id
+            for packet_id, packet in out.get("learning_packets", {}).items()
+            if packet.get("claim_id") == lesson["source_claim_id"]
+        }
+        failed_controls = [
+            control_id
+            for control_id, control in out.get("negative_controls", {}).items()
+            if control.get("packet_id") in packet_ids and control.get("result") == "FAIL"
+        ]
+        if failed_controls:
+            raise GateError("Failed negative control blocks lesson freeze")
         lesson["evidence_ids"] = evidence_ids
         lesson["status"] = "FROZEN_PENDING_OWNER"
         lesson["frozen_at"] = event_time
