@@ -175,9 +175,13 @@ class RecoveryManifestConsistency(unittest.TestCase):
     def test_current_liveness_is_fresh_observation_not_persistence_claim(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         liveness = state["current_runtime_liveness"]
-        self.assertEqual(liveness["local_brain_connector"], "UP")
-        self.assertEqual(liveness["secure_mcp_tunnel"], "UP")
-        self.assertEqual(liveness["maintenance_plane"], "ONLINE")
+        self.assertIn(liveness["local_brain_connector"], {"UP", "DOWN", "UNKNOWN"})
+        self.assertIn(liveness["secure_mcp_tunnel"], {"UP", "DOWN", "UNKNOWN"})
+        self.assertIn(liveness["maintenance_plane"], {"ONLINE", "OFFLINE", "UNKNOWN"})
+        if liveness["secure_mcp_tunnel"] == "UP":
+            self.assertEqual(liveness["local_brain_connector"], "UP")
+        if liveness["secure_mcp_tunnel"] == "DOWN":
+            self.assertNotEqual(liveness["local_brain_connector"], "UP")
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
         self.assertIn("REBOOT_PROOF_PENDING", state["persistence_probe_latest"])
         self.assertEqual(state["last_proven_runtime_evidence"]["persistence"], "NOT_PROVEN")

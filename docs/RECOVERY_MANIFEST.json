@@ -89,11 +89,16 @@
     "learning_assurance": "minhtri-learning-assurance/v1.4"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T15:52:12+07:00",
-    "maintenance_plane": "ONLINE",
-    "secure_mcp_tunnel": "UP",
-    "local_brain_connector": "UP",
-    "root_cause": "PROBABLE_TASK_SETTINGS_DEFECT_HARDENED_REBOOT_PROOF_PENDING"
+    "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
+    "maintenance_plane": "UNKNOWN",
+    "secure_mcp_tunnel": "UNKNOWN",
+    "local_brain_connector": "UNKNOWN",
+    "root_cause": "NOT_YET_REESTABLISHED; FRESH_READ_PLANE_AND_MAINTENANCE_PROOF_REQUIRED",
+    "detail": {
+      "maintenance_plane": "DEGRADED_TIMEOUT",
+      "secure_mcp_tunnel": "NO_POLL",
+      "local_brain_connector": "NO_POLL"
+    }
   },
   "open_foundation_gates": [
     "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
@@ -103,5 +108,16 @@
     "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
-  ]
+  ],
+  "next_checkpoint": "RESTORE_FRESH_RUNTIME_PROOF_THEN_COMPLETE_CANDIDATE_A_EXTERNAL_CRITIC_AND_FOUNDATION_GATES",
+  "candidate_a": {
+    "status": "PENDING_EXTERNAL_CRITIC",
+    "changed_paths": [
+      "src/minhtri/autonomy.py"
+    ],
+    "packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
+    "tests": "PASS_TARGETED_20_FULL_233_2026-10-04",
+    "eligible_for_freeze": false,
+    "automatic_promotion": false
+  }
 }

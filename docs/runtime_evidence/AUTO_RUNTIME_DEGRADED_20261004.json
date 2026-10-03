@@ -1,0 +1,33 @@
+{
+  "protocol": "minhtri-runtime-evidence/v1",
+  "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
+  "scope": "AUTO_RUNTIME_LIVENESS_DEGRADED_AND_CANONICAL_DRIFT",
+  "canonical_base_sha": "7ff44b3d423503e6c1c7d63a7743cda59e990f1e",
+  "observations": [
+    {
+      "surface": "brain_read_plane",
+      "result": "UNKNOWN_DEGRADED_NO_POLL",
+      "evidence": "brain.verify request failed because tunnel-client did not poll after enqueue."
+    },
+    {
+      "surface": "maintenance_plane",
+      "result": "UNKNOWN_DEGRADED_TIMEOUT",
+      "evidence": "Desktop Commander state-read and follow-up ping timed out; this does not prove the device is offline."
+    },
+    {
+      "surface": "candidate_a",
+      "result": "PENDING_EXTERNAL_CRITIC",
+      "packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
+      "tests": "20 targeted and 233 full-suite tests PASS in the latest verified candidate run."
+    }
+  ],
+  "historical_evidence_preserved": true,
+  "current_liveness_promotion_allowed": false,
+  "required_recovery_sequence": [
+    "maintenance ping",
+    "tunnel /readyz",
+    "brain.verify",
+    "brain.recovery_packet"
+  ],
+  "automatic_verified_promotion": false
+}
