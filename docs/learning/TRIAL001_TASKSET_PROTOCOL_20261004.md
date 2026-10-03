@@ -1,7 +1,7 @@
 # TRIAL-001 INDEPENDENT TASK-SET PROTOCOL
 
 **Status:** PREPARATION ONLY / RAW TASKS NOT YET CREATED IN PROJECT CONTEXT  
-**Trial:** COUNTEREVIDENCE_FIRST three-arm causal trial
+**Trial:** COUNTEREVIDENCE_FIRST paired four-arm calibration trial
 
 ## Goal
 
@@ -50,7 +50,7 @@ IDs:
 
 Each completed block should avoid clustering all difficult/easy tasks in one narrow subtopic.
 
-Before arm assignment, each task receives system-coded metadata:
+Before execution-order randomization, each task receives frozen system-coded metadata:
 - domain_id;
 - procedure_id;
 - difficulty_band;
@@ -105,16 +105,18 @@ Avoid:
 ## Sealing process
 
 1. Create raw tasks outside execution-generator context.
-2. Complete gold packets.
+2. Complete gold packets, including required-claim coverage rubric.
 3. Hash every task and gold packet.
 4. Freeze manifest.
 5. Commit only manifest/hashes to canonical GitHub.
-6. Generate assignment secret and commit only its hash.
-7. Implement/recheck balanced block assignment.
-8. Execute one task at a time; reveal only the assigned task to the generator.
-9. Freeze answer output before judging.
-10. Judge blinded to A/B/C.
-11. Reveal arms only after all scores are frozen.
+6. Generate execution-order secret and commit only its hash.
+7. Freeze A/B/C/D prompts/overlays, placebo provenance, evaluator rubric and compute telemetry schema.
+8. For each eligible task, execute all four arms A/B/C/D in isolated process/cache/state contexts; randomize only arm order.
+9. Freeze each arm output and actual compute telemetry before judging.
+10. Normalize judge-facing representation enough to reduce avoidable stylistic arm leakage.
+11. Run arm-guessing leakage diagnostic under the frozen protocol.
+12. Judge primary/safety/coverage endpoints blinded to arm labels.
+13. Reveal arm labels only after all scores are frozen.
 
 ## Replacement policy
 
@@ -138,3 +140,26 @@ Before execution each task must certify:
 - raw gold not exposed to generator.
 
 Any failed leakage check makes the task ineligible.
+
+
+## Paired four-arm invariant
+
+Every eligible primary task must produce exactly four outputs:
+- A CONTROL;
+- B TREATMENT;
+- C COMPUTE_MATCHED;
+- D PLACEBO.
+
+A missing arm invalidates that task for paired primary analysis. Retrieval caches, session state, tool state, and generated artifacts must be isolated by arm. No arm may consume another arm's output or retrieval result.
+
+## Placebo task-set rule
+
+The D overlay comes from shuffled historical resolution labels using the same synthesis procedure family as the candidate lesson. Its text and provenance hash are frozen before any primary task is executed. The execution generator does not see why D is the placebo.
+
+## Coverage and answer-completeness gold
+
+The gold packet must identify required answer claims separately from optional claims so that `GOLD_CLAIM_COVERAGE` can detect a treatment that appears more accurate only because it says less.
+
+## Domain/risk freeze
+
+`domain_id`, `procedure_id`, and risk classification are assigned by the Task/Gold preparation side and frozen before execution. The runtime does not infer these fields from the generated answer. Unknown risk is ineligible for automatic trial routing.
