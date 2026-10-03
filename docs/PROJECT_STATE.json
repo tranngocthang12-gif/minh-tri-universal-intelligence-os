@@ -225,7 +225,7 @@
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
   "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T15:52+07",
-  "architecture_sync_latest": "AUDIT_ALIGNED_THROUGH_PR112_POWERSHELL_PERSISTENCE_CI_AND_SECRET_SAFE_AUTOSTART_DEPLOYMENT_2026-10-03",
+  "architecture_sync_latest": "SELF_UPGRADE_24H_LEASE_SOURCE_MERGED_CI_PROVEN_RUNTIME_OFF_2026-10-03",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
@@ -249,17 +249,18 @@
   "post_reboot_remote_reachability_latest": "docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json",
   "post_reboot_runtime_diagnosis": "PROBABLE_TASK_SETTINGS_DEFECT_HARDENED_REBOOT_PROOF_PENDING",
   "persistence_diagnosis_latest": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
-  "self_upgrade_lease_engine": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_lease_engine": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_lease_max_seconds": 86400,
   "self_upgrade_lease_runtime": "OFF_NOT_ACTIVATED",
   "self_upgrade_lease_automatic_renewal": false,
   "self_upgrade_lease_owner_gated_issue_revoke": true,
-  "self_upgrade_candidate_sandbox": "IMPLEMENTED_ON_PR_PENDING_CI",
-  "self_upgrade_generation_lineage": "IMPLEMENTED_ON_PR_PENDING_CI",
-  "self_upgrade_parent_candidate_evaluator": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_candidate_sandbox": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "self_upgrade_generation_lineage": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+  "self_upgrade_parent_candidate_evaluator": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_automatic_verified_promotion": false,
   "self_upgrade_automatic_candidate_promotion": false,
   "self_upgrade_live_24h_expiry_proof": "NOT_PROVEN",
   "self_upgrade_short_lease_runtime_proof": "NOT_PROVEN",
-  "self_upgrade_owner_decision": "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md"
+  "self_upgrade_owner_decision": "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md",
+  "self_upgrade_source_merge_sha": "0f2c0a1882e039f92e93bdef8dcdac77f4bc06b5"
 }
