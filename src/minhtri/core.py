@@ -108,6 +108,10 @@ ALLOWED_FIELDS = {
     "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
     "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id"},
     "activate_trial_lesson": {"lesson_id", "owner_ack", "scope"},
+    "record_external_case": {"id", "domain_id", "evidence_ids", "outcome", "context", "mechanism_hypothesis", "transfer_limits", "uncertainty"},
+    "freeze_learning_packet": {"id", "trace_id", "claim_id", "counterevidence_ids", "external_case_ids", "counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint"},
+    "record_critic_execution": {"id", "packet_id", "critic_provider_id", "provider", "model", "run_id", "context_mode", "output_hash", "verdict", "reason", "missing_evidence"},
+    "record_negative_control": {"id", "packet_id", "description", "expected", "observed", "result", "evidence_ids"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
 
@@ -380,6 +384,112 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         lesson["scope"] = d["scope"]
         lesson["activated_at"] = event_time
         lesson["validation"] = "DECLARED_DATA_ONLY_NOT_CAUSAL_PROOF"
+
+    elif kind == "record_external_case":
+        need(d, "id", "domain_id", "evidence_ids", "outcome", "context",
+             "mechanism_hypothesis", "transfer_limits", "uncertainty")
+        ref(out, "domains", d["domain_id"])
+        if d["outcome"] not in ("SUCCESS", "FAILURE", "MIXED"):
+            raise GateError("External case outcome must be SUCCESS, FAILURE or MIXED")
+        for key in ("context", "mechanism_hypothesis", "transfer_limits", "uncertainty"):
+            string(d[key], key)
+        eids = _list_of_refs(out, "evidence", d["evidence_ids"])
+        if not eids:
+            raise GateError("External case needs at least one evidence record")
+        if any(out["evidence"][eid]["domain_id"] != d["domain_id"] for eid in eids):
+            raise GateError("External case evidence cannot cross domain boundaries")
+        cases = out.setdefault("external_cases", {})
+        d["capital_status"] = "EXTERNAL_CASE_CAPITAL_UNVERIFIED"
+        d["lesson_eligible"] = False
+        d["recorded_at"] = event_time
+        add(out, "external_cases", d)
+
+    elif kind == "freeze_learning_packet":
+        need(d, "id", "trace_id", "claim_id", "counterevidence_ids", "external_case_ids",
+             "counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint")
+        identifier(d["trace_id"], "trace_id")
+        claim = ref(out, "claims", d["claim_id"])
+        for key in ("counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint"):
+            string(d[key], key)
+        counter_ids = _list_of_refs(out, "evidence", d["counterevidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != claim["domain_id"] for eid in counter_ids):
+            raise GateError("Counterevidence cannot cross domain boundaries")
+        external_cases = out.setdefault("external_cases", {})
+        if not isinstance(d["external_case_ids"], list) or any(not isinstance(v, str) for v in d["external_case_ids"]) or len(set(d["external_case_ids"])) != len(d["external_case_ids"]):
+            raise GateError("external_case_ids must be a unique list")
+        for case_id in d["external_case_ids"]:
+            identifier(case_id, "external case ID")
+            if case_id not in external_cases:
+                raise GateError(f"Unknown external_cases ID: {case_id}")
+            if external_cases[case_id]["domain_id"] != claim["domain_id"]:
+                raise GateError("Learning packet external cases cannot cross domain boundaries")
+        supporting_ids = list(claim["evidence_ids"])
+        source_ids = sorted({
+            out["evidence"][eid]["source_id"] for eid in supporting_ids + counter_ids
+        })
+        packet_target = {
+            "claim_id": claim["id"],
+            "statement": claim["statement"],
+            "alternative": claim["alternative"],
+            "falsifier": claim["falsifier"],
+            "domain_id": claim["domain_id"],
+        }
+        packet_evidence = {
+            "supporting": [out["evidence"][eid] for eid in supporting_ids],
+            "counterevidence": [out["evidence"][eid] for eid in counter_ids],
+            "sources": [out["sources"][sid] for sid in source_ids],
+            "external_cases": [external_cases[cid] for cid in d["external_case_ids"]],
+        }
+        d["domain_id"] = claim["domain_id"]
+        d["supporting_evidence_ids"] = supporting_ids
+        d["target_hash"] = digest(packet_target)
+        d["evidence_bundle_hash"] = digest(packet_evidence)
+        d["status"] = "FROZEN"
+        d["frozen_at"] = event_time
+        packets = out.setdefault("learning_packets", {})
+        add(out, "learning_packets", d)
+
+    elif kind == "record_critic_execution":
+        need(d, "id", "packet_id", "critic_provider_id", "provider", "model", "run_id",
+             "context_mode", "output_hash", "verdict", "reason", "missing_evidence")
+        packets = out.setdefault("learning_packets", {})
+        packet = ref(out, "learning_packets", d["packet_id"])
+        claim = ref(out, "claims", packet["claim_id"])
+        ref(out, "providers", d["critic_provider_id"])
+        predictors = {out["procedures"][p["procedure_id"]]["provider_id"]
+                      for p in out["predictions"].values() if p["claim_id"] == packet["claim_id"]}
+        if d["critic_provider_id"] == claim["provider_id"] or d["critic_provider_id"] in predictors:
+            raise GateError("Critic execution must be distinct from proposer and predictors")
+        for key in ("provider", "model", "run_id", "output_hash", "reason"):
+            string(d[key], key)
+        if d["context_mode"] not in ("BLIND", "REVEALED"):
+            raise GateError("context_mode must be BLIND or REVEALED")
+        if d["verdict"] not in ("FINDINGS", "NO_MATERIAL_DEFECT", "BLOCKED", "ABSTAIN", "REVIEW_INCOMPLETE"):
+            raise GateError("Invalid critic execution verdict")
+        if not isinstance(d["missing_evidence"], list) or any(not isinstance(v, str) or not v.strip() for v in d["missing_evidence"]):
+            raise GateError("missing_evidence must be a text list")
+        d["domain_id"] = packet["domain_id"]
+        d["target_hash"] = packet["target_hash"]
+        d["evidence_bundle_hash"] = packet["evidence_bundle_hash"]
+        d["recorded_at"] = event_time
+        executions = out.setdefault("critic_executions", {})
+        add(out, "critic_executions", d)
+
+    elif kind == "record_negative_control":
+        need(d, "id", "packet_id", "description", "expected", "observed", "result", "evidence_ids")
+        packets = out.setdefault("learning_packets", {})
+        packet = ref(out, "learning_packets", d["packet_id"])
+        for key in ("description", "expected", "observed"):
+            string(d[key], key)
+        if d["result"] not in ("PASS", "FAIL", "INCONCLUSIVE"):
+            raise GateError("Negative control result must be PASS, FAIL or INCONCLUSIVE")
+        eids = _list_of_refs(out, "evidence", d["evidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != packet["domain_id"] for eid in eids):
+            raise GateError("Negative control evidence cannot cross domain boundaries")
+        d["domain_id"] = packet["domain_id"]
+        d["recorded_at"] = event_time
+        controls = out.setdefault("negative_controls", {})
+        add(out, "negative_controls", d)
 
     elif kind == "set_learning_focus":
         # The collection is created lazily so ledgers written before this type still replay
