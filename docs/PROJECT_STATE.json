@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "DEPLOY_PR112_CORRECTED_TUNNEL_PROVISIONER_THEN_OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_INSTALL_LOGON_TASK_AND_CONTROLLED_REBOOT",
+  "next_checkpoint": "OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -241,5 +241,6 @@
   "tunnel_logon_task_installer_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
   "architecture_audit_latest": "docs/ARCHITECTURE_AUDIT_COMPLETION_PLAN_20261003.md",
   "tunnel_persistence_source_fix": "PR112_MERGED_POWERSHELL_ACL_GRANT_FIXED_WINDOWS_PARSE_CI_PASS",
-  "tunnel_persistence_corrected_script_owner_pc_deployment": "REQUIRED_NOT_YET_PROVEN"
+  "tunnel_persistence_corrected_script_owner_pc_deployment": "DEPLOYED_AND_READBACK_MATCHED_DURING_2026-10-03_ARCHITECTURE_AUDIT",
+  "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json"
 }
