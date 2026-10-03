@@ -62,6 +62,7 @@ PROTECTED_PREFIXES = (
     "tests/",
     "ops/windows/",
     "config/",
+    "src/minhtri/critic/",
     "docs/LAW_INDEX",
     "docs/ARCHITECTURE_NOW",
     "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE",
