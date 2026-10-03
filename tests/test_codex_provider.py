@@ -68,6 +68,23 @@ class CodexProviderTests(unittest.TestCase):
             with self.assertRaises(Exception):
                 p.plan({})
 
+    def test_action_no_diff_is_blocked_no_changes(self):
+        plan_json = json.dumps({
+            "summary": "x",
+            "hypothesis": "x",
+            "changed_paths": ["src/minhtri/autonomy.py"],
+            "tests": [],
+        })
+        p = self.provider()
+        with mock.patch.object(p, "_run", side_effect=[
+            mock.Mock(returncode=0, stdout=plan_json),
+            mock.Mock(returncode=0, stdout="done"),
+        ]), mock.patch.object(p, "_changed_paths", return_value=[]):
+            proposal = p.propose({})
+            result = proposal["action"]()
+        self.assertEqual(result["status"], "BLOCKED_NO_CHANGES")
+        self.assertEqual(result["actual_paths"], [])
+
     def test_action_blocks_undeclared_actual_path(self):
         plan_json = json.dumps({
             "summary": "x",

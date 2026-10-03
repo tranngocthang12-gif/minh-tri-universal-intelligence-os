@@ -134,6 +134,20 @@ class CodexCandidateProvider:
             )
             proc = self._run(sandbox="workspace-write", prompt=prompt)
             actual = self._changed_paths()
+            if proc.returncode != 0:
+                return {
+                    "status": "BLOCKED_CODEX_EXEC_FAILED",
+                    "declared_paths": declared,
+                    "actual_paths": actual,
+                    "codex_returncode": proc.returncode,
+                }
+            if not actual:
+                return {
+                    "status": "BLOCKED_NO_CHANGES",
+                    "declared_paths": declared,
+                    "actual_paths": [],
+                    "codex_returncode": proc.returncode,
+                }
             try:
                 enforce_candidate_mutation(
                     self.session.guard,
@@ -155,13 +169,6 @@ class CodexCandidateProvider:
                     "declared_paths": declared,
                     "actual_paths": actual,
                     "undeclared_paths": undeclared,
-                    "codex_returncode": proc.returncode,
-                }
-            if proc.returncode != 0:
-                return {
-                    "status": "BLOCKED_CODEX_EXEC_FAILED",
-                    "declared_paths": declared,
-                    "actual_paths": actual,
                     "codex_returncode": proc.returncode,
                 }
             return {
