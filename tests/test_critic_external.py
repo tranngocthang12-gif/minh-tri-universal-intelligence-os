@@ -8,6 +8,7 @@ from minhtri.critic.provider_manual import ManualExternalCritic
 from minhtri.critic.verdict_schema import CriticResult, CriticSchemaError
 
 
+# Negative fixtures are assembled at runtime to avoid secret-like literals in history.
 class ExternalCriticTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
