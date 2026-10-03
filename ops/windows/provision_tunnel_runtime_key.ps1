@@ -15,7 +15,8 @@ Set-Content -Path $tmp -Value $encrypted -Encoding utf8NoBOM
 Move-Item -Force $tmp $sealed
 
 $principal = "$env:USERDOMAIN\$env:USERNAME"
-& icacls $sealed /inheritance:r /grant:r "$principal:(R,W)" | Out-Null
+$grant = '{0}:(R,W)' -f $principal
+& icacls $sealed /inheritance:r /grant:r $grant | Out-Null
 if ($LASTEXITCODE -ne 0) { throw 'BLOCKED_SECRET_ACL_FAILED' }
 
 [pscustomobject]@{ status='TUNNEL_RUNTIME_KEY_DPAPI_PROVISIONED'; sealed_path=$sealed; plaintext_persisted=$false; scope='CURRENT_USER_DPAPI' } | ConvertTo-Json -Compress

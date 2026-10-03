@@ -35,6 +35,33 @@ jobs:
       - name: Run test suite
         run: python -m unittest discover -s tests -v
 
+  powershell-parse:
+    name: powershell-parse
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          persist-credentials: false
+      - name: Parse Windows PowerShell scripts
+        shell: pwsh
+        run: |
+          $parseFailed = $false
+          Get-ChildItem -Path ops/windows -Filter *.ps1 -File | ForEach-Object {
+            $tokens = $null
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile(
+              $_.FullName,
+              [ref]$tokens,
+              [ref]$errors
+            ) | Out-Null
+            if ($errors.Count -gt 0) {
+              $parseFailed = $true
+              $messages = ($errors | ForEach-Object { $_.Message }) -join '; '
+              Write-Error ("PowerShell parse failure in {0}: {1}" -f $_.FullName, $messages)
+            }
+          }
+          if ($parseFailed) { exit 1 }
+
   security-audit:
     name: security-audit
     runs-on: ubuntu-latest
@@ -57,14 +84,16 @@ jobs:
 
   test:
     name: test
-    needs: [test-matrix, security-audit]
+    needs: [test-matrix, powershell-parse, security-audit]
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
       - name: Preserve required branch-protection context
         env:
           MATRIX_RESULT: ${{ needs.test-matrix.result }}
+          POWERSHELL_RESULT: ${{ needs.powershell-parse.result }}
           SECURITY_AUDIT_RESULT: ${{ needs.security-audit.result }}
         run: |
           test "$MATRIX_RESULT" = "success"
+          test "$POWERSHELL_RESULT" = "success"
           test "$SECURITY_AUDIT_RESULT" = "success"
