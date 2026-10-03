@@ -1,0 +1,45 @@
+{
+  "schema": "minhtri-post-reboot-remote-reachability/v1",
+  "observed_at": "2026-10-03T15:35:00+07:00",
+  "scope": "bounded remote reachability audit from current ChatGPT project seat",
+  "github": {
+    "observed_main_sha": "deb75028de71621482b2325249750d6e52965c9a",
+    "open_pull_requests": 0,
+    "pr119_security_p0": {
+      "status": "PASS",
+      "workflow_run_id": 37109187612,
+      "jobs": [
+        "test-matrix (3.10): success",
+        "test-matrix (3.11): success",
+        "test-matrix (3.12): success",
+        "powershell-parse: success",
+        "security-audit: success",
+        "test: success"
+      ]
+    }
+  },
+  "remote_observations": {
+    "brain_read_plane": {
+      "status": "UNREACHABLE",
+      "bounded_error": "Tunnel-client has not been seen for 300 seconds. Ensure tunnel-client is running and connected.",
+      "exact_toolset_expected": [
+        "brain.verify",
+        "brain.recovery_packet"
+      ],
+      "verification_completed": false
+    },
+    "maintenance_plane": {
+      "status": "OFFLINE",
+      "device": "WIN-VBIQNFFDKIR",
+      "bounded_error": "No Desktop Commander device is currently online.",
+      "last_seen_reported": "41m ago",
+      "inspection_completed": false
+    }
+  },
+  "conclusions": [
+    "Current remote reachability is not proven at this observation.",
+    "Boot/reboot persistence must remain NOT_PROVEN; historical session PASS evidence does not establish current liveness.",
+    "Root cause is not established because the maintenance plane is offline and local task/process state cannot be inspected.",
+    "No secret material was read or recorded."
+  ]
+}
