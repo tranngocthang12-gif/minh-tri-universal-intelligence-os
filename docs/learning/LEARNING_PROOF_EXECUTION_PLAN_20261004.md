@@ -170,3 +170,22 @@ preregistered outcome metrics versus concurrent control.
 7. Run paired v1.4 benchmark with frozen baseline/gold labels/endpoints.
 8. Implement and test a data-plane TRIAL_RULE reader.
 9. Only then run three-arm interleaved A/B/C behavioral trial.
+
+
+## TRIAL_RULE data-plane reader implementation
+
+Implemented components:
+- `src/minhtri/trial_rule_runtime.py` compiles a task into one preregistered arm without mutating the ledger.
+- Owner-activated lessons may carry a structured `trial_spec` with experiment hash, domain, procedure, overlay and expiry.
+- Legacy text-only `scope` remains non-executable.
+- Exactly one fresh matching TRIAL_RULE is required; zero or multiple matches fail closed.
+- High-stakes domains are blocked.
+- Treatment and compute-matched arms must have identical compute budgets.
+- Only treatment receives the learned overlay; compute-matched receives equal compute without the lesson-targeted overlay.
+- The initial supported overlay is `COUNTEREVIDENCE_FIRST`.
+- Runtime plan always declares `write_capability=false`, `automatic_verified_promotion=false`, and `automatic_rule_promotion=false`.
+
+Causal criterion:
+- The preregistered primary success rule must be exactly `treatment > compute_matched`.
+- A/B/C execution infrastructure existing is not evidence of learning.
+- MINH TRI may claim evidence-backed behavioral learning only after new unseen tasks are randomized through the three arms and treatment beats compute-matched on the frozen primary endpoint while satisfying the frozen safety endpoint.
