@@ -11,7 +11,8 @@ if ($null -eq $secure) { throw 'BLOCKED_EMPTY_TUNNEL_KEY' }
 $encrypted = ConvertFrom-SecureString $secure
 if ([string]::IsNullOrWhiteSpace($encrypted)) { throw 'BLOCKED_DPAPI_SEAL_FAILED' }
 $tmp = $sealed + '.tmp'
-Set-Content -Path $tmp -Value $encrypted -Encoding utf8NoBOM
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+[System.IO.File]::WriteAllText($tmp, $encrypted, $utf8NoBom)
 Move-Item -Force $tmp $sealed
 
 $principal = "$env:USERDOMAIN\$env:USERNAME"
