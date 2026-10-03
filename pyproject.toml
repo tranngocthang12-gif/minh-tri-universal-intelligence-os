@@ -19,3 +19,6 @@ minhtri-self-upgrade = "minhtri.self_upgrade_runtime:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"minhtri.critic" = ["prompt_external_v1.txt"]
