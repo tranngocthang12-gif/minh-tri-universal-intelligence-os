@@ -380,5 +380,14 @@
     "src/minhtri/fresh_seat.py"
   ],
   "self_upgrade_candidate_a_rejection_reason": "Claude adversarial review exposed that autonomy enforcement code was candidate-mutable; current policy protects autonomy.py and fresh_seat.py. Historical Candidate A test evidence is preserved but no longer eligible for freeze.",
-  "learning_assurance_v14_effect_status": "DESIGN_AND_CI_CONTRACT_ONLY_EMPIRICAL_BENEFIT_NOT_PROVEN"
+  "learning_assurance_v14_effect_status": "DESIGN_AND_CI_CONTRACT_ONLY_EMPIRICAL_BENEFIT_NOT_PROVEN",
+  "meta_learning_min_candidate_resolutions": 50,
+  "meta_learning_multiplicity_control": "NOT_IMPLEMENTED",
+  "meta_learning_permutation_test": "REQUIRED_BEFORE_ADAPTATION",
+  "stale_capability_replay_status": "NOT_OBSERVED_AS_CURRENT_MUTATION_AUTHORITY_PARENT_LEASE_RECHECKS_BEFORE_MUTATION",
+  "ephemeral_runtime_epoch_tokens": "OPTIONAL_HARDENING_NOT_YET_REQUIRED_BY_PROVEN_DEFECT",
+  "external_critic_blind_packet_status": "IMPLEMENTED_ARTIFACT_TEST_LOG_EXPLICIT_CLAIMS_NO_LEARNER_REASONING_OR_PRIOR_CRITIC",
+  "external_critic_full_epistemic_independence": "NOT_PROVEN_SHARED_PRIORS_AND_CORPUS_INDEPENDENCE_NOT_ATTESTED",
+  "fresh_seat_research_coupling": "ONE_WAY_ATTESTATION_TO_RESEARCH_NO_RESEARCH_DEPENDENCY_IN_FRESH_SEAT_VALIDATOR",
+  "bitlocker_as_global_halt_gate": "NOT_ADOPTED_NO_PROVEN_REQUIREMENT"
 }
