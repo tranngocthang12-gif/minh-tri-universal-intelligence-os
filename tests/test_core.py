@@ -56,6 +56,49 @@ class CoreGates(unittest.TestCase):
         self.apply("propose_lesson", id="lesson1", claim_id="h1", statement="Try this narrow method",
                    limits="Two observations; confounding unresolved", prediction_ids=["f1", "f2"], adjudication_id="adj1")
 
+    def test_runtime_audit_event_records_lease_activation_without_conferring_authority(self):
+        self.apply(
+            "record_runtime_audit_event",
+            id="lease-created-1",
+            event_type="LEASE_CREATED",
+            lease_id="upgrade-abc",
+            occurred_at=self.at,
+            details={"duration_seconds": 86400},
+        )
+        self.apply(
+            "record_runtime_audit_event",
+            id="lease-activated-1",
+            event_type="LEASE_ACTIVATED",
+            lease_id="upgrade-abc",
+            occurred_at=self.at,
+            details={"runtime_status": "ACTIVE"},
+        )
+        created = self.state["runtime_audit_events"]["lease-created-1"]
+        activated = self.state["runtime_audit_events"]["lease-activated-1"]
+        self.assertEqual(created["status"], "AUDIT_ONLY_NOT_AUTHORITY")
+        self.assertEqual(activated["event_type"], "LEASE_ACTIVATED")
+        self.assertEqual(activated["lease_id"], "upgrade-abc")
+
+    def test_runtime_audit_event_rejects_unknown_type_and_future_time(self):
+        with self.assertRaises(GateError):
+            self.apply(
+                "record_runtime_audit_event",
+                id="bad-event",
+                event_type="LEASE_RENEWED",
+                lease_id="upgrade-abc",
+                occurred_at=self.at,
+                details={},
+            )
+        with self.assertRaises(GateError):
+            self.apply(
+                "record_runtime_audit_event",
+                id="future-event",
+                event_type="LEASE_ACTIVATED",
+                lease_id="upgrade-abc",
+                occurred_at="2027-01-01T00:00:00Z",
+                details={},
+            )
+
     def test_two_domains_do_not_change_core_and_wait_is_explicit(self):
         self.assertEqual(next_goal(self.state)["status"], "WAIT")
         self.apply("register_domain", id="youtube", name="YouTube", risk_class="NORMAL", measurement_contract="CTR")
