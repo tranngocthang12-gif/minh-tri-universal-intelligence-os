@@ -404,14 +404,14 @@
   "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
   "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
   "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
-  "learning_proof_next_checkpoint": "PREREGISTER_STAGE1_STAGE2_THEN_PROVE_OLD_KEY_REVOCATION_THEN_FROZEN_LEDGER_EXPORT",
+  "learning_proof_next_checkpoint": "OLD_KEY_REVOCATION_PROOF_THEN_FROZEN_LEDGER_AUDIT_CANARY_V14_THEN_FIRST_THREE_ARM_TRIAL",
   "frozen_ledger_audit_export": "IMPLEMENTED_READ_ONLY_VERIFY_COPY_HASH_NO_BRAIN_START",
   "resolution_resolver_input": "RAW_SOURCE_ONLY_NO_MODEL_TRACE_NO_CAPSULE_NO_ORIGINAL_RESOLUTION",
   "resolution_corpus_out_rate_gate": "PREREGISTERED_REQUIRED",
   "canary_ground_truth_governance": "DISTINCT_TRAP_AUTHOR_RUBRIC_AUTHOR_HUMAN_ADJUDICATOR",
   "canary_hard_negative_required": true,
   "behavioral_trial_preregistration": "PRIMARY_ENDPOINT_PLUS_SAFETY_ENDPOINT_FROZEN_BEFORE_UNBLINDING",
-  "behavioral_trial_assignment": "INTERLEAVED_TASK_ID_RANDOMIZED",
+  "behavioral_trial_assignment": "THREE_ARM_CONTROL_TREATMENT_COMPUTE_MATCHED",
   "behavioral_trial_first_routing_keys": [
     "domain_id",
     "procedure_id"
@@ -437,7 +437,15 @@
     "LESSON_TARGETED_TREATMENT",
     "COMPUTE_MATCHED_CONTROL"
   ],
-  "behavioral_learning_success_requires": "TREATMENT_OUTPERFORMS_COMPUTE_MATCHED_ON_PRIMARY_AND_PASSES_SAFETY",
-  "trial_rule_data_plane_reader": "NOT_IMPLEMENTED_BLOCKS_CLOSED_LOOP_LEARNING_CLAIM",
-  "runtime_recovery_prerequisite": "PROVE_OLD_TUNNEL_KEY_REVOCATION_BEFORE_REOPENING_TUNNEL"
+  "behavioral_learning_success_requires": "TREATMENT_OUTPERFORMS_COMPUTE_MATCHED_ON_PREREGISTERED_PRIMARY_AND_PASSES_SAFETY",
+  "trial_rule_data_plane_reader": "IMPLEMENTED_READ_ONLY_FAIL_CLOSED_PENDING_EMPIRICAL_EXECUTION",
+  "runtime_recovery_prerequisite": "PROVE_OLD_TUNNEL_KEY_REVOCATION_BEFORE_REOPENING_TUNNEL",
+  "trial_rule_machine_readable_spec": "IMPLEMENTED_OWNER_ACTIVATED_TTL_SCOPE_OVERLAY_HASH_BOUND",
+  "trial_rule_supported_overlays": [
+    "COUNTEREVIDENCE_FIRST"
+  ],
+  "behavioral_trial_runtime_write_capability": false,
+  "behavioral_trial_automatic_verified_promotion": false,
+  "behavioral_trial_empirical_status": "NOT_RUN_NOT_PROVEN",
+  "closed_loop_learning_status": "MEASUREMENT_EXECUTION_PATH_IMPLEMENTED_EMPIRICAL_CAUSAL_PROOF_PENDING"
 }
