@@ -1,6 +1,8 @@
 # AUTONOMOUS LEARNING ROADMAP — ANALYSIS — 2026-10-02
 
-**Status:** ARCHITECTURE ANALYSIS / NOT IMPLEMENTED / NOT VERIFIED  
+**Status:** HISTORICAL ARCHITECTURE ANALYSIS / SUPERSEDED AS CURRENT CAPABILITY DESCRIPTION  
+**Current-status note (2026-10-03):** This file preserves the dependency rationale recorded on 2026-10-02. Its "current classification" and implementation-status statements are historical and must not be used as present state. Read `docs/PROJECT_STATE.json` and `docs/ARCHITECTURE_NOW_20261003.md` for current capability. The ordering principle—security and recoverability before broader autonomy—remains valid.
+
 **Owner direction analyzed:**  
 `merge/sync security → read-only brain bridge → research adapter → automatic critic → lesson proposal → background autonomous learning`
 

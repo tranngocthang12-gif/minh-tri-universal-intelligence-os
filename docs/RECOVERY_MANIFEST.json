@@ -62,7 +62,16 @@
     "research_adapter_gate_source": "CANONICAL_PROJECT_STATE_ONLY_FAIL_CLOSED",
     "independent_witness_interface_gate": "BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL",
     "runtime_liveness_authoritative_field": "current_runtime_liveness",
-    "legacy_runtime_current_fields_liveness_authority": false
+    "legacy_runtime_current_fields_liveness_authority": false,
+    "active_workstream": "RUNTIME_ASSURANCE_AND_LEARNING_ASSURANCE_EMPIRICAL_VALIDATION",
+    "learning_assurance_v14": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
+    "adaptive_deliberation_contract": "IMPLEMENTED_DETERMINISTIC_EFFORT_FLOOR_NO_CHAIN_OF_THOUGHT_STORAGE",
+    "grounded_research_trace_contract": "IMPLEMENTED_TYPED_SOURCE_ROLE_CITATION_CONFLICT_DIGEST_BOUND",
+    "context_capsule_contract": "IMPLEMENTED_DIGEST_BOUND_REFRESHABLE_CONTEXT_ONLY_NOT_CANONICAL_TRUTH",
+    "provider_pattern_import_policy": "GENERIC_MECHANISMS_ONLY_NO_PROVIDER_HIDDEN_STATE_CANONICALIZATION",
+    "autonomy_write_capability": false,
+    "autonomy_automatic_verified_promotion": false,
+    "autonomy_automatic_trial_activation": false
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",
@@ -71,6 +80,7 @@
     "brain_http": "minhtri-brain-http/v1",
     "external_witness": "minhtri-external-witness/v1",
     "dedicated_mcp": "mcp/2.x stdio",
-    "secure_mcp_tunnel": "OpenAI Secure MCP Tunnel"
+    "secure_mcp_tunnel": "OpenAI Secure MCP Tunnel",
+    "learning_assurance": "minhtri-learning-assurance/v1.4"
   }
 }

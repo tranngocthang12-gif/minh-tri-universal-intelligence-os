@@ -33,16 +33,24 @@ Current GitHub witness chỉ process-separated; chưa độc lập trước full
 
 ## 4. Runtime proof hiện tại
 
-- Secure tunnel: LIVE, `/readyz=200 ready`.
-- Connector: đúng hai read-only tools.
-- Brain: `VALID`, event_count=3, head `ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927`.
-- Supervisor child restart: PASS trong cùng session.
-- Boot/reboot persistence: NOT_PROVEN.
-- Owner write gate v2: wrong-secret fail-closed + DPAPI positive repair-snapshot E2E PASS.
-- Local canonical write clone đã sync sạch với GitHub main sau merge #91.
-- Old tunnel key revocation: NOT_VERIFIED.
-- Fresh-seat recovery: PENDING.
-- Independent witness: BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL.
+Runtime evidence và current liveness là hai lớp khác nhau.
+
+**Fresh observation trong đợt rà soát kiến trúc này:**
+- canonical brain read plane trả `brain.verify = VALID`, event_count=3, head `ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927`;
+- `brain.recovery_packet` trả cùng head và focus ACTIVE `youtube` / `chat quen, so khong` / `UNTESTED_EXPECTATION`;
+- do đó local brain connector là `UP` tại thời điểm kiểm này;
+- Secure MCP `/readyz` và maintenance plane không được recheck riêng trong lượt này, nên current liveness của hai lớp đó là `UNKNOWN`, không được suy từ bằng chứng cũ.
+
+**Historical proven evidence vẫn được giữ:**
+- connector từng chứng minh đúng hai read-only tools;
+- supervisor child restart từng PASS trong cùng session;
+- Owner write gate v2 từng PASS wrong-secret fail-closed + DPAPI repair-snapshot E2E;
+- boot/reboot persistence: NOT_PROVEN;
+- old tunnel key revocation: NOT_VERIFIED;
+- fresh-seat recovery: PENDING;
+- independent witness: BLOCKED_NO_INDEPENDENT_AUTHORITY_PROVIDER_CREDENTIAL.
+
+Một live check không phải persistence proof; một historical PASS không phải current liveness.
 
 ## 5. Host security
 
@@ -132,17 +140,19 @@ Provider-neutral mechanisms inspired by public Gemini/Claude/Grok documentation:
 ## 8. Promotion gates còn mở
 
 1. verify/revoke every old tunnel key;
-2. harden Desktop Commander filesystem scope in a separate config-hardening chat;
+2. harden Desktop Commander filesystem scope under its dedicated maintenance safety boundary;
 3. establish secure boot persistence design and prove after controlled restart/reboot;
 4. resolve endpoint-protection and BitLocker UNKNOWNs with stronger evidence;
 5. perform genuine fresh-seat validation;
 6. establish independent witness authority/credential;
-7. clean/resolve remaining active learning and Dependabot PRs;
-8. only then reconsider closing foundation build phase.
+7. capture a real external critic execution receipt/evidence before claiming operational critic independence;
+8. empirically validate Learning Assurance v1.4 against real work before claiming it improves accuracy;
+9. clean/resolve remaining active learning and Dependabot PRs;
+10. only then reconsider closing foundation build phase.
 
 ## 9. Backlog hygiene
 
-Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed, with history preserved. Learning PRs and current dependency PRs remain active and must be evaluated on current main before merge.
+Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed, with history preserved. Learning Assurance v1–v1.4 has been merged and is now part of current architecture. Remaining learning-domain PRs and dependency PRs are separate backlog items and must be evaluated on current main before merge.
 
 ## 10. Bootstrap
 
@@ -156,3 +166,17 @@ Read in order:
 ## 11. Non-self-referential deployment evidence
 
 A recorded local deployment SHA is historical evidence only. It must never be interpreted as a requirement that the local clone equal the repository's forever-current main SHA, because merging a state update creates a newer main commit by definition. Operational alignment is instead expressed as a clean tracking relationship to `origin/main` at the time of observation; exact SHA is retained only as bounded evidence.
+
+## 12. Architecture synchronization rule — 2026-10-03
+
+Current machine-readable state, this architecture record, the Law Index, recovery manifest and role bootstrap must agree on:
+
+- authority order;
+- current learning-assurance generation;
+- runtime evidence vs current liveness semantics;
+- background autonomy remaining OFF;
+- research adapter remaining fail-closed until the genuine fresh-seat gate passes;
+- no automatic VERIFIED, automatic trial activation or autonomous durable mutation;
+- provider/model/tool mechanisms remaining replaceable and non-canonical.
+
+Historical documents may preserve old implementation status, but must be explicitly marked historical/superseded when they are no longer valid descriptions of current capability.

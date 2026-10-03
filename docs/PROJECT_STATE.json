@@ -13,12 +13,12 @@
   "current_law_index": "docs/LAW_INDEX_20261003.md",
   "current_architecture": "docs/ARCHITECTURE_NOW_20261003.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "ZERO_CHAT_RECOVERY_E2E_AND_READONLY_CONNECTOR_BOUNDARY",
+  "active_workstream": "RUNTIME_ASSURANCE_AND_LEARNING_ASSURANCE_EMPIRICAL_VALIDATION",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "VERIFY_OLD_TUNNEL_KEY_REVOCATION_THEN_DESKTOP_COMMANDER_HARDENING_BOOT_PERSISTENCE_FRESH_SEAT_AND_INDEPENDENT_WITNESS",
+  "next_checkpoint": "FRESH_SEAT_VALIDATION_AND_CURRENT_RUNTIME_ASSURANCE",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -143,17 +143,15 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T01:04:00+07:00",
-    "owner_pc": "ONLINE",
-    "maintenance_plane": "ONLINE",
-    "secure_mcp_tunnel": "UP",
+    "observed_at": "2026-10-03T12:26:00+07:00",
+    "owner_pc": "REACHABLE_VIA_CANONICAL_BRAIN_READ_PLANE",
+    "maintenance_plane": "UNKNOWN_NOT_RECHECKED_THIS_AUDIT",
+    "secure_mcp_tunnel": "UNKNOWN",
     "local_brain_connector": "UP",
     "evidence": [
-      "Desktop Commander maintenance plane remained reachable during 2026-10-03 audit",
-      "Secure tunnel process present and readyz returned HTTP 200 ready after replacement runtime key entry",
-      "Connector surface exposed exactly brain.verify and brain.recovery_packet",
-      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
-      "Earlier controlled tunnel-client child termination was recovered by supervisor in-session"
+      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927 in this architecture audit",
+      "brain.recovery_packet returned VALID with ACTIVE youtube focus and UNTESTED_EXPECTATION in this architecture audit",
+      "Secure MCP /readyz and maintenance plane were not separately rechecked in this audit; their current liveness remains UNKNOWN here"
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
@@ -220,5 +218,18 @@
   "adaptive_deliberation_contract": "IMPLEMENTED_DETERMINISTIC_EFFORT_FLOOR_NO_CHAIN_OF_THOUGHT_STORAGE",
   "grounded_research_trace_contract": "IMPLEMENTED_TYPED_SOURCE_ROLE_CITATION_CONFLICT_DIGEST_BOUND",
   "context_capsule_contract": "IMPLEMENTED_DIGEST_BOUND_REFRESHABLE_CONTEXT_ONLY_NOT_CANONICAL_TRUTH",
-  "provider_pattern_import_policy": "GENERIC_MECHANISMS_ONLY_NO_PROVIDER_HIDDEN_STATE_CANONICALIZATION"
+  "provider_pattern_import_policy": "GENERIC_MECHANISMS_ONLY_NO_PROVIDER_HIDDEN_STATE_CANONICALIZATION",
+  "open_foundation_gates": [
+    "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
+    "HARDEN_DESKTOP_COMMANDER_FILESYSTEM_SCOPE",
+    "PROVE_BOOT_REBOOT_PERSISTENCE",
+    "RESOLVE_ENDPOINT_PROTECTION_AND_BITLOCKER_UNKNOWNS",
+    "PASS_GENUINE_FRESH_SEAT_VALIDATION",
+    "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
+    "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
+    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
+  ],
+  "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
+  "architecture_sync_latest": "CURRENT_AUTHORITY_ALIGNED_THROUGH_LEARNING_ASSURANCE_V14_PENDING_EXACT_HEAD_CI",
+  "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED"
 }
