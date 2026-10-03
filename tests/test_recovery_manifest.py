@@ -213,7 +213,7 @@ class RecoveryManifestConsistency(unittest.TestCase):
             state["tunnel_runtime_key_persistence"],
             "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
         )
-        self.assertEqual(state["tunnel_boot_registration"], "ABSENT_BOUNDED_PROBE")
+        self.assertEqual(state["tunnel_boot_registration"], "NOT_INSTALLED_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET")
         self.assertIn("DO_NOT_REBOOT", state["boot_persistence_precheck_decision"])
         self.assertTrue((ROOT / state["boot_persistence_latest_precheck"]).is_file())
 
