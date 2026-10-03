@@ -109,7 +109,7 @@ ALLOWED_FIELDS = {
     "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
     "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id", "counterevidence_ids", "counterevidence_search_note", "applicability"},
     "freeze_lesson": {"lesson_id"},
-    "activate_trial_lesson": {"lesson_id", "owner_ack", "scope"},
+    "activate_trial_lesson": {"lesson_id", "owner_ack", "scope", "trial_spec"},
     "record_external_case": {"id", "domain_id", "evidence_ids", "outcome", "context", "mechanism_hypothesis", "transfer_limits", "uncertainty"},
     "freeze_learning_packet": {"id", "trace_id", "claim_id", "counterevidence_ids", "external_case_ids", "counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint"},
     "record_critic_execution": {"id", "packet_id", "critic_provider_id", "provider", "model", "run_id", "context_mode", "output_hash", "verdict", "reason", "missing_evidence"},
@@ -546,6 +546,38 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         string(d["scope"], "scope")
         if out["domains"][lesson["domain_id"]]["risk_class"] == "HIGH_STAKES":
             raise GateError("High-stakes domain rules need a separate expert and Owner gate; not implemented in v0.1")
+
+        trial_spec = d.get("trial_spec")
+        if trial_spec is not None:
+            required = {
+                "experiment_id",
+                "preregistration_hash",
+                "domain_id",
+                "procedure_id",
+                "overlay_id",
+                "expires_at",
+            }
+            if not isinstance(trial_spec, dict) or set(trial_spec) != required:
+                raise GateError("trial_spec has invalid schema")
+            if trial_spec["domain_id"] != lesson["domain_id"]:
+                raise GateError("trial_spec domain must match lesson domain")
+            procedure = ref(out, "procedures", trial_spec["procedure_id"])
+            if procedure["domain_id"] != lesson["domain_id"]:
+                raise GateError("trial_spec procedure crosses lesson domain")
+            for key in ("experiment_id", "preregistration_hash", "overlay_id", "expires_at"):
+                string(trial_spec[key], "trial_spec." + key)
+            if not re.fullmatch(r"[0-9a-f]{64}", trial_spec["preregistration_hash"]):
+                raise GateError("trial_spec.preregistration_hash must be sha256 hex")
+            if trial_spec["overlay_id"] not in ("COUNTEREVIDENCE_FIRST",):
+                raise GateError("unsupported trial overlay")
+            if parse_time(trial_spec["expires_at"]) <= parse_time(event_time):
+                raise GateError("trial_spec must expire in the future")
+            lesson["trial_spec"] = copy.deepcopy(trial_spec)
+            lesson["trial_spec_hash"] = digest(trial_spec)
+            lesson["runtime_trial_status"] = "EXECUTABLE_DECLARATIVE_OVERLAY"
+        else:
+            lesson["runtime_trial_status"] = "LEGACY_NONEXECUTABLE_SCOPE_ONLY"
+
         lesson["status"] = "TRIAL_RULE"
         lesson["owner_acceptance"] = "OWNER_ACCEPTED"
         lesson["scope"] = d["scope"]
