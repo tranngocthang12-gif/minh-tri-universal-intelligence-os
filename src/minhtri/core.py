@@ -125,6 +125,7 @@ ALLOWED_FIELDS = {
     "record_context_capsule": {"id", "domain_id", "artifact_refs", "summary", "refresh_after", "context_purpose"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
     "record_runtime_audit_event": {"id", "event_type", "lease_id", "occurred_at", "details"},
+    "record_external_critic_run": {"id", "candidate_generation_id", "lease_id", "critic_provider", "critic_model", "prompt_version", "run_id", "packet_hash", "output_hash", "blind_or_revealed", "channel", "independence_status", "verdict", "findings", "post_expiry"},
 }
 
 FOCUS_ACTIVE_FIELDS = {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty"}
@@ -195,7 +196,48 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
     out = copy.deepcopy(state)
     parse_time(event_time)
 
-    if kind == "record_runtime_audit_event":
+    if kind == "record_external_critic_run":
+        need(d, "id", "candidate_generation_id", "lease_id", "critic_provider", "critic_model",
+             "prompt_version", "run_id", "packet_hash", "output_hash", "blind_or_revealed",
+             "channel", "independence_status", "verdict", "findings", "post_expiry")
+        identifier(d["id"], "external critic run ID")
+        for key in ("candidate_generation_id", "lease_id", "critic_provider", "critic_model",
+                    "prompt_version", "run_id", "packet_hash", "output_hash"):
+            string(d[key], key)
+        if not re.fullmatch(r"[0-9a-f]{64}", d["packet_hash"]):
+            raise GateError("packet_hash must be sha256 hex")
+        if not re.fullmatch(r"[0-9a-f]{64}", d["output_hash"]):
+            raise GateError("output_hash must be sha256 hex")
+        if d["blind_or_revealed"] not in ("BLIND", "REVEALED"):
+            raise GateError("blind_or_revealed must be BLIND or REVEALED")
+        if d["channel"] not in ("OWNER_MANUAL", "API"):
+            raise GateError("invalid external critic channel")
+        if d["independence_status"] not in ("PARTIAL", "PROVEN"):
+            raise GateError("invalid external critic independence status")
+        if d["verdict"] not in ("DEFECT_FOUND", "NO_MATERIAL_DEFECT_FOUND"):
+            raise GateError("invalid external critic verdict")
+        if type(d["post_expiry"]) is not bool:
+            raise GateError("post_expiry must be boolean")
+        if not isinstance(d["findings"], list):
+            raise GateError("findings must be a list")
+        for finding in d["findings"]:
+            if not isinstance(finding, dict) or set(finding) != {"target", "severity", "failure_path", "missing_evidence"}:
+                raise GateError("invalid external critic finding schema")
+            if finding["severity"] not in ("LOW", "MEDIUM", "HIGH", "CRITICAL"):
+                raise GateError("invalid external critic finding severity")
+            for key in ("target", "failure_path"):
+                string(finding[key], key)
+            if not isinstance(finding["missing_evidence"], list) or any(
+                not isinstance(v, str) or not v.strip() for v in finding["missing_evidence"]
+            ):
+                raise GateError("external critic missing_evidence must be a text list")
+        d["recorded_at"] = event_time
+        d["status"] = "POST_EXPIRY_EVIDENCE_ONLY" if d["post_expiry"] else "RECORDED"
+        d["automatic_verified_promotion"] = False
+        out.setdefault("external_critic_runs", {})
+        add(out, "external_critic_runs", d)
+
+    elif kind == "record_runtime_audit_event":
         need(d, "id", "event_type", "lease_id", "occurred_at", "details")
         identifier(d["id"], "runtime audit event ID")
         if d["event_type"] not in ("LEASE_CREATED", "LEASE_ACTIVATED", "LEASE_EXPIRED", "LEASE_REVOKED"):
