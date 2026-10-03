@@ -58,3 +58,19 @@ Eligibility is not VERIFIED truth and is not promotion.
 8. Demonstrated a Candidate freezes pending Owner rather than self-promoting.
 
 Only after these bounded proofs may Owner explicitly activate a real 24-hour lease.
+
+
+## Explicit activation authorization — 2026-10-03
+
+Owner explicitly accepted the bounded containment evidence already recorded in canonical runtime evidence and issued the command to activate the real 24-hour self-upgrade lease immediately.
+
+Authorization semantics:
+- duration: 86,400 seconds maximum;
+- no automatic renewal;
+- candidate/self-upgrade branch writes only;
+- TEST → CRITIC → FREEZE remains mandatory;
+- no automatic VERIFIED, trial activation, candidate promotion, push, merge, or canonical write capability;
+- expiry/revoke/clock anomalies fail closed;
+- existing GitHub PR + required CI + branch protection remain merge authority.
+
+Runtime status at the moment of this record: AUTHORIZED_PENDING_LIVE_OWNER_PC_START. This document must not be interpreted as proof that the lease process is already running; live activation requires Owner-PC runtime evidence.
