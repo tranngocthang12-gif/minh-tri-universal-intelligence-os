@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "PR120_CI_PASS_MERGE_CANONICAL_SYNC_THEN_CONTROLLED_REBOOT_PERSISTENCE_PROOF",
+  "next_checkpoint": "RESTORE_FRESH_RUNTIME_PROOF_THEN_COMPLETE_CANDIDATE_A_EXTERNAL_CRITIC_AND_FOUNDATION_GATES",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -29,7 +29,7 @@
   "external_anchor_publication_blocker": "INDEPENDENT_WRITE_AUTHORITY_NOT_PROVEN",
   "readonly_brain_transport_contract": "IMPLEMENTED_AND_MERGED",
   "owner_credential_v2": "VERIFIER_IMPLEMENTED_AND_MERGED",
-  "owner_credential_v1": "MIGRATION_COMPATIBILITY_ACTIVE",
+  "owner_credential_v1": "CODE_COMPATIBILITY_PRESENT_RUNTIME_ABSENT_AT_LAST_PROOF",
   "historical_anchor_prefix_verification": "IMPLEMENTED_AND_MERGED",
   "anchor_timestamp_policy": "UTC_Z_STRICT_MONOTONIC_IMPLEMENTED",
   "readonly_brain_transport_dispatcher": "IMPLEMENTED_AND_MERGED",
@@ -143,20 +143,17 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T15:52:12+07:00",
-    "owner_pc": "ONLINE",
-    "maintenance_plane": "ONLINE",
-    "secure_mcp_tunnel": "UP",
-    "local_brain_connector": "UP",
+    "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
+    "owner_pc": "UNKNOWN_DEGRADED",
+    "maintenance_plane": "UNKNOWN_DEGRADED_TIMEOUT",
+    "secure_mcp_tunnel": "UNKNOWN_DEGRADED_NO_POLL",
+    "local_brain_connector": "UNKNOWN_DEGRADED_NO_POLL",
     "evidence": [
-      "Desktop Commander ping PASS after manual restoration of maintenance-plane reachability.",
-      "Scheduled Task MINH_TRI_Readonly_Tunnel exists and is currently running.",
-      "DPAPI tunnel secret exists.",
-      "runtime_supervisor, tunnel-client and minhtri.mcp_readonly processes are present.",
-      "GET /readyz returned HTTP 200 ready.",
-      "brain.verify returned VALID event_count=3 with head ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927.",
-      "brain.recovery_packet returned VALID with active youtube focus and UNTESTED_EXPECTATION."
-    ]
+      "Fresh brain.verify during AUTO audit failed because tunnel-client did not poll after the request was enqueued.",
+      "Fresh Desktop Commander state read and follow-up ping timed out after the device had previously appeared online.",
+      "Historical PASS evidence remains preserved under last_proven_runtime_evidence and is not current-liveness proof."
+    ],
+    "recovery_condition": "REQUIRE_FRESH_MAINTENANCE_PING_READYZ_BRAIN_VERIFY_RECOVERY_PACKET"
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
   "owner_pc_write_runtime_deployment": "SYNCED_CLEAN_TO_ORIGIN_MAIN_AT_LAST_OBSERVATION_2026-10-03",
@@ -228,7 +225,7 @@
   "architecture_sync_latest": "LIVE_24H_ACTIVE_WITH_AUTHENTICATED_WORKER_HANDOFF_2026-10-04",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
-  "runtime_assurance_latest_evidence": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
+  "runtime_assurance_latest_evidence": "docs/runtime_evidence/AUTO_RUNTIME_DEGRADED_20261004.json",
   "persistence_probe_latest": "LOGON_TASK_EXISTS_RUNNING_HARDENED_SETTINGS_2026-10-03T15:52+07_REBOOT_PROOF_PENDING",
   "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
   "fresh_chat_seat_validation_latest_attempt": "docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json",
@@ -297,7 +294,7 @@
   "self_upgrade_codex_required_path_gate": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_candidate_control_plane_protection": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_test_critic_freeze_lifecycle_e2e": "PASS_OWNER_PC_BOUNDED_LIFECYCLE_2026-10-03",
-  "self_upgrade_next_checkpoint": "RUN_FIRST_REAL_CANDIDATE_THROUGH_TEST_INTERNAL_CRITIC_MANUAL_EXTERNAL_CRITIC_AND_LEDGER_RECEIPT",
+  "self_upgrade_next_checkpoint": "CANDIDATE_A_EXTERNAL_CRITIC_RESPONSE_HASH_VALIDATE_LEDGER_RECEIPT_THEN_FROZEN_PENDING_OWNER_IF_NO_MATERIAL_DEFECT",
   "self_upgrade_test_critic_freeze_lifecycle": "IMPLEMENTED_MERGED_CI_AND_OWNER_PC_E2E_PROVEN_2026-10-03",
   "self_upgrade_candidate_test_runner": "CODEX_WINDOWS_RESTRICTED_TOKEN_NETWORK_DISABLED_OWNER_PC_PASS_2026-10-03",
   "self_upgrade_candidate_critic": "CODEX_READ_ONLY_SAME_PROVIDER_NOT_INDEPENDENT_OWNER_PC_RECORDED_NO_MATERIAL_DEFECT_2026-10-03",
@@ -320,7 +317,7 @@
   "external_critic_independence_semantics": "PARTIAL_NOT_PROVEN",
   "external_critic_candidate_path_protection": "SRC_MINHTRI_CRITIC_PREFIX_DENY",
   "external_critic_freeze_gate": "OPTIONAL_INTEGRATION_FAIL_CLOSED_WHEN_CONFIGURED",
-  "external_critic_runtime_execution_evidence": "NOT_YET_CAPTURED",
+  "external_critic_runtime_execution_evidence": "CANDIDATE_A_PENDING_EXTERNAL_CRITIC_2026-10-04",
   "self_upgrade_authenticated_worker_handoff": "IMPLEMENTED_MERGED_CI_AND_OWNER_PC_SMOKE_PASS_2026-10-04",
   "self_upgrade_authenticated_worker_handoff_merge_sha": "3004f910cd0354c06f78b6d961c7c716bb79ec1c",
   "self_upgrade_authenticated_worker_handoff_evidence": "docs/runtime_evidence/AUTHENTICATED_WORKER_HANDOFF_OWNER_PC_20261004T003158_PLUS0700.json",
@@ -328,5 +325,11 @@
   "self_upgrade_live_24h_eval_packet_hash": "3126ac3f7f211c72f057bbcd510664f3466ca4953fde41df113cf00f4b0668eb",
   "self_upgrade_live_24h_champion_sha": "fc9e7b5252773eaa5f8fc077fd5ea32febd7743f",
   "self_upgrade_live_24h_eval_dataset_hash": "181ab26d5607f679701b9c957b0271b80d9eb3410299bc54bf4fb4221e518912",
-  "self_upgrade_authenticated_worker_handoff_runtime": "ACTIVE_PARENT_ENFORCED_WORKER_NO_LEASE"
+  "self_upgrade_authenticated_worker_handoff_runtime": "ACTIVE_PARENT_ENFORCED_WORKER_NO_LEASE",
+  "self_upgrade_candidate_a_status": "PENDING_EXTERNAL_CRITIC",
+  "self_upgrade_candidate_a_packet_hash": "eb03dea4a9e4635b6d8d0a6185fd0e2ab76bf2fe831571830d39b40478ed13c7",
+  "self_upgrade_candidate_a_changed_paths": [
+    "src/minhtri/autonomy.py"
+  ],
+  "self_upgrade_candidate_a_test": "PASS_TARGETED_20_FULL_233_2026-10-04"
 }
