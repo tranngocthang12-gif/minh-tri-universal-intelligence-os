@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LOGON_TASK_AND_CONTROLLED_REBOOT",
+  "next_checkpoint": "OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -220,10 +220,11 @@
     "PASS_GENUINE_FRESH_SEAT_VALIDATION",
     "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
-    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
+    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14",
+    "RESOLVE_OPEN_LEARNING_AND_DEPENDABOT_BACKLOG"
   ],
   "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
-  "architecture_sync_latest": "CURRENT_AUTHORITY_ALIGNED_THROUGH_LEARNING_ASSURANCE_V14_MERGED_CI_PROVEN_2026-10-03",
+  "architecture_sync_latest": "AUDIT_ALIGNED_THROUGH_PR112_POWERSHELL_PERSISTENCE_CI_AND_SECRET_SAFE_AUTOSTART_DEPLOYMENT_2026-10-03",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
@@ -237,5 +238,9 @@
   "local_canonical_clone_recovery_readiness": "STALE_RELATIVE_TO_LIVE_MAIN_AT_PRECHECK",
   "secret_safe_tunnel_autostart": "IMPLEMENTED_MERGED_CI_PROVEN_DEPLOYED_TO_OWNER_PC_RUNTIME",
   "tunnel_unattended_launcher_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
-  "tunnel_logon_task_installer_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET"
+  "tunnel_logon_task_installer_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
+  "architecture_audit_latest": "docs/ARCHITECTURE_AUDIT_COMPLETION_PLAN_20261003.md",
+  "tunnel_persistence_source_fix": "PR112_MERGED_POWERSHELL_ACL_GRANT_FIXED_WINDOWS_PARSE_CI_PASS",
+  "tunnel_persistence_corrected_script_owner_pc_deployment": "DEPLOYED_AND_READBACK_MATCHED_DURING_2026-10-03_ARCHITECTURE_AUDIT",
+  "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json"
 }
