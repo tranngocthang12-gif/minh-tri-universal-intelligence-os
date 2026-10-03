@@ -56,3 +56,87 @@ class LearningExperimentTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TrialRuleRuntimeTests(unittest.TestCase):
+    def _state_with_rule(self):
+        from minhtri.core import initial_state
+        from minhtri.trial_rule_runtime import preregistration_digest
+        state = initial_state()
+        state["domains"]["media"] = {
+            "id": "media", "name": "Media", "risk_class": "NORMAL",
+            "measurement_contract": "utility"
+        }
+        state["providers"]["p"] = {"id": "p", "name": "P", "kind": "MODEL"}
+        state["procedures"]["proc"] = {
+            "id": "proc", "domain_id": "media", "provider_id": "p",
+            "version": "1", "method": "bounded"
+        }
+        experiment = prereg()
+        h = preregistration_digest(experiment)
+        state["lessons"]["lesson"] = {
+            "id": "lesson",
+            "domain_id": "media",
+            "status": "TRIAL_RULE",
+            "runtime_trial_status": "EXECUTABLE_DECLARATIVE_OVERLAY",
+            "trial_spec_hash": "9" * 64,
+            "trial_spec": {
+                "experiment_id": experiment["experiment_id"],
+                "preregistration_hash": h,
+                "domain_id": "media",
+                "procedure_id": "proc",
+                "overlay_id": "COUNTEREVIDENCE_FIRST",
+                "expires_at": "2026-10-05T00:00:00Z",
+            },
+        }
+        return state, experiment
+
+    def test_trial_rule_reader_is_read_only_and_arm_specific(self):
+        from datetime import datetime, timezone
+        from minhtri.trial_rule_runtime import build_trial_execution_plan
+        state, experiment = self._state_with_rule()
+        task = {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"}
+        plan = build_trial_execution_plan(
+            state, task, experiment, assignment_secret="seed",
+            now=datetime(2026, 10, 4, 0, 0, tzinfo=timezone.utc),
+        )
+        self.assertIn(plan["arm"], {"CONTROL", "TREATMENT", "COMPUTE_MATCHED"})
+        self.assertFalse(plan["write_capability"])
+        self.assertFalse(plan["automatic_verified_promotion"])
+        if plan["arm"] == "TREATMENT":
+            self.assertEqual(plan["overlay_id"], "COUNTEREVIDENCE_FIRST")
+            self.assertTrue(plan["counterevidence_required"])
+        else:
+            self.assertIsNone(plan["overlay_id"])
+            self.assertFalse(plan["counterevidence_required"])
+
+    def test_expired_trial_rule_fails_closed(self):
+        from datetime import datetime, timezone
+        from minhtri.trial_rule_runtime import TrialRuleRuntimeError, build_trial_execution_plan
+        state, experiment = self._state_with_rule()
+        with self.assertRaises(TrialRuleRuntimeError):
+            build_trial_execution_plan(
+                state,
+                {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"},
+                experiment,
+                assignment_secret="seed",
+                now=datetime(2026, 10, 6, 0, 0, tzinfo=timezone.utc),
+            )
+
+    def test_treatment_and_compute_matched_must_have_equal_budget(self):
+        from datetime import datetime, timezone
+        from minhtri.trial_rule_runtime import TrialRuleRuntimeError, build_trial_execution_plan
+        state, experiment = self._state_with_rule()
+        experiment["compute_budget_contract"]["compute_matched"] = {
+            "retrieval_calls": 3, "critic_calls": 2
+        }
+        from minhtri.trial_rule_runtime import preregistration_digest
+        state["lessons"]["lesson"]["trial_spec"]["preregistration_hash"] = preregistration_digest(experiment)
+        with self.assertRaises(TrialRuleRuntimeError):
+            build_trial_execution_plan(
+                state,
+                {"task_id": "task-a", "domain_id": "media", "procedure_id": "proc"},
+                experiment,
+                assignment_secret="seed",
+                now=datetime(2026, 10, 4, 0, 0, tzinfo=timezone.utc),
+            )
