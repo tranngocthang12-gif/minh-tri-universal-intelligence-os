@@ -15,6 +15,7 @@ mcp = ["mcp>=2,<3"]
 minhtri = "minhtri.cli:main"
 minhtri-autonomy = "minhtri.autonomy:main"
 minhtri-runtime-supervisor = "minhtri.runtime_supervisor:main"
+minhtri-self-upgrade = "minhtri.self_upgrade_runtime:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
