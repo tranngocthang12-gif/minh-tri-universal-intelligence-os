@@ -1,4 +1,5 @@
 import json
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -34,6 +35,13 @@ class CodexProviderTests(unittest.TestCase):
             candidate_branch="candidate/GEN-2",
             candidate_root=self.work,
         )
+
+    def test_run_closes_stdin_for_true_noninteractive_exec(self):
+        p = self.provider()
+        completed = mock.Mock(returncode=0, stdout="{}", stderr="")
+        with mock.patch("minhtri.codex_provider.shutil.which", return_value="codex.cmd"),              mock.patch("minhtri.codex_provider.subprocess.run", return_value=completed) as run:
+            p._run(sandbox="read-only", prompt="x")
+        self.assertIs(run.call_args.kwargs["stdin"], subprocess.DEVNULL)
 
     def test_plan_is_read_only_and_scope_validated(self):
         plan_json = json.dumps({
