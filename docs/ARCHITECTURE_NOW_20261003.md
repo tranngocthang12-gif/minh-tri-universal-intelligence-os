@@ -71,6 +71,20 @@ UNKNOWN stays UNKNOWN; no promotion from absence of evidence.
 
 Self-critique, autonomous-learning and meta-learning engines exist/staged, but background autonomous runtime is off. Research adapter stays fail-closed until fresh-seat PASS. No automatic VERIFIED, no automatic trial activation, no autonomous durable mutation.
 
+### Learning Assurance v1
+
+Owner learning strategy now separates **learning capital** from **promoted lessons**:
+
+- external success/failure/mixed cases may be accumulated as `EXTERNAL_CASE_CAPITAL_UNVERIFIED`;
+- external cases are not lesson-eligible by themselves and cannot substitute for Owner first-party practice;
+- important reviews can freeze a learning packet with target/evidence hashes, counterevidence references, context contract, instruction version and toolset fingerprint;
+- critic execution provenance records declared provider/model/run, BLIND/REVEALED mode, output hash and missing evidence;
+- `ABSTAIN` is distinct from `REVIEW_INCOMPLETE`;
+- negative controls are recorded separately as PASS/FAIL/INCONCLUSIVE and never imply VERIFIED truth;
+- meta-learning may summarize patterns and propose candidates, but cannot auto-promote canonical rules or infer cross-domain transfer from case counts.
+
+This layer is additive to the existing ledger. It does not create a multi-agent dependency and does not enable background autonomy.
+
 ## 8. Promotion gates còn mở
 
 1. verify/revoke every old tunnel key;
