@@ -68,6 +68,8 @@ class GenerationTests(unittest.TestCase):
         for path in (
             "src/minhtri/upgrade_lease.py",
             "src/minhtri/owner.py",
+            "src/minhtri/autonomy.py",
+            "src/minhtri/fresh_seat.py",
             "docs/PROJECT_STATE.json",
             "docs/LAW_INDEX_20261003.md",
             ".github/workflows/security.yml",
