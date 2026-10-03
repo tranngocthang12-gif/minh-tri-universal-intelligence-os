@@ -1,0 +1,60 @@
+# OWNER DECISION — 24H SELF-UPGRADE LEASE — 2026-10-03
+
+**Status:** IMPLEMENTATION DECISION / RUNTIME NOT ACTIVATED  
+**Owner intent:** permit bounded self-learning and candidate self-upgrade for at most 24 hours, then automatically remove upgrade authority and freeze candidates for Owner review.
+
+## Control flow
+
+OWNER
+→ 24H LEASE
+→ SELF-LEARN
+→ SELF-UPGRADE
+→ CANDIDATE
+→ TEST / CRITIC
+→ FREEZE
+→ LEASE EXPIRES
+→ RIGHTS REVOKED
+→ OWNER DECIDES PROMOTION
+
+## Binding rules
+
+- Maximum lease duration is 86,400 seconds.
+- Lease issuance requires the existing fixed Owner credential gate.
+- No lease renewal method exists. Any later run requires a newly Owner-authorized lease.
+- Candidate/child capability inherits the same lease id and expiry with equal-or-less privilege.
+- Any wall-clock rollback, monotonic rollback, unknown/invalid time state, expiry, or explicit revocation fails closed.
+- Mutation paths must re-check lease immediately before the write.
+- Self-upgrade writes are candidate-branch only.
+- Candidate code cannot alter Owner authority, lease enforcement, protected canonical state/law/architecture, branch-protection workflows, or the self-upgrade guard tests.
+- No automatic VERIFIED.
+- No automatic trial activation.
+- No automatic candidate promotion.
+- Owner promotion records a decision only; it does not merge a branch.
+- Existing GitHub PR + required CI + branch protection remain the merge authority.
+- On expiry, learning/evidence/candidate history may remain, but autonomous self-upgrade write authority ends.
+- A frozen candidate remains `FROZEN_PENDING_OWNER` until Owner promotes, rejects, or authorizes a new lease for revision.
+- The initial implementation does not activate a real 24-hour lease.
+
+## Candidate evaluation rule
+
+Parent and Candidate must use the same frozen evaluation packet. Candidate is eligible for Owner review only when:
+- no security regression;
+- no recovery regression;
+- no authority-boundary violation;
+- no declared quality metric degrades;
+- at least one declared quality metric strictly improves.
+
+Eligibility is not VERIFIED truth and is not promotion.
+
+## Required evidence before a live 24H run
+
+1. CI PASS for lease, generation, evolution and security regression tests.
+2. Short-duration runtime test (60–300 seconds).
+3. Demonstrated expiry stops mutation.
+4. Demonstrated early Owner revoke stops mutation.
+5. Demonstrated clock rollback fails closed.
+6. Demonstrated child capability cannot extend expiry or scope.
+7. Demonstrated protected authority paths cannot be mutated by Candidate.
+8. Demonstrated a Candidate freezes pending Owner rather than self-promoting.
+
+Only after these bounded proofs may Owner explicitly activate a real 24-hour lease.
