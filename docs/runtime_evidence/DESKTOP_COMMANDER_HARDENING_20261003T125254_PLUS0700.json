@@ -1,0 +1,108 @@
+{
+  "schema": "minhtri-desktop-commander-hardening-evidence/v1",
+  "observed_at": "2026-10-03T12:52:54+07:00",
+  "device": "WIN-VBIQNFFDKIR",
+  "desktop_commander_version": "0.2.52",
+  "safety_boundary": {
+    "config_chat_only": true,
+    "terminal_commands_used_after_config_mutation": false,
+    "filesystem_operations_used_after_config_mutation": false,
+    "reboot_used_after_config_mutation": false
+  },
+  "before": {
+    "allowedDirectories": [],
+    "allowedDirectories_meaning": "FULL_FILESYSTEM_ACCESS",
+    "telemetryEnabled": true,
+    "blockedCommands": [
+      "mkfs",
+      "format",
+      "mount",
+      "umount",
+      "fdisk",
+      "dd",
+      "parted",
+      "diskpart",
+      "sudo",
+      "su",
+      "passwd",
+      "adduser",
+      "useradd",
+      "usermod",
+      "groupadd",
+      "chsh",
+      "visudo",
+      "shutdown",
+      "reboot",
+      "halt",
+      "poweroff",
+      "init",
+      "iptables",
+      "firewall",
+      "netsh",
+      "sfc",
+      "bcdedit",
+      "reg",
+      "net",
+      "sc",
+      "runas",
+      "cipher",
+      "takeown"
+    ]
+  },
+  "mutation": {
+    "key": "allowedDirectories",
+    "value": [
+      "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current"
+    ],
+    "rationale": "Smallest canonical runtime directory evidenced by current GitHub authority and prior runtime proof; no personal directories added."
+  },
+  "after": {
+    "allowedDirectories": [
+      "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current"
+    ],
+    "telemetryEnabled": true,
+    "blockedCommands": [
+      "mkfs",
+      "format",
+      "mount",
+      "umount",
+      "fdisk",
+      "dd",
+      "parted",
+      "diskpart",
+      "sudo",
+      "su",
+      "passwd",
+      "adduser",
+      "useradd",
+      "usermod",
+      "groupadd",
+      "chsh",
+      "visudo",
+      "shutdown",
+      "reboot",
+      "halt",
+      "poweroff",
+      "init",
+      "iptables",
+      "firewall",
+      "netsh",
+      "sfc",
+      "bcdedit",
+      "reg",
+      "net",
+      "sc",
+      "runas",
+      "cipher",
+      "takeown"
+    ],
+    "blockedCommands_unchanged": true,
+    "dangerous_permissions_added": false
+  },
+  "conclusion": "PASS_RUNTIME_ONLY_ALLOWLIST",
+  "nonclaims": [
+    "This does not prove fresh-seat recovery.",
+    "This does not prove boot/reboot persistence.",
+    "This does not prove the runtime directory contents are safe; it only narrows Desktop Commander filesystem scope."
+  ]
+}
