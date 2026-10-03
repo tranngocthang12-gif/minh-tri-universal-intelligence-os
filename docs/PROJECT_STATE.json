@@ -229,7 +229,7 @@
   "brain_read_plane_live_check_latest": "HISTORICAL_PASS_2026-10-03_NOT_CURRENT_LIVENESS",
   "architecture_sync_latest": "FULL_ARCHITECTURE_SYNC_2026-10-04_CURRENT_RUNTIME_DOWN_OFFLINE",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
-  "architecture_sync_merge_sha": "PENDING_THIS_SYNC_PR_MERGE",
+  "architecture_sync_merge_sha": "NOT_SELF_REFERENTIAL_USE_GIT_HISTORY",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/AUTO_RUNTIME_DEGRADED_20261004.json",
   "persistence_probe_latest": "LOGON_TASK_EXISTS_RUNNING_HARDENED_SETTINGS_2026-10-03T15:52+07_REBOOT_PROOF_PENDING",
   "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
@@ -360,5 +360,6 @@
     "LEARNING_TRACKS",
     "CONSISTENCY_TESTS"
   ],
-  "owner_learning_track_economics_phd_sync": "CANONICAL_REGISTERED_M0_1_STARTED_UNTESTED"
+  "owner_learning_track_economics_phd_sync": "CANONICAL_REGISTERED_M0_1_STARTED_UNTESTED",
+  "architecture_sync_sha_semantics": "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY"
 }
