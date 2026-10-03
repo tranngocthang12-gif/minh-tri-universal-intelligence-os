@@ -89,7 +89,6 @@ def initial_state() -> dict:
         "evidence": {}, "procedures": {}, "claims": {}, "predictions": {},
         "resolutions": {}, "reviews": {}, "adjudications": {}, "lessons": {},
         "runtime_audit_events": {},
-        "external_critic_runs": {},
     }
 
 
@@ -235,6 +234,7 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         d["recorded_at"] = event_time
         d["status"] = "POST_EXPIRY_EVIDENCE_ONLY" if d["post_expiry"] else "RECORDED"
         d["automatic_verified_promotion"] = False
+        out.setdefault("external_critic_runs", {})
         add(out, "external_critic_runs", d)
 
     elif kind == "record_runtime_audit_event":
