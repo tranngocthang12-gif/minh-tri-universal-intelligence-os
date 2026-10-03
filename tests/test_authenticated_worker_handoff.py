@@ -33,7 +33,7 @@ class AuthenticatedWorkerHandoffTests(unittest.TestCase):
                 now=datetime.now(timezone.utc),
                 lease_id="upgrade-handoff-test",
             )
-        self.session = SelfUpgradeSession(lease, monotonic_started=100.0)
+        self.session = SelfUpgradeSession(lease)
 
     def test_authenticated_worker_gets_parent_enforced_result_without_lease_object(self):
         seen = {}
