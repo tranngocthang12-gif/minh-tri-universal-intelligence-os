@@ -34,6 +34,9 @@ PROTECTED_EXACT_PATHS = frozenset({
     "src/minhtri/upgrade_lease.py",
     "src/minhtri/generation.py",
     "src/minhtri/evolution.py",
+    "src/minhtri/candidate_executor.py",
+    "src/minhtri/codex_provider.py",
+    "src/minhtri/lease_bound_worker.py",
     "src/minhtri/owner.py",
     "src/minhtri/core.py",
     "config/owner.json",
@@ -41,8 +44,13 @@ PROTECTED_EXACT_PATHS = frozenset({
     "tests/test_upgrade_lease.py",
     "tests/test_generation.py",
     "tests/test_evolution.py",
+    "tests/test_candidate_executor.py",
+    "tests/test_codex_provider.py",
+    "tests/test_lease_bound_worker.py",
     "tests/test_owner_gate.py",
     "tests/test_security_p0.py",
+    "ops/windows/self_upgrade_owner_revoke_probe.py",
+    "pyproject.toml",
 })
 
 PROTECTED_PREFIXES = (
