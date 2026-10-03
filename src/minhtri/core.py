@@ -102,7 +102,7 @@ ALLOWED_FIELDS = {
     "record_evidence": {"id", "domain_id", "source_id", "statement", "observed_at", "value", "metric"},
     "register_procedure": {"id", "domain_id", "provider_id", "version", "method"},
     "propose_claim": {"id", "problem_id", "provider_id", "statement", "evidence_ids", "alternative", "falsifier"},
-    "register_prediction": {"id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method"},
+    "register_prediction": {"id", "claim_id", "procedure_id", "metric", "unit", "lower", "upper", "due_at", "resolution_method", "outcome_source_spec"},
     "freeze_prediction": {"prediction_id"},
     "record_resolution": {"id", "prediction_id", "evidence_id"},
     "review_claim": {"id", "claim_id", "critic_provider_id", "verdict", "reason"},
