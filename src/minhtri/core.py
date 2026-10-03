@@ -118,6 +118,9 @@ ALLOWED_FIELDS = {
     "record_learning_failure": {"id", "domain_id", "artifact_type", "artifact_id", "failure_class", "severity", "evidence_ids", "description", "remediation", "detected_by"},
     "record_critic_independence_receipt": {"id", "critic_execution_id", "execution_environment_id", "project_runtime_id", "session_id", "provider_receipt_hash", "authority_scope", "project_context_supplied", "verification_method", "evidence_ids"},
     "record_eval_integrity_assessment": {"id", "domain_id", "artifact_type", "artifact_id", "output_hash", "forbidden_marker_hits", "invariant_failures", "claimed_pass", "evaluator_kind", "note"},
+    "record_deliberation_plan": {"id", "domain_id", "artifact_type", "artifact_id", "risk_level", "evidence_conflict", "tool_dependency", "requested_effort", "rationale"},
+    "record_research_trace": {"id", "domain_id", "query", "source_id", "source_role", "claim_id", "citation_locator", "conflict_status", "note"},
+    "record_context_capsule": {"id", "domain_id", "artifact_refs", "summary", "refresh_after", "context_purpose"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
 
@@ -702,6 +705,101 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         d["recorded_at"] = event_time
         assessments = out.setdefault("eval_integrity_assessments", {})
         add(out, "eval_integrity_assessments", d)
+
+    elif kind == "record_deliberation_plan":
+        need(d, "id", "domain_id", "artifact_type", "artifact_id", "risk_level",
+             "evidence_conflict", "tool_dependency", "requested_effort", "rationale")
+        ref(out, "domains", d["domain_id"])
+        if d["artifact_type"] not in TRACE_ARTIFACT_COLLECTIONS:
+            raise GateError("Invalid deliberation artifact type")
+        collection = TRACE_ARTIFACT_COLLECTIONS[d["artifact_type"]]
+        artifact_id = identifier(d["artifact_id"], "artifact ID")
+        artifacts = out.get(collection, {})
+        if artifact_id not in artifacts:
+            raise GateError(f"Unknown deliberation artifact: {d['artifact_type']}:{artifact_id}")
+        artifact = artifacts[artifact_id]
+        artifact_domain = artifact.get("domain_id")
+        if artifact_domain is not None and artifact_domain != d["domain_id"]:
+            raise GateError("Deliberation artifact cannot cross domain boundaries")
+        if d["risk_level"] not in ("LOW", "MEDIUM", "HIGH", "CRITICAL"):
+            raise GateError("Invalid risk_level")
+        if type(d["evidence_conflict"]) is not bool or type(d["tool_dependency"]) is not bool:
+            raise GateError("evidence_conflict and tool_dependency must be boolean")
+        if d["requested_effort"] not in ("MINIMAL", "LOW", "MEDIUM", "HIGH"):
+            raise GateError("Invalid requested_effort")
+        string(d["rationale"], "rationale")
+        minimum = "LOW"
+        if d["risk_level"] in ("HIGH", "CRITICAL") or d["evidence_conflict"]:
+            minimum = "HIGH"
+        elif d["risk_level"] == "MEDIUM" or d["tool_dependency"]:
+            minimum = "MEDIUM"
+        order = {"MINIMAL": 0, "LOW": 1, "MEDIUM": 2, "HIGH": 3}
+        effective = d["requested_effort"] if order[d["requested_effort"]] >= order[minimum] else minimum
+        d["minimum_effort"] = minimum
+        d["effective_effort"] = effective
+        d["artifact_digest"] = digest(artifact)
+        d["recorded_at"] = event_time
+        d["stores_chain_of_thought"] = False
+        plans = out.setdefault("deliberation_plans", {})
+        add(out, "deliberation_plans", d)
+
+    elif kind == "record_research_trace":
+        need(d, "id", "domain_id", "query", "source_id", "source_role",
+             "claim_id", "citation_locator", "conflict_status", "note")
+        ref(out, "domains", d["domain_id"])
+        source = ref(out, "sources", d["source_id"])
+        claim = ref(out, "claims", d["claim_id"])
+        if source["domain_id"] != d["domain_id"] or claim["domain_id"] != d["domain_id"]:
+            raise GateError("Research trace cannot cross domain boundaries")
+        for key in ("query", "citation_locator", "note"):
+            string(d[key], key)
+        if d["source_role"] not in ("PRIMARY", "SECONDARY", "SOCIAL_SIGNAL", "REFERENCE", "COUNTEREVIDENCE"):
+            raise GateError("Invalid source_role")
+        if d["conflict_status"] not in ("NONE", "SUPPORTS", "CONTRADICTS", "MIXED", "UNKNOWN"):
+            raise GateError("Invalid conflict_status")
+        d["source_digest"] = digest(source)
+        d["claim_digest"] = digest(claim)
+        d["recorded_at"] = event_time
+        d["truth_weight"] = "NON_CANONICAL_SIGNAL" if d["source_role"] == "SOCIAL_SIGNAL" else "EVIDENCE_SUBJECT_TO_ADJUDICATION"
+        traces = out.setdefault("research_traces", {})
+        add(out, "research_traces", d)
+
+    elif kind == "record_context_capsule":
+        need(d, "id", "domain_id", "artifact_refs", "summary", "refresh_after", "context_purpose")
+        ref(out, "domains", d["domain_id"])
+        string(d["summary"], "summary")
+        string(d["context_purpose"], "context_purpose")
+        if parse_time(d["refresh_after"]) <= parse_time(event_time):
+            raise GateError("refresh_after must be in the future")
+        if not isinstance(d["artifact_refs"], list) or not d["artifact_refs"]:
+            raise GateError("artifact_refs must be a nonempty list")
+        normalized = []
+        for item in d["artifact_refs"]:
+            if not isinstance(item, dict) or set(item) != {"artifact_type", "artifact_id"}:
+                raise GateError("Each artifact_ref needs artifact_type and artifact_id")
+            if item["artifact_type"] not in TRACE_ARTIFACT_COLLECTIONS:
+                raise GateError("Invalid context artifact type")
+            collection = TRACE_ARTIFACT_COLLECTIONS[item["artifact_type"]]
+            artifact_id = identifier(item["artifact_id"], "artifact ID")
+            artifacts = out.get(collection, {})
+            if artifact_id not in artifacts:
+                raise GateError(f"Unknown context artifact: {item['artifact_type']}:{artifact_id}")
+            artifact = artifacts[artifact_id]
+            artifact_domain = artifact.get("domain_id")
+            if artifact_domain is not None and artifact_domain != d["domain_id"]:
+                raise GateError("Context capsule artifact cannot cross domain boundaries")
+            normalized.append({
+                "artifact_type": item["artifact_type"],
+                "artifact_id": artifact_id,
+                "artifact_digest": digest(artifact),
+            })
+        d["artifact_refs"] = normalized
+        d["capsule_digest"] = digest({"artifact_refs": normalized, "summary": d["summary"], "purpose": d["context_purpose"]})
+        d["status"] = "CONTEXT_ONLY_NOT_CANONICAL_TRUTH"
+        d["recorded_at"] = event_time
+        d["automatic_truth_promotion"] = False
+        capsules = out.setdefault("context_capsules", {})
+        add(out, "context_capsules", d)
 
     elif kind == "set_learning_focus":
         # The collection is created lazily so ledgers written before this type still replay
