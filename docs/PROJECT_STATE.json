@@ -404,7 +404,7 @@
   "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
   "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
   "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
-  "learning_proof_next_checkpoint": "EXPORT_FROZEN_LEDGER_THEN_RUN_PROVENANCE_AUDIT_AND_BUILD_HUMAN_ADJUDICATED_CANARY_SET",
+  "learning_proof_next_checkpoint": "PREREGISTER_STAGE1_STAGE2_THEN_PROVE_OLD_KEY_REVOCATION_THEN_FROZEN_LEDGER_EXPORT",
   "frozen_ledger_audit_export": "IMPLEMENTED_READ_ONLY_VERIFY_COPY_HASH_NO_BRAIN_START",
   "resolution_resolver_input": "RAW_SOURCE_ONLY_NO_MODEL_TRACE_NO_CAPSULE_NO_ORIGINAL_RESOLUTION",
   "resolution_corpus_out_rate_gate": "PREREGISTERED_REQUIRED",
@@ -417,5 +417,27 @@
     "procedure_id"
   ],
   "behavioral_trial_failure_class_routing": false,
-  "stale_capability_replay_test": "REMAINS_REQUIRED_BEFORE_BACKGROUND_AUTONOMY"
+  "stale_capability_replay_test": "REMAINS_REQUIRED_BEFORE_BACKGROUND_AUTONOMY",
+  "prediction_outcome_source_preregistration": "IMPLEMENTED_NEW_WRITES_OPTIONAL_BUT_REQUIRED_FOR_META_LEARNING_ELIGIBILITY",
+  "legacy_prediction_learning_eligibility": "PILOT_ONLY_IF_NO_IMMUTABLE_OUTCOME_SOURCE_SPEC",
+  "resolution_agreement_metrics": [
+    "raw_agreement",
+    "cohens_kappa_interval_hit",
+    "out_rate"
+  ],
+  "canary_single_use_per_critic": true,
+  "canary_owner_or_historical_contribution_target_fraction": 0.5,
+  "v14_baseline_definition_required": true,
+  "v14_first_primary_endpoint": "FACTUAL_ACCURACY",
+  "v14_first_safety_endpoint": "UNSUPPORTED_CLAIM_RATE",
+  "v14_paired_task_design": true,
+  "v14_gold_labels_hash_required": true,
+  "behavioral_trial_arms": [
+    "CONTROL",
+    "LESSON_TARGETED_TREATMENT",
+    "COMPUTE_MATCHED_CONTROL"
+  ],
+  "behavioral_learning_success_requires": "TREATMENT_OUTPERFORMS_COMPUTE_MATCHED_ON_PRIMARY_AND_PASSES_SAFETY",
+  "trial_rule_data_plane_reader": "NOT_IMPLEMENTED_BLOCKS_CLOSED_LOOP_LEARNING_CLAIM",
+  "runtime_recovery_prerequisite": "PROVE_OLD_TUNNEL_KEY_REVOCATION_BEFORE_REOPENING_TUNNEL"
 }
