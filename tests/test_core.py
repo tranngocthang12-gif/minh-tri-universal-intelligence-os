@@ -61,6 +61,37 @@ class CoreGates(unittest.TestCase):
         self.apply("freeze_lesson", lesson_id="lesson1")
         self.assertEqual(self.state["lessons"]["lesson1"]["status"], "FROZEN_PENDING_OWNER")
 
+    def test_prediction_can_preregister_outcome_source_and_resolution_must_match(self):
+        self.base()
+        spec = {
+            "source_uri": "internal://report/future",
+            "source_kind": "FIRST_PARTY",
+            "value_selector": "rate",
+            "capture_rule": "capture first approved report after due_at",
+        }
+        self.apply("register_prediction", id="fx", claim_id="h1", procedure_id="p1", metric="rate",
+                   unit="percent", lower=5, upper=7, due_at="2026-01-03T00:00:00Z",
+                   resolution_method="Read approved report", outcome_source_spec=spec)
+        self.apply("freeze_prediction", prediction_id="fx")
+        self.apply("record_source", at="2026-01-04T00:00:00Z", id="sx", domain_id="media",
+                   uri="internal://report/future", captured_at="2026-01-04T00:00:00Z",
+                   kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", at="2026-01-04T00:00:00Z", id="ex", domain_id="media",
+                   source_id="sx", statement="Recorded measurement",
+                   observed_at="2026-01-04T00:00:00Z", value=6.0, metric="rate")
+        self.apply("record_resolution", at="2026-01-04T00:00:00Z", id="rx",
+                   prediction_id="fx", evidence_id="ex")
+        self.assertEqual(self.state["resolutions"]["rx"]["learning_provenance_status"],
+                         "OUTCOME_SOURCE_PREREGISTERED")
+
+    def test_legacy_prediction_remains_replayable_but_not_meta_learning_eligible(self):
+        self.base()
+        self.apply("register_prediction", id="legacy", claim_id="h1", procedure_id="p1", metric="rate",
+                   unit="percent", lower=5, upper=7, due_at="2026-01-03T00:00:00Z",
+                   resolution_method="Read approved report")
+        self.assertEqual(self.state["predictions"]["legacy"]["outcome_source_spec_status"],
+                         "UNSPECIFIED_NOT_META_LEARNING_ELIGIBLE")
+
     def test_external_critic_run_is_append_only_evidence_not_authority(self):
         self.apply(
             "record_external_critic_run",
