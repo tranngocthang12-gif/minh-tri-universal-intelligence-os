@@ -334,7 +334,16 @@ class CoreGates(unittest.TestCase):
     def test_failed_negative_control_blocks_lesson_freeze(self):
         self.base()
         self.predictions_and_outcomes()
-        self.review_and_lesson()
+        self.apply("review_claim", id="review1", claim_id="h1", critic_provider_id="critic",
+                   verdict="ACCEPT_FOR_TRIAL", reason="Alternative remains testable")
+        self.apply("adjudicate_claim", id="adj1", claim_id="h1", review_id="review1",
+                   adjudicator_provider_id="judge", verdict="ACCEPT_FOR_TRIAL",
+                   reason="Bounded trial only")
+        self.apply("propose_lesson", id="lesson1", claim_id="h1", statement="Try this narrow method",
+                   limits="Two observations; confounding unresolved", prediction_ids=["f1", "f2"],
+                   adjudication_id="adj1", counterevidence_ids=[],
+                   counterevidence_search_note="Searched recorded evidence; none found",
+                   applicability="Media domain under the measured conditions only")
         self.apply("freeze_learning_packet", id="packet-negative", trace_id="trace-negative",
                    claim_id="h1", counterevidence_ids=[], external_case_ids=[],
                    counterevidence_note="Adversarial control attached",
