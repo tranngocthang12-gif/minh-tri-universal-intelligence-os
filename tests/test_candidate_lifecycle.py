@@ -26,7 +26,11 @@ class FakeTest:
     def run(self):
         if self.mutate:
             self.mutate()
-        return {"status": self.status, "returncode": 0 if self.status == "PASS" else 1}
+        return {
+            "status": self.status,
+            "returncode": 0 if self.status == "PASS" else 1,
+            "external_critic_log": "deterministic test output",
+        }
 
 
 class FakeCritic:
@@ -42,6 +46,16 @@ class FakeCritic:
             "verdict": self.verdict,
             "independence_status": "SAME_PROVIDER_NOT_INDEPENDENT",
         }
+
+
+class FakeExternalCritic:
+    def __init__(self, receipt):
+        self.receipt = receipt
+        self.packet = None
+
+    def critique(self, packet):
+        self.packet = packet
+        return dict(self.receipt)
 
 
 class CandidateLifecycleTests(unittest.TestCase):
@@ -65,7 +79,7 @@ class CandidateLifecycleTests(unittest.TestCase):
             )
         self.session = SelfUpgradeSession(lease)
 
-    def runner(self, test_runner=None, critic=None):
+    def runner(self, test_runner=None, critic=None, external_critic=None):
         runner = CandidateLifecycleRunner(
             session=self.session,
             candidate_root=self.work,
@@ -73,6 +87,9 @@ class CandidateLifecycleTests(unittest.TestCase):
             test_runner=test_runner or FakeTest(),
             critic=critic or FakeCritic(),
             freeze_receipt_path=self.receipt,
+            external_critic=external_critic,
+            external_claims=("Candidate preserves declared authority boundaries",) if external_critic else (),
+            eval_packet_hash="a" * 64 if external_critic else None,
         )
         runner._current_branch = lambda: "candidate/GEN-2"
         return runner
@@ -112,6 +129,49 @@ class CandidateLifecycleTests(unittest.TestCase):
         self.assertTrue(data["owner_independent_review_required"])
         self.assertFalse(data["automatic_candidate_promotion"])
         self.assertFalse(data["automatic_verified_promotion"])
+
+    def test_external_critic_pending_blocks_freeze(self):
+        external = FakeExternalCritic({
+            "status": "PENDING_EXTERNAL_CRITIC",
+            "packet_hash": "placeholder",
+        })
+        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        self.assertEqual(result["status"], "PENDING_EXTERNAL_CRITIC")
+        self.assertFalse(result["eligible_for_freeze"])
+        self.assertFalse(self.receipt.exists())
+        self.assertIsNotNone(external.packet)
+        self.assertEqual(external.packet["claims"], ["Candidate preserves declared authority boundaries"])
+
+    def test_external_medium_defect_rejects_freeze(self):
+        external = FakeExternalCritic({
+            "status": "RECORDED",
+            "verdict": "DEFECT_FOUND",
+            "independence_status": "PARTIAL",
+            "findings": [{
+                "target": "authority",
+                "severity": "MEDIUM",
+                "failure_path": "candidate weakens a gate",
+                "missing_evidence": ["negative test"],
+            }],
+        })
+        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        self.assertEqual(result["status"], "REJECTED_EXTERNAL_CRITIC")
+        self.assertFalse(result["eligible_for_freeze"])
+        self.assertFalse(self.receipt.exists())
+
+    def test_external_no_material_defect_can_accompany_freeze(self):
+        external = FakeExternalCritic({
+            "status": "RECORDED",
+            "verdict": "NO_MATERIAL_DEFECT_FOUND",
+            "independence_status": "PARTIAL",
+            "findings": [],
+            "packet_hash": "a" * 64,
+        })
+        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        self.assertEqual(result["status"], "FROZEN_PENDING_OWNER")
+        self.assertEqual(result["external_critic"]["independence_status"], "PARTIAL")
+        self.assertEqual(result["external_critic_independence_status"], "PARTIAL")
+        self.assertTrue(self.receipt.exists())
 
     def test_sandbox_test_runner_disables_network(self):
         runner = CodexSandboxTestRunner(self.work)
