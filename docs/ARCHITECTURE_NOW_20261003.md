@@ -393,3 +393,12 @@ Owner-commanded revocation of the prior 24H lease completed at `2026-10-03T17:03
 A real Owner-PC 300-second smoke lease then proved the handoff path: one-time IPC credential delivered over stdin only, loopback authenticated IPC, worker held no authoritative lease object, parent re-checked candidate branch and paths before mutation, exactly one neutral candidate artifact was written, and post-revoke mutation was blocked. No push, merge, renewal or canonical-write capability existed.
 
 The replacement live (>300s) lease is intentionally not issued from the earlier Owner command because current law requires a contemporaneous Owner authorization reference no older than 300 seconds at issuance. A fresh Owner command is therefore required for the new live lease; this is the anti-prearm gate working as designed.
+
+
+## 28. Live 24H lease with authenticated worker handoff — 2026-10-04 00:56 +07:00
+
+Evidence: `docs/runtime_evidence/SELF_UPGRADE_LIVE_24H_HANDOFF_20261004T005645_PLUS0700.json`.
+
+Owner issued a fresh explicit command and the runtime activated a new immutable 86,400-second lease `upgrade-29829fc6febf4c5db42e5ff4a93aa0da` at `2026-10-03T17:56:45.124745Z`, expiring at `2026-10-04T17:56:45.124745Z`. The lease pins Owner authorization ref, Champion SHA, test-dataset hash, eval packet hash and eval metric before activation.
+
+The live controller keeps the authoritative lease in the parent process. Workers receive only a one-time stdin bootstrap for loopback authenticated IPC; `worker_holds_lease=false` and `parent_enforced=true`. Automatic renewal, VERIFIED promotion, candidate promotion, push, merge and canonical write remain false. Local brain audit is VALID at event_count 12, head `c272af26799a7ff32f681de9ac12c712ac1a921f6bebdeab5ac383b2be95e18d`.
