@@ -8,8 +8,10 @@ from minhtri.generation import (
     GEN_CANDIDATE,
     GEN_FROZEN_PENDING_OWNER,
     GEN_PROMOTED_BY_OWNER,
+    GEN_ABANDONED_AT_EXPIRY,
     create_generation_manifest,
     freeze_generation,
+    expire_generation,
     owner_promote_generation,
     transition_generation,
 )
@@ -86,6 +88,21 @@ class GenerationTests(unittest.TestCase):
         ):
             with self.assertRaises(CandidateSandboxError, msg=path):
                 self.manifest(paths=(path,))
+
+    def test_expiry_freezes_each_completed_candidate_without_ranking(self):
+        candidate = self.manifest()
+        candidate = transition_generation(candidate, "READY_FOR_TEST")
+        candidate = transition_generation(candidate, "TESTING")
+        candidate = transition_generation(candidate, GEN_CANDIDATE)
+        frozen = expire_generation(candidate)
+        self.assertEqual(frozen.status, GEN_FROZEN_PENDING_OWNER)
+
+    def test_expiry_marks_unfinished_generation_abandoned(self):
+        testing = self.manifest()
+        testing = transition_generation(testing, "READY_FOR_TEST")
+        testing = transition_generation(testing, "TESTING")
+        abandoned = expire_generation(testing)
+        self.assertEqual(abandoned.status, GEN_ABANDONED_AT_EXPIRY)
 
     def test_expired_lease_blocks_candidate_creation(self):
         with self.assertRaises(LeaseExpiredError):
