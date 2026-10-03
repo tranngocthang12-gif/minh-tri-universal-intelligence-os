@@ -74,8 +74,9 @@
     "autonomy_automatic_trial_activation": false,
     "desktop_commander_hardening": "PASS_RUNTIME_ONLY_ALLOWLIST_2026-10-03T12:52+07",
     "desktop_commander_allowed_directories": "RUNTIME_ONLY_ALLOWLIST_C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current",
-    "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DEDICATED_ENCRYPTED_UNATTENDED_SECRET",
-    "tunnel_boot_registration": "ABSENT_BOUNDED_PROBE"
+    "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
+    "tunnel_boot_registration": "NOT_INSTALLED_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
+    "secret_safe_tunnel_autostart": "IMPLEMENTED_MERGED_CI_PROVEN_DEPLOYED_TO_OWNER_PC_RUNTIME"
   },
   "protocols": {
     "external_anchor": "minhtri-ledger-anchor/v1",

@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "PROVISION_SECRET_SAFE_TUNNEL_AUTOSTART_AND_OBTAIN_SEPARATE_CONTROL_SEAT_VERIFY_BEFORE_REBOOT",
+  "next_checkpoint": "OWNER_ONE_TIME_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LOGON_TASK_AND_CONTROLLED_REBOOT",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -232,7 +232,10 @@
   "fresh_chat_seat_validation_latest_attempt": "docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json",
   "boot_persistence_latest_precheck": "docs/runtime_evidence/BOOT_PERSISTENCE_PRECHECK_20261003T125900_PLUS0700.json",
   "boot_persistence_precheck_decision": "DO_NOT_REBOOT_NO_UNATTENDED_SECRET_SAFE_TUNNEL_CREDENTIAL_OR_BOOT_REGISTRATION",
-  "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DEDICATED_ENCRYPTED_UNATTENDED_SECRET",
-  "tunnel_boot_registration": "ABSENT_BOUNDED_PROBE",
-  "local_canonical_clone_recovery_readiness": "STALE_RELATIVE_TO_LIVE_MAIN_AT_PRECHECK"
+  "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
+  "tunnel_boot_registration": "NOT_INSTALLED_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
+  "local_canonical_clone_recovery_readiness": "STALE_RELATIVE_TO_LIVE_MAIN_AT_PRECHECK",
+  "secret_safe_tunnel_autostart": "IMPLEMENTED_MERGED_CI_PROVEN_DEPLOYED_TO_OWNER_PC_RUNTIME",
+  "tunnel_unattended_launcher_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
+  "tunnel_logon_task_installer_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET"
 }
