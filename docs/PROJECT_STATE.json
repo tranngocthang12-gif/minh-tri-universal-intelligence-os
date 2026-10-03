@@ -230,7 +230,7 @@
     "PROVE_RUNTIME_COMMIT_BUILD_ATTESTATION"
   ],
   "brain_read_plane_live_check_latest": "HISTORICAL_PASS_2026-10-03_NOT_CURRENT_LIVENESS",
-  "architecture_sync_latest": "FULL_ARCHITECTURE_SYNC_2026-10-04_CURRENT_RUNTIME_DOWN_OFFLINE",
+  "architecture_sync_latest": "FULL_ARCHITECTURE_SYNC_2026-10-04_SELF_LEARNING_PLAN_DRIFT_REPAIRED",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "NOT_SELF_REFERENTIAL_USE_GIT_HISTORY",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/AUTO_RUNTIME_DEGRADED_20261004.json",
@@ -349,7 +349,7 @@
   "owner_learning_track_economics_phd_next_checkpoint": "COMPLETE_M0_DIAGNOSTIC_AND_OPTIMIZATION_COMPARATIVE_STATICS_ASSESSMENT",
   "architecture_consistency_repair": "HISTORICAL_AND_CURRENT_RUNTIME_SEMANTICS_SEPARATED_2026-10-04",
   "self_upgrade_authorization_window": "OPEN_UNTIL_2026-10-04T17:56:45.124745Z_RUNTIME_NOT_PROVEN_ACTIVE",
-  "architecture_sync_source_main_sha": "f7721c9b77dc44ed754023e6e9f865d32660e397",
+  "architecture_sync_source_main_sha": "ffc9ab4762ce53322c5b4bea44b773deeac1d283",
   "architecture_sync_scope": [
     "PROJECT_STATE",
     "LAW_INDEX",
@@ -482,5 +482,7 @@
   "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
   "trial_rule_reader_external_code_review": "REQUIRED_NOT_YET_COMPLETED",
   "trial001_arm_leakage_threshold": "TO_BE_FROZEN_BEFORE_PRIMARY_SCORING",
-  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID"
+  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID",
+  "self_learning_architecture_audit_latest": "docs/learning/SELF_LEARNING_ARCHITECTURE_AUDIT_20261004.md",
+  "self_learning_architecture_audit_status": "SYNCED_PLAN_DRIFT_FIXED_TRIAL001_STILL_NOT_FROZEN_NOT_RUN"
 }

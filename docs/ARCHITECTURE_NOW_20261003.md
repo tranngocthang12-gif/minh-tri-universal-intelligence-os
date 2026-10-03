@@ -516,3 +516,21 @@ Declared compute budgets are insufficient. Actual token/retrieval/critic/generat
 Coverage non-inferiority is mandatory so the treatment cannot win factual-accuracy and unsupported-claim metrics merely by saying less.
 
 The current repository implements planning/validation contracts. It does **not** yet contain a proven live isolated executor, provider telemetry capture, blinded evaluator runtime, or empirical Trial-001 result. External code review of the reader remains required.
+
+## 34. Self-learning architecture synchronization audit — 2026-10-04
+
+Canonical audit: `docs/learning/SELF_LEARNING_ARCHITECTURE_AUDIT_20261004.md`.
+
+A cross-check of PROJECT_STATE, Law Index, current architecture, recovery manifest, bootstrap and current Trial-001 documents found one material documentation drift: the learning proof execution plan still described an obsolete three-arm trial and still said TRIAL_RULE data-plane consumption was not implemented.
+
+That drift is repaired in the same sync. Current semantics are:
+
+- Trial-001 is paired four-arm A/B/C/D calibration;
+- the read-only fail-closed TRIAL_RULE reader is implemented, but live isolated execution/telemetry/evaluator proof is still absent;
+- `COUNTEREVIDENCE_FIRST` is not yet an audited ledger-derived lesson;
+- no learning-from-experience claim is allowed without audited lesson provenance;
+- Trial-001 remains NOT FROZEN / NOT RUN;
+- background autonomous learning remains OFF.
+
+The fresh Local Brain check performed during this audit failed because the tunnel client had not been seen for 300 seconds. This does not change historical PASS evidence; current runtime liveness remains governed by `PROJECT_STATE.current_runtime_liveness`.
+
