@@ -1,15 +1,9 @@
 {
-  "schema": "minhtri-trial001-taskset-manifest/v1",
+  "schema": "minhtri-trial001-taskset-manifest/v2",
   "trial_id": "TRIAL-001-COUNTEREVIDENCE-FIRST",
   "status": "UNSEALED_TEMPLATE",
   "raw_tasks_committed_to_public_repo": false,
   "final_n": "TO_BE_FROZEN_AFTER_PILOT_POWER_ANALYSIS",
-  "block_size": 6,
-  "arm_counts_per_complete_block": {
-    "CONTROL": 2,
-    "TREATMENT": 2,
-    "COMPUTE_MATCHED": 2
-  },
   "primary_blocks_capacity": 10,
   "reserve_blocks": 2,
   "task_slots": [
@@ -523,7 +517,6 @@
   "evaluator_rubric_hash": null,
   "treatment_prompt_hash": null,
   "compute_matched_prompt_hash": null,
-  "assignment_seed_hash": null,
   "assignment_secret_revealed": false,
   "leakage_checks_required": [
     "NOT_IN_PROJECT_CHAT",
@@ -534,5 +527,22 @@
     "NOT_PREVIOUSLY_EXECUTED_BY_GENERATOR",
     "GOLD_NOT_EXPOSED_TO_GENERATOR"
   ],
-  "notes": "Populate hashes only after raw task/gold artifacts are created outside execution-generator context."
+  "notes": "Populate hashes only after raw task/gold artifacts, A/B/C/D overlays/prompts, telemetry schema, leakage protocol and freeze receipt are sealed outside execution-generator context.",
+  "arm_mode": "PAIRED_FOUR_ARM_EVERY_TASK",
+  "arms": [
+    "CONTROL",
+    "TREATMENT",
+    "COMPUTE_MATCHED",
+    "PLACEBO"
+  ],
+  "cache_isolation_required": true,
+  "arm_state_isolation_required": true,
+  "coverage_rubric_hash": null,
+  "placebo_overlay_hash": null,
+  "placebo_provenance_hash": null,
+  "compute_telemetry_schema_hash": null,
+  "arm_leakage_protocol_hash": null,
+  "preregistration_freeze_receipt_hash": null,
+  "placebo_prompt_hash": null,
+  "execution_order_secret_hash": null
 }
