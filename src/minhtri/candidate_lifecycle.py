@@ -428,6 +428,9 @@ class CandidateLifecycleRunner:
             "critic_assurance_label": critic_receipt.get("assurance_label", "AI_CONCUR"),
             "critic_proof_value": critic_receipt.get("proof_value", 0),
             "owner_independent_review_required": True,
+            "external_critic_independence_status": (
+                external_receipt.get("independence_status") if external_receipt else "NOT_RUN"
+            ),
             "automatic_verified_promotion": False,
             "automatic_candidate_promotion": False,
             "canonical_write_capability": False,
