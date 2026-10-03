@@ -478,5 +478,9 @@
   "trial001_freeze_receipt_template": "docs/learning/TRIAL001_PREREGISTRATION_FREEZE_RECEIPT_TEMPLATE.json",
   "trial001_freeze_receipt_status": "NOT_FROZEN",
   "trial001_lesson_provenance_required_for_learning_claim": true,
-  "trial001_executor_status": "PLAN_COMPILER_ONLY_LIVE_SANDBOX_EXECUTION_TELEMETRY_NOT_IMPLEMENTED"
+  "trial001_executor_status": "PLAN_COMPILER_ONLY_LIVE_SANDBOX_EXECUTION_TELEMETRY_NOT_IMPLEMENTED",
+  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
+  "trial_rule_reader_external_code_review": "REQUIRED_NOT_YET_COMPLETED",
+  "trial001_arm_leakage_threshold": "TO_BE_FROZEN_BEFORE_PRIMARY_SCORING",
+  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID"
 }
