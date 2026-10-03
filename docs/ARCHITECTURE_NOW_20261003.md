@@ -366,3 +366,10 @@ This remains a **bounded negative probe**, not universal proof against arbitrary
 ## 24H Owner authorization recorded — 2026-10-03
 
 Owner explicitly accepted the bounded OS-containment evidence and ordered immediate activation of the real 86,400-second self-upgrade lease. Canonical authorization is therefore satisfied. Runtime activation remains a separate empirical fact and must only be marked ACTIVE after live Owner-PC evidence records lease id, issued_at, expires_at, process/session identity, and fail-closed controls. No chat statement alone counts as runtime proof.
+
+
+## 25. Live 24H lease + local brain audit closure — 2026-10-03 23:29 +07:00
+
+Evidence: `docs/runtime_evidence/SELF_UPGRADE_LIVE_24H_AND_BRAIN_AUDIT_20261003T232905_PLUS0700.json`.
+
+The live lease is empirically ACTIVE with lease id `upgrade-78bb759426dd41d4b306dc995dc47fae`, expiry `2026-10-04T15:56:05.483438Z`, and continuing heartbeat. The local brain ledger now contains append-only `LEASE_CREATED` and `LEASE_ACTIVATED` audit events; `brain.verify` reports VALID with event_count 5 and head `bbc3e5080b3e397550cbc13d319fbfccbd3888fc6fa6c9d2d5ac64a2827c4fe4`. This closes the audit gap for activation. The actual 24-hour expiry proof remains deliberately NOT PROVEN until the lease reaches its real expiry and mutation authority is observed to fail closed.
