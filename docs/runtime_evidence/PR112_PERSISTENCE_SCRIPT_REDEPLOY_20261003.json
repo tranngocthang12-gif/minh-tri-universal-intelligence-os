@@ -1,0 +1,20 @@
+{
+  "schema": "minhtri-pr112-persistence-redeploy/v1",
+  "observed_date": "2026-10-03",
+  "device": "WIN-VBIQNFFDKIR",
+  "runtime_path": "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current\\provision_tunnel_runtime_key.ps1",
+  "source_fix": "PR_112_MERGED",
+  "deployed": true,
+  "readback_match": {
+    "grant_format": "$grant = '{0}:(R,W)' -f $principal",
+    "icacls_uses_grant_variable": true
+  },
+  "github_windows_powershell_parser_ci": "PASS_ON_PR_112",
+  "owner_pc_parse_only_probe": "INCONCLUSIVE_WRAPPER_COMMAND_QUOTING_ERROR_NOT_SCRIPT_FAILURE",
+  "tunnel_dpapi_secret_provisioned": false,
+  "logon_task_installed": false,
+  "reboot_performed": false,
+  "persistence_proven": false,
+  "secrets_recorded": false,
+  "next_required_action": "OWNER_ONE_TIME_SECURE_TUNNEL_RUNTIME_KEY_PROVISION_THEN_LIMITED_LOGON_TASK_INSTALL_AND_CONTROLLED_REBOOT_PROOF"
+}
