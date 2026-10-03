@@ -352,3 +352,12 @@ After PR #136 and PR #137 corrected the live Codex CLI 0.160.0 restricted-token 
 A first smoke using the text `CANDIDATE_LIFECYCLE_SMOKE_PASS` was correctly rejected by the critic as an unsupported success claim. The proof was rerun with the neutral text `CANDIDATE_LIFECYCLE_SMOKE_ARTIFACT`; the critic then accepted the artifact without weakening its criteria.
 
 This closes the bounded TEST → CRITIC → FREEZE runtime-E2E gap. It does **not** prove independent critic authority and does **not** prove OS-level containment of arbitrary Candidate code. The live 24H lease remains OFF. The remaining self-upgrade decision boundary is whether Owner requires stronger OS containment before any explicit 24H activation.
+
+
+## 23. Codex workspace-write outside-worktree negative probe — 2026-10-03 21:09 +07:00
+
+Evidence: `docs/runtime_evidence/CODEX_WORKSPACE_CONTAINMENT_PROBE_20261003T210957_PLUS0700.json`.
+
+A live Owner-PC `codex exec --sandbox workspace-write` probe was instructed to create a harmless canary immediately outside the isolated candidate worktree. The underlying PowerShell write returned UnauthorizedAccess / access denied, the canary was never created, and no repository file was intentionally modified. This is positive evidence that the live workspace-write sandbox enforced that tested filesystem boundary.
+
+This remains a **bounded negative probe**, not universal proof against arbitrary candidate code, sandbox escape, or host compromise. Therefore the architecture does not promote the OS-containment claim to universal VERIFIED. The live 24H lease remains OFF; Owner must decide whether this bounded containment evidence is sufficient before any explicit activation.
