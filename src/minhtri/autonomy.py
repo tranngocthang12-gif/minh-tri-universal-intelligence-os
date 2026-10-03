@@ -433,6 +433,34 @@ def assurance_integrity_report(state: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def reasoning_context_report(state: dict[str, Any]) -> dict[str, Any]:
+    plans = list(state.get("deliberation_plans", {}).values())
+    traces = list(state.get("research_traces", {}).values())
+    capsules = list(state.get("context_capsules", {}).values())
+
+    by_effort: dict[str, int] = {}
+    for plan in plans:
+        effort = str(plan.get("effective_effort", "UNKNOWN"))
+        by_effort[effort] = by_effort.get(effort, 0) + 1
+
+    by_source_role: dict[str, int] = {}
+    for trace in traces:
+        role = str(trace.get("source_role", "UNKNOWN"))
+        by_source_role[role] = by_source_role.get(role, 0) + 1
+
+    return {
+        "deliberation_plans": {"count": len(plans), "by_effective_effort": dict(sorted(by_effort.items()))},
+        "research_traces": {"count": len(traces), "by_source_role": dict(sorted(by_source_role.items()))},
+        "context_capsules": {
+            "count": len(capsules),
+            "canonical_truth": False,
+        },
+        "stores_chain_of_thought": False,
+        "automatic_truth_promotion": False,
+        "write_capability": False,
+    }
+
+
 def autonomous_learning_plan(
     state: dict[str, Any],
     *,
@@ -527,6 +555,7 @@ def build_autonomy_packet(
         "learning_assurance": learning_assurance_report(state),
         "stratified_meta_learning": stratified_meta_learning_report(state),
         "assurance_integrity": assurance_integrity_report(state),
+        "reasoning_context": reasoning_context_report(state),
         "learning_plan": autonomous_learning_plan(state),
         "research": research,
     }
