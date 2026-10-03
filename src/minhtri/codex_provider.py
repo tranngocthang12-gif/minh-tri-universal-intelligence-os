@@ -33,6 +33,8 @@ class CodexCandidateProvider:
     codex_executable: str = "codex.cmd"
     model: str | None = None
     timeout_seconds: int = 900
+    candidate_objective: str | None = None
+    required_changed_paths: tuple[str, ...] = ()
 
     def _codex(self) -> str:
         found = shutil.which(self.codex_executable)
@@ -89,13 +91,30 @@ class CodexCandidateProvider:
 
     def plan(self, autonomy_packet: dict[str, Any]) -> dict[str, Any]:
         self.session.check()
+        objective = (self.candidate_objective or "").strip()
+        required = tuple(self.required_changed_paths)
+        objective_text = (
+            "PRIMARY CANDIDATE OBJECTIVE (must follow unless it violates a safety boundary): "
+            + objective + " "
+            if objective
+            else ""
+        )
+        required_text = (
+            "The changed_paths array MUST equal exactly this required path set: "
+            + json.dumps(sorted(required), ensure_ascii=False) + ". "
+            if required
+            else ""
+        )
         prompt = (
             "You are planning one bounded candidate improvement for MINH TRI. "
-            "Do not edit files. Return ONLY one JSON object with keys: "
+            + objective_text
+            + required_text
+            + "Do not edit files. Return ONLY one JSON object with keys: "
             "summary, hypothesis, changed_paths, tests. changed_paths must be a nonempty "
             "array of repository-relative files. Do not include authority, lease, owner, "
             "canonical state/law/architecture, CI workflow, or guard-test files. "
-            "Base your plan on this autonomy packet:\n"
+            "Use the autonomy packet as supporting context, but the explicit objective and "
+            "required path set above take precedence when supplied. Autonomy packet:\n"
             + json.dumps(autonomy_packet, ensure_ascii=False, sort_keys=True)
         )
         proc = self._run(sandbox="read-only", prompt=prompt)
@@ -116,6 +135,16 @@ class CodexCandidateProvider:
                 changed_paths=paths,
             )
         )
+        if required:
+            required_normalized = list(
+                enforce_candidate_mutation(
+                    self.session.guard,
+                    candidate_branch=self.candidate_branch,
+                    changed_paths=required,
+                )
+            )
+            if normalized != required_normalized:
+                raise CodexProviderError("CODEX_PLAN_DID_NOT_MATCH_REQUIRED_PATHS")
         plan["changed_paths"] = normalized
         return plan
 
@@ -125,8 +154,15 @@ class CodexCandidateProvider:
 
         def action() -> dict[str, Any]:
             self.session.guard.before_mutation()
+            objective = (self.candidate_objective or "").strip()
+            objective_text = (
+                "Primary candidate objective: " + objective + "\n"
+                if objective
+                else ""
+            )
             prompt = (
-                "Implement exactly this bounded candidate plan in the current candidate worktree. "
+                objective_text
+                + "Implement exactly this bounded candidate plan in the current candidate worktree. "
                 "You may edit ONLY the declared changed_paths. Do not commit, merge, push, alter "
                 "git configuration, change authority/security/lease/owner/canonical state files, "
                 "or use network credentials. Run relevant local tests if available. Plan:\n"
