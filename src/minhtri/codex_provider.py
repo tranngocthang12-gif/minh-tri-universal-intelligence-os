@@ -123,7 +123,7 @@ class CodexCandidateProvider:
         declared = list(plan["changed_paths"])
 
         def action() -> dict[str, Any]:
-            self.session.before_mutation()
+            self.session.guard.before_mutation()
             prompt = (
                 "Implement exactly this bounded candidate plan in the current candidate worktree. "
                 "You may edit ONLY the declared changed_paths. Do not commit, merge, push, alter "
