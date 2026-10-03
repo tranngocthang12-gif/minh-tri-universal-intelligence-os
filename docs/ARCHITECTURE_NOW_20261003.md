@@ -75,7 +75,7 @@ UNKNOWN stays UNKNOWN; no promotion from absence of evidence.
 - required context: `test`, strict/up-to-date.
 - no ruleset bypass actors.
 - no force-push/deletion.
-- Security P0 includes Python 3.10/3.11/3.12 matrix, history secret scan and pip-audit.
+- Security P0 includes Python 3.10/3.11/3.12 matrix, history secret scan, pip-audit, and Windows PowerShell syntax parsing for persistence scripts.
 - Actions are pinned by immutable commit SHA.
 - Dependabot is active.
 - Approval count remains 0 and CODEOWNER review is not enforced; this is governance hardening still available, not a current bypass.
@@ -198,7 +198,7 @@ Evidence: `docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLU
 
 The maintenance-plane filesystem scope is now restricted to the canonical MINH TRÍ runtime directory only. This closes the Desktop Commander filesystem-scope gate, but does not prove fresh-seat recovery or boot/reboot persistence.
 
-## 14. Fresh-seat / boot-persistence precheck — 2026-10-03 12:59 +07:00
+## 15. Fresh-seat / boot-persistence precheck — 2026-10-03 12:59 +07:00
 
 Fresh-seat attempt:
 - current seat exposed exactly `brain.verify` and `brain.recovery_packet`;
@@ -225,3 +225,23 @@ Therefore controlled reboot is intentionally blocked until:
 Evidence:
 - `docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json`
 - `docs/runtime_evidence/BOOT_PERSISTENCE_PRECHECK_20261003T125900_PLUS0700.json`
+
+
+## 16. Secret-safe autostart deployment + PowerShell CI hardening — 2026-10-03
+
+The secret-safe tunnel autostart components are implemented, merged, CI-proven and deployed to the Owner-PC runtime, with fail-closed smoke evidence in `docs/runtime_evidence/SECRET_SAFE_AUTOSTART_DEPLOY_20261003T132600_PLUS0700.json`.
+
+The dedicated tunnel DPAPI credential is still NOT PROVISIONED, the limited logon task is NOT INSTALLED, and reboot persistence remains NOT PROVEN.
+
+Architecture audit PR #112 fixed an ambiguous PowerShell ACL-grant expression in the provisioner and added a Windows parser job to the required CI aggregate. This closes the source/CI defect only; the corrected runtime script still requires deployment before key provisioning.
+
+Full audit and ordered completion plan:
+`docs/ARCHITECTURE_AUDIT_COMPLETION_PLAN_20261003.md`.
+
+## 17. Completion boundary
+
+"Foundation complete" and "project/product complete" are distinct.
+
+Foundation promotion requires the current runtime-assurance, fresh-seat, witness, critic/empirical-validation and backlog gates to close with evidence.
+
+Production/product completion additionally requires later Owner-authorized work for real providers/data/business loops, stronger identity before external actions, operational recovery/observability, and real-world validation. Until those later gates are explicitly defined and passed, `FOUNDATION_PROTOTYPE` remains the truthful phase.
