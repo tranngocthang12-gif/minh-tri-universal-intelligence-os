@@ -95,6 +95,17 @@ This layer is additive to the existing ledger. It does not create a multi-agent 
 - revalidation remains `PROPOSAL_ONLY`; it cannot mutate lesson status automatically;
 - scheduled revalidation cannot occur before its review date, while stale-signal/Owner-request review may happen earlier without automatic mutation.
 
+### Learning Assurance v1.2
+
+- learning failures can be recorded against a concrete artifact with digest-bound provenance;
+- machine failure classes include source, scope, unsupported inference, confirmation bias, ignored counterevidence, stale knowledge, critic/eval contamination, reward hacking, tool error, hallucinated source, overconfidence and domain-transfer failure;
+- failure records are diagnostic metadata only and cannot repair or rewrite the artifact automatically;
+- stratified meta-learning summarizes calibration separately by domain, procedure, source kind and failure class;
+- stratified outputs may create bounded meta-lesson candidates only;
+- group statistics do not establish causality or cross-domain transfer;
+- contamination/reward-hacking classes can be recorded when evidence identifies them, but automatic detection is still NOT_IMPLEMENTED;
+- operational independence of declared critic providers remains NOT_PROVEN.
+
 
 ## 8. Promotion gates còn mở
 
