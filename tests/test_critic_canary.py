@@ -15,6 +15,11 @@ class CriticCanaryTests(unittest.TestCase):
                 "has_defect": True,
                 "defect_type": "CAUSAL_OVERCLAIM",
                 "target_span": [20, 40],
+                "trap_author": "author-a",
+                "rubric_author": "author-b",
+                "adjudicator": "reviewer-c",
+                "human_adjudicated": True,
+                "origin": "HISTORICAL_DEFECT",
             },
         }
         result = {
