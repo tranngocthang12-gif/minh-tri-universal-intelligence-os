@@ -331,6 +331,21 @@ class CoreGates(unittest.TestCase):
             self.apply("record_trace_link", id="tl1", trace_id="trace1",
                        artifact_type="EVIDENCE", artifact_id="missing", relation="SUPPORT")
 
+    def test_failed_negative_control_blocks_lesson_freeze(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.review_and_lesson()
+        self.apply("freeze_learning_packet", id="packet-negative", trace_id="trace-negative",
+                   claim_id="h1", counterevidence_ids=[], external_case_ids=[],
+                   counterevidence_note="Adversarial control attached",
+                   context_contract="Frozen", instruction_version="v1",
+                   toolset_fingerprint="bundle-only")
+        self.apply("record_negative_control", id="nc-fail", packet_id="packet-negative",
+                   description="Known counter-case", expected="Lesson must survive",
+                   observed="Lesson fails the counter-case", result="FAIL", evidence_ids=[])
+        with self.assertRaisesRegex(GateError, "Failed negative control"):
+            self.apply("freeze_lesson", lesson_id="lesson1")
+
     def test_lesson_revalidation_is_proposal_only(self):
         self.base()
         self.predictions_and_outcomes()
