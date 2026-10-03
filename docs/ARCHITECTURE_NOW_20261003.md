@@ -475,3 +475,23 @@ Remaining assurance gaps:
 
 Terminology boundary:
 Current MINH TRÍ may claim a **proposal-governance learning pipeline**. It must not claim autonomous self-learning or empirically effective meta-learning until a learned rule demonstrably changes future behavior and survives controlled evaluation.
+
+
+## 32. Gemini adversarial review adjudication — 2026-10-04
+
+Gemini's review was adjudicated against live main after Claude hardening.
+
+- DEF-01: PARTIAL / HARDENING GAP, not a proven CRITICAL defect. Historical receipts are audit-only; self-upgrade mutation authority resides in the live parent lease, is checked immediately before mutation, and worker handoff uses one-time authenticated loopback IPC with nonce binding. Runtime epoch-bound tokens remain a possible hardening layer, but stale receipts were not found to authorize mutation.
+- DEF-02: ALREADY FIXED SEMANTICALLY. Canonical classification is `PROPOSAL_GOVERNANCE_PIPELINE_NOT_AUTONOMOUS_BEHAVIOR_ADAPTATION`. Historical filenames/terms remain provenance, not current capability claims.
+- DEF-03: PARTIAL VALID. The external critic packet is blind to learner reasoning, prior critic output and Owner preference, and is hash-bound/redacted. However shared model priors, corpus independence and account/authority independence are not proven; external critic evidence remains PARTIAL.
+- DEF-04: VALID GAP. Previous meta-learning could emit candidate proposals from very small N. The default candidate floor is now 50 resolutions globally/per stratum. This is a conservative proposal floor only, not statistical proof. Multiplicity control is still NOT_IMPLEMENTED and a permutation test remains REQUIRED_BEFORE_ADAPTATION.
+- DEF-05: NOT A CURRENT DEFECT. Fresh-seat validation does not call Research Adapter. Dependency is one-way: fresh attestation may unlock research; research is not used to establish fresh-seat PASS.
+
+Rejected as over-prescriptive absent proof:
+- mandatory TPM/Secure Enclave/mTLS architecture;
+- BitLocker-not-encrypted as a global HALT_SYSTEM condition;
+- mandatory three-provider majority voting;
+- fixed p<0.01 or fixed 1.5-sigma rollback thresholds;
+- production traffic canary percentages for a system that has no production autonomous mutation.
+
+These may be reconsidered when threat model, data volume and deployment mode justify them.
