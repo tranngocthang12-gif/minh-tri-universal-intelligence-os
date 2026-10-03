@@ -112,11 +112,34 @@ ALLOWED_FIELDS = {
     "freeze_learning_packet": {"id", "trace_id", "claim_id", "counterevidence_ids", "external_case_ids", "counterevidence_note", "context_contract", "instruction_version", "toolset_fingerprint"},
     "record_critic_execution": {"id", "packet_id", "critic_provider_id", "provider", "model", "run_id", "context_mode", "output_hash", "verdict", "reason", "missing_evidence"},
     "record_negative_control": {"id", "packet_id", "description", "expected", "observed", "result", "evidence_ids"},
+    "record_trace_link": {"id", "trace_id", "artifact_type", "artifact_id", "relation"},
+    "schedule_lesson_revalidation": {"id", "lesson_id", "review_after", "staleness_conditions", "reason"},
+    "record_lesson_revalidation": {"id", "schedule_id", "evidence_ids", "outcome", "reason", "limits", "trigger"},
     "set_learning_focus": {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty", "reason"},
 }
 
 FOCUS_ACTIVE_FIELDS = {"id", "status", "domain_id", "source_id", "note", "expected_lesson", "uncertainty"}
 FOCUS_STOPPED_FIELDS = {"id", "status", "reason"}
+
+TRACE_ARTIFACT_COLLECTIONS = {
+    "SOURCE": "sources",
+    "EVIDENCE": "evidence",
+    "CLAIM": "claims",
+    "PREDICTION": "predictions",
+    "RESOLUTION": "resolutions",
+    "REVIEW": "reviews",
+    "ADJUDICATION": "adjudications",
+    "LESSON": "lessons",
+    "EXTERNAL_CASE": "external_cases",
+    "LEARNING_PACKET": "learning_packets",
+    "CRITIC_EXECUTION": "critic_executions",
+    "NEGATIVE_CONTROL": "negative_controls",
+    "LESSON_REVALIDATION": "lesson_revalidations",
+}
+TRACE_RELATIONS = {
+    "ORIGIN", "SUPPORT", "COUNTEREVIDENCE", "PREDICTION", "OUTCOME",
+    "CRITIC", "ADJUDICATION", "LESSON", "CONTROL", "REVALIDATION",
+}
 
 
 def _list_of_refs(state: dict, collection: str, values: Any) -> list[str]:
@@ -490,6 +513,63 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         d["recorded_at"] = event_time
         controls = out.setdefault("negative_controls", {})
         add(out, "negative_controls", d)
+
+    elif kind == "record_trace_link":
+        need(d, "id", "trace_id", "artifact_type", "artifact_id", "relation")
+        identifier(d["trace_id"], "trace_id")
+        if d["artifact_type"] not in TRACE_ARTIFACT_COLLECTIONS:
+            raise GateError("Invalid trace artifact type")
+        if d["relation"] not in TRACE_RELATIONS:
+            raise GateError("Invalid trace relation")
+        collection = TRACE_ARTIFACT_COLLECTIONS[d["artifact_type"]]
+        artifact_id = identifier(d["artifact_id"], "artifact ID")
+        artifacts = out.get(collection, {})
+        if artifact_id not in artifacts:
+            raise GateError(f"Unknown traced artifact: {d['artifact_type']}:{artifact_id}")
+        d["recorded_at"] = event_time
+        d["artifact_digest"] = digest(artifacts[artifact_id])
+        links = out.setdefault("trace_links", {})
+        add(out, "trace_links", d)
+
+    elif kind == "schedule_lesson_revalidation":
+        need(d, "id", "lesson_id", "review_after", "staleness_conditions", "reason")
+        lesson = ref(out, "lessons", d["lesson_id"])
+        review_after = parse_time(d["review_after"])
+        if review_after <= parse_time(event_time):
+            raise GateError("review_after must be in the future when scheduled")
+        if not isinstance(d["staleness_conditions"], list) or not d["staleness_conditions"] or any(
+            not isinstance(v, str) or not v.strip() for v in d["staleness_conditions"]
+        ):
+            raise GateError("staleness_conditions must be a nonempty text list")
+        string(d["reason"], "reason")
+        d["domain_id"] = lesson["domain_id"]
+        d["scheduled_at"] = event_time
+        schedules = out.setdefault("lesson_revalidation_schedules", {})
+        add(out, "lesson_revalidation_schedules", d)
+
+    elif kind == "record_lesson_revalidation":
+        need(d, "id", "schedule_id", "evidence_ids", "outcome", "reason", "limits", "trigger")
+        schedules = out.setdefault("lesson_revalidation_schedules", {})
+        schedule = ref(out, "lesson_revalidation_schedules", d["schedule_id"])
+        lesson = ref(out, "lessons", schedule["lesson_id"])
+        if d["outcome"] not in ("RETAIN", "NARROW", "RETIRE", "INCONCLUSIVE"):
+            raise GateError("Invalid lesson revalidation outcome")
+        if d["trigger"] not in ("SCHEDULED", "STALE_SIGNAL", "OWNER_REQUEST"):
+            raise GateError("Invalid lesson revalidation trigger")
+        for key in ("reason", "limits"):
+            string(d[key], key)
+        eids = _list_of_refs(out, "evidence", d["evidence_ids"])
+        if any(out["evidence"][eid]["domain_id"] != lesson["domain_id"] for eid in eids):
+            raise GateError("Lesson revalidation evidence cannot cross domain boundaries")
+        if d["trigger"] == "SCHEDULED" and parse_time(event_time) < parse_time(schedule["review_after"]):
+            raise GateError("Scheduled revalidation cannot run before review_after")
+        d["lesson_id"] = lesson["id"]
+        d["domain_id"] = lesson["domain_id"]
+        d["recorded_at"] = event_time
+        d["status"] = "PROPOSAL_ONLY"
+        d["automatic_lesson_mutation"] = False
+        revalidations = out.setdefault("lesson_revalidations", {})
+        add(out, "lesson_revalidations", d)
 
     elif kind == "set_learning_focus":
         # The collection is created lazily so ledgers written before this type still replay

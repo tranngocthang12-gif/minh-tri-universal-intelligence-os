@@ -149,3 +149,27 @@ Learning Assurance v1 intentionally does **not** claim the following are complet
 
 These remain follow-up gates. They must be added with backward-compatible ledger migration and tests rather than silently inferred from the v1 packet trace.
 
+
+## 11. Learning Assurance v1.1 candidate
+
+Additive contracts:
+
+### Trace links
+A `record_trace_link` record may bind an existing artifact to a durable `trace_id` with a typed relation and an artifact digest.
+
+This avoids rewriting historical events while enabling causal debugging across selected source/evidence/claim/prediction/outcome/critic/adjudication/lesson/control/revalidation artifacts.
+
+A trace link proves linkage metadata and the artifact snapshot hash at link time. It does not prove causality.
+
+### Lesson revalidation proposals
+A lesson may receive a future review schedule with explicit staleness conditions.
+
+Revalidation outcomes are:
+- `RETAIN`
+- `NARROW`
+- `RETIRE`
+- `INCONCLUSIVE`
+
+All revalidation records are `PROPOSAL_ONLY` and set `automatic_lesson_mutation=false`.
+
+A scheduled review cannot be recorded before its `review_after` time. A `STALE_SIGNAL` or `OWNER_REQUEST` may trigger earlier review, but still cannot mutate the lesson automatically.

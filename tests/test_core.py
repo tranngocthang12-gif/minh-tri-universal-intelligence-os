@@ -203,6 +203,55 @@ class CoreGates(unittest.TestCase):
                    observed="Claim stayed bounded", result="PASS", evidence_ids=[])
         self.assertEqual(self.state["negative_controls"]["nc1"]["result"], "PASS")
 
+    def test_trace_link_binds_existing_artifact_digest(self):
+        self.base()
+        self.apply("record_source", id="s1", domain_id="media", uri="internal://source",
+                   captured_at=self.at, kind="FIRST_PARTY", rights_status="CLEAR")
+        self.apply("record_evidence", id="e1", domain_id="media", source_id="s1",
+                   statement="Observation", observed_at=self.at)
+        self.apply("record_trace_link", id="tl1", trace_id="trace1",
+                   artifact_type="EVIDENCE", artifact_id="e1", relation="SUPPORT")
+        link = self.state["trace_links"]["tl1"]
+        self.assertEqual(link["trace_id"], "trace1")
+        self.assertEqual(len(link["artifact_digest"]), 64)
+
+    def test_trace_link_rejects_missing_artifact(self):
+        self.base()
+        with self.assertRaisesRegex(GateError, "Unknown traced artifact"):
+            self.apply("record_trace_link", id="tl1", trace_id="trace1",
+                       artifact_type="EVIDENCE", artifact_id="missing", relation="SUPPORT")
+
+    def test_lesson_revalidation_is_proposal_only(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.review_and_lesson()
+        self.apply("schedule_lesson_revalidation", id="sched1", lesson_id="lesson1",
+                   review_after="2026-02-01T00:00:00Z",
+                   staleness_conditions=["Platform policy changes", "Observed outcome reverses"],
+                   reason="Recheck a slowly accumulated lesson")
+        self.apply("record_lesson_revalidation", at="2026-02-02T00:00:00Z",
+                   id="rev1", schedule_id="sched1", evidence_ids=[],
+                   outcome="INCONCLUSIVE", reason="Not enough new first-party evidence",
+                   limits="Keep current status unchanged", trigger="SCHEDULED")
+        review = self.state["lesson_revalidations"]["rev1"]
+        self.assertEqual(review["status"], "PROPOSAL_ONLY")
+        self.assertFalse(review["automatic_lesson_mutation"])
+        self.assertEqual(self.state["lessons"]["lesson1"]["status"], "CANDIDATE")
+
+    def test_scheduled_revalidation_cannot_run_early(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.review_and_lesson()
+        self.apply("schedule_lesson_revalidation", id="sched1", lesson_id="lesson1",
+                   review_after="2026-02-01T00:00:00Z",
+                   staleness_conditions=["Policy change"],
+                   reason="Periodic review")
+        with self.assertRaisesRegex(GateError, "before review_after"):
+            self.apply("record_lesson_revalidation", at="2026-01-20T00:00:00Z",
+                       id="rev1", schedule_id="sched1", evidence_ids=[],
+                       outcome="RETAIN", reason="Too early", limits="None",
+                       trigger="SCHEDULED")
+
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
