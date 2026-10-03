@@ -66,7 +66,7 @@ class CandidateLifecycleTests(unittest.TestCase):
         self.config = write_owner_config(root)
         self.work = root / "candidate"
         (self.work / "src" / "minhtri").mkdir(parents=True)
-        self.target = self.work / "src" / "minhtri" / "autonomy.py"
+        self.target = self.work / "src" / "minhtri" / "__init__.py"
         self.target.write_text("x = 1\n", encoding="utf-8")
         self.receipt = root / "freeze.json"
         with owner_config(self.config):
@@ -95,7 +95,7 @@ class CandidateLifecycleTests(unittest.TestCase):
         return runner
 
     def test_test_failure_rejects_without_freeze(self):
-        result = self.runner(test_runner=FakeTest("FAIL")).run(["src/minhtri/autonomy.py"])
+        result = self.runner(test_runner=FakeTest("FAIL")).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "REJECTED_TEST")
         self.assertFalse(result["eligible_for_freeze"])
         self.assertFalse(self.receipt.exists())
@@ -104,20 +104,20 @@ class CandidateLifecycleTests(unittest.TestCase):
     def test_test_mutating_candidate_is_blocked(self):
         result = self.runner(
             test_runner=FakeTest(mutate=lambda: self.target.write_text("x = 2\n", encoding="utf-8"))
-        ).run(["src/minhtri/autonomy.py"])
+        ).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "BLOCKED_TEST_MUTATED_CANDIDATE")
         self.assertFalse(self.receipt.exists())
 
     def test_material_critic_rejects_without_freeze(self):
         result = self.runner(
             critic=FakeCritic(CRITIC_MATERIAL_DEFECT)
-        ).run(["src/minhtri/autonomy.py"])
+        ).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "REJECTED_CRITIC")
         self.assertFalse(result["eligible_for_freeze"])
         self.assertFalse(self.receipt.exists())
 
     def test_pass_writes_digest_bound_receipt_and_freezes(self):
-        result = self.runner().run(["src/minhtri/autonomy.py"])
+        result = self.runner().run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "FROZEN_PENDING_OWNER")
         self.assertEqual(result["runtime_status"], "FROZEN")
         self.assertTrue(self.receipt.is_file())
@@ -135,7 +135,7 @@ class CandidateLifecycleTests(unittest.TestCase):
             "status": "PENDING_EXTERNAL_CRITIC",
             "packet_hash": "placeholder",
         })
-        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        result = self.runner(external_critic=external).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "PENDING_EXTERNAL_CRITIC")
         self.assertFalse(result["eligible_for_freeze"])
         self.assertFalse(self.receipt.exists())
@@ -154,7 +154,7 @@ class CandidateLifecycleTests(unittest.TestCase):
                 "missing_evidence": ["negative test"],
             }],
         })
-        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        result = self.runner(external_critic=external).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "REJECTED_EXTERNAL_CRITIC")
         self.assertFalse(result["eligible_for_freeze"])
         self.assertFalse(self.receipt.exists())
@@ -167,7 +167,7 @@ class CandidateLifecycleTests(unittest.TestCase):
             "findings": [],
             "packet_hash": "a" * 64,
         })
-        result = self.runner(external_critic=external).run(["src/minhtri/autonomy.py"])
+        result = self.runner(external_critic=external).run(["src/minhtri/__init__.py"])
         self.assertEqual(result["status"], "FROZEN_PENDING_OWNER")
         self.assertEqual(result["external_critic"]["independence_status"], "PARTIAL")
         self.assertEqual(result["external_critic_independence_status"], "PARTIAL")
@@ -202,7 +202,7 @@ class CandidateLifecycleTests(unittest.TestCase):
         with mock.patch("minhtri.candidate_lifecycle.shutil.which", return_value="codex.cmd"), \
              mock.patch("minhtri.candidate_lifecycle.subprocess.run", return_value=proc) as run:
             result = critic.review(
-                changed_paths=["src/minhtri/autonomy.py"],
+                changed_paths=["src/minhtri/__init__.py"],
                 artifact_digest="a" * 64,
                 test_receipt={"status": "PASS"},
             )
