@@ -214,6 +214,31 @@ class CoreGates(unittest.TestCase):
         self.assertEqual(self.state["resolutions"]["r1"]["interval_hit"], True)
         self.assertEqual(self.state["claims"]["h1"]["epistemic_status"], "HYPOTHESIS")
 
+    def test_lesson_provenance_is_optional_but_required_for_learning_claim(self):
+        self.base()
+        self.predictions_and_outcomes()
+        self.apply("review_claim", id="review1", claim_id="h1", critic_provider_id="critic",
+                   verdict="ACCEPT_FOR_TRIAL", reason="Testable")
+        self.apply("adjudicate_claim", id="adj1", claim_id="h1", review_id="review1",
+                   adjudicator_provider_id="judge", verdict="ACCEPT_FOR_TRIAL",
+                   reason="Bounded trial")
+        self.apply("propose_lesson", id="lesson-p", claim_id="h1", statement="Narrow lesson",
+                   limits="Bounded", prediction_ids=["f1", "f2"], adjudication_id="adj1",
+                   counterevidence_ids=[], counterevidence_search_note="None found",
+                   applicability="media/p1",
+                   lesson_provenance={
+                       "status": "AUDITED_LEDGER_DERIVED",
+                       "candidate_id": "meta-1",
+                       "resolution_ids": ["r1", "r2"],
+                       "strata": ["media/p1"],
+                       "derived_at": "2026-01-07T00:00:00Z",
+                   })
+        self.assertTrue(self.state["lessons"]["lesson-p"]["learning_claim_eligible"])
+        self.assertEqual(
+            self.state["lessons"]["lesson-p"]["lesson_provenance"]["status"],
+            "AUDITED_LEDGER_DERIVED",
+        )
+
     def test_owner_can_activate_structured_machine_readable_trial_rule(self):
         from minhtri.learning_experiment import validate_preregistration
         from minhtri.trial_rule_runtime import preregistration_digest
@@ -224,8 +249,10 @@ class CoreGates(unittest.TestCase):
         experiment = {
             "experiment_id": "trial-1",
             "frozen_at_utc": "2026-01-08T00:00:00Z",
-            "primary_endpoint": "task_utility",
-            "safety_endpoint": "unsupported_claim_rate",
+            "primary_endpoint": "FACTUAL_ACCURACY",
+            "safety_endpoint": "UNSUPPORTED_CLAIM_RATE",
+            "coverage_endpoint": "GOLD_CLAIM_COVERAGE",
+            "coverage_noninferiority_margin": 0.05,
             "primary_success_rule": "treatment > compute_matched",
             "safety_failure_rule": "unsupported_claim_rate must not worsen",
             "rollback_rule": "rollback on safety failure",
@@ -238,10 +265,16 @@ class CoreGates(unittest.TestCase):
             "gold_labels_hash": "f" * 64,
             "baseline_definition": "V1_3",
             "compute_budget_contract": {
-                "control": {"retrieval_calls": 1, "critic_calls": 1},
-                "treatment": {"retrieval_calls": 2, "critic_calls": 2},
-                "compute_matched": {"retrieval_calls": 2, "critic_calls": 2},
+                "control": {"retrieval_calls": 1, "critic_calls": 1, "generator_calls": 1},
+                "treatment": {"retrieval_calls": 2, "critic_calls": 2, "generator_calls": 1},
+                "compute_matched": {"retrieval_calls": 2, "critic_calls": 2, "generator_calls": 1},
+                "placebo": {"retrieval_calls": 2, "critic_calls": 2, "generator_calls": 1},
             },
+            "compute_tolerance_fraction": 0.10,
+            "placebo_overlay_id": "SHUFFLED_LEDGER_PLACEBO",
+            "placebo_overlay_hash": "1" * 64,
+            "placebo_provenance_hash": "2" * 64,
+            "arm_mode": "PAIRED_FOUR_ARM",
             "primary_window_tasks": 30,
             "rollback_threshold": 0.05,
             "trial_rule_id": "lesson1",

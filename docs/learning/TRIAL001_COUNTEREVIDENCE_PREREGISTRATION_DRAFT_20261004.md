@@ -2,23 +2,29 @@
 
 **Status:** DRAFT PRE-FREEZE / NOT YET A VALID PREREGISTRATION  
 **Date:** 2026-10-04  
-**Purpose:** First causal behavioral-learning trial for a machine-readable `TRIAL_RULE`.  
-**Claim allowed if PASS:** evidence that the bounded lesson overlay improves future task behavior beyond compute-matched generic review.  
-**Claim explicitly forbidden before PASS:** "MINH TRI is self-learning."
+**Purpose:** Calibration trial for the empirical measurement harness.  
+**Claim allowed if PASS without audited lesson provenance:** the harness can distinguish the selected overlay from compute-matched and shuffled-placebo controls under the frozen protocol.  
+**Claim allowed only if audited lesson provenance also exists:** evidence that a ledger-derived lesson improves future behavior beyond compute-matched and placebo controls.  
+**Claim explicitly forbidden before both causal PASS and audited lesson provenance:** "MINH TRI learned this from experience."
 
 ## 1. Hypothesis
 
 The bounded overlay `COUNTEREVIDENCE_FIRST` improves factual accuracy on previously unseen, low-stakes tasks because it changes the direction of reasoning, not merely because it adds retrieval/model compute.
 
-### Primary causal contrast
+### Four paired arms on every task
 
-`B - C`, not `B - A`.
+Every frozen task is executed through all four isolated arms. Only execution/presentation order is randomized.
 
 - **A — CONTROL:** approved base pipeline.
-- **B — TREATMENT:** base pipeline + lesson-targeted `COUNTEREVIDENCE_FIRST`.
-- **C — COMPUTE_MATCHED:** same extra retrieval/model-call/token ceilings as B, but a neutral, non-counterevidence-targeted review protocol.
+- **B — TREATMENT:** base pipeline + `COUNTEREVIDENCE_FIRST`.
+- **C — COMPUTE_MATCHED:** same actual compute target as B, but a neutral non-counterevidence-targeted review protocol.
+- **D — PLACEBO:** same compute class as B/C, using an overlay synthesized by the same meta-learning procedure from resolution labels that were shuffled before synthesis.
 
-A result where B > A but B does not outperform C is **not evidence of learning**.
+Primary causal contrasts:
+1. `B - C`: incremental value beyond generic extra compute.
+2. `D - C`: negative-control test of the harness. If D materially outperforms C, the harness or overlay family is not specific enough to support a learning claim.
+
+A result where B > A but B does not outperform C is not evidence of lesson value. A result where D > C invalidates a learning interpretation even if B > C.
 
 ## 2. Compute-matched protocol
 
@@ -63,7 +69,9 @@ Extra critic objective:
 
 C MUST NOT contain an instruction to search for counterevidence, falsification, opposition, or disconfirming evidence.
 
-B and C prompt texts and hashes must be frozen before task outputs are generated.
+B, C and D prompt/overlay texts and hashes must be frozen before task outputs are generated.
+
+Declared compute budget is not sufficient evidence of compute matching. After execution, B-vs-C and B-vs-D actual telemetry must be checked against a preregistered tolerance. Tasks outside tolerance are ineligible for the primary causal analysis and remain reported separately.
 
 ## 3. Task population
 
@@ -77,29 +85,26 @@ Tasks must be:
 
 Raw task text MUST NOT be committed to the public GitHub repository before execution. GitHub stores only the sealed manifest and hashes. Raw tasks/gold packets remain in an Owner-controlled sealed artifact inaccessible to the generator until assigned for execution.
 
-## 4. Allocation
+## 4. Paired execution and order randomization
 
-### Required design
+Each task produces four isolated outputs: A, B, C and D.
 
-Block-randomized three-arm allocation.
+Requirements:
+- identical frozen task bytes enter all four arms;
+- retrieval caches, conversation state and tool state are isolated by arm;
+- an arm cannot read another arm's retrieval results or output;
+- task author cannot choose execution/presentation order;
+- generator cannot see gold labels.
 
-- block size: 6 tasks;
-- allocation within each complete block: 2 A / 2 B / 2 C;
-- task contents and hashes are frozen before assignment;
-- task author cannot choose the arm;
-- generator cannot see future task-arm mappings.
-
-### Assignment derivation
-
-Before assignment:
+Before execution:
 1. freeze task-content hashes;
 2. generate a 256-bit assignment secret;
-3. record only `SHA256(assignment_secret)` in the preregistration;
-4. derive each block permutation from a domain-separated hash of:
-   `assignment_secret || experiment_id || preregistration_hash || block_id`;
-5. reveal the assignment secret only after final scoring for reproducibility.
+3. record only `SHA256(assignment_secret)` in the preregistration freeze receipt;
+4. derive each task's four-arm order from a domain-separated hash of:
+   `assignment_secret || experiment_id || preregistration_hash || task_id || paired-four-arm`;
+5. reveal the assignment secret only after final score freeze for reproducibility.
 
-**Pre-run blocker:** current reader uses deterministic per-task three-arm hashing but does not yet prove exact block balance. TRIAL-001 MUST NOT begin until implementation/tests match this block-randomized preregistration.
+The randomized quantity is arm order, not whether a task receives an arm. Every eligible task receives all four arms.
 
 ## 5. Endpoints
 
@@ -117,14 +122,23 @@ Scoring definition must be frozen with the gold packet before generation. Where 
 
 `unsupported_claim_rate = unsupported factual claims / all factual claims`.
 
+### Coverage non-inferiority endpoint
+
+`GOLD_CLAIM_COVERAGE`
+
+`gold_claim_coverage = correctly addressed required gold claims / all required gold claims`.
+
+A treatment result cannot PASS if factual accuracy improves by simply making fewer substantive claims. The non-inferiority margin must be frozen before unblinding.
+
 ### Mandatory guardrails
 
 These are not alternate primary endpoints and cannot be used post-hoc to declare a win:
 - `FALSE_POSITIVE_COUNTERCLAIM_RATE`;
 - directness/conciseness utility;
-- mean total model tokens;
+- measured input/output/retrieved tokens by task and arm;
 - retrieval-call count;
-- model-call count;
+- critic-pass count;
+- generator-call count;
 - wall-clock latency where comparable.
 
 `FALSE_POSITIVE_COUNTERCLAIM_RATE` measures unsupported or fabricated counterclaims introduced while attempting to satisfy `COUNTEREVIDENCE_FIRST`.
@@ -240,3 +254,63 @@ Once status becomes `FROZEN_PREREGISTRATION`, these may not change:
 - rollback thresholds.
 
 Changing any of them after unblinding invalidates the run.
+
+
+## 14. Lesson provenance and calibration-only boundary
+
+`COUNTEREVIDENCE_FIRST` is selected a priori for Trial-001 and is not currently established as a lesson derived from audited historical resolutions.
+
+Therefore Trial-001 is, by default, a **measurement calibration trial**.
+
+A trial may add the phrase "learned from experience" only when the treatment lesson carries a frozen `lesson_provenance` containing:
+- meta-lesson candidate ID;
+- audited resolution IDs;
+- audited strata;
+- derivation timestamp;
+- provenance status `AUDITED_LEDGER_DERIVED`.
+
+Without that provenance, B > C and D <= C can demonstrate overlay-specific incremental value and harness discrimination, but not historical learning.
+
+## 15. Placebo provenance
+
+D must be produced by the same synthesis procedure used for candidate lessons, except that resolution labels are shuffled before synthesis.
+
+The placebo artifact must be frozen before execution with:
+- placebo overlay ID;
+- overlay hash;
+- shuffled-corpus/provenance hash;
+- synthesis procedure/version;
+- no access to primary-task outcomes.
+
+The placebo is single-use for the frozen trial.
+
+## 16. Arm leakage / blinding diagnostic
+
+Before accuracy scoring is accepted, run a blinded arm-guessing diagnostic on normalized judge inputs.
+
+Judge-facing normalization should remove avoidable stylistic arm markers while preserving factual claims and citations.
+
+The arm-leakage test protocol and threshold must be frozen before primary scoring. If arm identity is inferable above the preregistered tolerance, that run cannot support a strong blinded-judge claim.
+
+## 17. Preregistration freeze receipt
+
+Hash equality alone is insufficient if the preimage can be created after results are known.
+
+Before the first primary task is executed, create an append-only freeze receipt containing:
+- full preregistration content hash;
+- task-manifest hash;
+- gold/evaluator hash;
+- B/C/D prompt or overlay hashes;
+- placebo provenance hash;
+- assignment-secret hash;
+- frozen timestamp;
+- canonical Git commit SHA;
+- local-ledger event ID when the ledger is available.
+
+A change to any frozen field after this receipt invalidates the run.
+
+## 18. Known runtime limitation
+
+The current data-plane code compiles execution plans; it does not itself execute model/retrieval calls, enforce fresh process/cache isolation, capture telemetry from a live provider, or run the blinded evaluator.
+
+Therefore the repository currently contains a **trial-plan compiler and measurement contracts**, not a completed empirical measurement engine. The empirical run remains blocked until a sandbox executor/telemetry path is demonstrated on the exact frozen commit.

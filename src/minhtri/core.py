@@ -107,7 +107,7 @@ ALLOWED_FIELDS = {
     "record_resolution": {"id", "prediction_id", "evidence_id"},
     "review_claim": {"id", "claim_id", "critic_provider_id", "verdict", "reason"},
     "adjudicate_claim": {"id", "claim_id", "review_id", "adjudicator_provider_id", "verdict", "reason"},
-    "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id", "counterevidence_ids", "counterevidence_search_note", "applicability"},
+    "propose_lesson": {"id", "claim_id", "statement", "limits", "prediction_ids", "adjudication_id", "counterevidence_ids", "counterevidence_search_note", "applicability", "lesson_provenance"},
     "freeze_lesson": {"lesson_id"},
     "activate_trial_lesson": {"lesson_id", "owner_ack", "scope", "trial_spec"},
     "record_external_case": {"id", "domain_id", "evidence_ids", "outcome", "context", "mechanism_hypothesis", "transfer_limits", "uncertainty"},
@@ -488,6 +488,28 @@ def evolve(state: dict, command: dict, event_time: str, *, new_write: bool = Tru
         counter_ids = _list_of_refs(out, "evidence", d["counterevidence_ids"])
         if any(out["evidence"][eid]["domain_id"] != claim["domain_id"] for eid in counter_ids):
             raise GateError("Lesson counterevidence cannot cross domain boundaries")
+        provenance = d.get("lesson_provenance")
+        if provenance is not None:
+            required_provenance = {"status", "candidate_id", "resolution_ids", "strata", "derived_at"}
+            if not isinstance(provenance, dict) or set(provenance) != required_provenance:
+                raise GateError("lesson_provenance has invalid schema")
+            if provenance["status"] != "AUDITED_LEDGER_DERIVED":
+                raise GateError("lesson_provenance status must be AUDITED_LEDGER_DERIVED")
+            string(provenance["candidate_id"], "lesson_provenance.candidate_id")
+            string(provenance["derived_at"], "lesson_provenance.derived_at")
+            if not isinstance(provenance["resolution_ids"], list) or not provenance["resolution_ids"]:
+                raise GateError("lesson_provenance needs resolution_ids")
+            for rid in provenance["resolution_ids"]:
+                string(rid, "lesson_provenance.resolution_id")
+                ref(out, "resolutions", rid)
+            if not isinstance(provenance["strata"], list) or not provenance["strata"]:
+                raise GateError("lesson_provenance needs strata")
+            for stratum in provenance["strata"]:
+                string(stratum, "lesson_provenance.stratum")
+            d["lesson_provenance"] = copy.deepcopy(provenance)
+            d["learning_claim_eligible"] = True
+        else:
+            d["learning_claim_eligible"] = False
         d["domain_id"] = claim["domain_id"]
         d["source_claim_id"] = claim["id"]
         d["hypothesis"] = d["statement"]
