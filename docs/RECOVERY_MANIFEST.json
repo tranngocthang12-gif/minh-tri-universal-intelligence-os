@@ -89,16 +89,13 @@
     "learning_assurance": "minhtri-learning-assurance/v1.4"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
-    "maintenance_plane": "UNKNOWN",
-    "secure_mcp_tunnel": "UNKNOWN",
-    "local_brain_connector": "UNKNOWN",
-    "root_cause": "NOT_YET_REESTABLISHED; FRESH_READ_PLANE_AND_MAINTENANCE_PROOF_REQUIRED",
-    "detail": {
-      "maintenance_plane": "DEGRADED_TIMEOUT",
-      "secure_mcp_tunnel": "NO_POLL",
-      "local_brain_connector": "NO_POLL"
-    }
+    "observed_at": "2026-10-04T02:04:29+07:00",
+    "owner_pc": "UNKNOWN",
+    "maintenance_plane": "OFFLINE",
+    "secure_mcp_tunnel": "DOWN",
+    "local_brain_connector": "DOWN",
+    "root_cause": "MAINTENANCE_DEVICE_OFFLINE_AND_TUNNEL_CLIENT_NOT_SEEN_300S",
+    "recovery_condition": "FRESH_MAINTENANCE_ONLINE_THEN_READYZ_BRAIN_VERIFY_RECOVERY_PACKET"
   },
   "open_foundation_gates": [
     "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
@@ -119,5 +116,25 @@
     "tests": "PASS_TARGETED_20_FULL_233_2026-10-04",
     "eligible_for_freeze": false,
     "automatic_promotion": false
+  },
+  "self_upgrade": {
+    "authorization_window": "OPEN_UNTIL_2026-10-04T17:56:45.124745Z",
+    "runtime": "UNKNOWN_NOT_CURRENTLY_OBSERVED",
+    "automatic_renewal": false,
+    "automatic_verified_promotion": false,
+    "automatic_candidate_promotion": false,
+    "candidate_a_status": "PENDING_EXTERNAL_CRITIC"
+  },
+  "owner_learning_track_economics_phd": {
+    "status": "ACTIVE_DOCTORAL_LEVEL_SELF_STUDY_NOT_ACCREDITED_DEGREE",
+    "plan": "docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md",
+    "module": "M0_1_STARTED_UNTESTED",
+    "background_runtime": false,
+    "research_adapter": "BLOCKED_UNTIL_FRESH_SEAT_PASS"
+  },
+  "architecture_sync": {
+    "status": "FULL_SYNC_2026-10-04",
+    "source_main_sha": "f7721c9b77dc44ed754023e6e9f865d32660e397",
+    "runtime_liveness_authority": "docs/PROJECT_STATE.json#current_runtime_liveness"
   }
 }
