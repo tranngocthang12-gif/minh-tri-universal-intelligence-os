@@ -1,0 +1,41 @@
+{
+  "schema": "minhtri-controlled-reboot-precheck/v1",
+  "observed_at": "2026-10-03T15:54:41+07:00",
+  "main_sha": "da52df578dad91a41cd9eadc3b65fcd368b52d2a",
+  "device": "WIN-VBIQNFFDKIR",
+  "task": {
+    "name": "MINH_TRI_Readonly_Tunnel",
+    "state": "RUNNING",
+    "last_task_result_decimal": 267009,
+    "last_task_result_hex": "0x41301",
+    "disallow_start_if_on_batteries": false,
+    "stop_if_going_on_batteries": false,
+    "start_when_available": true,
+    "execution_time_limit": "PT0S",
+    "restart_count": 10,
+    "restart_interval": "PT1M"
+  },
+  "secret_safe_runtime": {
+    "dpapi_secret_exists": true,
+    "installer_synced_from_main": true,
+    "plaintext_secret_recorded": false
+  },
+  "health": {
+    "readyz_status": 200,
+    "body": "ready"
+  },
+  "brain_verify": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+  },
+  "recovery": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+    "focus_domain": "youtube",
+    "expectation": "chat quen, so khong",
+    "expectation_status": "UNTESTED_EXPECTATION"
+  },
+  "decision": "CONTROLLED_REBOOT_ALLOWED_PENDING_POST_REBOOT_UNATTENDED_RECOVERY_PROOF"
+}
