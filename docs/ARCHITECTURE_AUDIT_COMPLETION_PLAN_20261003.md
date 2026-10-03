@@ -100,7 +100,7 @@ The foundation should not be promoted out of `FOUNDATION_PROTOTYPE` until these 
 5. **Independent witness authority** — credential and storage authority not jointly compromised with the Owner PC/GitHub write authority.
 6. **Real external critic execution evidence** — frozen target/evidence packet plus provenance/independence receipt with bounded claims.
 7. **Empirical Learning Assurance v1.4 validation** — comparative real-work evidence; implementation/CI is not evidence of improved accuracy.
-8. **Backlog hygiene** — review current-main compatibility of open learning PRs and dependency PRs; merge, refresh, or close deliberately.
+8. **Backlog hygiene** — CLOSED on 2026-10-03; current audit observed zero open PRs after the refresh/merge work.
 
 ## 6. Production-phase gates after foundation
 
@@ -145,7 +145,19 @@ Execution order:
 7. run genuine fresh-seat validation;
 8. establish independent witness;
 9. execute external critic + empirical Learning Assurance v1.4 trial;
-10. clean open PR backlog;
-11. re-audit and decide whether to close the foundation phase.
+10. re-audit and decide whether to close the foundation phase.
 
 No step may promote itself to VERIFIED merely because code exists or CI passes.
+
+
+## 9. Post-reboot update — 2026-10-03 15:35 +07:00
+
+A newer bounded remote observation found the MINH TRÍ read-only connector UNREACHABLE and Desktop Commander offline. GitHub and CI remained reachable. Because the local machine could not be inspected, the root cause of the failed remote recovery is UNKNOWN.
+
+Consequences:
+- boot/reboot persistence remains NOT_PROVEN;
+- earlier session liveness PASS remains historical evidence only;
+- backlog hygiene is CLOSED and is not part of the seven currently open foundation gates;
+- the immediate next action is to restore maintenance-plane reachability, inspect Scheduled Task/process/health state, and then either repair the autostart path or capture a successful unattended recovery proof.
+
+Evidence: `docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json`.

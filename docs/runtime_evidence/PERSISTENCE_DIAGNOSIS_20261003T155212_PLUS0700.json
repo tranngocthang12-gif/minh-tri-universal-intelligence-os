@@ -1,0 +1,70 @@
+{
+  "schema": "minhtri-persistence-diagnosis/v1",
+  "observed_at": "2026-10-03T15:52:12+07:00",
+  "device": "WIN-VBIQNFFDKIR",
+  "maintenance_plane": "ONLINE",
+  "reboot_observation": {
+    "last_boot_up_time": "2026-10-03T15:23:00+07:00",
+    "task_file_creation_time": "2026-10-03T15:17:46+07:00",
+    "task_last_run_time": "2026-10-03T15:46:36+07:00",
+    "task_last_result_decimal": 267009,
+    "task_last_result_hex": "0x41301",
+    "task_last_result_meaning": "TASK_IS_CURRENTLY_RUNNING"
+  },
+  "diagnosis": {
+    "task_existed_before_reboot": true,
+    "task_history_available": false,
+    "security_logon_events_available": false,
+    "prior_settings": {
+      "disallow_start_if_on_batteries": true,
+      "stop_if_going_on_batteries": true,
+      "execution_time_limit": "PT72H",
+      "restart_count": 0
+    },
+    "current_power_observation": {
+      "power_line_status": "Online",
+      "battery_charge_status": "Low, Charging",
+      "battery_life_percent": 0.24
+    },
+    "root_cause_status": "PROBABLE_CONFIGURATION_DEFECT_NOT_YET_REBOOT_PROVEN",
+    "bounded_reason": "The logon task existed before reboot but had battery-stop/start restrictions and a 72h execution limit. History logs were unavailable, so causality is not claimed as proven."
+  },
+  "corrective_action": {
+    "disallow_start_if_on_batteries": false,
+    "stop_if_going_on_batteries": false,
+    "start_when_available": true,
+    "execution_time_limit": "PT0S",
+    "restart_count": 10,
+    "restart_interval": "PT1M",
+    "runtime_task_updated": true,
+    "canonical_installer_patch_committed_to_pr120": true
+  },
+  "current_runtime_check": {
+    "task_state": "RUNNING",
+    "dpapi_tunnel_secret_exists": true,
+    "runtime_supervisor_present": true,
+    "tunnel_client_present": true,
+    "mcp_readonly_present": true,
+    "readyz_http_status": 200,
+    "readyz_body": "ready",
+    "brain_verify": {
+      "status": "VALID",
+      "event_count": 3,
+      "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+    },
+    "brain_recovery_packet": {
+      "status": "VALID",
+      "event_count": 3,
+      "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+      "focus_domain": "youtube",
+      "expectation": "chat quen, so khong",
+      "expectation_status": "UNTESTED_EXPECTATION"
+    }
+  },
+  "promotion_status": {
+    "maintenance_plane_recovered": true,
+    "current_runtime_liveness_proven": true,
+    "boot_reboot_persistence": "NOT_PROVEN_PENDING_CLEAN_REBOOT_WITHOUT_MANUAL_TUNNEL_LAUNCH"
+  },
+  "secrets_recorded": false
+}

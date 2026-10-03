@@ -45,6 +45,11 @@ class WindowsTunnelPersistenceContract(unittest.TestCase):
         self.assertIn("secret_in_task_arguments=$false", text.replace(" ", ""))
         self.assertNotIn("CONTROL_PLANE_API_KEY", text)
         self.assertNotIn("--control-plane.api-key", text)
+        self.assertIn("-AllowStartIfOnBatteries", text)
+        self.assertIn("-DontStopIfGoingOnBatteries", text)
+        self.assertIn("-ExecutionTimeLimit ([TimeSpan]::Zero)", text)
+        self.assertIn("-RestartCount 10", text)
+        self.assertIn("-RestartInterval (New-TimeSpan -Minutes 1)", text)
 
     def test_installer_is_fail_closed_on_missing_prerequisites(self):
         text = self.read("install_tunnel_logon_task.ps1")

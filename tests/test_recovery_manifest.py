@@ -179,7 +179,7 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(liveness["secure_mcp_tunnel"], "UP")
         self.assertEqual(liveness["maintenance_plane"], "ONLINE")
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
-        self.assertIn("NO_MATCHING_BOOT_REGISTRATION", state["persistence_probe_latest"])
+        self.assertIn("REBOOT_PROOF_PENDING", state["persistence_probe_latest"])
         self.assertEqual(state["last_proven_runtime_evidence"]["persistence"], "NOT_PROVEN")
 
     def test_current_workstream_matches_open_gates(self):
@@ -206,16 +206,20 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
         self.assertTrue((ROOT / state["fresh_chat_seat_validation_latest_attempt"]).is_file())
 
-    def test_boot_persistence_precheck_blocks_reboot_without_unattended_secret(self):
+    def test_boot_persistence_precheck_is_ready_but_not_promoted_before_reboot_proof(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
         self.assertEqual(
             state["tunnel_runtime_key_persistence"],
-            "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
+            "PROVISIONED_DPAPI_CURRENT_USER_SECRET_PRESENT",
         )
-        self.assertEqual(state["tunnel_boot_registration"], "NOT_INSTALLED_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET")
-        self.assertIn("DO_NOT_REBOOT", state["boot_persistence_precheck_decision"])
+        self.assertEqual(
+            state["tunnel_boot_registration"],
+            "INSTALLED_LOGON_TASK_RUNTIME_HARDENED_REBOOT_PROOF_PENDING",
+        )
+        self.assertIn("READY_FOR_CONTROLLED_REBOOT", state["boot_persistence_precheck_decision"])
         self.assertTrue((ROOT / state["boot_persistence_latest_precheck"]).is_file())
+        self.assertTrue((ROOT / state["persistence_diagnosis_latest"]).is_file())
 
 
 if __name__ == "__main__":

@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "OWNER_LOCAL_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
+  "next_checkpoint": "PR120_CI_PASS_MERGE_CANONICAL_SYNC_THEN_CONTROLLED_REBOOT_PERSISTENCE_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -111,7 +111,7 @@
   "autonomy_research_runtime": "FAIL_CLOSED_UNTIL_FRESH_SEAT_PASS",
   "secure_mcp_tunnel_supervisor": "IMPLEMENTED_MERGED_CI_PROVEN_ACTIVE_CURRENT_OWNER_PC_SESSION",
   "local_brain_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
-  "owner_pc_maintenance_plane_latest": "ONLINE_PING_PASS_2026-10-03T12:42+07",
+  "owner_pc_maintenance_plane_latest": "ONLINE_PING_PASS_2026-10-03T15:45+07",
   "owner_pc_tunnel_supervised_launcher": "ACTIVE_CURRENT_SESSION",
   "owner_pc_tunnel_current_session": "LIVE_READONLY_SUPERVISED_SESSION_VALID",
   "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02",
@@ -143,17 +143,19 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T12:42:15+07:00",
+    "observed_at": "2026-10-03T15:52:12+07:00",
     "owner_pc": "ONLINE",
     "maintenance_plane": "ONLINE",
     "secure_mcp_tunnel": "UP",
     "local_brain_connector": "UP",
     "evidence": [
-      "Desktop Commander ping PASS on WIN-VBIQNFFDKIR during current audit",
-      "tunnel-client process present and listening on loopback health port",
-      "GET /readyz returned HTTP 200 ready",
-      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
-      "brain.recovery_packet returned VALID focus youtube / chat quen, so khong / UNTESTED_EXPECTATION"
+      "Desktop Commander ping PASS after manual restoration of maintenance-plane reachability.",
+      "Scheduled Task MINH_TRI_Readonly_Tunnel exists and is currently running.",
+      "DPAPI tunnel secret exists.",
+      "runtime_supervisor, tunnel-client and minhtri.mcp_readonly processes are present.",
+      "GET /readyz returned HTTP 200 ready.",
+      "brain.verify returned VALID event_count=3 with head ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927.",
+      "brain.recovery_packet returned VALID with active youtube focus and UNTESTED_EXPECTATION."
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
@@ -222,18 +224,18 @@
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
-  "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
+  "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T15:52+07",
   "architecture_sync_latest": "AUDIT_ALIGNED_THROUGH_PR112_POWERSHELL_PERSISTENCE_CI_AND_SECRET_SAFE_AUTOSTART_DEPLOYMENT_2026-10-03",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
-  "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
-  "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF",
+  "runtime_assurance_latest_evidence": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json",
+  "persistence_probe_latest": "LOGON_TASK_EXISTS_RUNNING_HARDENED_SETTINGS_2026-10-03T15:52+07_REBOOT_PROOF_PENDING",
   "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
   "fresh_chat_seat_validation_latest_attempt": "docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json",
   "boot_persistence_latest_precheck": "docs/runtime_evidence/BOOT_PERSISTENCE_PRECHECK_20261003T125900_PLUS0700.json",
-  "boot_persistence_precheck_decision": "DO_NOT_REBOOT_NO_UNATTENDED_SECRET_SAFE_TUNNEL_CREDENTIAL_OR_BOOT_REGISTRATION",
-  "tunnel_runtime_key_persistence": "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
-  "tunnel_boot_registration": "NOT_INSTALLED_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
+  "boot_persistence_precheck_decision": "READY_FOR_CONTROLLED_REBOOT_AFTER_CI_AND_CANONICAL_SYNC",
+  "tunnel_runtime_key_persistence": "PROVISIONED_DPAPI_CURRENT_USER_SECRET_PRESENT",
+  "tunnel_boot_registration": "INSTALLED_LOGON_TASK_RUNTIME_HARDENED_REBOOT_PROOF_PENDING",
   "local_canonical_clone_recovery_readiness": "STALE_RELATIVE_TO_LIVE_MAIN_AT_PRECHECK",
   "secret_safe_tunnel_autostart": "IMPLEMENTED_MERGED_CI_PROVEN_DEPLOYED_TO_OWNER_PC_RUNTIME",
   "tunnel_unattended_launcher_smoke": "PASS_FAIL_CLOSED_MISSING_DPAPI_TUNNEL_SECRET",
@@ -243,5 +245,8 @@
   "tunnel_persistence_corrected_script_owner_pc_deployment": "DEPLOYED_AND_READBACK_MATCHED_DURING_2026-10-03_ARCHITECTURE_AUDIT",
   "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json",
   "foundation_gate_runbook": "docs/FOUNDATION_GATE_EXECUTION_RUNBOOK_20261003.md",
-  "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json"
+  "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json",
+  "post_reboot_remote_reachability_latest": "docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json",
+  "post_reboot_runtime_diagnosis": "PROBABLE_TASK_SETTINGS_DEFECT_HARDENED_REBOOT_PROOF_PENDING",
+  "persistence_diagnosis_latest": "docs/runtime_evidence/PERSISTENCE_DIAGNOSIS_20261003T155212_PLUS0700.json"
 }
