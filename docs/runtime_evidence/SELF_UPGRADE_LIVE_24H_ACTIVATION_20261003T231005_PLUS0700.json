@@ -1,0 +1,23 @@
+{
+  "protocol": "minhtri-runtime-evidence/v1",
+  "observed_at": "2026-10-03T23:10:05+07:00",
+  "scope": "LIVE_24H_SELF_UPGRADE_LEASE_ACTIVATION",
+  "owner_pc": "WIN-VBIQNFFDKIR",
+  "source_sha": "ce72ff5d9ef4096e5088eac2624282f08f025a0d",
+  "lease_id": "upgrade-78bb759426dd41d4b306dc995dc47fae",
+  "issued_at_utc": "2026-10-03T15:56:05.483438Z",
+  "expires_at_utc": "2026-10-04T15:56:05.483438Z",
+  "duration_seconds": 86400,
+  "runtime_status": "ACTIVE",
+  "process_pid": 23260,
+  "last_heartbeat_utc": "2026-10-03T16:10:05.702875Z",
+  "automatic_renewal": false,
+  "automatic_verified_promotion": false,
+  "automatic_candidate_promotion": false,
+  "automatic_push": false,
+  "automatic_merge": false,
+  "canonical_write_capability": false,
+  "candidate_branch_only": true,
+  "test_critic_freeze_required": true,
+  "controller_authority": "IN_MEMORY_FAIL_CLOSED_ON_PROCESS_EXIT"
+}
