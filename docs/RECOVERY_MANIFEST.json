@@ -158,5 +158,20 @@
     "stale_capability": "PARTIAL_HARDENING_GAP_NOT_PROVEN_MUTATION_AUTHORITY",
     "critic_independence": "PARTIAL_NOT_FULL",
     "fresh_seat_research_coupling": "ONE_WAY_NO_CIRCULAR_DEPENDENCY"
-  }
+  },
+  "trial001": {
+    "status": "CALIBRATION_PREPARATION_NOT_FROZEN_NOT_RUN",
+    "arm_mode": "PAIRED_FOUR_ARM_EVERY_TASK",
+    "arms": [
+      "CONTROL",
+      "TREATMENT",
+      "COMPUTE_MATCHED",
+      "PLACEBO"
+    ],
+    "learning_claim_requires_audited_lesson_provenance": true,
+    "executor": "PLAN_COMPILER_ONLY_LIVE_EXECUTION_TELEMETRY_NOT_IMPLEMENTED",
+    "preregistration_freeze_receipt": "NOT_FROZEN",
+    "external_reader_review": "REQUIRED_NOT_YET_COMPLETED"
+  },
+  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os"
 }
