@@ -18,7 +18,7 @@
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
   "local_brain_connected": true,
-  "next_checkpoint": "SEPARATE_CHAT_DESKTOP_COMMANDER_HARDENING_THEN_FRESH_SEAT_AND_BOOT_PERSISTENCE_PROOF",
+  "next_checkpoint": "GENUINE_FRESH_SEAT_THEN_BOOT_REBOOT_PERSISTENCE_PROOF",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -181,9 +181,9 @@
     "boot_persistence": "NOT_PROVEN_NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE"
   },
   "secure_mcp_tunnel_supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03",
-  "desktop_commander_allowed_directories": "EMPTY_ARRAY_MEANS_FULL_FILESYSTEM_ACCESS_CONFIRMED_2026-10-03T12:42+07",
+  "desktop_commander_allowed_directories": "RUNTIME_ONLY_ALLOWLIST_C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current",
   "desktop_commander_telemetry_enabled": true,
-  "desktop_commander_hardening": "BLOCKED_BY_TOOL_SAFETY_REQUIRES_SEPARATE_CONFIG_CHAT",
+  "desktop_commander_hardening": "PASS_RUNTIME_ONLY_ALLOWLIST_2026-10-03T12:52+07",
   "security_foundation_status": "CORE_BUILT_RUNTIME_ASSURANCE_INCOMPLETE",
   "backlog_cleanup_20261003": "CLOSED_HISTORICAL_PRS_2_THROUGH_11_AND_81; LEARNING_AND_DEPENDABOT_PRS_REMAIN_ACTIVE",
   "owner_pc_write_runtime_last_observed_sha": "70B91E737DD80C1996F537E3D17D4E3A2A1356A9",
@@ -215,7 +215,6 @@
   "provider_pattern_import_policy": "GENERIC_MECHANISMS_ONLY_NO_PROVIDER_HIDDEN_STATE_CANONICALIZATION",
   "open_foundation_gates": [
     "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
-    "HARDEN_DESKTOP_COMMANDER_FILESYSTEM_SCOPE",
     "PROVE_BOOT_REBOOT_PERSISTENCE",
     "RESOLVE_ENDPOINT_PROTECTION_AND_BITLOCKER_UNKNOWNS",
     "PASS_GENUINE_FRESH_SEAT_VALIDATION",
@@ -228,5 +227,6 @@
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
   "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
-  "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF"
+  "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF",
+  "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json"
 }
