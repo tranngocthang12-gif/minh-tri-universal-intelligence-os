@@ -1,0 +1,32 @@
+{
+  "protocol": "minhtri-runtime-evidence/v1",
+  "observed_at": "2026-10-03T23:29:05+07:00",
+  "scope": "LIVE_24H_SELF_UPGRADE_ACTIVATION_AND_LOCAL_BRAIN_AUDIT",
+  "owner_pc": "WIN-VBIQNFFDKIR",
+  "source_sha": "ce72ff5d9ef4096e5088eac2624282f08f025a0d",
+  "lease_id": "upgrade-78bb759426dd41d4b306dc995dc47fae",
+  "issued_at_utc": "2026-10-03T15:56:05.483438Z",
+  "expires_at_utc": "2026-10-04T15:56:05.483438Z",
+  "duration_seconds": 86400,
+  "runtime_status": "ACTIVE",
+  "process_pid": 23260,
+  "last_heartbeat_utc": "2026-10-03T16:29:05.892517Z",
+  "local_brain": {
+    "audit_events_appended": [
+      "LEASE_CREATED",
+      "LEASE_ACTIVATED"
+    ],
+    "event_count": 5,
+    "head": "bbc3e5080b3e397550cbc13d319fbfccbd3888fc6fa6c9d2d5ac64a2827c4fe4",
+    "verify_status": "VALID"
+  },
+  "automatic_renewal": false,
+  "automatic_verified_promotion": false,
+  "automatic_candidate_promotion": false,
+  "automatic_push": false,
+  "automatic_merge": false,
+  "canonical_write_capability": false,
+  "candidate_branch_only": true,
+  "test_critic_freeze_required": true,
+  "live_24h_expiry_proof": "NOT_PROVEN_UNTIL_ACTUAL_EXPIRY"
+}
