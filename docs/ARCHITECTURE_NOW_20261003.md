@@ -85,6 +85,17 @@ Owner learning strategy now separates **learning capital** from **promoted lesso
 
 This layer is additive to the existing ledger. It does not create a multi-agent dependency and does not enable background autonomy.
 
+### Learning Assurance v1.1
+
+- trace links can bind existing artifacts to a durable `trace_id` without rewriting legacy events;
+- each trace link records a digest of the linked artifact at link time;
+- this is link-based traceability, not yet intrusive full trace propagation through every legacy command;
+- lessons may receive future revalidation schedules with explicit staleness conditions;
+- revalidation outcomes are `RETAIN / NARROW / RETIRE / INCONCLUSIVE`;
+- revalidation remains `PROPOSAL_ONLY`; it cannot mutate lesson status automatically;
+- scheduled revalidation cannot occur before its review date, while stale-signal/Owner-request review may happen earlier without automatic mutation.
+
+
 ## 8. Promotion gates còn mở
 
 1. verify/revoke every old tunnel key;
