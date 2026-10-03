@@ -82,9 +82,24 @@ jobs:
       - name: Dependency vulnerability audit
         run: python -m pip_audit --local
 
+  realtime-lease-proof:
+    name: realtime-lease-proof
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+      - name: Install package
+        run: python -m pip install -c .github/constraints/ci-proven-20261002.txt .
+      - name: Real-clock 60 second lease expiry proof
+        run: python tests/realtime_lease_probe.py
+
   test:
     name: test
-    needs: [test-matrix, powershell-parse, security-audit]
+    needs: [test-matrix, powershell-parse, security-audit, realtime-lease-proof]
     if: ${{ always() }}
     runs-on: ubuntu-latest
     steps:
@@ -93,7 +108,9 @@ jobs:
           MATRIX_RESULT: ${{ needs.test-matrix.result }}
           POWERSHELL_RESULT: ${{ needs.powershell-parse.result }}
           SECURITY_AUDIT_RESULT: ${{ needs.security-audit.result }}
+          REALTIME_LEASE_RESULT: ${{ needs.realtime-lease-proof.result }}
         run: |
           test "$MATRIX_RESULT" = "success"
           test "$POWERSHELL_RESULT" = "success"
           test "$SECURITY_AUDIT_RESULT" = "success"
+          test "$REALTIME_LEASE_RESULT" = "success"
