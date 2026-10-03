@@ -1,8 +1,4 @@
-"""Offline canary scoring harness for external critics.
-
-The dataset is frozen before critic execution. Ground-truth spans are kept in the scoring
-file, not the critic packet. This module measures verdict accuracy and localization.
-"""
+"""Offline canary scoring harness for external critics."""
 from __future__ import annotations
 
 from typing import Any, Iterable
@@ -31,10 +27,24 @@ def span_overlap(a: Any, b: Any) -> bool:
     return max(a0, b0) < min(a1, b1)
 
 
+def _validate_ground_truth(truth: dict[str, Any]) -> None:
+    roles = [truth.get("trap_author"), truth.get("rubric_author"), truth.get("adjudicator")]
+    if any(not isinstance(role, str) or not role.strip() for role in roles):
+        raise CanaryScoringError("trap_author, rubric_author and adjudicator are required")
+    if len(set(roles)) != 3:
+        raise CanaryScoringError("trap author, rubric author and adjudicator must be distinct")
+    if truth.get("human_adjudicated") is not True:
+        raise CanaryScoringError("human adjudication is required")
+    if truth.get("origin") not in {"HISTORICAL_DEFECT", "INDEPENDENT_TRAP", "CLEAN_HARD_NEGATIVE"}:
+        raise CanaryScoringError("ground truth origin is invalid")
+
+
 def score_canary_case(case: dict[str, Any], critic_result: dict[str, Any]) -> dict[str, Any]:
     truth = case.get("ground_truth")
     if not isinstance(truth, dict):
         raise CanaryScoringError("ground_truth is required")
+    _validate_ground_truth(truth)
+
     has_defect = bool(truth.get("has_defect"))
     verdict = critic_result.get("verdict")
     predicted_defect = verdict == "DEFECT_FOUND"
@@ -60,6 +70,9 @@ def score_canary_case(case: dict[str, Any], critic_result: dict[str, Any]) -> di
         "accepted_bad_case": has_defect and not predicted_defect,
         "rejected_clean_case": (not has_defect) and predicted_defect,
         "subtle_error": case.get("class") == "SUBTLE_EPISTEMIC",
+        "hard_negative": truth.get("origin") == "CLEAN_HARD_NEGATIVE",
+        "historical_defect": truth.get("origin") == "HISTORICAL_DEFECT",
+        "human_adjudicated": True,
     }
 
 
@@ -84,12 +97,21 @@ def summarize_canary_scores(
         sum(1 for r in subtle if r["correct_verdict"] and r["localization_hit"]) / len(subtle)
         if subtle else None
     )
+    human_coverage = (
+        sum(1 for r in rows if r.get("human_adjudicated") is True) / len(rows)
+        if rows else None
+    )
+    hard_negative_count = sum(1 for r in rows if r.get("hard_negative"))
+    historical_defect_count = sum(1 for r in rows if r.get("historical_defect"))
 
     pass_gate = (
         far is not None
         and subtle_detection is not None
         and far <= preregistered_max_far
         and subtle_detection >= preregistered_min_subtle_detection
+        and human_coverage == 1.0
+        and hard_negative_count > 0
+        and historical_defect_count > 0
     )
     return {
         "case_count": len(rows),
@@ -99,6 +121,9 @@ def summarize_canary_scores(
         "false_rejection_rate": frr,
         "defect_localization_rate": localization,
         "subtle_detection_rate": subtle_detection,
+        "human_adjudication_coverage": human_coverage,
+        "hard_negative_count": hard_negative_count,
+        "historical_defect_count": historical_defect_count,
         "preregistered_max_far": preregistered_max_far,
         "preregistered_min_subtle_detection": preregistered_min_subtle_detection,
         "pass": pass_gate,
