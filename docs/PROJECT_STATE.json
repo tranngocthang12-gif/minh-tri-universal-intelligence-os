@@ -297,5 +297,12 @@
   "self_upgrade_codex_required_path_gate": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_candidate_control_plane_protection": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_test_critic_freeze_lifecycle_e2e": "NOT_PROVEN",
-  "self_upgrade_next_checkpoint": "IMPLEMENT_TEST_CRITIC_FREEZE_LIFECYCLE_RUNNER_THEN_OWNER_DECIDES_24H_ACTIVATION"
+  "self_upgrade_next_checkpoint": "IMPLEMENT_TEST_CRITIC_FREEZE_LIFECYCLE_RUNNER_THEN_OWNER_DECIDES_24H_ACTIVATION",
+  "self_upgrade_test_critic_freeze_lifecycle": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_candidate_test_runner": "CODEX_WINDOWS_RESTRICTED_TOKEN_NETWORK_DISABLED_IMPLEMENTED_ON_PR",
+  "self_upgrade_candidate_critic": "CODEX_READ_ONLY_SAME_PROVIDER_NOT_INDEPENDENT_IMPLEMENTED_ON_PR",
+  "self_upgrade_freeze_receipt": "DIGEST_BOUND_FROZEN_PENDING_OWNER_IMPLEMENTED_ON_PR",
+  "self_upgrade_lifecycle_automatic_promotion": false,
+  "self_upgrade_lifecycle_automatic_verified_promotion": false,
+  "self_upgrade_lifecycle_canonical_write_capability": false
 }
