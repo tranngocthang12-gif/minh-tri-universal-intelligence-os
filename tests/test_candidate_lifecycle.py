@@ -1,4 +1,5 @@
 import json
+import os
 import tempfile
 import unittest
 import sys
@@ -116,11 +117,13 @@ class CandidateLifecycleTests(unittest.TestCase):
              mock.patch("minhtri.candidate_lifecycle.subprocess.run", return_value=proc) as run:
             result = runner.run()
         cmd = run.call_args.args[0]
+        env = run.call_args.kwargs["env"]
         self.assertIn("sandbox", cmd)
         self.assertIn("--permission-profile", cmd)
         self.assertIn(":workspace", cmd)
         self.assertIn("--sandbox-state-disable-network", cmd)
         self.assertEqual(cmd[cmd.index("-C") + 2], sys.executable)
+        self.assertEqual(env["PYTHONPATH"].split(os.pathsep)[0], str((self.work / "src").resolve()))
         self.assertEqual(result["status"], "PASS")
         self.assertTrue(result["network_disabled"])
 
