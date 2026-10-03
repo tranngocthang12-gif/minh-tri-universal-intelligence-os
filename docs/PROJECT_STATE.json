@@ -404,7 +404,7 @@
   "external_critic_canary_ground_truth_localization": "CHARACTER_SPAN_REQUIRED_FOR_CANARY_SCORING",
   "empirical_v14_design": "PREREGISTER_RANDOMIZED_BLINDED_PRIVATE_TASKS_COST_ADJUSTED",
   "behavioral_trial_design": "INTERLEAVED_RANDOMIZED_AB_WITH_TTL_ROLLBACK_OWNER_VETO",
-  "learning_proof_next_checkpoint": "OLD_KEY_REVOCATION_PROOF_THEN_FROZEN_LEDGER_AUDIT_CANARY_V14_THEN_FIRST_THREE_ARM_TRIAL",
+  "learning_proof_next_checkpoint": "FREEZE_TRIAL001_THRESHOLDS_AND_PRIVATE_TASK_GOLD_MANIFEST_AFTER_PILOT_THEN_RUN_ONLY_AFTER_RUNTIME_SECURITY_GATES",
   "frozen_ledger_audit_export": "IMPLEMENTED_READ_ONLY_VERIFY_COPY_HASH_NO_BRAIN_START",
   "resolution_resolver_input": "RAW_SOURCE_ONLY_NO_MODEL_TRACE_NO_CAPSULE_NO_ORIGINAL_RESOLUTION",
   "resolution_corpus_out_rate_gate": "PREREGISTERED_REQUIRED",
@@ -447,5 +447,18 @@
   "behavioral_trial_runtime_write_capability": false,
   "behavioral_trial_automatic_verified_promotion": false,
   "behavioral_trial_empirical_status": "NOT_RUN_NOT_PROVEN",
-  "closed_loop_learning_status": "MEASUREMENT_EXECUTION_PATH_IMPLEMENTED_EMPIRICAL_CAUSAL_PROOF_PENDING"
+  "closed_loop_learning_status": "MEASUREMENT_EXECUTION_PATH_IMPLEMENTED_EMPIRICAL_CAUSAL_PROOF_PENDING",
+  "trial001_preregistration": "docs/learning/TRIAL001_COUNTEREVIDENCE_PREREGISTRATION_DRAFT_20261004.md",
+  "trial001_taskset_protocol": "docs/learning/TRIAL001_TASKSET_PROTOCOL_20261004.md",
+  "trial001_taskset_manifest_template": "docs/learning/TRIAL001_TASKSET_MANIFEST_TEMPLATE.json",
+  "trial001_status": "PREPARATION_NOT_FROZEN_NOT_RUN",
+  "trial001_primary_endpoint": "FACTUAL_ACCURACY",
+  "trial001_safety_endpoint": "UNSUPPORTED_CLAIM_RATE",
+  "trial001_false_counterclaim_guardrail": "REQUIRED_THRESHOLD_NOT_YET_FROZEN",
+  "trial001_compute_matched_protocol": "NEUTRAL_DEEP_REVIEW_SAME_CALL_RETRIEVAL_TOKEN_BUDGET_AS_TREATMENT",
+  "trial001_assignment": "BLOCK_RANDOMIZED_6_TASKS_EXACT_2_CONTROL_2_TREATMENT_2_COMPUTE_MATCHED",
+  "trial001_assignment_secret": "HASH_ONLY_BEFORE_RUN_SECRET_REVEALED_AFTER_SCORE_FREEZE",
+  "trial001_final_n": "TO_BE_FROZEN_AFTER_SEPARATE_PILOT_POWER_ANALYSIS",
+  "trial001_raw_tasks_public_repo": false,
+  "trial001_empirical_result": "NOT_RUN"
 }
