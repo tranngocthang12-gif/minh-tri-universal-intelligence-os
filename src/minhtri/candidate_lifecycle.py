@@ -17,6 +17,7 @@ import os
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 from typing import Any, Protocol, Sequence
 
 from .generation import enforce_candidate_mutation
@@ -98,14 +99,19 @@ class CodexSandboxTestRunner:
         executable = shutil.which(self.codex_executable)
         if not executable:
             return {"status": "BLOCKED_CODEX_SANDBOX_NOT_FOUND"}
+        command = list(self.command)
+        if command and command[0].lower() in {"python", "python3", "python.exe"}:
+            command[0] = sys.executable
         proc = subprocess.run(
             [
                 executable,
                 "sandbox",
+                "--permission-profile",
+                ":workspace",
                 "--sandbox-state-disable-network",
                 "-C",
                 str(self.candidate_root),
-                *self.command,
+                *command,
             ],
             cwd=self.candidate_root,
             stdin=subprocess.DEVNULL,
@@ -119,7 +125,7 @@ class CodexSandboxTestRunner:
             "returncode": proc.returncode,
             "sandbox": "WINDOWS_RESTRICTED_TOKEN",
             "network_disabled": True,
-            "command": list(self.command),
+            "command": command,
             "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8", errors="replace")),
             "stderr_sha256": _sha256_bytes(proc.stderr.encode("utf-8", errors="replace")),
         }
