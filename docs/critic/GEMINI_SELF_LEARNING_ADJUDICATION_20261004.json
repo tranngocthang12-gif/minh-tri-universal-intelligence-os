@@ -1,0 +1,34 @@
+{
+  "schema": "minhtri-external-review-adjudication/v1",
+  "reviewer": "Gemini",
+  "date": "2026-10-04",
+  "findings": {
+    "DEF-01": {
+      "status": "PARTIAL_HARDENING_GAP",
+      "note": "Historical receipts are not mutation authority; live parent lease and pre-mutation checks are authoritative. Epoch-bound tokens remain optional hardening."
+    },
+    "DEF-02": {
+      "status": "ALREADY_FIXED",
+      "note": "Canonical classification already renamed to proposal-governance, not autonomous behavior adaptation."
+    },
+    "DEF-03": {
+      "status": "PARTIAL_VALID",
+      "note": "Blind packet excludes learner reasoning/prior critic/Owner preference, but shared-prior/corpus/account independence remains unproven."
+    },
+    "DEF-04": {
+      "status": "VALID_FIXED_PARTIALLY",
+      "note": "Candidate floor raised to 50. Multiplicity/permutation inference controls remain open before adaptation."
+    },
+    "DEF-05": {
+      "status": "NOT_CURRENT_DEFECT",
+      "note": "Fresh-seat validator does not use Research Adapter; dependency is one-way."
+    }
+  },
+  "rejected_overprescriptions": [
+    "TPM_OR_SECURE_ENCLAVE_REQUIRED_WITHOUT_THREAT_MODEL_PROOF",
+    "BITLOCKER_NOT_ENCRYPTED_GLOBAL_HALT",
+    "THREE_PROVIDER_MAJORITY_VOTING_AS_DEFAULT",
+    "FIXED_P_VALUE_OR_SIGMA_THRESHOLDS_WITHOUT_POWER_ANALYSIS",
+    "PRODUCTION_TRAFFIC_CANARY_PERCENTAGES_BEFORE_PRODUCTION_AUTONOMY_EXISTS"
+  ]
+}

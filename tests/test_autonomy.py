@@ -96,19 +96,30 @@ class AutonomyTests(unittest.TestCase):
         self.assertEqual(report["status"], "INSUFFICIENT_HISTORY")
         self.assertEqual(report["lesson_candidates"], [])
 
-    def test_meta_learning_only_proposes_candidate(self):
+    def test_meta_learning_small_n_does_not_emit_candidate(self):
         state = base_state()
         state["resolutions"] = {
             "r1": {"interval_hit": False, "absolute_midpoint_error": 3},
             "r2": {"interval_hit": False, "absolute_midpoint_error": 5},
         }
         report = meta_learning_report(state)
+        self.assertEqual(report["status"], "INSUFFICIENT_HISTORY")
+        self.assertEqual(report["minimum_candidate_resolutions"], 50)
+        self.assertEqual(report["lesson_candidates"], [])
+        self.assertFalse(report["statistical_adaptation_proven"])
+
+    def test_meta_learning_emits_candidate_only_at_conservative_floor(self):
+        state = base_state()
+        state["resolutions"] = {
+            f"r{i}": {"interval_hit": False, "absolute_midpoint_error": 3 + (i % 2)}
+            for i in range(50)
+        }
+        report = meta_learning_report(state, minimum_resolutions=2)
         self.assertEqual(report["status"], "ANALYZED")
+        self.assertEqual(report["minimum_candidate_resolutions"], 50)
         self.assertTrue(report["lesson_candidates"])
-        self.assertEqual(
-            report["lesson_candidates"][0]["status"],
-            "META_LESSON_CANDIDATE",
-        )
+        self.assertEqual(report["lesson_candidates"][0]["status"], "META_LESSON_CANDIDATE")
+        self.assertEqual(report["permutation_test"], "REQUIRED_BEFORE_ADAPTATION")
 
     def test_learning_assurance_treats_external_cases_as_capital_only(self):
         state = base_state()
@@ -153,7 +164,11 @@ class AutonomyTests(unittest.TestCase):
         }
         report = stratified_meta_learning_report(state)
         self.assertEqual(report["by_domain"]["d"]["count"], 2)
+        self.assertEqual(report["by_domain"]["d"]["status"], "INSUFFICIENT_HISTORY")
         self.assertEqual(report["by_procedure"]["proc1"]["count"], 2)
+        self.assertEqual(report["minimum_candidate_resolutions_per_stratum"], 50)
+        self.assertEqual(report["lesson_candidates"], [])
+        self.assertEqual(report["permutation_test"], "REQUIRED_BEFORE_ADAPTATION")
         self.assertFalse(report["cross_domain_transfer_established"])
         self.assertFalse(report["automatic_rule_change"])
 

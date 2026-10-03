@@ -308,6 +308,21 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["fresh_seat_validation"]["protocol"],
                          "minhtri-fresh-seat-validation/v2")
 
+    def test_gemini_review_meta_learning_hardening_is_routed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["meta_learning_min_candidate_resolutions"], 50)
+        self.assertEqual(state["meta_learning_multiplicity_control"], "NOT_IMPLEMENTED")
+        self.assertEqual(state["meta_learning_permutation_test"], "REQUIRED_BEFORE_ADAPTATION")
+        self.assertEqual(
+            manifest["meta_learning_assurance"]["minimum_candidate_resolutions"], 50
+        )
+        self.assertFalse(manifest["meta_learning_assurance"]["statistical_adaptation_proven"])
+        self.assertEqual(
+            manifest["self_upgrade"]["candidate_a_status"],
+            "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
