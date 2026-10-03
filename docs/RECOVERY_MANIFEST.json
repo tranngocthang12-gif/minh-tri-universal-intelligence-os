@@ -87,5 +87,21 @@
     "dedicated_mcp": "mcp/2.x stdio",
     "secure_mcp_tunnel": "OpenAI Secure MCP Tunnel",
     "learning_assurance": "minhtri-learning-assurance/v1.4"
-  }
+  },
+  "current_runtime_liveness": {
+    "observed_at": "2026-10-03T15:35:00+07:00",
+    "maintenance_plane": "OFFLINE",
+    "secure_mcp_tunnel": "UNREACHABLE",
+    "local_brain_connector": "UNREACHABLE",
+    "root_cause": "UNKNOWN_REMOTE_MAINTENANCE_UNAVAILABLE"
+  },
+  "open_foundation_gates": [
+    "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
+    "PROVE_BOOT_REBOOT_PERSISTENCE",
+    "RESOLVE_ENDPOINT_PROTECTION_AND_BITLOCKER_UNKNOWNS",
+    "PASS_GENUINE_FRESH_SEAT_VALIDATION",
+    "ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY",
+    "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
+    "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
+  ]
 }
