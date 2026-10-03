@@ -1,0 +1,46 @@
+{
+  "protocol": "minhtri-runtime-evidence/v1",
+  "observed_at": "2026-10-03T21:06:07+07:00",
+  "scope": "OWNER_PC_SELF_UPGRADE_CANDIDATE_TEST_CRITIC_FREEZE_LIFECYCLE",
+  "canonical_source_sha": "8d9b792aa002d2f717c72c06783d3f2b2e84869c",
+  "owner_pc": "WIN-VBIQNFFDKIR",
+  "candidate_branch": "candidate/lifecycle-smoke-20261003-f",
+  "candidate_changed_paths": [
+    "docs/CANDIDATE_LIFECYCLE_SMOKE.md"
+  ],
+  "candidate_text": "CANDIDATE_LIFECYCLE_SMOKE_ARTIFACT",
+  "mutation_status": "CANDIDATE_MUTATION_COMPLETED",
+  "test": {
+    "status": "PASS",
+    "sandbox": "WINDOWS_RESTRICTED_TOKEN",
+    "network_disabled": true,
+    "runner_python": "RUNTIME_VENV_PYTHON",
+    "suite": "python -m unittest discover -s tests",
+    "artifact_digest": "fddebae135c8fc7c30bb6f68c080a40656766d8cecd30a62d0837a6fb383c284"
+  },
+  "critic": {
+    "status": "RECORDED",
+    "verdict": "NO_MATERIAL_DEFECT",
+    "provider": "codex-cli",
+    "context_mode": "READ_ONLY_CURRENT_WORKTREE",
+    "independence_status": "SAME_PROVIDER_NOT_INDEPENDENT",
+    "independence_proven": false
+  },
+  "freeze": {
+    "status": "FROZEN_PENDING_OWNER",
+    "runtime_status": "FROZEN",
+    "receipt_created": true,
+    "artifact_sha256": "5e4d8b8dfacd5d133fe59fbb1b41c1ca4f97c4d18481164c666906b67f43219a"
+  },
+  "automatic_verified_promotion": false,
+  "automatic_candidate_promotion": false,
+  "canonical_write_capability": false,
+  "live_24h_lease_activated": false,
+  "os_level_arbitrary_candidate_containment_proven": false,
+  "notes": [
+    "PR #136 fixed Codex CLI 0.160.0 sandbox permission-profile and absolute Python invocation.",
+    "PR #137 fixed src-layout PYTHONPATH propagation into the restricted-token sandbox.",
+    "The smoke helper was corrected to use a neutral artifact string after the critic correctly rejected an unsupported PASS claim.",
+    "This evidence proves the bounded lifecycle path only; it does not prove critic independence or OS-level containment of arbitrary candidate code."
+  ]
+}
