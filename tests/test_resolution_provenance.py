@@ -68,6 +68,7 @@ class ResolutionProvenanceTests(unittest.TestCase):
         )
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["agreement_rate"], 1.0)
+        self.assertEqual(report["cohens_kappa_interval_hit"], 1.0)
         self.assertEqual(report["out_rate"], 0.0)
 
     def test_model_trace_or_capsule_disqualifies_resolver_input(self):
