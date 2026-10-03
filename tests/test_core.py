@@ -61,6 +61,50 @@ class CoreGates(unittest.TestCase):
         self.apply("freeze_lesson", lesson_id="lesson1")
         self.assertEqual(self.state["lessons"]["lesson1"]["status"], "FROZEN_PENDING_OWNER")
 
+    def test_external_critic_run_is_append_only_evidence_not_authority(self):
+        self.apply(
+            "record_external_critic_run",
+            id="external-critic-1",
+            candidate_generation_id="gen-0002",
+            lease_id="upgrade-abc",
+            critic_provider="external-gpt",
+            critic_model="declared-model",
+            prompt_version="external-critic-v1",
+            run_id="manual-run-1",
+            packet_hash="a" * 64,
+            output_hash="b" * 64,
+            blind_or_revealed="BLIND",
+            channel="OWNER_MANUAL",
+            independence_status="PARTIAL",
+            verdict="NO_MATERIAL_DEFECT_FOUND",
+            findings=[],
+            post_expiry=False,
+        )
+        run = self.state["external_critic_runs"]["external-critic-1"]
+        self.assertEqual(run["status"], "RECORDED")
+        self.assertFalse(run["automatic_verified_promotion"])
+
+    def test_external_critic_run_rejects_bad_hash(self):
+        with self.assertRaises(GateError):
+            self.apply(
+                "record_external_critic_run",
+                id="external-critic-1",
+                candidate_generation_id="gen-0002",
+                lease_id="upgrade-abc",
+                critic_provider="external-gpt",
+                critic_model="declared-model",
+                prompt_version="external-critic-v1",
+                run_id="manual-run-1",
+                packet_hash="not-a-hash",
+                output_hash="b" * 64,
+                blind_or_revealed="BLIND",
+                channel="OWNER_MANUAL",
+                independence_status="PARTIAL",
+                verdict="NO_MATERIAL_DEFECT_FOUND",
+                findings=[],
+                post_expiry=False,
+            )
+
     def test_runtime_audit_event_records_lease_activation_without_conferring_authority(self):
         self.apply(
             "record_runtime_audit_event",
