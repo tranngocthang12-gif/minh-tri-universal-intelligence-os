@@ -336,5 +336,12 @@
   "self_upgrade_candidate_a_changed_paths": [
     "src/minhtri/autonomy.py"
   ],
-  "self_upgrade_candidate_a_test": "PASS_TARGETED_20_FULL_233_2026-10-04"
+  "self_upgrade_candidate_a_test": "PASS_TARGETED_20_FULL_233_2026-10-04",
+  "owner_learning_track_economics_phd": "ACTIVE_DOCTORAL_LEVEL_SELF_STUDY_NOT_ACCREDITED_DEGREE",
+  "owner_learning_track_economics_phd_plan": "docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md",
+  "owner_learning_track_economics_phd_started": "2026-10-04",
+  "owner_learning_track_economics_phd_background_runtime": false,
+  "owner_learning_track_economics_phd_research_adapter": "BLOCKED_WITH_PROJECT_RESEARCH_ADAPTER",
+  "owner_learning_track_economics_phd_status": "M0_1_STARTED_UNTESTED",
+  "owner_learning_track_economics_phd_next_checkpoint": "COMPLETE_M0_DIAGNOSTIC_AND_OPTIMIZATION_COMPARATIVE_STATICS_ASSESSMENT"
 }
