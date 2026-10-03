@@ -136,3 +136,16 @@ This does not convert MINH TRÍ into a multi-agent system. Critic remains a repl
 ## 9. Runtime boundary
 
 Background autonomous learning remains OFF until existing fresh-seat, transport, persistence and security gates pass. Learning Assurance v1 is additive and fail-closed.
+
+## 10. Explicit v1 limits / next gates
+
+Learning Assurance v1 intentionally does **not** claim the following are complete:
+
+- full lifecycle `trace_id` propagation across every legacy source/claim/prediction/resolution/lesson event;
+- automatic lesson expiry/revalidation mutation;
+- semantic proof that declared critic providers are operationally independent;
+- reward-hacking or contamination detection beyond future eval fixtures;
+- rich meta-learning by domain/source/method/failure class.
+
+These remain follow-up gates. They must be added with backward-compatible ledger migration and tests rather than silently inferred from the v1 packet trace.
+
