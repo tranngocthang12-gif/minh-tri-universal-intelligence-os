@@ -65,6 +65,27 @@ class LeaseBoundWorkerTests(unittest.TestCase):
         self.assertTrue(result["candidate_mutation_performed"])
         self.assertFalse(result["automatic_candidate_promotion"])
 
+    def test_blocked_provider_result_is_rejected_not_completed(self):
+        class Blocked:
+            def propose(self, packet):
+                return {
+                    "changed_paths": ["src/minhtri/autonomy.py"],
+                    "action": lambda: {
+                        "status": "BLOCKED_UNDECLARED_PATH",
+                        "actual_paths": ["src/minhtri/autonomy.py", "README.md"],
+                    },
+                }
+        worker = LeaseBoundSelfUpgradeWorker(
+            session=self.session(),
+            state_loader=state,
+            candidate_branch="candidate/GEN-2",
+            provider=Blocked(),
+        )
+        result = worker.tick()
+        self.assertEqual(result["status"], "CANDIDATE_REJECTED_PROVIDER_BLOCK")
+        self.assertFalse(result["eligible_for_candidate"])
+        self.assertTrue(result["candidate_mutation_performed"])
+
     def test_provider_cannot_mutate_protected_path(self):
         class Bad:
             def propose(self, packet):
