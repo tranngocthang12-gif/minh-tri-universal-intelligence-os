@@ -257,3 +257,66 @@ Bounded statuses:
 - `CLEAN_NO_SIGNAL_NOT_PROOF`.
 
 This is a guard for explicit signals, not a solved universal detector. A clean result means only that configured signals were not observed.
+
+## 14. Learning Assurance v1.4 candidate — provider-neutral reasoning/context patterns
+
+Research basis: public provider documentation only. This does not claim access to private model internals or that any provider continuously retrains itself from a user's conversation.
+
+### Adaptive deliberation
+
+MINH TRÍ may record a deliberation plan against a concrete artifact.
+
+Inputs:
+- risk level;
+- evidence conflict;
+- tool dependency;
+- requested effort;
+- rationale.
+
+Deterministic floor:
+- HIGH/CRITICAL risk or conflicting evidence -> minimum HIGH;
+- MEDIUM risk or tool dependency -> minimum MEDIUM;
+- otherwise minimum LOW.
+
+The effective effort can be raised above the request but not below the deterministic minimum.
+
+This mechanism stores no private chain-of-thought. It stores only bounded planning metadata.
+
+### Grounded research trace
+
+A research trace binds:
+- exact query;
+- source;
+- source role;
+- claim;
+- citation locator;
+- conflict status;
+- note;
+- source and claim digests.
+
+Source roles:
+- PRIMARY
+- SECONDARY
+- SOCIAL_SIGNAL
+- REFERENCE
+- COUNTEREVIDENCE
+
+SOCIAL_SIGNAL is always `NON_CANONICAL_SIGNAL`; popularity or social visibility cannot promote truth.
+
+### Context capsules
+
+Long-running work may create a bounded context capsule containing:
+- exact artifact references;
+- digest of every referenced artifact;
+- summary;
+- purpose;
+- refresh deadline;
+- capsule digest.
+
+A capsule status is always `CONTEXT_ONLY_NOT_CANONICAL_TRUTH`.
+
+Compaction/summary is a retrieval aid only. It cannot overwrite source/evidence/law/lesson truth and cannot automatically promote a claim.
+
+### Provider-neutral rule
+
+Gemini/Claude/Grok mechanisms may inspire implementation patterns, but no provider-specific hidden reasoning state, memory format, or proprietary runtime becomes canonical Tier-1 truth.
