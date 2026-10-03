@@ -164,29 +164,21 @@
   "legacy_runtime_current_fields_liveness_authority": false,
   "legacy_runtime_current_fields_note": "Backward-compatible historical observations only; do not use them to infer present liveness.",
   "owner_pc_host_audit_latest": {
-    "observed_at": "2026-10-03T01:04:00+07:00",
+    "observed_at": "2026-10-03T12:42:15+07:00",
     "defender_antivirus_enabled": true,
     "defender_realtime_protection_enabled": false,
     "defender_behavior_monitor_enabled": false,
     "defender_network_inspection_enabled": false,
-    "firewall_profiles_enabled": [
-      "Domain",
-      "Private",
-      "Public"
-    ],
+    "defender_on_access_protection_enabled": false,
     "security_center_antivirus_products": [
       "Windows Defender",
       "McAfee"
     ],
     "mcafee_framework_host": "RUNNING_AUTO",
     "mcafee_realtime_protection": "UNKNOWN_GENERIC_WINDOWS_APIS_INSUFFICIENT",
-    "bitlocker_status": "UNKNOWN_NO_ENCRYPTABLE_VOLUME_RESULT_AND_MANAGE_BDE_NO_VOLUME_DETAIL",
-    "latest_observed_security_update": "KB5129195_2026-09-15",
+    "bitlocker_status": "UNKNOWN_ACCESS_DENIED_WITHOUT_ADMIN_RIGHTS",
     "tunnel_health_bind": "127.0.0.1",
-    "environment_secret_persistence": "NOT_SET_AT_USER_OR_MACHINE_SCOPE_FOR_CHECKED_RUNTIME_SECRETS",
-    "owner_secret_acl": "OWNER_ACCOUNT_READ_WRITE_ONLY",
-    "brain_acl_note": "Owner SYSTEM Administrators full control; CodexSandboxUsers read-execute; inherited deny-delete-child present",
-    "boot_persistence": "NOT_PROVEN"
+    "boot_persistence": "NOT_PROVEN_NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE"
   },
   "secure_mcp_tunnel_supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03",
   "desktop_commander_allowed_directories": "EMPTY_ARRAY_MEANS_FULL_FILESYSTEM_ACCESS_CONFIRMED_2026-10-03T12:42+07",
