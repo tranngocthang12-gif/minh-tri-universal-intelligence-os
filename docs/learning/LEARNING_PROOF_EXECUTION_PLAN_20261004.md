@@ -149,15 +149,19 @@ preregistered outcome metrics versus concurrent control.
 - Cost-adjusted utility, latency, and token/API cost are retained as deployment constraints, not post-hoc winning metrics.
 
 ### Stage 4 causal behavioral trial
-- Trial uses three interleaved randomized arms:
+- Trial-001 uses a paired four-arm design on every eligible frozen task:
   A = control,
   B = lesson-targeted treatment,
-  C = compute-matched non-targeted control.
-- A learning claim requires B to outperform C on the preregistered primary endpoint while satisfying the safety endpoint. B > A alone only shows that extra compute may help.
-- Rollback threshold and evaluation window are numeric and frozen before unblinding.
+  C = compute-matched non-targeted control,
+  D = shuffled-ledger placebo synthesized by the same procedure family.
+- B must outperform C on the preregistered primary endpoint while satisfying the frozen safety and coverage endpoints.
+- D must not materially outperform C; otherwise the learning-specific interpretation is invalid even if B > C.
+- B > A alone only shows that extra compute or review may help.
+- A learning-from-experience claim additionally requires frozen audited lesson provenance binding the treatment to an audited meta-lesson candidate, audited resolution IDs and audited strata.
+- Rollback threshold, evaluation window, compute-parity tolerance and arm-leakage threshold are numeric and frozen before unblinding.
 - Outcome scoring must use the Stage-1 resolver contract.
 - The first trial may route only by system-coded domain_id/procedure_id.
-- Runtime consumption of TRIAL_RULE as data is currently NOT IMPLEMENTED. Until a tested reader exists, Stage 4 is a measurement design only and cannot establish closed-loop learning.
+- Read-only fail-closed TRIAL_RULE consumption is implemented in `src/minhtri/trial_rule_runtime.py`; this proves only plan compilation/data-plane gating, not a live isolated executor or closed-loop learning.
 
 ## Operational order
 
@@ -168,8 +172,9 @@ preregistered outcome metrics versus concurrent control.
 5. Build a frozen, single-use canary set with Owner/historical contributions and independent human adjudication.
 6. Run blind external critics.
 7. Run paired v1.4 benchmark with frozen baseline/gold labels/endpoints.
-8. Implement and test a data-plane TRIAL_RULE reader.
-9. Only then run three-arm interleaved A/B/C behavioral trial.
+8. Complete external code review of the fail-closed TRIAL_RULE reader and freeze the Trial-001 preregistration/task-set/compute/placebo receipts.
+9. Build and validate the live isolated four-arm executor, provider telemetry capture and blinded evaluator path.
+10. Only then run the paired A/B/C/D calibration trial; a learning claim additionally requires audited lesson provenance.
 
 
 ## TRIAL_RULE data-plane reader implementation
@@ -186,6 +191,9 @@ Implemented components:
 - Runtime plan always declares `write_capability=false`, `automatic_verified_promotion=false`, and `automatic_rule_promotion=false`.
 
 Causal criterion:
-- The preregistered primary success rule must be exactly `treatment > compute_matched`.
-- A/B/C execution infrastructure existing is not evidence of learning.
-- MINH TRI may claim evidence-backed behavioral learning only after new unseen tasks are randomized through the three arms and treatment beats compute-matched on the frozen primary endpoint while satisfying the frozen safety endpoint.
+- The preregistered primary success rule must require `treatment > compute_matched` on the frozen primary endpoint.
+- The shuffled-ledger placebo must not materially outperform compute-matched control under the frozen placebo criterion.
+- Actual B/C/D compute telemetry must satisfy the frozen parity tolerance, and coverage must satisfy the frozen non-inferiority endpoint.
+- A/B/C/D planning or execution infrastructure existing is not evidence of learning.
+- Without audited treatment lesson provenance, a causal Trial-001 PASS is calibration/overlay-value evidence only.
+- MINH TRI may claim evidence-backed behavioral learning only after unseen tasks pass the paired four-arm frozen protocol and the treatment lesson is provenance-bound to audited historical resolutions/strata.
