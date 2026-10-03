@@ -211,7 +211,7 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
         self.assertEqual(
             state["tunnel_runtime_key_persistence"],
-            "NOT_PROVISIONED_DEDICATED_ENCRYPTED_UNATTENDED_SECRET",
+            "NOT_PROVISIONED_DPAPI_PROVISIONER_DEPLOYED",
         )
         self.assertEqual(state["tunnel_boot_registration"], "ABSENT_BOUNDED_PROBE")
         self.assertIn("DO_NOT_REBOOT", state["boot_persistence_precheck_decision"])
