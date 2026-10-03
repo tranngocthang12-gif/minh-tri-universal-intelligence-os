@@ -6,11 +6,17 @@
 
 ## Gate 1 — Boot/reboot persistence
 
-Current preflight:
-- corrected `provision_tunnel_runtime_key.ps1` parses cleanly on Owner PC;
-- dedicated tunnel DPAPI secret is absent;
-- `MINH_TRI_Readonly_Tunnel` logon task is absent;
-- tunnel is currently live only for the present session.
+Historical preflight at 2026-10-03 14:01 +07:00:
+- corrected `provision_tunnel_runtime_key.ps1` parsed cleanly on Owner PC;
+- dedicated tunnel DPAPI secret was absent;
+- `MINH_TRI_Readonly_Tunnel` logon task was absent;
+- tunnel was live only for that session.
+
+Newer remote observation at 2026-10-03 15:35 +07:00:
+- read-only connector UNREACHABLE (`tunnel-client` not seen for 300 seconds);
+- Desktop Commander offline;
+- local task/process state cannot be inspected remotely;
+- root cause remains UNKNOWN and persistence remains NOT_PROVEN.
 
 ### Owner-local secure action
 Run locally on the Owner PC in a visible PowerShell window:
@@ -150,9 +156,9 @@ Backlog hygiene gate closed on 2026-10-03:
 
 ## Required next sequence
 
-1. Owner-local secure tunnel key provisioning.
-2. Install limited logon task.
-3. Controlled reboot persistence proof.
+1. Restore Owner-PC maintenance-plane reachability and inspect current DPAPI secret, Scheduled Task, process and health state.
+2. If missing/broken, repair the secret-safe logon-task path without exposing secrets.
+3. Controlled reboot persistence proof with no manual tunnel launch.
 4. Provider-side old-key revocation evidence.
 5. Admin/vendor endpoint protection + BitLocker evidence.
 6. Genuine fresh-seat validation.
