@@ -22,6 +22,11 @@ from typing import Any, Protocol, Sequence
 
 from .generation import enforce_candidate_mutation
 from .self_upgrade_runtime import SelfUpgradeSession
+from .critic.packet import build_critic_packet
+from .critic.verdict_schema import (
+    CRITIC_DEFECT_FOUND as EXTERNAL_DEFECT_FOUND,
+    CRITIC_NO_MATERIAL_DEFECT_FOUND as EXTERNAL_NO_MATERIAL_DEFECT_FOUND,
+)
 
 LIFECYCLE_PROTOCOL = "minhtri-candidate-lifecycle/v1"
 CRITIC_NO_MATERIAL_DEFECT = "NO_MATERIAL_DEFECT"
@@ -135,6 +140,7 @@ class CodexSandboxTestRunner:
             "command": command,
             "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8", errors="replace")),
             "stderr_sha256": _sha256_bytes(proc.stderr.encode("utf-8", errors="replace")),
+            "external_critic_log": (proc.stdout + "\n" + proc.stderr)[-50000:],
         }
 
 
@@ -224,6 +230,9 @@ class CodexReadOnlyCritic:
             "assurance_label": "AI_CONCUR" if verdict == CRITIC_NO_MATERIAL_DEFECT else "AI_FINDING",
             "proof_value": 0 if verdict == CRITIC_NO_MATERIAL_DEFECT else None,
             "owner_independent_review_required": True,
+            "external_critic_independence_status": (
+                external_receipt.get("independence_status") if external_receipt else "NOT_RUN"
+            ),
             "stdout_sha256": _sha256_bytes(proc.stdout.encode("utf-8", errors="replace")),
         }
 
@@ -236,6 +245,9 @@ class CandidateLifecycleRunner:
     test_runner: CandidateTestRunner
     critic: CandidateCritic
     freeze_receipt_path: Path
+    external_critic: Any | None = None
+    external_claims: tuple[str, ...] = ()
+    eval_packet_hash: str | None = None
 
     def _current_branch(self) -> str:
         proc = subprocess.run(
@@ -319,6 +331,89 @@ class CandidateLifecycleRunner:
                 "automatic_promotion": False,
             }
 
+        external_receipt = None
+        external_packet = None
+        if self.external_critic is not None:
+            if not self.external_claims:
+                raise CandidateLifecycleError("external critic requires explicit one-line claims")
+            if not isinstance(self.eval_packet_hash, str):
+                raise CandidateLifecycleError("external critic requires pinned eval_packet_hash")
+            external_packet = build_critic_packet(
+                candidate_root=self.candidate_root,
+                candidate_generation_id=self.session.lease.target_generation,
+                lease_id=self.session.lease.lease_id,
+                changed_paths=normalized,
+                test_log=str(test_receipt.get("external_critic_log", "")),
+                claims=self.external_claims,
+                eval_packet_hash=self.eval_packet_hash,
+            )
+            external_receipt = self.external_critic.critique(external_packet)
+            self.session.check()
+            after_external = candidate_artifact_receipt(self.candidate_root, normalized)
+            if after_external["artifact_digest"] != before["artifact_digest"]:
+                return {
+                    "protocol": LIFECYCLE_PROTOCOL,
+                    "status": "BLOCKED_EXTERNAL_CRITIC_MUTATED_CANDIDATE",
+                    "changed_paths": normalized,
+                    "artifact_digest_before": before["artifact_digest"],
+                    "artifact_digest_after": after_external["artifact_digest"],
+                    "external_critic": external_receipt,
+                    "eligible_for_freeze": False,
+                    "automatic_promotion": False,
+                }
+            if external_receipt.get("status") == "PENDING_EXTERNAL_CRITIC":
+                return {
+                    "protocol": LIFECYCLE_PROTOCOL,
+                    "status": "PENDING_EXTERNAL_CRITIC",
+                    "changed_paths": normalized,
+                    "artifact_digest": before["artifact_digest"],
+                    "test": test_receipt,
+                    "critic_internal": critic_receipt,
+                    "external_critic": external_receipt,
+                    "external_packet_hash": external_packet["packet_hash"],
+                    "eligible_for_freeze": False,
+                    "automatic_promotion": False,
+                }
+            if external_receipt.get("status") in {"CRITIC_RUN_INVALID", "POST_EXPIRY"}:
+                return {
+                    "protocol": LIFECYCLE_PROTOCOL,
+                    "status": "BLOCKED_EXTERNAL_CRITIC_INVALID_OR_LATE",
+                    "changed_paths": normalized,
+                    "artifact_digest": before["artifact_digest"],
+                    "test": test_receipt,
+                    "critic_internal": critic_receipt,
+                    "external_critic": external_receipt,
+                    "eligible_for_freeze": False,
+                    "automatic_promotion": False,
+                }
+            if external_receipt.get("verdict") == EXTERNAL_DEFECT_FOUND:
+                severities = {
+                    finding.get("severity")
+                    for finding in external_receipt.get("findings", [])
+                    if isinstance(finding, dict)
+                }
+                material = bool(severities & {"MEDIUM", "HIGH", "CRITICAL"})
+                return {
+                    "protocol": LIFECYCLE_PROTOCOL,
+                    "status": "REJECTED_EXTERNAL_CRITIC" if material else "CONTESTED_EXTERNAL_CRITIC",
+                    "changed_paths": normalized,
+                    "artifact_digest": before["artifact_digest"],
+                    "test": test_receipt,
+                    "critic_internal": critic_receipt,
+                    "external_critic": external_receipt,
+                    "eligible_for_freeze": False,
+                    "automatic_promotion": False,
+                    "owner_decision_required": True,
+                }
+            if external_receipt.get("verdict") != EXTERNAL_NO_MATERIAL_DEFECT_FOUND:
+                return {
+                    "protocol": LIFECYCLE_PROTOCOL,
+                    "status": "BLOCKED_EXTERNAL_CRITIC_UNKNOWN_VERDICT",
+                    "external_critic": external_receipt,
+                    "eligible_for_freeze": False,
+                    "automatic_promotion": False,
+                }
+
         receipt = {
             "protocol": LIFECYCLE_PROTOCOL,
             "status": "FROZEN_PENDING_OWNER",
@@ -330,6 +425,8 @@ class CandidateLifecycleRunner:
             "artifact": before,
             "test": test_receipt,
             "critic": critic_receipt,
+            "external_critic": external_receipt,
+            "external_packet_hash": external_packet["packet_hash"] if external_packet else None,
             "critic_independence_proven": False,
             "critic_assurance_label": critic_receipt.get("assurance_label", "AI_CONCUR"),
             "critic_proof_value": critic_receipt.get("proof_value", 0),
