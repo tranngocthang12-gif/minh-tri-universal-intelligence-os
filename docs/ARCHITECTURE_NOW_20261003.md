@@ -335,3 +335,20 @@ Current boundary remains explicit: a live 24-hour lease is still OFF. The next m
 Runtime evidence:
 - `docs/runtime_evidence/SELF_UPGRADE_OWNER_REVOKE_E2E_20261003T191700_PLUS0700.json`
 - `docs/runtime_evidence/SELF_UPGRADE_CODEX_WORKSPACE_WRITE_20261003T201243_PLUS0700.json`
+
+
+## 22. Owner-PC TEST → CRITIC → FREEZE lifecycle proof — 2026-10-03 21:06 +07:00
+
+Canonical evidence: `docs/runtime_evidence/SELF_UPGRADE_LIFECYCLE_OWNER_PC_20261003T210607_PLUS0700.json`.
+
+After PR #136 and PR #137 corrected the live Codex CLI 0.160.0 restricted-token invocation and src-layout import environment, the bounded Owner-PC lifecycle smoke completed end-to-end:
+
+- lease-bound Codex mutation created exactly one declared candidate artifact in the isolated candidate worktree;
+- full unittest discovery PASSed inside the Windows restricted-token sandbox with direct network disabled;
+- the read-only Codex critic returned `NO_MATERIAL_DEFECT` for the neutral smoke artifact and is explicitly recorded as `SAME_PROVIDER_NOT_INDEPENDENT`;
+- a digest-bound freeze receipt was created and the runtime transitioned to `FROZEN_PENDING_OWNER` / `FROZEN`;
+- automatic VERIFIED promotion, automatic Candidate promotion and canonical write capability remained false.
+
+A first smoke using the text `CANDIDATE_LIFECYCLE_SMOKE_PASS` was correctly rejected by the critic as an unsupported success claim. The proof was rerun with the neutral text `CANDIDATE_LIFECYCLE_SMOKE_ARTIFACT`; the critic then accepted the artifact without weakening its criteria.
+
+This closes the bounded TEST → CRITIC → FREEZE runtime-E2E gap. It does **not** prove independent critic authority and does **not** prove OS-level containment of arbitrary Candidate code. The live 24H lease remains OFF. The remaining self-upgrade decision boundary is whether Owner requires stronger OS containment before any explicit 24H activation.
