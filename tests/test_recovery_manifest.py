@@ -179,7 +179,7 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(liveness["secure_mcp_tunnel"], "UP")
         self.assertEqual(liveness["maintenance_plane"], "ONLINE")
         self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
-        self.assertIn("NO_MATCHING_BOOT_REGISTRATION", state["persistence_probe_latest"])
+        self.assertIn("REBOOT_PROOF_PENDING", state["persistence_probe_latest"])
         self.assertEqual(state["last_proven_runtime_evidence"]["persistence"], "NOT_PROVEN")
 
     def test_current_workstream_matches_open_gates(self):
