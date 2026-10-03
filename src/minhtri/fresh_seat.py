@@ -1,14 +1,30 @@
 """Fail-closed validator for separate-chat fresh-seat recovery evidence."""
 from __future__ import annotations
 
+from datetime import datetime, timedelta, timezone
 from typing import Any
 
-SCHEMA = "minhtri-fresh-seat-validation/v1"
+SCHEMA = "minhtri-fresh-seat-validation/v2"
+MAX_TTL_SECONDS = 900
+MAX_CONTROL_SKEW_SECONDS = 300
 EXPECTED_TOOLS = ("brain.recovery_packet", "brain.verify")
 
 
 class FreshSeatValidationError(ValueError):
     pass
+
+
+def _utc_parse(value: Any, label: str) -> datetime:
+    if not isinstance(value, str):
+        raise FreshSeatValidationError(f"{label} must be an ISO timestamp")
+    text = value[:-1] + "+00:00" if value.endswith("Z") else value
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError as exc:
+        raise FreshSeatValidationError(f"{label} must be an ISO timestamp") from exc
+    if parsed.tzinfo is None:
+        raise FreshSeatValidationError(f"{label} must include timezone")
+    return parsed.astimezone(timezone.utc)
 
 
 def _need(record: dict[str, Any], *keys: str) -> None:
@@ -29,7 +45,11 @@ def _read_tuple(value: Any, label: str) -> tuple[int, str]:
     return count, head.lower()
 
 
-def validate_fresh_seat_evidence(record: dict[str, Any]) -> dict[str, Any]:
+def validate_fresh_seat_evidence(
+    record: dict[str, Any],
+    *,
+    now: datetime | None = None,
+) -> dict[str, Any]:
     """Validate evidence produced by a genuinely separate chat seat.
 
     This function does not decide that a UI conversation was separate by itself. The
@@ -48,6 +68,9 @@ def validate_fresh_seat_evidence(record: dict[str, Any]) -> dict[str, Any]:
         "fresh_verify",
         "fresh_recovery",
         "control_verify",
+        "observed_at_utc",
+        "control_observed_at_utc",
+        "ttl_seconds",
     )
     if record["schema"] != SCHEMA:
         raise FreshSeatValidationError("unsupported schema")
@@ -57,6 +80,20 @@ def validate_fresh_seat_evidence(record: dict[str, Any]) -> dict[str, Any]:
         raise FreshSeatValidationError("prompt must not seed expected head/count/focus values")
     if record["mutation_tool_exposed"] is not False:
         raise FreshSeatValidationError("mutation capability must not be exposed")
+
+    ttl = record["ttl_seconds"]
+    if type(ttl) is not int or ttl < 1 or ttl > MAX_TTL_SECONDS:
+        raise FreshSeatValidationError("ttl_seconds must be between 1 and 900")
+    observed = _utc_parse(record["observed_at_utc"], "observed_at_utc")
+    control_observed = _utc_parse(record["control_observed_at_utc"], "control_observed_at_utc")
+    now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
+    if observed > now or control_observed > now:
+        raise FreshSeatValidationError("fresh-seat observation cannot be in the future")
+    if abs((control_observed - observed).total_seconds()) > MAX_CONTROL_SKEW_SECONDS:
+        raise FreshSeatValidationError("control verification is outside the fresh-seat validation window")
+    expires = observed + timedelta(seconds=ttl)
+    if now >= expires:
+        raise FreshSeatValidationError("fresh-seat evidence has expired")
 
     tools = record["toolset"]
     if not isinstance(tools, list) or tuple(sorted(tools)) != EXPECTED_TOOLS:
@@ -85,4 +122,7 @@ def validate_fresh_seat_evidence(record: dict[str, Any]) -> dict[str, Any]:
         "head": fresh_verify[1],
         "toolset": list(EXPECTED_TOOLS),
         "write_capability": False,
+        "observed_at_utc": observed.isoformat().replace("+00:00", "Z"),
+        "expires_at_utc": expires.isoformat().replace("+00:00", "Z"),
+        "ttl_seconds": ttl,
     }
