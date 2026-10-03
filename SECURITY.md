@@ -23,3 +23,11 @@ channel is established.
 - Canonical project memory is GitHub-first, but GitHub evidence is not an independent witness.
 - No autonomous VERIFIED promotion, publish, spend, delete, or durable write without the required
   Owner/governance gate.
+
+
+## Current-state security rule
+
+- `PROJECT_STATE.current_runtime_liveness` is the only authority for current maintenance/tunnel/brain reachability.
+- Historical PASS evidence must never be used to infer that a process or connector is currently running.
+- An unexpired self-upgrade authorization timestamp does not prove the in-memory lease runtime is alive.
+- If runtime observability is lost, mutation authority is UNKNOWN and must be treated fail-closed until fresh proof.
