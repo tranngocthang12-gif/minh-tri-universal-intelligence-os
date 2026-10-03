@@ -16,6 +16,12 @@ class WindowsTunnelPersistenceContract(unittest.TestCase):
         self.assertIn("plaintext_persisted=$false", text.replace(" ", ""))
         self.assertNotIn("PtrToStringBSTR", text)
 
+    def test_provisioner_uses_windows_powershell_51_compatible_utf8_writer(self):
+        text = self.read("provision_tunnel_runtime_key.ps1")
+        self.assertIn("New-Object System.Text.UTF8Encoding($false)", text)
+        self.assertIn("[System.IO.File]::WriteAllText($tmp, $encrypted, $utf8NoBom)", text)
+        self.assertNotIn("-Encoding utf8NoBOM", text)
+
     def test_provisioner_acl_grant_does_not_use_ambiguous_colon_interpolation(self):
         text = self.read("provision_tunnel_runtime_key.ps1")
         self.assertIn("$grant = '{0}:(R,W)' -f $principal", text)
