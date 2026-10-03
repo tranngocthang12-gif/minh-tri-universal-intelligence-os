@@ -57,6 +57,9 @@ PROTECTED_EXACT_PATHS = frozenset({
 
 PROTECTED_PREFIXES = (
     ".github/",
+    "tests/",
+    "ops/windows/",
+    "config/",
     "docs/LAW_INDEX",
     "docs/ARCHITECTURE_NOW",
     "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE",
