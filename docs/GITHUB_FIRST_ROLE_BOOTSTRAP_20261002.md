@@ -217,14 +217,14 @@ Every seat must recover role before doing material work.
 
 Security review remains a first-order requirement.
 
-Known architectural security issues already identified include:
-- Owner Gate is not real identity verification.
-- Direct Python `Ledger.apply` can bypass CLI Owner Gate.
-- Whole-ledger rewrite can defeat the local hash chain if all writable state is rewritten and no external anchor exists.
-- Provider IDs are declared identities, not proof of distinct real actors.
-- Main protection and CI/status gates need stronger verification before autonomous mutation is trusted.
+Historical security findings and their current classification:
+- OPEN/PARTIAL: Owner Gate is shared-secret authorization, not proof of a real human identity.
+- CLOSED P0: direct Python `Ledger.apply` now authenticates inside the mutation boundary; the old CLI-bypass finding is historical.
+- PARTIAL: whole-ledger rewrite risk is mitigated by external anchors/history checks, but the current witness is not full-device independent.
+- OPEN/PARTIAL: declared provider IDs and same-provider critic runs are not proof of independent actors.
+- CLOSED governance baseline: main PR + strict required `test` check + no ruleset bypass actors are enforced; additional reviewer/CODEOWNER hardening remains optional/open.
 
-This document does not patch those issues. It records the governance direction only.
+Current status must be read from `PROJECT_STATE.json` and the current architecture, not inferred from this historical bootstrap section.
 
 ## 8. GITHUB-FIRST HANDOFF RULE
 

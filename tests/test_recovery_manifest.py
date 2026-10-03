@@ -225,6 +225,31 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue((ROOT / state["boot_persistence_latest_precheck"]).is_file())
         self.assertTrue((ROOT / state["persistence_diagnosis_latest"]).is_file())
 
+    def test_legacy_live_fields_cannot_override_current_liveness(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["runtime_liveness_authoritative_field"], "current_runtime_liveness")
+        self.assertFalse(state["legacy_runtime_current_fields_liveness_authority"])
+        for key in (
+            "local_brain_live_check_latest",
+            "owner_pc_maintenance_plane_latest",
+            "owner_pc_tunnel_live_check_latest",
+            "brain_read_plane_live_check_latest",
+        ):
+            self.assertIn("HISTORICAL", state[key], key)
+        self.assertEqual(state["current_runtime_liveness"]["secure_mcp_tunnel"], "UNKNOWN")
+        self.assertEqual(state["current_runtime_liveness"]["local_brain_connector"], "UNKNOWN")
+
+    def test_current_architecture_marks_current_liveness_and_historical_stages(self):
+        architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
+        self.assertIn("Current liveness authoritative — audit 2026-10-04", architecture)
+        self.assertIn("HISTORICAL — Bounded 24H self-upgrade lease implementation stage", architecture)
+        self.assertIn("PROJECT_STATE.current_runtime_liveness", architecture)
+
+    def test_bootstrap_does_not_repeat_closed_ledger_bypass_as_current(self):
+        bootstrap = (ROOT / "docs" / "GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
+        self.assertIn("CLOSED P0: direct Python", bootstrap)
+        self.assertIn("authenticates inside the mutation boundary", bootstrap)
+
 
 if __name__ == "__main__":
     unittest.main()

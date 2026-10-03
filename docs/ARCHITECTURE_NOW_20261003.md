@@ -31,11 +31,20 @@ Desktop Commander là break-glass/maintenance, không phải canonical brain tra
 ### Witness plane
 Current GitHub witness chỉ process-separated; chưa độc lập trước full Owner-PC/account compromise.
 
-## 4. Runtime proof hiện tại
+## 4. Runtime proof và current liveness
 
 Runtime evidence và current liveness là hai lớp khác nhau.
 
-**Fresh observation trong AUTO runtime-assurance 2026-10-03 12:42 +07:00:**
+**Current liveness authoritative — audit 2026-10-04:**  
+- maintenance plane = `UNKNOWN`; latest Desktop Commander probes timed out/offline;
+- secure MCP tunnel = `UNKNOWN`; fresh connector probe reported tunnel-client not seen / no poll;
+- Local Brain connector = `UNKNOWN`; fresh `brain.verify` did not complete through the tunnel;
+- recovery requires fresh maintenance ping → `/readyz` → `brain.verify` → `brain.recovery_packet`;
+- historical PASS evidence below is preserved only as bounded evidence and must not be interpreted as current availability.
+
+Canonical current-liveness source is `PROJECT_STATE.current_runtime_liveness`. Any field whose name contains `live/current/session` but is explicitly marked historical is non-authoritative for liveness.
+
+**Historical bounded observation — AUTO runtime-assurance 2026-10-03 12:42 +07:00:**
 - Desktop Commander maintenance plane ping PASS; current maintenance liveness = `ONLINE`;
 - tunnel-client process hiện diện, health bind loopback và `/readyz = HTTP 200 ready`; current tunnel liveness = `UP`;
 - canonical brain read plane trả `brain.verify = VALID`, event_count=3, head `ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927`;
@@ -157,7 +166,7 @@ Backlog hygiene is already closed on 2026-10-03; it is not an open foundation ga
 
 ## 9. Backlog hygiene
 
-CLOSED on 2026-10-03. Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed with history preserved. Learning Assurance v1–v1.4 is merged. PR #116 refreshed/merged the learning backlog and PR #117 refreshed/merged the dependency update; the current audit observed zero open PRs. Backlog hygiene is therefore not a current completion blocker.
+CLOSED on 2026-10-03. Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed with history preserved. Learning Assurance v1–v1.4 is merged. PR #116 refreshed/merged the learning backlog and PR #117 refreshed/merged the dependency update. Later PRs may exist for active Owner work; therefore "zero open PRs" is not a durable architecture invariant and must never be used as a completion proof.
 
 ## 10. Bootstrap
 
@@ -262,7 +271,7 @@ Current bounded observation from this seat:
 This newer observation supersedes the 12:42 +07:00 liveness snapshot only for current liveness. It does not erase earlier historical PASS evidence.
 
 
-## 18. Bounded 24H self-upgrade lease — implementation candidate
+## 18. HISTORICAL — Bounded 24H self-upgrade lease implementation stage
 
 Owner authorized the architecture for a maximum 24-hour self-learning/self-upgrade capability window. The implementation is merged to canonical `main` with required CI PASS and **does not activate a live 24H lease**.
 
@@ -282,7 +291,7 @@ Current bounded status: source/tests are merged and required CI passed; runtime 
 Authority record: `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`.
 
 
-## 19. Self-upgrade runtime controller and short-proof harness
+## 19. HISTORICAL — Self-upgrade runtime controller and short-proof harness
 
 A runtime controller is staged on the current PR to turn the immutable lease into an in-memory session boundary:
 
@@ -315,7 +324,7 @@ Bounded real-clock evidence:
 This proves elapsed-time expiry at the CI runtime/controller boundary. It does not prove Owner-PC execution, 24-hour expiry, arbitrary candidate-code containment, or safe autonomous activation on the host. The live 24H lease remains OFF.
 
 
-## 21. Lease-bound Codex provider live binding
+## 21. HISTORICAL — Lease-bound Codex provider live binding
 
 The bounded self-upgrade path now has live Owner-PC evidence through the candidate mutation boundary:
 
@@ -337,7 +346,7 @@ Runtime evidence:
 - `docs/runtime_evidence/SELF_UPGRADE_CODEX_WORKSPACE_WRITE_20261003T201243_PLUS0700.json`
 
 
-## 22. Owner-PC TEST → CRITIC → FREEZE lifecycle proof — 2026-10-03 21:06 +07:00
+## 22. HISTORICAL EVIDENCE — Owner-PC TEST → CRITIC → FREEZE lifecycle proof — 2026-10-03 21:06 +07:00
 
 Canonical evidence: `docs/runtime_evidence/SELF_UPGRADE_LIFECYCLE_OWNER_PC_20261003T210607_PLUS0700.json`.
 
@@ -354,7 +363,7 @@ A first smoke using the text `CANDIDATE_LIFECYCLE_SMOKE_PASS` was correctly reje
 This closes the bounded TEST → CRITIC → FREEZE runtime-E2E gap. It does **not** prove independent critic authority and does **not** prove OS-level containment of arbitrary Candidate code. The live 24H lease remains OFF. The remaining self-upgrade decision boundary is whether Owner requires stronger OS containment before any explicit 24H activation.
 
 
-## 23. Codex workspace-write outside-worktree negative probe — 2026-10-03 21:09 +07:00
+## 23. HISTORICAL EVIDENCE — Codex workspace-write outside-worktree negative probe — 2026-10-03 21:09 +07:00
 
 Evidence: `docs/runtime_evidence/CODEX_WORKSPACE_CONTAINMENT_PROBE_20261003T210957_PLUS0700.json`.
 
@@ -402,3 +411,18 @@ Evidence: `docs/runtime_evidence/SELF_UPGRADE_LIVE_24H_HANDOFF_20261004T005645_P
 Owner issued a fresh explicit command and the runtime activated a new immutable 86,400-second lease `upgrade-29829fc6febf4c5db42e5ff4a93aa0da` at `2026-10-03T17:56:45.124745Z`, expiring at `2026-10-04T17:56:45.124745Z`. The lease pins Owner authorization ref, Champion SHA, test-dataset hash, eval packet hash and eval metric before activation.
 
 The live controller keeps the authoritative lease in the parent process. Workers receive only a one-time stdin bootstrap for loopback authenticated IPC; `worker_holds_lease=false` and `parent_enforced=true`. Automatic renewal, VERIFIED promotion, candidate promotion, push, merge and canonical write remain false. Local brain audit is VALID at event_count 12, head `c272af26799a7ff32f681de9ac12c712ac1a921f6bebdeab5ac383b2be95e18d`.
+
+
+## 29. Architecture consistency repair — 2026-10-04
+
+This repair makes the recovery semantics explicit:
+
+- capability/deployment evidence may remain PASS historically while current runtime liveness is UNKNOWN;
+- only `PROJECT_STATE.current_runtime_liveness` is authoritative for current maintenance/tunnel/brain availability;
+- historical "live/current/session" field names are retained for compatibility but their values must identify themselves as historical/non-authoritative;
+- stale implementation-stage statements such as "live lease OFF" remain historical evidence and do not override later lease records;
+- bootstrap security findings must distinguish CLOSED/PARTIAL/OPEN instead of repeating a fixed P0 as current;
+- active learning tracks may coexist with runtime-assurance work but cannot enable background autonomy or Research Adapter;
+- current architecture never treats an open-PR count, old SHA, or old runtime heartbeat as a durable invariant.
+
+Current runtime remains UNKNOWN until fresh proof re-establishes the maintenance and read planes.
