@@ -20,7 +20,17 @@ def prereg():
         "assignment_seed_hash": "a" * 64,
         "control_pipeline_hash": "b" * 64,
         "treatment_pipeline_hash": "c" * 64,
+        "compute_matched_pipeline_hash": "e" * 64,
         "frozen_evaluator_hash": "d" * 64,
+        "gold_labels_hash": "f" * 64,
+        "baseline_definition": "V1_3",
+        "compute_budget_contract": {
+            "control": {"retrieval_calls": 1, "critic_calls": 1},
+            "treatment": {"retrieval_calls": 2, "critic_calls": 2},
+            "compute_matched": {"retrieval_calls": 2, "critic_calls": 2},
+        },
+        "primary_window_tasks": 30,
+        "rollback_threshold": 0.05,
         "trial_rule_id": "rule-1",
         "trial_rule_ttl_seconds": 3600,
         "routing_keys": ["domain_id", "procedure_id"],
@@ -41,7 +51,7 @@ class LearningExperimentTests(unittest.TestCase):
 
     def test_assignment_is_deterministic_per_task_and_seed(self):
         self.assertEqual(assign_arm("task-1", "seed"), assign_arm("task-1", "seed"))
-        self.assertIn(assign_arm("task-2", "seed"), {"CONTROL", "TREATMENT"})
+        self.assertIn(assign_arm("task-2", "seed"), {"CONTROL", "TREATMENT", "COMPUTE_MATCHED"})
 
 
 if __name__ == "__main__":
