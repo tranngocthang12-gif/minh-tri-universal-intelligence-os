@@ -61,10 +61,21 @@ class LeaseBoundSelfUpgradeWorker:
 
         executor = CandidateExecutor(self.session, self.candidate_branch)
         result = executor.mutate(paths, action)
+        changed_paths = list(executor.authorize(paths))
+        if isinstance(result, dict) and str(result.get("status", "")).startswith("BLOCKED"):
+            return {
+                **base,
+                "status": "CANDIDATE_REJECTED_PROVIDER_BLOCK",
+                "candidate_mutation_performed": bool(result.get("actual_paths")),
+                "eligible_for_candidate": False,
+                "changed_paths": changed_paths,
+                "provider_result": result,
+            }
         return {
             **base,
             "status": "CANDIDATE_MUTATION_COMPLETED",
             "candidate_mutation_performed": True,
-            "changed_paths": list(executor.authorize(paths)),
+            "eligible_for_candidate": True,
+            "changed_paths": changed_paths,
             "provider_result": result,
         }
