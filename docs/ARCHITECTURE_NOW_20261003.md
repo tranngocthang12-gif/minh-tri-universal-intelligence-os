@@ -106,6 +106,16 @@ This layer is additive to the existing ledger. It does not create a multi-agent 
 - contamination/reward-hacking classes can be recorded when evidence identifies them, but automatic detection is still NOT_IMPLEMENTED;
 - operational independence of declared critic providers remains NOT_PROVEN.
 
+### Learning Assurance v1.3
+
+- critic executions may receive evidence-bound independence receipts recording runtime/session/provider receipt/authority scope and whether Project context was supplied;
+- same-runtime or non-blind receipts fail closed;
+- even process-separated external evidence is recorded as evidence only, never full-independence proof;
+- deterministic eval-integrity assessments may flag configured leakage markers and invariant/score inconsistencies;
+- statuses include contamination suspected, reward-hacking suspected, combined suspicion, invariant failure, or clean-no-signal;
+- `CLEAN_NO_SIGNAL_NOT_PROOF` is binding: absence of configured signals is not proof of cleanliness;
+- autonomy may summarize these records but receives no write power and cannot promote any claim.
+
 
 ## 8. Promotion gates còn mở
 
