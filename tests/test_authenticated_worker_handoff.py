@@ -54,7 +54,7 @@ class AuthenticatedWorkerHandoffTests(unittest.TestCase):
         thread.start()
         response = worker_request_from_bootstrap(
             secret_bootstrap,
-            changed_paths=["src/minhtri/autonomy.py"],
+            changed_paths=["src/minhtri/__init__.py"],
             objective="bounded candidate",
             nonce="0123456789abcdef",
         )
@@ -63,7 +63,7 @@ class AuthenticatedWorkerHandoffTests(unittest.TestCase):
         self.assertTrue(response["parent_enforced"])
         self.assertFalse(response["worker_holds_lease"])
         self.assertEqual(seen["lease_id"], "upgrade-handoff-test")
-        self.assertEqual(seen["changed_paths"], ["src/minhtri/autonomy.py"])
+        self.assertEqual(seen["changed_paths"], ["src/minhtri/__init__.py"])
 
     def test_wrong_lease_or_operation_fails_closed(self):
         server = AuthenticatedWorkerHandoffServer(
@@ -77,7 +77,7 @@ class AuthenticatedWorkerHandoffTests(unittest.TestCase):
                 "lease_id": "wrong",
                 "candidate_branch": "candidate/GEN-2",
                 "nonce": "0123456789abcdef",
-                "changed_paths": ["src/minhtri/autonomy.py"],
+                "changed_paths": ["src/minhtri/__init__.py"],
             })
         server.close()
 
