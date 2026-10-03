@@ -495,3 +495,24 @@ Rejected as over-prescriptive absent proof:
 - production traffic canary percentages for a system that has no production autonomous mutation.
 
 These may be reconsidered when threat model, data volume and deployment mode justify them.
+
+
+## 33. Trial-001 calibration boundary — 2026-10-04
+
+The first empirical trial is now explicitly a **paired four-arm calibration harness**, not a learning proof by default.
+
+For every eligible task:
+- A = CONTROL;
+- B = COUNTEREVIDENCE_FIRST treatment;
+- C = compute-matched neutral deep review;
+- D = shuffled-ledger placebo.
+
+Every arm receives the same frozen task bytes. Arm order is randomized; retrieval/cache/session state must be isolated by arm.
+
+A learning-from-experience claim additionally requires treatment lesson provenance bound to an audited meta-lesson candidate, audited resolution IDs and audited strata. Without that provenance, even a causal B>C result is evidence only for overlay value/harness discrimination.
+
+Declared compute budgets are insufficient. Actual token/retrieval/critic/generator telemetry must satisfy a frozen parity tolerance for B/C/D before a task enters primary causal analysis.
+
+Coverage non-inferiority is mandatory so the treatment cannot win factual-accuracy and unsupported-claim metrics merely by saying less.
+
+The current repository implements planning/validation contracts. It does **not** yet contain a proven live isolated executor, provider telemetry capture, blinded evaluator runtime, or empirical Trial-001 result. External code review of the reader remains required.
