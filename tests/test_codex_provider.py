@@ -56,6 +56,53 @@ class CodexProviderTests(unittest.TestCase):
             plan = p.plan({"write_capability": False})
         self.assertEqual(plan["changed_paths"], ["src/minhtri/autonomy.py"])
 
+    def test_explicit_objective_and_required_paths_are_in_plan_prompt(self):
+        p = CodexCandidateProvider(
+            session=self.session,
+            candidate_branch="candidate/GEN-2",
+            candidate_root=self.work,
+            candidate_objective="Create one bounded smoke artifact",
+            required_changed_paths=("docs/CODEX_WORKSPACE_WRITE_SMOKE.md",),
+        )
+        plan_json = json.dumps({
+            "summary": "x",
+            "hypothesis": "x",
+            "changed_paths": ["docs/CODEX_WORKSPACE_WRITE_SMOKE.md"],
+            "tests": [],
+        })
+        seen = {}
+
+        def fake_run(*, sandbox, prompt):
+            seen["sandbox"] = sandbox
+            seen["prompt"] = prompt
+            return mock.Mock(returncode=0, stdout=plan_json, stderr="")
+
+        with mock.patch.object(p, "_run", side_effect=fake_run):
+            plan = p.plan({})
+        self.assertEqual(seen["sandbox"], "read-only")
+        self.assertIn("PRIMARY CANDIDATE OBJECTIVE", seen["prompt"])
+        self.assertIn("Create one bounded smoke artifact", seen["prompt"])
+        self.assertIn("docs/CODEX_WORKSPACE_WRITE_SMOKE.md", seen["prompt"])
+        self.assertEqual(plan["changed_paths"], ["docs/CODEX_WORKSPACE_WRITE_SMOKE.md"])
+
+    def test_required_path_mismatch_fails_before_write(self):
+        p = CodexCandidateProvider(
+            session=self.session,
+            candidate_branch="candidate/GEN-2",
+            candidate_root=self.work,
+            candidate_objective="bounded",
+            required_changed_paths=("docs/CODEX_WORKSPACE_WRITE_SMOKE.md",),
+        )
+        plan_json = json.dumps({
+            "summary": "x",
+            "hypothesis": "x",
+            "changed_paths": ["src/minhtri/autonomy.py"],
+            "tests": [],
+        })
+        with mock.patch.object(p, "_run", return_value=mock.Mock(returncode=0, stdout=plan_json)):
+            with self.assertRaisesRegex(CodexProviderError, "CODEX_PLAN_DID_NOT_MATCH_REQUIRED_PATHS"):
+                p.plan({})
+
     def test_plan_cannot_target_protected_path(self):
         plan_json = json.dumps({
             "summary": "x",
