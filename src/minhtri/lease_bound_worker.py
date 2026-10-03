@@ -41,6 +41,8 @@ class LeaseBoundSelfUpgradeWorker:
             "automatic_verified_promotion": False,
             "automatic_candidate_promotion": False,
             "canonical_write_capability": False,
+            "candidate_process_holds_lease": False,
+            "control_plane_process_role": "PARENT_ENFORCER_ONLY",
         }
         if self.provider is None:
             return {
