@@ -260,7 +260,11 @@
   "self_upgrade_automatic_verified_promotion": false,
   "self_upgrade_automatic_candidate_promotion": false,
   "self_upgrade_live_24h_expiry_proof": "NOT_PROVEN",
-  "self_upgrade_short_lease_runtime_proof": "NOT_PROVEN",
+  "self_upgrade_short_lease_runtime_proof": "PARTIAL_CI_REALTIME_PENDING_OWNER_PC_RUNTIME",
   "self_upgrade_owner_decision": "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md",
-  "self_upgrade_source_merge_sha": "0f2c0a1882e039f92e93bdef8dcdac77f4bc06b5"
+  "self_upgrade_source_merge_sha": "0f2c0a1882e039f92e93bdef8dcdac77f4bc06b5",
+  "self_upgrade_runtime_controller": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_realtime_60s_ci_probe": "IMPLEMENTED_ON_PR_PENDING_CI",
+  "self_upgrade_candidate_os_sandbox_containment": "NOT_PROVEN",
+  "self_upgrade_process_restart_semantics": "FAIL_CLOSED_LEASE_LOST_ON_PROCESS_EXIT"
 }

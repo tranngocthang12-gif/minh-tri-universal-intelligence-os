@@ -280,3 +280,21 @@ Implemented and CI-proven components:
 Current bounded status: source/tests are merged and required CI passed; runtime short-lease expiry proof remains pending. A real 24-hour lease must not be activated until short-duration expiry/revocation/clock-rollback/child-containment tests have passed with evidence.
 
 Authority record: `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`.
+
+
+## 19. Self-upgrade runtime controller and short-proof harness
+
+A runtime controller is staged on the current PR to turn the immutable lease into an in-memory session boundary:
+
+- the authoritative live lease exists only in process memory;
+- process exit/restart loses the lease and therefore loses upgrade authority (fail closed);
+- no renewal method is exposed;
+- child capability inherits the same lease id/expiry and equal-or-less scope;
+- candidate mutation authorization still passes through the existing candidate branch/path guard;
+- a short-proof command runs a real-clock 60–300 second expiry proof and a separate Owner-revocation proof;
+- Owner secret is taken from an environment value if present and removed from the process environment, otherwise requested with a non-echoing prompt;
+- CI adds a dedicated real-clock 60-second expiry probe so elapsed-time enforcement is not proven only by mocks.
+
+Important boundary: this controller is not an OS sandbox. It does not prove that arbitrary candidate code cannot bypass Python-level guards if executed with unrestricted host credentials. Therefore `candidate_execution_containment=NOT_PROVEN_OS_SANDBOX` remains binding until a separate process/OS containment design is implemented and tested.
+
+A real Owner-PC short lease remains required before activating the 24-hour lease.
