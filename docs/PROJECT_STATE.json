@@ -260,12 +260,17 @@
   "self_upgrade_automatic_verified_promotion": false,
   "self_upgrade_automatic_candidate_promotion": false,
   "self_upgrade_live_24h_expiry_proof": "NOT_PROVEN",
-  "self_upgrade_short_lease_runtime_proof": "CI_REALTIME_PASS_OWNER_PC_RUNTIME_PENDING",
+  "self_upgrade_short_lease_runtime_proof": "PARTIAL_PASS_OWNER_PC_EXPIRY_AND_OWNER_V2_PASS_INTEGRATED_REVOKE_PENDING",
   "self_upgrade_owner_decision": "docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md",
   "self_upgrade_source_merge_sha": "0f2c0a1882e039f92e93bdef8dcdac77f4bc06b5",
   "self_upgrade_runtime_controller": "IMPLEMENTED_MERGED_CI_PROVEN_2026-10-03",
   "self_upgrade_realtime_60s_ci_probe": "PASS_REALTIME_SHORT_LEASE_EXPIRY_60_250149S_2026-10-03",
   "self_upgrade_candidate_os_sandbox_containment": "NOT_PROVEN",
   "self_upgrade_process_restart_semantics": "FAIL_CLOSED_LEASE_LOST_ON_PROCESS_EXIT",
-  "self_upgrade_runtime_controller_merge_sha": "cfac0d7c29aff1e73874ff4b06fbdeaf38546ea9"
+  "self_upgrade_runtime_controller_merge_sha": "cfac0d7c29aff1e73874ff4b06fbdeaf38546ea9",
+  "self_upgrade_owner_pc_short_expiry_proof": "PASS_REALTIME_60_25S_MUTATION_BLOCKED_2026-10-03",
+  "self_upgrade_owner_pc_runtime_unit_guard": "PASS_3_OF_3_2026-10-03",
+  "self_upgrade_owner_pc_owner_v2_verify": "PASS_PBKDF2_SHA256_600000_DPAPI_BACKED_2026-10-03",
+  "self_upgrade_owner_pc_integrated_revoke_proof": "BLOCKED_WINDOWS_EXECUTION_POLICY_NO_GLOBAL_POLICY_WEAKENING",
+  "self_upgrade_owner_pc_short_proof_evidence": "docs/runtime_evidence/SELF_UPGRADE_OWNER_PC_SHORT_PROOF_20261003T190521_PLUS0700.json"
 }
