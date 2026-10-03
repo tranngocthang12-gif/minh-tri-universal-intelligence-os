@@ -18,6 +18,12 @@ def valid_record(actor="resolver-a"):
         "evidence_id": "e1",
         "evidence_content_hash": sha256_text("raw outcome snapshot"),
         "evidence_cutoff_timestamp": "2026-10-02T00:00:01Z",
+        "evidence_source_kind": "RAW_SOURCE_SNAPSHOT",
+        "evidence_transform": "NONE",
+        "resolver_input_contract": "FROZEN_PREDICTION_PLUS_RAW_SOURCE_ONLY",
+        "resolver_saw_original_resolution": False,
+        "resolver_saw_model_trace": False,
+        "resolver_saw_context_capsule": False,
         "outcome_captured_at": "2026-10-02T01:00:00Z",
         "observed_value": 10.0,
         "resolver_actor": actor,
@@ -55,9 +61,35 @@ class ResolutionProvenanceTests(unittest.TestCase):
 
     def test_batch_uses_preregistered_threshold(self):
         pair = (valid_record("a"), valid_record("b"))
-        report = audit_batch([pair], preregistered_min_agreement=1.0)
+        report = audit_batch(
+            [pair],
+            preregistered_min_agreement=1.0,
+            preregistered_max_out_rate=0.0,
+        )
         self.assertEqual(report["status"], "PASS")
         self.assertEqual(report["agreement_rate"], 1.0)
+        self.assertEqual(report["out_rate"], 0.0)
+
+    def test_model_trace_or_capsule_disqualifies_resolver_input(self):
+        record = valid_record()
+        record["resolver_saw_model_trace"] = True
+        result = validate_resolution_provenance(record)
+        self.assertEqual(result["status"], "INVALID_PROVENANCE")
+        self.assertIn("RESOLVER_SAW_MODEL_TRACE", result["reasons"])
+
+    def test_out_rate_can_fail_entire_corpus(self):
+        good = valid_record("a")
+        blind = valid_record("b")
+        bad = valid_record("c")
+        bad["evidence_source_kind"] = "MODEL_SUMMARY"
+        report = audit_batch(
+            [(good, blind), (bad, valid_record("d"))],
+            preregistered_min_agreement=1.0,
+            preregistered_max_out_rate=0.25,
+        )
+        self.assertEqual(report["status"], "FAIL")
+        self.assertEqual(report["out_rate"], 0.5)
+        self.assertFalse(report["corpus_eligible_for_meta_learning"])
 
 
 if __name__ == "__main__":
