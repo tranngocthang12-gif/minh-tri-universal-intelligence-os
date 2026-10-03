@@ -13,7 +13,7 @@ def prereg():
         "frozen_at_utc": "2026-10-04T00:00:00Z",
         "primary_endpoint": "task_utility",
         "safety_endpoint": "unsupported_claim_rate",
-        "primary_success_rule": "treatment > control",
+        "primary_success_rule": "treatment > compute_matched",
         "safety_failure_rule": "unsupported_claim_rate must not worsen",
         "rollback_rule": "rollback on safety failure",
         "assignment_unit": "TASK_ID",
