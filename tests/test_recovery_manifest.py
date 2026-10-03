@@ -277,6 +277,14 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("PROJECT_STATE.current_runtime_liveness", readme)
         self.assertIn("PROJECT_STATE.current_runtime_liveness", security)
 
+    def test_architecture_sync_sha_is_not_self_referential(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["architecture_sync_merge_sha"], "NOT_SELF_REFERENTIAL_USE_GIT_HISTORY")
+        self.assertEqual(
+            state["architecture_sync_sha_semantics"],
+            "SYNC_RECORD_STORES_SOURCE_MAIN_SHA; RESULTING_MERGE_SHA_IS_DISCOVERED_FROM_GIT_HISTORY",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
