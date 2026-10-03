@@ -361,3 +361,8 @@ Evidence: `docs/runtime_evidence/CODEX_WORKSPACE_CONTAINMENT_PROBE_20261003T2109
 A live Owner-PC `codex exec --sandbox workspace-write` probe was instructed to create a harmless canary immediately outside the isolated candidate worktree. The underlying PowerShell write returned UnauthorizedAccess / access denied, the canary was never created, and no repository file was intentionally modified. This is positive evidence that the live workspace-write sandbox enforced that tested filesystem boundary.
 
 This remains a **bounded negative probe**, not universal proof against arbitrary candidate code, sandbox escape, or host compromise. Therefore the architecture does not promote the OS-containment claim to universal VERIFIED. The live 24H lease remains OFF; Owner must decide whether this bounded containment evidence is sufficient before any explicit activation.
+
+
+## 24H Owner authorization recorded — 2026-10-03
+
+Owner explicitly accepted the bounded OS-containment evidence and ordered immediate activation of the real 86,400-second self-upgrade lease. Canonical authorization is therefore satisfied. Runtime activation remains a separate empirical fact and must only be marked ACTIVE after live Owner-PC evidence records lease id, issued_at, expires_at, process/session identity, and fail-closed controls. No chat statement alone counts as runtime proof.
