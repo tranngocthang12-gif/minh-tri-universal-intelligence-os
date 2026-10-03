@@ -151,12 +151,13 @@ Provider-neutral mechanisms inspired by public Gemini/Claude/Grok documentation:
 5. establish independent witness authority/credential;
 6. capture a real external critic execution receipt/evidence before claiming operational critic independence;
 7. empirically validate Learning Assurance v1.4 against real work before claiming it improves accuracy;
-8. clean/resolve remaining active learning and Dependabot PRs;
-9. only then reconsider closing foundation build phase.
+8. only then reconsider closing foundation build phase.
+
+Backlog hygiene is already closed on 2026-10-03; it is not an open foundation gate.
 
 ## 9. Backlog hygiene
 
-Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed, with history preserved. Learning Assurance v1–v1.4 has been merged and is now part of current architecture. Remaining learning-domain PRs and dependency PRs are separate backlog items and must be evaluated on current main before merge.
+CLOSED on 2026-10-03. Historical architecture experiment PRs #2–#11 and superseded audit PR #81 are closed with history preserved. Learning Assurance v1–v1.4 is merged. PR #116 refreshed/merged the learning backlog and PR #117 refreshed/merged the dependency update; the current audit observed zero open PRs. Backlog hygiene is therefore not a current completion blocker.
 
 ## 10. Bootstrap
 
@@ -245,3 +246,17 @@ Full audit and ordered completion plan:
 Foundation promotion requires the current runtime-assurance, fresh-seat, witness, critic/empirical-validation and backlog gates to close with evidence.
 
 Production/product completion additionally requires later Owner-authorized work for real providers/data/business loops, stronger identity before external actions, operational recovery/observability, and real-world validation. Until those later gates are explicitly defined and passed, `FOUNDATION_PROTOTYPE` remains the truthful phase.
+
+
+## 16. Post-reboot remote reachability audit — 2026-10-03 15:35 +07:00
+
+Evidence: `docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json`.
+
+Current bounded observation from this seat:
+- canonical GitHub remained reachable and Security P0 for PR #119 was PASS across Python 3.10/3.11/3.12, PowerShell parse, security audit and aggregate `test`;
+- the MINH TRÍ read-only connector was UNREACHABLE with the control-plane message that the tunnel-client had not been seen for 300 seconds;
+- Desktop Commander reported no currently online device; `WIN-VBIQNFFDKIR` was last seen approximately 41 minutes earlier;
+- therefore local Scheduled Task state, tunnel process state and loopback health could not be inspected;
+- root cause remains UNKNOWN, and boot/reboot persistence remains NOT_PROVEN.
+
+This newer observation supersedes the 12:42 +07:00 liveness snapshot only for current liveness. It does not erase earlier historical PASS evidence.
