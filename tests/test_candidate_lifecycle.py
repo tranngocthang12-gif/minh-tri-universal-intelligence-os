@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+import sys
 from pathlib import Path
 from unittest import mock
 
@@ -116,7 +117,10 @@ class CandidateLifecycleTests(unittest.TestCase):
             result = runner.run()
         cmd = run.call_args.args[0]
         self.assertIn("sandbox", cmd)
+        self.assertIn("--permission-profile", cmd)
+        self.assertIn(":workspace", cmd)
         self.assertIn("--sandbox-state-disable-network", cmd)
+        self.assertEqual(cmd[cmd.index("-C") + 2], sys.executable)
         self.assertEqual(result["status"], "PASS")
         self.assertTrue(result["network_disabled"])
 
