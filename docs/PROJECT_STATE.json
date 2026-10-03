@@ -17,8 +17,8 @@
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
-  "local_brain_connected": true,
-  "next_checkpoint": "OWNER_LOCAL_SECURE_TUNNEL_KEY_PROVISION_THEN_INSTALL_LIMITED_LOGON_TASK_AND_CONTROLLED_REBOOT_RECOVERY_PROOF",
+  "local_brain_connected": false,
+  "next_checkpoint": "RESTORE_OWNER_PC_MAINTENANCE_REACHABILITY_THEN_DIAGNOSE_POST_REBOOT_TUNNEL_AND_PROVE_PERSISTENCE",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -64,7 +64,7 @@
   "research_adapter_gate": "BLOCKED_UNTIL_FRESH_SEAT_PASS",
   "secure_mcp_tunnel_required": true,
   "secure_mcp_tunnel_transport_target": "CHATGPT_REMOTE_MCP_TO_OWNER_PC_STDIO_MCP",
-  "secure_mcp_tunnel_status": "READY",
+  "secure_mcp_tunnel_status": "POST_REBOOT_REMOTE_UNREACHABLE_PENDING_LOCAL_DIAGNOSIS",
   "secure_mcp_tunnel_required_inputs": "OPENAI_TUNNEL_ID_AND_RUNTIME_API_KEY_PROVISIONED",
   "secure_mcp_tunnel_success_gate": "PASS_TUNNEL_READY_CONNECTOR_DISCOVERY_EXACT_TWO_READONLY_TOOLS",
   "github_cli_token_owner_pc_policy": "OWNER_EXPLICIT_COMMAND_REQUIRED_FOR_ANY_MUTATION",
@@ -98,7 +98,7 @@
   "chatgpt_custom_readonly_connector_live_recovery": "PASS_FOCUS_YOUTUBE_CHAT_QUEN_SO_KHONG_UNTESTED_EXPECTATION",
   "chatgpt_custom_readonly_connector_runtime_evidence": "docs/runtime_evidence/CHATGPT_SECURE_MCP_LIVE_READ_20261002.json",
   "same_authority_github_anchor_published": true,
-  "secure_mcp_tunnel_persistence": "NOT_PROVEN",
+  "secure_mcp_tunnel_persistence": "NOT_PROVEN_POST_REBOOT_REMOTE_UNREACHABLE",
   "secure_mcp_tunnel_runtime_liveness": "TRANSIENT_NOT_CANONICAL",
   "secure_mcp_tunnel_runtime_key_rotation": "NOT_PROVEN",
   "secret_commit_guard": "CI_ENFORCED_BASIC_PATTERN_SCAN",
@@ -111,7 +111,7 @@
   "autonomy_research_runtime": "FAIL_CLOSED_UNTIL_FRESH_SEAT_PASS",
   "secure_mcp_tunnel_supervisor": "IMPLEMENTED_MERGED_CI_PROVEN_ACTIVE_CURRENT_OWNER_PC_SESSION",
   "local_brain_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03",
-  "owner_pc_maintenance_plane_latest": "ONLINE_PING_PASS_2026-10-03T12:42+07",
+  "owner_pc_maintenance_plane_latest": "OFFLINE_REMOTE_2026-10-03T15:35+07_LAST_SEEN_APPROX_41M",
   "owner_pc_tunnel_supervised_launcher": "ACTIVE_CURRENT_SESSION",
   "owner_pc_tunnel_current_session": "LIVE_READONLY_SUPERVISED_SESSION_VALID",
   "owner_pc_tunnel_supervisor_local_smoke_test": "PASS_STARTING_EXITED_ZERO_2026-10-02",
@@ -143,17 +143,15 @@
     "supervisor_child_restart_recovery": "PASS_SESSION_ONLY_CONTROLLED_CHILD_RESTART_2026-10-03"
   },
   "current_runtime_liveness": {
-    "observed_at": "2026-10-03T12:42:15+07:00",
-    "owner_pc": "ONLINE",
-    "maintenance_plane": "ONLINE",
-    "secure_mcp_tunnel": "UP",
-    "local_brain_connector": "UP",
+    "observed_at": "2026-10-03T15:35:00+07:00",
+    "owner_pc": "UNKNOWN_REMOTE_MAINTENANCE_OFFLINE",
+    "maintenance_plane": "OFFLINE",
+    "secure_mcp_tunnel": "UNREACHABLE",
+    "local_brain_connector": "UNREACHABLE",
     "evidence": [
-      "Desktop Commander ping PASS on WIN-VBIQNFFDKIR during current audit",
-      "tunnel-client process present and listening on loopback health port",
-      "GET /readyz returned HTTP 200 ready",
-      "brain.verify returned VALID event_count=3 head=ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
-      "brain.recovery_packet returned VALID focus youtube / chat quen, so khong / UNTESTED_EXPECTATION"
+      "MINH TRI read-only connector returned tunnel-client not seen for 300 seconds.",
+      "Desktop Commander reported no online device; WIN-VBIQNFFDKIR last seen approximately 41 minutes earlier.",
+      "Local Scheduled Task/process/health state could not be inspected, so root cause remains UNKNOWN."
     ]
   },
   "canonical_write_runtime_source": "GITHUB_LIVE_MAIN",
@@ -222,11 +220,11 @@
     "CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE",
     "EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14"
   ],
-  "brain_read_plane_live_check_latest": "PASS_VALID_EVENT_3_HEAD_EF299F726F0B8330_2026-10-03T12:26+07",
+  "brain_read_plane_live_check_latest": "UNREACHABLE_2026-10-03T15:35+07_TUNNEL_CLIENT_NOT_SEEN_300S",
   "architecture_sync_latest": "AUDIT_ALIGNED_THROUGH_PR112_POWERSHELL_PERSISTENCE_CI_AND_SECRET_SAFE_AUTOSTART_DEPLOYMENT_2026-10-03",
   "learning_assurance_empirical_validation": "NOT_STARTED_REAL_WORLD_COMPARATIVE_EVIDENCE_REQUIRED",
   "architecture_sync_merge_sha": "ff7ba73661773f1c0fe0bf29d2c586cf32b0d3d4",
-  "runtime_assurance_latest_evidence": "docs/runtime_evidence/RUNTIME_ASSURANCE_AUTO_20261003T124215_PLUS0700.json",
+  "runtime_assurance_latest_evidence": "docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json",
   "persistence_probe_latest": "NO_MATCHING_BOOT_REGISTRATION_FOUND_BY_BOUNDED_PROBE_2026-10-03T12:42+07_NOT_PERSISTENCE_PROOF",
   "desktop_commander_hardening_evidence": "docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json",
   "fresh_chat_seat_validation_latest_attempt": "docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json",
@@ -243,5 +241,7 @@
   "tunnel_persistence_corrected_script_owner_pc_deployment": "DEPLOYED_AND_READBACK_MATCHED_DURING_2026-10-03_ARCHITECTURE_AUDIT",
   "tunnel_persistence_corrected_script_deployment_evidence": "docs/runtime_evidence/PR112_PERSISTENCE_SCRIPT_REDEPLOY_20261003.json",
   "foundation_gate_runbook": "docs/FOUNDATION_GATE_EXECUTION_RUNBOOK_20261003.md",
-  "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json"
+  "foundation_gate_preflight_latest": "docs/runtime_evidence/FOUNDATION_GATE_PREFLIGHT_20261003T140143_PLUS0700.json",
+  "post_reboot_remote_reachability_latest": "docs/runtime_evidence/POST_REBOOT_REMOTE_REACHABILITY_20261003T153500_PLUS0700.json",
+  "post_reboot_runtime_diagnosis": "BLOCKED_MAINTENANCE_PLANE_OFFLINE_ROOT_CAUSE_UNKNOWN"
 }
