@@ -107,6 +107,9 @@ class CandidateLifecycleTests(unittest.TestCase):
         data = json.loads(self.receipt.read_text(encoding="utf-8"))
         self.assertEqual(data["status"], "FROZEN_PENDING_OWNER")
         self.assertFalse(data["critic_independence_proven"])
+        self.assertEqual(data["critic_assurance_label"], "AI_CONCUR")
+        self.assertEqual(data["critic_proof_value"], 0)
+        self.assertTrue(data["owner_independent_review_required"])
         self.assertFalse(data["automatic_candidate_promotion"])
         self.assertFalse(data["automatic_verified_promotion"])
 
@@ -144,6 +147,9 @@ class CandidateLifecycleTests(unittest.TestCase):
             )
         cmd = run.call_args.args[0]
         self.assertIn("read-only", cmd)
+        self.assertEqual(result["assurance_label"], "AI_CONCUR")
+        self.assertEqual(result["proof_value"], 0)
+        self.assertTrue(result["owner_independent_review_required"])
         self.assertEqual(result["verdict"], CRITIC_NO_MATERIAL_DEFECT)
         self.assertEqual(result["independence_status"], "SAME_PROVIDER_NOT_INDEPENDENT")
 
