@@ -1,0 +1,73 @@
+{
+  "schema": "minhtri-boot-persistence-precheck/v1",
+  "observed_at": "2026-10-03T12:59:00+07:00",
+  "canonical_main_sha": "c140c85dd008bc005486399e603d8f83578370c3",
+  "pre_reboot": {
+    "desktop_commander": {
+      "status": "ONLINE",
+      "allowed_directories": [
+        "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-runtime-current"
+      ],
+      "hardening_status": "PASS_RUNTIME_ONLY_ALLOWLIST"
+    },
+    "tunnel": {
+      "process_present": true,
+      "health_url": "http://127.0.0.1:58711",
+      "readyz_status_code": 200,
+      "readyz_body": "ready"
+    },
+    "brain": {
+      "verify_status": "VALID",
+      "event_count": 3,
+      "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+      "recovery_status": "VALID",
+      "focus_domain": "youtube",
+      "expected_lesson": "chat quen, so khong",
+      "expectation_status": "UNTESTED_EXPECTATION"
+    },
+    "owner_gate_v2": {
+      "status": "OWNER_V2_VERIFY_PASS",
+      "scheme": "pbkdf2-sha256",
+      "iterations": 600000,
+      "revoked": false,
+      "v1_present": false,
+      "v2_present": true
+    },
+    "persistence_registration": {
+      "matching_scheduled_tasks": 0,
+      "matching_startup_entries": 0,
+      "dedicated_matching_services": 0
+    },
+    "local_canonical_clone": {
+      "path": "C:\\Users\\trann\\OneDrive\\Desktop\\minhtri-canonical-main",
+      "worktree_clean": true,
+      "observed_head": "4514276049fbe7ea2cbb0db961183994a6952c4b",
+      "relation_to_live_main": "STALE_RELATIVE_TO_LIVE_MAIN"
+    },
+    "tunnel_credential": {
+      "control_plane_api_key_in_maintenance_process_env": false,
+      "user_env_persisted": false,
+      "machine_env_persisted": false,
+      "dpapi_or_secret_like_files_observed": [
+        "owner.secret.dpapi"
+      ],
+      "dedicated_tunnel_key_dpapi_present": false,
+      "tunnel_client_supports_secret_reference": "--control-plane.api-key accepts env:VARNAME or file:/path/to/secret"
+    }
+  },
+  "decision": "DO_NOT_REBOOT",
+  "persistence_status": "NOT_PROVEN",
+  "blocker": "NO_UNATTENDED_SECRET_SAFE_TUNNEL_CREDENTIAL_OR_BOOT_REGISTRATION",
+  "required_before_reboot": [
+    "Provision a dedicated tunnel runtime key using a user-scoped encrypted secret, without plaintext persistence.",
+    "Install a user-scoped auto-start mechanism that contains no secret in task arguments.",
+    "Bring the local canonical clone current or otherwise ensure the runtime recovery source is current and recoverable.",
+    "Record a fresh pre-reboot snapshot immediately before controlled reboot."
+  ],
+  "nonclaims": [
+    "Current tunnel liveness does not prove persistence.",
+    "Owner credential DPAPI sealing does not imply the tunnel runtime key is sealed.",
+    "No runtime API key value was read or recorded.",
+    "No reboot occurred in this attempt."
+  ]
+}

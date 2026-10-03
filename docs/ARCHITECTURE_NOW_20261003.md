@@ -197,3 +197,31 @@ This evidence proves only the bounded observations captured there. It does not p
 Evidence: `docs/runtime_evidence/DESKTOP_COMMANDER_HARDENING_20261003T125254_PLUS0700.json`.
 
 The maintenance-plane filesystem scope is now restricted to the canonical MINH TRÍ runtime directory only. This closes the Desktop Commander filesystem-scope gate, but does not prove fresh-seat recovery or boot/reboot persistence.
+
+## 14. Fresh-seat / boot-persistence precheck — 2026-10-03 12:59 +07:00
+
+Fresh-seat attempt:
+- current seat exposed exactly `brain.verify` and `brain.recovery_packet`;
+- both returned `VALID`, event_count=3, same ledger head;
+- recovery without a query restored ACTIVE YouTube focus and the current untested expectation;
+- however canonical validator also requires `separate_chat_ui=true` and an independent `control_verify` from a separate control seat;
+- those two conditions are not proven here, so `fresh_chat_seat_validation` remains blocked and `end_to_end_seat_brain_transport=false`.
+
+Boot-persistence precheck:
+- Desktop Commander hardening remains in force with a runtime-only allowlist;
+- tunnel `/readyz=200 ready`, brain verify/recovery are healthy, and Owner credential v2 verifies;
+- no matching Scheduled Task/startup entry/dedicated MINH TRÍ service was found by the bounded current probe;
+- the tunnel launcher still obtains the control-plane API key interactively;
+- no User/Machine environment persistence or dedicated tunnel DPAPI/file credential was observed;
+- tunnel-client supports `--control-plane.api-key env:VARNAME` or `file:/path`, which allows a future secret-safe unattended design;
+- the local canonical clone observed on the Owner PC is clean but stale relative to live GitHub main.
+
+Therefore controlled reboot is intentionally blocked until:
+1. a dedicated encrypted tunnel credential is provisioned without plaintext persistence;
+2. a boot/login auto-start mechanism is installed without secrets in task/service arguments;
+3. the recovery source/clone is current enough for recovery;
+4. a fresh pre-reboot evidence snapshot is captured.
+
+Evidence:
+- `docs/runtime_evidence/FRESH_SEAT_ATTEMPT_20261003T125900_PLUS0700.json`
+- `docs/runtime_evidence/BOOT_PERSISTENCE_PRECHECK_20261003T125900_PLUS0700.json`

@@ -1,0 +1,40 @@
+{
+  "schema": "minhtri-fresh-seat-validation-attempt/v1",
+  "observed_at": "2026-10-03T12:59:00+07:00",
+  "canonical_main_sha": "c140c85dd008bc005486399e603d8f83578370c3",
+  "separate_chat_ui": false,
+  "prompt_seeded_expected_values": false,
+  "toolset": [
+    "brain.recovery_packet",
+    "brain.verify"
+  ],
+  "mutation_tool_exposed": false,
+  "fresh_verify": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927"
+  },
+  "fresh_recovery": {
+    "status": "VALID",
+    "event_count": 3,
+    "head": "ef299f726f0b83300df9c91ae9648ca20d643e992e7f20cfb769673382e45927",
+    "focus": {
+      "domain_id": "youtube",
+      "status": "ACTIVE",
+      "expected_lesson": "chat quen, so khong",
+      "expectation_status": "UNTESTED_EXPECTATION"
+    },
+    "query_supplied": false
+  },
+  "control_verify": null,
+  "result": "BLOCKED",
+  "blockers": [
+    "Canonical validator requires separate_chat_ui=true; this seat cannot prove that condition.",
+    "Canonical validator requires an independent control_verify in the same validation window; none is available from a separate control seat."
+  ],
+  "nonclaims": [
+    "The exact two-tool read-only boundary and fresh read outputs are valid observations, but are insufficient for canonical fresh-seat PASS.",
+    "end_to_end_seat_brain_transport remains false.",
+    "Research Adapter remains fail-closed."
+  ]
+}

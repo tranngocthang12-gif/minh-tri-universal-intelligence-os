@@ -196,5 +196,27 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertFalse(state["autonomy_automatic_trial_activation"])
 
 
+    def test_fresh_seat_attempt_remains_fail_closed_without_control_seat(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(
+            state["fresh_chat_seat_validation"],
+            "BLOCKED_NEEDS_SEPARATE_CHAT_UI_AND_INDEPENDENT_CONTROL_VERIFY",
+        )
+        self.assertFalse(state["end_to_end_seat_brain_transport"])
+        self.assertEqual(state["research_adapter_gate"], "BLOCKED_UNTIL_FRESH_SEAT_PASS")
+        self.assertTrue((ROOT / state["fresh_chat_seat_validation_latest_attempt"]).is_file())
+
+    def test_boot_persistence_precheck_blocks_reboot_without_unattended_secret(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        self.assertEqual(state["secure_mcp_tunnel_persistence"], "NOT_PROVEN")
+        self.assertEqual(
+            state["tunnel_runtime_key_persistence"],
+            "NOT_PROVISIONED_DEDICATED_ENCRYPTED_UNATTENDED_SECRET",
+        )
+        self.assertEqual(state["tunnel_boot_registration"], "ABSENT_BOUNDED_PROBE")
+        self.assertIn("DO_NOT_REBOOT", state["boot_persistence_precheck_decision"])
+        self.assertTrue((ROOT / state["boot_persistence_latest_precheck"]).is_file())
+
+
 if __name__ == "__main__":
     unittest.main()
