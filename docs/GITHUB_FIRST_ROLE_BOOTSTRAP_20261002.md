@@ -1,6 +1,6 @@
 # GITHUB FIRST + ROLE BOOTSTRAP — Owner Decision — 2026-10-02
 
-**Status:** OWNER DECISION RECORDED / IMPLEMENTATION UNTESTED / NOT VERIFIED  
+**Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE + CURRENT ARCHITECTURE  
 **Base main when recorded:** `620875e68c97ccc1734aff8a8ab34af0bbe82750`  
 **Scope:** MINH TRÍ project governance, architecture continuity, learning, critique, synchronization and handoff.
 
@@ -99,25 +99,15 @@ Do not build unrestricted bidirectional auto-write between chat, repo, library a
 - No automatic promotion to VERIFIED.
 - Provider-seat separation rules exist for proposer / predictor / critic / adjudicator.
 
-### Not yet implemented as autonomous runtime
-- automatic topic discovery;
-- autonomous Internet research;
-- automatic critic invocation after every material claim;
-- automatic meta-learning from historical error;
-- automatic procedure replacement;
-- automatic durable write from chat to local brain;
-- background learning loop;
-- full seat-to-seat state recovery without bootstrap/current-state read.
+### Current runtime boundary
 
-Therefore the correct status is:
+The original 2026-10-02 implementation snapshot below is historical. Current capability must be read from `PROJECT_STATE.json` and `ARCHITECTURE_NOW_20261003.md`.
 
-```text
-LEARNING CORE: PRESENT
-CRITIQUE CORE: PRESENT
-AUTONOMOUS LEARNING RUNTIME: NOT PRESENT
-AUTOMATIC SELF-CRITIQUE RUNTIME: NOT PRESENT
-META-LEARNING RUNTIME: NOT PRESENT
-```
+Current high-level rule:
+- learning, critique, meta-learning and Learning Assurance engines are implemented as bounded/proposal-only mechanisms;
+- background autonomous runtime remains OFF;
+- Research Adapter remains fail-closed until genuine fresh-seat validation;
+- no automatic durable mutation, automatic VERIFIED or automatic trial activation.
 
 ## 5. EXTERNAL KNOWLEDGE / SERVER CAPABILITY — RESEARCH DIRECTION
 
@@ -180,9 +170,14 @@ Every seat must recover role before doing material work.
    - If authority cannot be resolved, say UNKNOWN; do not invent.
 
 5. **Learning discipline**
-   - SOURCE → EVIDENCE → CLAIM/HYPOTHESIS → CRITIC.
-   - If measurable: PREDICTION → RESULT.
-   - Produce LESSON CANDIDATE, not automatic VERIFIED knowledge.
+   - OWNER GOAL → SOURCE / EXTERNAL CASE CAPITAL → PROVENANCE / RESEARCH TRACE → EVIDENCE.
+   - CLAIM/HYPOTHESIS must retain alternative + falsifier + counterevidence when material.
+   - Use adaptive deliberation metadata for risk/conflict/tool-dependent work; do not store private chain-of-thought.
+   - For important critique: freeze target/evidence packet, record critic provenance, and use negative controls when useful.
+   - If measurable: PREDICTION → OUTCOME / RESOLUTION.
+   - Produce LESSON CANDIDATE → OWNER/GOVERNANCE GATE → bounded TRIAL RULE.
+   - Revalidation and meta-learning remain proposal-only; context capsules are context only, never canonical truth.
+   - Never automatic VERIFIED.
 
 6. **Mandatory self-critique before important output**
    - What is the source?
@@ -261,20 +256,20 @@ No claim in this document is automatically VERIFIED merely because it is in GitH
 
 Owner ordered an immediate architecture/law synchronization.
 
-The durable bootstrap route is now:
+The durable bootstrap route is resolved dynamically from `PROJECT_STATE.json`. As of 2026-10-03:
 
 ```text
 PROJECT_STATE.json
-→ LAW_INDEX_20261002.md
-→ ARCHITECTURE_NOW_20261002.md
+→ LAW_INDEX_20261003.md
+→ ARCHITECTURE_NOW_20261003.md
 → GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md
 → task/domain source
 ```
 
 Rules:
-- `LAW_INDEX_20261002.md` routes stable law and labels historical aids.
-- `ARCHITECTURE_NOW_20261002.md` is the current architecture record.
+- `PROJECT_STATE.json` points to the current Law Index and architecture; never infer "current" from the date embedded in this bootstrap file.
+- historical Law Index / architecture files remain provenance only once superseded.
 - `PROJECT_STATE.json` is the machine-readable pointer to current authority.
 - Old files remain for provenance and are not deleted.
 - A seat must fresh-read live authority rather than trust a SHA copied into an old chat.
-- Synchronization here means GitHub records are aligned. It does **not** claim local `brain/` synchronization, because that bridge is not connected.
+- Synchronization means authority records agree. Current local-brain reachability must be proved by fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
