@@ -39,7 +39,7 @@ class GenerationTests(unittest.TestCase):
             )
         self.guard = LeaseRuntimeGuard(lease, monotonic_started=100.0)
 
-    def manifest(self, paths=("src/minhtri/autonomy.py",), branch="candidate/GEN-0002"):
+    def manifest(self, paths=("src/minhtri/__init__.py",), branch="candidate/GEN-0002"):
         return create_generation_manifest(
             self.guard,
             generation_id="GEN-0002",
@@ -119,7 +119,7 @@ class GenerationTests(unittest.TestCase):
                 hypothesis="x",
                 expected_improvement="x",
                 known_risks=["x"],
-                files_changed=["src/minhtri/autonomy.py"],
+                files_changed=["src/minhtri/__init__.py"],
                 test_plan="x",
                 benchmark_plan="x",
                 now=NOW + timedelta(seconds=300),
