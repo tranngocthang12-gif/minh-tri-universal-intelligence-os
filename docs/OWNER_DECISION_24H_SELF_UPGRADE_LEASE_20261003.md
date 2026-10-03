@@ -1,6 +1,6 @@
 # OWNER DECISION — 24H SELF-UPGRADE LEASE — 2026-10-03
 
-**Status:** IMPLEMENTATION DECISION / RUNTIME NOT ACTIVATED  
+**Status:** STABLE OWNER LEASE LAW / HISTORICAL INITIAL STATUS BELOW / CURRENT RUNTIME FROM PROJECT_STATE  
 **Owner intent:** permit bounded self-learning and candidate self-upgrade for at most 24 hours, then automatically remove upgrade authority and freeze candidates for Owner review.
 
 ## Control flow
@@ -33,7 +33,7 @@ OWNER
 - Existing GitHub PR + required CI + branch protection remain the merge authority.
 - On expiry, learning/evidence/candidate history may remain, but autonomous self-upgrade write authority ends.
 - A frozen candidate remains `FROZEN_PENDING_OWNER` until Owner promotes, rejects, or authorizes a new lease for revision.
-- The initial implementation does not activate a real 24-hour lease.
+- Historical initial implementation did not itself activate a real 24-hour lease; later Owner-authorized runtime records supersede that initial status.
 
 ## Candidate evaluation rule
 
@@ -74,3 +74,8 @@ Authorization semantics:
 - existing GitHub PR + required CI + branch protection remain merge authority.
 
 Runtime status at the moment of this record: AUTHORIZED_PENDING_LIVE_OWNER_PC_START. This document must not be interpreted as proof that the lease process is already running; live activation requires Owner-PC runtime evidence.
+
+
+## Current-state interpretation — 2026-10-04
+
+This file is the stable Owner decision and lease law, not the authority for changing runtime liveness. Later canonical runtime evidence proved activation of an authenticated-worker-handoff 24H lease. At the 2026-10-04 full synchronization observation, its authorization expiry is still in the future, but the live parent process is not currently observable because the maintenance/read planes are down. Therefore current runtime state must be read from `PROJECT_STATE.json` and treated fail-closed when not freshly proven.
