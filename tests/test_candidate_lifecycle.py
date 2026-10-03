@@ -129,6 +129,7 @@ class CandidateLifecycleTests(unittest.TestCase):
         self.assertEqual(env["PYTHONPATH"].split(os.pathsep)[0], str((self.work / "src").resolve()))
         self.assertEqual(result["status"], "PASS")
         self.assertTrue(result["network_disabled"])
+        self.assertIn("ok", result["external_critic_log"])
 
     def test_codex_critic_is_read_only_and_not_independent(self):
         critic = CodexReadOnlyCritic(self.work)
