@@ -25,6 +25,7 @@ RESEARCH_GATE_OPEN = "OPEN_AFTER_FRESH_SEAT_PASS"
 RESEARCH_GATE_BLOCKED = "BLOCKED_UNTIL_FRESH_SEAT_PASS"
 CANONICAL_PROJECT_STATE = Path(__file__).resolve().parents[2] / "docs" / "PROJECT_STATE.json"
 DEFAULT_INTERVAL_SECONDS = 300.0
+MIN_META_CANDIDATE_RESOLUTIONS = 50
 
 
 class AutonomyError(ValueError):
@@ -216,7 +217,11 @@ def automatic_critique_plan(
     }
 
 
-def meta_learning_report(state: dict[str, Any], minimum_resolutions: int = 2) -> dict[str, Any]:
+def meta_learning_report(
+    state: dict[str, Any],
+    minimum_resolutions: int = MIN_META_CANDIDATE_RESOLUTIONS,
+) -> dict[str, Any]:
+    effective_minimum = max(MIN_META_CANDIDATE_RESOLUTIONS, int(minimum_resolutions))
     resolutions = list(state.get("resolutions", {}).values())
     numeric = [
         r for r in resolutions
@@ -227,6 +232,9 @@ def meta_learning_report(state: dict[str, Any], minimum_resolutions: int = 2) ->
         return {
             "status": "INSUFFICIENT_HISTORY",
             "resolution_count": 0,
+            "minimum_candidate_resolutions": effective_minimum,
+            "multiplicity_control": "NOT_IMPLEMENTED",
+            "permutation_test": "REQUIRED_BEFORE_ADAPTATION",
             "lesson_candidates": [],
         }
 
@@ -234,14 +242,18 @@ def meta_learning_report(state: dict[str, Any], minimum_resolutions: int = 2) ->
     hits = sum(1 for r in numeric if r["interval_hit"])
     mean_error = sum(float(r["absolute_midpoint_error"]) for r in numeric) / count
     report: dict[str, Any] = {
-        "status": "ANALYZED" if count >= minimum_resolutions else "INSUFFICIENT_HISTORY",
+        "status": "ANALYZED" if count >= effective_minimum else "INSUFFICIENT_HISTORY",
         "resolution_count": count,
+        "minimum_candidate_resolutions": effective_minimum,
+        "multiplicity_control": "NOT_IMPLEMENTED",
+        "permutation_test": "REQUIRED_BEFORE_ADAPTATION",
+        "statistical_adaptation_proven": False,
         "interval_hits": hits,
         "interval_hit_rate": hits / count,
         "mean_absolute_midpoint_error": mean_error,
         "lesson_candidates": [],
     }
-    if count < minimum_resolutions:
+    if count < effective_minimum:
         return report
 
     miss_rate = 1.0 - report["interval_hit_rate"]
@@ -326,9 +338,10 @@ def learning_assurance_report(state: dict[str, Any]) -> dict[str, Any]:
 
 def stratified_meta_learning_report(
     state: dict[str, Any],
-    minimum_group_resolutions: int = 2,
+    minimum_group_resolutions: int = MIN_META_CANDIDATE_RESOLUTIONS,
 ) -> dict[str, Any]:
     """Analyze historical calibration by bounded strata without causal claims."""
+    effective_minimum = max(MIN_META_CANDIDATE_RESOLUTIONS, int(minimum_group_resolutions))
     resolutions = list(state.get("resolutions", {}).values())
     predictions = state.get("predictions", {})
     procedures = state.get("procedures", {})
@@ -348,7 +361,7 @@ def stratified_meta_learning_report(
         mean_error = sum(float(row["absolute_midpoint_error"]) for row in numeric) / count
         return {
             "count": count,
-            "status": "ANALYZED" if count >= minimum_group_resolutions else "INSUFFICIENT_HISTORY",
+            "status": "ANALYZED" if count >= effective_minimum else "INSUFFICIENT_HISTORY",
             "interval_hits": hits,
             "interval_hit_rate": hits / count,
             "mean_absolute_midpoint_error": mean_error,
@@ -415,6 +428,10 @@ def stratified_meta_learning_report(
         "failure_counts": dict(sorted(failure_counts.items())),
         "failure_by_domain": {k: dict(sorted(v.items())) for k, v in sorted(failure_by_domain.items())},
         "lesson_candidates": candidates,
+        "minimum_candidate_resolutions_per_stratum": effective_minimum,
+        "multiplicity_control": "NOT_IMPLEMENTED",
+        "permutation_test": "REQUIRED_BEFORE_ADAPTATION",
+        "statistical_adaptation_proven": False,
         "automatic_rule_change": False,
         "cross_domain_transfer_established": False,
     }
