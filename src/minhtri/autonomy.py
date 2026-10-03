@@ -403,6 +403,36 @@ def stratified_meta_learning_report(
     }
 
 
+def assurance_integrity_report(state: dict[str, Any]) -> dict[str, Any]:
+    receipts = list(state.get("critic_independence_receipts", {}).values())
+    assessments = list(state.get("eval_integrity_assessments", {}).values())
+
+    receipt_status: dict[str, int] = {}
+    for item in receipts:
+        status = str(item.get("status", "UNKNOWN"))
+        receipt_status[status] = receipt_status.get(status, 0) + 1
+
+    eval_status: dict[str, int] = {}
+    for item in assessments:
+        status = str(item.get("status", "UNKNOWN"))
+        eval_status[status] = eval_status.get(status, 0) + 1
+
+    return {
+        "critic_independence_receipts": {
+            "count": len(receipts),
+            "by_status": dict(sorted(receipt_status.items())),
+            "full_independence_proven": False,
+        },
+        "eval_integrity_assessments": {
+            "count": len(assessments),
+            "by_status": dict(sorted(eval_status.items())),
+            "automatic_contamination_detection_proven": False,
+            "automatic_reward_hacking_detection_proven": False,
+        },
+        "write_capability": False,
+    }
+
+
 def autonomous_learning_plan(
     state: dict[str, Any],
     *,
@@ -496,6 +526,7 @@ def build_autonomy_packet(
         "meta_learning": meta_learning_report(state),
         "learning_assurance": learning_assurance_report(state),
         "stratified_meta_learning": stratified_meta_learning_report(state),
+        "assurance_integrity": assurance_integrity_report(state),
         "learning_plan": autonomous_learning_plan(state),
         "research": research,
     }
