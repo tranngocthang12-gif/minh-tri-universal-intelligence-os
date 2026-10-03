@@ -16,6 +16,7 @@ from minhtri.autonomy import (
     learning_assurance_report,
     stratified_meta_learning_report,
     assurance_integrity_report,
+    reasoning_context_report,
     structural_critique,
 )
 from minhtri.core import initial_state
@@ -199,6 +200,27 @@ class AutonomyTests(unittest.TestCase):
             packet["assurance_integrity"]["eval_integrity_assessments"]["count"], 1
         )
         self.assertFalse(packet["assurance_integrity"]["write_capability"])
+        self.assertFalse(packet["write_capability"])
+
+    def test_reasoning_context_report_is_read_only_and_noncanonical(self):
+        state = base_state()
+        state["deliberation_plans"] = {"d1": {"effective_effort": "HIGH"}}
+        state["research_traces"] = {"r1": {"source_role": "PRIMARY"}}
+        state["context_capsules"] = {"c1": {"status": "CONTEXT_ONLY_NOT_CANONICAL_TRUTH"}}
+        report = reasoning_context_report(state)
+        self.assertEqual(report["deliberation_plans"]["by_effective_effort"]["HIGH"], 1)
+        self.assertEqual(report["research_traces"]["by_source_role"]["PRIMARY"], 1)
+        self.assertFalse(report["context_capsules"]["canonical_truth"])
+        self.assertFalse(report["stores_chain_of_thought"])
+        self.assertFalse(report["automatic_truth_promotion"])
+        self.assertFalse(report["write_capability"])
+
+    def test_autonomy_packet_exposes_reasoning_context_without_write_power(self):
+        state = base_state()
+        state["context_capsules"] = {"c1": {"status": "CONTEXT_ONLY_NOT_CANONICAL_TRUTH"}}
+        packet = build_autonomy_packet(state, critic_provider_id="critic")
+        self.assertEqual(packet["reasoning_context"]["context_capsules"]["count"], 1)
+        self.assertFalse(packet["reasoning_context"]["write_capability"])
         self.assertFalse(packet["write_capability"])
 
     def test_research_is_fail_closed_before_gate(self):

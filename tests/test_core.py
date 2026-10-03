@@ -356,6 +356,43 @@ class CoreGates(unittest.TestCase):
             "CLEAN_NO_SIGNAL_NOT_PROOF",
         )
 
+    def test_deliberation_plan_escalates_on_conflict_without_storing_cot(self):
+        self.base()
+        self.apply("record_deliberation_plan", id="dp1", domain_id="media",
+                   artifact_type="CLAIM", artifact_id="h1",
+                   risk_level="LOW", evidence_conflict=True, tool_dependency=False,
+                   requested_effort="LOW", rationale="Conflicting evidence requires deeper review")
+        plan = self.state["deliberation_plans"]["dp1"]
+        self.assertEqual(plan["effective_effort"], "HIGH")
+        self.assertFalse(plan["stores_chain_of_thought"])
+
+    def test_research_trace_keeps_social_signal_noncanonical(self):
+        self.base()
+        self.apply("record_source", id="social1", domain_id="media",
+                   uri="https://example.test/post", captured_at=self.at,
+                   kind="PUBLIC", rights_status="CLEAR")
+        self.apply("record_research_trace", id="rt1", domain_id="media",
+                   query="trend evidence", source_id="social1", source_role="SOCIAL_SIGNAL",
+                   claim_id="h1", citation_locator="post-1", conflict_status="SUPPORTS",
+                   note="Useful signal only")
+        self.assertEqual(
+            self.state["research_traces"]["rt1"]["truth_weight"],
+            "NON_CANONICAL_SIGNAL",
+        )
+
+    def test_context_capsule_is_context_only_and_digest_bound(self):
+        self.base()
+        self.apply("record_context_capsule", id="ctx1", domain_id="media",
+                   artifact_refs=[{"artifact_type": "CLAIM", "artifact_id": "h1"}],
+                   summary="Bounded summary for future work",
+                   refresh_after="2026-02-01T00:00:00Z",
+                   context_purpose="Reduce long-context noise")
+        capsule = self.state["context_capsules"]["ctx1"]
+        self.assertEqual(capsule["status"], "CONTEXT_ONLY_NOT_CANONICAL_TRUTH")
+        self.assertFalse(capsule["automatic_truth_promotion"])
+        self.assertEqual(len(capsule["capsule_digest"]), 64)
+        self.assertEqual(len(capsule["artifact_refs"][0]["artifact_digest"]), 64)
+
     def test_hash_chain_and_cache_detect_partial_mutation(self):
         with tempfile.TemporaryDirectory() as tmp:
             ledger = Ledger(Path(tmp) / "brain")
