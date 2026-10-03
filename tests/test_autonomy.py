@@ -244,17 +244,39 @@ class AutonomyTests(unittest.TestCase):
     def test_research_gate_derives_only_from_canonical_proofs(self):
         blocked = {
             "fresh_chat_seat_validation": "PENDING_SEPARATE_CHAT_UI",
+            "fresh_chat_seat_validation_expires_at_utc": "2026-10-04T03:00:00Z",
             "end_to_end_seat_brain_transport": False,
             "research_adapter_gate": RESEARCH_GATE_OPEN,
+            "current_runtime_liveness": {
+                "secure_mcp_tunnel": "UP",
+                "local_brain_connector": "UP",
+            },
         }
-        self.assertEqual(_derive_research_gate(blocked), RESEARCH_GATE_BLOCKED)
+        now = datetime(2026, 10, 4, 2, 0, tzinfo=timezone.utc)
+        self.assertEqual(_derive_research_gate(blocked, now=now), RESEARCH_GATE_BLOCKED)
 
         opened = {
             "fresh_chat_seat_validation": "PASS",
+            "fresh_chat_seat_validation_expires_at_utc": "2026-10-04T03:00:00Z",
             "end_to_end_seat_brain_transport": True,
             "research_adapter_gate": RESEARCH_GATE_OPEN,
+            "current_runtime_liveness": {
+                "secure_mcp_tunnel": "UP",
+                "local_brain_connector": "UP",
+            },
         }
-        self.assertEqual(_derive_research_gate(opened), RESEARCH_GATE_OPEN)
+        self.assertEqual(_derive_research_gate(opened, now=now), RESEARCH_GATE_OPEN)
+
+        stale = dict(opened)
+        stale["fresh_chat_seat_validation_expires_at_utc"] = "2026-10-04T01:59:59Z"
+        self.assertEqual(_derive_research_gate(stale, now=now), RESEARCH_GATE_BLOCKED)
+
+        down = dict(opened)
+        down["current_runtime_liveness"] = {
+            "secure_mcp_tunnel": "DOWN",
+            "local_brain_connector": "DOWN",
+        }
+        self.assertEqual(_derive_research_gate(down, now=now), RESEARCH_GATE_BLOCKED)
 
     def test_cli_cannot_override_research_gate(self):
         from minhtri.autonomy import main
