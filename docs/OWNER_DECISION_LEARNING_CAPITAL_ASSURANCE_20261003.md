@@ -173,3 +173,43 @@ Revalidation outcomes are:
 All revalidation records are `PROPOSAL_ONLY` and set `automatic_lesson_mutation=false`.
 
 A scheduled review cannot be recorded before its `review_after` time. A `STALE_SIGNAL` or `OWNER_REQUEST` may trigger earlier review, but still cannot mutate the lesson automatically.
+
+## 12. Learning Assurance v1.2 candidate
+
+### Failure taxonomy
+
+MINH TRÍ may record bounded learning failures against a concrete artifact. Initial machine classes:
+
+- `SOURCE_ERROR`
+- `SCOPE_OVERREACH`
+- `UNSUPPORTED_INFERENCE`
+- `CONFIRMATION_BIAS`
+- `COUNTEREVIDENCE_IGNORED`
+- `STALE_KNOWLEDGE`
+- `CRITIC_CONTAMINATION`
+- `EVAL_CONTAMINATION`
+- `REWARD_HACKING`
+- `TOOL_ERROR`
+- `HALLUCINATED_SOURCE`
+- `OVERCONFIDENCE`
+- `DOMAIN_TRANSFER_FAILURE`
+
+A recorded failure is metadata/evidence for diagnosis. It does not automatically rewrite or repair the underlying artifact.
+
+### Stratified meta-learning
+
+Meta-learning should compare bounded historical strata instead of one global average:
+
+- domain;
+- procedure/method;
+- outcome source kind;
+- failure class;
+- failure class within domain.
+
+Minimum history still applies. Group summaries are descriptive calibration evidence only.
+
+No group statistic proves causality or transfer to another domain. Meta-learning may produce `META_LESSON_CANDIDATE` records only and cannot change rules automatically.
+
+### Contamination and reward hacking boundary
+
+v1.2 can **record** `EVAL_CONTAMINATION`, `CRITIC_CONTAMINATION`, and `REWARD_HACKING` when evidence identifies them. It does not claim automatic detection is solved. Automatic detection remains a separate eval-hardening gate.
