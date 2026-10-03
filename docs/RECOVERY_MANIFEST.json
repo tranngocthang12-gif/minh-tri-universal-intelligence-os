@@ -90,10 +90,15 @@
   },
   "current_runtime_liveness": {
     "observed_at": "2026-10-04_AUTO_AUDIT_EXACT_TIME_NOT_CAPTURED",
-    "maintenance_plane": "UNKNOWN_DEGRADED_TIMEOUT",
-    "secure_mcp_tunnel": "UNKNOWN_DEGRADED_NO_POLL",
-    "local_brain_connector": "UNKNOWN_DEGRADED_NO_POLL",
-    "root_cause": "NOT_YET_REESTABLISHED; FRESH_READ_PLANE_AND_MAINTENANCE_PROOF_REQUIRED"
+    "maintenance_plane": "UNKNOWN",
+    "secure_mcp_tunnel": "UNKNOWN",
+    "local_brain_connector": "UNKNOWN",
+    "root_cause": "NOT_YET_REESTABLISHED; FRESH_READ_PLANE_AND_MAINTENANCE_PROOF_REQUIRED",
+    "detail": {
+      "maintenance_plane": "DEGRADED_TIMEOUT",
+      "secure_mcp_tunnel": "NO_POLL",
+      "local_brain_connector": "NO_POLL"
+    }
   },
   "open_foundation_gates": [
     "VERIFY_OLD_TUNNEL_KEY_REVOCATION",
