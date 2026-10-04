@@ -4,19 +4,19 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A16: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A16_RESIDUAL_I_AM_CONCEIT_20261004.md`.
-- A16 source boundary locked: `sakkāya-diṭṭhi` and `asmimāna` are distinct analytical layers. SN 22.89 allows residual "I am" conceit/desire/tendency after explicit aggregate-as-self views are abandoned.
-- A16 audit progress: bounded Aṭṭhakavagga lexical slices now include `maññati` in Snp 4.6 and `papañca`/`papañcasaṅkhā` in Snp 4.11. The exact semantic range of `papañca` remains interpretively contested and wider coverage remains open.
-- Guardrail: ordinary first-person language is not by itself proof of conceit; conceptual anattā understanding is not identical with complete uprooting of selfing.
+- Phase 4 A5-A17: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A17_MANNATI_I_MINE_20261004.md`.
+- A17 source boundary locked: MN 1 distinguishes direct knowing from `maññati`/conceiving-as-mine; do not reduce `maññati` to all conceptual thought.
+- A17 bounded audit adds SN 35.30 and SN 35.191 for the current question. Sensory objects are not themselves the fetter; desire-passion/appropriation arising dependent on sensory conditions is central.
+- Lexical guardrail locked: `maññati`, `asmimāna`, and `papañca` are related analytical fields but are not treated as synonyms.
 
 Next:
-- **Phase 4 A17:** How does `maññati` / conceiving turn experience into "I, mine, myself"?
-- Route: MN 1 Mūlapariyāya → SN 35 conceiving/non-conceiving passages → Snp 4.6 → Snp 4.11 → SN 22.89 → Milindapañha chariot/person dialectic.
+- **Phase 4 A18:** How does `papañca` turn contact and perception into proliferating classifications, conflict, and self-positioning?
+- Route: MN 18 Madhupiṇḍika → Snp 4.11 Kalahavivāda → Snp 4.12 Cūḷaviyūha → SN 35.30/35.191 → Milindapañha dialectical stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
-- remaining SN 22, SN 35, SN 45, SN 46 ID-level mapping;
+- remaining SN 22, SN 35, SN 45, SN 46 ID-level mapping beyond bounded audited passages;
 - wider Aṭṭhakavagga lexical coverage for `diṭṭhi`, `sacca`, `saññā`, `maññati`, `papañca`, `nissaya`;
 - Arthapada and relevant MĀ/SĀ parallels.
 
