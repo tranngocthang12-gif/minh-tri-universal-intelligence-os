@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A50 COMPLETED  
-**Next checkpoint:** PHASE 4 — A51  
+**Current checkpoint:** PHASE 4 — A51 COMPLETED  
+**Next checkpoint:** PHASE 4 — A52  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -2247,6 +2247,197 @@ Required lanes:
 - early-discourse rebirth context versus present-process application;
 - mandatory Milindapañha consultation;
 - preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
+
+
+## Completed checkpoint A51
+
+**Central question:** What exactly is `jāti` (“birth”) in dependent origination, and how should we distinguish the early text’s birth/rebirth language from present-moment psychological applications without collapsing one into the other?
+
+### TEXT_ATTESTED — 1. SN 12.2 GIVES A TECHNICAL DEFINITION OF `JĀTI`
+
+**SN 12.2 Vibhaṅga** defines `jāti` as the birth/taking-birth/descent/coming-to-be of various beings in various classes of beings, including:
+- the manifestation of the aggregates;
+- the acquisition of the sense bases.
+
+This is stronger and more concrete than a merely metaphorical “birth of an idea.”
+
+In the technical dependent-origination definition, `jāti` concerns the coming-to-be of a being with aggregates and sense bases.
+
+### TEXT_ATTESTED — 2. `BHAVA → JĀTI → JARĀMARAṆA`
+
+The sequence is explicit:
+`becoming → birth → aging-and-death`.
+
+SN 12.2 separately defines:
+- `bhava` as sensual, form, and formless becoming;
+- `jāti` as birth/manifestation of aggregates/acquisition of sense bases;
+- `jarāmaraṇa` as aging and death of beings.
+
+Therefore the three links must not be collapsed.
+
+A51 preserves A50’s distinction:
+`bhava` is not simply birth, and `jāti` is not simply another word for becoming.
+
+### TEXT_ATTESTED — 3. MN 38 CONFIRMS A CONCRETE BIRTH CONTEXT
+
+**MN 38 Mahātaṇhāsaṅkhaya** explicitly describes:
+- conditions for conception;
+- development of an embryo in the womb;
+- physical birth;
+- nourishment of the infant;
+- maturation of the sense faculties;
+- subsequent sensory engagement, feeling, craving, clinging, becoming, and birth.
+
+This passage matters because it prevents the technical `jāti` link from being reduced to a purely momentary psychological metaphor.
+
+The discourse places the dependent-origination analysis alongside an unmistakably embodied conception-and-birth context.
+
+### TEXT_ATTESTED — 4. `JĀTI` CAN HAVE BROADER ORDINARY/LEXICAL USES OUTSIDE THE TECHNICAL LINK
+
+**SN 22.81** asks of a self-assumption/fabrication:
+“What is the cause, origin, birth, and coming-into-existence of that fabrication?”
+
+It answers that, for an uninstructed person affected by feeling born of contact with ignorance, craving arises, and that fabrication is born from it.
+
+This shows that the word/concept “birth” can be used for the arising of a mental fabrication.
+
+But this does **not** prove that the technical `jāti` link in SN 12.2 is defined as “the birth of an identity.”
+
+That inference would cross contexts.
+
+### CENTRAL DISTINCTION — TECHNICAL DEFINITION VS ANALOGICAL APPLICATION
+
+A51 therefore separates two valid but different statements:
+
+**TEXT_ATTESTED technical dependent-origination meaning**
+- birth of beings into classes/orders of beings;
+- manifestation of aggregates;
+- acquisition of sense bases;
+- followed by aging and death.
+
+**TEXT_ATTESTED broader causal language**
+- a self-assumption or other fabrication can itself be said to be “born” from conditions, as in SN 22.81.
+
+From the second, a practical analogy can be formed:
+“an identity-story is born.”
+
+But the practical analogy must not silently replace the first technical definition.
+
+### CROSS_TEXT SYNTHESIS — “BIRTH OF IDENTITY” AS A PRACTICE LENS
+
+A bounded present-life application is:
+
+`contact → feeling → craving → appropriation/clinging → a self-story is fabricated and treated as “me”`.
+
+One may call the appearance of that self-story an “identity birth” in explanatory language.
+
+However:
+- this is **not** the SN 12.2 definition of `jāti`;
+- it is a **CROSS_TEXT / PRACTICAL SYNTHESIS** drawing especially on SN 22.81, the aggregates/self material, and the craving-clinging analysis.
+
+This distinction is mandatory for the learning track.
+
+### WHY THIS MATTERS FOR UNDERSTANDING THE BUDDHA'S THOUGHT
+
+The Buddha can use one causal method at more than one scale without making all scales identical.
+
+At the technical dependent-origination level:
+- becoming conditions birth;
+- birth conditions aging and death.
+
+At the level of mental fabrication:
+- craving can condition the arising/birth of self-assumptions.
+
+The thought-method is therefore:
+**trace what arises from conditions at the scale the discourse is actually discussing.**
+
+Do not force every causal pattern into a single modern theory.
+
+### REBIRTH WITHOUT A PERMANENT TRANSMIGRATING SELF
+
+The early-text material places birth in a causal sequence, but it does not require a permanent self-substance to be inserted between `bhava` and `jāti`.
+
+A51 therefore preserves two claims simultaneously:
+1. the birth/rebirth dimension of the early dependent-origination material must not be erased;
+2. acknowledging repeated birth does not require positing an invariant self that transmigrates unchanged.
+
+The second point is especially clarified by the mandatory Milindapañha layer below.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- passages/themes used:
+  1. **“What is reborn?”** — Nāgasena answers that name-and-form is reborn, while denying that the numerically identical same name-and-form simply passes into the next existence;
+  2. **rebirth without transmigration** — one lamp lighting another and a learned verse passing from teacher to student illustrate causal continuation without an entity literally transferring;
+  3. **neither the same nor another** — continuity is preserved without strict numerical identity;
+  4. **cessation of causes of rebirth** — the farmer/granary analogy clarifies knowing that further birth will not occur when its producing causes have ceased.
+- role in A51: Mi Tiên makes the early causal birth-language easier to understand without smuggling in a permanent soul/self;
+- interpretation change: **MODERATE** — strengthened the distinction between **real causal continuity across birth** and **transmigration of an invariant bearer**;
+- early-discourse confirmation: **PARTIAL/FUNCTIONAL** through SN 12.2, MN 38, dependent-origination cessation, and the already-audited not-self material;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Mi Tiên does not define the early technical term `jāti`.
+
+The primary/root source remains the early discourses.
+
+Where Mi Tiên supplies a more developed explanation of rebirth continuity, it stays labelled later/paracanonical and must not be retroactively presented as an exact early-discourse formula.
+
+### IMPORTANT CORRECTION TO TWO EXTREMES
+
+A51 rejects both:
+
+**psychological-only reduction**
+- “jāti in dependent origination only means a self-image being born in the present moment”;
+
+and
+
+**self-transmigration reading**
+- “because birth/rebirth is textually present, an unchanged self must travel from life to life.”
+
+The current evidence supports neither reduction.
+
+The more disciplined reading is:
+- technical `jāti` in SN 12.2 is concrete birth/rebirth language;
+- causal/mental “birth” language also exists elsewhere;
+- continuity does not by itself prove invariant identity.
+
+### PRACTICAL DIAGNOSTIC
+
+When using dependent origination in present experience, ask:
+- Am I discussing the technical `jāti` link, or using “birth” metaphorically for a mental construction?
+- If I say “an identity was born,” what text actually supports that formulation?
+- Is craving producing a self-fabrication here, as in SN 22.81?
+- Have I accidentally replaced the early birth/rebirth definition with a modern psychological model?
+- Have I accidentally inferred a permanent transmigrating self merely because causal continuity is present?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga — technical definition of `jāti`, and `bhava → jāti → jarāmaraṇa`.
+- MN 38 Mahātaṇhāsaṅkhaya — conception, womb development, physical birth, maturation, and dependent-origination sequence.
+- SN 22.81 Parileyyaka — “birth” of self-assumption/fabrication from craving and ignorance-conditioned contact.
+
+Mandatory Milindapañha layer:
+- what is reborn: name-and-form, not an identical invariant entity;
+- rebirth without transmigration;
+- neither-same-nor-another continuity;
+- cessation of rebirth-producing causes.
+
+### Next checkpoint — PHASE 4 A52
+
+Central question:
+
+**What exactly is `jarāmaraṇa` (“aging-and-death”) in dependent origination, and why does the Buddha treat birth itself—not merely unpleasant events after birth—as the condition that makes aging, death, sorrow, lamentation, pain, grief, and despair possible?**
+
+Required lanes:
+- SN 12.2 definitions of aging and death;
+- relation `jāti → jarāmaraṇa`;
+- distinguish unavoidable embodied aging/death from the additional mental suffering built around them;
+- connect carefully with SN 36.6 two-arrows without collapsing physical pain and dependent-origination aging/death;
+- mandatory Milindapañha consultation in the current chat/seat;
+- preserve early-text / synthesis / later-paracanonical / open-check boundaries.
 
 ## Provenance
 
