@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A73 COMPLETED  
-**Next checkpoint:** PHASE 4 — A74  
+**Current checkpoint:** PHASE 4 — A74 COMPLETED  
+**Next checkpoint:** PHASE 4 — A75  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -6741,6 +6741,230 @@ Required lanes:
 - distinguish mindfulness from bare attention, memory alone, and passive non-interference;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A74
+
+**Central question:** What exactly is `sati` / right mindfulness doing in the path, and how does it keep right effort aligned rather than drifting or becoming blind?
+
+### TEXT_ATTESTED — 1. RIGHT MINDFULNESS HAS A FOURFOLD FIELD
+
+**SN 45.8**, **MN 10**, and **DN 22** define right mindfulness through contemplation of:
+- body in body;
+- feeling in feelings;
+- mind in mind;
+- dhammas in dhammas;
+
+while being ardent, clearly comprehending, and mindful, having put away covetousness and distress regarding the world.
+
+Therefore right mindfulness is not merely:
+`notice whatever appears`.
+
+It has:
+- a field of observation;
+- sustained recollective presence;
+- clear comprehension;
+- an ethical/affective task of not being carried away by covetousness and distress.
+
+### TEXT_ATTESTED — 2. MINDFULNESS AND RIGHT EFFORT ARE DISTINCT BUT COORDINATED
+
+**MN 117** repeatedly presents a triad:
+- right view distinguishes wrong/right;
+- right effort abandons the wrong and develops the right;
+- right mindfulness keeps the relevant distinction present.
+
+A74 therefore treats mindfulness as a **tracking and non-forgetting function** inside the path network.
+
+Effort without this tracking can become:
+- misdirected;
+- mechanical;
+- forgetful of the actual state being trained.
+
+The last three bullets are **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. MINDFULNESS IS NOT PASSIVE NON-INTERFERENCE
+
+The standard satipaṭṭhāna formula includes:
+- ardency;
+- clear comprehension;
+- putting away covetousness and distress.
+
+This is not a doctrine of:
+`never evaluate, never abandon, never cultivate`.
+
+A73 already established four right efforts.
+
+A74 therefore reads mindfulness as what helps keep actual experience visible while the path still distinguishes:
+- skillful/unskillful;
+- arising/cessation;
+- what is to be abandoned/developed.
+
+### IMPORTANT GUARDRAIL — MINDFULNESS IS NOT BARE ATTENTION ALONE
+
+Bare attention can occur without:
+- right view;
+- ethical orientation;
+- clear comprehension;
+- remembrance of the practice task.
+
+The early right-mindfulness formula is richer.
+
+Therefore A74 does not equate:
+`sati = simple present-moment attention`.
+
+The exact lexical range of `sati` includes remembrance/recollection dimensions in the early language and remains **OPEN/CHECK** for a full lexical audit.
+
+### IMPORTANT GUARDRAIL — MINDFULNESS IS NOT MEMORY ALONE
+
+At the opposite extreme, `sati` should not be reduced to ordinary autobiographical memory.
+
+In the path context, its remembering function is directed toward:
+- the present field;
+- the relevant teaching/task;
+- non-loss of what should be observed and cultivated.
+
+This is **CROSS_TEXT SYNTHESIS** grounded in MN 117 and the satipaṭṭhāna formula.
+
+### TEXT_ATTESTED — 4. SATIPAṬṬHĀNA OBSERVES ARISING AND PASSING
+
+MN 10 / DN 22 repeatedly instruct observation of:
+- arising;
+- passing away;
+- arising-and-passing
+
+in body, feelings, mind, and dhammas.
+
+This is central for the larger project.
+
+Mindfulness does not merely freeze an object in a label.
+It keeps conditional change visible.
+
+That supports insight into:
+- impermanence;
+- non-appropriation;
+- cessation.
+
+The final list is **CROSS_TEXT SYNTHESIS** with prior checkpoints.
+
+### RELATION TO RIGHT EFFORT
+
+A bounded model is:
+
+`right view identifies the task`
+→ `mindfulness remembers/tracks the actual state`
+→ `right effort applies the appropriate prevent/abandon/develop/maintain task`
+→ `mindfulness checks what actually happens`
+→ `wisdom refines understanding`.
+
+No single discourse states this exact loop.
+It is **CROSS_TEXT SYNTHESIS** from MN 117, SN 45.8, and MN 10/DN 22.
+
+### WHY MINDFULNESS PREVENTS BLIND SUPPRESSION
+
+Without mindfulness, effort can react to:
+- an imagined problem;
+- a remembered insult;
+- an identity story;
+rather than the presently arising condition.
+
+Mindfulness brings the process back to:
+- what is actually present;
+- how it arises;
+- how it changes;
+- whether craving, aversion, or delusion are being added.
+
+This is **PRACTICAL SYNTHESIS**, not a verbatim canonical formula.
+
+### WHY MINDFULNESS DOES NOT REQUIRE A PERMANENT OBSERVER
+
+A74 rejects:
+`there must be an unchanging witness behind mindfulness`.
+
+The early formulation speaks of:
+- body;
+- feelings;
+- mind states;
+- dhammas
+
+being observed as conditioned phenomena arising and passing.
+
+Mindfulness itself functions as a conditioned path factor.
+
+No permanent observer is needed to explain the tracking relation.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary theme: Nāgasena describes mindfulness as having a recollective/non-forgetting and taking-up/keeping-in-view function; it remembers and distinguishes wholesome/unwholesome, useful/harmful qualities rather than letting them be lost;
+- role in A74:
+  - strongly clarifies why mindfulness is not mere passive attention;
+  - helps explain how it keeps the practice-task available to right effort and wisdom;
+- limitation: Milindapañha does not replace SN 45.8 or MN 10/DN 22 as the root early-discourse definition of right mindfulness;
+- interpretation change: **STRONG CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 45.8 — fourfold right mindfulness.
+- MN 10 / DN 22 — satipaṭṭhāna fields, ardency, clear comprehension, mindfulness, arising/passing.
+- MN 117 — right view, right effort, and right mindfulness as coordinated path functions.
+
+Milindapañha clarifies non-forgetting and keeping the relevant qualities in view, but does not override the early formula.
+
+### METHOD INSIGHT
+
+A74 reveals another characteristic of the Buddha's thought:
+
+**effective change requires accurate tracking of the process being changed.**
+
+Effort without tracking becomes blind.
+Observation without effort becomes passive.
+View without observation becomes abstract.
+
+The path therefore coordinates:
+- seeing;
+- remembering/tracking;
+- effort;
+- discernment.
+
+### PRACTICAL DIAGNOSTIC
+
+When practicing mindfulness, ask:
+- What field is actually present: body, feeling, mind, or dhamma?
+- Am I observing the present process or narrating a story about it?
+- What is arising and what is passing?
+- Has covetousness or distress already colored the observation?
+- What task must right effort now perform?
+- Am I merely paying attention, or remembering the liberative task?
+- Am I inventing a permanent “observer” behind the observing?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 45.8 — fourfold right mindfulness.
+- MN 10 Satipaṭṭhāna — four establishments, ardency, clear comprehension, mindfulness, arising/passing.
+- DN 22 Mahāsatipaṭṭhāna — extended parallel of the same framework.
+- MN 117 Mahācattārīsaka — path-network of right view, effort, mindfulness.
+
+Mandatory Milindapañha layer:
+- mindfulness as recollective/non-forgetting and keeping wholesome/unwholesome distinctions in view.
+
+Open audit:
+- exact lexical relation among `sati`, remembrance, present-moment awareness, and `sampajañña`;
+- whether “bare attention” has any exact early-text equivalent or is a later modern formulation;
+- exact early-parallel preservation of satipaṭṭhāna wording remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A75
+
+**What exactly is `sampajañña` / clear comprehension, and how does it differ from `sati` while working with it to prevent mindfulness from becoming mere observation without understanding?**
+
+Required lanes:
+- MN 10 / DN 22 clear-comprehension passages;
+- distinguish remembering/tracking from knowing purpose, suitability, domain, and non-delusion where later categories are used;
+- identify which distinctions are early-text and which are commentarial;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-commentarial / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
