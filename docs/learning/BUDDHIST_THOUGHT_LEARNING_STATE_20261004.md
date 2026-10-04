@@ -4,15 +4,15 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A19: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A19_DEPENDENT_ORIGINATION_TEMPORAL_SCALE_20261004.md`.
-- A19 source boundary locked: dependent origination is not reduced to either a one-moment psychology or a rigid three-life chart. Early passages apply conditional analysis to present experience and also explicitly to future renewed existence/rebirth.
-- A19 correction locked: later three-life allocations may be useful systematizations but are not treated as the sole explicit meaning of every early dependent-origination discourse.
-- A19 bounded audit adds SN 12.38 and SN 12.40 on intention/underlying tendencies → established consciousness → future rebirth; full SN 12 audit remains open.
+- Phase 4 A5-A20: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A20_SANKHARA_SCOPE_20261004.md`.
+- A20 source boundary locked: `saṅkhāra` is context-sensitive. Dependent-origination usage has a strong volitional/karmic function (especially SN 12.51); five-aggregate usage emphasizes constructing/fabricating activity (SN 22.79); broad formulas such as Dhp 277–278 can use the plural for conditioned formations generally.
+- A20 lexical guardrail: do not mechanically equate `saṅkhāra` with `saṅkhata`, or assume dependent-origination `saṅkhārā`, `saṅkhārakkhandha`, and every "all saṅkhārā" formula are perfectly coextensive.
+- A20 supporting bridge: AN 6.63 identifies intention as kamma, supporting but not globally equating `saṅkhāra` with `cetanā`.
 
 Next:
-- **Phase 4 A20:** What exactly is `saṅkhāra` in dependent origination—formations, fabrications, choices, or karmically potent volitions—and how does it differ from the broader use "all conditioned things"?
-- Route: SN 12.2 → SN 12.51 → MN 9 → SN 22.79 → Dhammapada 277-279 usage contrast → Milindapañha kamma/continuity stress-test.
+- **Phase 4 A21:** How does intention/kamma condition consciousness and future experience without becoming deterministic fate?
+- Route: AN 6.63 → SN 12.38 → SN 12.40 → SN 12.51 → MN 57 → selected SN 35/36 present-experience bridge → Milindapañha karma/continuity stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
