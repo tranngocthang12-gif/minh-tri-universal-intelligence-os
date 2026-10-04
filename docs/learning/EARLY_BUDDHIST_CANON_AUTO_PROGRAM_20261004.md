@@ -415,3 +415,23 @@ Model revisions:
 
 Current reasoning status: ADVERSARIALLY_REVISED / NOT_WHOLE_CORPUS_MASTERED.
 
+## 14. Stress-test reasoning synthesis v0.4
+
+Current stress-test artifact:
+`docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_4_STRESS_TEST_20261004.md`.
+
+Stress-test corpus:
+MN 22, 58, 60, 61, 117; SN 12.15, 22.85, 35.28/30; selected Aṭṭhakavagga texts and available comparative witnesses.
+
+Major refinements:
+- distinguish right view from view-grasping;
+- distinguish correct knowledge from weaponized knowledge;
+- speech gate = truth + benefit + timing;
+- ethics includes before/during/after feedback review;
+- uncertainty permits asymmetric-risk reasoning without false certainty;
+- middle reasoning is conditional anti-binary analysis, not compromise;
+- not-self explanations require an anti-annihilation guard;
+- doctrinal truth remains meaningful while attachment to doctrine is itself audited.
+
+Current reasoning status: INTEGRATED_STRESS_TESTED_CORE / NOT_WHOLE_CORPUS_MASTERED.
+
