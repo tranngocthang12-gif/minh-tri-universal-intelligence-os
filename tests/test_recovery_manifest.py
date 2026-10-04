@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A40_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A41")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A41_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A42")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A40_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A41")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A41_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A42")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -384,6 +384,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("MILINDAPAÑHA CONSULTATION — MANDATORY", checkpoint)
         self.assertEqual(state["owner_learning_track_buddhist_thought_a40_milindapanha"], "CONSULTED_PREFERENCE_VS_LUST_DISTINCTION")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a40_milindapanha"], "CONSULTED_PREFERENCE_VS_LUST_DISTINCTION")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a41_milindapanha"], "CONSULTED_ASPIRATION_VS_PRIDE_DISTINCTION")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a41_milindapanha"], "CONSULTED_ASPIRATION_VS_PRIDE_DISTINCTION")
 
 
 if __name__ == "__main__":
