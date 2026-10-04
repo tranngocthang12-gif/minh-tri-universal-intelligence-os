@@ -4,14 +4,14 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A9: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A9_UPADANA_BHAVA_20261004.md`.
-- Important correction locked: `bhava` must not be reduced to the heuristic "identity construction"; SN 12.2 defines three kinds of becoming/existence: sensual, form, and formless.
-- Bounded SN 12.2, SN 12.15, SN 12.52, SN 12.62, SN 22.22, and SN 22.59 slices have been audited for their current lesson questions only. Full SN 12 and SN 22 ID-level backlogs remain open.
+- Phase 4 A5-A10: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A10_NIBBANA_TATHAGATA_20261004.md`.
+- Route correction locked: SN 44.10 concerns whether the self survives/does not survive; SN 44.1 and related SN 44 discourses are the direct sources for the four post-mortem Tathāgata alternatives.
+- Bounded SN 12 and SN 22 slices already recorded remain partial only. A10 adds bounded SN 44.1 / SN 22.86 / MN 72 / Ud 8.1 / Ud 8.3 source audit for its specific question.
 
 Next:
-- **Phase 4 A10:** Nibbāna and the fate of the Tathāgata — why the four post-mortem propositions are not accepted as straightforward answers.
-- Route: MN 72 → SN 44.10 → SN 22.86 → Ud 8.1/8.3 → Milindapañha unanswered-question dialectic.
+- **Phase 4 A11:** What is Nibbāna in the early texts? Cessation, the unfabricated, or a "thing"? How to read positive and negative language without making it either a substance or mere nonexistence.
+- Route: SN 43.1-44 → Ud 8.1-8.4 → Iti 43 → AN 3.47-48 → MN 26/MN 140 as needed → Milindapañha on Nibbāna.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
