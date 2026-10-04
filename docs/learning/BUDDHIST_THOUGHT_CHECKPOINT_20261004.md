@@ -11652,3 +11652,357 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A90
+
+**Central question:** What exactly are `vossagga` and `paṭinissagga` in the early discourses, and how does relinquishment differ from suppression, loss, non-possession, indifference, and non-grasping?
+
+### TEXT_ATTESTED — 1. THE AWAKENING FACTORS ARE SAID TO MATURE IN `VOSSAGGA`
+
+In the recurrent awakening-factor formula preserved in **MN 118** and **SN 46**, each awakening factor is developed:
+- dependent on seclusion;
+- dependent on dispassion;
+- dependent on cessation;
+- **maturing in relinquishment (`vossagga-pariṇāmi`)**.
+
+This gives the first A90 boundary:
+
+`vossagga` is not an accidental loss of something.
+It is the mature direction of a cultivated path already oriented by:
+`viveka → virāga → nirodha`.
+
+Therefore its function is path-directed letting go, not mere deprivation.
+
+### TEXT_ATTESTED — 2. MN 118 PLACES `PAṬINISSAGGA` AT THE CULMINATION OF THE FOURTH BREATH-MEDITATION TETRAD
+
+In **MN 118 Ānāpānassati**, the practitioner trains contemplating:
+- impermanence;
+- dispassion;
+- cessation;
+- **relinquishment (`paṭinissagga`)**.
+
+The sequence matters.
+
+Relinquishment is presented downstream from seeing impermanence, dispassion, and cessation.
+
+A bounded reading is:
+**letting go matures because the object has been seen as conditioned, fading, and ceasing—not because the practitioner merely commands themselves to stop caring.**
+
+Claim class: **TEXT-BASED SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. THE THIRD NOBLE TRUTH PUTS `CĀGA` AND `PAṬINISSAGGA` INSIDE THE CESSATION OF CRAVING
+
+In the standard cessation formula of **SN 56.11 / DN 22**, the cessation of suffering is defined through the remainderless fading and cessation of craving, together with:
+- giving it up / relinquishment (`cāga`);
+- relinquishing it (`paṭinissagga`);
+- release;
+- no longer resting on or clinging to it.
+
+This is crucial.
+
+The object being relinquished in this formula is **craving**, not the bare existence of the world.
+
+So the early logic is:
+**end the grasping relation, not erase all objects of experience.**
+
+### IMPORTANT LEXICAL GUARDRAIL — `VOSSAGGA`, `PAṬINISSAGGA`, AND `CĀGA` OVERLAP BUT SHOULD NOT BE COLLAPSED
+
+A90 does not claim a final one-word equivalence.
+
+Working distinctions:
+
+- `vossagga`: relinquishment / letting go, especially as the mature direction of awakening factors;
+- `paṭinissagga`: relinquishing / handing back / giving up, prominent in the cessation formula and breath-meditation contemplation;
+- `cāga`: giving up / relinquishment, and in other contexts generosity or giving;
+- `anupādā`: non-grasping / not taking up;
+- `nekkhamma`: renunciation / going forth from sensual entanglement.
+
+These fields overlap but are not proven to be perfect synonyms.
+
+Claim class:
+**LEXICAL WORKING MODEL — OPEN TO OCCURRENCE-LEVEL AUDIT**.
+
+### TEXT_ATTESTED — 4. RELINQUISHMENT IS NOT THE SAME AS NON-GRASPING, THOUGH THEY CONVERGE FUNCTIONALLY
+
+A79 established from **SN 22.59** and related texts:
+- the mind is freed from defilements by **non-grasping (`anupādā`)**.
+
+A90 now compares:
+
+`anupādā`
+→ emphasizes not taking up / not grasping;
+
+`paṭinissagga / vossagga`
+→ emphasize relinquishing / letting go.
+
+The early texts often place these inside the same liberative architecture, but A90 does not force a dictionary identity.
+
+A bounded relation is:
+**non-grasping describes the absence of taking hold; relinquishment describes the movement or mature orientation of letting go.**
+
+This exact sentence is **CROSS-TEXT SYNTHESIS**, not a canonical definition.
+
+### IMPORTANT GUARDRAIL — RELINQUISHMENT IS NOT SUPPRESSION
+
+Suppression can mean:
+- craving remains fully convincing;
+- identity remains invested;
+- the reaction is forcibly pushed down.
+
+But MN 118 places relinquishment after:
+- impermanence;
+- dispassion;
+- cessation.
+
+A77-A78 likewise established:
+- clear seeing → disenchantment → dispassion → release;
+- cessation follows the ending of supporting conditions.
+
+Therefore:
+**relinquishment is not merely stronger inhibition.**
+It is a change in the relation to what was previously grasped.
+
+A bounded contrast:
+
+`suppression`
+= “I still need this, but I force myself not to act.”
+
+`relinquishment`
+= “the basis for needing and owning it has weakened because its nature and cost are seen more clearly.”
+
+The contrast is **EXPLANATORY SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — RELINQUISHMENT IS NOT LOSS
+
+Something can be lost externally while craving remains:
+- a possession;
+- a relationship;
+- status;
+- health;
+- a meditative state.
+
+External loss may even intensify clinging.
+
+Therefore:
+**loss is an event; relinquishment is a transformation in appropriation.**
+
+This distinction is supported by the cessation formula, where the target is craving itself.
+
+### IMPORTANT GUARDRAIL — RELINQUISHMENT IS NOT MERE NON-POSSESSION
+
+A79 established from MN 2 that the practitioner can:
+- use robes;
+- food;
+- shelter;
+- medicine
+
+wisely, without reducing practice to ownership rules.
+
+So:
+- owning little does not prove non-clinging;
+- using something does not prove attachment.
+
+A90 therefore rejects:
+`vossagga = physically owning nothing`.
+
+External simplicity may support renunciation, but the liberating target is deeper:
+**what the mind claims, depends on, identifies with, and refuses to release.**
+
+### IMPORTANT GUARDRAIL — RELINQUISHMENT IS NOT INDIFFERENCE
+
+Indifference can arise from:
+- dullness;
+- exhaustion;
+- avoidance;
+- lack of care.
+
+But the awakening-factor formula places relinquishment after a path containing:
+- mindfulness;
+- investigation;
+- energy;
+- rapture;
+- tranquility;
+- samādhi;
+- equanimity.
+
+Thus mature relinquishment is not mere absence of interest.
+
+It is compatible with:
+- clear awareness;
+- discrimination;
+- energy;
+- care;
+- responsive action.
+
+A90 therefore treats:
+**“I do not care”**
+and
+**“I no longer grasp”**
+as different possibilities.
+
+Claim class: **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### RELATION TO `NEKKHAMMA`
+
+`nekkhamma` commonly functions as:
+- renunciation;
+- leaving behind sensuality;
+- a direction opposite sensual entanglement.
+
+A84-A85 showed that renunciant pleasure can be skillful and that the world itself is not the fetter.
+
+A90 therefore distinguishes:
+
+`nekkhamma`
+→ the movement away from sensual entanglement;
+
+`vossagga / paṭinissagga`
+→ the broader relinquishing orientation by which grasped things, states, views, and craving are released.
+
+This is a **WORKING SYNTHESIS**, not a final lexical taxonomy.
+
+### RELATION TO `CĀGA`
+
+`cāga` has a broad early range that can include:
+- giving;
+- generosity;
+- relinquishment.
+
+In the cessation formula it stands beside `paṭinissagga`.
+
+Therefore generosity can be understood as one important training arena for relinquishment:
+**the hand learns to release what the mind wants to hold.**
+
+But A90 does not equate:
+`cāga = dāna only`
+or
+`vossagga = generosity`.
+
+Exact relation remains OPEN.
+
+### CROSS-TEXT SYNTHESIS — RELINQUISHMENT AS THE OPPOSITE DIRECTION OF APPROPRIATION
+
+A90's bounded model is:
+
+`contact / experience`
+→ if relished and appropriated:
+  craving → grasping → becoming.
+
+With training:
+- impermanence is seen;
+- passion fades;
+- cessation becomes intelligible;
+- the mind stops feeding appropriation;
+- what was held is relinquished.
+
+Thus:
+
+`appropriation`
+→ “mine / for me / I need / I must preserve”
+
+is progressively reversed into
+
+`relinquishment`
+→ “not worth holding as self, security, possession, or basis for becoming.”
+
+This is **CROSS-TEXT SYNTHESIS** from MN 118, SN 56.11, SN 22.59, and the dependent-cessation material.
+
+### IMPORTANT GUARDRAIL — RELINQUISHMENT IS NOT A SELF PERFORMING ONE FINAL HEROIC ACT
+
+Because the broader early framework analyzes conditioned processes, A90 does not posit:
+“a permanent self finally lets go of everything.”
+
+The path trains conditions:
+- wise attention;
+- mindfulness;
+- investigation;
+- samādhi;
+- wisdom;
+- dispassion.
+
+As these conditions mature, grasping loses support.
+
+Therefore the grammar “I let go” may be useful conventionally, but it should not be turned into a metaphysical controller standing outside the process.
+
+Claim class: **CROSS-TEXT SYNTHESIS WITH NON-SELF GUARDRAIL**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting themes:
+  1. in the cessation/Nibbāna dialogue, Nāgasena says that when one does not delight in or cling to sensory experience, craving, grasping, becoming, birth, and suffering cease;
+  2. in the taste-without-lust dialogue, experience can remain while passion no longer arises;
+- role in A90:
+  - supports relinquishment as non-cleaving rather than destruction of sensory life;
+  - supports the distinction between experience remaining and grasping ceasing;
+- limitation:
+  - Milindapañha does not provide the decisive early lexical boundary among `vossagga`, `paṭinissagga`, `cāga`, `anupādā`, and `nekkhamma`;
+  - it remains **LATER/PARACANONICAL SUPPORT**;
+  - the early formulas in MN 118, SN 46, SN 56.11, and SN 22 remain authoritative for A90.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 118 — contemplation of impermanence → dispassion → cessation → relinquishment.
+- SN 46 standard formula — awakening factors maturing in `vossagga`.
+- SN 56.11 / DN 22 — cessation of craving with `cāga`, `paṭinissagga`, release, non-clinging.
+- SN 22.59 — liberation by non-grasping.
+- MN 2 — wise use of necessities without reducing non-attachment to non-possession.
+
+Later/paracanonical:
+- Milindapañha cessation/Nibbāna dialogue and taste-without-lust example.
+
+### METHOD INSIGHT
+
+A90 reveals another central feature of the Buddha's thought:
+
+**letting go is not primarily about having less; it is about holding less.**
+
+One can:
+- own little and cling strongly;
+- lose much and cling even more;
+- use something without making it “mine” in the identity sense;
+- care deeply without demanding possession.
+
+The path therefore targets the **structure of appropriation**, not merely the inventory of possessions.
+
+### PRACTICAL DIAGNOSTIC
+
+When saying “I have let go,” ask:
+- Did I actually stop grasping, or did I only lose access?
+- Is craving still active underneath suppression?
+- Did identity move to a subtler object, such as “I am a person who has renounced”?
+- Can I use something without needing it to define me?
+- If the object returns, does the old appropriation instantly return?
+- Is this indifference from dullness, or relinquishment after clear seeing?
+- Is the movement supported by impermanence, dispassion, and cessation?
+- What exactly is no longer being held?
+
+### Open audit
+
+- full occurrence-level audit of `vossagga`, `paṭinissagga`, `cāga`, `anupādā`, `nekkhamma`, `anālaya`, and related release terms;
+- grammar-level audit of `vossagga-pariṇāmi`;
+- compare MN 118 `paṭinissaggānupassī` with early parallels;
+- audit whether `cāga` in cessation formula and generosity contexts share one core semantic structure or require stronger contextual separation;
+- distinguish conventional “letting go” language from later meditation-school techniques branded as “letting go”;
+- continue SN 46 and SN 56 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A90 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A91
+
+**How does `nekkhamma`—renunciation—function in early Buddhist thought: is it mainly external leaving-home, a mental movement away from sensuality, a form of right intention, or a broader reorientation of value?**
+
+Required lanes:
+- right intention formula: renunciation, non-ill-will, harmlessness;
+- MN 19 on two kinds of thought;
+- MN 36 / MN 66 on non-sensual pleasure;
+- distinguish external going-forth from internal renunciation;
+- compare `nekkhamma`, `viveka`, `vossagga`, and non-grasping;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
