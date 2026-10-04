@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A40 COMPLETED  
-**Next checkpoint:** PHASE 4 — A41  
+**Current checkpoint:** PHASE 4 — A41 COMPLETED  
+**Next checkpoint:** PHASE 4 — A42  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -690,7 +690,56 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A41
+
+**Central question:** How can `chanda` remain a path-tool without becoming achievement-identity?
+
+### TEXT_ATTESTED
+- **SN 51.15:** path-desire can motivate practice and then subside when its task is complete.
+- **SN 22.89:** real noble progress can coexist with residual “I am” conceit/desire/tendency until these are fully uprooted. Progress therefore does not itself prove freedom from `asmimāna`.
+- **AN 10.85:** boasting about meditative attainments is treated as decline rather than maturity.
+- **AN 10.86:** overestimation of one’s realization is a distinct danger around attainment claims.
+- **MN 22 / Sn 4.14:** final release is incompatible with retaining “I am” conceit or using knowledge as a basis for superior/equal/inferior self-positioning.
+
+### CROSS_TEXT_SYNTHESIS
+A healthy sequence is:
+`chanda → effort → progress → accurate assessment → further abandonment → task-desire falls away`.
+
+A corrupted sequence is:
+`chanda → effort → progress → “my progress” → “I am advanced” → māna → status-protection → renewed becoming around a spiritual identity`.
+
+Knowing that progress occurred is not itself conceit. Conceit appears when progress becomes a basis for “I am” and comparison.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+- consulted: **YES**;
+- role: aspiration versus pride;
+- Mi Tiên presents faith as including aspiration toward unattained path-fruits and also criticizes pride as destructive of serious discussion; it also says meditation puts an end to pride;
+- interpretation change: **MINOR** — aspiration toward realization and pride in possessing realization are not the same;
+- early-discourse confirmation: **YES**, via SN 51.15, SN 22.89, AN 10.85, AN 10.86, MN 22, Sn 4.14;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### Practical guardrail
+Ask:
+- Is the goal a task or a status?
+- Does correction help, or threaten “my level”?
+- Does progress reduce greed, aversion, conceit, and clinging?
+- Can the motivating desire fall away when its task is done?
+- Is comparison with others needed to validate the practice?
+
+### Next checkpoint — PHASE 4 A42
+**How should spiritual progress be evaluated without turning the path into rank, status, or self-measurement?**
+
+Required lanes:
+- task-language: understand / abandon / realize / develop;
+- honest self-assessment versus `adhimāna`;
+- noble attainment versus social/spiritual ranking;
+- community safeguards around attainment claims;
+- humility versus false self-deprecation;
+- mandatory Milindapañha consultation.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A40 and routes the next work to A41.
+This checkpoint preserves A30–A41 and routes the next work to A42.
