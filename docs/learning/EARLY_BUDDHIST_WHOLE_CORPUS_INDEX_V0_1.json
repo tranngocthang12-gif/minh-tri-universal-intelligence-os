@@ -18,7 +18,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 12 Nidāna-saṃyutta",
-      "coverage_status": "DISCOURSE_ID_PASS_1_91_PLUS_REPEAT_MATRIX_REMAINDER_PENDING",
+      "coverage_status": "STRUCTURAL_PASS_COMPLETE_1_213_WITH_PEYYALA_MATRIX_AUDITED_DEPTH_VARIES",
       "primary_themes": [
         "dependent origination",
         "consciousness/name-and-form",
@@ -42,7 +42,7 @@
         "C02",
         "REBIRTH_IDENTITY_CLUSTER_V0_8"
       ],
-      "next_action": "Audit SN12.92-213 peyyāla matrix, then depth-score all entries",
+      "next_action": "Parallel/redaction audit and term-level deepening rather than basic coverage",
       "anchor_suttas": [
         "SN 12.2",
         "SN 12.15",
@@ -204,7 +204,7 @@
     {
       "collection": "Snp",
       "range_or_text": "Aṭṭhakavagga Snp 4",
-      "coverage_status": "ALL_16_VERSE_RANGE_PASS1_AUDITED",
+      "coverage_status": "ALL_16_PASS1_VERSE_AUDITED_PLUS_LEXICAL_PASS1",
       "primary_themes": [
         "view-grasping",
         "debate",
@@ -227,7 +227,7 @@
         "C03",
         "ATTHAKAVAGGA_RIGHT_VIEW_V0_8"
       ],
-      "next_action": "Lexical pass plus Arthapada parallels"
+      "next_action": "Arthapada comparison and second lexical pass"
     },
     {
       "collection": "DN",
@@ -330,5 +330,9 @@
   "atthakavagga_index": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json",
   "discourse_verse_pass_v0_10": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
   "sn36_discourse_index": "docs/learning/EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json",
-  "atthakavagga_verse_audit": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json"
+  "atthakavagga_verse_audit": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json",
+  "reference_stack": "docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md",
+  "milindapanha_reasoning_lab": "docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md",
+  "sn12_peyyala_matrix_audit": "docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md",
+  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md"
 }
