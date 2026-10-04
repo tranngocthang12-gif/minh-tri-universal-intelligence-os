@@ -23,8 +23,9 @@ class RecoveryManifestConsistency(unittest.TestCase):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         self.assertEqual(manifest["authority_order"][0], "docs/PROJECT_STATE.json")
         self.assertEqual(state["current_law_index"], manifest["authority_order"][1])
-        self.assertEqual(state["current_architecture"], manifest["authority_order"][2])
-        self.assertEqual(state["role_bootstrap"], manifest["authority_order"][3])
+        self.assertEqual(state["universal_learning_continuity_law"], manifest["authority_order"][2])
+        self.assertEqual(state["current_architecture"], manifest["authority_order"][3])
+        self.assertEqual(state["role_bootstrap"], manifest["authority_order"][4])
 
     def test_transport_state_matches_implemented_capabilities(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
@@ -322,6 +323,30 @@ class RecoveryManifestConsistency(unittest.TestCase):
             manifest["self_upgrade"]["candidate_a_status"],
             "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
         )
+
+
+    def test_universal_learning_continuity_is_routed_and_recoverable(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = ROOT / state["universal_learning_continuity_law"]
+        checkpoint = ROOT / state["owner_learning_track_buddhist_thought_checkpoint"]
+        law_index = (ROOT / state["current_law_index"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+
+        self.assertTrue(law.is_file())
+        self.assertTrue(checkpoint.is_file())
+        self.assertTrue(state["universal_learning_prework_bootstrap_required"])
+        self.assertTrue(state["universal_learning_durable_checkpoint_required"])
+        self.assertFalse(state["chat_memory_is_canonical_project_memory"])
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A34_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A35")
+        self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A34_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A35")
+        self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
+        self.assertIn("Universal learning continuity invariant", architecture)
+        self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
 
 
 if __name__ == "__main__":

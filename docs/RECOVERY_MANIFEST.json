@@ -4,6 +4,7 @@
   "authority_order": [
     "docs/PROJECT_STATE.json",
     "docs/LAW_INDEX_20261003.md",
+    "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
     "docs/ARCHITECTURE_NOW_20261003.md",
     "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md"
   ],
@@ -173,5 +174,30 @@
     "preregistration_freeze_receipt": "NOT_FROZEN",
     "external_reader_review": "REQUIRED_NOT_YET_COMPLETED"
   },
-  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os"
+  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
+  "universal_learning_continuity": {
+    "status": "DURABLY_ROUTED_PENDING_MERGE",
+    "law": "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+    "mandatory_prework_bootstrap": true,
+    "durable_checkpoint_required": true,
+    "chat_memory_canonical": false,
+    "recorded_does_not_mean_verified": true
+  },
+  "owner_learning_track_buddhist_thought": {
+    "status": "ACTIVE",
+    "checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
+    "current": "PHASE_4_A34_COMPLETED",
+    "next": "PHASE_4_A35",
+    "open_audits": [
+      "SN12",
+      "SN22",
+      "SN35",
+      "SN36",
+      "SN45_46",
+      "ATTHAKAVAGGA_LEXICAL",
+      "EARLY_PARALLEL_STRESS_TESTS"
+    ],
+    "background_runtime": false,
+    "a34_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS"
+  }
 }

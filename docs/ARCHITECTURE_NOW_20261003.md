@@ -516,3 +516,16 @@ Declared compute budgets are insufficient. Actual token/retrieval/critic/generat
 Coverage non-inferiority is mandatory so the treatment cannot win factual-accuracy and unsupported-claim metrics merely by saying less.
 
 The current repository implements planning/validation contracts. It does **not** yet contain a proven live isolated executor, provider telemetry capture, blinded evaluator runtime, or empirical Trial-001 result. External code review of the reader remains required.
+
+## 36. Universal learning continuity invariant — 2026-10-04
+
+The Owner has established `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md` as a cross-architecture invariant for **all** present and future learning tracks.
+
+Before material learning work, every seat must fresh-read PROJECT_STATE → current Law Index → Universal Learning Continuity Law → current Architecture → role bootstrap → active learning checkpoint → task/domain sources. Chat memory is never canonical project memory.
+
+Every material learning checkpoint must durably preserve learned/corrected content, evidence/status, current checkpoint, next checkpoint, open audits/unknowns, provenance, and the durable record location. A zero-chat seat must be able to continue from NEXT CHECKPOINT without silently dropping corrections or unresolved audits.
+
+The invariant is fail-closed: durable recording never implies VERIFIED, and a routing mismatch among PROJECT_STATE, Law Index, Architecture, bootstrap, Recovery Manifest, consistency tests, or active learning checkpoint is an architecture consistency defect.
+
+The current Buddhist-thought track is routed at `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`, carrying A30–A33 with NEXT A34. This continuity record does not by itself re-verify its cited passages.
+

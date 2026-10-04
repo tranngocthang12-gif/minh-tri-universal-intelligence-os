@@ -482,5 +482,24 @@
   "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
   "trial_rule_reader_external_code_review": "REQUIRED_NOT_YET_COMPLETED",
   "trial001_arm_leakage_threshold": "TO_BE_FROZEN_BEFORE_PRIMARY_SCORING",
-  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID"
+  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID",
+  "universal_learning_continuity": "DURABLY_ROUTED_PENDING_MERGE",
+  "universal_learning_continuity_law": "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+  "universal_learning_prework_bootstrap_required": true,
+  "universal_learning_durable_checkpoint_required": true,
+  "chat_memory_is_canonical_project_memory": false,
+  "owner_learning_track_buddhist_thought": "ACTIVE",
+  "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A34_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A35",
+  "owner_learning_track_buddhist_thought_open_audits": [
+    "SN12",
+    "SN22",
+    "SN35",
+    "SN36",
+    "SN45_46",
+    "ATTHAKAVAGGA_LEXICAL",
+    "EARLY_PARALLEL_STRESS_TESTS"
+  ],
+  "owner_learning_track_buddhist_thought_a34_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS"
 }
