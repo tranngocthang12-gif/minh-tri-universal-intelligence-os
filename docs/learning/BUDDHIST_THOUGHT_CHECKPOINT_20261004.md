@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A60 COMPLETED  
-**Next checkpoint:** PHASE 4 — A61  
+**Current checkpoint:** PHASE 4 — A61 COMPLETED  
+**Next checkpoint:** PHASE 4 — A62  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -4012,6 +4012,210 @@ Required lanes:
 - test relation to mine-making and identity production;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A61
+
+**Central question:** What are the four kinds of `upādāna` (clinging), how do they differ, and why can all four feed becoming without being reduced to a single form of self-view?
+
+### TEXT_ATTESTED — 1. THE EARLY TEXTS DISTINGUISH FOUR KINDS OF CLINGING
+
+**SN 12.2**, **MN 9**, **MN 11**, and **SN 38.12** preserve the fourfold classification:
+
+1. `kāmupādāna` — clinging to sensuality / sensual pleasures;
+2. `diṭṭhupādāna` — clinging to views;
+3. `sīlabbatupādāna` — clinging to precepts, observances, habits, practices, rites;
+4. `attavādupādāna` — clinging to doctrines/theories of self.
+
+The classification itself is **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 2. CLINGING HAS CRAVING AS ITS ORIGIN AND BECOMING AS ITS CONSEQUENCE
+
+**MN 9** states:
+- the origin of clinging is craving;
+- with the cessation of craving, clinging ceases;
+- the Noble Eightfold Path is the path to the cessation of clinging.
+
+The dependent-origination sequence places:
+`taṇhā → upādāna → bhava`.
+
+Therefore the four kinds differ in object/form, but all belong to the causal position in which craving has hardened into grasping and feeds becoming.
+
+The phrase “hardened into grasping” is **CROSS_TEXT SYNTHESIS**; the causal links are **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 3. SENSUAL CLINGING IS NOT THE SAME AS HAVING SENSORY EXPERIENCE
+
+A60 already established from SN 35 material that sense faculty/object themselves are not the fetter; desire and lust arising dependent on them are the binding factor.
+
+A61 therefore keeps:
+`seeing / hearing / tasting / feeling`
+distinct from
+`clinging to sensuality`.
+
+This distinction is strengthened by the mandatory Milindapañha passage below: taste can be experienced without the lust that grasps it.
+
+### TEXT_ATTESTED — 4. VIEW CLINGING IS A DISTINCT CATEGORY FROM SELF-DOCTRINE CLINGING
+
+Because the early taxonomy separately lists:
+- `diṭṭhupādāna`;
+- `attavādupādāna`;
+
+A61 does not collapse them.
+
+A cautious working distinction is:
+- `diṭṭhupādāna`: grasping a view as something to hold, defend, or rely on;
+- `attavādupādāna`: grasping specifically at a doctrine/conception formulated in terms of self.
+
+The first line is broader; the second is self-specific.
+
+The distinct enumeration is **TEXT_ATTESTED**.
+The exact lexical boundary is **OPEN/CHECK** and requires continued source audit.
+
+### TEXT_ATTESTED — 5. MN 11 TREATS SELF-DOCTRINE CLINGING AS A CRITICAL BLIND SPOT
+
+**MN 11 Cūḷasīhanāda** says that some contemplatives claim to comprehend clinging while accounting for one, two, or three types but failing to comprehend all four, especially self-doctrine clinging.
+
+The Buddha claims a teaching that comprehends all four.
+
+The methodological point is important:
+**partial release from one object of attachment is not the same as understanding the whole grasping structure.**
+
+The final sentence is a bounded **CROSS_TEXT SYNTHESIS**.
+
+### CRITICAL GUARDRAIL — `SĪLABBATUPĀDĀNA` DOES NOT MEAN “ALL ETHICAL DISCIPLINE IS BAD”
+
+This is a major possible misunderstanding.
+
+**SN 38.12** says the Noble Eightfold Path is the practice for abandoning the four kinds of clinging.
+
+Therefore the category “clinging to precepts/observances/practices” cannot coherently mean:
+`all practice, all discipline, all precepts are themselves clinging`.
+
+The problem is **grasping at a practice/observance** in a way that becomes a basis of bondage—for example, treating the form of a practice as intrinsically purifying, sufficient in itself, identity-defining, or something to defend independently of liberative understanding.
+
+The examples after the dash are **CROSS_TEXT SYNTHESIS**; the non-equation of all practice with clinging is strongly supported by SN 38.12.
+
+### TEXT_ATTESTED — 6. THE PATH ITSELF MUST NOT BE CONFUSED WITH CLINGING TO THE PATH
+
+This produces a subtle but essential distinction:
+
+- there are disciplines and practices required for liberation;
+- one can nevertheless cling to discipline/practice as an identity, dogma, or magical guarantee.
+
+Thus:
+`using a method` ≠ `grasping the method`.
+
+This is **CROSS_TEXT SYNTHESIS** grounded in the coexistence of:
+- `sīlabbatupādāna` as a clinging category;
+- the Noble Eightfold Path as the way to abandon clinging.
+
+### RELATION TO SELFING — ALL FOUR CAN BECOME MATERIAL FOR “I” AND “MINE,” BUT ARE NOT IDENTICAL WITH SELF-VIEW
+
+A61 connects to A57–A60:
+
+- sensuality can become “my pleasure / what I need”;
+- a view can become “my truth / my position”;
+- a practice can become “my purity / my group / my method”;
+- self-doctrine explicitly organizes experience around a theory of self.
+
+But these are applications.
+
+The early taxonomy does **not** say:
+`all four clinging types are simply one self-view under different names`.
+
+Claim class: **CROSS_TEXT / PRACTICAL SYNTHESIS**.
+
+### HOW ALL FOUR FEED BECOMING
+
+A bounded model is:
+
+`craving`
+→ `grasp an object, view, practice, or self-doctrine`
+→ `organize intention/action/identity around what is grasped`
+→ `bhava is fed`.
+
+The first and last causal links are early-text attested.
+The middle explanatory language is **CROSS_TEXT SYNTHESIS**.
+
+This allows A61 to connect the fourfold classification back to A50 without erasing their differences.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary passage: the distinction between a person with passion and one free from passion;
+- Nāgasena explains that both may experience the taste of food, but the passionate person experiences the taste **plus the lust attached to it**, while the passion-free person experiences the taste without that lust;
+- role in A61: sharply clarifies why **sensory experience is not identical with sensual clinging**;
+- secondary support: the Nāgasena/chariot reasoning continues to clarify why a conventional person-designation need not become self-doctrine clinging;
+- decisive evidence for the exact fourfold `upādāna` taxonomy: **NO** — that taxonomy remains rooted in the early discourses;
+- interpretation change: **MODERATE CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The early-discourse root is:
+- SN 12.2 / MN 9 / SN 38.12 for the four kinds and the causal/path framework;
+- MN 11 for the importance of comprehending all four.
+
+Milindapañha clarifies the difference between experience and passion/clinging, but does not replace the early taxonomy.
+
+### METHOD INSIGHT — THE BUDDHA CLASSIFIES CLINGING BY HOW THE MIND TAKES HOLD
+
+A61 reveals that “attachment” is not one undifferentiated emotion.
+
+The mind can take hold through:
+- pleasure-seeking;
+- a belief/view;
+- a method or observance;
+- a theory of who/what one is.
+
+This means one can abandon one attachment while remaining deeply bound by another.
+
+A person may give up sensual indulgence and still cling to:
+- views;
+- ritual/practice identity;
+- self-theory.
+
+That possibility is exactly why the fourfold classification matters.
+
+### PRACTICAL DIAGNOSTIC
+
+When grasping is present, ask:
+- Am I grasping a pleasure?
+- Am I grasping a view because “I must be right”?
+- Am I grasping a rule/practice as if the form itself guarantees purity?
+- Am I constructing or defending a theory of “what I really am”?
+- If the object changes, what identity or security feels threatened?
+- Is the practice functioning as a tool, or has the tool become an object of possession?
+- Is this clinging producing further intentions, actions, identity, or becoming?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga — fourfold clinging in dependent origination.
+- MN 9 Sammādiṭṭhi — four kinds; craving as origin; cessation with craving; Noble Eightfold Path.
+- MN 11 Cūḷasīhanāda — failure to comprehend all four kinds, especially self-doctrine clinging.
+- SN 38.12 Upādānapañhā — four kinds and Noble Eightfold Path as practice for abandoning them.
+- prior SN 35 material — sense object/faculty are not themselves the fetter.
+
+Mandatory Milindapañha layer:
+- passion vs freedom from passion: taste remains, lust attached to taste does not;
+- chariot/conventional designation as secondary clarification.
+
+Open audit:
+- exact lexical boundary between `diṭṭhupādāna` and `attavādupādāna`;
+- exact early-text scope of `sīlabbatupādāna`;
+- relation of fourfold clinging to Aṭṭhakavagga `diṭṭhi` vocabulary remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A62
+
+**How does `diṭṭhupādāna` (view-clinging) differ from simply having a working view, and how can even a correct formulation become something grasped?**
+
+Required lanes:
+- revisit MN 2, MN 11, SN 12.15, and A34–A35;
+- distinguish right view as path-function from identity-invested dogmatism;
+- inspect early texts on abandoning attachment to views without collapsing into “all views are bad”;
+- mandatory Milindapañha consultation on questioning, reasoning, and release from wrong views;
+- keep `diṭṭhi / sacca / nissaya` Aṭṭhakavagga lexical audit OPEN/CHECK.
 
 ## Provenance
 
