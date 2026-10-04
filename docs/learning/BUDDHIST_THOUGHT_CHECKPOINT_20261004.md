@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A43 COMPLETED  
-**Next checkpoint:** PHASE 4 — A44  
+**Current checkpoint:** PHASE 4 — A44 COMPLETED  
+**Next checkpoint:** PHASE 4 — A45  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -969,7 +969,149 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A44
+
+**Central question:** How should doubt (`vicikicchā`) be distinguished from intelligent inquiry, caution, and refusal to overclaim?
+
+### TEXT_ATTESTED
+
+1. **SN 46.51 / SN 46.53** treat doubt as a hindrance: when doubt is present, the practitioner knows it is present; one understands its arising, abandonment, and non-arising in the future. Doubt here is an obstructive mental condition, not synonymous with all questioning.
+2. **SN 46.2 / SN 46.3** list `dhammavicaya`—investigation of phenomena/Dhamma—as an awakening factor. Therefore investigation itself cannot be equated with the hindrance of doubt.
+3. **MN 95** requires examination of the teacher and teaching, reflection on meaning, scrutiny, striving, and eventual direct realization. This legitimizes inquiry and graduated confidence.
+4. **AN 3.66 Kālāma** explicitly refuses several insufficient bases for certainty and redirects attention toward testing qualities by their consequences. The discourse therefore encourages discrimination rather than passive credulity.
+5. **MN 2** identifies unwise attention as a condition for unarisen doubt to arise and arisen doubt to increase, while wise attention supports abandoning doubt. This suggests that the issue is not the mere presence of a question, but how attention handles uncertainty.
+6. **SN 25.1–10** distinguish faith-followers and Dhamma-followers who have not yet fully realized the fruit but are nevertheless on an irreversible trajectory due to confidence or acceptance after reflection. This supports a middle state between total certainty and paralyzing doubt.
+
+### CENTRAL DISTINCTIONS
+
+**Intelligent inquiry**
+- has a definite question;
+- seeks evidence, causal understanding, and direct test;
+- can update when evidence improves;
+- moves toward clearer seeing or better action.
+
+**Healthy uncertainty / caution**
+- accurately marks what is not yet known;
+- prevents overclaiming;
+- remains compatible with practice and investigation.
+
+**Vicikicchā as hindrance**
+- fragments commitment and attention;
+- loops without resolution;
+- repeatedly reopens the same ground without learning;
+- blocks practice despite sufficient basis for the next testable step.
+
+**Cynical identity**
+- turns doubt itself into “I am the one who never believes”;
+- uses skepticism to avoid vulnerability, testing, or commitment;
+- becomes just another standpoint to defend.
+
+### CROSS_TEXT SYNTHESIS
+
+A useful functional model:
+
+uncertainty
+→ **wise attention**
+→ formulate question
+→ investigate
+→ test
+→ provisional conclusion
+→ practice / further observation
+→ confidence grows or view is revised.
+
+versus
+
+uncertainty
+→ **unwise attention**
+→ recursive hesitation
+→ demand impossible certainty before acting
+→ no test
+→ no new evidence
+→ doubt feeds itself.
+
+This is a cross-text model, not a single canonical sequence.
+
+### DOUBT VS REFUSAL TO OVERCLAIM
+
+Saying:
+“I do not yet know”
+
+is not automatically `vicikicchā`.
+
+It may be epistemically healthy when:
+- evidence is genuinely incomplete;
+- the person continues investigation;
+- the uncertainty is specific rather than global;
+- practice proceeds where enough is already known.
+
+Thus the Buddhist critique of doubt is not a demand to pretend certainty.
+
+### RELATION TO SADDHĀ
+
+A43 established that `saddhā` can support approach and testing without becoming dogma.
+
+A44 adds:
+- some trust is often needed to begin a test;
+- inquiry prevents trust from hardening into blind allegiance;
+- direct knowing reduces the need for unresolved doubt;
+- mature practice therefore uses **confidence and investigation together**, rather than treating them as enemies.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: functional analysis of doubt and confidence;
+- Mi Tiên describes doubt as a condition that makes the mind hesitate and fail to commit clearly to what should be done;
+- it contrasts this with faith as clarification/tranquillization, which settles mental turbidity enough for effort and discernment to operate;
+- interpretation change: **MINOR** — sharpened the distinction between productive questioning and indecisive mental wavering;
+- early-discourse confirmation: **YES**, especially via SN 46 hindrance/awakening-factor contrast, MN 95, AN 3.66, and MN 2;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### PRACTICAL DIAGNOSTIC
+
+A question is likely healthy inquiry when:
+- it can be stated clearly;
+- there is a next experiment, text, observation, or practice step;
+- new evidence can actually settle or reshape it;
+- it does not require omniscience before action.
+
+Doubt is drifting into hindrance when:
+- the same question is recycled without new evidence;
+- every answer merely creates another reason not to test;
+- uncertainty becomes global (“nothing can be known”);
+- doubt is used to protect identity from commitment or correction.
+
+These are analytical applications, not a verbatim canonical checklist.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 46 material on doubt as hindrance and `dhammavicaya` as awakening factor.
+- MN 95 Caṅkī Sutta.
+- AN 3.66 Kālāma Sutta.
+- MN 2 Sabbāsava Sutta.
+- SN 25 faith-follower / Dhamma-follower materials.
+
+Mandatory Milindapañha layer:
+- doubt as wavering/indecision;
+- faith as clarification/tranquillization.
+
+### Next checkpoint — PHASE 4 A45
+
+Central question:
+
+**How does `dhammavicaya` investigate without becoming restless analysis, argument-addiction, or papañca?**
+
+Required lanes:
+- investigation as awakening factor;
+- relation among mindfulness, investigation, energy, calm, concentration, equanimity;
+- when analysis serves seeing versus becomes proliferation;
+- revisit MN 18 on thinking → papañca;
+- mandatory Milindapañha consultation;
+- distinguish precision from compulsive intellectualization.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A43 and routes the next work to A44.
+This checkpoint preserves A30–A44 and routes the next work to A45.
