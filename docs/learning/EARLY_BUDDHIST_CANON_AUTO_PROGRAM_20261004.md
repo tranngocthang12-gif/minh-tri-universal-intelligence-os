@@ -473,3 +473,23 @@ Key advances:
 
 Current comparative status: ACTIVE_PARALLEL_AUDIT_WITH_NON_HARMONIZATION_RULE.
 
+## 17. Clause alignment + high-risk translation cards v0.7
+
+Clause alignment:
+`docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md`
+
+Translation cards:
+`docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json`
+
+Completed semantic clause alignments:
+- MN 22 ↔ MĀ 200;
+- SN 12.15 ↔ SĀ 301;
+- MN 117 ↔ MĀ 189;
+- MN 61 ↔ MĀ 14.
+
+New method invariant:
+Cross-traditional functional cores receive higher confidence than exact local technical formulations. Textual anomalies remain unresolved rather than being forced into doctrinal harmony.
+
+High-risk cards expanded:
+`viññāṇa`, `saṅkhāra`, `papañca`, `sati`, `samādhi`, `nibbāna`.
+
