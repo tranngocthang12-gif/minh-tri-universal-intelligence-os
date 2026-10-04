@@ -99,15 +99,20 @@ No domain-specific learning record can opt out of this continuity rule unless th
 
 For the Owner's learning track **Học hiểu tư duy, tư tưởng Phật**, every chat/seat doing material Buddhist-study work must study and consult **Mi Tiên Vấn Đáp / Milindapañha throughout the learning process**, not only as an occasional optional reference.
 
+This section is the single canonical source-hierarchy rule for this Buddhist-thought track. Do not create a parallel or competing Buddhist-study law for the same subject.
+
 Mandatory rules:
 
-1. Milindapañha must be revisited continuously as the Buddhist-thought track advances, especially where it clarifies argument structure, distinctions, objections, analogies, or reasoning methods.
-2. A Buddhist-study seat must not silently omit Milindapañha from the research plan for a material checkpoint.
-3. Milindapañha is a **supporting/paracanonical reasoning layer**, not the authority that overrides early-discourse evidence.
-4. Claims about the Buddha's early thought must still return to the early discourses for attestation.
-5. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
-6. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
-7. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
+1. **Study objective:** the purpose of this track is to understand the Buddha's thinking, reasoning method, and thought as closely as the evidence allows; it is not primarily a project to judge Buddhism by a later philosophical system or by modern science.
+2. **Primary/root source:** early discourses are the main attestation axis for claims about the Buddha's early thought. When a material interpretation is attributed to the Buddha, it must return to the early-discourse evidence for confirmation.
+3. **Milindapañha role:** Milindapañha must be revisited continuously as the Buddhist-thought track advances, especially where it clarifies argument structure, distinctions, objections, analogies, or reasoning methods.
+4. A Buddhist-study seat must not silently omit Milindapañha from the research plan for a material checkpoint.
+5. Milindapañha is a **mandatory supporting/paracanonical reasoning layer**, not the authority that overrides early-discourse evidence.
+6. **Source-conflict rule:** if a later/paracanonical explanation conflicts with the early-discourse evidence on a claim about early Buddhist thought, the early-discourse evidence has priority and the disagreement must be recorded rather than harmonized silently.
+7. **Modern-science boundary:** modern science may be used only when it helps clarify context or comparison requested by the Owner; it is not the judging framework that validates or invalidates the Buddha's thought in this track.
+8. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
+9. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
+10. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
 
 ## 8. Blocked write-path rule
 
