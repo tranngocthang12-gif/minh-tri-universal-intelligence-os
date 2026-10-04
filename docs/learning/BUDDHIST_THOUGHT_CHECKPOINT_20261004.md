@@ -8269,3 +8269,267 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A80
+
+**Central question:** How do `ceto-vimutti` and `paññā-vimutti` relate in the early discourses, and when are they a paired formula, distinct meditative usages, or classifications of liberated persons?
+
+### TEXT_ATTESTED — 1. THE EARLY DISCOURSES FREQUENTLY PRESENT THE TWO TOGETHER AT FINAL RELEASE
+
+A recurring formula says that, with the ending of the `āsava`, a practitioner realizes in this very life the **undefiled freedom of heart (`ceto-vimutti`) and freedom by wisdom (`paññā-vimutti`)**.
+
+Examples consulted:
+- MN 73;
+- AN 3.90;
+- MN 6;
+- SN 51.18;
+- DN 16 and related formulae.
+
+This gives the first guardrail:
+
+**at arahant-level release, the early texts often speak of `ceto-vimutti` and `paññā-vimutti` together rather than as rival final goals.**
+
+The paired formula should not be turned into two independent substances or two separate selves that become free.
+
+### TEXT_ATTESTED — 2. AN 2.31 GIVES A FUNCTIONAL DISTINCTION
+
+**AN 2.31** states that:
+- when serenity (`samatha`) is developed, the mind is developed and passion is abandoned;
+- when insight (`vipassanā`) is developed, wisdom is developed and ignorance is abandoned.
+
+It concludes with the paired distinction:
+- from the fading of passion: `ceto-vimutti`;
+- from the fading of ignorance: `paññā-vimutti`.
+
+A80 therefore uses a bounded functional model:
+
+`ceto-vimutti`
+→ emphasizes freedom of the mind/heart from passion;
+
+`paññā-vimutti`
+→ emphasizes liberation through the ending of ignorance by wisdom.
+
+But this does **not** justify the slogan:
+“one liberation is only concentration and the other is only insight.”
+
+The final path repeatedly integrates serenity, insight, and the ending of the taints.
+
+### TEXT_ATTESTED — 3. AN 3.90 PREVENTS AN OVER-SIMPLE SAMATHA/VIPASSANĀ SPLIT
+
+**AN 3.90** defines:
+- higher ethics;
+- higher mind, represented by the four jhānas;
+- higher wisdom.
+
+Yet the culmination of the **higher-wisdom training** is described by the paired formula:
+**undefiled `ceto-vimutti` and `paññā-vimutti` realized through the ending of the taints.**
+
+Therefore:
+**final `ceto-vimutti` cannot safely be reduced to “concentration alone.”**
+
+The two terms can mark distinguishable functions while belonging to one integrated liberation.
+
+### TEXT_ATTESTED — 4. CETO-VIMUTTI HAS A WIDER RANGE THAN FINAL ARAHANT RELEASE
+
+**MN 43** distinguishes several forms of `ceto-vimutti`:
+- limitless release of heart;
+- release through nothingness;
+- release through emptiness;
+- signless release of heart.
+
+The discourse then says that there is also a way in which these converge in meaning at the highest level:
+the **unshakable release of heart (`akuppā ceto-vimutti`)**, where greed, hate, and delusion have been uprooted and cannot arise again.
+
+This is crucial.
+
+The bare expression:
+`ceto-vimutti`
+
+does **not** always mean:
+`final arahant liberation`.
+
+Context and qualifiers matter.
+
+A80 therefore distinguishes:
+- meditative/qualified releases of heart;
+- final undefiled and unshakable release.
+
+### IMPORTANT GUARDRAIL — TEMPORARY OR CONDITIONED CETO-VIMUTTI IS NOT FALSE
+
+The fact that some forms of `ceto-vimutti` are conditioned meditative attainments does not make them counterfeit.
+
+They can be genuine releases in the domain named by the text:
+- limitless;
+- nothingness;
+- emptiness;
+- signlessness.
+
+The mistake is only to promote every such attainment automatically to complete destruction of the taints.
+
+### TEXT_ATTESTED — 5. MN 70 DEFINES TWO ARAHANT TYPES WITHOUT MAKING TWO GRADES OF TAINT-DESTRUCTION
+
+**MN 70 Kīṭāgiri** defines:
+
+**`ubhatobhāgavimutta` — “freed both ways”**
+- directly experiences the peaceful formless liberations that transcend form;
+- and, having seen with wisdom, the taints are ended.
+
+**`paññāvimutta` — “freed by wisdom”**
+- does not directly experience those peaceful formless liberations;
+- but, having seen with wisdom, the taints are nevertheless ended.
+
+Both are presented as having completed the work.
+
+Therefore:
+**mastery of the formless attainments is not required for full destruction of the taints.**
+
+This is a major guardrail against turning advanced concentration into a necessary definition of final liberation.
+
+### IMPORTANT GUARDRAIL — DO NOT EQUATE UBHATOBHĀGAVIMUTTA WITH THE PAIRED NOUN FORMULA
+
+The person-classification:
+`ubhatobhāgavimutta`
+
+and the recurrent attainment formula:
+`ceto-vimutti + paññā-vimutti`
+
+are related themes but are **not textually identical expressions**.
+
+MN 70 defines “freed both ways” through:
+- direct experience of the formless peaceful liberations;
+- plus destruction of taints by wisdom.
+
+It does not simply define the person as:
+“one who possesses the two nouns `ceto-vimutti` and `paññā-vimutti`.”
+
+Any tighter equation belongs to later systematization unless separately demonstrated.
+
+### TEXT_ATTESTED — 6. PAÑÑĀVIMUTTA IS ALREADY FULLY LIBERATED
+
+MN 70 says the `paññāvimutta` has the taints destroyed through seeing with wisdom and has no further work to do.
+
+So:
+`paññāvimutta`
+does **not** mean:
+“partially liberated because they lack some meditative accomplishment.”
+
+The distinction concerns the profile of meditative attainments, not incomplete versus complete ending of the taints.
+
+### IMPORTANT GRAMMATICAL / TERMINOLOGICAL GUARDRAIL
+
+Keep separate:
+
+- `paññā-vimutti`: the abstract noun, “freedom by/through wisdom,” often found in the paired final formula;
+- `paññā-vimutta`: a person “freed by wisdom,” a classification explicitly defined in MN 70.
+
+Likewise:
+- `ceto-vimutti` is a release/freedom of heart or mind;
+- `ubhatobhāgavimutta` is a person-classification.
+
+Do not infer doctrine merely from similar English translations.
+
+### TEXT_ATTESTED — 7. FORMLESS EXPERIENCE ALONE DOES NOT PROVE FINAL LIBERATION
+
+MN 70 also defines the **direct witness (`kāyasakkhī`)**:
+- they directly experience the peaceful formless liberations;
+- but only some taints have ended.
+
+Therefore:
+**profound formless attainment is neither sufficient nor identical with arahantship.**
+
+This complements A79's finding that strong concentration and extraordinary capacities do not by themselves prove liberation from all taints.
+
+### SYNTHESIS — ONE FINAL LIBERATION, MULTIPLE ANALYTICAL ANGLES
+
+The safest A80 model is:
+
+**one integrated path**
+→ serenity develops the heart/mind and weakens/ends passion;
+→ insight develops wisdom and ends ignorance;
+→ at final release the texts often pair `ceto-vimutti` and `paññā-vimutti`;
+→ different practitioner classifications can still reflect different meditative attainment profiles.
+
+This is **CROSS_TEXT SYNTHESIS**.
+
+Do not convert it into:
+- two metaphysical liberations;
+- two independent paths that never cooperate;
+- or a rigid later scholastic map projected into every early passage.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant themes in the early Milindapañha dialogue:
+  1. virtue is the foundation on which the other wholesome qualities develop;
+  2. meditation/concentration is described as a leading or gathering quality toward which wholesome qualities incline;
+  3. wisdom has the characteristics of cutting off and illumination;
+  4. distinct wholesome qualities are said to work toward one result: ending harmful dispositions;
+- role in A80:
+  - strongly supports a **cooperative architecture** of concentration/meditation and wisdom rather than two unrelated liberations;
+  - supports maintaining functional distinctions without splitting the path into disconnected systems;
+- limitation:
+  - Milindapañha does not provide the decisive early taxonomy of `ceto-vimutti`, `paññā-vimutti`, `ubhatobhāgavimutta`, and `paññāvimutta`;
+  - the decisive taxonomy remains rooted in the Nikāya passages above;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 2.31 — serenity/passion and insight/ignorance; `ceto-vimutti` / `paññā-vimutti` functional distinction.
+- MN 43 — multiple qualified releases of heart and the unshakable release free from greed, hate, and delusion.
+- MN 70 — `ubhatobhāgavimutta`, `paññāvimutta`, and `kāyasakkhī` classifications.
+- MN 73 — undefiled `ceto-vimutti` and `paññā-vimutti` together through ending the taints.
+- AN 3.90 — the paired final formula placed at culmination of higher-wisdom training.
+- SN 51.18 / MN 6 and related formulae — repeated paired attainment language.
+
+Later/paracanonical:
+- Milindapañha on virtue, meditation, wisdom, and their coordinated function.
+
+### METHOD INSIGHT
+
+A80 shows a recurrent feature of the Buddha's thought:
+
+**functional distinctions do not necessarily imply separate final goals.**
+
+The mind must be freed from passion.
+Ignorance must be ended by wisdom.
+Different meditators can have different ranges of concentration attainment.
+
+Yet final liberation is repeatedly presented as one completed release from the taints, not as a competition between “heart” and “wisdom.”
+
+### PRACTICAL DIAGNOSTIC
+
+When encountering a liberation term, ask:
+- Is this `ceto-vimutti` a specific meditative release or the final unshakable release?
+- Is the text explicitly saying “undefiled” and “through ending of the taints”?
+- Am I confusing the noun `paññā-vimutti` with the person-class `paññāvimutta`?
+- Does the passage require formless attainment, or only destruction of the taints by wisdom?
+- Am I treating strong samādhi as proof of complete liberation?
+- Am I splitting serenity and insight more sharply than the early text does?
+- Is the claim text-attested, cross-text synthesis, later-systematic, or lexical-open?
+
+### Open audit
+
+- full occurrence-level audit of `ceto-vimutti`, `cetovimutta`, `paññā-vimutti`, `paññāvimutta`, and `ubhatobhāgavimutta`;
+- early Chinese parallel stress-test for MN 43 and MN 70;
+- exact historical relation between the paired liberation formula and the seven-person taxonomy remains OPEN;
+- determine the range of `akuppā ceto-vimutti` across the early corpus;
+- separate early-text definitions from later commentarial explanations of why “both ways” is so named;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A80 mirror attempt: **UNREACHABLE** if the current read-only connector remains unavailable;
+- no Local Brain write is to be inferred from GitHub recording.
+
+### Next checkpoint — PHASE 4 A81
+
+**How do `samatha` and `vipassanā` actually relate in the early discourses: are they two separate roads, two faculties that can develop in different orders, or mutually supporting functions inside one path?**
+
+Required lanes:
+- AN 2.31;
+- AN 4.170 and other order-of-development passages;
+- MN / SN material connecting samādhi to knowing-and-seeing;
+- distinguish early usage from later “samatha path versus vipassanā path” systems;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
