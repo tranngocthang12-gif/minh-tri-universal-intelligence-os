@@ -297,3 +297,11 @@ Every material checkpoint must be durably recorded in GitHub with learned/correc
 
 The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`; the preserved handoff is A30–A33 completed → NEXT A34.
 
+## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
+
+For any material work in the Buddhist-thought learning track, the seat must include Mi Tiên Vấn Đáp / Milindapañha in the study process throughout the track.
+
+It is mandatory as a supporting/paracanonical reasoning source, especially for argument structure, objections, distinctions and analogies. It must not replace early-discourse attestation. Claims about early Buddhist thought still return to early discourses for confirmation and must preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, and `LATER/PARACANONICAL` boundaries.
+
+Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
+
