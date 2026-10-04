@@ -117,9 +117,28 @@
       "topic": "MN61 coherent purity/result logic vs MĀ14 anomalous pure-bad/impure-good clauses",
       "status": "TEXTUAL_ANOMALY_UNRESOLVED",
       "resolution": "retain shared ethical-audit core; do not harmonize or doctrinalize anomalous clauses"
+    },
+    {
+      "id": "C10",
+      "topic": "MN38/MA201 reject same unchanged consciousness vs DN15 consciousness descends to womb",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "rebirth-conditioning function is distinguishable from numerical identity of an unchanged consciousness-substance; exact cross-life mechanism remains underdetermined"
+    },
+    {
+      "id": "C11",
+      "topic": "gradual-training jhana-before-insight sequence vs AN4.170 multiple samatha-vipassana routes",
+      "status": "RESOLVED_AS_MULTIPLE_DEVELOPMENTAL_ROUTES",
+      "resolution": "standard pedagogical sequence is not a universal chronology; serenity and insight remain integrated capacities"
+    },
+    {
+      "id": "C12",
+      "topic": "Atthakavagga anti-view language vs Nikaya right view",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "functional right discrimination differs from identity-grasping at views; genre/stratum tension remains preserved"
     }
   ],
   "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation.",
   "clause_alignment": "docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
-  "translation_cards_v2": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json"
+  "translation_cards_v2": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json",
+  "hard_cluster_v0_8": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md"
 }
