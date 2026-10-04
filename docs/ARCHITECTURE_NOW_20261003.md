@@ -516,3 +516,10 @@ Declared compute budgets are insufficient. Actual token/retrieval/critic/generat
 Coverage non-inferiority is mandatory so the treatment cannot win factual-accuracy and unsupported-claim metrics merely by saying less.
 
 The current repository implements planning/validation contracts. It does **not** yet contain a proven live isolated executor, provider telemetry capture, blinded evaluator runtime, or empirical Trial-001 result. External code review of the reader remains required.
+
+
+## Buddhist thought learning continuity — 2026-10-04
+
+The Owner-directed Buddhist thought track is canonicalized through `docs/learning/BUDDHIST_THOUGHT_LEARNING_PROGRAM_20261004.md` plus its state checkpoint. Imported A1–A4 chat work is `PARTIAL_SOURCE_AUDIT`, not VERIFIED. Forward study resumes at A5 while an audit-backfill lane remains open for SN 12, SN 22, SN 35, SN 45, SN 46, Aṭṭhakavagga lexical work, Arthapada, and relevant MĀ/SĀ parallels.
+
+Milindapañha is an important dialectical/stress-test layer and must remain source-labeled; it is not silently relabeled as early Nikāya text. New chats recover this track from `PROJECT_STATE.json` pointers rather than relying on chat memory. Local-brain mirroring remains pending a separate Owner-gated write-plane operation.
