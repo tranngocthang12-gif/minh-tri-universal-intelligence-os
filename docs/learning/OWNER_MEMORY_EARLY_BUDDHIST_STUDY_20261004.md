@@ -219,3 +219,20 @@ Unresolved:
 Next:
 consciousness/rebirth contradiction cluster, jhāna-vs-insight sequence, Aṭṭhakavagga-vs-right-view stress test, then whole-corpus indexing.
 
+## Latest progress — hard cluster v0.8
+
+Current synthesis:
+`docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md`
+
+Whole-corpus index:
+`docs/learning/EARLY_BUDDHIST_WHOLE_CORPUS_INDEX_V0_1.json`
+
+Durable findings:
+- same unchanged consciousness transmigrating is explicitly rejected across MN 38 / MĀ 201;
+- rebirth continuity is modeled causally, not as a soul-like carrier;
+- exact cross-life mechanism remains partially underdetermined and must not be silently filled by later doctrines;
+- samatha and vipassanā admit multiple developmental sequences while remaining integrated;
+- Aṭṭhakavagga's anti-view rhetoric is not licensed as relativism; preserve a distinction between right-view function and view-grasping.
+
+Whole-corpus indexing has now begun with priority blocks SN 12, SN 22, SN 35, SN 36, SN 45/46, MN dialogue clusters and Aṭṭhakavagga.
+
