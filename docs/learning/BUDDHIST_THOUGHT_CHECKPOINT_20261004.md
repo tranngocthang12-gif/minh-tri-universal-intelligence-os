@@ -11254,3 +11254,401 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A89
+
+**Central question:** How do the seven awakening factors function as a coordinated dynamic system, and why are they repeatedly developed dependent on seclusion, dispassion, cessation, and maturing in relinquishment rather than merely for pleasant meditation states?
+
+### TEXT_ATTESTED — 1. THE SEVEN FACTORS ARE ONE COORDINATED AWAKENING SET
+
+The early discourses repeatedly list:
+- mindfulness (`sati`);
+- investigation of Dhamma (`dhammavicaya`);
+- energy (`viriya`);
+- rapture (`pīti`);
+- tranquility (`passaddhi`);
+- samādhi;
+- equanimity (`upekkhā`).
+
+They are not seven unrelated virtues.
+
+**MN 118** presents them as a connected development:
+mindfulness established
+→ investigation
+→ energy
+→ rapture
+→ tranquility
+→ samādhi
+→ equanimity.
+
+The discourse then says development of the seven awakening factors fulfills true knowledge and liberation.
+
+Thus A89 treats them as:
+**distinct functions coordinated toward awakening.**
+
+### TEXT_ATTESTED — 2. MINDFULNESS HAS A SPECIAL REGULATING ROLE
+
+A88 established from **SN 46.53**:
+- investigation, energy, and rapture are timely when the mind is sluggish;
+- tranquility, samādhi, and equanimity are timely when the mind is over-excited;
+- mindfulness is useful at all times.
+
+This gives mindfulness a special role.
+
+It does not merely sit first in a list.
+It helps the practitioner know:
+- what state the mind is in;
+- which factor is absent;
+- which factor is excessive or untimely;
+- what should now be developed.
+
+A bounded functional synthesis is:
+**mindfulness monitors the system while the other factors are selectively strengthened according to need.**
+
+### TEXT_ATTESTED — 3. THE FACTORS ARE DYNAMICALLY BALANCED, NOT MAXIMIZED INDEPENDENTLY
+
+SN 46.53 is decisive.
+
+When sluggish:
+- investigation;
+- energy;
+- rapture
+
+arouse and brighten the mind.
+
+When restless:
+- tranquility;
+- samādhi;
+- equanimity
+
+settle and stabilize it.
+
+Therefore:
+**a wholesome factor can be correct in itself but wrong in timing.**
+
+The Buddha's model is not:
+“more energy is always better”
+or
+“more tranquility is always better.”
+
+The relevant question is:
+**what restores the path-relevant balance now?**
+
+### TEXT_ATTESTED — 4. SN 46.51 SHOWS THAT THE WHOLE SYSTEM DEPENDS ON NUTRIMENT
+
+**SN 46.51** describes nutriment for:
+- the five hindrances;
+- the seven awakening factors.
+
+Wise attention can nourish the awakening factors.
+Unwise attention can nourish the hindrances.
+
+Thus the seven-factor system is not self-starting.
+
+It depends on upstream conditions:
+- wise attention;
+- mindfulness;
+- appropriate objects/aspects;
+- skillful development.
+
+This connects A87-A89:
+**attention determines what is fed; the awakening factors determine how the mind is regulated and matured.**
+
+### TEXT_ATTESTED — 5. THE STANDARD FORMULA GIVES THE WHOLE SYSTEM A LIBERATIVE DIRECTION
+
+In **MN 118** and recurrent **SN 46** formulas, each awakening factor is developed:
+
+- dependent on seclusion (`viveka-nissita`);
+- dependent on dispassion (`virāga-nissita`);
+- dependent on cessation (`nirodha-nissita`);
+- maturing/ripening in relinquishment (`vossagga-pariṇāmi`).
+
+This is decisive.
+
+The awakening factors are not defined merely by:
+- calm;
+- pleasure;
+- focus;
+- energy;
+- balance.
+
+Their orientation is:
+**away from feeding attachment and toward letting go and cessation.**
+
+### LEXICAL GUARDRAIL — `VIVEKA`
+
+Working range:
+- seclusion;
+- separation;
+- detachment/withdrawal from what entangles.
+
+In early meditation contexts `viveka` can refer to seclusion from:
+- sensuality;
+- unskillful qualities;
+- social/sensory entanglement in some contexts.
+
+A89 therefore does not freeze:
+`viveka = physical solitude only`.
+
+Physical seclusion may support it, but the awakening-factor formula is preserved with a broader **liberative orientation away from entanglement**.
+
+Exact occurrence-level range remains **LEXICAL OPEN**.
+
+### LEXICAL GUARDRAIL — `VIRĀGA`
+
+A77 established:
+`virāga` is not emotional numbness.
+
+In A89 its role is directional:
+the awakening factors are developed in dependence on **fading of passion / dispassion**.
+
+Thus a meditation state that is:
+- concentrated;
+- pleasurable;
+- even balanced
+
+but strengthens possessiveness, self-importance, or craving
+does not fulfill this orientation.
+
+### LEXICAL GUARDRAIL — `NIRODHA`
+
+A78 established:
+`nirodha` should be read contextually as cessation of conditioned production, not metaphysical annihilation.
+
+In the awakening-factor formula, the factors are developed dependent on cessation.
+
+A89 therefore uses:
+**their mature direction is toward ending the causal processes that sustain greed, hate, delusion, craving, and suffering.**
+
+This is a **CROSS-TEXT SYNTHESIS**, not a claim that every use of `nirodha` has one identical object.
+
+### LEXICAL GUARDRAIL — `VOSSAGGA-PARIṆĀMI`
+
+Working translation:
+- maturing in relinquishment;
+- ripening toward relinquishment;
+- culminating in letting go.
+
+A89 does not reduce `vossagga` to:
+- giving away possessions;
+- passivity;
+- losing interest through exhaustion.
+
+Its role in this formula is the mature direction of the system:
+**what has been clearly known is no longer held, fed, or appropriated in the same way.**
+
+Exact relation among:
+- `vossagga`;
+- `paṭinissagga`;
+- `anupādā`;
+- `nekkhamma`
+
+remains OPEN for later lexical audit.
+
+### IMPORTANT GUARDRAIL — BALANCE IS NOT THE FINAL GOAL
+
+SN 46.53 teaches balancing the mind.
+
+But A89 adds a crucial distinction.
+
+**Immediate function**
+→ regulate dullness and restlessness.
+
+**Liberative direction**
+→ seclusion, dispassion, cessation, relinquishment.
+
+A mind can be calm and balanced yet still:
+- cling to the calm;
+- identify with attainment;
+- crave repetition;
+- remain ignorant.
+
+Therefore:
+**state regulation is necessary, but not sufficient for liberation.**
+
+### TEXT_ATTESTED — 6. MN 118 PREVENTS THE SYSTEM FROM BECOMING A “FEEL-GOOD” TECHNOLOGY
+
+The MN 118 sequence includes:
+- rapture;
+- tranquility;
+- samādhi;
+- equanimity.
+
+These can be pleasant or refined.
+
+But the same discourse places the seven factors inside a trajectory culminating in:
+**knowledge and liberation.**
+
+Therefore the criterion is not:
+“did meditation feel better?”
+
+It is:
+- did the factors become rightly developed?
+- did attachment weaken?
+- did the mind move toward release?
+
+### CROSS-TEXT SYNTHESIS — TWO LEVELS OF OPERATION
+
+A89 distinguishes two levels.
+
+**Level 1 — regulation**
+- mindfulness detects condition;
+- arousing factors raise a dull mind;
+- calming factors settle an agitated mind.
+
+**Level 2 — liberation**
+- the entire coordinated system is developed in dependence on:
+  `viveka → virāga → nirodha`;
+- and matures in:
+  `vossagga`.
+
+This is **CROSS-TEXT SYSTEMS SYNTHESIS** from SN 46.51, SN 46.53, and MN 118.
+
+No single discourse presents the two-level diagram in these exact terms.
+
+### IMPORTANT GUARDRAIL — RAPTURE IS NOT THE GOAL
+
+`pīti` is an awakening factor.
+
+But:
+- it is one factor among seven;
+- it is timely in some conditions and untimely in others;
+- the system proceeds beyond it into tranquility, samādhi, equanimity, and relinquishment.
+
+So:
+**strong rapture is not proof of mature awakening-factor development.**
+
+A powerful state may still be immature if it is not integrated and relinquishment-oriented.
+
+### IMPORTANT GUARDRAIL — EQUANIMITY IS NOT THE GOAL EITHER
+
+`upekkhā` is the final item in the standard seven-factor list.
+
+But the standard formula still says it is developed:
+- dependent on seclusion;
+- dispassion;
+- cessation;
+- maturing in relinquishment.
+
+Therefore equanimity itself is not an object to possess.
+
+It is part of a system whose mature direction is **non-possession**.
+
+### RELATION TO THE FIVE HINDRANCES
+
+A87-A88 established:
+- hindrances have nutriment;
+- awakening factors have nutriment;
+- wise attention can starve one network and feed the other.
+
+A89 adds:
+
+**the five hindrances and seven awakening factors are not just two lists; they represent opposed functional organizations of mind.**
+
+One organization:
+- scatters;
+- dulls;
+- agitates;
+- doubts;
+- binds.
+
+The other:
+- remembers;
+- investigates;
+- energizes;
+- gladdens;
+- calms;
+- collects;
+- equilibrates.
+
+This is **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant themes already carried in the Milindapañha layer:
+  1. the seven awakening factors are explicitly listed among wholesome qualities;
+  2. mindfulness keeps relevant good/bad and right/wrong distinctions present;
+  3. concentration gathers wholesome qualities;
+  4. wisdom cuts off and illuminates;
+  5. distinct wholesome qualities cooperate toward ending harmful dispositions;
+- role in A89:
+  - supports the idea of a coordinated set of distinct functions;
+  - supports concentration and wisdom as cooperative rather than rival;
+- limitation:
+  - Milindapañha does **not** supply the decisive early formula `viveka-nissita, virāga-nissita, nirodha-nissita, vossagga-pariṇāmi`;
+  - the root authority for that orientation remains MN 118 and SN 46;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 118 — seven awakening factors developed and culminating in knowledge and liberation; each developed dependent on seclusion, dispassion, cessation, maturing in relinquishment.
+- SN 46.53 — dynamic balancing of arousing and calming factors; mindfulness useful throughout.
+- SN 46.51 — nutriment/non-nutriment for hindrances and awakening factors.
+- MN 10 / DN 22 — mindfulness knows presence, absence, arising, and development of awakening factors.
+- SN 46 standard formulae — repeated liberative orientation of the seven factors.
+
+Later/paracanonical:
+- Milindapañha — coordinated wholesome-factor architecture.
+
+### METHOD INSIGHT
+
+A89 reveals a particularly important feature of the Buddha's thought:
+
+**balance is instrumental; relinquishment is directional.**
+
+The mind is balanced not so that it can remain forever in a pleasant optimized state.
+
+It is balanced so it can:
+- see clearly;
+- stop feeding passion;
+- allow conditioned bondage to cease;
+- let go.
+
+This protects Buddhist training from becoming merely:
+- emotional self-regulation;
+- peak-state engineering;
+- concentration for its own sake.
+
+### PRACTICAL DIAGNOSTIC
+
+When the seven factors seem present, ask:
+- Is mindfulness actually monitoring the mind?
+- Is the mind dull or over-excited?
+- Am I using the right factor for the current imbalance?
+- Is rapture becoming another object of craving?
+- Is tranquility becoming avoidance?
+- Is samādhi becoming identity?
+- Is equanimity becoming indifference?
+- Are greed, hate, and delusion weakening?
+- Is the whole development moving toward seclusion, dispassion, cessation, and relinquishment?
+- What am I actually becoming more willing to let go of?
+
+### Open audit
+
+- full lexical/context audit of `viveka`, `virāga`, `nirodha`, `vossagga`, `paṭinissagga`, and `pariṇāmi`;
+- occurrence-level audit of the standard awakening-factor formula across SN 46 and MN 118;
+- early parallel stress-test for the seven-factor list and relinquishment orientation;
+- determine whether `viveka-nissita` should be read primarily as seclusion from defilement, physical seclusion, or context-dependent layering in each passage;
+- clarify grammar and doctrinal range of `vossagga-pariṇāmi`;
+- continue SN 46 ID-level audit and SN 45–46 consistency work;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A89 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A90
+
+**What exactly are `vossagga` and `paṭinissagga` in the early discourses, and how does relinquishment differ from suppression, loss, non-possession, indifference, and non-grasping?**
+
+Required lanes:
+- awakening-factor formula `vossagga-pariṇāmi`;
+- breath-meditation formula of contemplating relinquishment;
+- compare `vossagga`, `paṭinissagga`, `anupādā`, `nekkhamma`, and `cāga`;
+- distinguish letting go of grasping from mere external dispossession;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
