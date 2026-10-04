@@ -497,5 +497,8 @@
   "owner_learning_track_early_buddhist_reasoning_status": "INTEGRATED_STRESS_TESTED_CORE_NOT_WHOLE_CORPUS_MASTERED",
   "owner_learning_track_early_buddhist_adversarial_cluster_1": "PASS_WITH_MODEL_REVISIONS_MN1_19_20_21_26_38_39_72_SN35_23_SN44_10",
   "owner_learning_track_early_buddhist_stress_test_2": "PASS_WITH_REFINEMENTS_MN22_58_60_61_117_SN12_15_SN22_85_SN35_28_30_ATTHAKAVAGGA_SAMPLES",
-  "owner_learning_track_early_buddhist_memory_contract": "CANONICAL_PROJECT_GITHUB_ONLY_PROJECT_MEMORY_DISABLED"
+  "owner_learning_track_early_buddhist_memory_contract": "CANONICAL_PROJECT_GITHUB_ONLY_PROJECT_MEMORY_DISABLED",
+  "owner_learning_track_early_buddhist_memory": "docs/learning/OWNER_MEMORY_EARLY_BUDDHIST_STUDY_20261004.md",
+  "owner_learning_track_early_buddhist_memory_status": "CANONICAL_GITHUB_HANDOFF_ACTIVE",
+  "owner_learning_track_early_buddhist_memory_updated": "2026-10-04"
 }
