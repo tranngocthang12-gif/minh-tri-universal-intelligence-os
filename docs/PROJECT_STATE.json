@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A71_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A72",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A72_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A73",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -576,5 +576,7 @@
   "owner_learning_track_buddhist_thought_a70_claim_class": "TEXT_ATTESTED_INTENTION_KAMMA_CESSATION_LIVING_ARAHANT_AND_ROOT_DESTRUCTION_PLUS_CROSS_TEXT_FUNCTIONAL_ACTION_WITHOUT_RENEWED_BECOMING_PLUS_LATER_COMMENTARIAL_KIRIYA_GUARDRAIL_AND_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a70_milindapanha": "CONSULTED_POST_AWAKENING_DELIBERATE_DETERMINATION_NO_FORCED_DEATH_AND_CONTINUED_BODILY_EXPERIENCE",
   "owner_learning_track_buddhist_thought_a71_claim_class": "TEXT_ATTESTED_OLD_NEW_KAMMA_AND_KAMMA_CESSATION_PLUS_ANTI_FATALISM_GUARDRAIL_PLUS_CROSS_TEXT_PRESENT_REMAINDER_VS_FUTURE_PRODUCTION_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a71_milindapanha": "CONSULTED_REMAINING_BODILY_CONDITIONS_NO_FORCED_DEATH_AND_NO_TOTAL_PAST_KAMMA_CAUSATION"
+  "owner_learning_track_buddhist_thought_a71_milindapanha": "CONSULTED_REMAINING_BODILY_CONDITIONS_NO_FORCED_DEATH_AND_NO_TOTAL_PAST_KAMMA_CAUSATION",
+  "owner_learning_track_buddhist_thought_a72_claim_class": "TEXT_ATTESTED_ANTI_FATALISM_OLD_NEW_KAMMA_PRESENT_INTENTION_AND_MULTI_CAUSALITY_PLUS_CROSS_TEXT_CONDITIONED_AGENCY_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a72_milindapanha": "CONSULTED_MULTIPLE_CAUSES_OF_PAIN_AND_PRESENT_CULTIVATION_NO_FREE_WILL_METAPHYSICS"
 }
