@@ -527,7 +527,7 @@ Every material learning checkpoint must durably preserve learned/corrected conte
 
 The invariant is fail-closed: durable recording never implies VERIFIED, and a routing mismatch among PROJECT_STATE, Law Index, Architecture, bootstrap, Recovery Manifest, consistency tests, or active learning checkpoint is an architecture consistency defect.
 
-The current Buddhist-thought track is routed at `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`, carrying A30–A33 with NEXT A34. This continuity record does not by itself re-verify its cited passages.
+The current Buddhist-thought track is routed at `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`. The authoritative CURRENT/NEXT checkpoint values are read from that checkpoint together with PROJECT_STATE and RECOVERY_MANIFEST; this architecture file must not hard-code a checkpoint number. This continuity record does not by itself re-verify its cited passages.
 
 ## 37. Buddhist-study Milindapañha continuity invariant — 2026-10-04
 
