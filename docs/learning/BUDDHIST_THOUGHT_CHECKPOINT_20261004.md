@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A48 COMPLETED  
-**Next checkpoint:** PHASE 4 — A49  
+**Current checkpoint:** PHASE 4 — A49 COMPLETED  
+**Next checkpoint:** PHASE 4 — A50  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -1827,6 +1827,221 @@ Required lanes:
 - compare “six classes of consciousness” with “established consciousness” without collapsing them;
 - relation to `āhāra`, delight, craving, and future becoming;
 - distinguish cessation of establishment from annihilationist interpretations;
+- mandatory Milindapañha consultation in the current chat/seat;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
+
+
+## Completed checkpoint A49
+
+**Central question:** What does it mean for consciousness (`viññāṇa`) to become “established” (`patiṭṭhita`) or “not established,” and how are craving, nutriment, intention, latent tendency, and renewed becoming involved?
+
+### TEXT_ATTESTED — 1. INTENTION, PLANNING, AND LATENT TENDENCY CAN PROVIDE A BASIS
+
+**SN 12.38 Cetanā** says that what one intends, plans, and has an underlying tendency toward becomes a basis for the support/maintenance of consciousness. When such a basis is present, consciousness becomes established; when established and growing, future renewed becoming arises, followed by birth, aging, death, and the mass of suffering.
+
+The same discourse adds an important qualification:
+- even when there is no conscious intending or planning,
+- an underlying tendency can still provide the basis.
+
+This blocks the simplistic equation:
+`conscious thought = whole causal mechanism`.
+
+### TEXT_ATTESTED — 2. “NOT ESTABLISHED” MEANS THE BASIS IS NOT FED
+
+SN 12.38 gives the cessation direction too:
+when there is no intending, no planning, and no underlying tendency toward anything, there is no basis for consciousness to be maintained; without that basis, consciousness is not established/growing in the way that produces future renewed becoming.
+
+The practical target is therefore not “destroy consciousness.”
+It is the ending of the basis by which consciousness becomes established in the production of renewed becoming.
+
+### TEXT_ATTESTED — 3. FOUR NUTRIMENTS AND CRAVING
+
+**SN 12.11 Āhāra** lists four nutriments:
+- edible food;
+- contact;
+- mental volition;
+- consciousness.
+
+It then states that these four nutriments have **craving (`taṇhā`) as their source/origin**.
+
+Thus nutriment itself belongs inside the causal network of dependent origination; it is not an independent metaphysical substance that stands outside the process.
+
+### TEXT_ATTESTED — 4. PASSION, DELIGHT, AND CRAVING GIVE CONSCIOUSNESS A LANDING PLACE
+
+**SN 12.64 Atthi Rāga** says that where there is passion, delight, and craving for any of the four nutriments, consciousness becomes established/lands there and grows. Where consciousness becomes established and grows:
+- name-and-form alights;
+- formations grow;
+- future renewed becoming is produced;
+- future birth, aging, and death follow.
+
+Where passion, delight, and craving are absent, consciousness does not become established/grow in this way and the downstream sequence is not produced.
+
+The ray-of-sunlight analogy is central:
+if there is no surface on which the beam can land, it does not become established anywhere.
+
+### TEXT_ATTESTED — 5. “WHO EATS CONSCIOUSNESS-NUTRIMENT?” IS THE WRONG QUESTION FORM
+
+**SN 12.12 Moḷiyaphagguna** is especially important for the thought-method of this track.
+
+When asked:
+“Who consumes consciousness as nutriment?”
+
+the Buddha says that this is not the proper question, because he has not framed the teaching as “someone consumes it.”
+
+He redirects the question to:
+“What is consciousness as nutriment a condition for?”
+
+The answer is future renewed becoming, followed by the dependent sequence.
+
+The same correction is repeated for:
+- contact;
+- feeling;
+- craving;
+- clinging.
+
+This is a strong early-text example of the Buddha replacing **agent/owner grammar** with **conditional grammar**.
+
+### TEXT_ATTESTED — 6. CONSCIOUSNESS DOES NOT GROW INDEPENDENTLY OF THE OTHER AGGREGATES
+
+**SN 22.53 Upaya** says that consciousness can be involved with, supported by, and established on form, feeling, perception, and formations, with relishing serving as the moisture by which it grows, increases, and matures.
+
+The discourse explicitly rejects the proposal that the coming, going, passing away, reappearance, growth, increase, or maturation of consciousness can be described apart from those other aggregates.
+
+This is a strong guardrail against turning `viññāṇa` into a self-existing eternal witness.
+
+### TEXT_ATTESTED — 7. THE SEED / EARTH / WATER IMAGE
+
+**SN 22.54 Bīja** compares:
+- stations/supports of consciousness to earth;
+- delight and lust to water;
+- consciousness together with nutriment to seed.
+
+Where passion for the relevant aggregate-elements is abandoned, the basis is cut off and there is no support for establishing consciousness.
+
+The discourse then describes such consciousness as:
+- unestablished;
+- not growing;
+- nongenerative;
+- liberated.
+
+The image is causal rather than substantial:
+growth depends on support and “watering.”
+
+### CROSS_TEXT SYNTHESIS — WHAT “ESTABLISHMENT” MEANS FUNCTIONALLY
+
+A bounded synthesis from SN 12.38, SN 12.64, SN 12.11, SN 12.12, SN 22.53, and SN 22.54 is:
+
+`intention / planning / latent tendency`
++ `passion / delight / craving`
++ `available nutriment/support`
+→ consciousness becomes established and grows
+→ name-and-form / formations are supported
+→ renewed becoming is produced
+→ birth and suffering continue.
+
+The cessation direction is:
+
+`abandon passion and craving + no intentional/latent basis`
+→ support is cut off
+→ consciousness does not become established/grow in the relevant way
+→ renewed becoming is not produced
+→ downstream suffering ceases.
+
+No single discourse contains this entire combined sequence word-for-word. Therefore the combined model is **CROSS_TEXT_SYNTHESIS**.
+
+### CRITICAL DISTINCTION — EXPERIENCE OF CONSCIOUSNESS VS ESTABLISHMENT OF CONSCIOUSNESS
+
+A49 must not equate:
+- the mere occurrence of eye-, ear-, nose-, tongue-, body-, or mind-consciousness;
+with
+- consciousness becoming established, growing, and supporting renewed becoming.
+
+The first is the sixfold classification in texts such as SN 12.2.
+The second appears in a different causal context in SN 12.38 / SN 12.64 / SN 22.53–54.
+
+The exact relation between these uses remains an open audit question.
+
+Claim class beyond the explicit passages: **OPEN/CHECK**.
+
+### WHY THIS IS NOT ANNIHILATIONISM
+
+When SN 22.53–54 speak of consciousness being “unestablished” and liberated, the texts do not say:
+“a permanent consciousness-self is destroyed.”
+
+The explanatory grammar remains:
+- support;
+- relishing;
+- passion;
+- establishment;
+- growth;
+- cutting off support;
+- nongeneration;
+- liberation.
+
+This should be read together with the earlier SN 12.15 guardrail against both absolute existence and absolute non-existence.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- passages/themes used:
+  1. **“Will you be reborn?”** — Nāgasena answers that rebirth follows if craving remains, and does not if craving is absent;
+  2. **farmer/granary analogy** — one knows there will be no further filling when the causes for filling have ceased;
+  3. **rebirth without transmigration** — the lamp-lighting analogy explains causal continuation without an invariant thing crossing over.
+- role in A49: these passages clarify the distinction between **continued causal production** and the migration/destruction of a permanent substance;
+- interpretation change: **MODERATE** — “unestablished” is better understood as loss of the causal support for renewed production, not as annihilation of an eternal witness;
+- early-discourse confirmation: **YES IN FUNCTION**, especially via SN 12.38, SN 12.64, SN 12.12, and SN 22.53–54;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The Milindapañha analogies illuminate the causal logic but do not override the early-discourse texts.
+
+If a later explanation were to imply:
+- a hidden permanent carrier;
+- a later technical consciousness theory not present in the cited early passages;
+- or a metaphysical conclusion stronger than the SN material supports,
+
+the early-discourse evidence remains primary.
+
+### PRACTICAL DIAGNOSTIC
+
+When an identity, thought-stream, resentment, fear, or craving keeps “coming back,” ask:
+- What is feeding it?
+- What delight or craving waters it?
+- What conscious intention is maintaining it?
+- If there is no conscious intention, what underlying tendency is still active?
+- What object/aggregate is being repeatedly used as a support?
+- What changes if delight is not supplied?
+- Is there simply consciousness of something, or is consciousness becoming established around it as “mine / for me / what I am”?
+
+This is an analytical application of the cited causal patterns, not a verbatim canonical meditation checklist.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.38 Cetanā — intention, planning, underlying tendency, establishment of consciousness, renewed becoming.
+- SN 12.11 Āhāra — four nutriments and craving as their source.
+- SN 12.64 Atthi Rāga — passion/delight/craving, consciousness landing and growing, future renewed becoming.
+- SN 12.12 Moḷiyaphagguna — rejection of “who?” framing in favor of conditional questions.
+- SN 22.53 Upaya — no independently growing consciousness apart from the other aggregates.
+- SN 22.54 Bīja — seed / earth / water model and unestablished liberated consciousness.
+
+Mandatory Milindapañha layer:
+- craving present/absent and rebirth;
+- farmer/granary cessation-of-causes analogy;
+- rebirth without transmigration.
+
+### Next checkpoint — PHASE 4 A50
+
+Central question:
+
+**What exactly is `bhava` (“becoming / existence”) in dependent origination, and how do craving and clinging condition it without reducing `bhava` either to a mere psychological mood or only to a post-mortem rebirth event?**
+
+Required lanes:
+- SN 12 ID-level audit of `upādāna → bhava → jāti`;
+- early-discourse definitions of the three kinds/domains of becoming where attested;
+- relation among craving, clinging, identity-production, kamma, and renewed existence;
+- distinguish what is directly text-attested from modern “identity becoming” applications;
 - mandatory Milindapañha consultation in the current chat/seat;
 - preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
