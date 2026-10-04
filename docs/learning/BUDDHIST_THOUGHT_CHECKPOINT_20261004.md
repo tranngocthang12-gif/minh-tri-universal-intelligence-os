@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A57 COMPLETED  
-**Next checkpoint:** PHASE 4 — A58  
+**Current checkpoint:** PHASE 4 — A58 COMPLETED  
+**Next checkpoint:** PHASE 4 — A59  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -3388,6 +3388,194 @@ Required lanes:
 - connect cautiously to prior Aṭṭhakavagga lexical work without closing that audit prematurely;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A58
+
+**Central question:** How does residual `asmimāna` (“I am” conceit) relate to comparison-conceit—“I am better,” “I am equal,” “I am worse”—and to the broader process of `maññati / maññanā` (“conceiving”)?
+
+### TEXT_ATTESTED — 1. BARE “I AM” DOES NOT REQUIRE A SPECIFIED IDENTITY
+
+**SN 22.89 Khemaka** remains the anchor.
+
+Khemaka says the residual “I am” has not yet been overcome even though he does not identify any aggregate as:
+`I am this`.
+
+Therefore `asmimāna` can persist before a definite answer is supplied to:
+“What exactly am I?”
+
+This is an important distinction:
+`I am` can remain without `I am this particular aggregate or entity`.
+
+### TEXT_ATTESTED — 2. COMPARISON-CONCEIT ADDS A RELATIONAL MEASUREMENT
+
+**SN 22.49 Soṇa** applies the three comparisons to the five aggregates:
+- “I am better”;
+- “I am equal”;
+- “I am worse.”
+
+The discourse places these comparisons around things that are impermanent, stressful, and subject to change.
+
+A58 therefore distinguishes:
+- bare residual `I am`;
+from
+- the extra operation of measuring/ranking “me” against another.
+
+The phrase “extra operation” is **CROSS_TEXT SYNTHESIS** from SN 22.89 + SN 22.49, not a canonical definition.
+
+### IMPORTANT CORRECTION — INFERIORITY IS STILL CONCEIT
+
+The comparison pattern shows why:
+“I am worse than others”
+is not automatically the opposite of conceit.
+
+It still organizes experience around:
+`I` + `comparison`.
+
+Thus conceit is broader than ordinary boastfulness.
+
+The early-text guardrail is:
+superiority, equality, and inferiority can all participate in the same self-comparing structure.
+
+### TEXT_ATTESTED — 3. `MAÑÑANĀ` IS BROADER THAN RANKING
+
+**MN 1 Mūlapariyāya** repeatedly describes an uninstructed person as:
+- perceiving an object;
+- conceiving it;
+- conceiving in relation to it;
+- conceiving from it;
+- conceiving “it is mine”;
+- delighting in it.
+
+The perfected one directly knows without carrying out that conceiving pattern.
+
+This process is broader than:
+“I am better/equal/worse.”
+
+It includes construction, positioning, appropriation, and “mine-making” around the experienced domain.
+
+### TEXT_ATTESTED — 4. SN 22.64 TIES CONCEIVING DIRECTLY TO BONDAGE
+
+**SN 22.64 Maññamāna** says:
+when one conceives form, feeling, perception, formations, or consciousness, one is bound by Māra;
+when one does not conceive them, one is freed from Māra.
+
+This gives `maññanā` a direct liberative relevance.
+
+The target is not merely to stop verbal comparison.
+It is to end the deeper construction by which aggregates become a basis for self-positioning and appropriation.
+
+The final sentence is **CROSS_TEXT SYNTHESIS** with MN 1 and SN 22.89.
+
+### LEXICAL GUARDRAIL — `MĀNA` AND `MAÑÑANĀ` MUST NOT BE COLLAPSED
+
+The words are related in the field of self-referential construction, but A58 does **not** claim:
+`māna = maññanā`.
+
+Current evidence supports:
+- `asmimāna`: residual “I am” conceit;
+- comparison-`māna`: ranking as better/equal/worse;
+- `maññanā`: a broader conceiving/construing process applied to objects and aggregates.
+
+The exact historical-lexical relation among these terms remains **OPEN/CHECK**.
+
+The pending Aṭṭhakavagga lexical audit remains open and is not silently closed by this synthesis.
+
+### CROSS_TEXT SYNTHESIS — A PLAUSIBLE CASCADE
+
+A bounded practice model is:
+
+`experience is conceived/appropriated`
+→ `a center of “I am” is maintained`
+→ `that center can then compare itself as better/equal/worse`.
+
+This ordering is useful for observation, but no single cited discourse presents it as a fixed three-stage sequence.
+
+Therefore it remains **CROSS_TEXT SYNTHESIS**, not `TEXT_ATTESTED`.
+
+### WHY THIS MATTERS
+
+If conceit is reduced to arrogance, subtle selfing is missed.
+
+A person may be:
+- humble in speech;
+- convinced they are inferior;
+- free of a clear self-theory;
+
+and still organize experience around a residual “I am.”
+
+Likewise, stopping comparison does not by itself prove that all `maññanā` has ended.
+
+The Buddha's analysis is finer than the everyday category “ego/pride.”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary supporting image: the **full waterpot** — when full it does not make noise; likewise the practitioner should not be puffed up, boastful, or disparage others;
+- role in A58: clarifies the practical expression of pride/comparison and the contrast between maturity and self-display;
+- limitation: this analogy does **not** define the precise lexical relation among `asmimāna`, comparison-`māna`, and `maññanā`;
+- interpretation change: **LOW/MODERATE** — useful ethical clarification, no override of early-text taxonomy;
+- early-discourse confirmation: **PARTIAL/FUNCTIONAL**, especially SN 22.49;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The hierarchy in A58 is:
+- SN 22.89 for residual “I am”;
+- SN 22.49 for better/equal/worse comparison;
+- MN 1 and SN 22.64 for conceiving;
+- Milindapañha only for supporting clarification of pride/comparison behavior.
+
+### METHOD INSIGHT — “SELFING” IS NOT ONE SINGLE EVENT
+
+A58 reveals another characteristic of the early analysis:
+
+What ordinary language calls “ego” can contain distinct operations:
+- bare self-reference;
+- comparison;
+- appropriation;
+- conceptual positioning;
+- delight;
+- explicit view.
+
+The Buddha's method is to separate these operations so that each can be seen where it actually occurs.
+
+### PRACTICAL DIAGNOSTIC
+
+When self-reference appears, ask:
+- Is there only a bare “I am” feeling?
+- Has comparison begun: better, equal, worse?
+- What object or aggregate is being conceived as “mine”?
+- What position am I constructing around the experience?
+- Is delight/craving feeding the construction?
+- If comparison stops, does the subtler “I am” remain?
+- If the “I am” becomes quiet, is there still conceiving/appropriation around objects?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 22.89 Khemaka — residual “I am” conceit/desire/underlying tendency without “I am this.”
+- SN 22.49 Soṇa — better/equal/worse comparison around the five aggregates.
+- MN 1 Mūlapariyāya — repeated `maññati` pattern including “mine” and delight.
+- SN 22.64 Maññamāna — conceiving the aggregates as bondage; non-conceiving as freedom.
+
+Mandatory Milindapañha layer:
+- full-waterpot analogy — no puffing up or disparaging others.
+
+Open lexical work:
+- exact relation among `māna`, `asmimāna`, `maññati/maññanā`;
+- Aṭṭhakavagga lexical stress-test remains open.
+
+### Next checkpoint — PHASE 4 A59
+
+**How do `ahaṅkāra` (“I-making”), `mamaṅkāra` (“mine-making”), and `mānānusaya` (underlying tendency to conceit) relate to the aggregates, `asmimāna`, `maññanā`, and clinging?**
+
+Required lanes:
+- SN 22.91 / SN 22.125 on I-making, mine-making, and conceit tendency;
+- distinguish possession (“mine”), identification (“I am this”), and bare “I am”;
+- connect carefully to `upādāna` without making every term synonymous;
+- mandatory Milindapañha consultation;
+- continue the Aṭṭhakavagga lexical audit as OPEN/CHECK.
 
 ## Provenance
 
