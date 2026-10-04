@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A72 COMPLETED  
-**Next checkpoint:** PHASE 4 — A73  
+**Current checkpoint:** PHASE 4 — A73 COMPLETED  
+**Next checkpoint:** PHASE 4 — A74  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -6613,6 +6613,134 @@ Required lanes:
 - connect to dependent origination and habit/tendency;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / open-check boundaries.
+
+
+## Completed checkpoint A73
+
+**Central question:** If intention is conditioned yet causally effective, what exactly is `vīriya` / right effort doing in the path, and how can effort change conditioned tendencies without presupposing an independent self-controller?
+
+### TEXT_ATTESTED — 1. FOUR RIGHT EFFORTS
+
+**SN 45.8** defines right effort through four tasks:
+1. prevent unarisen unskillful qualities;
+2. abandon arisen unskillful qualities;
+3. develop unarisen skillful qualities;
+4. maintain, increase, and fulfill arisen skillful qualities.
+
+Therefore right effort is not generic exertion. It is directed work on conditions.
+
+### TEXT_ATTESTED — 2. RIGHT VIEW, EFFORT, AND MINDFULNESS WORK TOGETHER
+
+**MN 117** repeatedly links:
+- right view recognizing wrong/right;
+- right effort abandoning wrong and developing right;
+- right mindfulness keeping track of that work.
+
+This shows effort as a path factor within a network, not as an isolated controller.
+
+### TEXT_ATTESTED — 3. REPEATED CULTIVATION CHANGES INCLINATION
+
+**MN 19** says that what one frequently thinks and ponders becomes the inclination of the mind.
+
+Repeated abandonment of unskillful thought and cultivation of renunciation, non-ill-will, and harmlessness changes the mind's direction.
+
+This is a clear early-text model for how conditioned effort can alter conditioned tendencies.
+
+### TEXT_ATTESTED — 4. EFFORT MUST BE BALANCED
+
+The prior A45 audit used **SN 46.53** to show that different awakening factors are appropriate when the mind is sluggish versus restless.
+
+**AN 6.55 Soṇa** uses the lute-string analogy: energy that is too tight or too slack is ineffective; balanced energy supports practice.
+
+Thus:
+`more effort` is not always `right effort`.
+
+### CENTRAL DISTINCTION — CONDITIONED AGENCY WITHOUT A PERMANENT CONTROLLER
+
+A bounded synthesis is:
+
+`right view identifies the task`
+→ `effort supplies causal input`
+→ `mindfulness monitors`
+→ `repetition changes inclination`
+→ `wisdom refines the response`.
+
+No independent self outside conditions is required.
+
+The model is **CROSS_TEXT SYNTHESIS** grounded in SN 45.8, MN 117, MN 19, SN 46.53, and AN 6.55.
+
+### EFFORT IS NOT PASSIVITY OR MERE FORCE
+
+A73 rejects two errors:
+- “because phenomena are conditioned and not-self, nothing needs to be cultivated”;
+- “right effort means simply increasing pressure.”
+
+The early texts instead require precise tasks and balanced application.
+
+### RELATION TO INTENTION
+
+AN 6.63 established that intention is central to kamma.
+
+Right effort involves intentional causal input, but `vīriya` and `cetanā` are not treated here as lexical synonyms.
+
+Exact relation remains **OPEN/CHECK**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary theme: Nāgasena describes energy as having a supporting/sustaining function, illustrated by support that keeps a structure standing and reinforcement that helps maintain a position;
+- role in A73: clarifies that energy supports wholesome qualities rather than functioning as an isolated sovereign;
+- limitation: Milindapañha does not define the four right efforts;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### METHOD INSIGHT
+
+A73 reveals a key feature of the Buddha's thought:
+
+**change does not require an unconditioned changer.**
+
+A conditioned factor can alter other conditioned factors.
+
+Right effort itself is conditioned, yet once present it becomes a new cause in the process.
+
+### PRACTICAL DIAGNOSTIC
+
+When making effort, ask:
+- Which task is active: prevent, abandon, develop, or maintain?
+- Does right view correctly identify the state?
+- Is mindfulness tracking what is happening?
+- Is the effort too tight, too slack, or balanced?
+- What pattern will repeated cultivation strengthen?
+- Am I treating effort as a condition in the process rather than proof of a permanent controller?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 45.8 — four right efforts.
+- MN 117 — right view, right effort, and right mindfulness functioning together.
+- MN 19 — repeated cultivation changes inclination of mind.
+- SN 46.53 — state-sensitive balancing of awakening factors.
+- AN 6.55 — lute-string analogy and balanced energy.
+
+Mandatory Milindapañha layer:
+- energy as supporting/sustaining wholesome factors.
+
+Open audit:
+- exact lexical relation among `vīriya`, `vāyāma`, `padhāna`, and `cetanā`;
+- exact early-parallel preservation of the four right efforts;
+- relation between effort and latent tendencies beyond the MN 19 model remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A74
+
+**What exactly is `sati` / right mindfulness doing in the path, and how does it keep right effort aligned rather than drifting or becoming blind?**
+
+Required lanes:
+- SN 45.8 right mindfulness;
+- MN 10 / DN 22 four establishments of mindfulness;
+- MN 117 interaction of right view, effort, mindfulness;
+- distinguish mindfulness from bare attention, memory alone, and passive non-interference;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
