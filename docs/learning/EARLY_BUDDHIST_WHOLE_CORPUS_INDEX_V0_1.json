@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-early-buddhist-whole-corpus-index/v1",
   "updated": "2026-10-04",
-  "status": "INDEXING_STARTED_NOT_COMPLETE",
+  "status": "SN_PRIORITY_STRUCTURAL_PHASE1_COMPLETE_WHOLE_CORPUS_NOT_COMPLETE",
   "purpose": "Track corpus coverage by doctrine, reasoning, translation risk, parallels, contradictions and mastery without confusing selective reading with whole-canon understanding.",
   "fields": [
     "collection",
@@ -18,7 +18,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 12 Nidāna-saṃyutta",
-      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_DISCOURSE_MATRIX_PENDING",
       "primary_themes": [
         "dependent origination",
         "consciousness/name-and-form",
@@ -42,12 +42,12 @@
         "C02",
         "REBIRTH_IDENTITY_CLUSTER_V0_8"
       ],
-      "next_action": "Index all SN12 discourse IDs by causal pattern and SA parallel"
+      "next_action": "Build discourse-ID matrix by causal pattern, rebirth function, practice function, and SĀ parallel"
     },
     {
       "collection": "SN",
       "range_or_text": "SN 22 Khandha-saṃyutta",
-      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_SELF_VIEW_MATRIX_PENDING",
       "primary_themes": [
         "five aggregates",
         "not-self",
@@ -69,12 +69,12 @@
       "contradiction_links": [
         "SN22_85_ANNIHILATION_GUARD"
       ],
-      "next_action": "Index self-view formulas and Chinese parallel stability"
+      "next_action": "Build self-view/de-appropriation/annihilation formula matrix with Chinese parallels"
     },
     {
       "collection": "SN",
       "range_or_text": "SN 35 Saḷāyatana-saṃyutta",
-      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_SENSE_PROCESS_MATRIX_PENDING",
       "primary_themes": [
         "sense fields",
         "contact",
@@ -96,12 +96,12 @@
       "contradiction_links": [
         "C04"
       ],
-      "next_action": "Index the-all/burning/conceiving clusters and parallels"
+      "next_action": "Build faculty-object-consciousness-contact-feeling-grasping matrix and metaphysical-scope checks"
     },
     {
       "collection": "SN",
       "range_or_text": "SN 36 Vedanā-saṃyutta",
-      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_FEELING_MATRIX_PENDING",
       "primary_themes": [
         "feeling",
         "second arrow",
@@ -116,12 +116,12 @@
       ],
       "parallel_status": "PARTIAL",
       "contradiction_links": [],
-      "next_action": "Index feeling categories and reaction pathways"
+      "next_action": "Build feeling taxonomy and reaction/path matrix"
     },
     {
       "collection": "SN",
       "range_or_text": "SN 45/46 Path and awakening factors",
-      "coverage_status": "PRIORITY_PENDING",
+      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_PATH_FACTOR_MATRIX_PENDING",
       "primary_themes": [
         "eightfold path",
         "awakening factors",
@@ -137,11 +137,11 @@
         "sati",
         "bojjhaṅga"
       ],
-      "parallel_status": "PENDING",
+      "parallel_status": "PARTIAL_MN117_MA189_PLUS_CROSS_COLLECTION_CHECKS",
       "contradiction_links": [
         "MN117_MA189_TECHNICAL_LAYER"
       ],
-      "next_action": "Index path definitions against MN117/MA189"
+      "next_action": "Build path/awakening-factor definition, sequence, condition, and parallel matrix"
     },
     {
       "collection": "MN",
@@ -291,5 +291,15 @@
       "next_action": "Study after early discourse map stabilizes"
     }
   ],
-  "invariant": "Coverage status is evidence of what has been indexed, not proof of understanding. No block becomes COMPLETE without source coverage and unresolved-issue review."
+  "invariant": "Coverage status is evidence of what has been indexed, not proof of understanding. No block becomes COMPLETE without source coverage and unresolved-issue review.",
+  "structural_index_phase1": "docs/learning/EARLY_BUDDHIST_SN_CORE_INDEX_V0_2_20261004.md",
+  "progress": {
+    "sn12": "STRUCTURAL_PHASE1_COMPLETE_DISCOURSE_MATRIX_PENDING",
+    "sn22": "STRUCTURAL_PHASE1_COMPLETE_SELF_VIEW_MATRIX_PENDING",
+    "sn35": "STRUCTURAL_PHASE1_COMPLETE_SENSE_PROCESS_MATRIX_PENDING",
+    "sn36": "STRUCTURAL_PHASE1_COMPLETE_FEELING_MATRIX_PENDING",
+    "sn45_46": "STRUCTURAL_PHASE1_COMPLETE_PATH_FACTOR_MATRIX_PENDING",
+    "mn": "ACTIVE_PARTIAL",
+    "atthakavagga": "ACTIVE_PARTIAL"
+  }
 }
