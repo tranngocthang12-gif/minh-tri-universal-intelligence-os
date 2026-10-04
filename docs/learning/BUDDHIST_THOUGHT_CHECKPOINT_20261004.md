@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A67 COMPLETED  
-**Next checkpoint:** PHASE 4 — A68  
+**Current checkpoint:** PHASE 4 — A68 COMPLETED  
+**Next checkpoint:** PHASE 4 — A69  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -5527,6 +5527,242 @@ Required lanes:
 - distinguish causal roles without inventing a single linear mechanism;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / open-check boundaries.
+
+
+## Completed checkpoint A68
+
+**Central question:** How do kamma, intention, consciousness, craving, and clinging divide their causal roles in producing `bhava`, and how can we avoid collapsing them into one generic “cause of rebirth”?
+
+### TEXT_ATTESTED — 1. INTENTION IS CENTRAL TO KAMMA, BUT “INTENTION” IS NOT THE WHOLE REBIRTH MODEL
+
+**AN 6.63** states that intention (`cetanā`) is what the Buddha calls kamma, and that through intention one acts by body, speech, and mind.
+
+This gives intention a central role in karmic action.
+
+But A68 does **not** infer:
+`cetanā = craving = clinging = consciousness = becoming`.
+
+The early texts assign different roles to these factors.
+
+### TEXT_ATTESTED — 2. AN 3.76 GIVES A THREE-FACTOR PRODUCTION IMAGE
+
+**AN 3.76** says:
+- kamma is the field;
+- consciousness is the seed;
+- craving is the moisture.
+
+For beings hindered by ignorance and fettered by craving, consciousness becomes established in a corresponding domain and renewed becoming is produced.
+
+This is one of the clearest early-text models for dividing causal roles.
+
+A68 therefore treats:
+- **kamma** as the field/background of karmic production in this simile;
+- **consciousness** as the seed capable of establishment;
+- **craving** as the moisture that sustains the production.
+
+These are functions within the simile, not universal dictionary definitions of the three terms.
+
+### TEXT_ATTESTED — 3. SN 12.38 ADDS INTENTION, PLANNING, AND UNDERLYING TENDENCY
+
+**SN 12.38** says that:
+- what one intends;
+- what one plans;
+- what one has an underlying tendency toward
+
+can provide a basis for the maintenance/establishment of consciousness.
+
+When consciousness is established and grows, future renewed becoming is produced.
+
+The discourse is especially important because even where active intention and planning are absent, an underlying tendency can still provide support.
+
+Thus:
+`active intention`
+and
+`latent tendency`
+must not be collapsed.
+
+### TEXT_ATTESTED — 4. SN 12.64 EMPHASIZES PASSION, DELIGHT, AND CRAVING AS SUPPORT FOR CONSCIOUSNESS-ESTABLISHMENT
+
+**SN 12.64** describes four nutriments and says that where there is:
+- passion;
+- delight;
+- craving
+
+for nutriment, consciousness becomes established and grows.
+
+Where consciousness is established and grows:
+- name-and-form descends;
+- formations grow;
+- future renewed becoming is produced.
+
+When passion, delight, and craving are absent, consciousness is not established in that way and future renewed becoming is not produced.
+
+This gives craving a support/nourishment role distinct from the role of intention and kamma.
+
+### TEXT_ATTESTED — 5. CLINGING REMAINS A DISTINCT DEPENDENT-ORIGINATION CONDITION FOR BECOMING
+
+The standard formula preserves:
+`craving → clinging → becoming`.
+
+A68 therefore refuses to erase `upādāna` merely because other discourses speak directly of craving, kamma, consciousness, intention, or latent tendency in relation to renewed becoming.
+
+The corpus presents several causal lenses.
+
+It does not authorize:
+`clinging is unnecessary because AN 3.76 does not mention it`,
+nor:
+`kamma is unnecessary because SN 12.2 says clinging conditions becoming`.
+
+### CENTRAL ROLE-DIFFERENTIATION
+
+A bounded synthesis is:
+
+- **intention/cetanā**: organizes karmic action;
+- **kamma**: the action/causal field relevant to the kind of becoming produced;
+- **craving**: provides desire/moisture and continuing orientation toward experience/becoming;
+- **clinging**: takes hold of sensuality, views, observances, or self-doctrine and conditions becoming;
+- **consciousness**: becomes established/grows on available support and functions as “seed” in AN 3.76;
+- **underlying tendency**: can provide support even when explicit intending/planning is absent;
+- **bhava**: the conditioned becoming/existence produced downstream.
+
+Only the individual source-relations are **TEXT_ATTESTED**.
+
+The integrated role chart is **CROSS_TEXT SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — NO SINGLE LINEAR MACHINE IS GIVEN
+
+A68 does not claim the early texts supply one mechanical sequence such as:
+
+`intention → kamma → craving → clinging → consciousness → bhava`
+
+as a universal hidden pipeline.
+
+Different discourses foreground different causal relations for different explanatory tasks.
+
+Therefore the safest method is:
+**preserve each attested relation first, then synthesize only where the relations are compatible.**
+
+### IMPORTANT GUARDRAIL — KAMMA IS NOT A SUBSTANCE STORED SOMEWHERE
+
+The field/seed/moisture image is causal imagery.
+
+It should not be turned into:
+- a karmic substance;
+- a metaphysical container;
+- a permanent bearer carrying stored deeds.
+
+The early model is better read in terms of conditioned causal efficacy.
+
+### IMPORTANT GUARDRAIL — CONSCIOUSNESS IS NOT A TRANSMIGRATING SELF
+
+AN 3.76 and SN 12.38/64 give consciousness a crucial role in renewed becoming.
+
+But A48–A49 already established:
+- consciousness is conditioned;
+- it depends on support;
+- it is not presented as an independent eternal witness.
+
+Therefore:
+`consciousness as seed`
+does not entail:
+`consciousness is a permanent soul that migrates`.
+
+### HOW THE MODELS FIT WITHOUT COLLAPSING
+
+A68 permits this bounded picture:
+
+1. **kamma/intention** shape the causal field and action-pattern;
+2. **craving and clinging** keep taking up and feeding a mode of existence;
+3. **latent tendencies** can continue to supply orientation even without explicit planning;
+4. **consciousness** becomes established/grows where support is present;
+5. **renewed becoming** is produced.
+
+This is not a single canonical five-step formula.
+It is a **CROSS_TEXT SYNTHESIS** from AN 6.63, AN 3.76, SN 12.38, SN 12.64, and the dependent-origination formula.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- passages/themes used:
+  1. with clinging one is reborn; without clinging one is not;
+  2. “neither the same nor another” continuity;
+  3. lamp/flame continuity across change;
+  4. present name-and-form performs wholesome/unwholesome kamma and another name-and-form arises as result;
+- role in A68:
+  - clarifies causal continuity without a permanent karmic bearer;
+  - helps prevent “kamma,” “consciousness,” or “person” from being turned into a transmigrating substance;
+- decisive evidence for the exact integrated causal mechanism: **NO**;
+- interpretation change: **MODERATE/STRONG CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 6.63 — intention and kamma;
+- AN 3.76 — kamma-field / consciousness-seed / craving-moisture;
+- SN 12.38 — intention, planning, underlying tendency, consciousness-establishment, renewed becoming;
+- SN 12.64 — passion/delight/craving, nutriment, consciousness-establishment, renewed becoming;
+- SN 12 / MN 9 — craving → clinging → becoming.
+
+Milindapañha clarifies continuity but does not replace these causal roles.
+
+### METHOD INSIGHT — THE BUDDHA USES MULTIPLE CAUSAL MODELS WITHOUT MAKING THEM COMPETE
+
+A68 reveals a major methodological lesson:
+
+Different discourses can answer different causal questions:
+- What makes action karmically significant?
+- What supports consciousness-establishment?
+- What nourishes continued becoming?
+- What does grasping condition?
+- What happens when latent tendencies remain?
+
+The correct response is not to force all terms into one synonym.
+
+It is to see how multiple conditional relations converge on the production or cessation of renewed becoming.
+
+### PRACTICAL DIAGNOSTIC
+
+When a pattern is reproducing itself, ask:
+- What intention is being enacted?
+- What repeated action is creating a karmic field?
+- What craving is providing moisture?
+- What is being grasped?
+- What latent tendency remains even when I am not consciously planning?
+- Where is consciousness repeatedly finding support?
+- Which factor can cease here without pretending all the other terms are identical?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- AN 6.63 — intention is central to kamma.
+- AN 3.76 — kamma-field, consciousness-seed, craving-moisture; renewed becoming.
+- SN 12.38 — intention/planning/underlying tendency as support for consciousness-establishment and future renewed becoming.
+- SN 12.64 — passion/delight/craving and nutriment as support for consciousness-establishment and renewed becoming.
+- SN 12 / MN 9 — craving → clinging → becoming.
+
+Mandatory Milindapañha layer:
+- clinging and rebirth;
+- neither-same-nor-another continuity;
+- lamp continuity;
+- kamma and subsequent name-and-form without invariant identity.
+
+Open audit:
+- exact necessary/sufficient role of each factor across all early-discourse contexts;
+- exact relation of `cetanā`, `kamma`, `saṅkhāra`, and `anusaya`;
+- exact relation of consciousness-establishment language to the standard twelve-link sequence remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A69
+
+**How are `cetanā` (intention), `saṅkhāra` (formations), and kamma related without treating them as interchangeable, and why does dependent origination place `saṅkhāra` before consciousness while other texts speak of intention directly supporting consciousness-establishment?**
+
+Required lanes:
+- SN 12.2 definition of formations;
+- AN 6.63 intention/kamma;
+- SN 12.38 intention/planning/tendency;
+- distinguish standard-link taxonomy from cross-text functional relations;
+- mandatory Milindapañha consultation;
+- preserve lexical and parallel uncertainties as OPEN/CHECK.
 
 ## Provenance
 
