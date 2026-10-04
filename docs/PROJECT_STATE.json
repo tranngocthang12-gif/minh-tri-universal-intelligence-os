@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A61_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A62",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A62_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A63",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -556,5 +556,7 @@
   "owner_learning_track_buddhist_thought_a60_claim_class": "TEXT_ATTESTED_SENSE_PROCESS_CRAVING_CLINGING_AND_MINE_APPROPRIATION_PLUS_CROSS_TEXT_CHAIN_PLUS_EARLY_PARALLEL_STRESS_TEST_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a60_milindapanha": "CONSULTED_CRAVING_CONTINUATION_AND_CHARIOT_CONVENTIONAL_DESIGNATION_NO_DECISIVE_LEXICAL_IDENTITY",
   "owner_learning_track_buddhist_thought_a61_claim_class": "TEXT_ATTESTED_FOURFOLD_UPADANA_AND_PATH_PLUS_CROSS_TEXT_FUNCTIONAL_DISTINCTIONS_WITH_LEXICAL_OPEN_GUARDRAILS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a61_milindapanha": "CONSULTED_TASTE_WITHOUT_LUST_AND_CHARIOT_SECONDARY_CLARIFICATION"
+  "owner_learning_track_buddhist_thought_a61_milindapanha": "CONSULTED_TASTE_WITHOUT_LUST_AND_CHARIOT_SECONDARY_CLARIFICATION",
+  "owner_learning_track_buddhist_thought_a62_claim_class": "TEXT_ATTESTED_RIGHT_VIEW_VIEW_CLINGING_RAFT_AND_TRUTH_PRESERVATION_PLUS_CROSS_TEXT_TOOL_VS_POSSESSION_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a62_milindapanha": "CONSULTED_QUESTION_CLASSIFICATION_AND_TASK_BOUNDED_REASONING_AS_SUPPORT_TO_WISDOM"
 }
