@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A42 COMPLETED  
-**Next checkpoint:** PHASE 4 — A43  
+**Current checkpoint:** PHASE 4 — A43 COMPLETED  
+**Next checkpoint:** PHASE 4 — A44  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -845,7 +845,131 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A43
+
+**Central question:** What is the difference between healthy confidence (`saddhā`) and identity-based certainty or dogmatism?
+
+### TEXT_ATTESTED
+
+1. **MN 95 Caṅkī** explicitly says faith can turn out either true or false. Therefore faith by itself is not yet discovery of truth.
+2. MN 95 defines “preserving truth” by saying, in effect, “this is my faith” without jumping to the exclusive conclusion “only this is true; anything else is worthless.” This directly separates `saddhā` from dogmatic exclusivism.
+3. MN 95 places faith inside a longer path of inquiry: investigate a teacher, approach, listen, remember, examine meaning, reflectively accept, arouse zeal, make effort, scrutinize, strive, and finally directly realize and penetrate with wisdom.
+4. Therefore faith in MN 95 is a **starting and supporting condition for investigation**, not a replacement for investigation.
+5. **AN 3.66 Kālāma** rejects relying merely on report, tradition, scripture, logic, inference, analogy, agreement through pondering views, probability, or “this contemplative is our teacher.” It redirects attention toward whether qualities are skillful/unskillful, praised/blamed by the wise, and lead to welfare or harm when enacted.
+6. **MN 70** distinguishes faith-followers and Dhamma-followers while making clear that both still have work to do. Faith may orient someone onto the path without being final direct knowledge.
+7. **SN 55** material describes `aveccappasāda`—verified/confirmed confidence—in Buddha, Dhamma, and Saṅgha, alongside Dhamma as visible here and now, inviting verification, and to be experienced individually. This is confidence matured through path-contact rather than unsupported allegiance.
+
+### CENTRAL DISTINCTIONS
+
+**Healthy saddhā**
+- supports approach, listening, practice, and testing;
+- remains compatible with investigation and correction;
+- can mature into verified confidence;
+- does not require “only my position is true.”
+
+**Blind allegiance / gullibility**
+- treats authority, tradition, charisma, or belonging as sufficient proof;
+- resists investigation because investigation feels disloyal.
+
+**Dogmatic identity-certainty**
+- converts belief into “my truth / our truth”;
+- treats disagreement as a threat to self or group;
+- closes inquiry through exclusive truth-claims before direct realization.
+
+### CROSS_TEXT SYNTHESIS
+
+Healthy sequence:
+
+`saddhā`
+→ approach
+→ listen
+→ remember
+→ examine
+→ practice
+→ test
+→ direct knowing
+→ verified confidence.
+
+Corrupted sequence:
+
+initial confidence
+→ group/teacher identity
+→ “this belief defines us”
+→ “only our position is true”
+→ `diṭṭhupādāna`
+→ faction/dispute.
+
+The second sequence is cross-text synthesis, not a single canonical formula.
+
+### RELATION TO RIGHT VIEW
+
+Faith may orient a person toward Right View, but faith is not identical with Right View and is not final warrant for every claim. Right View and direct knowing can correct what was initially only believed.
+
+### WHY THIS IS NOT SKEPTICISM
+
+The alternative to blind faith is not permanent disbelief. The early texts instead support disciplined verification:
+- do not confuse faith with final knowledge;
+- test teachings and teachers;
+- cultivate what leads away from greed, aversion, and delusion;
+- move from trust toward understanding and direct realization.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: functional analysis and analogy for faith;
+- Mi Tiên gives faith the functions of clarification/tranquillization and aspiration;
+- water-clearing-gem analogy: faith settles mental turbidity and supports clarity;
+- aspiration: seeing others liberated, one aspires to attain what is not yet attained and applies effort;
+- interpretation change: **MINOR** — sharpened faith as a functional quality that clears and motivates rather than mere assent;
+- early-discourse confirmation: **YES in function**, especially via MN 95 and MN 70;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### PRACTICAL DIAGNOSTIC
+
+Confidence is likely still healthy when:
+- questioning can occur without hostility;
+- stronger evidence can revise a belief;
+- practice results matter more than group belonging;
+- one can say “I have faith in this” without pretending direct knowledge;
+- confidence reduces greed, aversion, delusion, and fear.
+
+Confidence is drifting toward dogmatism when:
+- criticism of a proposition feels like criticism of self;
+- belonging matters more than truth;
+- exclusive truth-claims exceed the evidence;
+- contrary evidence is rejected because it threatens the group;
+- faith is used to stop investigation rather than support it.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 95 Caṅkī Sutta.
+- AN 3.66 Kālāma Sutta.
+- MN 70 Kīṭāgiri Sutta.
+- SN 55 materials on verified confidence.
+
+Mandatory Milindapañha layer:
+- faith as clarification/tranquillization and aspiration;
+- water-clearing-gem analogy.
+
+### Next checkpoint — PHASE 4 A44
+
+Central question:
+
+**How should doubt (`vicikicchā`) be distinguished from intelligent inquiry, caution, and refusal to overclaim?**
+
+Required lanes:
+- doubt as hindrance/fetter versus investigation as path factor;
+- MN 95 and AN 3.66 on testing;
+- `dhammavicaya` / investigation;
+- when skepticism protects truth versus when it prevents practice;
+- relation among doubt, faith, direct knowing, and Right View;
+- mandatory Milindapañha consultation;
+- distinguish healthy uncertainty from paralysis and cynical identity.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A42 and routes the next work to A43.
+This checkpoint preserves A30–A43 and routes the next work to A44.
