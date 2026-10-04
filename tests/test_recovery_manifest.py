@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A51_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A52")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A52_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A53")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A51_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A52")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A52_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A53")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -406,6 +406,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a50_milindapanha"], "CONSULTED_REBIRTH_WITHOUT_TRANSMIGRATION_LAMP_CONTINUITY_AND_CRAVING_REBIRTH")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a51_milindapanha"], "CONSULTED_NAME_FORM_REBIRTH_WITHOUT_TRANSMIGRATION_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_CESSATION")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a51_milindapanha"], "CONSULTED_NAME_FORM_REBIRTH_WITHOUT_TRANSMIGRATION_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_CESSATION")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a52_milindapanha"], "CONSULTED_BODILY_PAIN_WITHOUT_MENTAL_PAIN_MIL_3_2_4")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a52_milindapanha"], "CONSULTED_BODILY_PAIN_WITHOUT_MENTAL_PAIN_MIL_3_2_4")
 
 
 if __name__ == "__main__":
