@@ -319,3 +319,22 @@ Aṭṭhakavagga:
 Next:
 complete SN22/SN35/SN45/SN46 ID-level coverage, then Arthapada + MĀ/SĀ stress testing.
 
+## Latest progress — priority Saṃyutta ID completion
+
+Verified files now exist in GitHub:
+- SN 22: all 159 IDs structurally indexed;
+- SN 35: all 248 IDs structurally indexed;
+- SN 45: all 180 IDs structurally indexed;
+- SN 46: all 184 IDs structurally indexed.
+
+Structural types explicitly distinguish:
+DISTINCT / FAMILY_REPEAT / PEYYĀLA_MATRIX.
+
+Cross-recensional rule strengthened:
+- Chinese Arthapada preserves a sixteen-text anthology corresponding broadly to Aṭṭhakavagga but with order differences;
+- shared cross-recensional themes outrank exact Pali chapter order for historical reconstruction;
+- Milindapañha remains LATER_EXPLANATORY and must be back-checked against Nikāya/Āgama.
+
+Next:
+upgrade selected anchor IDs to DEEP with SĀ/MĀ parallels, then clause-align Arthapada high-value passages and continue Milinda prediction/back-check exercises.
+
