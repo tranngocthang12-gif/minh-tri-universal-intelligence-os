@@ -4,15 +4,15 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A20: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A20_SANKHARA_SCOPE_20261004.md`.
-- A20 source boundary locked: `saṅkhāra` is context-sensitive. Dependent-origination usage has a strong volitional/karmic function (especially SN 12.51); five-aggregate usage emphasizes constructing/fabricating activity (SN 22.79); broad formulas such as Dhp 277–278 can use the plural for conditioned formations generally.
-- A20 lexical guardrail: do not mechanically equate `saṅkhāra` with `saṅkhata`, or assume dependent-origination `saṅkhārā`, `saṅkhārakkhandha`, and every "all saṅkhārā" formula are perfectly coextensive.
-- A20 supporting bridge: AN 6.63 identifies intention as kamma, supporting but not globally equating `saṅkhāra` with `cetanā`.
+- Phase 4 A5-A21: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A21_KAMMA_NONDETERMINISM_20261004.md`.
+- A21 source boundary: AN 6.63 centers kamma on intention; SN 12.38/40 show intention/planning/tendencies supporting future renewed existence; SN 36.21 explicitly rejects the claim that every feeling is caused solely by past kamma.
+- A21 correction locked: SN 36.21 is the primary anti-fatalism guardrail for this track. "Everything that happens is because of past kamma" is not an acceptable summary of the early texts.
+- A21 guardrail: conditioned does not mean predetermined; current intention and path practice can alter the trajectory.
 
 Next:
-- **Phase 4 A21:** How does intention/kamma condition consciousness and future experience without becoming deterministic fate?
-- Route: AN 6.63 → SN 12.38 → SN 12.40 → SN 12.51 → MN 57 → selected SN 35/36 present-experience bridge → Milindapañha karma/continuity stress-test.
+- **Phase 4 A22:** If kamma is intention, what makes an intention ethically skillful or unskillful—motive, act, expected result, or all of these?
+- Route: AN 6.63 → MN 61 → MN 19 → MN 21/AN 3.34 → selected right-intention passages → Milindapañha moral-responsibility stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
