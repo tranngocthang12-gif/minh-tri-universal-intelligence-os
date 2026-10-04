@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A74_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A75")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A75_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A76")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A74_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A75")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A75_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A76")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -452,6 +452,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a73_milindapanha"], "CONSULTED_VIRIYA_SUPPORTING_SUSTAINING_FUNCTION_NO_OVERRIDE_OF_FOUR_RIGHT_EFFORTS")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a74_milindapanha"], "CONSULTED_SATI_NON_FORGETTING_KEEPING_RELEVANT_QUALITIES_IN_VIEW_NO_OVERRIDE_OF_EARLY_FORMULA")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a74_milindapanha"], "CONSULTED_SATI_NON_FORGETTING_KEEPING_RELEVANT_QUALITIES_IN_VIEW_NO_OVERRIDE_OF_EARLY_FORMULA")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a75_milindapanha"], "CONSULTED_REASONING_VS_WISDOM_AND_WISDOM_CUTTING_ILLUMINATION_NO_EARLY_SAMPAJANNA_DEFINITION")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a75_milindapanha"], "CONSULTED_REASONING_VS_WISDOM_AND_WISDOM_CUTTING_ILLUMINATION_NO_EARLY_SAMPAJANNA_DEFINITION")
 
 
 if __name__ == "__main__":
