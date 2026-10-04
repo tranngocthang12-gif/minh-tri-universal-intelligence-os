@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A64 COMPLETED  
-**Next checkpoint:** PHASE 4 — A65  
+**Current checkpoint:** PHASE 4 — A65 COMPLETED  
+**Next checkpoint:** PHASE 4 — A66  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -4938,6 +4938,267 @@ Required lanes:
 - connect `taṇhā → upādāna` specifically to `attavādupādāna`;
 - revisit MN 2 identity speculation, SN 22.89 residual “I am,” and SN 12.15 existence/non-existence extremes;
 - distinguish textual causality from modern psychological explanation;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A65
+
+**Central question:** How does craving give rise to self-doctrine clinging: why does the mind want a theory of “what I am,” and what function can such a theory serve in protecting pleasure, continuity, control, or becoming?
+
+### TEXT_ATTESTED — 1. THE EARLY CAUSAL CLAIM IS CLEAR: CRAVING CONDITIONS CLINGING
+
+**MN 9 Sammādiṭṭhi** says:
+- there are four kinds of clinging, including clinging to theories of a self;
+- clinging originates from craving;
+- craving originates from feeling;
+- the Noble Eightfold Path leads to cessation.
+
+Therefore the strongest early-text claim is:
+
+`feeling → craving → clinging`
+
+and `attavādupādāna` is included inside that clinging category.
+
+This directly supports:
+**craving is a causal condition for self-doctrine clinging.**
+
+It does **not** by itself explain every psychological motive for why a particular self-theory is chosen.
+
+### TEXT_ATTESTED — 2. MN 2 SHOWS HOW SELF-THEORIES CRYSTALLIZE FROM UNWISE IDENTITY-SPECULATION
+
+**MN 2 Sabbāsava** describes unwise attention turning toward questions such as:
+- Did I exist in the past?
+- What was I?
+- Will I exist in the future?
+- What will I be?
+- Am I?
+- What am I?
+- Where did this being come from?
+- Where will it go?
+
+From this kind of attention a thicket of views arises, including:
+- “I have a self”;
+- “I have no self”;
+- and other self-theories.
+
+This shows that explicit self-doctrine can grow from an inquiry already organized around:
+`me across past / present / future`.
+
+A65 therefore treats **continuity-seeking identity speculation** as textually visible.
+
+The phrase “continuity-seeking” is **CROSS_TEXT SYNTHESIS**; the questions themselves are **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 3. CRAVING ITSELF INCLUDES CRAVING FOR BECOMING AND NON-BECOMING
+
+Early-discourse formulations distinguish:
+- craving for sensuality;
+- craving for becoming/existence;
+- craving for non-becoming/non-existence.
+
+This is important for A65.
+
+Self-theory need not serve only:
+`I must continue forever`.
+
+It can also organize:
+`I must cease / I must not be`.
+
+Therefore both eternalist and annihilationist self-formulations can be recruited by craving.
+
+A65 preserves the A50/A54 guardrail:
+**the opposite of craving for existence can still be craving.**
+
+### TEXT_ATTESTED — 4. SN 12.15 CONNECTS GRASPING WITH THE FIXATION “MY SELF”
+
+**SN 12.15 Kaccānagotta** says the world is largely bound by:
+- involvement;
+- grasping;
+- insistence/fixation.
+
+It then describes the practitioner as not taking up or fixating on:
+`attā me` — “my self / my identity.”
+
+The discourse redirects from existence/non-existence extremes to dependent arising and cessation.
+
+This strongly supports a causal alternative:
+instead of securing a metaphysical “me,” investigate what arises and ceases by conditions.
+
+### TEXT_ATTESTED — 5. SN 22.89 SHOWS A RESIDUAL “I AM” CAN PRECEDE OR OUTLAST AN EXPLICIT SELF-THEORY
+
+**SN 22.89 Khemaka** shows:
+- no aggregate is explicitly held as self or belonging to self;
+- yet the “I am” conceit/desire/underlying tendency remains.
+
+This is crucial.
+
+It means:
+`explicit self-doctrine`
+is not necessarily the deepest layer.
+
+A self-theory may be a conceptual crystallization around a more basic residual self-referential tendency, but that exact causal formulation is **CROSS_TEXT SYNTHESIS**.
+
+The early text itself only establishes the distinction.
+
+### CONTROL — TEXTUAL GUARDRAIL FROM THE NOT-SELF ANALYSIS
+
+The not-self analysis in **SN 22.59** uses controllability as a test:
+if an aggregate were self, it should be possible to command it:
+`let it be thus; let it not be thus`.
+
+But the aggregates do not obey in that way and are liable to affliction and change.
+
+A65 therefore allows a bounded inference:
+self-doctrine can be attractive partly because it promises or imagines a stable center of ownership/control.
+
+However:
+**the text does not explicitly say “people invent self-theories because they crave control.”**
+
+That formulation remains **CROSS_TEXT / PRACTICAL SYNTHESIS**, not `TEXT_ATTESTED`.
+
+### PLEASURE, CONTINUITY, CONTROL, BECOMING — WHAT IS TEXT AND WHAT IS SYNTHESIS?
+
+A65 separates the evidence:
+
+**TEXT_ATTESTED**
+- feeling conditions craving;
+- craving conditions clinging;
+- self-doctrine clinging is one kind of clinging;
+- craving includes sensual, becoming, and non-becoming forms;
+- unwise attention generates past/future/present self-speculation;
+- “my self” fixation is tied to grasping in SN 12.15;
+- aggregates fail the control test of SN 22.59.
+
+**CROSS_TEXT SYNTHESIS**
+A self-theory can function as a conceptual framework that:
+- protects desired pleasure;
+- secures a story of continuity;
+- imagines control/ownership;
+- gives craving a stable “someone” around whom becoming can organize.
+
+No single cited discourse states this four-function model as a canonical taxonomy.
+
+### A BOUNDED CAUSAL MODEL
+
+A65 therefore permits:
+
+`feeling`
+→ `craving`
+→ `need to secure / continue / reject an experience`
+→ `self-position or self-theory is grasped`
+→ `clinging feeds becoming`.
+
+Only:
+`feeling → craving → clinging → becoming`
+is directly `TEXT_ATTESTED`.
+
+The inserted self-theory function is **CROSS_TEXT SYNTHESIS** used to understand how `attavādupādāna` may operate.
+
+### IMPORTANT GUARDRAIL — SELF-THEORY IS NOT NECESSARILY A DELIBERATE INVENTION
+
+A65 does not claim people consciously decide:
+“I need a self-theory to protect my craving.”
+
+MN 2 and SN 22.89 suggest the process can be:
+- habitual;
+- pre-reflective;
+- generated by unwise attention and underlying tendencies.
+
+Therefore the word “function” here means:
+**what role the self-theory can play in the causal system**, not necessarily a consciously chosen strategy.
+
+### IMPORTANT GUARDRAIL — CORRECTING A SELF-THEORY IS NOT YET FULL LIBERATION
+
+Because SN 22.89 distinguishes explicit view from residual “I am,” replacing a wrong self-theory with a better proposition does not by itself guarantee the end of:
+- conceit;
+- craving;
+- underlying tendency;
+- appropriation.
+
+The path must reach the conditions that keep producing self-reference, not merely the surface theory.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- passages/themes used:
+  1. **cause of rebirth** — Nāgasena says one with remaining attachment is reborn, while one without attachment is not;
+  2. **cessation / Nibbāna explanation** — delight and cleaving to sense objects sustain the sequence, while cessation of craving leads to cessation of grasping, becoming, birth, aging, and death;
+  3. **rebirth without transmigration** — continuity does not require a permanent entity to pass over;
+- role in A65:
+  - clarifies how craving/clinging can generate continued existence without requiring an invariant self;
+  - prevents the inference that a self-theory is causally necessary for continuity;
+- decisive evidence for the four-function model “pleasure/continuity/control/becoming”: **NO**;
+- interpretation change: **MODERATE** — strengthens the distinction between causal continuity and belief in a permanent bearer;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 9 — craving as origin of fourfold clinging, including self-doctrine clinging;
+- MN 2 — identity speculation and self-view thicket;
+- SN 12.15 — grasping/fixation around “my self” and the middle way of dependent arising;
+- SN 22.89 — residual “I am” distinct from explicit self-view;
+- SN 22.59 — control as a not-self diagnostic;
+- prior craving-for-becoming/non-becoming material from A50.
+
+Milindapañha clarifies causal continuation without a transmigrating self, but does not supply the root early-text theory.
+
+### METHOD INSIGHT — THE BUDDHA EXPLAINS “SELF” BY ASKING WHAT CONDITIONS KEEP PRODUCING SELF-GRASPING
+
+A65 reveals another characteristic move:
+
+Instead of beginning with:
+`What substance is the self?`
+
+the analysis asks:
+- what feeling is present?
+- what craving follows?
+- what is then grasped?
+- what self-position becomes compelling?
+- what becoming does that grasping sustain?
+- what happens if craving ceases?
+
+This converts an apparently metaphysical question into a causal investigation without pretending that the metaphysical vocabulary never appears.
+
+### PRACTICAL DIAGNOSTIC
+
+When a strong claim about “who I am” appears, ask:
+- What feeling preceded this?
+- What am I trying to keep, repeat, escape, or guarantee?
+- Is this identity protecting pleasure, continuity, control, belonging, or non-existence?
+- If the desired experience changes, does the self-theory become more rigid?
+- Is “I am this” functioning as explanation, or as something I need to defend?
+- If craving relaxes, does the need to settle “what I am” also relax?
+- Is there still a bare “I am” beneath the explicit theory?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 9 Sammādiṭṭhi — four kinds of clinging; craving as their origin; feeling as origin of craving.
+- MN 2 Sabbāsava — past/future/present identity speculation and the thicket of self-views.
+- SN 12.15 Kaccānagotta — grasping/fixation around “my self”; dependent arising beyond existence/non-existence extremes.
+- SN 22.89 Khemaka — residual “I am” after explicit aggregate self-view is absent.
+- SN 22.59 Anattalakkhaṇa — lack of control as part of the not-self analysis.
+- prior A50 sources — craving for becoming and non-becoming.
+
+Mandatory Milindapañha layer:
+- cause of rebirth through remaining attachment;
+- cessation of craving → cessation of grasping → becoming → birth;
+- rebirth without transmigration.
+
+Open audit:
+- no early-text proof yet that self-doctrine has a canonical fourfold psychological function of pleasure/continuity/control/becoming;
+- exact lexical relation among `attavāda`, `sakkāyadiṭṭhi`, `asmimāna`, and `attā me` remains OPEN/CHECK;
+- Aṭṭhakavagga lexical stress-test remains open.
+
+### Next checkpoint — PHASE 4 A66
+
+**If self-doctrine clinging is conditioned by craving, what happens at the exact transition from `taṇhā` to `upādāna`: when does wanting become taking-hold, and can craving occur without full clinging?**
+
+Required lanes:
+- audit `taṇhā → upādāna` in SN 12 / MN 9;
+- inspect sense-field passages for desire/lust versus grasping;
+- distinguish craving, delight, passion, appropriation, and clinging without forcing synonyms;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
