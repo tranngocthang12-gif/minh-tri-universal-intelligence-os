@@ -455,3 +455,21 @@ New reasoning controls:
 Important evidence boundary:
 This is a masked-reconstruction proxy, not strict blind proof, because model pretraining exposure cannot be excluded.
 
+## 16. Agama parallels + translation cards + contradiction hunting v0.6
+
+Current synthesis:
+`docs/learning/EARLY_BUDDHIST_PARALLEL_TRANSLATION_CONTRADICTION_V0_6_20261004.md`
+
+Machine-readable ledger:
+`docs/learning/EARLY_BUDDHIST_TRANSLATION_CONTRADICTION_LEDGER_V0_1.json`
+
+Key advances:
+- MA 200 / MN 22 supports wrong-grasp + raft reasoning core while exact composition varies;
+- MA 14 / MN 61 supports truthfulness + action-audit core while local expanded wording remains textually difficult;
+- MA 189 / MN 117 supports coordinated-path architecture while the exact Pali two-tier technical scheme is not equally preserved in direct parallels;
+- SA 301 / SN 12.15 strongly supports conditional middle reasoning beyond existence/non-existence;
+- active translation cards now prevent one-gloss flattening;
+- contradiction ledger preserves unresolved tensions instead of harmonizing them away.
+
+Current comparative status: ACTIVE_PARALLEL_AUDIT_WITH_NON_HARMONIZATION_RULE.
+
