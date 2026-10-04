@@ -487,6 +487,10 @@
   "owner_learning_track_early_buddhist_canon_plan": "docs/learning/EARLY_BUDDHIST_CANON_AUTO_PROGRAM_20261004.md",
   "owner_learning_track_early_buddhist_canon_started": "2026-10-04",
   "owner_learning_track_early_buddhist_canon_background_runtime": false,
-  "owner_learning_track_early_buddhist_canon_status": "CORPUS_MAP_AND_TRANSLATION_PROTOCOL_ESTABLISHED_WHOLE_CANON_NOT_COMPLETE",
-  "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS"
+  "owner_learning_track_early_buddhist_canon_status": "ACTIVE_L0_MAP_ESTABLISHED_L1_L2_DEVELOPING_L3_L4_INITIAL",
+  "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS",
+  "owner_learning_track_early_buddhist_reasoning_model": "docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md",
+  "owner_learning_track_early_buddhist_target": "WHOLE_CANON_TRANSLATION_COMPARATIVE_AND_BLINDED_RESPONSE_REASONING_MASTERY",
+  "owner_learning_track_early_buddhist_mastery_claim": "NOT_YET_COMPLETE",
+  "owner_learning_track_early_buddhist_next_checkpoint": "SN12_SN35_SN36_MN1_MN2_MN19_MN20_MN21_MN26_MN38_MN39_MN63_MN95_DN1_DN21_SN4_11_COMPARATIVE_CLUSTER"
 }
