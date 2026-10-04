@@ -482,5 +482,12 @@
   "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
   "trial_rule_reader_external_code_review": "REQUIRED_NOT_YET_COMPLETED",
   "trial001_arm_leakage_threshold": "TO_BE_FROZEN_BEFORE_PRIMARY_SCORING",
-  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID"
+  "trial001_placebo_primary_interpretation": "IF_PLACEBO_OUTPERFORMS_COMPUTE_MATCHED_LEARNING_INTERPRETATION_INVALID",
+  "owner_learning_track_buddha_thought": "ACTIVE_CONTINUOUS_EARLY_BUDDHIST_THOUGHT_STUDY",
+  "owner_learning_track_buddha_thought_plan": "docs/learning/BUDDHA_THOUGHT_STUDY_PROGRAM_20261004.md",
+  "owner_learning_track_buddha_thought_started": "2026-10-04",
+  "owner_learning_track_buddha_thought_method": "EBT_FIRST_PARALLEL_CHECK_COUNTEREVIDENCE_FIRST_MILINDA_STRESS_TEST",
+  "owner_learning_track_buddha_thought_status": "PHASE3_A8_ETHICS_SOCIAL_INTEGRATION_RECORDED_NOT_VERIFIED",
+  "owner_learning_track_buddha_thought_next_checkpoint": "PHASE4_A1_PRACTICE_ARCHITECTURE_SILA_SAMADHI_PANNA_DN2_MN27_MN39_MN117_SN45_SN12_23",
+  "owner_learning_track_buddha_thought_last_log": "docs/learning/BUDDHA_THOUGHT_PHASE3_A8_ETHICS_SOCIAL_INTEGRATION_20261004.md"
 }
