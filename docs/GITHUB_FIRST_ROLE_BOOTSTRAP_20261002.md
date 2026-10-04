@@ -280,3 +280,10 @@ Rules:
 This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
+
+
+## Domain learning continuity
+
+When the Owner asks to continue a named learning track in a new chat or seat, do not reconstruct progress from chat memory. After the normal authority bootstrap, inspect `PROJECT_STATE.json` for the matching `owner_learning_track_*` pointers, read that track's plan and state, and continue from its recorded next checkpoint.
+
+For the Buddhist thought track, read `owner_learning_track_buddhist_thought_plan` and `owner_learning_track_buddhist_thought_state`; preserve every pending/partial audit item until source work explicitly closes it; keep Milindapañha dialectical material source-labeled rather than merging it into the early-text layer. Canonical GitHub state wins on progress and unresolved work.
