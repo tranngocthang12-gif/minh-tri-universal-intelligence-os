@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A47 COMPLETED  
-**Next checkpoint:** PHASE 4 — A48  
+**Current checkpoint:** PHASE 4 — A48 COMPLETED  
+**Next checkpoint:** PHASE 4 — A49  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -1581,6 +1581,254 @@ Required lanes:
 - avoid turning consciousness into an eternal witness or substrate unless a text explicitly supports it;
 - mandatory Milindapañha consultation;
 - continue SN 12 ID-level audit and preserve early-text / synthesis / later-paracanonical boundaries.
+
+
+## Completed checkpoint A48
+
+**Central question:** How do consciousness (`viññāṇa`) and name-and-form (`nāmarūpa`) condition one another without requiring a hidden self behind experience?
+
+### TEXT_ATTESTED — 1. THE STANDARD FORMULA IS LINEAR, BUT SOME DISCOURSES MAKE THIS NODE RECIPROCAL
+
+**SN 12.1 / SN 12.2** present the familiar sequence:
+`formations → consciousness → name-and-form → six sense bases → contact → feeling ...`
+
+That sequence is text-attested and must not be erased.
+
+But **SN 12.65 Nagara** explicitly investigates backward from aging-and-death. When the inquiry reaches consciousness, the text says:
+
+- consciousness is conditioned by name-and-form;
+- name-and-form is conditioned by consciousness;
+- consciousness “turns back” at name-and-form and does not go further.
+
+So at this point the early material itself gives a relation that is not merely one-way.
+
+### TEXT_ATTESTED — 2. SN 12.67 MAKES THE RECIPROCITY EXPLICIT
+
+**SN 12.67 Naḷakalāpī** says:
+- with name-and-form as condition, consciousness comes to be;
+- with consciousness as condition, name-and-form comes to be.
+
+Sāriputta illustrates this with **two sheaves of reeds leaning against one another**.
+
+If one is removed, the other falls.
+
+This is the clearest early-discourse image for A48:
+**mutual support without identity**.
+
+The two sheaves are not the same sheaf.
+Likewise:
+- consciousness is not name-and-form;
+- name-and-form is not consciousness;
+- yet the discourse presents them here as mutually conditioning.
+
+### TEXT_ATTESTED — 3. WHAT “NAME-AND-FORM” MEANS IN SN 12.2
+
+SN 12.2 defines:
+
+**name (`nāma`)** as:
+- feeling;
+- perception;
+- volition;
+- contact;
+- attention.
+
+**form (`rūpa`)** as:
+- the four great elements;
+- form derived from the four great elements.
+
+And it defines **consciousness** as the six classes:
+- eye-consciousness;
+- ear-consciousness;
+- nose-consciousness;
+- tongue-consciousness;
+- body-consciousness;
+- mind-consciousness.
+
+Therefore two common simplifications are unsafe:
+
+1. `nāma` is not merely “a verbal label” in this discourse.
+2. `viññāṇa` is not introduced here as one permanent, contentless witness behind all experience.
+
+### TEXT_ATTESTED — 4. DN 15 EXPANDS THE MUTUAL DEPENDENCE
+
+**DN 15 Mahānidāna** gives two directions.
+
+For:
+`consciousness → name-and-form`
+
+it uses the context of conception and development:
+- if consciousness did not enter the womb, name-and-form would not take shape there;
+- if consciousness departed, name-and-form would not continue to develop.
+
+For:
+`name-and-form → consciousness`
+
+it says that if consciousness did not gain a footing in name-and-form, future birth, aging, death, and suffering would not be discerned.
+
+The discourse then says that the round of designation, expression, description, and discernment extends to **name-and-form together with consciousness**.
+
+This is strong evidence that the pair is functioning as a coupled condition-set, not as “a body plus an independent soul.”
+
+### TEXT_ATTESTED — 5. SN 12.35 BLOCKS THE “WHO OWNS CONSCIOUSNESS?” FRAME
+
+SN 12.35 repeatedly rejects the question form:
+
+- “Which is name-and-form, and whose is name-and-form?”
+- “Which is consciousness, and whose is consciousness?”
+
+as **not a valid question** in that form.
+
+The text connects that framing with the two rejected positions:
+- life-principle/self is the same as the body;
+- life-principle/self is one thing and the body another.
+
+It then returns to the middle teaching in conditional form:
+`with formations as condition, consciousness`;
+`with consciousness as condition, name-and-form`.
+
+This is especially important for A48:
+the discourse does not solve the problem by locating an owner **behind** consciousness.
+
+It changes the form of explanation.
+
+### CROSS_TEXT SYNTHESIS — 6. NOT “CONSCIOUSNESS CREATES MATTER,” NOT “MATTER CREATES CONSCIOUSNESS”
+
+The reciprocal texts do not warrant either simple thesis:
+
+- “mind creates matter”;
+- “matter creates mind.”
+
+The safer early-text synthesis is:
+
+`viññāṇa` and `nāmarūpa` are analytically distinguishable but, in the cited dependent-origination passages, can stand in reciprocal conditional relations that support the continuation of the experiential/life process.
+
+This is **CROSS_TEXT SYNTHESIS**, not a verbatim canonical definition.
+
+### TEXT_ATTESTED + SYNTHESIS — 7. CONSCIOUSNESS CAN “LAND” AND GROW
+
+**SN 12.64** adds another layer.
+
+Where there is passion, delight, and craving toward nutriment, consciousness becomes established and grows; where consciousness becomes established and grows, name-and-form “descends/alights,” and the process proceeds toward renewed becoming, birth, aging, and death.
+
+Where passion, delight, and craving are absent, consciousness does not become established and grow in that way.
+
+This makes consciousness in dependent origination look less like an eternal witness and more like a conditioned process whose establishment is linked with craving and nutriment.
+
+The exact relation among:
+- “consciousness as one of the four nutriments,”
+- “consciousness becoming established,”
+- the six classes of consciousness in SN 12.2,
+- rebirth-level language,
+
+still requires more audit.
+
+### CENTRAL CORRECTION
+
+A simplistic model says:
+
+`A causes B causes C causes D`
+
+and imagines each factor as an independent block.
+
+A48 requires a more careful model:
+
+- the standard chain is real and text-attested;
+- but at the `viññāṇa / nāmarūpa` node, some early discourses explicitly describe reciprocal conditioning;
+- the factors remain distinguishable;
+- the relation does not require inserting a hidden owner or permanent substrate;
+- cessation can be described by removing the supporting condition, like one reed-sheaf falling when the other is removed.
+
+Therefore:
+**dependent origination can contain structured reciprocity without becoming a theory that “everything causes everything.”**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- passages/themes used:
+  1. discussion of **name-and-form**: Nāgasena says the mental/subtle side and material/gross side are connected and arise together rather than being reborn separately;
+  2. the hen/egg illustration is used to show intimate dependence between the two sides of name-and-form;
+  3. the earlier chariot argument remains relevant as a guard against inserting a permanent owner behind aggregates/processes;
+  4. the continuity discussion (“neither simply the same nor another”) helps distinguish causal continuity from identity of an invariant substance.
+- role in A48: Mi Tiên helps make **interdependence without a permanent bearer** conceptually clearer;
+- interpretation change: **MODERATE** — it sharpened the distinction between “factors are dependent” and “factors are identical”;
+- early-discourse confirmation: **YES IN FUNCTION**, especially through SN 12.67’s two-reed simile and SN 12.35’s rejection of the “whose consciousness?” framing;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### MILINDAPAÑHA GUARDRAIL
+
+Mi Tiên’s treatment of name-and-form is later and more systematized.
+
+Therefore it may clarify the logic, but it must not be used to overwrite differences among:
+- SN 12.2 definitions;
+- SN 12.65 reciprocity;
+- SN 12.67 two-reed model;
+- DN 15 conception/development explanation.
+
+The early texts remain the authority for claims about early Buddhist thought.
+
+### EARLY-PARALLEL STRESS TEST — OPEN
+
+A comparative source notes that at least one Chinese Saṃyukta Āgama parallel to the “city” material does not preserve the `name-and-form → consciousness` statement in exactly the same way as the Pāli SN version.
+
+This means:
+
+- reciprocity is clearly attested in Pāli SN 12.65 and SN 12.67;
+- but a broad historical claim that **all early parallel traditions uniformly preserved the exact reciprocal formula** is not yet justified.
+
+Claim class: **OPEN/CHECK** pending direct parallel-text audit.
+
+### PRACTICAL MODEL
+
+For present analysis, instead of imagining:
+
+`a self → has a body → has a mind → has consciousness`
+
+A48 permits the more text-sensitive working model:
+
+`conditioned consciousness ↔ conditioned name-and-form → six sense bases → contact → feeling ...`
+
+with the warning that this is a **map of conditional dependence**, not a metaphysical diagram of substances.
+
+### PRACTICAL DIAGNOSTIC
+
+When experience feels as though there must be “someone behind it all,” ask:
+
+- What specific consciousness is present — seeing, hearing, thinking, etc.?
+- What feeling, perception, intention, contact, and attention are co-present?
+- What bodily/material conditions are involved?
+- What changes when one of these conditions changes?
+- Am I observing a relation, or adding an imagined owner to the relation?
+- Is consciousness being treated as conditioned here, or have I silently turned it into an eternal witness?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.1 / 12.2 — standard sequence and definitions.
+- SN 12.35 — invalid “whose?” framing and return to conditional explanation.
+- SN 12.65 — consciousness turns back at name-and-form; reciprocal condition.
+- SN 12.67 — two sheaves of reeds.
+- SN 12.64 — establishment/growth of consciousness, craving/nutriment, descent of name-and-form.
+- DN 15 — mutual conditioning expanded through conception/development and consciousness finding footing.
+
+Mandatory Milindapañha layer:
+- name-and-form as connected rather than separately arising;
+- hen/egg illustration;
+- chariot/designation;
+- continuity without invariant identity.
+
+### Next checkpoint — PHASE 4 A49
+
+Central question:
+
+**What does it mean for consciousness to become “established” (`patiṭṭhita`) or “not established,” and how are craving, nutriment, clinging, and renewed becoming involved?**
+
+Required lanes:
+- continue SN 12 audit with SN 12.38, SN 12.64 and related passages;
+- compare “six classes of consciousness” with “established consciousness” without collapsing them;
+- relation to `āhāra`, delight, craving, and future becoming;
+- distinguish cessation of establishment from annihilationist interpretations;
+- mandatory Milindapañha consultation in the current chat/seat;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
 ## Provenance
 
