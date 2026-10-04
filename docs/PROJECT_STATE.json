@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A56_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A57",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A57_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A58",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -546,5 +546,7 @@
   "owner_learning_track_buddhist_thought_a55_claim_class": "TEXT_ATTESTED_ANATTA_PRACTICE_PLUS_CROSS_TEXT_ANTI_SLOGAN_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a55_milindapanha": "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION",
   "owner_learning_track_buddhist_thought_a56_claim_class": "TEXT_ATTESTED_CONVENTIONAL_DESIGNATION_AND_CAUSAL_RESPONSIBILITY_PLUS_CROSS_TEXT_LANGUAGE_ONTOLOGY_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a56_milindapanha": "CONSULTED_CHARIOT_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_RESPONSIBILITY_ANALOGIES"
+  "owner_learning_track_buddhist_thought_a56_milindapanha": "CONSULTED_CHARIOT_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_RESPONSIBILITY_ANALOGIES",
+  "owner_learning_track_buddhist_thought_a57_claim_class": "TEXT_ATTESTED_IDENTITY_VIEW_VS_I_AM_CONCEIT_VS_CONVENTIONAL_SPEECH_PLUS_CROSS_TEXT_DEPTH_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a57_milindapanha": "CONSULTED_CONVENTIONAL_NAGASENA_CHARIOT_AND_CONTINUITY_WITHOUT_STRICT_IDENTITY"
 }
