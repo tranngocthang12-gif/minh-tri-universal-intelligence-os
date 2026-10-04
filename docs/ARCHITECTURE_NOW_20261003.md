@@ -154,16 +154,21 @@ Provider-neutral mechanisms inspired by public Gemini/Claude/Grok documentation:
 
 ## 8. Promotion gates còn mở
 
-1. verify/revoke every old tunnel key;
-2. establish secure boot persistence design and prove after controlled restart/reboot;
-3. resolve endpoint-protection and BitLocker UNKNOWNs with stronger evidence;
-4. perform genuine fresh-seat validation;
-5. establish independent witness authority/credential;
-6. capture a real external critic execution receipt/evidence before claiming operational critic independence;
-7. empirically validate Learning Assurance v1.4 against real work before claiming it improves accuracy;
-8. only then reconsider closing foundation build phase.
+The canonical open-foundation-gate set is the exact machine-readable list in `PROJECT_STATE.open_foundation_gates`; `RECOVERY_MANIFEST.open_foundation_gates` must match it exactly and CI enforces the equality.
 
-Backlog hygiene is already closed on 2026-10-03; it is not an open foundation gate.
+1. `VERIFY_OLD_TUNNEL_KEY_REVOCATION` — provider-side proof that every obsolete tunnel credential is revoked/disabled.
+2. `PROVE_BOOT_REBOOT_PERSISTENCE` — controlled reboot/logon recovery with no manual tunnel launch.
+3. `RESOLVE_ENDPOINT_PROTECTION_AND_BITLOCKER_UNKNOWNS` — stronger endpoint-protection and disk-encryption evidence.
+4. `PASS_GENUINE_FRESH_SEAT_VALIDATION` — bounded fresh-seat proof under the current protocol.
+5. `ESTABLISH_INDEPENDENT_WITNESS_AUTHORITY` — witness authority outside the Owner-PC/GitHub write-authority boundary.
+6. `CAPTURE_REAL_EXTERNAL_CRITIC_EXECUTION_EVIDENCE` — actual external critic run/receipt, not simulated independence.
+7. `EMPIRICALLY_VALIDATE_LEARNING_ASSURANCE_V14` — real comparative evidence before claiming benefit.
+8. `AUDIT_RESOLUTION_PROVENANCE_INDEPENDENCE` — frozen raw-source provenance audit with independent resolution path.
+9. `DEFINE_AND_TEST_RESEARCH_INGESTION_SAFETY` — fail-closed ingestion safety before Research Adapter use.
+10. `PROVE_RUNTIME_COMMIT_BUILD_ATTESTATION` — fresh proof binding the live runtime/build to the intended canonical source.
+
+Only after all current machine-readable gates close with evidence may foundation completion be reconsidered. Backlog hygiene is already closed and is not an open foundation gate.
+
 
 ## 9. Backlog hygiene
 
