@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A63_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A64",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A64_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A65",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -560,5 +560,7 @@
   "owner_learning_track_buddhist_thought_a62_claim_class": "TEXT_ATTESTED_RIGHT_VIEW_VIEW_CLINGING_RAFT_AND_TRUTH_PRESERVATION_PLUS_CROSS_TEXT_TOOL_VS_POSSESSION_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a62_milindapanha": "CONSULTED_QUESTION_CLASSIFICATION_AND_TASK_BOUNDED_REASONING_AS_SUPPORT_TO_WISDOM",
   "owner_learning_track_buddhist_thought_a63_claim_class": "TEXT_ATTESTED_DISCIPLINE_VS_WRONG_OBSERVANCE_AND_RITUAL_MECHANISM_PLUS_CROSS_TEXT_METHOD_FUNCTION_SYNTHESIS_WITH_LEXICAL_OPEN_GUARDRAILS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a63_milindapanha": "CONSULTED_MIL_3_1_9_VIRTUE_AS_FOUNDATION_FOR_WHOLESOME_QUALITIES"
+  "owner_learning_track_buddhist_thought_a63_milindapanha": "CONSULTED_MIL_3_1_9_VIRTUE_AS_FOUNDATION_FOR_WHOLESOME_QUALITIES",
+  "owner_learning_track_buddhist_thought_a64_claim_class": "TEXT_ATTESTED_SELF_DOCTRINE_CLINGING_IDENTITY_VIEW_AND_RESIDUAL_I_AM_DISTINCTION_PLUS_EARLY_PARALLEL_LEXICAL_STRESS_TEST_PLUS_CROSS_TEXT_THREE_LAYER_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a64_milindapanha": "CONSULTED_NAGASENA_CHARIOT_AND_NEITHER_SAME_NOR_OTHER_NO_DECISIVE_TERM_EQUIVALENCE"
 }
