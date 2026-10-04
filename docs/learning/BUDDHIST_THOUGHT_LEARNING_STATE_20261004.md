@@ -4,14 +4,14 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A26: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A26_UPEKKHA_CARE_WITHOUT_CONTROL_20261004.md`.
-- A26 source boundary: MN 137 distinguishes deluded/householder equanimity from renunciate equanimity grounded in wisdom, and shows a Teacher acting from compassion while remaining equanimous about disciples' responses.
-- A26 guardrail: upekkhā is context-sensitive; emotional neutrality alone is not automatically wisdom. Brahmavihāra practice is not silently equated with the whole liberating path.
+- Phase 4 A5-A27: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A27_COMPASSION_WITHOUT_ATTACHMENT_20261004.md`.
+- A27 source boundary: compassion in MN 62 is explicitly opposed to cruelty; MN 137 shows compassion for welfare coexisting with equanimity about others' responses; SN 45.8 confirms the path includes active wholesome motivation.
+- A27 guardrail: not every desire or aspiration is taṇhā; compassion is not possessive control, and non-attachment is not indifference.
 
 Next:
-- **Phase 4 A27:** Compassion without attachment — if one deeply wants another being free from suffering, how is that different from craving for them to be a certain way?
-- Route: brahmavihāra material → MN 137 → SN 36 feeling material → dependent-origination craving/clinging material → SN 45.2 → Milindapañha 5.2.7 and related dialectic.
+- **Phase 4 A28:** If not all desire is craving, what is the difference between taṇhā and wholesome motivation/chanda? How can the path require effort and aspiration while ending craving?
+- Route: SN 56.11 → SN 45.8 → right-effort material → SN 12.52 → AN 6.63 as needed → Milindapañha motivation/wisdom dialectic.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
