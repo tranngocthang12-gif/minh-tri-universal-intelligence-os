@@ -7760,3 +7760,249 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A78
+
+**Central question:** What exactly are `nirodha` and `vimutti` in the early discourses: what ceases, what is released, and why is liberation neither annihilation of a self nor mere emotional calm?
+
+### TEXT_ATTESTED — 1. THE THIRD NOBLE TRUTH DEFINES CESSATION THROUGH CRAVING
+
+**SN 56.11** defines the cessation of suffering as the remainderless fading and cessation of that very craving, together with relinquishing, releasing, and no longer clinging to it.
+
+This gives the first hard boundary for A78:
+
+`dukkha-nirodha` is not presented as destruction of a metaphysical person.
+It is presented as the cessation of the craving that drives suffering and renewed becoming.
+
+### TEXT_ATTESTED — 2. DEPENDENT CESSATION IS A CAUSAL CASCADE
+
+**SN 12.15 / SN 12.41** give the dependent-cessation pattern:
+
+ignorance ceases
+→ formations cease
+→ consciousness ceases in the relevant conditioned sequence
+→ name-and-form ...
+→ craving
+→ clinging
+→ becoming
+→ birth
+→ aging-and-death and the whole mass of suffering cease.
+
+A78 therefore uses the bounded model:
+
+**cessation means the stopping of causal production when the supporting condition is no longer present.**
+
+This is a **CROSS_TEXT CAUSAL SYNTHESIS**.
+It should not be turned into the claim that every presently existing conditioned phenomenon instantly disappears at awakening.
+
+### TEXT_ATTESTED — 3. VIMUTTI IS RELEASE FROM DEFILEMENT AND GRASPING
+
+**SN 22.59** says:
+
+seeing the five aggregates correctly
+→ disenchantment
+→ dispassion
+→ release.
+
+It closes by saying the minds of the five monks were freed from the defilements **by not grasping**.
+
+So the early-discourse answer to “what is released?” is functional:
+
+- the mind is released;
+- from the defilements / taints;
+- through non-grasping;
+- and the knowledge arises that it is released.
+
+A78 does **not** posit an eternal inner entity that first becomes bound and then escapes.
+
+### TEXT_ATTESTED — 4. LIBERATION CAN BE COMPLETE WHILE THE LIVING PERSON STILL FEELS
+
+**Iti 44** distinguishes:
+- the Nibbāna element with residue;
+- the Nibbāna element with no residue.
+
+For the living arahant:
+- the sense faculties remain;
+- pleasant and painful experience can still occur;
+- greed, hate, delusion, and the fetter of continued existence are ended.
+
+Therefore:
+
+**awakening does not mean immediate destruction of the body, senses, or all experience.**
+
+This sharply guards against interpreting `nirodha` as simple physical disappearance.
+
+### TEXT_ATTESTED — 5. FINAL “NO RESIDUE” IS NOT DESCRIBED AS THE ANNIHILATION OF A SELF
+
+Iti 44 says that when the present-life remainder is no longer operative, what is experienced, no longer relished, comes to an end and future states of existence cease.
+
+But the early discourses do not thereby authorize the proposition:
+
+`a real permanent self is annihilated`.
+
+Why not?
+
+Because the teaching has already denied the five aggregates as fitting candidates for:
+- “mine”;
+- “I am this”;
+- “this is my self.”
+
+And **SN 44.8 / SN 44.10** refuse the post-mortem alternatives built from the assumption of a self that either continues or is destroyed.
+
+Thus A78 keeps the guardrail:
+
+**dependent cessation is not the annihilation of an independently existing self; it is the ending of the causal conditions that sustain clinging, becoming, birth, and suffering.**
+
+The sentence above is **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 6. THE MIDDLE-WAY GUARDRAIL BLOCKS BOTH ETERNALISM AND ANNIHILATIONISM
+
+**SN 12.15** explicitly rejects the two extremes:
+- “everything exists”;
+- “nothing exists.”
+
+It then teaches dependent arising and dependent cessation.
+
+That structure matters for A78.
+
+The Buddha’s causal account does not require:
+- an eternal bearer that survives unchanged;
+- nor a metaphysical entity that is later destroyed.
+
+The analytical unit is the conditioned process.
+
+### IMPORTANT GUARDRAIL — VIMUTTI IS NOT MERELY TEMPORARY CALM
+
+Calm and concentration are important path conditions, but liberation is marked more strongly.
+
+In **SN 22.59**:
+- release is tied to non-grasping and freedom from defilements;
+- knowledge arises: “released”;
+- rebirth is said to be ended.
+
+Therefore a peaceful meditation state by itself should not be equated with final `vimutti`.
+
+A78 uses:
+**calm can support liberation, but liberation means the causal bondage itself has been ended.**
+
+### IMPORTANT GUARDRAIL — “CESSATION” DOES NOT MEAN “NOTHING EXISTS”
+
+A causal sequence can cease without implying the doctrine:
+`nothing whatsoever exists`.
+
+The early texts repeatedly formulate cessation locally and conditionally:
+- cessation of craving;
+- cessation of clinging;
+- cessation of becoming;
+- cessation of birth;
+- cessation of the mass of suffering.
+
+Therefore the most disciplined reading asks:
+
+**what exactly is said to cease in this passage?**
+
+Do not universalize every use of `nirodha` into an unrestricted metaphysical claim.
+
+### RELATION BETWEEN NIRODHA, VIRĀGA, AND VIMUTTI
+
+A bounded functional map is:
+
+`right knowing and seeing`
+→ `nibbidā`
+→ `virāga`
+→ `vimutti`
+
+while, in the causal model:
+
+`craving-nirodha`
+→ `clinging-nirodha`
+→ `becoming-nirodha`
+→ `birth-nirodha`
+→ cessation of the whole mass of suffering.
+
+These are two complementary early-discourse lenses:
+- experiential/liberative sequence;
+- dependent-causal cessation sequence.
+
+No single discourse states the full combined map verbatim.
+Claim class: **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary theme from **Milindapañha Book III, section 6**:
+  - Nāgasena answers that cessation is Nibbāna;
+  - when one does not delight in or cling to sense experience, craving ceases;
+  - with craving ceasing, grasping, becoming, birth, and the downstream mass of suffering cease;
+- secondary later themes:
+  - Nibbāna is realized rather than manufactured by the practitioner;
+  - Nibbāna is not treated as a spatial location;
+- role in A78:
+  - strongly supports a causal rather than annihilationist reading of cessation;
+  - helps distinguish realization of release from production of a new metaphysical substance or place;
+- limitation:
+  - these are **LATER/PARACANONICAL SUPPORT**;
+  - they do not override the early-discourse formulations of SN 56.11, SN 12, SN 22, Iti 44, and the undeclared-question guardrail.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 56.11 — cessation of suffering as cessation/relinquishment of craving.
+- SN 12.15 / SN 12.41 — dependent cessation and middle-way guardrail.
+- SN 22.59 — dispassion → release; mind freed from taints by non-grasping.
+- Iti 44 — Nibbāna with residue and with no residue; living arahant still experiences.
+- SN 44.8 / SN 44.10 — post-mortem self/Tathāgata binaries are not accepted as straightforward descriptions.
+
+Later/paracanonical:
+- Milindapañha Book III §6 and later Nibbāna dilemmas.
+
+### METHOD INSIGHT
+
+A78 reveals another central feature of the Buddha’s thought:
+
+**liberation is described causally, not as the rescue or destruction of a metaphysical object called “self.”**
+
+The practical question is:
+- what feeds suffering?
+- what feeds clinging?
+- what feeds becoming?
+- what happens when that fuel ends?
+
+This turns the issue from speculative identity metaphysics into a testable structure of arising and cessation.
+
+### PRACTICAL DIAGNOSTIC
+
+When reading “cessation” or “liberation,” ask:
+- What exactly is said to cease here?
+- Which supporting condition has ended?
+- Is this about craving, clinging, becoming, birth, defilements, or the present experience stream?
+- Am I silently inserting an eternal self that the text did not establish?
+- Am I silently converting cessation into “nothing exists”?
+- Am I confusing temporary calm with release from grasping and defilement?
+- Is the claim early-text attested, cross-text synthesis, or later support?
+
+### Open audit
+
+- occurrence-level lexical audit of `nirodha`, `vimuccati`, `vimutti`, `parinibbāna`, and `anupādā`;
+- early Chinese parallel stress-test for SN 12 / SN 22 / Iti 44 themes;
+- exact relation between “cessation of consciousness” in dependent cessation and other early uses of consciousness remains context-sensitive and must not be flattened;
+- relation among `ceto-vimutti`, `paññā-vimutti`, and general `vimutti` remains for a dedicated checkpoint;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A78 mirror attempt: **UNREACHABLE**;
+- read-only connector returned that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A79
+
+**How do `anupādā` (non-grasping), `āsava` (taints/inflows), and `vimutti` fit together, and what precisely is meant by “the mind is freed from the taints by not grasping”?**
+
+Required lanes:
+- SN 22.59 and related anupādā-vimutti formulae;
+- MN 2 / MN 121 / relevant āsava passages;
+- distinguish non-grasping from passivity or disengagement;
+- examine ceto-vimutti / paññā-vimutti only where textually warranted;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
