@@ -13147,3 +13147,428 @@ Required lanes:
 - mandatory Milindapañha consultation, with special caution around later “unconscious crime” dilemmas;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A94
+
+**Central question:** What does the Buddha mean by `cetanā` in the statement “intention is kamma,” and how should deliberate action, accident, ignorance, and consequence be distinguished without reducing ethics either to motive alone or outcome alone?
+
+### TEXT_ATTESTED — 1. AN 6.63 DEFINES KAMMA THROUGH CETANĀ
+
+**AN 6.63 Nibbedhika** says:
+
+- `cetanā` is what the Buddha calls kamma;
+- having intended/formed a volition, one acts through body, speech, and mind.
+
+This is the first hard boundary for A94.
+
+Kamma is not merely:
+- a physical movement;
+- a visible outcome;
+- something that happens to others.
+
+Its morally formative core is the **volitional direction** from which bodily, verbal, and mental action proceeds.
+
+### IMPORTANT LEXICAL GUARDRAIL — CETANĀ IS NOT IDENTICAL TO EVERYDAY “GOOD INTENTION”
+
+English/Vietnamese “intention” can mean:
+- motive;
+- wish;
+- purpose;
+- plan;
+- decision;
+- volitional impulse.
+
+The Pāli `cetanā` in AN 6.63 should not be reduced to the casual defense:
+**“I meant well.”**
+
+A bounded working sense is:
+**volition / willing / choosing that organizes action.**
+
+Exact lexical range remains **OPEN/CHECK**.
+
+### TEXT_ATTESTED — 2. AN 6.63 ALSO SAYS KAMMA IS CONDITIONED, NOT A METAPHYSICAL FREE-WILL SUBSTANCE
+
+The same discourse says:
+- contact is the source/condition for the arising of kamma;
+- kamma has results;
+- kamma can cease;
+- the Noble Eightfold Path is the way leading to cessation of kamma.
+
+Therefore the teaching is not:
+“there is an absolutely independent chooser outside conditions.”
+
+A94 uses the bounded conclusion:
+**volition is causally conditioned and still ethically significant.**
+
+This is **TEXT-BASED SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. MN 9 SHOWS THAT VOLITION MUST BE ASSESSED BY ITS ROOTS
+
+**MN 9 Sammādiṭṭhi** gives the three roots of unskillful action:
+- greed;
+- hate;
+- delusion.
+
+And the three roots of skillful action:
+- non-greed;
+- non-hate;
+- non-delusion.
+
+This is decisive for the problem of “good motives.”
+
+A person may:
+- sincerely want a good result;
+- yet misunderstand the situation;
+- act from delusion;
+- and produce unskillful conduct.
+
+Therefore:
+**benevolent self-description is not enough; the cognitive root of the intention matters too.**
+
+### TEXT_ATTESTED — 4. MN 41 SHOWS THAT MENTAL ACTION IS ITSELF AN ETHICAL DOMAIN
+
+**MN 41 Sāleyyaka** distinguishes ten courses of conduct:
+
+Body:
+- killing;
+- stealing;
+- sexual misconduct.
+
+Speech:
+- false;
+- divisive;
+- harsh;
+- frivolous/useless speech.
+
+Mind:
+- covetousness;
+- ill will;
+- wrong view.
+
+The inclusion of mental conduct means:
+**ethical significance begins before visible bodily outcome.**
+
+A malicious or covetous mental direction can be ethically unskillful even before it succeeds in changing the external world.
+
+### TEXT_ATTESTED — 5. MN 61 PREVENTS “INTENTION IS KAMMA” FROM BECOMING “ONLY MOTIVE MATTERS”
+
+**MN 61 Ambalaṭṭhikarāhulovāda** instructs reflection:
+- before acting;
+- while acting;
+- after acting.
+
+The practitioner examines whether the act:
+- harms oneself;
+- harms others;
+- harms both;
+- leads to painful or happy result.
+
+If harm appears while acting:
+- stop or change course.
+
+If a harmful bodily or verbal action has been completed:
+- acknowledge it;
+- disclose it appropriately;
+- train not to repeat it.
+
+Therefore:
+**initial volition matters, but actual consequences feed back into ethical learning.**
+
+### IMPORTANT GUARDRAIL — CONSEQUENCE AWARENESS DOES NOT CANCEL THE CENTRALITY OF CETANĀ
+
+A94 rejects the opposite reduction:
+`bad result = same kamma regardless of intention`.
+
+AN 6.63 makes `cetanā` central.
+Selected Vinaya evidence also sharply distinguishes intentional and accidental acts.
+
+Therefore a harmful outcome by itself does not prove:
+- murderous intent;
+- ill will;
+- deception;
+- or the same karmic action as deliberate harm.
+
+### SELECTED VINAYA EVIDENCE — INTENTIONAL KILLING AND ACCIDENTAL DEATH ARE NOT TREATED AS THE SAME OFFENSE
+
+In the disciplinary analysis of the rule against killing a human being, the full grave offense requires, among other factors:
+- perception of a living human being;
+- deliberate intention;
+- aiming at death;
+- causal effort;
+- death as result.
+
+The Vinaya material also preserves cases where:
+- death occurs accidentally;
+- the actor did not know;
+- or did not aim at death;
+
+and the full killing offense does not arise.
+
+This supports a narrow A94 conclusion:
+**intentional killing and accidental causing of death are not ethically/disciplinarily collapsed into one category.**
+
+### IMPORTANT VINAYA GUARDRAIL — VINAYA OFFENSE CLASSIFICATION IS NOT IDENTICAL TO KAMMA THEORY
+
+Vinaya rules have rule-specific structures.
+
+Some depend strongly on:
+- intention;
+- perception;
+- result.
+
+Others can assign an offense even without the same intention requirements.
+
+Therefore A94 does **not** use monastic penalties as a simple numerical measure of karmic weight.
+
+The Vinaya is consulted here only to show that early Buddhist discipline itself distinguishes:
+- deliberate;
+- accidental;
+- unknowing;
+- differently aimed action.
+
+### SELECTED VINAYA EVIDENCE — ACCIDENT DOES NOT MEAN “NO RESPONSIBILITY OF ANY KIND”
+
+A particularly useful disciplinary case concerns a monk who sat down without checking carefully and unintentionally caused the death of a child hidden under cloth.
+
+The killing itself was not treated as the intentional killing offense.
+
+But the carelessness in sitting without checking could still be faulted separately.
+
+This provides an important guarded distinction:
+
+**lack of murderous intention can remove the category of intentional killing without erasing every question of carelessness, training, or repair.**
+
+A94 labels this:
+**VINAYA DISCIPLINARY EVIDENCE — NOT A COMPLETE KAMMA FORMULA**.
+
+### ACCIDENT — BOUNDED RESULT
+
+A94 distinguishes:
+
+**accident**
+- harmful outcome occurs;
+- the specific harmful result was not intended.
+
+This usually changes the analysis of kamma significantly.
+
+But one must still ask:
+- was there negligence?
+- was risk knowingly ignored?
+- was the actor intoxicated, reckless, or careless?
+- could correction have occurred during the act?
+- what should be learned afterward?
+
+Thus:
+**unintended result ≠ intended harm**
+but also
+**unintended result ≠ nothing to learn or repair.**
+
+The second line is **ETHICAL SYNTHESIS**, especially from MN 61 and selected Vinaya evidence.
+
+### IGNORANCE / DELUSION — BOUNDED RESULT
+
+A94 distinguishes two different ideas often translated loosely as “not knowing.”
+
+1. **Factual non-knowledge**
+   - e.g. not knowing a being is present.
+
+2. **Delusion / wrong understanding**
+   - misreading what is skillful;
+   - holding wrong view;
+   - failing to understand cause and effect.
+
+MN 9 shows that **delusion is itself an unskillful root**.
+
+Therefore:
+**ignorance can reduce one kind of deliberate culpability while still being part of the unskillful causal structure in another sense.**
+
+These must not be flattened into one category.
+
+### CROSS-TEXT SYNTHESIS — FIVE QUESTIONS FOR ACTION
+
+A94's bounded ethical model asks:
+
+1. **What was intended?**
+   - what was chosen or aimed at?
+
+2. **What roots were present?**
+   - greed, hate, delusion?
+   - or non-greed, non-hate, non-delusion?
+
+3. **What was actually done?**
+   - body, speech, or mind?
+
+4. **What was known or reasonably knowable?**
+   - factual knowledge;
+   - perception;
+   - foreseeable risk.
+
+5. **What actually happened?**
+   - harm;
+   - benefit;
+   - need for correction or restraint.
+
+This is **CROSS-TEXT SYNTHESIS** from AN 6.63, MN 9, MN 41, MN 61, and selected Vinaya evidence.
+
+No single early passage gives this exact five-question checklist.
+
+### IMPORTANT GUARDRAIL — “I MEANT WELL” CAN STILL MASK DELUSION
+
+Suppose a person genuinely wants to help but:
+- has not understood the facts;
+- ignores warnings;
+- acts from wrong view;
+- refuses feedback.
+
+The initial motive may lack ill will.
+
+But MN 9 prevents us from calling the whole process skillful merely for that reason.
+
+**Non-hatred is not the same as non-delusion.**
+
+Thus Buddhist ethics demands:
+- goodwill;
+- and discernment.
+
+### IMPORTANT GUARDRAIL — BAD OUTCOME ALONE DOES NOT IDENTIFY THE MENTAL ROOT
+
+A harmful outcome may arise from:
+- malice;
+- greed;
+- delusion;
+- carelessness;
+- mistaken perception;
+- accident;
+- conflicting conditions.
+
+Therefore one should not infer:
+`harm happened → the actor intended harm`.
+
+This protects ethical analysis from mind-reading.
+
+The correct inquiry remains multi-factor.
+
+### IMPORTANT GUARDRAIL — KAMMIC SIGNIFICANCE AND ORDINARY CAUSAL RESPONSIBILITY ARE RELATED BUT NOT IDENTICAL
+
+A94 uses the following distinction carefully:
+
+**kammic analysis**
+asks centrally about:
+- `cetanā`;
+- mental roots;
+- the morally formative quality of action.
+
+**ordinary causal/ethical responsibility**
+can also ask:
+- what harm was caused?
+- what risk was foreseeable?
+- what repair is needed?
+- what practice should change?
+
+Thus a person may lack the intention for a specific harm and still have:
+- duties of repair;
+- lessons to learn;
+- responsibility for negligence.
+
+This is **MODERN ANALYTICAL SYNTHESIS** grounded in early-text distinctions.
+It is not canonical terminology.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY AND GUARDED
+
+- consulted: **YES**;
+- primary relevant passage: **Mil 5.2.6, “Unconscious Crime”**;
+- the dilemma juxtaposes:
+  - a claim that killing without knowing can still have grave demerit;
+  - a Vinaya statement that there is no offense for one acting in ignorance;
+- Nāgasena answers by distinguishing different kinds of offense according to whether there is cooperation/participation of mind;
+- role in A94:
+  - supports the need to distinguish kinds of ignorance and kinds of offense;
+  - warns against using one rule of intention indiscriminately across every ethical/disciplinary category;
+- major limitation:
+  - this is **LATER/PARACANONICAL**;
+  - the translation of a key compound is difficult;
+  - the old translator notes textual/source uncertainty around the first premise;
+  - therefore it is **not** used to override AN 6.63, MN 61, or the Vinaya rule-analysis;
+- interpretation change: **CAUTION INCREASED, NO EARLY-TEXT OVERRIDE**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 6.63 — `cetanā` as kamma; action through body, speech, mind; contact as source; result and cessation of kamma.
+- MN 9 — greed, hate, delusion and their opposites as roots.
+- MN 41 — ten bodily, verbal, and mental courses of conduct.
+- MN 61 — before/during/after ethical review; harm and outcome matter for learning and correction.
+
+Selected early disciplinary evidence:
+- Vinaya rule-analysis of intentional killing — deliberate aim at death distinguished from accident, ignorance, or another aim.
+- Vinīta-vatthu-style cases — accidental death can differ from intentional killing while carelessness may remain a separate issue.
+
+Later/paracanonical:
+- Milindapañha 5.2.6 — “Unconscious Crime,” used cautiously.
+
+### METHOD INSIGHT
+
+A94 reveals a major feature of the Buddha's thought:
+
+**action is morally shaped from the inside out, but it must be learned from the outside back in.**
+
+From inside out:
+- volition;
+- roots;
+- bodily/verbal/mental action.
+
+From outside back in:
+- observe result;
+- recognize harm;
+- correct understanding;
+- revise future volition.
+
+Thus the path is neither:
+**“only what I meant matters”**
+nor
+**“only what happened matters.”**
+
+It is a training loop joining intention, discernment, action, and feedback.
+
+### PRACTICAL DIAGNOSTIC
+
+When evaluating an action, ask:
+- What did I actually choose?
+- What was I trying to make happen?
+- Was greed, hate, or delusion present?
+- What did I know at the time?
+- What warning signs did I ignore?
+- Was the harmful result intended, foreseeable, accidental, or due to mistaken perception?
+- Did I notice harm while acting and continue anyway?
+- What actually happened afterward?
+- What repair is possible?
+- What should change in my future intention, knowledge, or procedure?
+
+### Open audit
+
+- full lexical/context audit of `cetanā`, `saṅkappa`, `kamma`, `saññā`, `jānāti`, and ignorance/delusion vocabulary;
+- early parallel stress-test for AN 6.63;
+- deeper Vinaya audit separating canonical rule text, Vibhaṅga analysis, Vinīta-vatthu cases, commentary, and subcommentary;
+- investigate intention versus immediate aim versus remote motive in early material;
+- distinguish karmic result (`vipāka/phala`) from immediate worldly consequence;
+- examine reckless/negligent conduct without importing modern legal categories too quickly;
+- continue MN 61 / SN 45 ethical architecture and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A94 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A95
+
+**How do `kamma`, `vipāka/phala`, present-moment consequences, and rebirth results relate in the early discourses, and why does the Buddha's teaching on kamma reject both fatalism (“everything is caused by past kamma”) and the idea that intentions have no consequences?**
+
+Required lanes:
+- AN 6.63 on result of kamma;
+- SN 36.21 on multiple causes of feeling;
+- AN material rejecting past-kamma determinism;
+- present action / old action / new action material;
+- distinguish karmic result from every event that happens;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
