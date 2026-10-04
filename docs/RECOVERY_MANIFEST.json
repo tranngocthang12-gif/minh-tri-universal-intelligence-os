@@ -186,8 +186,8 @@
   "owner_learning_track_buddhist_thought": {
     "status": "ACTIVE",
     "checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-    "current": "PHASE_4_A34_COMPLETED",
-    "next": "PHASE_4_A35",
+    "current": "PHASE_4_A35_COMPLETED",
+    "next": "PHASE_4_A36",
     "open_audits": [
       "SN12",
       "SN22",
@@ -198,6 +198,7 @@
       "EARLY_PARALLEL_STRESS_TESTS"
     ],
     "background_runtime": false,
-    "a34_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS"
+    "a34_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS",
+    "a35_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS"
   }
 }
