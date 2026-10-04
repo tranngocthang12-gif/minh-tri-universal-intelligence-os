@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A71 COMPLETED  
-**Next checkpoint:** PHASE 4 — A72  
+**Current checkpoint:** PHASE 4 — A72 COMPLETED  
+**Next checkpoint:** PHASE 4 — A73  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -6401,6 +6401,216 @@ Required lanes:
 - AN 3.61 critique of deterministic/previous-action doctrines where relevant;
 - present intention and path cultivation;
 - distinguish conditioned action from metaphysical free-will slogans;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / open-check boundaries.
+
+
+## Completed checkpoint A72
+
+**Central question:** Does the Buddha’s teaching of kamma imply determinism or fatalism, and how do past conditioning, present intention, multiple present causes, and liberation fit together?
+
+### TEXT_ATTESTED — 1. SN 36.21 REJECTS “EVERYTHING FELT NOW IS CAUSED BY PAST KAMMA”
+
+**SN 36.21 Sīvaka** directly rejects the doctrine that every pleasant, painful, or neutral feeling one experiences is entirely caused by previous action.
+
+The discourse names several possible sources of feeling, including bodily imbalance, climate, careless conduct, external injury, and karmic result.
+
+Therefore:
+`present experience`
+cannot be reduced to
+`past kamma alone`.
+
+This is a direct anti-fatalism guardrail.
+
+### TEXT_ATTESTED — 2. SN 35.146 PRESERVES PRESENT CAUSAL INPUT
+
+**SN 35.146** distinguishes:
+- “old kamma” in the already-arisen six internal sense bases;
+- “new kamma” in what one now does by body, speech, and mind;
+- cessation of kamma;
+- the Noble Eightfold Path leading to cessation.
+
+This means the present is not merely passive reception of the past.
+
+Current action is a real causal input.
+
+### TEXT_ATTESTED — 3. AN 3.61 CRITIQUES THREE DOCTRINES THAT UNDERCUT RESPONSIBLE EFFORT
+
+**AN 3.61 Titthāyatana** examines three doctrines:
+1. everything experienced is due to past action;
+2. everything is due to a creator;
+3. everything occurs without cause or condition.
+
+The discourse argues that if one rests in such doctrines, there is no sound basis for effort, discernment, or responsibility regarding what should and should not be done.
+
+A72 therefore treats the Buddha’s position as neither:
+- strict past-kamma determinism;
+- divine predestination;
+- causal randomness.
+
+### TEXT_ATTESTED — 4. PRESENT INTENTION MATTERS
+
+**AN 6.63** says intention is kamma and that, intending, one acts through body, speech, and mind.
+
+Together with SN 35.146’s “new kamma,” this shows:
+**present volition participates in shaping future causal outcomes.**
+
+The texts therefore leave room for training, correction, restraint, and path development.
+
+### IMPORTANT GUARDRAIL — CONDITIONALITY IS NOT THE SAME AS METAPHYSICAL “FREE WILL”
+
+A72 does **not** conclude:
+`Buddhism teaches an absolutely unconditioned free will`.
+
+Present intention itself arises in a conditioned field:
+- ignorance or knowledge;
+- feeling;
+- craving;
+- habits;
+- underlying tendencies;
+- attention;
+- social and bodily conditions.
+
+But conditioned intention can itself become a new condition.
+
+Therefore the safer early-text reading is:
+**agency is conditioned but causally effective.**
+
+This is **CROSS_TEXT SYNTHESIS**, not a canonical philosophical slogan.
+
+### WHY LIBERATION WOULD BE IMPOSSIBLE UNDER STRICT FATALISM
+
+If every present response were already fixed by past kamma, then:
+- right effort;
+- wise attention;
+- restraint;
+- development of mindfulness;
+- cultivation of the path
+
+could not genuinely alter the causal trajectory.
+
+Yet the early texts repeatedly teach those practices as causes of cessation.
+
+Thus the path itself functions as evidence against total fatalism.
+
+This is **CROSS_TEXT SYNTHESIS** grounded in the path corpus and the anti-determinist passages above.
+
+### PAST CONDITIONING, PRESENT RESPONSE, FUTURE PRODUCTION
+
+A bounded model is:
+
+`past conditions`
+→ `present body/sense bases/tendencies and circumstances`
+
+plus
+
+`present conditions + present intention + attention + action`
+→ `new causal consequences`.
+
+Liberation does not require erasing all prior conditioning.
+It requires changing and finally ending the conditions that produce renewed bondage and becoming.
+
+The model is **CROSS_TEXT SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — “NOT DETERMINISTIC” DOES NOT MEAN “ANYTHING CAN HAPPEN”
+
+The rejection of fatalism is not rejection of causality.
+
+Actions still have conditions and consequences.
+
+The teaching is better described as:
+- conditioned;
+- multi-causal;
+- open to causal intervention through present practice.
+
+The phrase “open to causal intervention” is explanatory synthesis.
+
+### IMPORTANT GUARDRAIL — DO NOT USE KAMMA TO BLAME SUFFERERS
+
+Because SN 36.21 rejects total past-kamma explanation, it is textually unsafe to say of any illness, injury, or misfortune:
+`this happened because of your past bad kamma`
+unless the specific cause is actually known.
+
+A72 therefore treats moralizing causal speculation about another person’s suffering as **unsupported**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting theme: Nāgasena rejects the claim that every painful feeling is caused by kamma and lists multiple possible causes of bodily pain, including bodily/seasonal/external causes and kamma;
+- role in A72:
+  - strongly reinforces the anti-fatalism distinction already explicit in SN 36.21;
+  - shows that later Buddhist reasoning preserved a multi-causal understanding of present suffering;
+- secondary role: the broader Milindapañha treatment of effort, virtue, and wisdom assumes present cultivation can alter the causal course;
+- decisive evidence for a metaphysical doctrine of “free will”: **NO**;
+- interpretation change: **STRONG CLARIFICATION, NO SOURCE OVERRIDE**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 36.21 — not all present feeling is past-kamma result;
+- SN 35.146 — old and new kamma;
+- AN 3.61 — critique of past-action determinism and other responsibility-undermining doctrines;
+- AN 6.63 — present intention as kamma;
+- broader path teaching — effort and cultivation as causal conditions for cessation.
+
+Milindapañha strengthens the multi-causal reading but does not define early Buddhist agency.
+
+### METHOD INSIGHT
+
+A72 reveals a characteristic middle position in the Buddha’s thought:
+
+The present is **conditioned**, but not **causally closed by the past**.
+
+The correct question is not:
+`Am I absolutely free or totally determined?`
+
+It is:
+- What conditions are already present?
+- What intention is arising now?
+- What can be cultivated?
+- What can be abandoned?
+- What new conditions will this action create?
+
+This turns a metaphysical binary into a causal practice question.
+
+### PRACTICAL DIAGNOSTIC
+
+When facing a difficult situation:
+- What part is inherited and cannot be changed immediately?
+- What causes are operating now besides past kamma?
+- What intention is present?
+- What response am I adding?
+- What habit will this response strengthen?
+- What path factor can alter the causal direction?
+- Am I using “karma” as an explanation where I actually do not know the cause?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 36.21 Sīvaka — multiple causes of feeling; rejection of total past-kamma causation.
+- SN 35.146 Kammanirodha — old kamma, new kamma, cessation, path.
+- AN 3.61 Titthāyatana — critique of previous-action determinism, creator determinism, and acausalism.
+- AN 6.63 Nibbedhika — intention as kamma.
+
+Mandatory Milindapañha layer:
+- multiple causes of bodily pain, not kamma alone;
+- present cultivation/effort as meaningful causal input.
+
+Open audit:
+- exact relation between conditional agency and later philosophical “free will” categories;
+- whether early parallels to AN 3.61 preserve the same three-doctrine structure;
+- exact scope of moral responsibility under deeply conditioned intention remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A73
+
+**If intention is conditioned yet causally effective, what exactly is `vīriya` / right effort doing in the path, and how can effort change conditioned tendencies without presupposing an independent self-controller?**
+
+Required lanes:
+- four right efforts;
+- relation among intention, effort, mindfulness, and wisdom;
+- distinguish effort from suppression and from self-control by a permanent agent;
+- connect to dependent origination and habit/tendency;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / open-check boundaries.
 
