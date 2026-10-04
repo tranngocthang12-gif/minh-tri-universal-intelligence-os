@@ -4,17 +4,16 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5: taught in chat, partial source audit.
-- Phase 4 A6: taught, partial source audit.
-- Phase 4 A7: taught and recorded in `docs/learning/BUDDHIST_PHASE4_A7_FEELING_CRAVING_TWO_ARROWS_20261004.md`; partial source audit.
-- Bounded SN 12.2 and SN 12.62 slices: audited for their current questions; this does NOT close the full SN 12 ID-level backlog.
+- Phase 4 A5-A8: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A8_CRAVING_CLINGING_SELF_20261004.md`.
+- Bounded SN 12.2, SN 12.62, SN 22.22, and SN 22.59 slices have been audited for their current lesson questions only. Full SN 12 and SN 22 ID-level backlogs remain open.
 
 Next:
-- **Phase 4 A8:** What changes when craving becomes clinging? How does `taṇhā → upādāna` construct "I / mine" without requiring a permanent self?
-- Route: SN 12.2 → MN 44 → SN 22.22 → SN 22.59 → SN 12.52 → Milindapañha chariot/person dialectic.
+- **Phase 4 A9:** `upādāna → bhava`: how clinging becomes becoming/a mode of existence, and why liberation is not annihilation of a permanent self.
+- Route: SN 12.2 → SN 12.15 → SN 12.52 → MN 44 → selected SN 22 → Milindapañha continuity/person dialectic.
 
 Pending audit lane:
-- outstanding SN 12 ID-level work beyond the bounded audited slices;
+- outstanding SN 12 ID-level work beyond bounded slices;
 - remaining SN 22, SN 35, SN 45, SN 46 ID-level mapping;
 - Aṭṭhakavagga lexical pass;
 - Arthapada and relevant MĀ/SĀ parallels.
