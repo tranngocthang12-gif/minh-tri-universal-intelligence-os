@@ -11,10 +11,23 @@
 - Early discourses are the main axis.
 - `TEXT_ATTESTED` must remain distinct from `CROSS_TEXT_SYNTHESIS`.
 - Later/paracanonical material must be labelled `LATER/PARACANONICAL`.
-- Milindapañha may support method/argument analysis but does not replace early-discourse attestation.
+- Mi Tiên Vấn Đáp / Milindapañha is a **mandatory continuous study source** throughout every material Buddhist-thought checkpoint. It supports argument structure, distinctions, objections and analogies, but does not replace early-discourse attestation.
 - Modern science is not the judging framework for the Buddha's thought in this track.
 - Do not over-promote an unresolved lexical claim.
 - Do not treat one translation as the only absolute meaning.
+
+## Mandatory Milindapañha consultation record
+
+Owner law requires every material Buddhist-study checkpoint to consult Mi Tiên Vấn Đáp / Milindapañha throughout the track.
+
+For each checkpoint, record:
+- consulted: YES/NO;
+- role used: argument structure / objection / distinction / analogy / other;
+- whether it changed the working interpretation;
+- whether the point was independently attested in early discourses;
+- claim class: `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, or `LATER/PARACANONICAL`.
+
+Milindapañha-only support must never be silently promoted to `TEXT_ATTESTED`.
 
 ## Completed checkpoint A30
 
