@@ -283,3 +283,21 @@ New durable artifacts:
 Next:
 discourse-by-discourse indexing inside priority Saṃyuttas, then verse-level Aṭṭhakavagga audit and more MĀ/SĀ parallel alignment.
 
+## Latest progress — discourse/verse pass v0.10
+
+Completed this pass:
+- SN 36: all 31 discourse IDs structurally indexed;
+- SN 12: discourse pass through 12.91; 12.92-213 repetition matrix remains;
+- SN 22/SN 35/SN 45/SN 46: major families expanded; complete ID-level coverage still pending;
+- Aṭṭhakavagga: all 16 suttas audited at pass-1 verse-range/argument-move level.
+
+New durable findings:
+- SN 36.19 explicitly permits multiple feeling taxonomies (2/3/5/6/18/36/108); do not reify pedagogical lists;
+- SN 36.21 rejects past-kamma-only explanation of all feeling;
+- SN 22.22 uses conventional person-language as burden-bearer without establishing a permanent self;
+- SN 22.53 strengthens the view that consciousness cannot be treated as a free-standing carrier apart from conditioned aggregates;
+- SN 35.232 locates the fetter in desire/passion arising dependent on sense/object rather than in the faculty or object itself.
+
+Next:
+finish SN12 peyyāla matrix, then complete missing IDs in SN22/SN35/SN45/SN46; Aṭṭhakavagga lexical + Arthapada pass.
+
