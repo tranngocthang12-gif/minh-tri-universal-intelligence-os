@@ -739,6 +739,146 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A43
+
+**Central question:** What is the difference between healthy confidence (`saddhā`) and identity-based certainty or dogmatism?
+
+### TEXT_ATTESTED
+
+1. **MN 95 Caṅkī** explicitly says faith can turn out either true or false. Therefore faith by itself is not yet discovery of truth.
+2. MN 95 defines “preserving truth” by saying, in effect, “this is my faith” without jumping to the exclusive conclusion “only this is true; anything else is worthless.” This directly separates `saddhā` from dogmatic exclusivism.
+3. MN 95 places faith inside a longer path of inquiry: one investigates a teacher for greed, hate, and delusion; faith then supports approaching, listening, remembering, examining meaning, reflective acceptance, zeal, effort, scrutiny, striving, and finally direct realization and penetrating wisdom.
+4. Therefore faith in MN 95 is a **starting and supporting condition for investigation**, not a replacement for investigation.
+5. **AN 3.66 Kālāma** rejects relying merely on report, tradition, scripture, logic, inference, analogy, agreement through pondering views, probability, or “this contemplative is our teacher.” The discourse then asks whether qualities are skillful/unskillful, praised/blamed by the observant, and lead to welfare or harm when enacted. This is not a command to believe nothing; it is a demand for testing and ethical-causal discernment.
+6. **MN 70** distinguishes a faith-follower and a Dhamma-follower while saying both still have work to do. Faith can be sufficient to orient one onto the path without being identical with final direct knowledge.
+7. **SN 55.1 / SN 55.7 / SN 55.26** describe `aveccappasāda`—verified/confirmed confidence—in Buddha, Dhamma, and Saṅgha as a factor of stream-entry. The Dhamma is described as visible here and now, timeless, inviting verification, and to be experienced by the observant for themselves. This confidence is therefore qualitatively different from unsupported allegiance.
+
+### CENTRAL DISTINCTIONS
+
+**Healthy saddhā**
+- gives enough trust to approach, listen, practice, and test;
+- remains compatible with investigation and correction;
+- can mature into verified confidence;
+- does not need to claim “only my view is true.”
+
+**Blind allegiance / gullibility**
+- treats authority, tradition, charisma, or belonging as sufficient proof;
+- resists investigation because investigation feels disloyal.
+
+**Dogmatic identity-certainty**
+- converts belief into “my truth / our truth”;
+- treats disagreement as a threat to self or group;
+- closes inquiry by asserting exclusive truth before direct realization.
+
+### CROSS_TEXT SYNTHESIS
+
+A healthy sequence can be modeled as:
+
+`saddhā`
+→ approach a credible teacher/teaching
+→ listen
+→ remember
+→ examine meaning
+→ reflective acceptance
+→ practice/effort
+→ test in experience and conduct
+→ direct knowing
+→ verified confidence.
+
+A corrupted sequence can be:
+
+initial confidence
+→ group/teacher identity
+→ “this belief defines us”
+→ “only our position is true”
+→ `diṭṭhupādāna`
+→ faction and dispute.
+
+The second sequence is a cross-text synthesis using A33–A36 and MN 95; it is not one canonical chain.
+
+### RELATION TO RIGHT VIEW
+
+Faith can orient a person toward Right View, but faith is not identical with Right View and is not the final epistemic warrant for every claim.
+
+Right View and direct knowing can correct what was initially only believed.
+
+Thus:
+- confidence may precede seeing;
+- seeing can deepen confidence;
+- mature confidence need not become rigid because its basis is increasingly experiential rather than merely tribal.
+
+### WHY THIS IS NOT SKEPTICISM
+
+The early texts do not recommend permanent suspension of judgment.
+
+They recommend:
+- do not confuse faith with final knowledge;
+- test teachings and teachers;
+- cultivate what is seen to lead away from greed, aversion, and delusion;
+- move from trust to understanding and direct realization.
+
+So the alternative to blind faith is **disciplined verification**, not cynical disbelief.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: functional analysis and analogy for faith;
+- Mi Tiên gives two marks/functions of faith: tranquillization/clarification and aspiration;
+- analogy: a water-clearing gem settles muddy water, illustrating faith as making the mind clear and untroubled;
+- aspiration: seeing others liberated, one aspires to attain what has not yet been attained and applies effort;
+- interpretation change: **YES, MINOR** — it sharpened faith as a functional mental quality that clears and motivates, rather than as mere assent to propositions;
+- early-discourse confirmation: **YES in function**, especially via MN 95’s faith → approach → practice sequence and MN 70; the exact twofold Milindapañha formulation remains `LATER/PARACANONICAL`;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### PRACTICAL DIAGNOSTIC
+
+Confidence is likely still healthy when:
+- questioning can occur without panic or hostility;
+- stronger evidence can revise a belief;
+- practice results matter more than group belonging;
+- one can say “I have faith in this” without pretending direct knowledge;
+- confidence reduces greed, aversion, delusion, and fear.
+
+Confidence is drifting toward identity-based dogmatism when:
+- criticism of a proposition is experienced as criticism of the self;
+- belonging matters more than truth;
+- exclusive truth-claims are made beyond the evidence;
+- contrary evidence is rejected because it threatens the group;
+- faith is used to stop investigation rather than support it.
+
+These are analytical applications, not a verbatim canonical checklist.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 95 Caṅkī Sutta.
+- AN 3.66 Kālāma Sutta.
+- MN 70 Kīṭāgiri Sutta.
+- SN 55.1 Rāja Sutta.
+- SN 55.7 Veḷudvāreyya Sutta.
+- SN 55.26 Anāthapiṇḍika Sutta.
+
+Mandatory Milindapañha layer:
+- faith as tranquillization/clarification and aspiration;
+- water-clearing-gem analogy.
+
+### Next checkpoint — PHASE 4 A44
+
+Central question:
+
+**How should doubt (`vicikicchā`) be distinguished from intelligent inquiry, caution, and refusal to overclaim?**
+
+Required lanes:
+- doubt as hindrance/fetter versus investigation as path factor;
+- MN 95 and AN 3.66 on testing;
+- `dhammavicaya` / investigation;
+- when skepticism protects truth versus when it prevents practice;
+- relation among doubt, faith, direct knowing, and Right View;
+- mandatory Milindapañha consultation;
+- distinguish healthy uncertainty from paralysis and cynical identity.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
