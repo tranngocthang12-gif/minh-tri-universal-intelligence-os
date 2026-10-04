@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A59_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A60",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A60_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A61",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -552,5 +552,7 @@
   "owner_learning_track_buddhist_thought_a58_claim_class": "TEXT_ATTESTED_ASMIMANA_COMPARISON_MANA_AND_MANNANA_PLUS_CROSS_TEXT_CASCADE_WITH_LEXICAL_OPEN_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a58_milindapanha": "CONSULTED_FULL_WATERPOT_ANTI_PRIDE_AND_NON_DISPARAGEMENT_ANALOGY",
   "owner_learning_track_buddhist_thought_a59_claim_class": "TEXT_ATTESTED_I_MAKING_MINE_MAKING_CONCEIT_TENDENCY_PLUS_CROSS_TEXT_APPROPRIATION_SYNTHESIS_PLUS_LATER_COMMENTARIAL_MAPPING_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a59_milindapanha": "CONSULTED_NAGASENA_CHARIOT_CONVENTIONAL_DESIGNATION_AND_CAUSAL_CONTINUITY"
+  "owner_learning_track_buddhist_thought_a59_milindapanha": "CONSULTED_NAGASENA_CHARIOT_CONVENTIONAL_DESIGNATION_AND_CAUSAL_CONTINUITY",
+  "owner_learning_track_buddhist_thought_a60_claim_class": "TEXT_ATTESTED_SENSE_PROCESS_CRAVING_CLINGING_AND_MINE_APPROPRIATION_PLUS_CROSS_TEXT_CHAIN_PLUS_EARLY_PARALLEL_STRESS_TEST_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a60_milindapanha": "CONSULTED_CRAVING_CONTINUATION_AND_CHARIOT_CONVENTIONAL_DESIGNATION_NO_DECISIVE_LEXICAL_IDENTITY"
 }
