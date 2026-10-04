@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A55_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A56")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A56_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A57")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A55_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A56")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A56_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A57")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -414,6 +414,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a54_milindapanha"], "CONSULTED_QUESTION_CLASSIFICATION_AND_EXTINGUISHED_FLAME")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a55_milindapanha"], "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a55_milindapanha"], "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a56_milindapanha"], "CONSULTED_CHARIOT_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_RESPONSIBILITY_ANALOGIES")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a56_milindapanha"], "CONSULTED_CHARIOT_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_RESPONSIBILITY_ANALOGIES")
 
 
 if __name__ == "__main__":
