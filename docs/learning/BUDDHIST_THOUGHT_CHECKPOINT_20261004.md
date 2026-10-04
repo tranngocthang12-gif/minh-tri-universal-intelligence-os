@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A33 COMPLETED  
-**Next checkpoint:** PHASE 4 — A34  
+**Current checkpoint:** PHASE 4 — A34 COMPLETED  
+**Next checkpoint:** PHASE 4 — A35  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -103,6 +103,70 @@ Every conclusion must be labelled one of:
 - `CROSS_TEXT_SYNTHESIS`;
 - `LATER/PARACANONICAL`;
 - `OPEN/CHECK`.
+
+## Completed checkpoint A34
+
+**Central question:** When does a view become `upādāna`, especially `diṭṭhupādāna`?
+
+### TEXT_ATTESTED
+
+1. MN 11 and SN 38.12 explicitly enumerate four kinds of `upādāna`, including `diṭṭhupādāna` (view-clinging / grasping at views). This establishes that “view” and “view-clinging” are not lexically identical categories.
+2. Dependent-origination passages place `taṇhā → upādāna → bhava`. Therefore grasping is conditioned by craving; a view does not become grasping merely because it is strongly stated.
+3. MN 11 describes proponents attached to, holding to, and relishing views of becoming/non-becoming, linked with passion, aversion, craving, clinging, embracing/rejecting, and objectification. The escape is described through knowing origination, passing, allure, drawback and escape.
+4. MN 22 explicitly uses `diṭṭhi-nissaya` (“view-dependency” / dependence on a view) and denies a view-dependency that would be free from sorrow, lamentation, pain, grief and despair.
+5. Snp 4.8 links taking hold of a view and asserting “this alone is true” with debate, praise-seeking, pride, victory/defeat and dispute.
+6. Snp 4.9 rejects purity as simply due to view, learning, knowledge, or observances, while also rejecting the opposite simplification that purity comes from merely being without them. It presents relinquishing/adopting-no-support and connects equal/superior/inferior self-positioning with dispute.
+
+### CROSS_TEXT_SYNTHESIS
+
+The practical transition from `diṭṭhi` to `diṭṭhupādāna` is best tracked not by belief intensity alone, but by a cluster of grasping functions:
+
+`diṭṭhi`
+→ craving/relishing
+→ taking hold / appropriation
+→ using the view as a support or dependency (`nissaya`)
+→ identity or “mine”-formation where textually warranted
+→ purification/supremacy claim
+→ superior/equal/inferior positioning where textually warranted
+→ defending/rejecting and dispute.
+
+This is a cross-text analytical model. No single cited passage supplies the entire chain as one canonical definition.
+
+### CORRECTIONS / GUARDRAILS
+
+- Strong conviction is **not automatically** `diṭṭhupādāna`.
+- Using a view instrumentally is not automatically the same as clinging to it.
+- Right View is not negated merely because clinging to views is criticized.
+- Not every debate proves view-clinging; look for textual markers of grasping, appropriation, support/dependence, identity, supremacy/purification, relish, or self-ranking.
+- `nissaya`, `nivesana`, `samuggahīta`, and related Aṭṭhakavagga vocabulary still require lexical/context audit before being collapsed into one English concept.
+
+### Sources carried into the durable checkpoint
+
+- MN 11 Cūḷasīhanāda Sutta.
+- SN 38.12 Upādānapañhā Sutta.
+- dependent-origination formula including `taṇhāpaccayā upādānaṁ` (e.g. Ud 1.1; cross-check with SN 12 material).
+- MN 22 Alagaddūpama Sutta (`diṭṭhi-nissaya` passage).
+- Snp 4.8 Pasūra Sutta.
+- Snp 4.9 Māgaṇḍiya Sutta.
+
+These source references are durable study provenance. Passage-level lexical claims remain subject to the open audits below.
+
+## Next checkpoint — PHASE 4 A35
+
+Central question:
+
+**How can Right View function as a path-tool without becoming a view-dependency (`diṭṭhi-nissaya`) or identity?**
+
+Required lanes:
+
+- MN 22 raft simile and `diṭṭhi-nissaya`;
+- MN 117 on Right View and path structure;
+- SN 12.15 on avoiding existence/non-existence extremes;
+- Aṭṭhakavagga on `anissaya`, `anupaya`, `nivesana`, `samuggahīta`;
+- distinction between abandoning wrong view, employing Right View, and relinquishing appropriation of views;
+- test whether “using a view” and “dwelling in a view” can be textually distinguished without importing later theory.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
 ## Provenance
 
