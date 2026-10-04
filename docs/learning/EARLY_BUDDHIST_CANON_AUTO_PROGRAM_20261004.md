@@ -545,3 +545,19 @@ New rules:
 - `diṭṭhi`, `sacca`, `saññā`, `maññati`, `papañca`, `nissaya` remain context-controlled terms;
 - anti-view rhetoric is not licensed as relativism.
 
+## 21. Priority Saṃyutta ID-level structural completion
+
+ID-level structural indexes:
+- `docs/learning/EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json` — SN 22, all 159 IDs;
+- `docs/learning/EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json` — SN 35, all 248 IDs;
+- `docs/learning/EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json` — SN 45, all 180 IDs;
+- `docs/learning/EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json` — SN 46, all 184 IDs.
+
+Each ID is classified as DISTINCT, FAMILY_REPEAT, or PEYYĀLA_MATRIX so textual coverage is not confused with doctrinal novelty.
+
+Cross-recensional stress test:
+`docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md`
+
+Current rule:
+Arthapada/Āgama evidence may raise confidence in shared reasoning cores; Milindapañha remains a later reasoning comparator and never overrides the early-source hierarchy.
+
