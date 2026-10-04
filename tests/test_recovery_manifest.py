@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A60_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A61")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A61_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A62")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A60_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A61")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A61_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A62")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -424,6 +424,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a59_milindapanha"], "CONSULTED_NAGASENA_CHARIOT_CONVENTIONAL_DESIGNATION_AND_CAUSAL_CONTINUITY")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a60_milindapanha"], "CONSULTED_CRAVING_CONTINUATION_AND_CHARIOT_CONVENTIONAL_DESIGNATION_NO_DECISIVE_LEXICAL_IDENTITY")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a60_milindapanha"], "CONSULTED_CRAVING_CONTINUATION_AND_CHARIOT_CONVENTIONAL_DESIGNATION_NO_DECISIVE_LEXICAL_IDENTITY")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a61_milindapanha"], "CONSULTED_TASTE_WITHOUT_LUST_AND_CHARIOT_SECONDARY_CLARIFICATION")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a61_milindapanha"], "CONSULTED_TASTE_WITHOUT_LUST_AND_CHARIOT_SECONDARY_CLARIFICATION")
 
 
 if __name__ == "__main__":
