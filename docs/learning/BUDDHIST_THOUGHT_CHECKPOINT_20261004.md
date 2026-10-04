@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A68 COMPLETED  
-**Next checkpoint:** PHASE 4 — A69  
+**Current checkpoint:** PHASE 4 — A69 COMPLETED  
+**Next checkpoint:** PHASE 4 — A70  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -5763,6 +5763,223 @@ Required lanes:
 - distinguish standard-link taxonomy from cross-text functional relations;
 - mandatory Milindapañha consultation;
 - preserve lexical and parallel uncertainties as OPEN/CHECK.
+
+
+## Completed checkpoint A69
+
+**Central question:** How are `cetanā` (intention), `saṅkhāra` (formations/constructing activities), and kamma related without treating them as interchangeable, and why does dependent origination place `saṅkhāra` before consciousness while other texts speak of intention directly supporting consciousness-establishment?
+
+### TEXT_ATTESTED — 1. THE STANDARD DEPENDENT-ORIGINATION LINK IS `SAṄKHĀRA → VIÑÑĀṆA`
+
+**SN 12.2 / MN 9** place:
+`ignorance → formations → consciousness`.
+
+They classify the formations as:
+- bodily formations;
+- verbal formations;
+- mental formations.
+
+Thus the standard twelve-link taxonomy gives `saṅkhāra` its own causal position before consciousness.
+
+A69 keeps that relation intact.
+
+### TEXT_ATTESTED — 2. AN 6.63 MAKES `CETANĀ` CENTRAL TO KAMMA
+
+**AN 6.63 Nibbedhika** says:
+`It is intention that I call kamma; having intended, one acts through body, speech, and mind.`
+
+This establishes a very close relation:
+- intention is the volitional core of kamma;
+- bodily, verbal, and mental action follow intention.
+
+But this does **not** prove:
+`cetanā = every occurrence of saṅkhāra in every context`.
+
+Nor does it prove:
+`kamma = every occurrence of saṅkhāra`.
+
+### TEXT_ATTESTED — 3. IN THE AGGREGATE CONTEXT, `SAṄKHĀRA` IS EXPLICITLY ANALYZED THROUGH INTENTION
+
+**SN 22.57** defines the saṅkhāra aggregate in terms of six classes of intention:
+- intention regarding sights;
+- sounds;
+- smells;
+- tastes;
+- touches;
+- ideas.
+
+This is strong early-text evidence that `saṅkhāra` and `cetanā` overlap substantially in the volitional/aggregate domain.
+
+Still, A69 preserves a lexical guardrail:
+**overlap in one doctrinal context is not global synonymy in every context.**
+
+### TEXT_ATTESTED — 4. SN 12.38 GIVES A FINER FUNCTIONAL ACCOUNT OF HOW VOLITION CAN SUPPORT CONSCIOUSNESS
+
+**SN 12.38 Cetanā** says that what one:
+- intends;
+- plans;
+- has an underlying tendency toward
+
+can provide a basis for consciousness to become established.
+
+When consciousness becomes established and grows, future renewed becoming is produced.
+
+This is compatible with the standard:
+`saṅkhāra → consciousness`
+relation, but SN 12.38 is not simply a restatement of SN 12.2.
+
+A69 therefore classifies the relation as:
+- **TEXT_ATTESTED:** intention/planning/tendency can support consciousness-establishment;
+- **CROSS_TEXT SYNTHESIS:** this can illuminate one functional pathway by which the broader `saṅkhāra → viññāṇa` relation operates.
+
+### IMPORTANT LEXICAL GUARDRAIL — `SAṄKHĀRA` CHANGES RANGE BY CONTEXT
+
+**MN 44** uses the same bodily/verbal/mental `saṅkhāra` compounds in a meditation context and defines them as:
+- breathing;
+- directed thought and evaluation;
+- perception and feeling.
+
+Therefore the word `saṅkhāra` cannot safely be translated everywhere by one fixed English/Vietnamese concept such as:
+- “intention”;
+- “kamma”;
+- “mental formation.”
+
+The context controls the sense.
+
+This is one of the strongest reasons not to collapse:
+`cetanā = saṅkhāra = kamma`
+without qualification.
+
+### CENTRAL DISTINCTION
+
+A bounded role map is:
+
+- **`cetanā`**: intention/volition; in AN 6.63 it is what makes action karmically significant;
+- **kamma**: intentional action in its ethical/causal role;
+- **`saṅkhāra`**: a broader context-sensitive category of constructing/formative activity, which in important doctrinal contexts has a strong volitional dimension;
+- **viññāṇa**: consciousness, conditioned by `saṅkhāra` in the standard dependent-origination sequence and capable of becoming established on a basis described in SN 12.38.
+
+This integrated role map is **CROSS_TEXT SYNTHESIS**.
+Each source-level relation remains separately `TEXT_ATTESTED`.
+
+### WHY THERE IS NO CONTRADICTION
+
+The apparent tension is:
+
+- SN 12.2: `saṅkhāra → viññāṇa`;
+- SN 12.38: intention/planning/tendency → basis for consciousness-establishment.
+
+A69 does not solve this by deleting one model.
+
+A more disciplined reading is:
+- SN 12.2 gives the standard link taxonomy;
+- SN 12.38 analyzes a concrete volitional/support mechanism;
+- AN 6.63 explains why intention is karmically significant;
+- SN 22.57 shows that `saṅkhāra` can be explicitly analyzed in terms of intention.
+
+These are compatible, but no single cited discourse states a complete equation among all terms.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN `SAṄKHĀRA` INTO A HIDDEN SUBSTANCE
+
+“Formations” are not a metaphysical material that travels into consciousness.
+
+The texts describe conditional activity:
+- ignorance conditions formations;
+- formations condition consciousness;
+- intentions/plans/tendencies provide a basis for consciousness-establishment.
+
+The explanatory mode is causal and functional, not substance-based.
+
+### IMPORTANT GUARDRAIL — NOT ALL INTENTION IS IDENTICAL WITH RENEWED-BECOMING PRODUCTION
+
+AN 6.63 establishes the kamma/intention relation.
+
+SN 12.38 shows a particular route by which intention/planning/tendency can support consciousness-establishment and renewed becoming.
+
+A69 does **not** yet conclude:
+`every intention whatsoever necessarily produces a future rebirth`.
+
+That question requires the next audit of awakened action and the cessation of karmic production.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passage: the analysis of `cetanā` in the early chapters of Milindapañha;
+- Nāgasena distinguishes intention from contact, feeling, perception, consciousness, thought, and investigation;
+- intention is characterized as conceiving/preparing, illustrated by preparing harmful or beneficial mixtures and then experiencing corresponding results;
+- role in A69:
+  - supports a constructive/preparatory understanding of volition;
+  - reinforces that intention and consciousness are distinguishable mental functions;
+  - clarifies karmic consequence without requiring a permanent agent;
+- decisive evidence that `cetanā = saṅkhāra` in every early-text context: **NO**;
+- interpretation change: **MODERATE CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 12.2 / MN 9 — `saṅkhāra → viññāṇa`; bodily/verbal/mental formations.
+- AN 6.63 — intention as kamma; action through body, speech, and mind.
+- SN 22.57 — saṅkhāra aggregate analyzed as six classes of intention.
+- SN 12.38 — intention/planning/underlying tendency as basis for consciousness-establishment.
+- MN 44 — context-sensitive use of bodily/verbal/mental `saṅkhāra`.
+
+Milindapañha clarifies volition but does not override the early-text lexical boundaries.
+
+### METHOD INSIGHT
+
+A69 reveals an important rule for understanding the Buddha's thought:
+
+**Do not force one technical word to have one identical meaning in every doctrinal context.**
+
+Instead:
+1. identify the local definition;
+2. preserve the causal relation stated there;
+3. compare with other texts;
+4. synthesize only after the local meanings are secure.
+
+This prevents a tidy but false equation from replacing the actual textual architecture.
+
+### PRACTICAL DIAGNOSTIC
+
+When analyzing an action, ask:
+- What is the intention?
+- What action does that intention organize?
+- Is this being discussed as kamma, as a saṅkhāra, or as another process?
+- What underlying tendency remains even without conscious planning?
+- What basis is being provided for consciousness to become established?
+- Am I using the word “formation” too vaguely to hide several different functions?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga / MN 9 Sammādiṭṭhi — formations condition consciousness.
+- AN 6.63 Nibbedhika — intention is kamma; intended action proceeds through body, speech, mind.
+- SN 22.57 — saṅkhāra aggregate as six classes of intention.
+- SN 12.38 Cetanā — intention/planning/underlying tendency and consciousness-establishment.
+- MN 44 Cūḷavedalla — context-sensitive bodily/verbal/mental saṅkhāra definitions.
+
+Mandatory Milindapañha layer:
+- cetanā as conceiving/preparing;
+- intention distinguished from consciousness and other mental factors;
+- wholesome/unwholesome intention and corresponding result.
+
+Open audit:
+- exact historical/lexical relation of `saṅkhāra`, `cetanā`, and kamma across all early strata;
+- whether the standard `saṅkhāra → viññāṇa` link is best explained primarily as karmic-volitional, broader formative activity, or a context-dependent family of senses;
+- Chinese/Sanskrit parallel stress-test remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A70
+
+**If intention is kamma, how can an arahant still intend, choose, speak, and act without producing future renewed becoming?**
+
+Required lanes:
+- AN 6.63 intention/kamma;
+- Iti 44 living arahant with faculties and feeling remaining;
+- early-text material on action after greed, hate, and delusion are extinguished;
+- distinguish functional intention/action from rebirth-producing karmic accumulation without importing later Abhidhamma categories as early-text fact;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / open-check boundaries.
 
 ## Provenance
 
