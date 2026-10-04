@@ -161,3 +161,20 @@ A future seat must:
 
 Project chat memory is not the continuity authority for this learning track.
 GitHub canonical project records are the durable continuity layer for this study.
+
+## Latest progress — dialogue reconstruction v0.5
+
+Latest artifact:
+`docs/learning/EARLY_BUDDHIST_DIALOGUE_RECONSTRUCTION_V0_5_20261004.md`.
+
+New durable findings:
+- correct the quotation/source scope before doctrinal debate;
+- clarify the user's intended distinction before answering broad ontological questions;
+- distinguish knowledge of a necessary path from prediction of how many will complete it;
+- distinguish conventional social hierarchy from equality with respect to trained liberative capacity;
+- current dialogue reconstruction shows high structural match on SN 42.6, AN 10.95, SN 12.48 and MN 90;
+- strict blind generalization remains NOT PROVEN because pretraining/source exposure cannot be excluded.
+
+Next:
+seek externally held-out dialogue evaluation or continue Agama/translation/contradiction testing.
+
