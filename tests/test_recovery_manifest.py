@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A70_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A71")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A71_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A72")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A70_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A71")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A71_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A72")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -444,6 +444,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a69_milindapanha"], "CONSULTED_CETANA_PREPARING_FUNCTION_AND_DISTINCTION_FROM_CONSCIOUSNESS_NO_GLOBAL_EQUIVALENCE")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a70_milindapanha"], "CONSULTED_POST_AWAKENING_DELIBERATE_DETERMINATION_NO_FORCED_DEATH_AND_CONTINUED_BODILY_EXPERIENCE")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a70_milindapanha"], "CONSULTED_POST_AWAKENING_DELIBERATE_DETERMINATION_NO_FORCED_DEATH_AND_CONTINUED_BODILY_EXPERIENCE")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a71_milindapanha"], "CONSULTED_REMAINING_BODILY_CONDITIONS_NO_FORCED_DEATH_AND_NO_TOTAL_PAST_KAMMA_CAUSATION")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a71_milindapanha"], "CONSULTED_REMAINING_BODILY_CONDITIONS_NO_FORCED_DEATH_AND_NO_TOTAL_PAST_KAMMA_CAUSATION")
 
 
 if __name__ == "__main__":
