@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A44 COMPLETED  
-**Next checkpoint:** PHASE 4 — A45  
+**Current checkpoint:** PHASE 4 — A47 COMPLETED  
+**Next checkpoint:** PHASE 4 — A48  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -1412,6 +1412,175 @@ Required lanes:
 - connect carefully to MN 2 without claiming equivalence where the texts do not state it;
 - mandatory Milindapañha consultation;
 - preserve early-text / cross-text / later-paracanonical boundaries.
+
+
+## Completed checkpoint A47
+
+**Central question:** How does dependent origination (`paṭiccasamuppāda`) change the grammar of inquiry from “What am I?” to “With what condition does this arise, and with what cessation does it cease?”
+
+### TEXT_ATTESTED
+
+1. **SN 12.20 Paccaya** distinguishes dependent origination from dependently arisen phenomena. The conditional pattern is not said to become true only because a Buddha teaches it; the discourse presents it as a stable principle of specific conditionality that a Tathāgata awakens to, realizes, and then explains.
+2. The same discourse says the factors that are dependently arisen — including ignorance — are impermanent, conditioned, dependently arisen, subject to destruction, fading, cessation, and change. Therefore the chain must not be read as a sequence of permanent substances.
+3. **SN 12.20** explicitly connects seeing dependent origination correctly with the ending of speculative self-questions about past, future, and present: “Was I?”, “What was I?”, “Will I be?”, “What am I?” The text itself therefore supports the shift from identity-speculation toward conditional seeing.
+4. **SN 12.15 Kaccānagotta** frames Right View between the extremes “everything exists” and “nothing exists.” It then teaches the middle through dependent origination: with ignorance as condition, formations; with formations, consciousness; through craving, clinging, becoming, birth, and the arising of the whole mass of suffering; with cessation of those conditions, the mass of suffering ceases.
+5. SN 12.15 also says that one who sees arising and cessation correctly does not take a stand around “my self.” The practical object is suffering arising and suffering ceasing, not metaphysical possession of an identity.
+6. **SN 12.2 Vibhaṅga** gives the standard twelve-link formula and definitions of the links. This provides the ID-level analytical base that A47 now begins to audit rather than relying on a generic summary of “everything is connected.”
+
+### CENTRAL SHIFT IN THE GRAMMAR OF INQUIRY
+
+The early-text shift can be stated carefully as:
+
+Instead of asking:
+- “What permanent thing am I?”
+- “Did this same self exist before?”
+- “Will this self continue?”
+- “Is there absolutely something or absolutely nothing?”
+
+dependent origination asks:
+- “When this condition is present, what arises?”
+- “What sustains this process?”
+- “Which link can cease?”
+- “What happens when that condition ceases?”
+
+This is not merely a change of vocabulary. It changes the **unit of explanation** from an assumed enduring entity to a conditioned process.
+
+### NOT FATALISM
+
+Dependent origination is not fatalism.
+
+The formula does not say:
+“Whatever happens had to happen and cannot be altered.”
+
+Its practical force is the opposite:
+- because phenomena arise with conditions,
+- changing or abandoning relevant conditions changes what follows;
+- the cessation sequence is built into the teaching itself.
+
+The chain therefore contains a theory of **conditional vulnerability**: what depends on conditions is open to cessation when the sustaining conditions cease.
+
+Claim class: **CROSS_TEXT_SYNTHESIS grounded in the forward and cessation formulas**.
+
+### NOT A HIDDEN FIRST CAUSE
+
+SN 12.20 presents specific conditionality; SN 12.15 uses that conditional structure to avoid the two extremes of existence and non-existence.
+
+Nothing in these passages requires inserting:
+- an eternal self behind the links;
+- a creator-substance behind the process;
+- a first metaphysical entity that remains unchanged while the links operate.
+
+This does not by itself settle every later Buddhist metaphysical debate. The bounded early-text claim is simply that the explanatory work in these passages is performed by **conditions and conditioned arising/cessation**.
+
+### WHERE THE PATH BECOMES PRACTICAL
+
+For the present learning track, the most immediately actionable section remains:
+
+`contact → feeling → craving → clinging → becoming → birth → suffering`
+
+A47 does **not** claim that the other links are less important. This segment is highlighted because:
+- feeling can be observed;
+- craving can be detected;
+- clinging can be recognized as appropriation;
+- the process therefore becomes experimentally legible in present experience.
+
+The track will later audit SN 35, SN 36, and additional SN 12 passages before making stronger claims about how much of the twelve-link structure is to be read within one present-moment episode versus across lives.
+
+### RELATION TO A46 — WISE ATTENTION
+
+A46 showed that `yoniso manasikāra` changes the quality and direction of inquiry.
+
+A47 supplies a concrete causal grammar:
+
+`wise attention → ask after conditions rather than essence → observe arising/cessation → weaken identity-speculation → identify where abandonment is possible`.
+
+The full arrow sequence is **CROSS_TEXT_SYNTHESIS**. Its textual supports are:
+- MN 2 on appropriate versus inappropriate attention and self-speculation;
+- SN 12.20 on dependent origination displacing speculative self-questions;
+- SN 12.15 on arising/cessation and avoidance of existence/non-existence extremes.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: analogy, designation, continuity without an invariant self, and clarification of causal succession;
+- the **chariot dialogue** distinguishes a conventional designation from any one component taken as the whole: “chariot” is used dependently on parts and arrangement rather than discovered as a separate permanent entity;
+- Milindapañha also uses continuity analogies in its discussions of rebirth/transmission to argue that causal continuation need not require an unchanged self-substance moving intact from one moment/life to another;
+- use in A47: these arguments make the conditional grammar easier to see — designation and causal continuity can function without positing an invariant owner behind the process;
+- interpretation change: **MODERATE** — strengthened the distinction between **continuity** and **identity**, which is essential when reading dependent origination without smuggling an eternal self into the chain;
+- early-discourse confirmation: **PARTIAL/FUNCTIONAL** via SN 12.15 and SN 12.20; the exact Milindapañha analogies are later/paracanonical and are not promoted to early-text authority;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### IMPORTANT GUARDRAIL
+
+Do not infer from the chariot analogy alone that:
+“nothing exists.”
+
+That would collide with the explicit warning in SN 12.15 against both “everything exists” and “nothing exists.”
+
+The safer synthesis is:
+- conventional designation functions;
+- conditioned phenomena function;
+- causal continuity functions;
+- but the analysis does not require an independent, invariant self-substance.
+
+### OPEN / CHECK — SN 12 AUDIT BEGUN, NOT CLOSED
+
+A47 begins the SN 12 ID-level audit with:
+- **SN 12.2** — link definitions;
+- **SN 12.15** — Right View, two extremes, dependent origination;
+- **SN 12.20** — specific conditionality, dependently arisen phenomena, displacement of self-speculation.
+
+Still open:
+- additional SN 12 passages on consciousness/name-and-form reciprocity;
+- intention and construction;
+- nutriment;
+- craving/clinging/becoming;
+- cessation and liberation;
+- whether different discourses deploy the chain at different explanatory scales;
+- Chinese Āgama / other early-parallel stress tests before broad historical claims.
+
+### PRACTICAL DIAGNOSTIC
+
+When a difficult inner event appears, replace:
+“Why am I this kind of person?”
+
+with:
+- What contacted what?
+- What feeling appeared?
+- What craving followed?
+- What was grasped as “mine” or “for me”?
+- What kind of becoming/identity-project started?
+- Which condition can be stopped feeding now?
+- What changes when that condition weakens?
+
+This is an analytical application of the dependent-origination framework, not a verbatim canonical meditation instruction.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga.
+- SN 12.15 Kaccānagotta.
+- SN 12.20 Paccaya.
+- MN 2 carried forward from A46 for wise/unwise attention.
+
+Mandatory Milindapañha layer:
+- chariot/conventional designation;
+- continuity without invariant self-substance;
+- causal succession clarified through analogy.
+
+### Next checkpoint — PHASE 4 A48
+
+Central question:
+
+**How do consciousness (`viññāṇa`) and name-and-form (`nāmarūpa`) condition one another without requiring a hidden self behind experience?**
+
+Required lanes:
+- SN 12 passages on `viññāṇa ↔ nāmarūpa` reciprocity;
+- distinguish a linear teaching formula from reciprocal conditionality where textually stated;
+- relation to six sense bases, contact, and feeling;
+- avoid turning consciousness into an eternal witness or substrate unless a text explicitly supports it;
+- mandatory Milindapañha consultation;
+- continue SN 12 ID-level audit and preserve early-text / synthesis / later-paracanonical boundaries.
 
 ## Provenance
 
