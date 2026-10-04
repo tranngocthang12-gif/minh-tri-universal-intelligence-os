@@ -12006,3 +12006,358 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A91
+
+**Central question:** How does `nekkhamma`—renunciation—function in early Buddhist thought: is it mainly external leaving-home, a mental movement away from sensuality, a form of right intention, or a broader reorientation of value?
+
+### TEXT_ATTESTED — 1. NEKKHAMMA IS EXPLICITLY A FACTOR OF RIGHT INTENTION
+
+In **SN 45.8 / DN 22**, right intention (`sammā-saṅkappa`) is defined through three directions:
+- intention of renunciation (`nekkhamma-saṅkappa`);
+- intention of non-ill-will;
+- intention of harmlessness.
+
+This gives the first hard boundary for A91:
+
+**`nekkhamma` is not only a social status or external lifestyle. It is explicitly a direction of mind within the Noble Eightfold Path.**
+
+### TEXT_ATTESTED — 2. MN 19 SHOWS RENUNCIATION AS A TRAINABLE INCLINATION OF MIND
+
+**MN 19 Dvedhāvitakka** divides thought into two classes.
+
+Unskillful:
+- sensual thought;
+- ill-will;
+- cruelty.
+
+Skillful:
+- renunciation;
+- good will;
+- harmlessness.
+
+The Bodhisatta observes that sensual thought:
+- harms self and others;
+- obstructs wisdom;
+- sides with distress;
+- does not lead to extinguishment.
+
+Renunciation thought has the opposite tendency:
+- no harm;
+- supports wisdom;
+- sides with freedom from distress;
+- leads toward extinguishment.
+
+The discourse then makes a major causal claim:
+**whatever one repeatedly thinks and considers becomes the inclination of the mind.**
+
+Therefore renunciation is something that can be **cultivated as a learned preference**, not merely imposed as an external rule.
+
+### TEXT_ATTESTED — 3. AN 9.41 SHOWS RENUNCIATION REQUIRES A REVALUATION OF WHAT COUNTS AS PEACE
+
+**AN 9.41 Tapussa** says even the Bodhisatta initially recognized that renunciation was good, yet his mind did not leap toward it or become confident in it.
+
+He identifies the reason:
+- the drawback of sensuality had not yet been sufficiently seen;
+- the reward of renunciation had not yet been sufficiently understood and familiarized.
+
+When those two sides are cultivated, the heart inclines toward renunciation, seeing it as peace.
+
+This is decisive for A91.
+
+**Renunciation is not just deprivation. It is a change in valuation.**
+
+The mind must come to see:
+- sensuality as costly and comparatively coarse;
+- renunciation as a more peaceful and reliable direction.
+
+### TEXT_ATTESTED — 4. MN 36 / MN 66 SHOW THAT RENUNCIATION HAS ITS OWN POSITIVE PLEASURE
+
+**MN 36** records the Bodhisatta's discovery that the pleasure of first jhāna:
+- is not tied to sensuality;
+- is not tied to unskillful qualities;
+- need not be feared.
+
+**MN 66** explicitly calls the pleasure of the four jhānas:
+- pleasure of renunciation;
+- pleasure of seclusion;
+- pleasure of peace;
+- pleasure of awakening.
+
+This prevents a major misunderstanding:
+
+`nekkhamma` does **not** mean:
+“reject all happiness.”
+
+Rather:
+**renunciation changes the source of well-being—from dependence on sensual stimulation toward a less entangling kind of happiness.**
+
+### TEXT_ATTESTED — 5. EXTERNAL GOING-FORTH IS A DISTINCT BUT RELATED ACT
+
+Early discourses use the standard **going-forth** formula:
+- life at home is crowded / dusty;
+- life gone forth is wide open;
+- one shaves hair and beard;
+- puts on ocher robes;
+- goes from home to homelessness.
+
+This is the domain of **`pabbajjā` / going forth**.
+
+A91 therefore keeps a terminology guardrail:
+
+- **external going-forth** = institutional/lifestyle renunciation;
+- **`nekkhamma` as right intention** = the mental direction away from sensual entanglement.
+
+They can strongly support each other, but they are **not textually identical concepts**.
+
+A person can go forth externally while still struggling with sensual thought.
+And the early path can cultivate renunciant intention as a mental quality rather than reducing it to clothing, residence, or social status.
+
+### IMPORTANT GUARDRAIL — NEKKHAMMA IS NOT MERE PHYSICAL SEPARATION
+
+A84-A86 established:
+- sense objects are not themselves the fetter;
+- pleasant feeling is not identical with craving;
+- restraint operates in the relation to sensory experience.
+
+Therefore A91 rejects:
+`renunciation = simply being physically far from attractive things`.
+
+Physical seclusion can be useful.
+
+But if the mind:
+- fantasizes;
+- relishes;
+- identifies;
+- keeps planning sensual acquisition,
+
+the internal movement of renunciation is incomplete.
+
+### IMPORTANT GUARDRAIL — NEKKHAMMA IS NOT AVERSION TOWARD THE WORLD
+
+Right intention places renunciation beside:
+- non-ill-will;
+- harmlessness.
+
+This is structurally important.
+
+A renunciation that produces:
+- hatred of bodies;
+- contempt for householders;
+- hostility toward pleasure;
+- aggression toward oneself
+
+conflicts with the other two right-intention factors.
+
+Therefore:
+**renunciation in the path is not disgust weaponized against the world.**
+
+A77 already established that aversion is itself an unwholesome fire.
+
+### IMPORTANT GUARDRAIL — RENUNCIATION IS NOT SELF-PUNISHMENT
+
+MN 36 is decisive.
+
+The Bodhisatta tried severe ascetic pain.
+That did not lead to awakening.
+
+He later accepted a non-sensual pleasure as part of the path.
+
+Therefore:
+**`nekkhamma` cannot be defined as maximizing deprivation or pain.**
+
+Its criterion is not:
+“how much have I suffered?”
+
+It is:
+“has sensual bondage weakened, has wisdom grown, and is the mind moving toward peace and release?”
+
+### TEXT_ATTESTED — 6. MN 117 SHOWS RIGHT INTENTION HAS BOTH ORDINARY-WHOLESOME AND NOBLE-PATH LEVELS
+
+**MN 117** distinguishes:
+- right intention still connected with wholesome karmic activity;
+- noble, undefiled right intention as a path factor.
+
+The ordinary wholesome form includes:
+- renunciation;
+- good will;
+- harmlessness.
+
+This guards against treating every passing thought of renunciation as already final liberating realization.
+
+A91 therefore uses:
+**renunciation can begin as cultivated wholesome orientation and become integrated into noble-path functioning.**
+
+The exact relation between these levels remains an early-text interpretive issue and should not be forced into a later scholastic map without explicit evidence.
+
+### RELATION TO `VIVEKA`
+
+Working distinction:
+
+`nekkhamma`
+→ movement/intention away from sensual entanglement;
+
+`viveka`
+→ seclusion/separation from entangling conditions and qualities.
+
+They overlap strongly.
+
+But:
+- renunciation names the **direction of intention/value**;
+- seclusion names the **condition or mode of separation** more broadly.
+
+Claim class: **CROSS-TEXT FUNCTIONAL SYNTHESIS / LEXICAL OPEN**.
+
+### RELATION TO `VOSSAGGA / PAṬINISSAGGA`
+
+A90 established:
+- `vossagga / paṭinissagga` emphasize relinquishing / letting go;
+- `nekkhamma` emphasizes moving away from sensual entanglement.
+
+A bounded relation is:
+
+`nekkhamma`
+→ turns the mind away from sensual capture;
+
+`vossagga / paṭinissagga`
+→ mature into a broader relinquishment of what is being grasped.
+
+This is a **WORKING SYNTHESIS**, not dictionary identity.
+
+### RELATION TO NON-GRASPING
+
+A79 established:
+`anupādā`
+→ not grasping / not taking up.
+
+Renunciation can support non-grasping by weakening the felt necessity of sensual acquisition.
+
+But:
+- one can renounce one sensual object and grasp the identity “I am renounced”;
+- one can withdraw externally and still grasp views, attainments, or status.
+
+Therefore:
+**renunciation is not yet identical with complete non-grasping.**
+
+### CROSS-TEXT SYNTHESIS — RENUNCIATION AS A REORIENTATION OF VALUE
+
+A91's bounded model is:
+
+`sensual orientation`
+→ “pleasure and security are mainly found by obtaining agreeable stimulation”
+
+becomes
+
+`renunciant orientation`
+→ “sensuality has costs and limits; greater peace can come from needing less of it.”
+
+Then, with deeper cultivation:
+- jhānic pleasure becomes available;
+- sensuality loses comparative value;
+- grasping weakens;
+- broader relinquishment becomes possible.
+
+This is **CROSS-TEXT SYNTHESIS** based on MN 19, AN 9.41, MN 36, MN 66, and prior A84-A90 findings.
+
+### IMPORTANT GUARDRAIL — RENUNCIATION IS NOT “NEED NOTHING IMMEDIATELY”
+
+Early training is gradual.
+
+A91 does not imply:
+- a beginner should instantly feel no attraction;
+- wholesome substitutes are unnecessary;
+- mere willpower should erase desire.
+
+AN 9.41 explicitly shows that the heart learns renunciation by:
+- repeatedly seeing the drawback of sensuality;
+- repeatedly familiarizing itself with the reward of renunciation.
+
+This is **training of inclination**, not instantaneous emotional command.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary relevant dialogue: **Book II, opening discussion on the purpose of renunciation**;
+- Nāgasena says the purpose of his renunciation is:
+  - that present sorrow should pass away;
+  - that no further sorrow should arise;
+  - with complete passing beyond cleaving as the highest aim;
+- the same discussion distinguishes the highest purpose of renunciation from lesser motives for joining the Order, such as fear, debt, or livelihood;
+- role in A91:
+  - strongly supports the distinction between **external membership/going-forth** and the **liberative purpose** renunciation is meant to serve;
+  - supports measuring renunciation by ending suffering and cleaving, not merely by status;
+- limitation:
+  - the surviving Milindapañha layer is **LATER/PARACANONICAL SUPPORT**;
+  - its English “renunciation” terminology should not be assumed to settle every Pāli lexical boundary between `nekkhamma` and `pabbajjā`;
+  - early Nikāya evidence remains primary.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 45.8 / DN 22 — renunciation, non-ill-will, harmlessness as right intention.
+- MN 19 — sensual versus renunciant thought; repeated thinking shapes inclination.
+- AN 9.41 — seeing drawback of sensuality and reward of renunciation makes the heart incline to renunciation as peace.
+- MN 36 — non-sensual jhānic pleasure need not be feared; severe asceticism is not the solution.
+- MN 66 / MN 139 — jhānic pleasure explicitly called pleasure of renunciation/seclusion/peace/awakening.
+- standard going-forth formula — external `pabbajjā` from home to homelessness.
+- MN 117 — ordinary-wholesome and noble-path levels of right intention.
+
+Later/paracanonical:
+- Milindapañha Book II opening discussion on the aim of renunciation.
+
+### METHOD INSIGHT
+
+A91 reveals a central feature of the Buddha's path:
+
+**renunciation is not primarily subtracting objects; it is retraining what the mind regards as worth depending on.**
+
+The path does not only say:
+“do not chase pleasure.”
+
+It shows:
+- why sensual dependence is costly;
+- what a less dependent pleasure feels like;
+- how repeated thought changes inclination;
+- how greater peace becomes more attractive than repeated stimulation.
+
+Thus renunciation is a **revaluation of value**.
+
+### PRACTICAL DIAGNOSTIC
+
+When calling something “renunciation,” ask:
+- Am I merely deprived, or has the perceived value of sensuality actually changed?
+- Is this movement accompanied by non-ill-will and harmlessness?
+- Am I using pain as proof of spirituality?
+- Is there a healthier non-sensual source of well-being?
+- Does the mind increasingly see renunciation as peace?
+- Is external simplicity reducing craving, or just building a new identity?
+- What sensual dependence is becoming less convincing?
+- Is this moving toward non-grasping and relinquishment?
+
+### Open audit
+
+- full lexical/context audit of `nekkhamma`, `pabbajjā`, `viveka`, `vossagga`, `paṭinissagga`, and `anupādā`;
+- early parallel stress-test for MN 19 and AN 9.41;
+- distinguish renunciation as right intention from institutional going-forth across early corpora;
+- determine how renunciation relates to household practice without importing later lay/monastic systematizations;
+- audit whether the “pleasure of renunciation” formula has close Chinese Āgama parallels;
+- continue SN 45 ID-level audit and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A91 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A92
+
+**How do non-ill-will (`abyāpāda`) and harmlessness (`avihiṃsā`) complete right intention alongside renunciation, and what does this threefold structure reveal about why Buddhist detachment cannot be reduced to cold withdrawal?**
+
+Required lanes:
+- SN 45.8 / DN 22 right-intention triad;
+- MN 19 two kinds of thought;
+- mettā / compassion passages where relevant;
+- distinguish non-ill-will from passive tolerance and harmlessness from mere non-action;
+- relation to renunciation without emotional deadness;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
