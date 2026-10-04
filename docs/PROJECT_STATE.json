@@ -504,5 +504,9 @@
   "owner_learning_track_buddhist_thought_a34_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS",
   "owner_learning_track_buddhist_thought_a35_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS",
   "owner_learning_track_buddhist_thought_a36_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS",
-  "owner_learning_track_buddhist_thought_a37_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_WITH_LEXICAL_GUARDRAIL"
+  "owner_learning_track_buddhist_thought_a37_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_WITH_LEXICAL_GUARDRAIL",
+  "owner_learning_track_buddhist_thought_milindapanha_required": true,
+  "owner_learning_track_buddhist_thought_milindapanha_scope": "ALL_MATERIAL_CHECKPOINTS_CONTINUOUS",
+  "owner_learning_track_buddhist_thought_milindapanha_role": "MANDATORY_SUPPORTING_PARACANONICAL_REASONING_SOURCE_NOT_EARLY_TEXT_AUTHORITY",
+  "owner_learning_track_buddhist_thought_milindapanha_checkpoint_record_required": true
 }
