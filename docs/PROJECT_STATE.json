@@ -487,12 +487,12 @@
   "owner_learning_track_early_buddhist_canon_plan": "docs/learning/EARLY_BUDDHIST_CANON_AUTO_PROGRAM_20261004.md",
   "owner_learning_track_early_buddhist_canon_started": "2026-10-04",
   "owner_learning_track_early_buddhist_canon_background_runtime": false,
-  "owner_learning_track_early_buddhist_canon_status": "ACTIVE_SN12_STRUCTURAL_1_213_COMPLETE_SN36_ALL_IDS_ATTHAKAVAGGA16_VERSE_PLUS_LEXICAL_PASS1_MILINDA_LATER_REASONING_LAYER_ACTIVE",
+  "owner_learning_track_early_buddhist_canon_status": "ACTIVE_PRIORITY_SN12_22_35_36_45_46_STRUCTURAL_ID_COVERAGE_COMPLETE_DEPTH_PARALLEL_AUDIT_CONTINUES",
   "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS",
   "owner_learning_track_early_buddhist_reasoning_model": "docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md",
   "owner_learning_track_early_buddhist_target": "WHOLE_CANON_TRANSLATION_COMPARATIVE_AND_BLINDED_RESPONSE_REASONING_MASTERY",
   "owner_learning_track_early_buddhist_mastery_claim": "NOT_YET_COMPLETE",
-  "owner_learning_track_early_buddhist_next_checkpoint": "COMPLETE_SN22_SN35_SN45_SN46_ID_LEVEL_THEN_ARTHAPADA_AND_MA_SA_PARALLEL_STRESS_TESTS",
+  "owner_learning_track_early_buddhist_next_checkpoint": "UPGRADE_SELECTED_SN22_SN35_SN45_SN46_IDS_TO_DEEP_ADD_SA_MA_PARALLELS_THEN_ARTHAPADA_CLAUSE_ALIGNMENT_AND_MILINDA_PREDICTION_BACKCHECK",
   "owner_learning_track_early_buddhist_reasoning_synthesis": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md",
   "owner_learning_track_early_buddhist_reasoning_status": "HARD_CLUSTER_INTEGRATED_REBIRTH_IDENTITY_ERROR_CLOSED_MECHANISM_PARTIAL",
   "owner_learning_track_early_buddhist_adversarial_cluster_1": "PASS_WITH_MODEL_REVISIONS_MN1_19_20_21_26_38_39_72_SN35_23_SN44_10",
@@ -518,5 +518,10 @@
   "owner_learning_track_early_buddhist_reference_stack": "docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md",
   "owner_learning_track_early_buddhist_milindapanha_reasoning_lab": "docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md",
   "owner_learning_track_early_buddhist_sn12_peyyala_audit": "docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md",
-  "owner_learning_track_early_buddhist_atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md"
+  "owner_learning_track_early_buddhist_atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md",
+  "owner_learning_track_early_buddhist_sn22_id_index": "docs/learning/EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json",
+  "owner_learning_track_early_buddhist_sn35_id_index": "docs/learning/EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
+  "owner_learning_track_early_buddhist_sn45_id_index": "docs/learning/EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json",
+  "owner_learning_track_early_buddhist_sn46_id_index": "docs/learning/EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json",
+  "owner_learning_track_early_buddhist_cross_recensional_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md"
 }
