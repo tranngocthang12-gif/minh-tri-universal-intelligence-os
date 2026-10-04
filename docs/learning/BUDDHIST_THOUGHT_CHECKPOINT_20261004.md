@@ -9129,3 +9129,354 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A83
+
+**Central question:** What changes across the first, second, third, and fourth jhānas—especially `vitakka`, `vicāra`, `pīti`, `sukha`, `upekkhā`, `sati`, and `ekaggatā`—and what do those changes reveal about progressive mental refinement?
+
+### CORRECTION TO A82 — FIRST-JHĀNA FIVE-FACTOR ANALYSIS IS EARLY-TEXT ATTESTED
+
+A82 left open the status of `ekaggatā` and the later “five-factor system.”
+
+A83 corrects the boundary.
+
+**MN 43** explicitly says the first jhāna has five factors:
+- `vitakka`;
+- `vicāra`;
+- `pīti`;
+- `sukha`;
+- `cittekaggatā`.
+
+So the proposition:
+“first jhāna has five factors including one-pointedness/unification of mind”
+is **TEXT_ATTESTED**, not merely commentarial.
+
+What remains later/systematic is the more elaborate tabular analysis that standardizes factor counts and elimination schemes across all jhānas and embeds them in later Abhidhamma/commentarial meditation mechanics.
+
+### TEXT_ATTESTED — 1. FIRST JHĀNA: SECLUSION PLUS FIVE PRESENT FACTORS
+
+The standard formula gives:
+- seclusion from sensuality;
+- seclusion from unskillful qualities;
+- `pīti-sukha` born of seclusion;
+- `vitakka-vicāra`.
+
+MN 43 adds the explicit five-factor analysis:
+`vitakka + vicāra + pīti + sukha + cittekaggatā`.
+
+It also says the five hindrances are absent:
+- sensual desire;
+- ill will;
+- dullness and drowsiness;
+- restlessness and remorse;
+- doubt.
+
+This is an important structural point:
+**first jhāna is defined as much by what has been abandoned as by what is present.**
+
+### TEXT_ATTESTED — 2. VITAKKA AND VICĀRA ARE PRESENT IN FIRST JHĀNA AND CEASE IN SECOND
+
+The standard transition to second jhāna is:
+**stilling of `vitakka-vicāra`**.
+
+Second jhāna then has:
+- internal confidence/composure;
+- unification of mind;
+- `pīti-sukha` born of samādhi;
+- no `vitakka-vicāra`.
+
+So the first major refinement is not loss of awareness but loss of a subtler kind of mental movement.
+
+### LEXICAL GUARDRAIL — VITAKKA/VICĀRA CANNOT BE FROZEN INTO ONE ENGLISH PAIR
+
+Across translations these terms appear as:
+- thought / examination;
+- directed thought / evaluation;
+- applied / sustained thought;
+- placing the mind / keeping it connected.
+
+**MN 44** says `vitakka-vicāra` are verbal formations because one first thinks/examines and then breaks into speech.
+
+This shows an ordinary-language connection with thought and examination.
+
+But the jhāna context is more refined.
+A83 therefore does **not** claim that first jhāna contains ordinary discursive inner speech in the usual sense.
+
+Working distinction:
+- `vitakka`: directing/placing/bringing the mind toward its theme;
+- `vicāra`: keeping/examining/sustaining contact with that theme.
+
+Claim class:
+**LEXICAL WORKING MODEL — OPEN/CHECK**.
+
+### TEXT_ATTESTED — 3. SECOND JHĀNA: UNIFICATION REMAINS WHILE VITAKKA-VICĀRA FALL AWAY
+
+The second-jhāna formula explicitly emphasizes:
+- internal clarity/confidence;
+- `cetaso ekodibhāva` — unification of mind;
+- absence of `vitakka-vicāra`;
+- continued `pīti-sukha`.
+
+This means mental collectedness does not depend on continuing to direct and examine in the first-jhāna manner.
+
+A bounded interpretation is:
+**the mind no longer needs the same active orienting function because the collected field is self-stabilizing to a greater degree.**
+
+The last sentence is **EXPLANATORY SYNTHESIS**, not a canonical definition.
+
+### TEXT_ATTESTED — 4. PĪTI AND SUKHA ARE NOT THE SAME FACTOR
+
+The jhāna sequence itself proves a functional distinction.
+
+In first and second jhāna:
+- `pīti` and `sukha` occur together.
+
+In third jhāna:
+- `pīti` fades;
+- `sukha` remains.
+
+In fourth jhāna:
+- pleasure and pain are abandoned;
+- the state is neither-pain-nor-pleasure.
+
+Therefore:
+**`pīti` and `sukha` cannot be exact synonyms.**
+
+Working model:
+- `pīti`: rapture/joyful energization or uplift;
+- `sukha`: pleasure/happiness/ease.
+
+Exact phenomenological boundary remains **LEXICAL OPEN**.
+
+### TEXT_ATTESTED — 5. THIRD JHĀNA: RAPTURE FADES, BUT PLEASURE, EQUANIMITY, MINDFULNESS, AND CLEAR COMPREHENSION REMAIN
+
+The third-jhāna formula says:
+- with fading of `pīti`;
+- one dwells with `upekkhā`;
+- mindful;
+- clearly comprehending;
+- still experiencing `sukha`.
+
+This is decisive against two mistaken models:
+
+1. deeper jhāna means progressively less awareness;
+2. equanimity means emotional dullness.
+
+At this stage:
+- the more activating `pīti` is gone;
+- but mindfulness and clear comprehension are explicitly present.
+
+### TEXT_ATTESTED — 6. FOURTH JHĀNA: EVEN SUKHA-DUKKHA ARE LEFT BEHIND, WHILE EQUANIMITY AND MINDFULNESS ARE PURIFIED
+
+The fourth-jhāna formula gives:
+- abandoning pleasure and pain;
+- previous disappearance of joy and distress;
+- neither-pain-nor-pleasure;
+- purity of `upekkhā` and `sati`.
+
+The progression therefore does not culminate in maximum pleasure.
+
+It culminates in a more balanced mode:
+**equanimity + purified mindfulness without dependence on pleasant feeling.**
+
+This is a major clue to the Buddha's model of refinement.
+
+### TEXT_ATTESTED — 7. EKAGGATĀ IS EARLY, BUT LATER FACTOR TABLES GO BEYOND THE BASIC SUTTA CLAIM
+
+**MN 43** explicitly includes `cittekaggatā` among the five factors of first jhāna.
+
+**MN 44** defines `cittassa ekaggatā` as samādhi.
+
+**MN 111** also lists unification of mind among the phenomena discerned in first jhāna.
+
+Thus:
+**one-pointedness / unification is not a late invention.**
+
+However, MN 111 lists many more phenomena present in first jhāna besides the familiar five.
+
+Therefore A83 rejects the stronger claim:
+“the five-factor list is an exhaustive inventory of everything mentally present in first jhāna.”
+
+The five factors are an **explicit analytical set**, not necessarily a complete phenomenological census.
+
+### TEXT_ATTESTED — 8. THE BODY SIMILES SHOW PERVASION, STABILITY, AND INCREASING UNIFORMITY
+
+AN 5.28 and parallel long-discourse material use four similes:
+
+- first jhāna: bath powder kneaded through with moisture;
+- second: a lake filled from a cool spring within;
+- third: lotuses completely saturated by cool water;
+- fourth: a person completely covered in clean white cloth / body pervaded by a pure bright mind.
+
+A83 does not force one-to-one hidden technical correspondences onto each image.
+
+But the similes clearly emphasize:
+- whole-body pervasion;
+- lack of dry/unaffected areas;
+- increasing internal sufficiency and uniformity;
+- a transition from energetic pleasure toward purity and equanimity.
+
+The last two bullets are **INTERPRETIVE SYNTHESIS**.
+
+### TEXT_ATTESTED — 9. AN 9.41 PRESENTS PROGRESSION AS SEEING THE DRAWBACK OF A COARSER FACTOR AND THE PEACE OF ITS ABSENCE
+
+AN 9.41 gives a particularly revealing account.
+
+The Bodhisatta:
+- sees the drawback of sensuality and the reward of renunciation → first jhāna;
+- sees the drawback of `vitakka-vicāra` and the reward of their absence → second;
+- sees the drawback of `pīti` and the reward of its absence → third;
+- sees the drawback of pleasure and the reward of neither-pain-nor-pleasure → fourth.
+
+This supports a strong model of progressive refinement:
+
+**each higher stage becomes possible when a factor that was useful at the previous stage is now seen as comparatively coarse.**
+
+This is more precise than saying only “concentration gets stronger.”
+
+### PRELIMINARY EARLY-PARALLEL STRESS TEST
+
+A preliminary check of **Dīrgha Āgama 20** shows a broadly parallel progression:
+- first dhyāna with perception/examination and joy/happiness;
+- second with their detachment, unified mind, joy/happiness;
+- third without joy but with equanimity, mindfulness, and happiness;
+- fourth beyond pleasure/pain with purified equanimity and mindfulness;
+- closely corresponding bath-powder, spring/lake, lotus, and white-cloth imagery.
+
+This is useful evidence that the basic progressive architecture is not merely a peculiarity of one Pāli translation lineage.
+
+A full parallel audit remains OPEN.
+
+### CROSS-TEXT SYNTHESIS — THE BUDDHA'S MODEL IS REFINEMENT BY LETTING GO OF INCREASINGLY SUBTLE SUPPORTS
+
+A83's bounded model is:
+
+sensual/unskillful involvement removed
+→ first jhāna
+
+`vitakka-vicāra` become comparatively coarse and cease
+→ second jhāna
+
+`pīti` becomes comparatively coarse and fades
+→ third jhāna
+
+even `sukha` is no longer required
+→ fourth jhāna
+
+while:
+- unification deepens;
+- equanimity becomes prominent;
+- mindfulness remains and is purified.
+
+This is **CROSS-TEXT SYNTHESIS** based especially on the standard formula and AN 9.41.
+
+### IMPORTANT GUARDRAIL — “DEEPER” DOES NOT MEAN “MORE NUMB”
+
+The textual movement is not:
+awareness → less awareness → unconsciousness.
+
+Instead:
+- some activities and affective tones are progressively stilled;
+- mindfulness remains explicit;
+- equanimity is purified;
+- the mind becomes more stable and less dependent on stimulation.
+
+Therefore, “deeper concentration = blankness” is not supported by the four-jhāna formula.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN LATER FACTOR SCHEMES INTO THE ONLY POSSIBLE EARLY PHENOMENOLOGY
+
+Later Abhidhamma/commentarial traditions provide highly detailed factor tables, moment models, and technical explanations of:
+- which factors are present at each jhāna;
+- how `ekaggatā` functions;
+- how fivefold/fourfold jhāna schemes map;
+- how access and absorption are differentiated.
+
+A83 does not reject those systems.
+
+It labels them **LATER/SYSTEMATIC** unless the exact claim is independently attested in early discourse.
+
+The early corpus itself already gives substantial structure, but it should not be silently overwritten by a later manual.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant themes:
+  1. concentration is described as a leading/gathering quality toward which wholesome states incline;
+  2. wisdom is said to cut off and illuminate;
+  3. Milindapañha 3.2.5 explicitly treats pleasant feeling as potentially wholesome, unwholesome, or neutral depending on context, which guards against identifying `sukha` itself with liberation;
+- role in A83:
+  - supports the distinction between collectedness and wisdom;
+  - supports reading pleasure contextually rather than treating all pleasant feeling as spiritually equivalent;
+- limitation:
+  - Milindapañha does not decide the early lexical boundary of `vitakka-vicāra`, `pīti-sukha`, or the exact jhāna factor taxonomy;
+  - the decisive sources remain the early discourses;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 43 — explicit five factors of first jhāna, including `cittekaggatā`.
+- MN 44 — `vitakka-vicāra` as verbal formations; `cittassa ekaggatā` as samādhi.
+- MN 111 — unification plus a wider set of phenomena discerned in first jhāna.
+- SN 45.8 / AN 3.73 / MN 4 — standard four-jhāna progression.
+- AN 5.28 — bodily pervasion similes and review by wisdom.
+- AN 9.41 — drawback/reward structure in moving from one attainment to the next.
+- preliminary DĀ 20 parallel — broadly matching progression and similes.
+
+Later/paracanonical:
+- Milindapañha on concentration, wisdom, and contextual status of pleasure.
+
+Later/systematic:
+- detailed Abhidhamma/commentarial factor tables and meditation-manual mechanics beyond what the early passages explicitly state.
+
+### METHOD INSIGHT
+
+A83 reveals a powerful feature of the Buddha's model of mental training:
+
+**progress does not simply mean adding more intensity; it often means no longer needing a support that was previously useful.**
+
+A factor can be wholesome and necessary at one stage, then comparatively coarse at the next.
+
+This protects against a simplistic rule:
+“if a state is pleasant or powerful, more of it must always be better.”
+
+The path can advance by refinement, simplification, and relinquishment.
+
+### PRACTICAL DIAGNOSTIC
+
+When analyzing a jhāna claim, ask:
+- Which factor is explicitly present?
+- Which factor has explicitly ceased?
+- Am I distinguishing `pīti` from `sukha`?
+- Am I treating `upekkhā` as dullness when mindfulness is explicitly present?
+- Am I denying `ekaggatā` even though MN 43 explicitly names it?
+- Am I treating the five-factor list as exhaustive when MN 111 lists more phenomena?
+- Am I importing a later factor table or threshold without labeling it?
+- What does AN 9.41 say is now seen as comparatively coarse?
+
+### Open audit
+
+- full lexical/context audit of `vitakka`, `vicāra`, `pīti`, `sukha`, `upekkhā`, `sati`, `ekaggatā`, and `ekodibhāva`;
+- compare MN 43's explicit five-factor analysis with early parallels before drawing historical conclusions;
+- determine how `sukha` in third jhāna relates to the neutral feeling of fourth jhāna across feeling taxonomies;
+- audit `kāyena sukhaṁ paṭisaṁvedeti` without assuming a later body/mental-body interpretation;
+- full Chinese Āgama parallel stress-test beyond preliminary DĀ 20;
+- continue SN 45–46 ID-level work and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A83 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A84
+
+**Why does the Buddha repeatedly allow and praise jhānic pleasure while warning against sensual pleasure, and what does this reveal about his distinction between pleasure, craving, attachment, and skillful mental nourishment?**
+
+Required lanes:
+- MN 36 on fear/non-fear of jhānic pleasure;
+- MN 59 hierarchy of pleasures;
+- AN / MN passages distinguishing sensual from renunciant pleasure;
+- relation to `pīti-sukha`, craving, and non-grasping;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
