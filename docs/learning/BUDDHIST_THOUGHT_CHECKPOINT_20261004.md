@@ -8812,3 +8812,320 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A82
+
+**Central question:** What exactly is `jhāna` in the early discourses, how does it relate to right samādhi, serenity, and insight, and which claims about “absorption” belong to early text versus later meditation systematization?
+
+### TEXT_ATTESTED — 1. THE EARLY FOUR-JHĀNA FORMULA IS A PROGRESSIVE TRAINING IN COLLECTED MIND
+
+Across texts such as **MN 39**, **SN 45.8**, and **AN 4.41**, the standard sequence is:
+
+**First jhāna**
+- secluded from sensuality;
+- secluded from unskillful qualities;
+- rapture and pleasure born of seclusion;
+- accompanied by `vitakka` and `vicāra`.
+
+**Second jhāna**
+- `vitakka-vicāra` are stilled;
+- internal confidence / composure;
+- unification of mind;
+- rapture and pleasure born of samādhi.
+
+**Third jhāna**
+- rapture fades;
+- equanimity;
+- mindfulness and clear comprehension;
+- bodily pleasure remains.
+
+**Fourth jhāna**
+- pleasure and pain are abandoned;
+- earlier joy and distress have disappeared;
+- neither-pain-nor-pleasure;
+- purity of equanimity and mindfulness.
+
+This is the early-text core.
+
+A82 therefore treats `jhāna` not as one undifferentiated trance, but as a **graded refinement of the quality of collected experience**.
+
+### TEXT_ATTESTED — 2. SN 45.8 DEFINES RIGHT SAMĀDHI WITH THE FOUR JHĀNAS
+
+In **SN 45.8**, the standard analysis of the Noble Eightfold Path defines **right concentration (`sammā-samādhi`)** through the first, second, third, and fourth jhānas.
+
+This provides a strong early-text relation:
+
+`right samādhi`
+→ four jhānas.
+
+But this should not be isolated from the rest of the path.
+
+### TEXT_ATTESTED — 3. MN 117 EMBEDS RIGHT SAMĀDHI INSIDE THE OTHER PATH FACTORS
+
+**MN 117** describes noble right samādhi as unification of mind supported by:
+- right view;
+- right intention;
+- right speech;
+- right action;
+- right livelihood;
+- right effort;
+- right mindfulness.
+
+Therefore the early architecture is not:
+`samādhi alone = liberating path`.
+
+Rather:
+**right samādhi is “right” because it operates inside the ethical, attentional, and wisdom structure of the Noble Eightfold Path.**
+
+This is an important guardrail against reducing jhāna to technique detached from view, conduct, effort, and mindfulness.
+
+### TEXT_ATTESTED — 4. JHĀNA IS NOT A DEAD END SEPARATE FROM INSIGHT
+
+**MN 111** presents Sāriputta entering the jhānas and discerning the factors within them:
+- they arise;
+- remain;
+- cease;
+- are known as conditioned and vanishing.
+
+He remains unattracted and unrepelled and sees that there is a further escape.
+
+This strongly shows that:
+**jhānic experience can itself become a field for penetrative knowing.**
+
+### TEXT_ATTESTED — 5. AN 9.36 MAKES THE JHĀNA–INSIGHT CONNECTION EXPLICIT
+
+**AN 9.36** says the ending of the taints can depend on the first jhāna, and similarly on higher jhānas.
+
+The practitioner enters a jhāna and regards the phenomena there as:
+- impermanent;
+- stressful;
+- alien;
+- empty;
+- not-self.
+
+Then the mind turns toward the deathless:
+- pacification of fabrications;
+- relinquishment;
+- ending of craving;
+- dispassion;
+- cessation;
+- Nibbāna.
+
+Therefore A82 rejects a hard early-text firewall:
+
+`jhāna` on one side,
+`vipassanā` on the other,
+with no overlap.
+
+The two have distinguishable functions, but jhāna can support and furnish material for liberating insight.
+
+### TEXT_ATTESTED — 6. AN 4.41 SHOWS SAMĀDHI HAS MULTIPLE LIBERATING USES
+
+**AN 4.41** describes four developments of samādhi leading respectively to:
+- pleasant abiding here and now;
+- knowledge and vision;
+- mindfulness and clear comprehension;
+- ending of the taints.
+
+For the ending of the taints, the discourse gives contemplation of the arising and passing of the five clinging aggregates.
+
+This reinforces:
+**samādhi is not merely pleasant inward stillness; it can be deliberately developed toward insight and release.**
+
+### IMPORTANT GUARDRAIL — JHĀNA IS NOT IDENTICAL TO ALL SAMĀDHI
+
+SN 45.8 defines right samādhi by the four jhānas.
+
+But the word `samādhi` has a wider functional range in the early discourses:
+- concentration/collectedness can be developed for different purposes;
+- MN 117 emphasizes the path-factor network supporting noble right samādhi.
+
+A82 therefore uses:
+- `samādhi`: the wider category of collectedness/concentration;
+- `jhāna`: a specifically described family of meditative attainments/states.
+
+This is a **LEXICAL-FUNCTIONAL WORKING DISTINCTION**, not a claim that every occurrence fits one rigid taxonomy.
+
+### IMPORTANT GUARDRAIL — “ABSORPTION” IS A TRANSLATION / INTERPRETIVE LABEL, NOT THE WHOLE EARLY DEFINITION
+
+Some modern translations render `jhāna` as “absorption”; others retain `jhāna`, “meditation,” or related terms.
+
+The early formula itself directly attests:
+- seclusion;
+- progressive refinement of mental factors;
+- rapture, pleasure, equanimity;
+- mindfulness;
+- unification;
+- progressive stilling.
+
+It does **not**, by itself, spell out the later technical apparatus:
+- `upacāra-samādhi` as “access concentration”;
+- `appanā-samādhi` as “absorption concentration”;
+- the standardized `uggaha-nimitta / paṭibhāga-nimitta` sequence;
+- a fixed threshold model separating access from full absorption.
+
+These are characteristic of later Theravāda commentarial/manual systematization, especially the **Visuddhimagga** and related exegetical literature.
+
+Therefore:
+**calling jhāna “absorption” can be a translation choice, but importing the full later access/appanā/nimitta machinery into every early jhāna passage is not textually warranted without explicit labeling.**
+
+Claim class:
+**EARLY TEXT CORE + LATER SYSTEMATIC GUARDRAIL**.
+
+### IMPORTANT GUARDRAIL — EARLY TEXT DOES SUPPORT STRONG COLLECTION
+
+Rejecting automatic import of later technical thresholds does **not** mean:
+`early jhāna = ordinary mild relaxation`.
+
+The early formula itself includes:
+- seclusion from sensuality and unskillful qualities;
+- stilling of `vitakka-vicāra`;
+- unification of mind;
+- pervasive rapture/pleasure imagery;
+- increasing equanimity and purity of mindfulness.
+
+So A82 refuses both extremes:
+
+1. “the early text already contains the whole later commentarial absorption system”;
+2. “jhāna is just casual relaxation.”
+
+### TEXT_ATTESTED — 7. THE EARLY TEXTS OFTEN DISTINGUISH FOUR JHĀNAS FROM THE FORMLESS ATTAINMENTS
+
+**MN 111** moves after the fourth jhāna to:
+- infinite space;
+- infinite consciousness;
+- nothingness;
+- neither-perception-nor-non-perception.
+
+**AN 9.36** likewise lists the four jhānas and then the formless dimensions separately.
+
+Therefore A82 uses the early-text guardrail:
+
+**the four jhānas and the formless attainments are closely related concentration attainments but are often textually enumerated as distinct series.**
+
+Calling the latter “formless jhānas” is common in later systematization, but should not silently be back-projected into every Nikāya passage.
+
+### RELATION TO SAMATHA AND VIPASSANĀ
+
+A81 established:
+- `samatha` calms and stabilizes;
+- `vipassanā` penetrates and sees;
+- their order can vary.
+
+A82 now adds:
+- the four jhānas are a major structured expression of right samādhi;
+- jhāna supplies a highly cultivated collected field;
+- that field can be investigated through insight;
+- concentration and insight can therefore cooperate rather than exclude one another.
+
+Bounded model:
+
+`samatha`
+→ supports settling and collectedness
+
+`jhāna / right samādhi`
+→ highly developed collected experience
+
+`vipassanā / paññā`
+→ discerns conditioned arising, passing, drawback, non-self, and escape
+
+→ dispassion and release.
+
+This is **CROSS-TEXT SYNTHESIS**, not one canonical diagram.
+
+### IMPORTANT OPEN QUESTION — HOW “ABSORBED” IS EARLY JHĀNA?
+
+The early four-jhāna formulas do not by themselves settle every later debate about:
+- whether external sensory awareness is completely absent;
+- exact threshold of one-pointedness;
+- whether a visual/mental nimitta is necessary;
+- how much discursive capacity remains at each stage;
+- precise phenomenology of entry and emergence.
+
+A82 therefore marks these as **OPEN/CHECK** rather than pretending the early wording settles all modern meditation-school disputes.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting themes:
+  1. Nāgasena says concentration has the characteristic of being a leader/chief: wholesome qualities incline toward it;
+  2. he illustrates this with rafters converging on the roof peak and an army gathered around its king;
+  3. the dialogue says one established in meditation/concentration knows things as they really are;
+  4. wisdom is separately described as cutting off and illuminating;
+- role in A82:
+  - supports concentration as an organizing/supporting quality rather than a self-sufficient replacement for wisdom;
+  - supports the cooperative architecture of collectedness and penetrative knowing;
+- limitation:
+  - Milindapañha does **not** establish the precise early mechanics of the four jhānas or the later access/appanā/nimitta system;
+  - decisive jhāna definitions remain in the Nikāya passages;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 39 — standard four-jhāna sequence and bodily suffusion similes.
+- SN 45.8 — right samādhi defined by four jhānas.
+- MN 117 — noble right samādhi embedded in the seven supporting path factors.
+- MN 111 — insight into factors within jhāna; arising and passing are known.
+- AN 9.36 — jhāna used as basis for impermanence/not-self/dispassion contemplation.
+- AN 4.41 — multiple developments of samādhi, including ending of taints.
+- MN 111 / AN 9.36 — four jhānas followed by formless attainments as a distinct textual sequence.
+
+Later/systematic:
+- Visuddhimagga and commentarial traditions — access concentration, absorption concentration, standardized nimitta mechanics, and explicit “formless jhāna” taxonomy.
+
+Later/paracanonical:
+- Milindapañha — concentration as leading/gathering quality and wisdom as cutting/illumination.
+
+### METHOD INSIGHT
+
+A82 reveals another pattern in the Buddha’s thought:
+
+**a highly trained mind is not the endpoint merely because it is highly trained.**
+
+Jhāna refines the mind.
+Right samādhi places that refinement inside the Noble Eightfold Path.
+Insight examines even refined states as conditioned.
+Liberation occurs when passion, ignorance, and grasping are ended.
+
+Therefore:
+**do not worship the state; understand its function in the path.**
+
+### PRACTICAL DIAGNOSTIC
+
+When reading or practicing jhāna, ask:
+- Which features are explicitly in the early formula?
+- Am I importing access/appanā/nimitta mechanics from later manuals without labeling them?
+- Is concentration being integrated with right view, effort, mindfulness, and ethics?
+- Is a refined state being treated as permanent, self, or sufficient in itself?
+- Can the state itself become an object of insight?
+- Am I confusing a strong meditative attainment with destruction of the taints?
+- Is the claim early-text attested, cross-text synthesis, later-systematic, lexical-open, or genuinely unresolved?
+
+### Open audit
+
+- lexical audit of `jhāna`, `samādhi`, `ekaggatā`, `vitakka`, and `vicāra`;
+- early parallel stress-test for the standard four-jhāna formula;
+- exact textual history of “absorption” as an English rendering of `jhāna`;
+- audit of whether and where early texts use `nimitta` in concentration contexts versus later standardized nimitta doctrine;
+- degree of external sensory exclusion in early jhāna remains OPEN;
+- relation of fourth jhāna to subsequent knowledges and formless attainments requires further audit;
+- continue SN 45–46 ID-level work and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A82 mirror attempt: **UNREACHABLE** if the current tunnel condition remains unchanged;
+- no Local Brain write is inferred from GitHub recording.
+
+### Next checkpoint — PHASE 4 A83
+
+**What exactly changes across the first, second, third, and fourth jhānas—especially `vitakka`, `vicāra`, `pīti`, `sukha`, `upekkhā`, `sati`, and `ekaggatā`—and what do those changes reveal about the Buddha’s model of progressive mental refinement?**
+
+Required lanes:
+- standard jhāna formulas and bodily similes;
+- lexical/context audit of `vitakka-vicāra`;
+- `pīti` versus `sukha`;
+- `upekkhā` and `sati` in third/fourth jhāna;
+- status of `ekaggatā` in early formulas versus later five-factor system;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
