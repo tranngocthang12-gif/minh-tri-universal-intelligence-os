@@ -382,3 +382,18 @@ This artifact converts the study track from a reading plan into an evaluated rea
 
 The target is source-grounded reconstruction of recurring response logic, never impersonation of the Buddha or a claim of awakening.
 
+## 12. Reasoning synthesis v0.2
+
+Current deeper reasoning artifact:
+`docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_2_20261004.md`.
+
+Newly integrated patterns:
+- arising/cessation replaces rigid existence/non-existence framing where appropriate;
+- not-self is treated as de-appropriation analysis rather than a slogan;
+- undeclared questions are separated into category-failure and liberative-irrelevance cases;
+- SN 36.6 primary pain vs secondary reactive suffering;
+- MN 2 method-selection: seeing/restraint/use/endurance/avoidance/removal/development;
+- MN 95 epistemic stages: preserve truth honestly before claiming discovery/attainment;
+- views are analyzed at both proposition and attachment levels;
+- current reasoning level is STRUCTURED but whole-corpus/adversarial mastery remains incomplete.
+
