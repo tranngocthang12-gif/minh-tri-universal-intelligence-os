@@ -280,3 +280,23 @@ Rules:
 This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
+
+
+## 12. OWNER LEARNING TRACK ROUTING — 2026-10-04
+
+Owner learning tracks are durable task/domain programs and must be recovered from `PROJECT_STATE.json`, not from chat memory.
+
+For any Owner request that clearly names or continues a registered learning track:
+1. fresh-read `docs/PROJECT_STATE.json`;
+2. resolve the track's current plan path and next-checkpoint fields;
+3. read the referenced plan;
+4. continue that plan's purpose, evidence discipline, method and checkpoint;
+5. do not silently substitute a generic course, a different religious/philosophical framework, or a prior chat summary;
+6. material changes to the track's goal, method or checkpoint are not durable until recorded through normal GitHub governance.
+
+Current registered track of special importance:
+- `owner_learning_track_buddha_thought`
+- plan pointer: `owner_learning_track_buddha_thought_plan`
+- checkpoint pointer: `owner_learning_track_buddha_thought_next_checkpoint`
+
+The Buddha-thought track is specifically for understanding the Buddha's thought and method through early-text evidence, cross-tradition parallels, counterevidence-first review and Milindapañha stress-testing. It is not a generic Buddhism survey.
