@@ -9771,3 +9771,380 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A85
+
+**Central question:** How does the Buddha distinguish `kāma` (sensuality) from pleasant sense objects and pleasant feeling, and where exactly does sensual bondage enter the contact → feeling → craving sequence?
+
+### TEXT_ATTESTED — 1. AN 6.63 MAKES THE MOST IMPORTANT DISTINCTION: THE FIVE SENSUAL CORDS ARE NOT THEMSELVES `KĀMA`
+
+**AN 6.63 Nibbedhika** lists the five sensual cords:
+- attractive forms;
+- sounds;
+- smells;
+- tastes;
+- touches.
+
+It then says explicitly:
+**these are not sensuality (`kāma`); they are called the cords/strands of sensuality (`kāmaguṇa`).**
+
+The discourse then says, in verse, that a person's sensuality is the **passion connected with their intentions/resolves** (`saṅkapparāga`), while the beautiful things of the world remain as they are.
+
+This is decisive for A85.
+
+The object is not automatically the bondage.
+Sensual bondage requires a relation of passion/desire to the object.
+
+### IMPORTANT LEXICAL GUARDRAIL — `KĀMA` HAS A WIDER RANGE ACROSS EARLY TEXTS
+
+A85 does **not** freeze `kāma` into one English/Vietnamese equivalent in every passage.
+
+Depending on context, translations use:
+- sensuality;
+- sensual pleasures;
+- sensual desire;
+- sensual objects/domain.
+
+The strong AN 6.63 distinction is therefore used as a **functional guardrail**, not as permission to rewrite every occurrence of `kāma` as “intention-lust.”
+
+Claim class:
+**TEXT_ATTESTED CORE + LEXICAL RANGE OPEN**.
+
+### TEXT_ATTESTED — 2. MN 13 DISTINGUISHES SENSUAL OBJECTS, THE PLEASURE ARISING FROM THEM, AND THE DESIRE-LUST TO BE ABANDONED
+
+**MN 13 Mahādukkhakkhandha** gives three layers.
+
+1. **Five cords of sensual pleasure (`pañca kāmaguṇā`)**:
+   attractive sights, sounds, smells, tastes, and touches.
+
+2. **Gratification (`assāda`)**:
+   the pleasure and happiness that arise dependent on those five cords.
+
+3. **Escape (`nissaraṇa`)**:
+   the removal and abandonment of **desire-and-lust (`chandarāga`)** for sensual pleasures.
+
+Therefore:
+- sense object ≠ pleasant feeling;
+- pleasant feeling ≠ desire-and-lust;
+- the escape is not destroying the sense organs or deleting pleasant feeling, but ending the desire-and-lust that binds the mind to sensuality.
+
+### TEXT_ATTESTED — 3. SN 35.232 / PTS SN 35.191 LOCATES THE FETTER VERY PRECISELY
+
+In the **Koṭṭhita Sutta**, Sāriputta says:
+
+- the eye is not the fetter of forms;
+- forms are not the fetter of the eye;
+- **desire and lust that arise dependent on the two are the fetter.**
+
+The same applies to the other sense bases.
+
+The discourse then gives the Buddha himself as the example:
+- he still has eyes;
+- still sees forms;
+- but there is no desire-and-lust;
+- therefore he is not fettered by them.
+
+This is one of the clearest early-text answers to A85:
+
+**the bondage is not the existence of the world, nor the existence of sense faculties, nor bare sensory registration; the fetter is desire-and-lust arising in dependence on that relation.**
+
+### TEXT_ATTESTED — 4. SN 12.44 / MN 38 GIVE THE CONTACT → FEELING → CRAVING CHAIN
+
+**SN 12.44** analyzes the sensory process:
+
+sense faculty + object
+→ consciousness
+→ contact
+→ feeling
+→ craving
+→ clinging
+→ becoming
+→ birth
+→ suffering.
+
+**MN 38** repeats the same dependent sequence and explicitly confirms:
+- contact conditions feeling;
+- feeling conditions craving;
+- craving conditions clinging.
+
+This provides the causal backbone.
+
+But A85 must avoid a common mistake:
+**“feeling conditions craving” does not mean every feeling inevitably produces craving in every person.**
+
+### TEXT_ATTESTED — 5. SN 36.6 SHOWS THE CHAIN CAN FAIL TO TURN FEELING INTO BONDAGE
+
+**SN 36.6 Sallattha** says the learned noble disciple still experiences:
+- pleasant feeling;
+- painful feeling;
+- neutral feeling.
+
+But they are not fettered by those feelings in the same way.
+
+In particular:
+- pleasant feeling need not activate the underlying tendency to greed in the same way;
+- the disciple understands the origin, disappearance, gratification, drawback, and escape regarding feeling.
+
+Therefore:
+
+`contact → feeling`
+can occur
+
+without necessarily becoming
+
+`feeling → craving → bondage`.
+
+This is a crucial early-text guardrail.
+
+### BOUNDED ANSWER — WHERE DOES SENSUAL BONDAGE “ENTER”?
+
+There are two complementary early-text answers.
+
+**Dependent-origination lens**
+- feeling is the condition at which craving can arise;
+- craving then conditions clinging.
+
+**Fetter lens**
+- desire-and-lust arising in dependence on sense faculty + object is the actual fetter.
+
+Thus the safest bounded model is:
+
+`object + sense faculty + consciousness`
+→ contact
+
+`contact`
+→ pleasant / painful / neutral feeling
+
+then, under ignorance/unwise relation:
+`pleasant feeling`
+→ delight / desire / craving
+→ sensual passion
+→ grasping
+→ bondage.
+
+This is **CROSS-TEXT SYNTHESIS**.
+
+Do not read it as a claim that one mathematically exact microsecond is “the” universally observable point of bondage.
+
+### IMPORTANT GUARDRAIL — THE PROCESS IS CONDITIONED BEFORE EXPLICIT CRAVING
+
+A85 does not claim:
+“everything before craving is spiritually neutral.”
+
+Before explicit craving, the process may already be shaped by:
+- ignorance;
+- habitual perception;
+- attention;
+- underlying tendencies;
+- prior conditioning.
+
+The point is narrower:
+
+**the early texts do not identify bare contact, bare sense object, or bare pleasant feeling as identical with sensual bondage.**
+
+The binding function becomes explicit in:
+- desire-and-lust;
+- craving;
+- sensual passion;
+- clinging.
+
+### TEXT_ATTESTED — 6. `KĀMACCHANDA` IS A HINDRANCE THAT CAN BE FED OR STARVED
+
+**SN 46.51** treats `kāmacchanda` as the hindrance of sensual desire.
+
+It says sensual desire is fed by:
+- the theme/sign of beauty;
+- repeatedly giving it unwise attention.
+
+It is starved by:
+- the theme of unattractiveness;
+- wise attention.
+
+Therefore `kāmacchanda` is not the external object itself.
+
+It is a mental hindrance that can grow or weaken depending on how attention engages the field.
+
+### TEXT_ATTESTED — 7. `KĀMARĀGA` IS A FETTER, NOT JUST A MOMENTARY LIKING
+
+**AN 10.13** and **SN 45.179** include sensual desire/passion among the five lower fetters.
+
+This is a deeper structural category than a single passing pleasant reaction.
+
+A85 therefore uses the following working distinctions:
+
+- `kāmaguṇa`: the five sensual cords / attractive sense-object classes;
+- `kāmacchanda`: sensual desire as a hindrance obstructing the mind;
+- `kāmarāga`: sensual passion/lust as a lower fetter;
+- `chandarāga`: desire-and-lust for an object/domain, often used in escape/abandonment formulas;
+- `taṇhā`: craving, broader than sensuality alone, including craving for sensuality, becoming, and non-becoming.
+
+These are **working contextual distinctions**, not claims of perfectly non-overlapping dictionary boxes.
+
+### TEXT_ATTESTED — 8. MN 14 SHOWS WHY INTELLECTUAL KNOWLEDGE OF THE DRAWBACK MAY NOT YET END SENSUAL ATTRACTION
+
+**MN 14** says a noble disciple may clearly understand that sensual pleasures have little gratification and much drawback, yet can still be tempted if they have not attained a rapture and pleasure apart from sensuality or something more peaceful.
+
+Once such a superior non-sensual pleasure is known, sensuality loses its comparative pull.
+
+This supports A84-A85:
+
+**sensual release is not achieved merely by declaring sense objects bad.**
+
+The mind must actually learn a less dependent and more peaceful mode of well-being.
+
+### TEXT_ATTESTED — 9. MN 75 SHOWS HOW REPEATED INDULGENCE CAN STRENGTHEN THE CRAVING LOOP
+
+**MN 75 Māgaṇḍiya** uses the leper/fire simile.
+
+The point is not that a sense object magically creates bondage by existing.
+
+The discourse emphasizes:
+- craving for sensuality;
+- fever for sensuality;
+- repeated indulgence;
+- increasing sensual craving.
+
+The more the craving-driven loop is fed, the more its apparent remedy becomes part of the disease.
+
+This is especially useful for understanding compulsion:
+**the repeated use of sensual stimulation to answer sensual craving can strengthen the craving it temporarily soothes.**
+
+The final sentence is **EXPLANATORY SYNTHESIS** grounded in the discourse.
+
+### OBJECT / FEELING / DELIGHT / CRAVING / GRASPING — A85 WORKING MAP
+
+A disciplined distinction is:
+
+**Object**
+- sight, sound, smell, taste, touch;
+- may be attractive.
+
+**Contact**
+- sense faculty + object + corresponding consciousness meet.
+
+**Feeling**
+- pleasant, painful, or neutral tone.
+
+**Delight / relishing**
+- the experience is welcomed and savored in a way that can feed craving.
+
+**Craving**
+- wanting more, wanting continuation, wanting acquisition, or wanting identity/becoming through the experience.
+
+**Sensual passion / hindrance / fetter**
+- craving becomes a structured obstacle or bond in the sensual domain.
+
+**Clinging**
+- the object/experience/view/identity is taken up more firmly as basis and fuel for becoming.
+
+No single sutta gives exactly this whole ladder in these English terms.
+Claim class: **CROSS-TEXT SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — SENSE RESTRAINT DOES NOT REQUIRE DESTROYING OR DENYING THE WORLD
+
+SN 35.232 is decisive:
+the Buddha still sees, hears, smells, tastes, touches, and cognizes.
+
+The liberating difference is:
+**no desire-and-lust binds the two sides together.**
+
+So A85 rejects:
+- “freedom requires sensory nonexistence”;
+- “beautiful things must cease to exist”;
+- “pleasant feeling itself is the sin.”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passage: **Mil 3.6.7**;
+- Nāgasena distinguishes:
+  - the person with passion, who experiences both the taste and the lust arising from taste;
+  - the passionless person, who experiences the taste but not the lust arising from it;
+- role in A85:
+  - strongly clarifies the difference between **sensory experience** and **sensual bondage**;
+  - directly supports the SN 35.232 / SN 36.6 distinction that experience can remain while passion ceases;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - it does not override AN 6.63, MN 13, SN 35.232, SN 12.44, MN 38, or SN 36.6.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 6.63 — five sensual cords are not themselves `kāma`; passion for intentions/resolves is sensuality.
+- MN 13 — five cords, gratification as pleasure arising from them, escape as abandonment of desire-and-lust.
+- SN 35.232 / PTS SN 35.191 — neither sense faculty nor object is the fetter; desire-and-lust dependent on both is the fetter.
+- SN 12.44 / MN 38 — contact → feeling → craving → clinging causal sequence.
+- SN 36.6 — feeling can remain without the same bondage and underlying greed.
+- SN 46.51 — sensual desire as a hindrance fed by unwise attention.
+- AN 10.13 / SN 45.179 — sensual passion/desire as a lower fetter.
+- MN 14 — superior non-sensual pleasure weakens the pull of sensuality.
+- MN 75 — craving-driven indulgence and sensual fever.
+
+Later/paracanonical:
+- Milindapañha 3.6.7 — taste without lust.
+
+### METHOD INSIGHT
+
+A85 reveals a very precise feature of the Buddha's causal thinking:
+
+**the world is not the fetter; the binding relation is the fetter.**
+
+The existence of:
+- an eye;
+- a visible form;
+- contact;
+- even pleasant feeling
+
+does not by itself equal bondage.
+
+Bondage develops when the experience is taken up through:
+- desire;
+- passion;
+- craving;
+- relishing;
+- clinging.
+
+This makes the practice neither world-denial nor hedonism.
+
+It is training in the relationship to experience.
+
+### PRACTICAL DIAGNOSTIC
+
+When a pleasant sense object appears, ask:
+- What is the object itself?
+- What feeling arose from contact?
+- Has delight/relishing begun?
+- Is there a demand for repetition or possession?
+- Has “I need this” or “this is mine” appeared?
+- Is the mind feeding `kāmacchanda` by repeatedly dwelling on attractive features?
+- Is this a passing pleasant feeling or a deeper `kāmarāga` pattern?
+- Can the object remain while desire-and-lust cease?
+
+### Open audit
+
+- full lexical/context audit of `kāma`, `kāmaguṇa`, `kāmacchanda`, `kāmarāga`, `chandarāga`, `nandi`, and `taṇhā`;
+- occurrence-level audit of AN 6.63's `saṅkapparāga` wording and early parallels;
+- Chinese Āgama parallel stress-test for the “sense faculty/object are not the fetter” teaching;
+- grammar-level relation among feeling, craving, underlying tendency, and attention;
+- determine how much of the transition from feeling to craving is best described through `anusaya`, `nandi`, or `ayoniso manasikāra` in different texts;
+- continue SN 35 / SN 36 / SN 45–46 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A85 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A86
+
+**How do sense restraint (`indriya-saṃvara`) and wise attention (`yoniso manasikāra`) interrupt the movement from contact and feeling into sensual desire without requiring sensory suppression?**
+
+Required lanes:
+- standard sense-restraint formula in MN / DN;
+- SN 46.51 on feeding/starving sensual desire;
+- MN 2 on restraint and wise use;
+- relation among attention, signs/features, underlying tendencies, and craving;
+- distinguish restraint from repression, avoidance, and sensory shutdown;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
