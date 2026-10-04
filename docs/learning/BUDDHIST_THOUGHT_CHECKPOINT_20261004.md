@@ -8006,3 +8006,266 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A79
+
+**Central question:** How do `anupādā` (non-grasping), `āsava` (taints/defilements), and `vimutti` fit together, and what does the formula “the mind is freed from the taints by not grasping” mean?
+
+### TEXT_ATTESTED — 1. SN 22.59 CONNECTS NON-GRASPING DIRECTLY WITH RELEASE FROM ĀSAVAS
+
+At the close of **SN 22.59**, after the five aggregates are seen with right discernment and the sequence disenchantment → dispassion → release is completed, the text says that the minds of the five monks were freed from the `āsava` **anupādāya** — without grasping / by not grasping.
+
+This gives the central A79 relation:
+
+`right seeing`
+→ no appropriation / no grasping
+→ freedom from `āsava`.
+
+A79 does not treat this as a mechanical slogan. The rest of the early corpus shows that such non-grasping depends on development, knowledge, and seeing.
+
+### TEXT_ATTESTED — 2. SN 22.101 BLOCKS THE IDEA THAT NON-GRASPING IS PASSIVE WISHING
+
+**SN 22.101 Vāsijaṭa** says the ending of defilements is for one who knows and sees the aggregates, their origin, and their disappearance.
+
+It then explicitly says:
+a practitioner may wish, “May my mind be freed from the defilements by not grasping,” but if the path factors are undeveloped, that freedom does not occur.
+
+The text names the development of:
+- four establishments of mindfulness;
+- four right efforts;
+- four bases of power;
+- five faculties;
+- five powers;
+- seven awakening factors;
+- noble eightfold path.
+
+Therefore:
+**`anupādā` is not passivity, indifference, or a verbal decision to “let go.” It is the non-grasping that matures from developed practice and seeing.**
+
+### TEXT_ATTESTED — 3. SN 23.8 DEFINES THE KNOWING THAT UNDERCUTS GRASPING
+
+**SN 23.8** says one is freed by not grasping after truly understanding the five grasping aggregates in terms of:
+- origin;
+- disappearance;
+- gratification;
+- drawback;
+- escape.
+
+This is important.
+
+Non-grasping is not ignorance of the object.
+It is a changed relation to the object after understanding:
+what attracts,
+what it costs,
+how it arises,
+how it ceases,
+and how escape is possible.
+
+### TEXT_ATTESTED — 4. MN 2 SHOWS THAT ĀSAVA-END DOES NOT COME FROM ONE SINGLE TACTIC
+
+**MN 2 Sabbāsava** opens:
+the ending of the `āsava` is for one who knows and sees, not one who does not know or see.
+
+It gives seven modes for abandoning defilements:
+1. seeing;
+2. restraint;
+3. wise use;
+4. endurance;
+5. avoidance;
+6. dispelling;
+7. development.
+
+This strongly guards against reducing:
+`anupādā = do nothing`.
+
+The practitioner actively:
+- restrains faculties;
+- uses food, clothing, shelter, and medicine wisely;
+- endures what should be endured;
+- avoids what should be avoided;
+- removes harmful thoughts;
+- develops awakening factors.
+
+So **non-grasping and skillful engagement coexist**.
+
+### TEXT_ATTESTED — 5. ĀSAVA ARE DEEP BINDING TENDENCIES, NOT EVERY PASSING THOUGHT
+
+In the MN 2 / DN 16 material consulted, the recurrent early list includes:
+- sensuality;
+- desire for becoming / renewed existence;
+- ignorance.
+
+Some textual traditions also list views separately.
+
+Therefore A79 does not freeze one universal enumeration across every recension.
+
+Working sense:
+**`āsava` are deep corrupting/binding tendencies whose ending marks arahantship.**
+
+Exact English/Vietnamese gloss — “taints,” “influxes,” “outflows,” “defilements,” “lậu hoặc” — remains **LEXICAL OPEN**.
+
+### TEXT_ATTESTED — 6. MN 121 SHOWS RELEASE WITHOUT SHUTTING DOWN THE SIX SENSES
+
+In **MN 121 Cūḷasuññata**, even a refined signless concentration is understood as conditioned and impermanent.
+
+Knowing and seeing this, the mind is freed from the defilements of:
+- sensuality;
+- desire for becoming;
+- ignorance.
+
+Yet the discourse still recognizes the residual burden connected with the six sense fields dependent on the living body.
+
+Therefore:
+**freedom from `āsava` is not sensory extinction and not withdrawal from all functioning while alive.**
+
+### TEXT_ATTESTED — 7. STRONG SAMĀDHI AND MINDFULNESS ARE NOT BY THEMSELVES FINAL RELEASE
+
+**AN 3.130** presents Anuruddha with strong energy, clear mindfulness, bodily tranquility, deep concentration, and extraordinary vision, yet his mind is still not freed from defilements by not grasping.
+
+Sāriputta points out residual conceit, restlessness, and remorse.
+
+This shows:
+**impressive meditative capacity is not identical with `anupādā-vimutti`.**
+
+The issue is not only altered states; residual appropriation and defilement must end.
+
+### WHAT “FREED FROM THE ĀSAVAS BY NOT GRASPING” MEANS — BOUNDED SYNTHESIS
+
+A79's bounded model is:
+
+experience occurs
+→ feeling / perception / thought may occur
+→ if taken as “mine / I / self,” or fed by gratification and becoming, grasping gains a foothold
+→ the deep tendencies of sensuality, becoming, and ignorance are sustained.
+
+With path development and clear seeing:
+→ origin / disappearance / gratification / drawback / escape are known
+→ appropriation stops being fed
+→ grasping loses its foothold
+→ the `āsava` are exhausted
+→ the mind is released.
+
+This is **CROSS_TEXT SYNTHESIS** from SN 22.59, SN 22.101, SN 23.8, MN 2, and MN 121.
+It is not a verbatim doctrine sentence from one sutta.
+
+### IMPORTANT GUARDRAIL — NON-GRASPING IS NOT SOCIAL OR PRACTICAL DISENGAGEMENT
+
+MN 2 is decisive here.
+
+A practitioner who is training in non-grasping still:
+- eats;
+- wears robes;
+- uses shelter and medicine;
+- protects the senses;
+- endures pain where appropriate;
+- avoids danger;
+- removes unskillful states;
+- develops skillful states.
+
+Therefore:
+**`anupādā` concerns the mode of appropriation, not the abolition of intelligent action.**
+
+### IMPORTANT GUARDRAIL — NON-GRASPING IS NOT “I MUST OWN NOTHING”
+
+The early issue is not reducible to physical possession.
+
+A person can use necessities while wisely reflecting on their purpose.
+Conversely, one may own little yet still cling strongly to:
+- identity;
+- views;
+- status;
+- becoming;
+- meditative attainment.
+
+Thus external simplicity may support practice, but it is not identical with `anupādā`.
+
+### CETO-VIMUTTI / PAÑÑĀ-VIMUTTI — LIMITED RESULT AT A79
+
+Early discourses frequently use the paired formula:
+**undefiled freedom of heart (`ceto-vimutti`) and freedom by wisdom (`paññā-vimutti`)**, realized through the ending of the `āsava`.
+
+A79 records the pairing but does **not** yet force a single theory of:
+- two independent liberations;
+- two substances;
+- or one fixed attainment taxonomy in every passage.
+
+A dedicated checkpoint is required.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting themes:
+  1. in the passion/non-passion dialogue, Nāgasena says the person free from passion can still experience the taste of food but does not experience the lust that grows from the taste;
+  2. in the cessation/Nibbāna dialogue, the wise disciple does not delight in or cleave to sense objects, so craving, grasping, becoming, birth, and suffering cease;
+  3. later similes describe the trained practitioner as not being “taken hold of” by evil dispositions;
+- role in A79:
+  - strongly supports the distinction between **experience** and **grasping**;
+  - supports non-grasping as freedom from being captured by passion, not sensory numbness;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - it does not replace the early formulae in SN 22.59, SN 22.101, SN 23.8, MN 2, and MN 121.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 22.59 — mind freed from `āsava` by non-grasping.
+- SN 22.101 — non-grasping release requires development; wishing is insufficient.
+- SN 23.8 — origin/disappearance/gratification/drawback/escape of grasping aggregates.
+- MN 2 — seven methods of abandoning `āsava`; active practice.
+- MN 121 — release from sensuality/becoming/ignorance while living sense-field residue remains.
+- AN 3.130 — concentration and mindfulness alone do not guarantee final release.
+- MN 73 / Ud 3.2 and related formulae — undefiled freedom of heart and freedom by wisdom through ending of defilements.
+
+Later/paracanonical:
+- Milindapañha passion/non-passion dialogue.
+- Milindapañha cessation/Nibbāna dialogue.
+- Milindapañha later training similes.
+
+### METHOD INSIGHT
+
+A79 exposes a subtle point in the Buddha's practice architecture:
+
+**the opposite of grasping is not inactivity; it is activity without appropriation.**
+
+The critical transformation is not:
+“nothing happens.”
+
+It is:
+**experience and intelligent action continue, while the mind no longer turns them into a basis for “mine,” “I,” sensual capture, or renewed becoming.**
+
+### PRACTICAL DIAGNOSTIC
+
+When saying “I am letting go,” ask:
+- Am I actually seeing the origin, gratification, drawback, disappearance, and escape?
+- Or am I merely suppressing desire?
+- Am I using “non-attachment” to avoid responsibility or difficult action?
+- Can I use an object without making identity or security out of it?
+- Is concentration strong while subtle conceit still remains?
+- Which `āsava` is being fed here: sensual capture, becoming, ignorance, or another context-specific corruption?
+- Is the claim text-attested, synthesis, lexical-open, or later support?
+
+### Open audit
+
+- occurrence-level audit of `anupādā`, `upādāna`, `āsava`, `āsavakkhaya`, and `vimuccati`;
+- recension/parallel audit of the three-versus-four `āsava` lists;
+- Chinese parallel stress-test for SN 22.59 / SN 22.101 / MN 2;
+- exact relationship among `ceto-vimutti`, `paññā-vimutti`, and general `vimutti`;
+- whether “by non-grasping” is best represented causally, instrumentally, or circumstantially in each Pāli formula remains a grammar-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A79 mirror attempt: **UNREACHABLE**;
+- read-only connector returned that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A80
+
+**How do `ceto-vimutti` and `paññā-vimutti` relate in the early discourses, and when are they a paired formula, distinct attainments, or different analytical angles on liberation?**
+
+Required lanes:
+- MN 43 / MN 70 / MN 73 / AN material where the terms are explicit;
+- distinguish temporary boundless ceto-vimutti from undefiled liberation;
+- examine `ubhatobhāgavimutta` and `paññāvimutta` only where textually warranted;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
