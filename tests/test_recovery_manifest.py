@@ -351,5 +351,35 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
 
 
+    def test_buddhist_track_requires_milindapanha_continuously(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        checkpoint = (ROOT / state["owner_learning_track_buddhist_thought_checkpoint"]).read_text(encoding="utf-8")
+        law_index = (ROOT / state["current_law_index"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+
+        self.assertTrue(state["owner_learning_track_buddhist_thought_milindapanha_required"])
+        self.assertEqual(
+            state["owner_learning_track_buddhist_thought_milindapanha_scope"],
+            "ALL_MATERIAL_CHECKPOINTS_CONTINUOUS",
+        )
+        self.assertTrue(
+            state["owner_learning_track_buddhist_thought_milindapanha_checkpoint_record_required"]
+        )
+        self.assertTrue(manifest["owner_learning_track_buddhist_thought"]["milindapanha_required"])
+        self.assertEqual(
+            manifest["owner_learning_track_buddhist_thought"]["milindapanha_scope"],
+            "ALL_MATERIAL_CHECKPOINTS_CONTINUOUS",
+        )
+        self.assertIn("Buddhist-study mandatory Milindapañha rule", law)
+        self.assertIn("Mandatory Milindapañha rule for Buddhist study", law_index)
+        self.assertIn("Buddhist-study Milindapañha continuity invariant", architecture)
+        self.assertIn("MILINDAPAÑHA / MI TIÊN VẤN ĐÁP", bootstrap)
+        self.assertIn("Mandatory Milindapañha consultation record", checkpoint)
+        self.assertIn("must never be silently promoted to `TEXT_ATTESTED`", checkpoint)
+
+
 if __name__ == "__main__":
     unittest.main()
