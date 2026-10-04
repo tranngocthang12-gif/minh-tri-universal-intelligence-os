@@ -12361,3 +12361,384 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A92
+
+**Central question:** How do non-ill-will (`abyāpāda`) and harmlessness (`avihiṃsā`) complete right intention alongside renunciation, and what does this threefold structure reveal about why Buddhist detachment cannot be reduced to cold withdrawal?
+
+### TEXT_ATTESTED — 1. RIGHT INTENTION IS A THREEFOLD DIRECTION, NOT RENUNCIATION ALONE
+
+**SN 45.8 / DN 22** define right intention through:
+- renunciation (`nekkhamma`);
+- non-ill-will (`abyāpāda`);
+- harmlessness (`avihiṃsā`).
+
+This is decisive for A92.
+
+The Buddha's path does not say merely:
+**“turn away from sensuality.”**
+
+It says, at the same time:
+- turn away from sensual capture;
+- do not orient the mind toward others with hostility;
+- do not orient the mind toward harming them.
+
+Therefore any interpretation of renunciation that produces:
+- cold hostility;
+- contempt;
+- cruelty;
+- self-directed violence
+
+is structurally incomplete as right intention.
+
+### TEXT_ATTESTED — 2. MN 19 TREATS GOOD WILL AND HARMLESSNESS AS TRAINABLE INCLINATIONS
+
+**MN 19 Dvedhāvitakka** divides thought into two classes.
+
+Unskillful:
+- sensual thought;
+- malicious / ill-will thought;
+- cruel / harming thought.
+
+Skillful:
+- renunciation;
+- good will / non-ill-will;
+- harmlessness.
+
+The Bodhisatta evaluates the unskillful class as:
+- harming oneself;
+- harming others;
+- harming both;
+- obstructing wisdom;
+- siding with distress;
+- not leading to extinguishment.
+
+The skillful class has the opposite trajectory.
+
+The discourse then states:
+**what one repeatedly thinks and considers becomes the inclination of the heart/mind.**
+
+Therefore:
+`abyāpāda` and `avihiṃsā`
+are not merely rules of outward restraint.
+They are **directions of mental cultivation**.
+
+### TEXT_ATTESTED — 3. NON-ILL-WILL IS MORE THAN PASSIVE TOLERANCE
+
+**MN 21 Kakacūpama** gives an extreme test case.
+
+When addressed:
+- at the right or wrong time;
+- truly or falsely;
+- gently or harshly;
+- beneficially or harmfully;
+- with love or inner hate,
+
+the practitioner is instructed to train so that:
+- the mind remains unaffected;
+- no bad words are spoken;
+- one remains compassionate for the offender's welfare;
+- the heart is filled with loving-kindness;
+- inner hate is absent.
+
+The simile of the saw intensifies the point:
+even under severe violence, the training standard is not merely “do not retaliate,” but **do not let hate become the mind's governing orientation**.
+
+Therefore A92 distinguishes:
+
+**passive tolerance**
+= outward restraint may occur while resentment remains;
+
+**non-ill-will**
+= the inner hostile wish itself is being abandoned and replaced by a benevolent orientation.
+
+This exact contrast is **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### TEXT_ATTESTED — 4. HARMLESSNESS IS MORE THAN MERE NON-ACTION
+
+The early ethical formula in **DN 1** says that one who abandons killing:
+- lays aside the rod and sword;
+- is scrupulous and kind;
+- lives full of sympathy for living beings.
+
+Likewise **SN 16.3** presents pure Dhamma teaching as motivated by:
+- compassion;
+- kindness;
+- sympathy,
+rather than by flattery or malice.
+
+So the broader early architecture is not exhausted by:
+“do nothing harmful.”
+
+It also contains:
+**positive concern for the welfare of beings.**
+
+A92 therefore treats `avihiṃsā` as more than behavioral inactivity.
+Its direction is **away from cruelty and toward conduct compatible with care**.
+
+### IMPORTANT LEXICAL GUARDRAIL — ABYĀPĀDA IS NOT SIMPLY A DICTIONARY SYNONYM FOR METTĀ
+
+Early texts place:
+- `abyāpāda` in the right-intention formula;
+- `mettā` in loving-kindness practice formulas.
+
+MN 21 explicitly joins:
+- no inner hate;
+- compassion for welfare;
+- a mind of loving-kindness.
+
+This strongly supports a functional affinity.
+
+But A92 does **not** freeze:
+`abyāpāda = mettā`
+as a universal one-to-one lexical identity.
+
+Working relation:
+**non-ill-will removes the hostile direction; loving-kindness positively wishes well.**
+
+Claim class:
+**TEXT-BASED FUNCTIONAL RELATION — LEXICAL IDENTITY OPEN**.
+
+### IMPORTANT LEXICAL GUARDRAIL — AV IHIṂSĀ IS NOT SIMPLY A DICTIONARY SYNONYM FOR KARUṆĀ
+
+MN 19 contrasts:
+- cruelty/harming thought;
+- harmlessness.
+
+MN 21 then explicitly brings compassion into the response to hostility and violence.
+
+This supports a close functional relation between:
+- non-harming;
+- compassion.
+
+But A92 does **not** claim:
+`avihiṃsā = karuṇā`
+in every early passage.
+
+Working relation:
+**harmlessness removes the intention to injure; compassion positively responds to suffering.**
+
+Claim class:
+**TEXT-BASED FUNCTIONAL RELATION — LEXICAL IDENTITY OPEN**.
+
+### TEXT_ATTESTED — 5. AN 6.110 SHOWS THAT GOOD-WILL AND HARMLESSNESS PERCEPTIONS ARE TO BE DEVELOPED AS ANTIDOTES
+
+**AN 6.110** says:
+- develop perception of renunciation to abandon sensual perception;
+- develop perception of good will to abandon malicious perception;
+- develop perception of harmlessness to abandon cruel perception.
+
+This reinforces the training model:
+the right-intention triad is not only a final description of a good person.
+
+It is a **cultivation strategy**:
+one repeatedly strengthens a contrary wholesome orientation until the mind inclines differently.
+
+### TEXT_ATTESTED — 6. AN 6.75 CONNECTS THE THREEFOLD INTENTION WITH PRESENT WELL-BEING
+
+**AN 6.75** says that:
+- sensual, malicious, and cruel thoughts/perceptions conduce to present distress and bad destination;
+- renunciation, good will, and harmlessness conduce to present happiness without fever and to good destination.
+
+A92 does not use this as a modern psychological claim.
+It records the early text's own ethical-causal valuation:
+
+**the right-intention triad is presented as intrinsically less feverish and less harmful.**
+
+### IMPORTANT GUARDRAIL — NON-ILL-WILL DOES NOT MEAN AGREEMENT WITH EVERYONE
+
+MN 21 requires:
+- no inner hate;
+- no bad speech;
+- loving-kindness.
+
+But the early corpus also contains:
+- correction;
+- admonition;
+- distinction between wholesome and unwholesome;
+- speech motivated by compassion.
+
+**SN 16.3** is useful here:
+teaching can be corrective and still be pure when motivated by compassion, kindness, and concern that others understand and practice.
+
+Therefore:
+**non-ill-will concerns motive and mental orientation, not compulsory agreement or refusal to name error.**
+
+### IMPORTANT GUARDRAIL — HARMLESSNESS DOES NOT MEAN TOTAL INACTION
+
+A person can fail to act while:
+- indifference;
+- fear;
+- self-protection;
+- avoidance
+
+remain the real motive.
+
+The early ethical architecture asks a deeper question:
+**is action or restraint guided by the reduction of harm and concern for welfare?**
+
+Thus:
+`avihiṃsā`
+cannot safely be reduced to:
+“never intervene.”
+
+Specific difficult cases of force, protection, punishment, or competing harms require separate ethical audit and should not be settled by a slogan.
+
+### RIGHT-INTENTION TRIAD — A92 BOUNDED MODEL
+
+The three directions complement one another:
+
+`nekkhamma`
+→ loosens sensual acquisition and dependency;
+
+`abyāpāda`
+→ prevents renunciation from hardening into hostility;
+
+`avihiṃsā`
+→ prevents detachment from becoming cruelty or disregard for suffering.
+
+This gives a bounded synthesis:
+
+**less grasping + less hostility + less harming**
+
+is closer to right intention than:
+**less grasping alone**.
+
+No single sutta states this formula in these exact words.
+Claim class: **CROSS-TEXT STRUCTURAL SYNTHESIS**.
+
+### WHY DETACHMENT CANNOT MEAN COLD WITHDRAWAL
+
+A91 showed:
+renunciation is a reorientation away from sensual dependence.
+
+A92 adds:
+that reorientation must coexist with:
+- good will;
+- non-harming;
+- compassion-compatible conduct.
+
+Therefore Buddhist detachment should not be modeled as:
+- emotional shutdown;
+- contempt for people;
+- “nothing matters”;
+- refusal to care.
+
+A more faithful model is:
+
+**less possessive**
+but not
+**less humane**.
+
+Indeed, as possessive demand and hostility weaken, benevolent concern can operate with less self-centered distortion.
+
+The final sentence is **INTERPRETIVE SYNTHESIS**, not a verbatim canonical proposition.
+
+### NON-ILL-WILL TOWARD SELF — GUARDED RESULT
+
+The early right-intention formula is not framed as a modern self-compassion doctrine.
+
+A92 therefore does not simply import modern therapeutic language.
+
+However, MN 19 explicitly evaluates thoughts by whether they harm:
+- oneself;
+- others;
+- both.
+
+So a practice that is systematically self-destructive while calling itself “renunciation” or “discipline” fails the sutta's own harm criterion.
+
+Claim class:
+**TEXT-BASED GUARDRAIL, NOT A MODERN SELF-COMPASSION EQUIVALENCE**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant later/paracanonical themes:
+  1. a dilemma on **kindness and punishment** preserves the maxim of doing no injury and dwelling in love and kindness, and interprets “punish what deserves punishment” as subduing what should be subdued and cultivating what should be cultivated rather than licensing cruelty;
+  2. a dialogue on **loving disposition** emphasizes the active felt presence of love as opposed to evil states of mind;
+  3. a dilemma on the Buddha's kindness treats non-injury as an established ethical habit and discusses violations in relation to lust, anger, delusion, and other corrupting causes;
+- role in A92:
+  - strongly supports the claim that non-injury and love are positive ethical orientations, not mere passivity;
+  - supports keeping correction/subduing of unwholesome states distinct from ill-will toward persons;
+- limitation:
+  - these are **LATER/PARACANONICAL SUPPORT**;
+  - they do not override the early right-intention triad or MN 19 / MN 21;
+  - later dilemma solutions should not be used to settle all modern questions of punishment or force.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 45.8 / DN 22 — renunciation, non-ill-will, harmlessness as right intention.
+- MN 19 — two classes of thought; repeated thought shapes inclination; good will and harmlessness do not harm and lead toward extinguishment.
+- MN 21 — no inner hate, compassion for welfare, loving-kindness even under severe abuse.
+- DN 1 — abandoning killing together with kindness and sympathy for living beings.
+- SN 16.3 — teaching motivated by compassion, kindness, and sympathy rather than malice.
+- AN 6.110 — perceptions of renunciation, good will, and harmlessness are to be cultivated as antidotes.
+- AN 6.75 — the right-intention triad is presented as conducive to happiness without fever.
+
+Later/paracanonical:
+- Milindapañha dilemmas on kindness/non-injury and loving disposition.
+
+### METHOD INSIGHT
+
+A92 reveals an important structural feature of the Buddha's path:
+
+**detachment is ethically constrained.**
+
+A reduction in desire is not automatically liberating if it leaves:
+- hatred;
+- cruelty;
+- contempt;
+- indifference to harm.
+
+Right intention requires the transformation of three directions together:
+- what one wants from the world;
+- how one regards other beings;
+- whether one wishes or causes harm.
+
+This gives a stronger test than simply asking:
+“am I attached?”
+
+One must also ask:
+**“is the mind becoming kinder and less harmful?”**
+
+### PRACTICAL DIAGNOSTIC
+
+When detachment seems to grow, ask:
+- Is sensual dependence actually weakening?
+- Is ill-will weakening too?
+- Is cruelty or contempt appearing in the name of discipline?
+- Can I disagree or correct without wishing harm?
+- Am I merely suppressing anger while rehearsing it internally?
+- Does my conduct reduce harm to self and others?
+- Is “I do not care” being mistaken for equanimity or renunciation?
+- Is non-attachment making benevolent action easier or making me withdraw from responsibility?
+- Are renunciation, good will, and harmlessness growing together?
+
+### Open audit
+
+- full lexical/context audit of `abyāpāda`, `byāpāda`, `avihiṃsā`, `vihiṃsā`, `mettā`, `karuṇā`, and `anukampā`;
+- early parallel stress-test for MN 19 and MN 21;
+- determine where early texts explicitly pair `abyāpāda` with `mettā` and `avihiṃsā` with `karuṇā`, versus later exegetical mapping;
+- audit active helping, protection, correction, and conflict cases without collapsing harmlessness into passivity;
+- continue SN 45 right-intention and right-action ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A92 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A93
+
+**How do right intention, right speech, and right action connect: when does an inner movement of renunciation, good will, or harmlessness become ethical speech and conduct, and why does Buddhist ethics evaluate both motive and effect rather than motive alone?**
+
+Required lanes:
+- SN 45.8 / DN 22 path definitions;
+- MN 41 / MN 61 on bodily, verbal, and mental conduct;
+- MN 58 on criteria for speech;
+- relation among intention, harm, truth, timing, and benefit;
+- distinguish benevolent intention from actually skillful action;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
