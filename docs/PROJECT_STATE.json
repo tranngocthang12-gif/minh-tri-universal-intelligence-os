@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A41_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A42",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A42_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A43",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -516,5 +516,7 @@
   "owner_learning_track_buddhist_thought_a40_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a40_milindapanha": "CONSULTED_PREFERENCE_VS_LUST_DISTINCTION",
   "owner_learning_track_buddhist_thought_a41_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a41_milindapanha": "CONSULTED_ASPIRATION_VS_PRIDE_DISTINCTION"
+  "owner_learning_track_buddhist_thought_a41_milindapanha": "CONSULTED_ASPIRATION_VS_PRIDE_DISTINCTION",
+  "owner_learning_track_buddhist_thought_a42_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a42_milindapanha": "CONSULTED_FULL_PITCHER_ANTI_PRIDE_ANALOGY"
 }
