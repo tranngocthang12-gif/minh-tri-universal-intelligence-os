@@ -10881,3 +10881,376 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A88
+
+**Central question:** How does `dhammavicaya`—investigation of Dhamma as an awakening factor—differ from ordinary thinking, doubt, and wise attention, and why must investigation itself be balanced with tranquility, samādhi, and equanimity?
+
+### TEXT_ATTESTED — 1. DHAMMAVICAYA IS AN AWAKENING FACTOR, NOT JUST GENERAL CURIOSITY
+
+In the seven awakening factors, `dhammavicaya` stands alongside:
+- mindfulness;
+- energy;
+- rapture;
+- tranquility;
+- samādhi;
+- equanimity.
+
+**SN 46.28** says these seven factors, when developed, help penetration and shatter greed, hate, and delusion.
+
+Therefore A88 does not use `dhammavicaya` to mean:
+“being intellectually curious about Buddhism.”
+
+Its function is path-directed:
+**investigation that participates in awakening and penetration.**
+
+### TEXT_ATTESTED — 2. MN 118 SHOWS INVESTIGATION OPERATING FROM MINDFUL OBSERVATION AND WITH WISDOM
+
+**MN 118 Ānāpānassati** gives a clear sequence.
+
+When mindfulness is established and lucid, the practitioner:
+- investigates;
+- explores;
+- inquires into that Dhamma/principle **with wisdom**.
+
+At that time the awakening factor of `dhammavicaya` is activated and developed.
+
+Then:
+`dhammavicaya`
+→ energy is aroused
+→ rapture arises
+→ body and mind become tranquil
+→ the mind enters samādhi
+→ equanimity watches over the concentrated mind.
+
+This is decisive for A88.
+
+Investigation is not depicted as free-floating thought.
+It grows out of mindful presence and becomes part of a coordinated awakening sequence.
+
+### TEXT_ATTESTED — 3. WISE ATTENTION FEEDS DHAMMAVICAYA, SO THE TWO ARE RELATED BUT NOT IDENTICAL
+
+**SN 46.51** says wise attention to distinctions such as:
+- wholesome / unwholesome;
+- blameworthy / blameless;
+- inferior / superior;
+- dark / bright counterparts
+
+is nutriment for the awakening factor of investigation of Dhamma.
+
+Therefore:
+
+`yoniso manasikāra`
+can condition and nourish
+`dhammavicaya`.
+
+This blocks the equation:
+`yoniso manasikāra = dhammavicaya`.
+
+A bounded working distinction is:
+- **wise attention** selects and frames the field in a causally appropriate way;
+- **dhammavicaya** actively examines, discriminates, and tests what is occurring in that field.
+
+Claim class: **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### TEXT_ATTESTED — 4. DHAMMAVICAYA DIFFERS FROM DOUBT BECAUSE DOUBT IS A HINDRANCE WHILE INVESTIGATION IS AN AWAKENING FACTOR
+
+The early texts place:
+- `vicikicchā` among the five hindrances;
+- `dhammavicaya` among the seven awakening factors.
+
+SN 46.51 further says that unwise attention to grounds for doubt nourishes doubt, whereas wise discrimination of relevant qualities helps deprive doubt of nutriment and nourishes investigation.
+
+Therefore:
+**questioning is not automatically either doubt or investigation.**
+
+A bounded distinction is:
+
+**doubt**
+→ uncertainty that obstructs decision, confidence, and forward movement;
+
+**investigation**
+→ discriminating inquiry that clarifies what is wholesome/unwholesome, causal/non-causal, skillful/unskillful, and what should be developed or abandoned.
+
+The exact psychology of the boundary remains **LEXICAL / CONTEXT OPEN**.
+
+### IMPORTANT GUARDRAIL — “HAVING QUESTIONS” IS NOT ITSELF A HINDRANCE
+
+A88 does not infer:
+`asking questions = vicikicchā`.
+
+The Buddha's teaching repeatedly uses inquiry, dialogue, testing, and discrimination.
+
+The hindrance is the obstructive state of doubt, not the mere presence of an unresolved question.
+
+An unresolved question can become:
+- hindering doubt if it paralyzes and proliferates;
+- productive investigation if it is framed and pursued in a path-relevant way.
+
+This is **EXPLANATORY SYNTHESIS**.
+
+### TEXT_ATTESTED — 5. DHAMMAVICAYA DIFFERS FROM VITAKKA
+
+A83 already established that `vitakka` can function as directing/placing thought or mind toward a theme, with lexical guardrails.
+
+A88 adds:
+
+- `vitakka` appears in the first-jhāna formula and in ordinary thought contexts;
+- `dhammavicaya` is specifically an awakening factor of investigation/discrimination.
+
+Therefore:
+**mental direction toward a topic is not yet the same as discriminating investigation of Dhamma.**
+
+One may have much `vitakka` without awakening investigation.
+Conversely, deep investigation need not mean continuous discursive inner speech.
+
+Claim class: **FUNCTIONAL SYNTHESIS / LEXICAL OPEN**.
+
+### TEXT_ATTESTED — 6. DHAMMAVICAYA IS CONNECTED TO WISDOM BUT SHOULD NOT BE SIMPLY RENAMED PAÑÑĀ
+
+MN 118 says the practitioner investigates Dhamma **with wisdom**.
+
+This supports a close connection:
+`dhammavicaya`
+is wisdom-informed investigation.
+
+But the formulation itself distinguishes:
+- the activity/factor of investigation;
+- the wisdom with which the investigation is carried out.
+
+Therefore A88 does not collapse:
+`dhammavicaya = paññā`.
+
+A bounded model is:
+**dhammavicaya is an investigative mode through which wisdom operates and develops, while paññā is the broader discerning capacity that penetrates and understands.**
+
+The exact boundary is **CROSS-TEXT SYNTHESIS / OPEN AUDIT**.
+
+### TEXT_ATTESTED — 7. SN 46.53 SHOWS THAT INVESTIGATION CAN BE THE WRONG MEDICINE AT THE WRONG TIME
+
+**SN 46.53 Aggi** gives one of the clearest balancing instructions in the early discourses.
+
+When the mind is sluggish:
+- investigation of Dhamma;
+- energy;
+- rapture
+
+are timely, because they arouse the mind.
+
+But when the mind is restless or over-excited:
+those same three are untimely.
+
+Instead, one should develop:
+- tranquility;
+- samādhi;
+- equanimity.
+
+And the discourse says mindfulness is useful at all times.
+
+This is extremely important.
+
+**A wholesome factor can be mistimed.**
+
+Therefore the Buddha's training is not:
+“maximize investigation at all moments.”
+
+It is:
+**develop the factor appropriate to the present imbalance.**
+
+### METHOD INSIGHT — AWAKENING IS REGULATED, NOT MAXIMIZED
+
+SN 46.53 reveals a broader architecture.
+
+If mind is too low:
+→ investigate, energize, uplift.
+
+If mind is too high:
+→ tranquilize, collect, equilibrate.
+
+Mindfulness:
+→ remains the continuous monitoring factor.
+
+Thus the seven awakening factors operate less like seven quantities to maximize and more like a **self-regulating system**.
+
+This is **CROSS-TEXT / SYSTEMS SYNTHESIS**, not canonical terminology.
+
+### TEXT_ATTESTED — 8. MN 118 SHOWS THE INVESTIGATIVE FACTORS NATURALLY GIVE WAY TO CALMING FACTORS
+
+MN 118 gives a sequence:
+- mindfulness;
+- investigation;
+- energy;
+- rapture;
+- tranquility;
+- samādhi;
+- equanimity.
+
+This is not proof that every meditation session must mechanically reproduce one rigid chronology.
+
+But it does show an important pattern:
+
+**investigation activates; then the path transitions toward stabilization and balance.**
+
+Therefore the role of investigation is not to keep mental analysis running indefinitely.
+
+It performs its task and allows:
+- tranquility;
+- collectedness;
+- equanimity
+
+to mature.
+
+### TEXT_ATTESTED — 9. MINDFULNESS MONITORS THE PRESENCE, ABSENCE, ARISING, AND DEVELOPMENT OF INVESTIGATION
+
+In **MN 10 / DN 22**, the practitioner knows:
+- when the awakening factor of investigation is present;
+- when it is absent;
+- how the unarisen factor arises;
+- how the arisen factor is fully developed.
+
+Thus investigation itself becomes something monitored by mindfulness.
+
+This supports a major A88 guardrail:
+
+**one should not become unconsciously captured by the very process of inquiry.**
+
+Even investigation is a conditioned factor whose arising, development, and appropriate use are to be known.
+
+### IMPORTANT GUARDRAIL — DHAMMAVICAYA IS NOT ENDLESS ANALYSIS
+
+Endless conceptual analysis can:
+- feed restlessness;
+- proliferate views;
+- prevent settling.
+
+SN 46.53 explicitly warns that investigation is untimely when the mind is already excited.
+
+Therefore:
+**more analysis is not always more wisdom.**
+
+When investigation has done enough to clarify the field, continuing to stimulate it may become counterproductive.
+
+### IMPORTANT GUARDRAIL — TRANQUILITY IS NOT ANTI-INTELLECTUAL
+
+The balancing instruction does not say:
+“stop understanding and become blank.”
+
+It says that when the mind is over-aroused, calming factors are more timely.
+
+Tranquility, samādhi, and equanimity therefore protect investigation from becoming:
+- agitation;
+- compulsive analysis;
+- mental over-heating.
+
+The aim is not less intelligence but **better regulated intelligence**.
+
+### IMPORTANT GUARDRAIL — EQUANIMITY IS NOT PASSIVITY TOWARD ERROR
+
+`upekkhā` as awakening factor appears after investigation, energy, rapture, tranquility, and samādhi in MN 118.
+
+It does not mean:
+“all interpretations are equally true.”
+
+Rather, it functions in a mind that has already:
+- investigated;
+- energized;
+- calmed;
+- collected.
+
+A bounded interpretation is:
+**equanimity allows the mind to observe the now-collected field without compulsively pushing or pulling.**
+
+Claim class: **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant Book II themes:
+  1. the seven awakening factors are explicitly listed, including investigation of Dhamma, energy, joy, calm, meditation/concentration, and equanimity;
+  2. mindfulness is described as repeatedly distinguishing good/bad, right/wrong, dark/light qualities and keeping the relevant training factors present;
+  3. concentration is described as a leading/gathering quality toward which wholesome states incline;
+  4. wisdom is described as cutting off and illuminating;
+- role in A88:
+  - supports a cooperative architecture in which investigation is one distinct wholesome factor among several;
+  - supports keeping investigation separate from both mindfulness and wisdom while seeing them work together;
+- limitation:
+  - Milindapañha does not override the early balancing rule of SN 46.53 or the MN 118 sequence;
+  - it remains **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 118 — mindfulness → investigation with wisdom → energy → rapture → tranquility → samādhi → equanimity.
+- SN 46.51 — wise attention nourishes investigation; hindrances and awakening factors have distinct nutriments.
+- SN 46.53 — investigation/energy/rapture are timely for sluggishness but untimely for restlessness; calming factors reverse the balance; mindfulness always useful.
+- MN 10 / DN 22 — know presence/absence, arising, and development of each awakening factor.
+- SN 46.28 — seven awakening factors lead to penetration and breaking greed, hate, and delusion.
+
+Later/paracanonical:
+- Milindapañha Book II on the seven awakening factors, mindfulness, concentration, and wisdom.
+
+### METHOD INSIGHT
+
+A88 reveals another characteristic of the Buddha's thought:
+
+**good mental qualities are not good because they are maximized without limit; they are good when developed in the right relationship, at the right time, for the right function.**
+
+Even investigation—the factor that examines Dhamma—must be balanced.
+
+This gives a practical model:
+
+`mind too dull`
+→ increase investigation / energy / rapture
+
+`mind too restless`
+→ increase tranquility / samādhi / equanimity
+
+`throughout`
+→ mindfulness monitors the condition.
+
+That is more precise than saying:
+“always analyze more”
+or
+“always calm down.”
+
+### PRACTICAL DIAGNOSTIC
+
+When investigating something in practice, ask:
+- Is this inquiry clarifying wholesome/unwholesome and cause/effect?
+- Or is it feeding doubt and proliferation?
+- Is the mind dull and in need of investigation?
+- Or already agitated and in need of tranquility?
+- Am I confusing thought quantity with depth of understanding?
+- Has investigation produced enough clarity to let the mind settle?
+- Is mindfulness still monitoring the process?
+- Is equanimity appearing after clarity, or am I using “equanimity” to avoid examining a problem?
+- Does this investigation ultimately weaken greed, hate, and delusion?
+
+### Open audit
+
+- full lexical/context audit of `dhammavicaya`, `vicaya`, `vicikicchā`, `vitakka`, `paññā`, and `yoniso manasikāra`;
+- early parallel stress-test for SN 46.53's arousing/calming factor balance;
+- determine the range of `dhamma` in `dhammavicaya`: teachings, phenomena, principles, qualities, or context-sensitive combinations;
+- compare the MN 118 sequence with other awakening-factor orderings before treating it as a rigid temporal model;
+- investigate how `dhammavicaya` relates to direct experiential investigation versus recollection/study of teachings;
+- continue SN 46 ID-level audit and open SN 45–46 consistency work;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A88 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A89
+
+**How do the seven awakening factors function as a coordinated dynamic system, and why does the Buddha repeatedly say they should be developed dependent on seclusion, dispassion, cessation, and maturing in relinquishment rather than merely producing pleasant meditation states?**
+
+Required lanes:
+- SN 46 awakening-factor formulas;
+- MN 118 culmination in knowledge and freedom;
+- SN 46.53 balancing architecture;
+- meaning and range of `viveka`, `virāga`, `nirodha`, and `vossagga-pariṇāmi`;
+- distinguish temporary state-balancing from the liberating direction of the whole system;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
