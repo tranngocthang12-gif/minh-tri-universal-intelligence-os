@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A39 COMPLETED  
-**Next checkpoint:** PHASE 4 — A40  
+**Current checkpoint:** PHASE 4 — A40 COMPLETED  
+**Next checkpoint:** PHASE 4 — A41  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -569,7 +569,128 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A40
+
+**Central question:** Is every desire a cause of suffering, or must `taṇhā` be distinguished from `chanda` and other forms of intention?
+
+### TEXT_ATTESTED
+
+1. **SN 56.11** defines the origin of suffering as `taṇhā` that makes for renewed becoming, accompanied by passion and delight, relishing here and there: craving for sensuality, craving for becoming, and craving for non-becoming. The target of the Second Noble Truth is therefore not every possible instance of wanting.
+2. **SN 45.8 / MN 141** define Right Effort by repeatedly saying the practitioner “generates desire” (`chandaṁ janeti`) for four tasks: prevent unarisen unskillful states, abandon arisen unskillful states, arouse unarisen skillful states, and maintain/develop arisen skillful states.
+3. **SN 51.13** explicitly treats `chanda` as a basis for concentration and directed exertion in the path.
+4. **SN 51.15** addresses the apparent paradox directly: if the holy life aims at abandoning desire, how can desire be used on the path? Ānanda answers with the example of desiring to go to a monastery; once one arrives, that particular desire subsides. Likewise, the desire used to reach arahantship is allayed when the task is accomplished.
+5. **MN 9** analyzes `taṇhā` as six cravings for forms, sounds, smells, tastes, tactile objects, and ideas, conditioned by feeling and brought to cessation through the Noble Eightfold Path.
+6. **SN 22.25** speaks of abandoning `chanda-rāga`—desire-and-passion—for the aggregates. This is an important lexical warning that `chanda` can also occur in unskillful compounds and must not be classified as wholesome merely by the word alone.
+
+### CENTRAL DISTINCTION
+
+The early texts do not support:
+
+`all wanting = taṇhā = suffering`.
+
+A more careful distinction is:
+
+- `taṇhā`: craving tied to passion/delight, appropriation, and renewed becoming;
+- `chanda`: desire/intention/interest whose ethical and functional status depends on object, context, and accompanying qualities.
+
+Thus `chanda` is not automatically wholesome, but neither is it automatically `taṇhā`.
+
+### THE “DESIRE TO END DESIRE” PARADOX
+
+SN 51.15 gives a direct strategic answer:
+
+1. a path-goal can motivate a finite desire;
+2. that desire organizes effort toward the goal;
+3. when the goal is reached, that particular desire need not be preserved;
+4. therefore using a path-desire does not imply an endless regress of desire.
+
+This supports a distinction between:
+- craving that perpetuates becoming;
+- functional path-intention that completes its task and falls away.
+
+### CROSS_TEXT_SYNTHESIS
+
+A useful diagnostic model:
+
+**TAṆHĀ-LIKE**
+- passion + delight;
+- “I need this for me”;
+- gratification/appropriation;
+- fuels becoming or non-becoming;
+- frustration tends to intensify selfing.
+
+**PATH-CHANDA-LIKE**
+- directed toward abandoning unskillful or developing skillful states;
+- compatible with Right Effort;
+- task-bounded rather than identity-bounded;
+- can cease when its function is fulfilled;
+- need not require sensual delight or self-construction.
+
+These are analytical markers synthesized from the cited texts, not a canonical checklist.
+
+### IMPORTANT GUARDRAILS
+
+- Do not translate every English “desire,” “want,” “wish,” or “intention” as `taṇhā`.
+- Do not assume every `chanda` is wholesome; context matters.
+- `vibhava-taṇhā` shows that wanting non-existence/destruction can itself be craving.
+- Desire to practice can still become entangled with conceit, achievement identity, or clinging; the word `chanda` alone does not guarantee purity.
+- The path distinction is functional and contextual, not merely dictionary-based.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: distinction and objection-resolution;
+- relevant passage: Nāgasena distinguishes the person with passion from the one without passion by saying both may prefer good food, but the lustful person experiences both the taste and lust arising from taste, whereas the person free from lust experiences the taste without the additional lust;
+- use in A40: this supports the reasoning distinction between ordinary preference/goal-directed inclination and craving-passion layered onto experience;
+- interpretation change: **NO MAJOR CHANGE**, but it sharpened the difference between object-preference and lust/craving attached to the object;
+- early-discourse confirmation: **YES**, via SN 56.11, SN 45.8, SN 51.13, SN 51.15, MN 9;
+- claim class: **LATER/PARACANONICAL SUPPORT**, not `TEXT_ATTESTED`.
+
+### METHOD INSIGHT
+
+The phrase “Buddhism teaches desire is bad” is too coarse.
+
+A more faithful early-text question is:
+- what is desired?
+- with what affective tone?
+- does it involve passion/delight?
+- does it construct becoming/selfing?
+- is it part of the path’s skillful effort?
+- does it fall away when its task is complete?
+
+This is closer to the Buddha's conditional and functional style of analysis than a blanket moralization of “wanting.”
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 56.11 Dhammacakkappavattana Sutta.
+- SN 45.8 Magga-Vibhaṅga Sutta.
+- MN 141 Sacca-vibhaṅga Sutta.
+- SN 51.13 Chanda Sutta.
+- SN 51.15 Brahmaṇa Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- SN 22.25 Chanda-rāga Sutta.
+
+Mandatory Milindapañha layer:
+- Milindapañha Chapter 6 distinction between the passionate and passionless eater.
+
+### Next checkpoint — PHASE 4 A41
+
+Central question:
+
+**How does `chanda` remain a path-tool without turning into achievement-identity, conceit, or renewed becoming?**
+
+Required lanes:
+- Right Effort and bases of power;
+- path-desire that falls away on completion;
+- conceit around attainments and “I am progressing”;
+- relation between `chanda`, `māna`, `bhava`, and appropriation;
+- mandatory Milindapañha consultation;
+- test whether disciplined aspiration can remain non-possessive.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A39 and routes the next work to A40.
+This checkpoint preserves A30–A40 and routes the next work to A41.
