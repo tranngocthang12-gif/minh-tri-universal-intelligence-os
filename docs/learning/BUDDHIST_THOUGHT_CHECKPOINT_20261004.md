@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A63 COMPLETED  
-**Next checkpoint:** PHASE 4 — A64  
+**Current checkpoint:** PHASE 4 — A64 COMPLETED  
+**Next checkpoint:** PHASE 4 — A65  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -4704,6 +4704,242 @@ Required lanes:
 - determine whether `attavādupādāna` is coextensive with `sakkāyadiṭṭhi` or only overlapping;
 - mandatory Milindapañha consultation;
 - preserve lexical uncertainty as OPEN/CHECK where exact equivalence is not textually established.
+
+
+## Completed checkpoint A64
+
+**Central question:** What exactly is `attavādupādāna` (clinging to a self-doctrine), and how does it differ from the twenty forms of `sakkāyadiṭṭhi`, from ordinary self-reference, and from residual `asmimāna`?
+
+### TEXT_ATTESTED — 1. `ATTAVĀDUPĀDĀNA` IS ONE DISTINCT KIND OF CLINGING
+
+**SN 12.2**, **MN 9**, **MN 11**, and **SN 38.12** list four kinds of `upādāna`, including:
+`attavādupādāna`.
+
+In the Pāli wording this is commonly rendered as:
+- clinging to a doctrine/theory of self;
+- clinging to a self-view/self-assertion.
+
+This establishes that self-related clinging is treated as a distinct category within the fourfold taxonomy.
+
+### TEXT_ATTESTED — 2. `SAKKĀYADIṬṬHI` HAS A SPECIFIC TWENTYFOLD STRUCTURE
+
+**MN 44** describes `sakkāyadiṭṭhi` through twenty constructions:
+for each of the five aggregates, one may regard:
+- the aggregate as self;
+- self as possessing the aggregate;
+- the aggregate as in self;
+- self as in the aggregate.
+
+This is a precise view-structure around the five aggregates.
+
+Thus `sakkāyadiṭṭhi` is not just any use of “I,” nor merely any residual self-feeling.
+
+### IMPORTANT RESULT — CURRENT EVIDENCE DOES NOT JUSTIFY STRICTLY EQUATING THE TWO TERMS
+
+`attavādupādāna` and `sakkāyadiṭṭhi` strongly overlap in domain:
+both concern self-related conceptual grasping.
+
+But the current early-text evidence does **not** establish:
+`attavādupādāna = exactly the same technical category as the twenty forms of sakkāyadiṭṭhi`.
+
+Reasons for caution:
+1. they occur in different classificatory schemes;
+2. `attavādupādāna` is presented as one form of clinging;
+3. `sakkāyadiṭṭhi` is presented as a twentyfold identity/self-view analysis;
+4. early Chinese parallels to MN 11 vary between language corresponding to “clinging to a self” and the Pāli “clinging to a doctrine of self.”
+
+Therefore exact coextensiveness remains **OPEN/CHECK**.
+
+### EARLY PARALLEL STRESS-TEST — THE WORDING IS NOT PERFECTLY UNIFORM
+
+Comparative work on **MN 11** and its Chinese parallels reports:
+- Pāli: `attavādupādāna`, literally involving “self-doctrine/self-assertion”;
+- parallels such as MĀ 103 and EĀ 27.2: wording closer to “clinging to self.”
+
+This variation matters.
+
+It warns against building a rigid metaphysical distinction solely from the Pāli compound `attavāda`.
+
+Claim class:
+**EARLY-PARALLEL STRESS TEST / LEXICAL OPEN**.
+
+### TEXT_ATTESTED — 3. ORDINARY “I” LANGUAGE IS NOT SELF-DOCTRINE CLINGING
+
+A57 established from **SN 1.25** that an arahant can still use ordinary expressions such as:
+- “I speak”;
+- “they speak to me.”
+
+Therefore conventional first-person language does not by itself establish:
+- `sakkāyadiṭṭhi`;
+- `attavādupādāna`;
+- residual `asmimāna`.
+
+A64 preserves that boundary.
+
+### TEXT_ATTESTED — 4. `ASMIMĀNA` CAN REMAIN AFTER EXPLICIT SELF-VIEW IS ABSENT
+
+**SN 22.89 Khemaka** states that Khemaka does not regard any of the five aggregates as self or belonging to self, yet:
+- the “I am” conceit;
+- “I am” desire;
+- “I am” underlying tendency
+
+have not yet been fully uprooted.
+
+This proves that:
+`explicit self-view`
+and
+`residual “I am” conceit`
+are not the same thing.
+
+Therefore `attavādupādāna` should not be silently equated with `asmimāna`.
+
+### CENTRAL DISTINCTION — THREE DIFFERENT LEVELS
+
+A64 keeps three layers apart:
+
+1. **ordinary person-language**
+   - “I,” “you,” names;
+   - communicative convention;
+   - can remain even for an arahant.
+
+2. **explicit self-view / self-doctrine clinging**
+   - formulations that posit or grasp a self in relation to experience;
+   - includes the domain analyzed by `sakkāyadiṭṭhi` and `attavādupādāna`;
+   - exact technical equivalence between those two terms remains open.
+
+3. **residual `asmimāna`**
+   - subtler “I am” conceit/tendency;
+   - can persist after explicit aggregate-self views have fallen.
+
+This three-layer model is **CROSS_TEXT SYNTHESIS** grounded in SN 1.25, MN 44, SN 22.89, and the fourfold clinging taxonomy.
+
+### TEXT_ATTESTED — 5. SELF-CLINGING IS FED BY CRAVING WITHIN DEPENDENT ORIGINATION
+
+**MN 11** states that all four kinds of clinging have craving as their source/origin.
+
+Therefore `attavādupādāna` is not an isolated philosophical error.
+
+It sits inside:
+`feeling → craving → clinging → becoming`.
+
+A self-theory can therefore function not just as a belief but as a grasped structure that participates in continued becoming.
+
+The final explanatory clause is **CROSS_TEXT SYNTHESIS**; the causal chain is **TEXT_ATTESTED**.
+
+### RELATION TO THE TWENTY SELF-VIEW CONSTRUCTIONS
+
+A cautious working model is:
+- the twenty `sakkāyadiṭṭhi` forms show **how self is conceptually located relative to the aggregates**;
+- `attavādupādāna` names **the grasping mode directed toward self/self-doctrine**;
+- `asmimāna` is the subtler residual “I am” tendency that can outlast those explicit views.
+
+This is explanatory and highly useful, but because no single early discourse states this exact three-tier taxonomy, it remains **CROSS_TEXT SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN `ATTAVĀDUPĀDĀNA` INTO PROOF OF A HIDDEN TRUE SELF
+
+Because the texts analyze clinging to self-doctrine, one could mistakenly reason:
+“there must be a real self behind the false doctrine.”
+
+That does not follow.
+
+The early-text method instead asks:
+- what is being taken as self;
+- how that taking relates to the aggregates;
+- whether the grasping ceases through right seeing and non-clinging.
+
+The analysis targets the grasping relation, not discovery of a hidden permanent essence.
+
+### IMPORTANT GUARDRAIL — DO NOT COLLAPSE ALL SELFING INTO PHILOSOPHICAL BELIEF
+
+The opposite error is:
+“if I no longer believe a self-theory, all selfing is gone.”
+
+SN 22.89 blocks that move.
+
+Residual “I am” conceit/tendency can remain after explicit self-view has fallen.
+
+Therefore liberation requires deeper uprooting than simply changing one's stated philosophy.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary themes:
+  1. **Nāgasena/chariot** — the personal designation “Nāgasena” functions without requiring a permanent self-substance;
+  2. **neither the same nor another** — causal continuity does not require invariant numerical identity;
+- role in A64: clarifies why ordinary person-reference and continuity need not become self-doctrine;
+- decisive evidence for whether `attavādupādāna` is exactly coextensive with `sakkāyadiṭṭhi`: **NO**;
+- interpretation change: **MODERATE** — strengthens the distinction between conventional designation and grasped self-theory;
+- early-discourse confirmation: **YES IN FUNCTION**, especially SN 1.25, MN 44, SN 22.89;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 12.2 / MN 9 / MN 11 / SN 38.12 — `attavādupādāna` in the fourfold clinging taxonomy;
+- MN 44 — twenty `sakkāyadiṭṭhi` constructions;
+- SN 22.89 — residual “I am” after explicit self-view is absent;
+- SN 1.25 — conventional “I” speech without conceit.
+
+Early-parallel comparison:
+- MN 11 parallels preserve self-related clinging but vary in whether the wording is closer to “self” or “self-doctrine.”
+
+Milindapañha remains supporting clarification only.
+
+### METHOD INSIGHT — THE BUDDHA SEPARATES SELF-THEORY, SELF-GRASPING, AND SELF-FEELING
+
+A64 shows why the modern single word “ego” is too coarse.
+
+The early material distinguishes at least:
+- conventional person-reference;
+- explicit self-view;
+- grasping at self/self-doctrine;
+- residual “I am” conceit.
+
+A person can therefore abandon one layer while another remains.
+
+The method is:
+**identify which layer is active rather than declaring “self” either simply present or absent.**
+
+### PRACTICAL DIAGNOSTIC
+
+When self-reference appears, ask:
+- Is this only ordinary language?
+- Am I locating a self in, owning, containing, or standing behind an aggregate?
+- Am I defending a doctrine about what the self really is?
+- Is there still a bare “I am” tension after the doctrine is gone?
+- What craving is making this self-formulation worth grasping?
+- What becoming does the self-formulation support?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 / MN 9 / MN 11 / SN 38.12 — fourfold clinging including `attavādupādāna`.
+- MN 44 Cūḷavedalla — twenty `sakkāyadiṭṭhi` constructions.
+- SN 22.89 Khemaka — residual “I am” conceit/desire/tendency without explicit aggregate self-view.
+- SN 1.25 Arahanta — conventional first-person speech after conceit is abandoned.
+
+Early-parallel stress test:
+- MN 11 parallels: Pāli “self-doctrine clinging” versus Chinese parallel wording closer to “clinging to self.”
+
+Mandatory Milindapañha layer:
+- Nāgasena/chariot;
+- neither-same-nor-another continuity.
+
+Open audit:
+- exact coextensiveness or non-coextensiveness of `attavādupādāna` and `sakkāyadiṭṭhi`;
+- exact lexical force of `attavāda` in the fourfold clinging compound;
+- relation to Aṭṭhakavagga `diṭṭhi` and self-positioning vocabulary remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A65
+
+**How does craving give rise to self-doctrine clinging: why does the mind want a theory of “what I am,” and what function does such a theory serve in protecting pleasure, continuity, control, or becoming?**
+
+Required lanes:
+- connect `taṇhā → upādāna` specifically to `attavādupādāna`;
+- revisit MN 2 identity speculation, SN 22.89 residual “I am,” and SN 12.15 existence/non-existence extremes;
+- distinguish textual causality from modern psychological explanation;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
