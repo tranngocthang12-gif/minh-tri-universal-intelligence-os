@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A62 COMPLETED  
-**Next checkpoint:** PHASE 4 — A63  
+**Current checkpoint:** PHASE 4 — A63 COMPLETED  
+**Next checkpoint:** PHASE 4 — A64  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -4464,6 +4464,246 @@ Required lanes:
 - connect to MN 22 raft logic without reducing all method to “mere convention”;
 - mandatory Milindapañha consultation on disciplined practice and reasoning;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A63
+
+**Central question:** How does `sīlabbatupādāna` differ from disciplined practice, and when does a useful rule, ritual, observance, or method become an object of clinging?
+
+### TEXT_ATTESTED — 1. THE FOURFOLD CLINGING TAXONOMY INCLUDES `SĪLABBATUPĀDĀNA`
+
+**SN 38.12**, **SN 12.2**, **MN 9**, and **MN 11** list grasping at precepts/observances/practices as one of four kinds of `upādāna`.
+
+The same early corpus also teaches a path of disciplined training.
+
+Therefore A63 rejects the crude equation:
+`discipline/practice itself = sīlabbatupādāna`.
+
+The problem is the **mode of grasping**, not the mere existence of training.
+
+### TEXT_ATTESTED — 2. DISCIPLINE IS POSITIVELY REQUIRED ON THE PATH
+
+**AN 3.83** describes three primary duties of a practitioner:
+- training in higher ethical conduct;
+- training in higher mind;
+- training in higher wisdom.
+
+This directly blocks an anti-discipline reading.
+
+The early path requires cultivated conduct and training.
+
+So the distinction is not:
+`practice versus no practice`.
+
+It is:
+`practice used as training`
+versus
+`practice grasped as a sufficient, identity-defining, or mechanically purifying possession`.
+
+The second line is **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. MN 57 SHOWS AN OBSERVANCE CAN BE PERFORMED WITH WRONG VIEW
+
+**MN 57 Kukkuravatika** describes ascetics who undertake dog-duty and ox-duty.
+
+The Buddha explains that fully cultivating such conduct and mentality leads according to that cultivation, and that the belief:
+`by this virtue/observance/asceticism/holy life I will become a deity`
+is wrong view.
+
+This is a concrete early-discourse case in which:
+- severe discipline;
+- consistency;
+- hardship;
+- sincerity
+
+do **not** by themselves establish that a practice is liberative.
+
+A63 uses MN 57 as an example of **wrong observance joined to wrong view**.
+
+Lexical guardrail:
+MN 57's `sīla / vata` language is highly relevant, but A63 does not claim that the discourse is a complete dictionary definition of `sīlabbatupādāna`.
+
+### TEXT_ATTESTED — 4. MN 7 REJECTS MECHANICAL RITUAL PURIFICATION WHILE PRAISING ETHICAL PURITY
+
+**MN 7 Vatthūpama** rejects the belief that bathing in sacred rivers can wash away evil deeds.
+
+The discourse contrasts external washing with:
+- truthful conduct;
+- non-harming;
+- not taking what is not given;
+- ethical purification and inner liberation.
+
+This again prevents two opposite errors:
+
+1. **ritual mechanism error**:
+   external form is treated as if it purifies by itself;
+
+2. **anti-form error**:
+   because ritual mechanism is rejected, all ethical discipline is dismissed.
+
+MN 7 supports the opposite:
+**ethical transformation matters; mechanical ritual purification does not do the work by itself.**
+
+### TEXT_ATTESTED — 5. MN 2 SHOWS THAT MISAPPREHENSION OF PRECEPTS/OBSERVANCES CAN BE ABANDONED WHILE TRAINING CONTINUES
+
+**MN 2 Sabbāsava** says that through appropriate seeing certain fetters are abandoned, including misapprehension/grasping regarding precepts and observances.
+
+The same discourse also prescribes:
+- restraint;
+- wise use of requisites;
+- endurance;
+- avoidance;
+- removal of unskillful states;
+- development of awakening factors.
+
+Therefore release from `sīlabbata`-type misapprehension is not release from disciplined practice itself.
+
+### TEXT_ATTESTED — 6. MN 22 RAFT LOGIC APPLIES TO METHOD WITHOUT MAKING METHOD USELESS
+
+**MN 22 Alagaddūpama** says the teaching is like a raft:
+for crossing, not for holding onto.
+
+The raft is genuinely useful.
+
+Its usefulness does not require carrying it forever after its task is complete.
+
+A63 therefore applies a bounded methodological synthesis:
+a rule, method, or observance can be:
+- necessary at one stage;
+- correctly used for a task;
+- later relinquished or held lightly when its function is fulfilled;
+
+without being either:
+- eternally binding as an identity;
+or
+- useless from the start.
+
+This is **CROSS_TEXT SYNTHESIS**.
+
+### CENTRAL DISTINCTION — FUNCTION, CAUSAL EFFICACY, AND IDENTITY
+
+A63 separates three questions:
+
+1. **Does this practice actually cause the intended wholesome development?**
+2. **Is the practitioner treating the form itself as mechanically sufficient?**
+3. **Has the practice become part of “who I am / my group / my purity / my superiority”?**
+
+A practice may be useful on question 1 while still becoming grasped under 2 or 3.
+
+This is a **PRACTICAL/CROSS_TEXT SYNTHESIS** grounded in MN 57, MN 7, MN 22, and the fourfold clinging taxonomy.
+
+### IMPORTANT GUARDRAIL — STRICTNESS IS NOT THE SAME AS WISDOM
+
+MN 57 is especially important here.
+
+A difficult practice may be:
+- austere;
+- impressive;
+- consistent;
+- identity-forming;
+
+yet still rest on wrong causal assumptions.
+
+Thus the Buddha's method asks:
+**what does this practice actually condition?**
+
+Not merely:
+**how hard is it?**
+
+This is a bounded method inference from MN 57.
+
+### IMPORTANT GUARDRAIL — NON-CLINGING DOES NOT MEAN CASUALNESS
+
+A63 also rejects the opposite mistake:
+`do not cling to practice = practice does not matter`.
+
+AN 3.83 and the broader path training make disciplined cultivation explicit.
+
+The more precise formula is:
+`train carefully without turning the training into an ultimate possession or automatic purification mechanism`.
+
+Claim class: **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary passage: **Mil 3.1.9 — virtue/good conduct as the base**;
+- Nāgasena says good conduct is the basis on which faith, energy, mindfulness, concentration, wisdom, awakening factors, and the path can be developed;
+- images include the earth as the base for growth and the prepared ground on which skilled work can proceed;
+- role in A63: strongly guards against reading non-clinging as rejection of discipline;
+- decisive evidence for the exact early lexical meaning of `sīlabbatupādāna`: **NO**;
+- interpretation change: **STRONG CLARIFICATION** — discipline can be foundational while grasping at discipline remains a problem;
+- early-discourse confirmation: **YES IN FUNCTION**, especially AN 3.83, MN 7, MN 57, MN 22;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 38.12 / SN 12.2 / MN 9 / MN 11 — fourfold clinging;
+- AN 3.83 — disciplined training in ethics, mind, wisdom;
+- MN 57 — wrong observance can be joined to wrong view and wrong causal expectation;
+- MN 7 — ritual bathing does not mechanically purify evil action;
+- MN 2 — abandonment of misapprehension regarding precepts/observances while disciplined training remains;
+- MN 22 — method as raft: useful for crossing, not for possession.
+
+Milindapañha supports the positive role of virtue as a foundation, but does not override the early taxonomy.
+
+### METHOD INSIGHT — PRACTICES ARE JUDGED BY CAUSAL FUNCTION, NOT SACRAL FORM ALONE
+
+A63 shows another characteristic of the Buddha's thought:
+
+A practice is not liberative merely because it is:
+- ancient;
+- difficult;
+- sacred;
+- repeated;
+- socially respected.
+
+The question is:
+**what mental and behavioral conditions does it cultivate, and does it conduce to release?**
+
+This does not make forms irrelevant.
+It places form under causal and liberative evaluation.
+
+### PRACTICAL DIAGNOSTIC
+
+When following a rule, ritual, or method, ask:
+- What is this practice meant to train?
+- What observable tendency does it weaken or strengthen?
+- Do I think the outer form automatically purifies me?
+- If another form serves the same liberative function better, can I examine that without identity-threat?
+- Has “my method” become “my superiority”?
+- Am I disciplined because the training works, or because breaking the form feels like losing who I am?
+- Do I still know the purpose of the raft?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 38.12 / SN 12.2 / MN 9 / MN 11 — `sīlabbatupādāna` among four kinds of clinging.
+- AN 3.83 — higher ethics, higher mind, higher wisdom as primary duties.
+- MN 57 Kukkuravatika — dog/ox observances and wrong causal view about purification/rebirth.
+- MN 7 Vatthūpama — sacred-river bathing does not erase wrongdoing; ethical purification is contrasted with ritual mechanism.
+- MN 2 Sabbāsava — abandonment of misapprehension of precepts/observances without abandonment of training.
+- MN 22 Alagaddūpama — raft logic.
+
+Mandatory Milindapañha layer:
+- Mil 3.1.9 — virtue as the foundation for wholesome qualities and path development.
+
+Open audit:
+- exact lexical scope of `sīlabbata` versus `sīlabbatupādāna` versus `sīlabbataparāmāsa`;
+- exact boundaries among ethical discipline, observance, ritual, vow, and practice in the early corpus remain OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A64
+
+**What exactly is `attavādupādāna` (clinging to a self-doctrine), and how does it differ from the twenty forms of `sakkāyadiṭṭhi`, from ordinary self-reference, and from the residual `asmimāna`?**
+
+Required lanes:
+- MN 11 / MN 9 / SN 12.2 fourfold clinging;
+- MN 44 twenty identity-view constructions;
+- SN 22.89 residual “I am” after explicit identity view;
+- determine whether `attavādupādāna` is coextensive with `sakkāyadiṭṭhi` or only overlapping;
+- mandatory Milindapañha consultation;
+- preserve lexical uncertainty as OPEN/CHECK where exact equivalence is not textually established.
 
 ## Provenance
 
