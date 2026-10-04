@@ -176,7 +176,7 @@
   },
   "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
   "universal_learning_continuity": {
-    "status": "DURABLY_ROUTED_PENDING_MERGE",
+    "status": "DURABLY_INTEGRATED",
     "law": "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
     "mandatory_prework_bootstrap": true,
     "durable_checkpoint_required": true,
