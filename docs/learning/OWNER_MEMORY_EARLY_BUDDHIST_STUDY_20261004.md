@@ -198,3 +198,24 @@ Important current tensions:
 
 Next: detailed clause-by-clause parallel alignment and high-risk translation cards.
 
+## Latest progress — clause alignment v0.7
+
+Completed:
+- MN 22 ↔ MĀ 200 semantic clause alignment;
+- SN 12.15 ↔ SĀ 301 semantic clause alignment;
+- MN 117 ↔ MĀ 189 semantic clause alignment;
+- MN 61 ↔ MĀ 14 semantic clause alignment;
+- new cards for viññāṇa, saṅkhāra, papañca, sati, samādhi, nibbāna.
+
+Durable finding:
+Stable reasoning functions across independent transmission lines should be weighted more strongly than exact technical redaction in one witness.
+
+Unresolved:
+- MĀ 14 anomalous purity/result wording;
+- metaphysical scope of SN 35.23 relative to cosmological discourse;
+- exact historical status of MN 117's explicit two-tier path taxonomy;
+- single-gloss solutions for saṅkhāra and papañca are rejected.
+
+Next:
+consciousness/rebirth contradiction cluster, jhāna-vs-insight sequence, Aṭṭhakavagga-vs-right-view stress test, then whole-corpus indexing.
+
