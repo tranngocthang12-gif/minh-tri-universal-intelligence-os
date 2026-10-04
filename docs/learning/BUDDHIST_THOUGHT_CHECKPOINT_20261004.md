@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A70 COMPLETED  
-**Next checkpoint:** PHASE 4 — A71  
+**Current checkpoint:** PHASE 4 — A71 COMPLETED  
+**Next checkpoint:** PHASE 4 — A72  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -6197,6 +6197,212 @@ Required lanes:
 - AN 3.34 root-destruction/burnt-seed imagery;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-commentarial / open-check boundaries.
+
+
+## Completed checkpoint A71
+
+**Central question:** What does “cessation of kamma” mean if the living arahant can still act, and how do “old kamma,” present action, and the ending of future karmic production differ?
+
+### TEXT_ATTESTED — 1. SN 35.146 DISTINGUISHES OLD KAMMA, NEW KAMMA, CESSATION, AND THE PATH
+
+**SN 35.146 Kammanirodha** gives a fourfold distinction.
+
+**Old kamma**:
+- the six internal sense bases—eye, ear, nose, tongue, body, mind;
+- described as produced/fabricated by choices and intentions;
+- now to be experienced.
+
+**New kamma**:
+- whatever one presently does by body, speech, and mind.
+
+**Cessation of kamma**:
+- liberation experienced through cessation of bodily, verbal, and mental action in the relevant karmic sense.
+
+**Path to cessation**:
+- the Noble Eightfold Path.
+
+This is one of the clearest early-text answers to A71:
+**the already-arisen living apparatus can remain while new karmic production is brought to cessation.**
+
+The last sentence is a **CROSS_TEXT SYNTHESIS** with Iti 44.
+
+### TEXT_ATTESTED — 2. “OLD KAMMA” DOES NOT MEAN EVERY PRESENT EXPERIENCE IS PREDETERMINED BY PAST KAMMA
+
+**SN 36.21 Sīvaka** explicitly rejects the view:
+`everything pleasant, painful, or neutral that one experiences is caused by what was done in the past`.
+
+The discourse lists multiple sources of feeling, including:
+- bodily disorders;
+- climate;
+- careless behavior;
+- assault/exertion;
+- and karmic result.
+
+Therefore A71 rejects:
+`old kamma = total predestination of every present event and feeling`.
+
+The six sense bases can be called old kamma without making every particular present experience exclusively the result of past kamma.
+
+### TEXT_ATTESTED — 3. AN 6.63 ADDS A DIFFERENT BUT COMPATIBLE KAMMA-CESSATION FRAME
+
+**AN 6.63** says:
+- intention is kamma;
+- contact is the source of kamma;
+- kamma has diverse results;
+- cessation of contact is cessation of kamma;
+- the Noble Eightfold Path leads to cessation of kamma.
+
+A71 does not force SN 35.146 and AN 6.63 into one sentence-by-sentence identity.
+
+They are compatible analytical lenses:
+- SN 35.146 distinguishes inherited sense-bases from current action;
+- AN 6.63 analyzes kamma through intention, contact, result, cessation, and path.
+
+### TEXT_ATTESTED — 4. ITI 44 PREVENTS “KAMMA CESSATION” FROM MEANING IMMEDIATE DISAPPEARANCE OF THE LIVING BODY
+
+**Iti 44** says the living arahant still has:
+- functioning sense faculties;
+- agreeable/disagreeable contacts;
+- pleasure and pain;
+
+while:
+- greed, hate, and delusion are extinguished;
+- the fetter of continued existence is ended.
+
+Thus cessation of future-binding production is compatible with the remainder of the present embodied life.
+
+### TEXT_ATTESTED — 5. AN 3.34 USES THE BURNT-SEED IMAGE FOR NON-FUTURE-PRODUCTION
+
+**AN 3.34** describes deeds rooted in greed, hate, and delusion as capable of ripening where future existence is born.
+
+When those roots are destroyed, the relevant deeds are compared with seeds burned and rendered unable to grow in the future.
+
+This supports a crucial distinction:
+**causal history is not erased; future germination is stopped.**
+
+That formulation is **CROSS_TEXT SYNTHESIS** from the seed image.
+
+### CENTRAL THREE-WAY DISTINCTION
+
+A71 separates:
+
+1. **old kamma / inherited conditioned basis**
+   - the already-arisen six internal sense bases in SN 35.146;
+   - part of the present life can continue to be experienced;
+
+2. **present/new action**
+   - current bodily, verbal, and mental deeds;
+   - current intention remains relevant;
+
+3. **ending future karmic production**
+   - roots and conditions that make action project renewed becoming are ended;
+   - the Noble Eightfold Path is the route to that cessation.
+
+This three-way structure is **TEXT-BASED CROSS-TEXT SYNTHESIS**.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN “OLD KAMMA” INTO FATALISM
+
+A71 rejects:
+- “everything happening to me now is punishment for something I did before”;
+- “present choices do not matter because all is already fixed.”
+
+SN 36.21 directly blocks the first.
+SN 35.146’s category of **new kamma** directly blocks the second.
+
+Past conditioning and present action coexist.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN “CESSATION OF KAMMA” INTO PHYSICAL INACTIVITY
+
+A living arahant:
+- still has sense faculties;
+- can speak and act;
+- can experience bodily conditions.
+
+The cessation concerns the karmic production that sustains future renewed existence, not a requirement that the body stop functioning immediately.
+
+This is **CROSS_TEXT SYNTHESIS** from SN 35.146, Iti 44, AN 3.34, and A70.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary themes:
+  1. the arahant may still experience bodily pain because the proximate or remote causes of bodily pain remain, while the causes of mental anguish have ceased;
+  2. the arahant does not force premature death but waits for the maturity/end of the present life;
+  3. causal continuity need not imply a permanent bearer.
+- role in A71:
+  - clarifies how effects/conditions in the present life can continue after the production of renewed birth has ended;
+  - supports the distinction between **remaining conditioned consequences** and **new future production**;
+- guardrail: Milindapañha does **not** establish that every bodily pain is old kamma; SN 36.21 explicitly warns against that overreach;
+- interpretation change: **STRONG CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 35.146 — old kamma, new kamma, cessation, path.
+- SN 36.21 — not all present feeling is caused by past kamma.
+- AN 6.63 — intention/kamma, source, result, cessation, path.
+- Iti 44 — present-life remainder after defilements and continued-existence fetter are ended.
+- AN 3.34 — root-destruction and non-germination imagery.
+
+Milindapañha is used only to clarify remaining bodily conditions and non-production of future rebirth.
+
+### METHOD INSIGHT — THE BUDDHA DISTINGUISHES INHERITED CONDITIONS FROM CURRENT CAUSAL INPUT
+
+A71 shows another characteristic causal move:
+
+Do not ask only:
+`What caused my present condition?`
+
+Also distinguish:
+- what has already arisen from prior conditioning;
+- what is being done now;
+- what present roots are feeding future production;
+- what can be stopped now even if the inherited structure remains.
+
+This avoids both fatalism and the fantasy that liberation retroactively erases causal history.
+
+### PRACTICAL DIAGNOSTIC
+
+When something difficult occurs, ask:
+- Is this actually known to be karmic result, or am I assuming that?
+- What conditions other than past kamma are operating now?
+- What is the inherited situation I cannot instantly erase?
+- What bodily, verbal, or mental action am I adding now?
+- What roots—greed, hate, delusion, craving, clinging—are being fed?
+- Can future production stop even while present consequences continue?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 35.146 Kammanirodha — old/new kamma, cessation, Noble Eightfold Path.
+- SN 36.21 Sīvaka — rejection of “all present feeling is past-kamma result.”
+- AN 6.63 Nibbedhika — intention/kamma, contact, result, cessation, path.
+- Iti 44 Nibbānadhātu — living remainder with faculties and feeling.
+- AN 3.34 Nidāna — roots and burnt-seed non-future-production imagery.
+
+Mandatory Milindapañha layer:
+- bodily pain may remain while mental anguish ceases;
+- no forced premature death;
+- present conditions can continue without renewed-birth production.
+
+Open audit:
+- exact relation between SN 35.146 “old kamma” and the wider Nikāya use of `vipāka`;
+- whether “old kamma” should be generalized beyond the six internal sense bases in this discourse;
+- exact technical reconciliation of “cessation of bodily/verbal/mental action” in SN 35.146 with continued ordinary activity of the living arahant remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A72
+
+**Does the Buddha’s teaching of kamma imply determinism or fatalism, and how do past conditioning, present intention, multiple present causes, and the possibility of liberation fit together?**
+
+Required lanes:
+- SN 36.21 rejection of all-experience-from-past-kamma doctrine;
+- SN 35.146 old/new kamma;
+- AN 3.61 critique of deterministic/previous-action doctrines where relevant;
+- present intention and path cultivation;
+- distinguish conditioned action from metaphysical free-will slogans;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / open-check boundaries.
 
 ## Provenance
 
