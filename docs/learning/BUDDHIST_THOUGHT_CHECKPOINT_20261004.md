@@ -1253,6 +1253,166 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve `TEXT_ATTESTED` versus `CROSS_TEXT_SYNTHESIS` boundaries.
 
+
+## Completed checkpoint A46
+
+**Central question:** How does wise attention (`yoniso manasikāra`) decide what is worth investigating, what should be left aside, and whether inquiry is weakening or feeding craving, self-view, and proliferation?
+
+### TEXT_ATTESTED
+
+1. **MN 2 Sabbāsava** does not define good inquiry by sheer intellectual difficulty. It distinguishes what should and should not be attended to by consequence: unwise attention gives rise to or increases the taints of sensuality, becoming, and ignorance; wise attention prevents their arising and supports their abandonment.
+2. In the same discourse, inappropriate attention includes recursive identity-speculation about past, future, and present—questions such as whether “I” existed, what “I” was, what “I” will become, or what “I” am. This mode of questioning can issue in a thicket of self-views, including both “I have a self” and “I have no self.”
+3. **MN 2** then gives a positive direction for wise attention: “this is suffering,” “this is its origin,” “this is its cessation,” and “this is the way leading to cessation.” In that context the result is not a more elaborate theory of self but abandonment of identity-view, doubt, and misapprehension of rules/observances.
+4. **SN 46.13** calls wise attention the forerunner of the seven awakening factors. Those factors are developed dependent on seclusion, fading of passion, cessation, and mature as relinquishment. Wise attention is therefore oriented toward a liberative trajectory, not merely toward information acquisition.
+5. **SN 56.11** assigns distinct tasks to the four noble truths: suffering is to be fully understood, its origin abandoned, cessation realized, and the path developed. The text does not itself equate this task-grammar with every instance of `yoniso manasikāra`, but it gives the operational structure that MN 2 points attention toward.
+
+### CENTRAL DISTINCTIONS
+
+**Wise attention**
+- selects the object/question partly by its causal effect on the mind;
+- directs inquiry toward suffering, its conditions, cessation, and practice;
+- is compatible with precise investigation;
+- can decide **not** to continue a line of thought when that line strengthens craving, becoming, ignorance, or identity-view.
+
+**Unwise attention**
+- can be sophisticated and still be unwise;
+- may ask questions whose very framing presupposes and reinforces “I / me / mine”;
+- can produce increasingly coherent views while moving farther from abandonment;
+- mistakes conceptual closure for liberating knowledge.
+
+Thus “wise” here does not simply mean “clever,” and “attention” does not simply mean “concentrate harder.”
+
+### THE KEY SHIFT: FROM IDENTITY TO TASK
+
+A46 sharpens a central pattern in early Buddhist thought:
+
+Instead of:
+`What am I?`
+`Do I really exist?`
+`What kind of self will I become?`
+
+the path redirects toward:
+`What is the suffering here?`
+`What conditions it?`
+`What is to be abandoned?`
+`What can cease?`
+`What must be developed?`
+
+The point is not that every historical, biographical, or philosophical question is forbidden. **MN 2 targets a mode of attention whose framing feeds the taints and self-entanglement.** The criterion is functional and causal.
+
+### RELATION TO DHAMMAVICAYA
+
+A45 established that `dhammavicaya` is disciplined investigation embedded among the awakening factors.
+
+A46 adds a prior routing function:
+
+`yoniso manasikāra → choose/frame the right object and question → dhammavicaya investigates it → other awakening factors balance and complete the process`.
+
+This exact arrow-sequence is **CROSS_TEXT_SYNTHESIS**, not a single canonical formula. Its basis is:
+- MN 2: fit/unfit objects of attention and four-truth orientation;
+- SN 46.13: wise attention as forerunner of the seven awakening factors;
+- SN 46 material: investigation is one factor among the seven, not the whole path.
+
+### RELATION TO PAPAÑCA
+
+**MN 18** shows a chain in which perception leads into thinking and thinking can become `papañca`, after which proliferated perceptions/categories beset the person across past, present, and future.
+
+MN 18 does not explicitly say “yoniso manasikāra stops papañca.” Therefore that direct equation is **not TEXT_ATTESTED**.
+
+A bounded synthesis is nevertheless possible:
+
+- MN 2 shows that attention can be misdirected into past/future/present self-speculation and produce views;
+- MN 18 shows how thinking can proliferate until its categories dominate experience;
+- therefore wise attention can be understood as an **upstream discipline of question-framing** that reduces the chance of feeding proliferative, self-referential loops.
+
+Claim class: **CROSS_TEXT_SYNTHESIS**.
+
+### FOUR-TRUTH TASK GRAMMAR
+
+The four truths do more than supply four topics. Together with SN 56.11 they supply four different cognitive/practical operations:
+
+- suffering → **understand fully**;
+- origin → **abandon**;
+- cessation → **realize**;
+- path → **develop**.
+
+This matters because the same object can be mishandled if assigned the wrong task.
+
+Examples:
+- trying to “abandon” suffering before understanding it can become avoidance;
+- trying to “understand forever” a craving that should now be abandoned can become rationalization;
+- talking about cessation without developing the path becomes abstraction.
+
+These examples are **analytical applications** of the task structure, not verbatim canonical statements.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: later functional support for selection, discrimination, and task-bounded reasoning;
+- Mi Tiên describes mindfulness as keeping in view what is good/bad and helpful/unhelpful, so that desirable qualities are cultivated and harmful ones are not followed;
+- it distinguishes reasoning from wisdom with the reaper analogy: thinking gathers/grips the material, while wisdom performs the cutting-off function;
+- it also presents scholarly discussion as a process where distinctions are made, error can be acknowledged, and correction need not become anger or status-defense;
+- use in A46: these passages strengthen the idea that inquiry is valuable when it helps discriminate what is useful and culminates in abandonment/clarification rather than endless conceptual possession;
+- interpretation change: **MODERATE** — `yoniso manasikāra` is best understood here not as “maximum attention” but as **task-directed, consequence-sensitive attention**;
+- early-discourse confirmation: **YES in functional structure**, especially MN 2 and SN 46.13;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### IMPORTANT GUARDRAIL ABOUT SELF
+
+MN 2 is especially important because it does **not** simply endorse the proposition “there is no self” as the answer to an inappropriate metaphysical question. In that passage, both “I have a self” and “I have no self” can arise as views from unwise attention.
+
+This does **not** erase the early teaching on `anattā`. It means that the liberative use of not-self should not be reduced to choosing one side of an abstract existence/non-existence debate.
+
+Claim class:
+- MN 2's treatment of the two views: **TEXT_ATTESTED**;
+- the broader methodological implication above: **CROSS_TEXT_SYNTHESIS**, to be stress-tested against SN 12 and the not-self corpus.
+
+### PRACTICAL DIAGNOSTIC
+
+Before following a question, ask:
+- Does this question clarify suffering and its conditions, or mainly construct an identity?
+- If I answer it, what taint is likely to weaken? What might strengthen?
+- Is there a concrete task here: understand, abandon, realize, or develop?
+- Is the question producing testable seeing, or merely another view to defend?
+- Does it lead toward seclusion, fading of passion, cessation, and relinquishment—or toward more ownership of ideas?
+- Can the question be reframed from “What am I?” to “Under what conditions does this arise, persist, and cease?”
+
+### OPEN / CHECK
+
+1. Do not reduce `yoniso manasikāra` to a modern generic notion of “critical thinking.” Its canonical role is explicitly soteriological.
+2. Do not infer from MN 2 that Buddhism prohibits every metaphysical or historical question. The text's explicit criterion concerns what attention does to the taints and what it leads to.
+3. The exact relation between `yoniso manasikāra` and dependent origination requires the still-open **SN 12 ID-level audit**.
+4. The connection between self-speculation in MN 2 and `papañca` in MN 18 remains a cross-text synthesis until lexical and parallel stress tests are completed.
+5. Aṭṭhakavagga lexical work on `diṭṭhi`, `sacca`, `saññā`, `maññati`, `papañca`, and `nissaya` remains open.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 2 Sabbāsava: wise/unwise attention, fit/unfit objects, self-speculation, four-truth orientation.
+- SN 46.13: wise attention as forerunner of the seven awakening factors.
+- SN 56.11: four truths and their distinct tasks.
+- MN 18 Madhupiṇḍika: perception → thinking → `papañca` and proliferated categories.
+
+Mandatory Milindapañha layer:
+- mindfulness discriminating helpful/unhelpful qualities;
+- reasoning versus wisdom/reaper analogy;
+- scholarly discussion allowing distinction and correction without anger.
+
+### Next checkpoint — PHASE 4 A47
+
+Central question:
+
+**How does dependent origination (`paṭiccasamuppāda`) change the grammar of inquiry from “What am I?” to “With what condition does this arise, and with what cessation does it cease?”**
+
+Required lanes:
+- begin the open **SN 12 ID-level audit** rather than relying on generic summaries;
+- distinguish conditionality from fatalism and from a hidden first cause;
+- inspect how identity-questions are displaced by condition-questions;
+- relation among ignorance, contact, feeling, craving, clinging, becoming, and suffering;
+- connect carefully to MN 2 without claiming equivalence where the texts do not state it;
+- mandatory Milindapañha consultation;
+- preserve early-text / cross-text / later-paracanonical boundaries.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
