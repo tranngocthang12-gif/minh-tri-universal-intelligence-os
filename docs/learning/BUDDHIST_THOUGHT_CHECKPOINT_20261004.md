@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A36 COMPLETED  
-**Next checkpoint:** PHASE 4 — A37  
+**Current checkpoint:** PHASE 4 — A37 COMPLETED  
+**Next checkpoint:** PHASE 4 — A38  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -310,7 +310,99 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A37
+
+**Central question:** What is the difference between knowing truth and constructing identity around truth?
+
+### TEXT_ATTESTED
+
+1. **MN 1 Mūlapariyāya** sharply distinguishes direct knowing from conceiving. The ordinary person perceives an object and then `maññati`: conceives it, conceives in it/from it, conceives it as “mine,” and delights in it. By contrast, the trainee directly knows (`abhijānāti`) and is instructed not to conceive in those ways; the arahant and Tathāgata directly know without such conceiving or “mine”-making.
+2. MN 1 therefore provides direct textual evidence that **knowing does not require appropriation**. The structure is not “stop knowing”; it is “know without adding conceiving, mine-making, and delight.”
+3. **Sn 4.14 Tuvaṭaka** places `asmīti` (“I am”) in the verse describing the root of `papañca-saṅkhā`. The same passage says that whatever phenomenon one directly knows internally or externally, one should not make a standpoint/strength out of it, and one should not conceive oneself as superior, inferior, or equal on that basis.
+4. **MN 18 Madhupiṇḍika** gives a process from contact → feeling → perception → thinking → `papañca`, after which the categories/perceptions of papañca assail the person and are linked to arguments, quarrels, disputes, accusations, divisive speech, and false speech.
+5. MN 18 explicitly says that when there is nothing to relish, welcome, or remain fastened to in that process, the obsessions of passion, resistance, views, uncertainty, conceit, becoming, and ignorance cease, along with conflict.
+
+### LEXICAL GUARDRAIL
+
+- `maññati` in MN 1 must not simply be translated as the noun `māna`. It is a verb of conceiving/supposing and includes “mine”-making in the repeated pattern.
+- `māna` (conceit/comparison), `upādāna` (clinging/appropriation), and `papañca` are related in the broader mechanism but are not synonyms.
+- Sn 4.14 strongly links `asmīti` with the root of `papañca-saṅkhā`, but the exact syntax/translation of the verse remains a lexical audit point. Do not over-promote one English rendering as uniquely definitive.
+
+### CROSS_TEXT_SYNTHESIS
+
+A useful mechanism is:
+
+`knowing / seeing`
+→ optional layer of `maññati`
+→ “about it / in it / from it / mine”
+→ identity-position: “I am the one who knows”
+→ comparison (`māna`) and standpoint
+→ grasping/support where present
+→ `papañca`-type elaboration/objectification
+→ faction, defense, quarrel, dispute.
+
+The first arrow is **not inevitable**. MN 1 is precisely important because the arahant/Tathāgata still directly knows while the conceiving/mine-making layer is absent.
+
+### CENTRAL CORRECTION
+
+“I know X” and “I am the knower of X” are not the same mental act.
+
+A person can correctly know:
+- this is suffering;
+- this is its origin;
+- this is wholesome/unwholesome;
+- this view is wrong/right;
+
+without constructing:
+- “this knowledge is mine”;
+- “I am superior because I know it”;
+- “my identity depends on being the one who is right.”
+
+Thus the Buddha’s critique does not erase cognition. It removes the **appropriative self-structure added around cognition**.
+
+### HOW TO TEST THE DIFFERENCE
+
+Evidence of **knowing without identity-construction**:
+- direct knowing/seeing remains;
+- no “mine”-making;
+- no delight/relishing in the object as identity support;
+- no superiority/inferiority/equality construction from the knowledge;
+- no need to secure selfhood through the position.
+
+Evidence that **knowing has become identity**:
+- the truth/view becomes “mine”;
+- the person’s status depends on being right;
+- comparison with others appears;
+- correction feels like destruction of self rather than correction of a claim;
+- conflict becomes a defense of identity rather than inquiry into what is true.
+
+The last two bullets are analytical applications and not verbatim canonical criteria.
+
+### Sources carried into durable checkpoint
+
+- MN 1 Mūlapariyāya Sutta.
+- MN 18 Madhupiṇḍika Sutta.
+- Sn 4.14 Tuvaṭaka Sutta.
+- Previous A30–A36 checkpoints for `asmimāna`, `diṭṭhupādāna`, Right View, and `sacca`.
+
+### Next checkpoint — PHASE 4 A38
+
+Central question:
+
+**How does a small act of self-conceiving expand into `papañca` and interpersonal conflict?**
+
+Required lanes:
+
+- MN 18 contact → feeling → perception → thinking → papañca;
+- Sn 4.14 `asmīti` and `papañca-saṅkhā`;
+- DN 21 and other early conflict passages if needed;
+- distinguish amount of thinking from the structural type of thinking called `papañca`;
+- track where craving, view, conceit and “mine”-making enter without collapsing them into synonyms;
+- connect individual self-construction with argument, faction and dispute.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A36 and routes the next work to A37.
+This checkpoint preserves A30–A37 and routes the next work to A38.
