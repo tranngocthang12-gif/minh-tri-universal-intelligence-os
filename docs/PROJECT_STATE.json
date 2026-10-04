@@ -489,11 +489,11 @@
   "owner_learning_track_buddhist_thought_started": "2026-10-04",
   "owner_learning_track_buddhist_thought_background_runtime": false,
   "owner_learning_track_buddhist_thought_source_audit": "A1_A4_CHAT_TAUGHT_PARTIAL_SOURCE_AUDIT_OLD_CORPUS_BACKLOG_PENDING",
-  "owner_learning_track_buddhist_thought_status": "PHASE4_A1_A9_TAUGHT_PARTIAL_A10_NEXT_AUDIT_LANE_ACTIVE",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE4_A10_NIBBANA_TATHAGATA_POSTMORTEM",
+  "owner_learning_track_buddhist_thought_status": "PHASE4_A1_A10_TAUGHT_PARTIAL_A11_NEXT_AUDIT_LANE_ACTIVE",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE4_A11_NIBBANA_EARLY_TEXT_MEANING",
   "owner_learning_track_buddhist_thought_continuity": "GITHUB_CANONICAL_STATE_REQUIRED_ACROSS_CHATS_LOCAL_BRAIN_MIRROR_PENDING",
   "owner_supreme_buddhist_learning_continuity": "docs/OWNER_SUPREME_BUDDHIST_LEARNING_CONTINUITY_20261004.md",
   "owner_supreme_buddhist_learning_route": "CHAT_NEW_TO_PROJECT_STATE_TO_BUDDHIST_TRACK_TO_STATE_TO_NEXT_CHECKPOINT_TO_CONTINUE",
-  "owner_learning_track_buddhist_thought_latest_note": "docs/learning/BUDDHIST_PHASE4_A9_UPADANA_BHAVA_20261004.md",
-  "owner_learning_track_buddhist_thought_audit_progress": "BOUNDED_SN12_2_SN12_15_SN12_52_SN12_62_SN22_22_SN22_59_SLICES_AUDITED_FULL_BACKLOGS_REMAIN_OPEN"
+  "owner_learning_track_buddhist_thought_latest_note": "docs/learning/BUDDHIST_PHASE4_A10_NIBBANA_TATHAGATA_20261004.md",
+  "owner_learning_track_buddhist_thought_audit_progress": "A10_BOUNDED_MN72_SN44_1_SN22_86_UD8_1_UD8_3_AUDIT_ADDED_FULL_BACKLOGS_REMAIN_OPEN"
 }
