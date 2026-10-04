@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-early-buddhist-whole-corpus-index/v1",
   "updated": "2026-10-04",
-  "status": "DISCOURSE_PASS_V0_10_SN36_COMPLETE_ID_LEVEL_ATTHAKAVAGGA_PASS1_VERSE_AUDIT",
+  "status": "PRIORITY_SN12_22_35_36_45_46_STRUCTURALLY_INDEXED_DEPTH_AND_PARALLELS_CONTINUE",
   "purpose": "Track corpus coverage by doctrine, reasoning, translation risk, parallels, contradictions and mastery without confusing selective reading with whole-canon understanding.",
   "fields": [
     "collection",
@@ -53,7 +53,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 22 Khandha-saṃyutta",
-      "coverage_status": "MAJOR_FAMILIES_INDEXED_MISSING_IDS_PENDING",
+      "coverage_status": "ALL_159_IDS_STRUCTURALLY_INDEXED_DEPTH_VARIES",
       "primary_themes": [
         "five aggregates",
         "not-self",
@@ -84,7 +84,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 35 Saḷāyatana-saṃyutta",
-      "coverage_status": "MAJOR_FAMILIES_INDEXED_MISSING_IDS_PENDING",
+      "coverage_status": "ALL_248_IDS_STRUCTURALLY_INDEXED_DEPTH_VARIES",
       "primary_themes": [
         "sense fields",
         "contact",
@@ -140,7 +140,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 45/46 Path and awakening factors",
-      "coverage_status": "CORE_PLUS_SN46_1_76_FAMILIES_MAPPED_REPEAT_MATRICES_PENDING",
+      "coverage_status": "SN45_ALL_180_AND_SN46_ALL_184_IDS_STRUCTURALLY_INDEXED",
       "primary_themes": [
         "eightfold path",
         "awakening factors",
@@ -334,5 +334,10 @@
   "reference_stack": "docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md",
   "milindapanha_reasoning_lab": "docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md",
   "sn12_peyyala_matrix_audit": "docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md",
-  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md"
+  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md",
+  "sn22_id_index": "docs/learning/EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json",
+  "sn35_id_index": "docs/learning/EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
+  "sn45_id_index": "docs/learning/EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json",
+  "sn46_id_index": "docs/learning/EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json",
+  "arthapada_agama_milinda_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md"
 }
