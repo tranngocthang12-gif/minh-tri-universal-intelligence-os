@@ -2,7 +2,7 @@
 
 **Status:** CURRENT OWNER LEARNING TRACK  
 **Date established:** 2026-10-04  
-**Owner intent:** Học để hiểu sâu cách Đức Phật tư duy, nhìn con người, nhận thức, khổ, hành động và giải thoát; không học theo kiểu thuộc khẩu hiệu hay gom giáo lý hậu kỳ thành lời Phật lịch sử.  
+**Owner intent:** Thuần học để hiểu sâu tư duy và tư tưởng của Đức Phật: cách Ngài nhìn con người, nhận thức, khổ, hành động và giải thoát. Không lấy khoa học hiện đại, tâm lý học, thần kinh học hay triết học hiện đại làm lăng kính chính để diễn giải Phật; các lĩnh vực đó chỉ được dùng phụ trợ khi giúp làm rõ câu chữ, bối cảnh, so sánh hoặc một điểm khó, và không được phép thay thế logic nội tại của kinh.  
 **Durability:** GitHub-first. Chat là nơi làm việc; file này là nguồn định hướng bền cho mọi ghế/chat sau.
 
 ## 1. Mục đích bất biến của track
@@ -39,7 +39,7 @@ Không được tự chuyển track này thành:
 3. Aṭṭhakavagga / Arthapada (T198) cho các chủ đề cổ liên quan diṭṭhi, saññā, papañca, nissaya, māna, mamatta.
 4. Mi Tiên Vấn Đáp để giải thích, đối chiếu và stress-test.
 5. Luận thư/truyền thống hậu kỳ chỉ dùng khi được ghi nhãn rõ là hệ thống hóa về sau.
-6. Nghiên cứu học thuật hiện đại để hỗ trợ textual history, philology, parallel mapping và tranh luận học thuật; không tự động thay thế văn bản nguồn.
+6. Nghiên cứu học thuật hiện đại chỉ để hỗ trợ textual history, philology, parallel mapping, niên đại/tầng văn bản và tranh luận dịch thuật. Khoa học hiện đại (tâm lý học, thần kinh học, vật lý, sinh học...) không được dùng làm khung giải thích chính hay tiêu chuẩn phán quyết tư tưởng Phật; chỉ được dùng phụ trợ khi Owner yêu cầu hoặc khi thật sự giúp làm rõ một điểm, và luôn phải tách rõ khỏi kết luận về tư tưởng Phật.
 
 ### 3.2 Nhãn độ chắc bắt buộc
 - **EBT_STRONG**: chứng cứ mạnh từ kinh sớm, tốt nhất có parallel độc lập.
@@ -142,7 +142,7 @@ Không bỏ chiều đạo đức: mettā, karuṇā, ahiṃsā, nghiệp và h�
 4. **Repeat control** — DISTINCT/FAMILY_REPEAT/PEYYĀLA_MATRIX.
 5. **Counterevidence first** — chủ động tìm văn bản bác giả thuyết.
 6. **Milinda stress-test** — COMPATIBLE/EXTENSION/TENSION.
-7. **Practical falsifiability** — hỏi nếu cách hiểu đúng thì có thể quan sát điều gì trong kinh nghiệm, nhưng không lấy trải nghiệm chủ quan thay bằng chứng văn bản.
+7. **Kiểm tra nội tại và thực hành** — hỏi cách hiểu này có nhất quán với các kinh liên quan, có phù hợp với hướng tu tập mà văn bản mô tả, và có thể được soi lại trong kinh nghiệm như thế nào. Không dùng tiêu chuẩn khoa học hiện đại làm thước đo chính, và không lấy trải nghiệm chủ quan thay bằng chứng văn bản.
 
 ## 10. Chuẩn đầu ra mỗi vòng học
 
@@ -214,3 +214,29 @@ Khi Owner yêu cầu tiếp track này, ghế mới phải:
 GitHub ghi bền **không biến nội dung thành VERIFIED**.
 
 Track này là một chương trình nghiên cứu có khả năng tự sửa. Kết luận phải luôn yếu hơn hoặc bằng chứng cứ mà nó dựa vào.
+
+
+## 16. Làm rõ phương pháp theo quyết định Owner — 2026-10-04
+
+Owner chốt lại mục tiêu của track:
+
+> **Thuần học hiểu tư duy và tư tưởng Phật. Không nhìn Phật qua lăng kính khoa học hiện đại. Khoa học chỉ là công cụ phụ trợ để làm rõ khi cần, tuyệt đối không được trở thành khung diễn giải chính.**
+
+Từ đây mọi ghế/chat phải giữ thứ tự:
+1. đọc kinh và ngữ cảnh;
+2. hiểu từ ngữ Pāli/Hán và cấu trúc lập luận;
+3. đối chiếu Nikāya/Āgama/Arthapada;
+4. dùng Mi Tiên Vấn Đáp để làm rõ hoặc stress-test;
+5. tổng hợp **từ bên trong logic Phật học**;
+6. chỉ sau đó, nếu thật sự hữu ích, mới nhắc khoa học/triết học hiện đại như chú thích phụ trợ và phải ghi rõ đó không phải chứng cứ xác nhận lời Phật.
+
+Không được:
+- dùng neuroscience để “chứng minh Phật đúng”;
+- dùng psychology hiện đại để định nghĩa ngược lại các thuật ngữ Pāli;
+- dùng vật lý/cosmology hiện đại để giải thích tái sinh, nghiệp hay Niết-bàn nếu văn bản không nói;
+- biến các mô hình hiện đại như “feedback loop”, “system”, “network”, “information processing” thành lời Phật.
+
+Các mô hình hiện đại nếu dùng chỉ là **SYNTHESIS/ILLUSTRATION**, có chức năng giúp hiểu, không có quyền làm nguồn chuẩn.
+
+Mục tiêu cuối cùng vẫn là:
+**hiểu Phật từ kinh, đối chiếu truyền thừa, và logic nội tại của con đường tu**, không phải làm một dự án “Phật giáo và khoa học”.
