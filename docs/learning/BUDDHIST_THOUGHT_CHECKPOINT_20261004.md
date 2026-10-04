@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A44 COMPLETED  
-**Next checkpoint:** PHASE 4 — A45  
+**Current checkpoint:** PHASE 4 — A45 COMPLETED  
+**Next checkpoint:** PHASE 4 — A46  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -1111,7 +1111,149 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A45
+
+**Central question:** How does `dhammavicaya` investigate without becoming restless analysis, argument-addiction, or `papañca`?
+
+### TEXT_ATTESTED
+
+1. **SN 46.2 / SN 46.3** list `dhammavicaya-sambojjhaṅga`—investigation of Dhamma/phenomena—as an awakening factor. Investigation is therefore not intrinsically a hindrance.
+2. **SN 46.51** connects appropriate attention to the arising and development of investigation, especially attention to qualities that are skillful/unskillful, blameworthy/blameless, inferior/superior, dark/bright. This gives investigation a discriminative ethical-causal function.
+3. **SN 46.53** says the awakening factors are not all to be intensified indiscriminately at every moment. When the mind is sluggish, investigation, energy, and rapture are appropriate; when the mind is restless/agitated, tranquillity, concentration, and equanimity are appropriate. Thus investigation itself can be mistimed.
+4. This is a direct guardrail against identifying “more analysis” with “more wisdom.” A factor can be wholesome in itself yet inappropriate to emphasize under current conditions.
+5. **MN 18 Madhupiṇḍika** places thinking before `papañca), then describes proliferated perceptions/categories as assailing the person and feeding conflict. Thinking and investigation therefore require functional distinction from proliferation.
+6. **MN 2** repeatedly frames wise attention in terms of attending in ways that lead to the non-arising/abandonment of defilements rather than feeding them. The quality of attention matters, not only the intellectual sophistication of the thought.
+7. The seven awakening factors as a set—mindfulness, investigation, energy, rapture, tranquillity, concentration, equanimity—show that investigation belongs in a balancing ecology rather than operating alone.
+
+### CENTRAL DISTINCTIONS
+
+**Dhammavicaya-like investigation**
+- discriminates relevant qualities;
+- answers a real question;
+- changes understanding or practice;
+- can stop when enough has been seen;
+- fits the current condition of mind;
+- ultimately supports tranquillity, concentration, and equanimity.
+
+**Restless analysis**
+- continues after the useful question has been answered;
+- keeps generating branches without changing action or understanding;
+- increases agitation and loss of collectedness;
+- is driven by fear of uncertainty, status, or the need to win.
+
+**Argument-addiction**
+- shifts the goal from seeing clearly to defeating an opponent;
+- uses distinctions as weapons of identity;
+- rewards cleverness even when greed, aversion, or conceit increase.
+
+**Papañca**
+- is not synonymous with analysis;
+- involves a proliferative process whose generated categories/perceptions then dominate the person and can fuel conflict.
+
+### CROSS_TEXT SYNTHESIS
+
+A healthy investigation loop can be modeled as:
+
+mindfulness
+→ identify the relevant phenomenon
+→ discriminate skillful/unskillful and causal relations
+→ test against text/practice/experience
+→ reach a provisional or direct understanding
+→ stop or shift factor when enough is known
+→ tranquillity / concentration / equanimity deepen.
+
+A corrupted loop can be:
+
+uncertainty or identity-threat
+→ analysis
+→ more conceptual branches
+→ more self-positioning
+→ more agitation
+→ loss of collectedness
+→ dispute
+→ further analysis to defend the position.
+
+The second loop is a cross-text synthesis using MN 18 and earlier checkpoints; it is not a single canonical chain.
+
+### TIMING AS A CORE INSIGHT
+
+SN 46.53 gives an especially important principle:
+
+**a wholesome factor can be wrongly timed.**
+
+When the mind is dull, more investigation and energy may be medicine.
+When the mind is already agitated, more investigation may be like adding fuel; tranquillity, concentration, and equanimity are then the corrective factors.
+
+This means Buddhist discernment is not only about **what** mental quality is present, but also **when** and **how much** to cultivate it.
+
+### PRACTICAL TEST
+
+Investigation is likely still serving the path when:
+- the question is specific;
+- the answer changes what is seen or done;
+- conceptual complexity decreases after understanding;
+- agitation does not continuously increase;
+- one can stop without feeling that identity has been threatened;
+- the result supports clarity, calm, and non-clinging.
+
+Analysis is drifting toward proliferation when:
+- the same issue keeps branching without resolution;
+- one cannot stop even after sufficient evidence;
+- the goal becomes being right rather than seeing clearly;
+- physiological/mental agitation rises while insight does not;
+- the discussion increasingly revolves around “my view / your view.”
+
+These are analytical applications, not a verbatim canonical checklist.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: analogy for wisdom/discernment;
+- Mi Tiên compares wisdom to a lamp/light that dispels darkness: when wisdom arises, ignorance is dispelled and what is to be known becomes evident;
+- use in A45: this supports a functional criterion for investigation—its purpose is clarification and the removal of ignorance, not endless conceptual production;
+- interpretation change: **MINOR** — sharpened the contrast between analysis that clarifies and analysis that merely multiplies thought;
+- early-discourse confirmation: **YES**, especially via SN 46.51–53, MN 18, and MN 2;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### METHOD INSIGHT
+
+A strong Buddhist investigation question is not:
+“How many more distinctions can I generate?”
+
+but:
+“What distinction actually reduces ignorance here?”
+
+When the needed distinction has done its work, continuing to analyze may cease to be `dhammavicaya` and may become agitation or proliferation.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 46.2 / SN 46.3.
+- SN 46.51.
+- SN 46.53.
+- MN 18 Madhupiṇḍika Sutta.
+- MN 2 Sabbāsava Sutta.
+
+Mandatory Milindapañha layer:
+- wisdom as light/lamp dispelling darkness and revealing what is to be known.
+
+### Next checkpoint — PHASE 4 A46
+
+Central question:
+
+**How does mindfulness (`sati`) prevent investigation from drifting into self-reinforcing thought, and what exactly is remembered/kept in mind?**
+
+Required lanes:
+- sati in satipaṭṭhāna and awakening-factor sequences;
+- relation between mindfulness and wise attention;
+- memory/keeping-in-mind versus bare present-moment awareness;
+- how sati notices factor timing in SN 46;
+- mandatory Milindapañha consultation;
+- distinguish mindfulness from passive observation and from constant self-monitoring.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A44 and routes the next work to A45.
+This checkpoint preserves A30–A45 and routes the next work to A46.
