@@ -4,6 +4,7 @@
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
 **Current checkpoint:** PHASE 4 — A44 COMPLETED  
 **Next checkpoint:** PHASE 4 — A45  
+**Reconciliation:** `docs/learning/BUDDHIST_THOUGHT_RECONCILIATION_20261005.md` — chat A98/A99 are unintegrated drafts, not canonical checkpoints  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -1110,6 +1111,10 @@ Required lanes:
 - distinguish precision from compulsive intellectualization.
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
+## 2026-10-05 continuity reconciliation
+
+A chat/canonical numbering drift was detected: later chat turns used A98/A99 although live canonical state still ended at A44. The durable resolution is recorded in `docs/learning/BUDDHIST_THOUGHT_RECONCILIATION_20261005.md`. Canonical sequence remains A44 completed → A45 next. Do not fabricate A45–A97 from memory; re-study and durably record each material checkpoint before advancing.
 
 ## Provenance
 
