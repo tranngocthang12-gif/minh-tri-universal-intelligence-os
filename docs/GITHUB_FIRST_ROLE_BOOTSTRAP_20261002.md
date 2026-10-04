@@ -295,7 +295,7 @@ For every current or future learning track, material work requires this live can
 
 Every material checkpoint must be durably recorded in GitHub with learned/corrected content, evidence/status, CURRENT, NEXT, OPEN AUDITS/UNKNOWNS and provenance. Chat memory is not a durable substitute. Recorded does not mean VERIFIED. If the durable write path is blocked, state NOT YET DURABLY RECORDED and continue only the independent work that remains safe.
 
-The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`; the preserved handoff is A30–A33 completed → NEXT A34.
+The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`. Always read CURRENT/NEXT from the live checkpoint plus PROJECT_STATE and RECOVERY_MANIFEST; do not rely on a checkpoint number hard-coded in bootstrap prose.
 
 ## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
