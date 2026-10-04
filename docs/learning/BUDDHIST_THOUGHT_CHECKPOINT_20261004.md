@@ -9480,3 +9480,294 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A84
+
+**Central question:** Why does the Buddha repeatedly warn against sensual pleasure while allowing and even praising jhānic pleasure, and what does this reveal about the relation among pleasure, craving, attachment, and skillful mental cultivation?
+
+### TEXT_ATTESTED — 1. MN 36 DISTINGUISHES PLEASURE BY ITS CAUSAL SOURCE, NOT BY THE MERE FACT THAT IT FEELS GOOD
+
+In **MN 36 Mahāsaccaka**, after extreme asceticism fails, the Bodhisatta remembers the pleasure of first jhāna experienced in childhood.
+
+He asks whether he should fear that pleasure, then recognizes that it is:
+- not connected with sensuality;
+- not connected with unskillful qualities.
+
+He concludes that such pleasure need not be feared.
+
+This is decisive for A84.
+
+The early distinction is not:
+`pleasure = bad`
+versus
+`pain = good`.
+
+It is closer to:
+**What conditions produce this pleasure, and what does this pleasure condition next?**
+
+### TEXT_ATTESTED — 2. MN 66 AND MN 139 EXPLICITLY SAY JHĀNIC PLEASURE SHOULD BE CULTIVATED, NOT FEARED
+
+**MN 66 Laṭukikopama** and **MN 139 Araṇavibhaṅga** distinguish sensual pleasure from the pleasure of the four jhānas.
+
+Jhānic pleasure is described as:
+- pleasure of renunciation;
+- pleasure of seclusion;
+- pleasure of peace;
+- pleasure of awakening.
+
+The texts say such pleasure:
+- should be pursued/cultivated/developed;
+- should not be feared.
+
+This blocks a crude ascetic equation:
+`all pleasure is spiritually dangerous`.
+
+### TEXT_ATTESTED — 3. SENSUAL PLEASURE IS DEFINED BY ITS OBJECT-RELATION AND ITS CAPACITY TO AROUSE
+
+**MN 59 Bahuvedanīya** identifies sensual pleasure as the pleasure and happiness arising from the five sensual stimuli:
+- forms;
+- sounds;
+- smells;
+- tastes;
+- touches
+
+when they are desirable, agreeable, sensual, and arousing.
+
+The same discourse then places jhānic pleasure above sensual pleasure in a hierarchy of increasingly refined forms of well-being.
+
+Therefore A84 distinguishes:
+- **sensual pleasure**: pleasure bound up with the five sensual fields and their arousing pull;
+- **jhānic pleasure**: pleasure born of seclusion and samādhi.
+
+The distinction is causal and functional, not merely hedonic intensity.
+
+### TEXT_ATTESTED — 4. PLEASURE AND CRAVING ARE NOT THE SAME EVENT
+
+**SN 36.6** is especially important.
+
+Both an ordinary person and a learned noble disciple experience:
+- pleasant feeling;
+- painful feeling;
+- neutral feeling.
+
+The difference is that the noble disciple:
+- does not resist pain in the same way;
+- does not turn to sensual pleasure as the only escape;
+- does not experience pleasant feeling with the same underlying tendency to greed;
+- understands origin, disappearance, gratification, drawback, and escape.
+
+Therefore:
+**pleasant feeling can occur without being converted into craving.**
+
+This is one of the strongest early-text reasons not to identify:
+`sukha = taṇhā`.
+
+### TEXT_ATTESTED — 5. MN 44 CONFIRMS THAT GREED DOES NOT UNDERLIE EVERY PLEASANT FEELING
+
+In **MN 44 Cūḷavedalla**, the underlying tendency to greed is said to be associated with pleasant feeling.
+
+But the discourse immediately adds a guardrail:
+**it does not underlie every pleasant feeling.**
+
+This makes the A84 distinction explicit:
+
+`pleasant feeling`
+does not automatically equal
+`greed/craving`.
+
+The relation depends on how the feeling is experienced, understood, and appropriated.
+
+### TEXT_ATTESTED — 6. MN 36 ALSO SHOWS THAT EVEN JHĀNIC PLEASURE MUST NOT “OCCUPY” THE MIND
+
+After entering the jhānas, MN 36 repeatedly says that the pleasant feeling did not take possession of / occupy the Bodhisatta's mind.
+
+So even the pleasure that is not to be feared is not presented as something to cling to.
+
+This yields a subtle early-text principle:
+
+**skillful pleasure may be used without being possessed by it.**
+
+The sentence above is a bounded synthesis of the discourse's repeated contrast between pleasant feeling and mental capture.
+
+### TEXT_ATTESTED — 7. THE PATH DOES NOT END AT MAXIMUM PLEASURE
+
+**MN 59** gives a hierarchy in which first, second, and third jhānic pleasures are progressively surpassed.
+
+The fourth jhāna is neither painful nor pleasant in the ordinary feeling sense, yet is treated as superior in the path hierarchy.
+
+The discourse then continues through the formless attainments and even calls the cessation of perception and feeling a superior happiness in a broader evaluative sense.
+
+This is crucial.
+
+For the Buddha:
+**“better” does not mean “more intense pleasant feeling.”**
+
+The evaluative criterion is refinement, freedom from disturbance, and proximity to release.
+
+### TEXT_ATTESTED — 8. AN 9.41 SHOWS WHY A WHOLESOME PLEASURE CAN LATER BE RELINQUISHED
+
+A83 established from **AN 9.41** that the Bodhisatta:
+- sees the drawback of sensuality and the reward of renunciation → first jhāna;
+- later sees the drawback of coarser jhāna factors and the reward of their absence.
+
+So a state can be:
+- skillful relative to what it replaces;
+- yet still be relinquished when something subtler becomes possible.
+
+This protects A84 from another false binary:
+`if something is wholesome, it must be held forever`.
+
+Jhānic pleasure can be wholesome and useful without becoming the final object of attachment.
+
+### BOUNDED SYNTHESIS — THE PROBLEM IS NOT PLEASURE AS SUCH BUT THE CRAVING/APPROPRIATION LOOP
+
+A84's working model is:
+
+**Sensual loop**
+pleasant contact
+→ delight/relishing
+→ craving
+→ grasping
+→ becoming / renewed bondage.
+
+**Skillful jhāna loop**
+seclusion from sensuality and unskillful qualities
+→ `pīti-sukha`
+→ greater stability and collectedness
+→ knowing-and-seeing
+→ further refinement
+→ even the pleasure itself can eventually be relinquished.
+
+This is **CROSS-TEXT SYNTHESIS**.
+
+The model should not be mistaken for one verbatim canonical chain.
+
+### IMPORTANT GUARDRAIL — RENUNCIANT PLEASURE IS NOT LICENSE FOR HEDONISM
+
+The fact that some pleasure is praised does not mean:
+`whatever feels good is spiritually useful`.
+
+The early texts judge pleasure by:
+- its causes;
+- the qualities accompanying it;
+- whether it strengthens or weakens greed, hate, and delusion;
+- whether it supports collectedness and understanding;
+- whether it can be relinquished without distress.
+
+Thus A84 rejects both:
+- crude pleasure-hating asceticism;
+- crude pleasure-maximizing hedonism.
+
+### IMPORTANT GUARDRAIL — PAIN IS NOT PURIFYING MERELY BECAUSE IT IS PAINFUL
+
+MN 36's failed austerities are central here.
+
+Extreme pain did not by itself produce awakening.
+The Bodhisatta abandoned self-torment, restored bodily strength, and used a non-sensual pleasure as part of the path.
+
+Therefore:
+**suffering is not automatically spiritually valuable merely because it hurts.**
+
+What matters is whether the condition contributes to knowledge, dispassion, and release.
+
+### IMPORTANT GUARDRAIL — JHĀNIC PLEASURE IS STILL CONDITIONED
+
+A82-A83 already established that jhāna factors:
+- arise under conditions;
+- change across levels;
+- are progressively relinquished.
+
+So A84 does not treat jhānic pleasure as:
+- permanent;
+- self;
+- final refuge;
+- Nibbāna.
+
+Its value is **path-functional**, not metaphysical.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting passage:
+  - Nāgasena distinguishes one who experiences the taste of food together with the lust arising from taste from one who experiences the taste without the lust;
+- role in A84:
+  - strongly supports the distinction between **pleasant experience** and **passion/craving added to that experience**;
+  - helps explain why feeling itself need not be eliminated for greed to end;
+- secondary support:
+  - Milindapañha repeatedly distinguishes calm/cool states from passion-driven heat;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - the early-text basis remains MN 36, MN 66, MN 139, MN 59, SN 36.6, MN 44, and AN 9.41.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 36 — non-sensual, non-unskillful jhānic pleasure need not be feared; pleasant feeling need not occupy the mind.
+- MN 66 — four-jhāna pleasure as pleasure of renunciation/seclusion/peace/awakening, to be cultivated and not feared.
+- MN 139 — same renunciant-versus-sensual pleasure distinction.
+- MN 59 — hierarchy from sensual pleasure through jhānas and subtler states.
+- SN 36.6 — pleasant feeling can occur without attachment and without greed tendency being active in the same way.
+- MN 44 — greed tendency does not underlie every pleasant feeling.
+- AN 9.41 — wholesome states are progressively refined and even useful pleasure can later be relinquished.
+
+Later/paracanonical:
+- Milindapañha — taste without lust; coolness versus passion.
+
+### METHOD INSIGHT
+
+A84 reveals an important feature of the Buddha's thought:
+
+**he evaluates experience causally rather than by a simple pleasure/pain morality.**
+
+The relevant questions are:
+- What produces this pleasure?
+- What mental qualities accompany it?
+- Does it inflame craving or weaken it?
+- Does it collect the mind or scatter it?
+- Can it be enjoyed without appropriation?
+- Can it be relinquished when a subtler freedom appears?
+
+This is why:
+- sensual pleasure can be dangerous;
+- jhānic pleasure can be skillful;
+- and even jhānic pleasure is eventually surpassed.
+
+### PRACTICAL DIAGNOSTIC
+
+When pleasure arises, ask:
+- Is this pleasure dependent on sensual stimulation?
+- Does it increase greed, fantasy, possession, or identity?
+- Does it calm and clarify the mind?
+- Can it be experienced without grasping?
+- If it ends, does distress immediately arise?
+- Is the pleasure itself being used as a support for practice, or has it become the new object of craving?
+- Am I assuming pain is purifying merely because it is painful?
+- Am I assuming pleasure is corrupt merely because it is pleasant?
+
+### Open audit
+
+- lexical/context audit of `sukha`, `pīti`, `kāma`, `kāmasukha`, `nirāmisa`, `nandi`, and `rāga`;
+- compare MN 36 pleasure passage with early parallels;
+- full audit of SN 36 distinctions between worldly and non-worldly/spiritual feeling;
+- clarify when “pleasure” in texts like MN 59 is literal pleasant feeling versus a broader evaluative designation;
+- track how jhānic pleasure relates to nutriment language without prematurely calling pleasure itself an `āhāra`;
+- continue SN 36 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A84 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A85
+
+**How does the Buddha distinguish `kāma` (sensuality) from the bare existence of pleasant sense objects and pleasant feeling, and where exactly does sensual bondage enter the contact → feeling → craving sequence?**
+
+Required lanes:
+- MN 13 / MN 14 / MN 75 on sensuality and its drawbacks;
+- SN 35 / SN 36 contact-feeling-craving material;
+- distinguish object, pleasant feeling, delight, craving, and sensual intention;
+- compare `kāma`, `kāmaguṇa`, `kāmacchanda`, `kāmarāga`;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
