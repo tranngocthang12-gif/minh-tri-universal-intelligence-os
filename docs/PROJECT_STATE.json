@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A44_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A45",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A45_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A46",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -522,5 +522,7 @@
   "owner_learning_track_buddhist_thought_a43_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a43_milindapanha": "CONSULTED_FAITH_CLARIFICATION_AND_ASPIRATION",
   "owner_learning_track_buddhist_thought_a44_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a44_milindapanha": "CONSULTED_DOUBT_VS_CLARIFICATION_DISTINCTION"
+  "owner_learning_track_buddhist_thought_a44_milindapanha": "CONSULTED_DOUBT_VS_CLARIFICATION_DISTINCTION",
+  "owner_learning_track_buddhist_thought_a45_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a45_milindapanha": "CONSULTED_WISDOM_AS_LIGHT_ANALOGY"
 }
