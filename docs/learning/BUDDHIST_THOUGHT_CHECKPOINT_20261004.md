@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A41 COMPLETED  
-**Next checkpoint:** PHASE 4 — A42  
+**Current checkpoint:** PHASE 4 — A42 COMPLETED  
+**Next checkpoint:** PHASE 4 — A43  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -739,7 +739,113 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A42
+
+**Central question:** How should spiritual progress be evaluated without turning the path into rank, status, or self-measurement?
+
+### TEXT_ATTESTED
+
+1. **SN 56.11** frames the path through four tasks: suffering is to be fully understood, its origin abandoned, cessation realized, and the path developed. This provides a task-based rather than status-based grammar for progress.
+2. **AN 10.86 Adhimāna** shows that a claim of final knowledge can be questioned, interrogated, and cross-examined; mistaken overestimation can break down under examination. Progress therefore is not exempt from scrutiny.
+3. The same text distinguishes actual liberation knowledge from premature self-assessment. Accurate knowledge of completion is possible; overestimation is the defect.
+4. **SN 22.89** shows that real progress can coexist with residual “I am” conceit. Therefore attainment level and freedom from self-ranking are not identical.
+5. **Sn 4.14** warns against conceiving oneself superior, inferior, or equal on the basis of what one knows. “I am inferior” remains comparison, not the end of comparison.
+6. Standard arahant formulas state “what had to be done has been done.” This is functional completion language, not social rank language.
+
+### CENTRAL DISTINCTIONS
+
+**Accurate self-assessment**
+- asks what has actually been understood, abandoned, realized, or developed;
+- remains open to examination and correction;
+- does not require comparison with another person.
+
+**Adhimāna / overestimation**
+- treats partial progress as final;
+- overstates what has been abandoned or realized;
+- resists corrective examination.
+
+**Māna / ranking**
+- converts progress into “I am superior / equal / inferior.”
+
+Thus humility is not:
+“I am lower than everyone.”
+
+Humility is closer to:
+“let the state of practice be what it is, without using it to manufacture rank.”
+
+### COMMUNITY / EXTERNAL CHECKING
+
+AN 10.86 supplies an important safeguard: attainment claims may be tested through questioning and examination by someone qualified.
+
+This does not mean every inner realization must be socially certified before it is real. It means claims are not protected from scrutiny merely because they concern inward experience.
+
+### CROSS_TEXT SYNTHESIS
+
+A robust progress review can use:
+
+1. **task evidence** — what specific defilement/pattern is weaker or abandoned?
+2. **causal evidence** — under what conditions does it still arise?
+3. **behavioral evidence** — are greed, aversion, conceit, and clinging actually reduced?
+4. **correction tolerance** — can contrary evidence be heard without identity-defense?
+5. **non-ranking** — is progress understood without superior/equal/inferior self-placement?
+6. **provisionality** — partial attainment is not silently promoted to final attainment.
+
+This is an analytical framework derived from the cited texts, not a canonical checklist.
+
+### HUMILITY VS SELF-DEPRECATION
+
+False humility:
+- “I am worse than everyone.”
+- “I know nothing.”
+- “I must deny all progress.”
+
+This still centers the self and may remain within inferior-comparison.
+
+Textually safer humility:
+- no boasting;
+- no inflation;
+- no self-lowering performance;
+- precise statement of what is known and unknown;
+- willingness to be examined;
+- no conversion of progress into identity.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: analogy and anti-pride reasoning;
+- relevant image: the full pitcher makes no noise; the practitioner who reaches learning/attainment should not make conceit or display arrogance, but remain upright and unboastful;
+- use in A42: supports the distinction between genuine fullness and the need to advertise fullness;
+- interpretation change: **MINOR** — strengthened the point that mature attainment reduces the need for status-display;
+- early-discourse confirmation: **YES**, via AN 10.86, SN 22.89, Sn 4.14 and task-language in SN 56.11;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### METHOD INSIGHT
+
+A better progress question is not:
+“What level am I?”
+
+but:
+“What exactly has been understood, abandoned, realized, and developed—and what still reappears?”
+
+This preserves discernment while reducing rank-construction.
+
+### Next checkpoint — PHASE 4 A43
+
+Central question:
+
+**What is the difference between healthy confidence (`saddhā`) and identity-based certainty or dogmatism?**
+
+Required lanes:
+- confidence after seeing versus blind allegiance;
+- faith, verification, and direct knowing;
+- relation among `saddhā`, `diṭṭhi`, `sacca`, and `upādāna`;
+- when confidence supports practice versus when it hardens into faction;
+- mandatory Milindapañha consultation;
+- distinguish confidence from gullibility and from pride.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A41 and routes the next work to A42.
+This checkpoint preserves A30–A42 and routes the next work to A43.
