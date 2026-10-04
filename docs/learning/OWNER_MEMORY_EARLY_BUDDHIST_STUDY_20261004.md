@@ -236,3 +236,28 @@ Durable findings:
 
 Whole-corpus indexing has now begun with priority blocks SN 12, SN 22, SN 35, SN 36, SN 45/46, MN dialogue clusters and Aṭṭhakavagga.
 
+## Latest progress — SN structural index phase 1
+
+Current artifact:
+`docs/learning/EARLY_BUDDHIST_SN_CORE_INDEX_V0_2_20261004.md`
+
+Completed structural phase-1 indexing for:
+- SN 12;
+- SN 22;
+- SN 35;
+- SN 36;
+- SN 45/46.
+
+Integrated functional map:
+- SN 12 = conditional engine;
+- SN 22 = appropriation/self-view engine;
+- SN 35 = sense-contact experience interface;
+- SN 36 = feeling/craving reaction hinge;
+- SN 45/46 = training/path/awakening engine.
+
+Important boundary:
+This is structural coverage, not sutta-by-sutta completion.
+
+Next:
+SN 12 discourse-ID matrix -> SN 22 self-view matrix -> SN 35 sense-process matrix -> SN 36 feeling matrix -> SN 45/46 path-factor matrix.
+
