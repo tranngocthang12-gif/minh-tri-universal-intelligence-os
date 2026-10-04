@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A35 COMPLETED  
-**Next checkpoint:** PHASE 4 — A36  
+**Current checkpoint:** PHASE 4 — A36 COMPLETED  
+**Next checkpoint:** PHASE 4 — A37  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -226,7 +226,91 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A36
+
+**Central question:** How does the Buddha distinguish truth (`sacca`) from the possessive/exclusive claim `idameva saccaṁ`?
+
+### TEXT_ATTESTED
+
+1. **Sn 4.12 Cūḷabyūha** criticizes people who each make their own view into truth (`sakaṁ sakaṁ diṭṭhimakaṁsu saccaṁ`) and therefore call others fools. The same discourse also says `ekaṁ hi saccaṁ na dutīyamatthi`: truth is one, not many rival truths.
+2. Sn 4.12 therefore does not teach that all truth-claims are equally valid. It contrasts one truth with the many “truths” proclaimed by disputants who build truth out of their own views.
+3. **Sn 4.13 Mahābyūha** links dwelling in views and disputing “this alone is true” with praise/blame and conflict, while praising non-involvement and non-dependence.
+4. **Ud 6.4** repeatedly places `idameva saccaṁ moghamaññaṁ` in the mouths of rival metaphysical sects holding mutually incompatible positions. The formula marks exclusive dogmatic closure: “this alone is true; the rest is empty/false.”
+5. **MN 72** shows the Buddha declining those same speculative formulations framed by `idameva saccaṁ moghamaññaṁ`.
+6. **SN 56.11** nevertheless explicitly teaches Four Noble Truths and treats them as objects of knowledge with distinct tasks: suffering is to be fully understood, its origin abandoned, cessation realized, and the path developed.
+
+### CROSS_TEXT_SYNTHESIS
+
+The main contrast is not:
+
+`truth` versus `no truth`.
+
+It is:
+
+`sacca` / truth to be known and realized
+versus
+`my view made into truth`
+→ exclusive ownership
+→ “this alone”
+→ rejection of all alternatives as worthless
+→ praise/blame
+→ superiority/inferiority
+→ dispute.
+
+Thus early texts permit strong truth-language while rejecting appropriation of truth as identity or faction.
+
+### WHY THIS IS NOT RELATIVISM
+
+Relativism would imply that incompatible claims can all be equally true, or that no truth can be privileged.
+
+Sn 4.12 explicitly resists that reading by saying truth is one, not many rival truths. SN 56.11 goes further by specifying four Noble Truths and the distinct work appropriate to each.
+
+Therefore the critique targets the **appropriation and sectarian absolutization of views**, not truth, discernment, or verification themselves.
+
+### IMPORTANT DISTINCTION
+
+There are at least three different acts:
+
+1. **Seeing/knowing what is true.**
+2. **Formulating a proposition about what is true.**
+3. **Making that proposition into “my truth / our truth / the only truth” as identity and weapon.**
+
+The early texts do not collapse these into one thing.
+
+### GUARDRAILS
+
+- Do not translate every use of `sacca` as “absolute metaphysical truth.”
+- Do not infer from criticism of `idameva saccaṁ` that the Buddha rejected truth-claims altogether.
+- Do not infer from “truth is one” that every later philosophical theory of absolute truth is thereby text-attested.
+- Keep `TEXT_ATTESTED` separate from this cross-text conceptual model.
+
+### Sources carried into durable checkpoint
+
+- Sn 4.12 Cūḷabyūha Sutta.
+- Sn 4.13 Mahābyūha Sutta.
+- Ud 6.4 Paṭhamanānātitthiya Sutta.
+- MN 72 Aggivacchagotta Sutta.
+- SN 56.11 Dhammacakkappavattana Sutta.
+
+### Next checkpoint — PHASE 4 A37
+
+Central question:
+
+**What is the difference between knowing truth and constructing identity around truth?**
+
+Required lanes:
+
+- `sacca` and `sammādiṭṭhi`;
+- `maññati` / conceiving;
+- `māna` / comparison;
+- `upādāna` / appropriation;
+- `papañca` / proliferation;
+- how “I know” becomes “I am the knower”;
+- MN 1 as a central text, stress-tested against Aṭṭhakavagga and earlier checkpoints.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A35 and routes the next work to A36.
+This checkpoint preserves A30–A36 and routes the next work to A37.
