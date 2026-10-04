@@ -280,3 +280,20 @@ Rules:
 This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
+
+## 11. MANDATORY UNIVERSAL LEARNING BOOTSTRAP — Owner law 2026-10-04
+
+For every current or future learning track, material work requires this live canonical bootstrap order:
+
+1. `docs/PROJECT_STATE.json`;
+2. the current Law Index routed by PROJECT_STATE;
+3. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`;
+4. the current Architecture routed by PROJECT_STATE;
+5. this role bootstrap;
+6. the active learning checkpoint/plan for the relevant track;
+7. task/domain sources.
+
+Every material checkpoint must be durably recorded in GitHub with learned/corrected content, evidence/status, CURRENT, NEXT, OPEN AUDITS/UNKNOWNS and provenance. Chat memory is not a durable substitute. Recorded does not mean VERIFIED. If the durable write path is blocked, state NOT YET DURABLY RECORDED and continue only the independent work that remains safe.
+
+The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`; the preserved handoff is A30–A33 completed → NEXT A34.
+
