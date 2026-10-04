@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A66 COMPLETED  
-**Next checkpoint:** PHASE 4 — A67  
+**Current checkpoint:** PHASE 4 — A67 COMPLETED  
+**Next checkpoint:** PHASE 4 — A68  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -5433,6 +5433,100 @@ Required lanes:
 - test carefully whether “identity formation” is explanatory synthesis rather than lexical definition of `bhava`;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A67
+
+**Central question:** How does `upādāna → bhava` work, and how can grasping become generative without reducing `bhava` to a modern identity theory?
+
+### TEXT_ATTESTED
+
+**SN 12.2** and **MN 9** state:
+`with clinging as condition, becoming`.
+
+They also preserve different taxonomies:
+- four kinds of clinging: sensuality, views, precepts/observances, self-doctrine;
+- three kinds of becoming: sensual, form, formless.
+
+Therefore the relation is causal, not a one-to-one lexical mapping.
+
+A50 remains binding here: `bhava` is textually threefold. “Identity formation” is not its canonical definition.
+
+### AN 3.76 — PRODUCTION OF RENEWED BECOMING
+
+**AN 3.76** uses the agricultural model:
+- kamma = field;
+- consciousness = seed;
+- craving = moisture.
+
+For beings hindered by ignorance and fettered by craving, consciousness becomes established in a corresponding element and renewed becoming is produced.
+
+This shows that `bhava` is not merely a passing feeling of attachment. It belongs to a production model involving kamma, consciousness, craving, and renewed existence.
+
+### CROSS_TEXT SYNTHESIS — HOW GRASPING CAN BECOME GENERATIVE
+
+A bounded synthesis is:
+
+`craving`
+→ `clinging stabilizes what is taken up`
+→ `intentional/kammic activity and supported consciousness continue on that basis`
+→ `becoming is produced/sustained`.
+
+Only the cited causal relations are **TEXT_ATTESTED**. The intermediate wording is **CROSS_TEXT SYNTHESIS**.
+
+The four forms of clinging can organize conduct differently:
+- sensuality around acquisition/repetition of pleasure;
+- views around defending/enacting a position;
+- observances around a method or purity program;
+- self-doctrine around what “I am” or must continue to be.
+
+This is practical synthesis, not a canonical mapping onto the three `bhava` classes.
+
+### GUARDRAILS
+
+1. **Do not psychologize away rebirth.** AN 3.76 explicitly uses renewed-existence language.
+2. **Do not make bhava a substance.** It is conditioned, produced, and ceases when its conditions cease.
+3. **Do not equate bhava with identity formation.** Present-life identity examples may illuminate grasping, but remain explanatory only.
+4. **Do not collapse all causal roles.** Kamma, consciousness, craving, clinging, and becoming are related but not interchangeable.
+
+### CONNECTION TO A49
+
+A49 showed from SN 12.38, SN 12.64, SN 22.53, and SN 22.54 that intention, latent tendency, passion/delight/craving, support, and consciousness-establishment are connected with renewed becoming.
+
+A67 therefore permits a larger **CROSS_TEXT SYNTHESIS**:
+`grasping + craving + intentional/kammic activity + supported consciousness`
+can contribute to renewed becoming.
+
+No single cited discourse gives that as one fixed mechanical formula.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- themes: rebirth without transmigration; lamp/continuity analogies; craving/attachment and renewed birth;
+- role: clarify causal continuation without an invariant bearer;
+- decisive evidence for the exact mechanism of `upādāna → bhava`: **NO**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### METHOD INSIGHT
+
+The question shifts from:
+“What am I attached to?”
+to:
+“What mode of existence does repeatedly taking this up help produce?”
+
+This makes grasping **generative**, not merely descriptive.
+
+### Next checkpoint — PHASE 4 A68
+
+**How do kamma, intention, consciousness, craving, and clinging divide their causal roles in producing `bhava`, and how can we avoid collapsing them into one generic “cause of rebirth”?**
+
+Required lanes:
+- AN 3.76;
+- SN 12.38;
+- SN 12.64;
+- distinguish causal roles without inventing a single linear mechanism;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / open-check boundaries.
 
 ## Provenance
 
