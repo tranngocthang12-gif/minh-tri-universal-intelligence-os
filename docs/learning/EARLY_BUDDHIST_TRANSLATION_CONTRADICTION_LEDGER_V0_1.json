@@ -105,7 +105,21 @@
       "topic": "MA14 expanded difficult consequence wording vs MN61",
       "status": "LOCAL_TEXTUAL_PROBLEM_UNRESOLVED",
       "resolution": "preserve shared core; do not harmonize problematic local wording"
+    },
+    {
+      "id": "C08",
+      "topic": "shared reasoning core vs exact technical vocabulary across transmissions",
+      "status": "RESOLVED_AS_CONFIDENCE_HIERARCHY",
+      "resolution": "functional cross-traditional core receives higher confidence than local redactional/systematic wording"
+    },
+    {
+      "id": "C09",
+      "topic": "MN61 coherent purity/result logic vs MĀ14 anomalous pure-bad/impure-good clauses",
+      "status": "TEXTUAL_ANOMALY_UNRESOLVED",
+      "resolution": "retain shared ethical-audit core; do not harmonize or doctrinalize anomalous clauses"
     }
   ],
-  "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation."
+  "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation.",
+  "clause_alignment": "docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
+  "translation_cards_v2": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json"
 }
