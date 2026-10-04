@@ -529,3 +529,15 @@ The invariant is fail-closed: durable recording never implies VERIFIED, and a ro
 
 The current Buddhist-thought track is routed at `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`, carrying A30–A33 with NEXT A34. This continuity record does not by itself re-verify its cited passages.
 
+## 37. Buddhist-study Milindapañha continuity invariant — 2026-10-04
+
+The Owner requires Mi Tiên Vấn Đáp / Milindapañha to remain a mandatory, continuous research layer across every material checkpoint in the Buddhist-thought learning track.
+
+This does not alter source authority:
+- early discourses remain the primary attestation axis for claims about early Buddhist thought;
+- Milindapañha functions as a supporting/paracanonical source for argument structure, distinctions, objections, analogies, and reasoning;
+- Milindapañha-only support must not be silently promoted to `TEXT_ATTESTED`;
+- each durable Buddhist checkpoint must record Milindapañha consultation status and role.
+
+This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
+
