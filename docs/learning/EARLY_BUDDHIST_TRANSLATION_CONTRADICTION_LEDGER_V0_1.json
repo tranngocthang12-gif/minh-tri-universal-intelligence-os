@@ -1,0 +1,111 @@
+{
+  "schema": "minhtri-early-buddhist-translation-contradiction-ledger/v1",
+  "updated": "2026-10-04",
+  "translation_cards": [
+    {
+      "term": "sammādiṭṭhi",
+      "vi": "chánh kiến",
+      "en": "right view",
+      "risk": "one gloss hides contextual range",
+      "contexts": [
+        "CONDITIONAL_NONREIFICATION_SN12_15",
+        "ETHICAL_CAUSAL_MN117_MA189",
+        "PATH_DISCRIMINATIVE_MN117_MA189"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "term": "upādāna",
+      "vi": "chấp thủ",
+      "en": "clinging/grasping",
+      "risk": "may sound merely intellectual or emotional",
+      "working_function": "appropriative grasping supplying identity/continuation",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "attā me",
+      "vi": "tự ngã/cái tôi của tôi depending context",
+      "en": "my self/my identity",
+      "risk": "over-metaphysicalization",
+      "working_function": "self-reckoning/appropriation in SN12.15-SA301 context",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "dhamma",
+      "vi": "Pháp",
+      "en": "Dhamma/teaching/phenomena depending context",
+      "risk": "raft simile misread as truth irrelevant",
+      "working_function": "teaching-as-instrument in MN22 raft context",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "attha / atthasaṁhita",
+      "vi": "lợi ích/có mục đích phù hợp",
+      "en": "beneficial/connected with benefit",
+      "risk": "subjective usefulness",
+      "working_function": "welfare-training-relevant benefit in MN58",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "paccavekkhati",
+      "vi": "quán xét/phản tỉnh",
+      "en": "review/reflect/examine",
+      "risk": "one-time reflection too weak",
+      "working_function": "iterative before-during-after ethical audit",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "sabba",
+      "vi": "tất cả",
+      "en": "the all",
+      "risk": "premature idealist metaphysics",
+      "working_function": "sense-cognitive analytical domain first; ontology unresolved",
+      "status": "ACTIVE"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "C01",
+      "topic": "MN22 raft vs MN117/MA189 right view",
+      "status": "RESOLVED",
+      "resolution": "functional path instrument vs grasping/identity"
+    },
+    {
+      "id": "C02",
+      "topic": "SN12.15/SA301 anti-existence binary vs MN117/MA189 affirmative right view",
+      "status": "RESOLVED_CONTEXTUALLY",
+      "resolution": "anti-reified ontology is not anti-ethical/causal assertion"
+    },
+    {
+      "id": "C03",
+      "topic": "anti-view-grasping vs right view",
+      "status": "RESOLVED",
+      "resolution": "content discrimination vs identity appropriation"
+    },
+    {
+      "id": "C04",
+      "topic": "SN35.23 the all vs cosmological/rebirth discourse",
+      "status": "PARTIAL_UNRESOLVED",
+      "resolution": "treat as sense-cognitive domain first; larger corpus needed"
+    },
+    {
+      "id": "C05",
+      "topic": "MN61 consequence review vs rule-like ethics",
+      "status": "RESOLVED",
+      "resolution": "multi-layer ethics: constraints/virtues plus consequence-sensitive feedback"
+    },
+    {
+      "id": "C06",
+      "topic": "MN117 exact two-tier scheme vs parallel absence",
+      "status": "TEXTUAL_DIVERGENCE_ACCEPTED",
+      "resolution": "shared path coordination high confidence; exact systematization lower confidence"
+    },
+    {
+      "id": "C07",
+      "topic": "MA14 expanded difficult consequence wording vs MN61",
+      "status": "LOCAL_TEXTUAL_PROBLEM_UNRESOLVED",
+      "resolution": "preserve shared core; do not harmonize problematic local wording"
+    }
+  ],
+  "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation."
+}
