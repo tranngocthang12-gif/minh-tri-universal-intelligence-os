@@ -4,14 +4,14 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A28: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A28_TANHA_VS_CHANDA_20261004.md`.
-- A28 source boundary: SN 56.11 targets taṇhā tied to gratification and renewed becoming; SN 45.8 and SN 51 show that directed desire/enthusiasm can function wholesomely in right effort and bases of power.
-- A28 guardrail: do not simplify `taṇhā = bad desire` and `chanda = good desire`; chanda is context-sensitive and must be read by root, object, function, and result.
+- Phase 4 A5-A29: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A29_PATH_MOTIVATION_RAFT_20261004.md`.
+- A29 source boundary: SN 51.15 and AN 4.159 show that path-directed motivation can be instrumental and subside when the goal is reached; MN 22 adds the raft principle that even the teaching is a means for crossing, not an object for clinging.
+- A29 guardrail: do not use 'let go of the raft' to abandon practice prematurely; relinquishment applies after the tool has fulfilled its function.
 
 Next:
-- **Phase 4 A29:** When wholesome motivation succeeds, what happens to that motivation itself? Does the path use desire as a tool that is eventually relinquished, and how does this avoid turning practice into a new identity?
-- Route: SN 51 desire/effort material → MN 22 raft simile → SN 22 appropriation material → right-effort/right-view material → Milindapañha effort/wisdom dialectic.
+- **Phase 4 A30:** Self-view versus the residual 'I am' conceit — why can a practitioner stop taking the aggregates as self yet still retain a subtle sense of 'I am'?
+- Route: SN 22.89 Khemaka → SN 22.59 → MN 22 → selected Aṭṭhakavagga view/identity material as audit lane → Milindapañha chariot/person dialectic.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
