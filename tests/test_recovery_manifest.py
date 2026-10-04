@@ -336,6 +336,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
 
         self.assertTrue(law.is_file())
         self.assertTrue(checkpoint.is_file())
+        self.assertEqual(state["universal_learning_continuity"], "DURABLY_INTEGRATED")
+        self.assertEqual(manifest["universal_learning_continuity"]["status"], "DURABLY_INTEGRATED")
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
