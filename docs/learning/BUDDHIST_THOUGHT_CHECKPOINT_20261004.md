@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A97 COMPLETED  
-**Next checkpoint:** PHASE 4 — A98  
+**Current checkpoint:** PHASE 4 — A98 COMPLETED  
+**Next checkpoint:** PHASE 4 — A99  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -14637,6 +14637,87 @@ Required lanes:
 - preserve early-text / cross-text synthesis / later-interpretive / lexical-open boundaries.
 
 
+
+
+## Completed checkpoint A98
+
+**Central question:** What exactly is `upādāna` in dependent arising: why is it translated as clinging, grasping, sustenance, or fuel, what are its four types, and how does it transform craving into becoming?
+
+### TEXT_ATTESTED
+
+1. **SN 12.2** defines four kinds of `upādāna`: grasping at sensual pleasures, views, precepts/observances, and a doctrine/theory of self.
+2. **SN 38.12** independently gives the same fourfold enumeration.
+3. **SN 12.52** explicitly places the sequence `taṇhā → upādāna → bhava → jāti`, and illustrates the persistence of the process with a fire repeatedly supplied by combustible material.
+4. **SN 22.82 / MN 109 parallel material** distinguishes the five grasping aggregates from grasping itself: grasping is not simply identical with the aggregates; desire-and-greed in relation to them is identified as the grasping there.
+5. **SN 22.121** similarly distinguishes “clingable phenomena” from clinging: form, feeling, perception, formations and consciousness are objects liable to grasping, while desire-passion toward them is the grasping in relation to them.
+
+### LEXICAL GUARDRAIL
+
+`upādāna` should not be flattened into one English gloss.
+
+- In dependent-arising contexts it is conventionally rendered **grasping / clinging / taking up**.
+- Fire imagery in SN 12.52 makes the **fuel / sustenance** sense illuminating.
+- This does **not** mean every occurrence of `upādāna` should be translated literally as physical fuel.
+- The useful synthesis is functional: grasping both takes hold and sustains continuation, but the lexical range must remain context-sensitive.
+
+### CROSS_TEXT_SYNTHESIS
+
+A careful working model is:
+
+`taṇhā` = craving / wanting / thirst  
+→ `upādāna` = taking hold, appropriating, sustaining  
+→ `bhava` = the conditioned continuation/becoming that follows  
+→ `jāti` = birth arising on that basis.
+
+The transition from craving to grasping should not be turned into a fabricated phenomenological threshold. The early texts establish causal order and functional distinctions, but do not provide a universally precise introspective timestamp for when “wanting” becomes “full grasping.”
+
+The four types also show that grasping is broader than sensual desire: one may grasp views, practices/observances, or self-theories.
+
+### FIVE GRASPING AGGREGATES
+
+The five aggregates and the five grasping aggregates must not be treated as conceptually identical without qualification. Texts such as SN 22.82 and SN 22.121 preserve a distinction between the aggregate as a graspable phenomenon and the desire/greed or grasping directed toward it.
+
+This guardrail matters for later analysis of self-view, “mine”-making, and rebirth continuity.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.  
+**Role:** supporting analogy/distinction about attachment, “mine”-making, and conduct without possessive clinging.  
+**Change to interpretation:** reinforces the distinction between functioning in relation to things and appropriating them as “mine”; it does not define the four `upādāna` categories.  
+**Early-discourse attestation:** YES for the fourfold definition and dependent-arising chain; NO claim is promoted from Milindapañha alone.  
+**Claim class:** `LATER/PARACANONICAL` support only.
+
+### CORRECTIONS PRESERVED
+
+- Do not define `upādāna` as only “mine-making.”
+- Do not define it as only sensual attachment.
+- Do not equate the five aggregates themselves with grasping without preserving the textual distinction.
+- Do not promote the “fuel” semantic echo into a universal literal translation.
+- Do not import later `kamma-bhava / upapatti-bhava` systematization into A98 as though it were required to understand the early fourfold definition.
+
+### Sources carried into durable checkpoint
+
+- SN 12.2 Vibhaṅga Sutta.
+- SN 38.12 Upādānapañhā Sutta.
+- SN 12.52 Upādāna Sutta.
+- SN 22.82 Puṇṇama Sutta / MN 109 parallel material.
+- SN 22.121 Upādāna Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- Milindapañha 5.2.7 as later/paracanonical supporting material on attachment and “mine”-making.
+
+## Next checkpoint — PHASE 4 A99
+
+**What exactly is `bhava` in the sequence `upādāna → bhava → jāti`, and how should the three kinds of bhava be understood without reducing them either to a modern psychological identity model or to a later scholastic scheme?**
+
+Required lanes:
+- SN 12.2 threefold `bhava`;
+- MN 9 and MN 43;
+- `bhava` versus `bhavataṇhā`;
+- relation of grasping to renewed becoming/existence;
+- continuity without a permanent self;
+- guardrail against prematurely importing later `kamma-bhava / upapatti-bhava` analysis;
+- mandatory Milindapañha consultation;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
 ## 2026-10-05 continuity recovery
 
