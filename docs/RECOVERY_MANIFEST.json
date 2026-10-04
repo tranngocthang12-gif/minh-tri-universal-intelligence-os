@@ -186,8 +186,8 @@
   "owner_learning_track_buddhist_thought": {
     "status": "ACTIVE",
     "checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-    "current": "PHASE_4_A55_COMPLETED",
-    "next": "PHASE_4_A56",
+    "current": "PHASE_4_A56_COMPLETED",
+    "next": "PHASE_4_A57",
     "open_audits": [
       "SN12",
       "SN22",
@@ -230,6 +230,7 @@
     "a52_milindapanha": "CONSULTED_BODILY_PAIN_WITHOUT_MENTAL_PAIN_MIL_3_2_4",
     "a53_milindapanha": "CONSULTED_MIL_3_2_4_BODILY_PAIN_WITHOUT_MENTAL_PAIN_AND_NO_PREMATURE_DEATH",
     "a54_milindapanha": "CONSULTED_QUESTION_CLASSIFICATION_AND_EXTINGUISHED_FLAME",
-    "a55_milindapanha": "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION"
+    "a55_milindapanha": "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION",
+    "a56_milindapanha": "CONSULTED_CHARIOT_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_RESPONSIBILITY_ANALOGIES"
   }
 }
