@@ -173,5 +173,15 @@
     "preregistration_freeze_receipt": "NOT_FROZEN",
     "external_reader_review": "REQUIRED_NOT_YET_COMPLETED"
   },
-  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os"
+  "canonical_repository_full_name": "tranngocthang12-gif/minh-tri-universal-intelligence-os",
+  "owner_learning_track_buddhist_thought": {
+    "status": "ACTIVE_EARLY_BUDDHIST_THOUGHT_WITH_MILINDAPANHA_DIALECTIC",
+    "plan": "docs/learning/BUDDHIST_THOUGHT_LEARNING_PROGRAM_20261004.md",
+    "state": "docs/learning/BUDDHIST_THOUGHT_LEARNING_STATE_20261004.md",
+    "module": "PHASE4_A1_A4_PARTIAL_SOURCE_AUDIT_A5_NEXT",
+    "next_checkpoint": "AUDIT_ONE_PENDING_SOURCE_SLICE_THEN_PHASE4_A5_VINNANA_NAMARUPA_WITH_MILINDAPANHA",
+    "audit_lane": "SN12_SN22_SN35_SN45_SN46_ATTHAKAVAGGA_ARTHAPADA_MA_SA_PENDING",
+    "background_runtime": false,
+    "local_brain_mirror": "PENDING_OWNER_GATED_WRITE_PLANE_NOT_DONE"
+  }
 }
