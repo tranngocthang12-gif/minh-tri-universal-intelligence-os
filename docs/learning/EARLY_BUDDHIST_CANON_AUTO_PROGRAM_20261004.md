@@ -397,3 +397,21 @@ Newly integrated patterns:
 - views are analyzed at both proposition and attachment levels;
 - current reasoning level is STRUCTURED but whole-corpus/adversarial mastery remains incomplete.
 
+## 13. Adversarial reasoning synthesis v0.3
+
+Current adversarial artifact:
+`docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_3_ADVERSARIAL_20261004.md`.
+
+Adversarial corpus:
+MN 1, 19, 20, 21, 26, 38, 39, 72; SN 35.23; SN 44.10; selected Agama/Tibetan parallels.
+
+Model revisions:
+- experiential-domain discipline must not become idealism;
+- mindfulness/training includes active ethical-causal intervention, not only passive observation;
+- non-hatred is a constitutive ethical target, not merely stress reduction;
+- consciousness is treated as condition-dependent, not a permanent transmigrating carrier;
+- undeclared questions separate false binary, category failure, pedagogy and ordinary uncertainty;
+- doctrinal cores must be separated from transmission-variable narrative frames.
+
+Current reasoning status: ADVERSARIALLY_REVISED / NOT_WHOLE_CORPUS_MASTERED.
+
