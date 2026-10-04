@@ -324,5 +324,28 @@ class RecoveryManifestConsistency(unittest.TestCase):
         )
 
 
+    def test_buddhist_thought_learning_track_is_routed_across_fresh_seats(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        plan = ROOT / state["owner_learning_track_buddhist_thought_plan"]
+        checkpoint = ROOT / state["owner_learning_track_buddhist_thought_state"]
+        bootstrap = (ROOT / "docs" / "GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
+        architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
+
+        self.assertTrue(plan.is_file())
+        self.assertTrue(checkpoint.is_file())
+        self.assertEqual(
+            state["owner_learning_track_buddhist_thought_status"],
+            "PHASE4_A1_A4_PARTIAL_SOURCE_AUDIT_A5_NEXT_AUDIT_LANE_ACTIVE",
+        )
+        routed = manifest["owner_learning_track_buddhist_thought"]
+        self.assertEqual(routed["plan"], state["owner_learning_track_buddhist_thought_plan"])
+        self.assertEqual(routed["state"], state["owner_learning_track_buddhist_thought_state"])
+        self.assertFalse(routed["background_runtime"])
+        self.assertIn("PENDING_OWNER_GATED_WRITE_PLANE", routed["local_brain_mirror"])
+        self.assertIn("owner_learning_track_buddhist_thought_state", bootstrap)
+        self.assertIn("Milindapañha", architecture)
+
+
 if __name__ == "__main__":
     unittest.main()
