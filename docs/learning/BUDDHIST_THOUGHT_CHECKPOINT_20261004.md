@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A49 COMPLETED  
-**Next checkpoint:** PHASE 4 — A50  
+**Current checkpoint:** PHASE 4 — A50 COMPLETED  
+**Next checkpoint:** PHASE 4 — A51  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -2043,6 +2043,209 @@ Required lanes:
 - relation among craving, clinging, identity-production, kamma, and renewed existence;
 - distinguish what is directly text-attested from modern “identity becoming” applications;
 - mandatory Milindapañha consultation in the current chat/seat;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
+
+
+## Completed checkpoint A50
+
+**Central question:** What exactly is `bhava` (“becoming / existence”) in dependent origination, and how do craving and clinging condition it without reducing `bhava` either to a mere psychological mood or only to a post-mortem rebirth event?
+
+### TEXT_ATTESTED — 1. `BHAVA` HAS AN EXPLICIT EARLY-DISCOURSE DEFINITION
+
+**SN 12.2 Vibhaṅga** defines becoming (`bhava`) as threefold:
+- sensual becoming (`kāmabhava`);
+- form becoming (`rūpabhava`);
+- formless becoming (`arūpabhava`).
+
+**MN 9 Sammādiṭṭhi** gives the same threefold definition and places becoming inside the dependent sequence:
+`clinging → becoming → birth`.
+
+Therefore `bhava` must not be reduced to the modern English sense “a mood of becoming someone.”
+
+The early texts explicitly connect it with domains/modes of existence.
+
+### TEXT_ATTESTED — 2. CRAVING AND CLINGING FEED BECOMING
+
+The standard dependent-origination formula states:
+`with craving as condition, clinging; with clinging as condition, becoming; with becoming as condition, birth`.
+
+This means `bhava` is not an isolated metaphysical category. It is causally downstream of craving and appropriation.
+
+A50 therefore carries forward A34–A35:
+a view, object, state, or experience becomes more consequential when craving and clinging turn it into something held, appropriated, or depended on.
+
+### TEXT_ATTESTED — 3. KAMMA, CONSCIOUSNESS, AND CRAVING PARTICIPATE IN THE PRODUCTION OF BECOMING
+
+**AN 3.76** uses an agricultural model:
+- kamma is compared to a field;
+- consciousness to seed;
+- craving to moisture.
+
+For beings obstructed by ignorance and fettered by craving, consciousness becomes established in a lower, middling, or higher sphere, and renewed becoming is produced.
+
+This is important because it prevents two simplifications:
+- `bhava` is not merely “what I happen to feel myself becoming psychologically”;
+- `bhava` is also not presented as something produced by one single factor in isolation.
+
+The texts instead connect becoming with a conditioned production involving kamma, consciousness, craving, and ignorance.
+
+### TEXT_ATTESTED — 4. `BHAVATAṆHĀ` AND `VIBHAVATAṆHĀ` SHOW THAT “BECOMING” IS ALSO AN OBJECT OF CRAVING
+
+**SN 56.11** distinguishes:
+- craving for sensuality;
+- craving for becoming (`bhavataṇhā`);
+- craving for non-becoming (`vibhavataṇhā`).
+
+This is a critical guardrail.
+
+The path does not merely oppose “desire to exist” with “desire not to exist.”
+Both can be craving.
+
+Thus the Buddha’s middle approach cannot be reduced to:
+- eternalism: “I must continue to exist”;
+or
+- annihilationism: “I must cease to exist.”
+
+The problem is the craving structure itself.
+
+### TEXT_ATTESTED — 5. `BHAVA` PRECEDES `JĀTI`, SO IT IS NOT IDENTICAL WITH BIRTH
+
+SN 12.2 distinguishes:
+- becoming (`bhava`);
+- birth (`jāti`);
+- aging-and-death.
+
+This means `bhava` and `jāti` should not be collapsed into one event.
+
+A useful textual discipline is:
+- `bhava` = the conditioned becoming/existence-domain;
+- `jāti` = birth/arising in relation to that becoming.
+
+The exact metaphysical and temporal scope varies by discourse context and remains subject to further audit, but the two terms are textually distinct.
+
+### CROSS_TEXT SYNTHESIS — 6. “IDENTITY-BECOMING” IS A USEFUL APPLICATION, NOT THE CANONICAL DEFINITION OF `BHAVA`
+
+Across the earlier checkpoints, the texts show:
+- craving;
+- clinging;
+- “I am” conceit;
+- appropriation;
+- self-positioning;
+- consciousness becoming established.
+
+From this, a practical present-life model can be drawn:
+
+`feeling → craving → clinging → a mode of becoming around “what I am / must be / will be”`.
+
+Examples:
+- “I was insulted” becomes “I am the offended one”;
+- desire for recognition becomes “I must become the respected one”;
+- spiritual progress becomes “I am an advanced practitioner.”
+
+This is useful for practice and consistent with the causal logic already studied.
+
+But it is **CROSS_TEXT SYNTHESIS**, not the lexical definition of `bhava` in SN 12.2.
+
+The early definition remains the three kinds of becoming.
+
+### TEXT_ATTESTED + SYNTHESIS — 7. THE PATH CUTS THE PRODUCTION CHAIN RATHER THAN SOLVING A SUBSTANCE QUESTION
+
+The early-discourse logic does not require first answering:
+“What substance travels from one becoming to the next?”
+
+The causal sequence is sufficient for the task:
+`craving → clinging → becoming → birth → suffering`.
+
+And the cessation sequence says:
+with the cessation of craving, clinging ceases;
+with clinging ceasing, becoming ceases;
+with becoming ceasing, birth ceases.
+
+This continues the thought-method already established in A47–A49:
+**conditional production is the explanatory unit.**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- passages/themes used:
+  1. Nāgasena’s discussions of **rebirth without transmigration**: causal continuation occurs without an invariant self-substance moving intact from one existence to another;
+  2. the lamp-lighting analogy: one flame lights another without the first flame being numerically transferred as a permanent entity;
+  3. the “neither the same nor another” reasoning: continuity and difference are held together without requiring strict identity;
+  4. the craving/rebirth discussions: when craving remains, future rebirth remains causally supported; when the relevant cause is extinguished, renewed birth is not produced.
+- role in A50: Mi Tiên makes it easier to understand how `bhava → jāti` can function causally without positing a transmigrating self;
+- interpretation change: **MODERATE** — clarified that renewed becoming is best studied as causal continuity, not as a hidden entity changing locations;
+- early-discourse confirmation: **YES IN FUNCTION**, especially through SN 12.2, MN 9, AN 3.76, and the dependent-origination cessation formula;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Milindapañha is used here to illuminate the logic of continuity.
+
+It does not redefine `bhava`.
+
+The early-discourse definition remains primary:
+`sensual becoming / form becoming / formless becoming`.
+
+Any modern psychological application such as “identity-becoming” remains secondary and must not silently replace that early definition.
+
+### CENTRAL DISTINCTIONS
+
+**`bhava` in the early discourses**
+- textually defined as three kinds of becoming;
+- conditioned by clinging;
+- conditions birth;
+- participates in a wider causal structure involving craving, kamma, consciousness, and ignorance.
+
+**craving for becoming**
+- desire directed toward continued becoming/existence.
+
+**craving for non-becoming**
+- desire directed toward non-existence/termination;
+- still craving.
+
+**identity-becoming**
+- useful modern/practical synthesis for observing how clinging builds modes of self;
+- not the canonical lexical definition of `bhava`.
+
+### PRACTICAL DIAGNOSTIC
+
+When craving becomes strong, ask:
+- What am I trying to become?
+- What am I trying not to become?
+- What am I clinging to as the condition for that becoming?
+- Is this just an immediate preference, or has it turned into a mode of existence/identity?
+- What kamma am I generating to sustain it?
+- What happens to this becoming if craving and clinging are not fed?
+- Am I replacing “I want to exist” with “I want not to exist,” while keeping the same craving structure?
+
+This is an analytical application, not a verbatim canonical checklist.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga — threefold `bhava`; `upādāna → bhava → jāti`.
+- MN 9 Sammādiṭṭhi — three kinds of becoming and dependent-origination framing.
+- AN 3.76 — kamma as field, consciousness as seed, craving as moisture, renewed becoming.
+- SN 56.11 — sensual craving, craving for becoming, craving for non-becoming.
+
+Mandatory Milindapañha layer:
+- rebirth without transmigration;
+- lamp-lighting analogy;
+- neither-same-nor-different continuity;
+- craving as condition for renewed rebirth.
+
+### Next checkpoint — PHASE 4 A51
+
+Central question:
+
+**What exactly is `jāti` (“birth”) in dependent origination, and how should we distinguish the early text’s birth/rebirth language from present-moment psychological applications without collapsing one into the other?**
+
+Required lanes:
+- SN 12.2 definition of `jāti`;
+- relation `bhava → jāti → jarāmaraṇa`;
+- inspect whether “birth of an identity” is text-attested or only a practical analogy;
+- early-discourse rebirth context versus present-process application;
+- mandatory Milindapañha consultation;
 - preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
 ## Provenance
