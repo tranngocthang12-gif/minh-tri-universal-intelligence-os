@@ -20,7 +20,7 @@ Primary plan:
 `docs/learning/EARLY_BUDDHIST_CANON_AUTO_PROGRAM_20261004.md`
 
 Current reasoning synthesis:
-`docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_4_STRESS_TEST_20261004.md`
+`docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md`
 
 Earlier reasoning artifacts:
 - `EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md`
@@ -118,33 +118,58 @@ Reject these simplifications:
 
 ## Current next checkpoint
 
-Move to blinded dialogue reconstruction plus deeper parallel audit.
+Current checkpoint:
+1. upgrade selected SN 22 / SN 35 / SN 45 / SN 46 IDs from STRUCTURAL to DEEP;
+2. attach SĀ/MĀ parallels to those deep anchors;
+3. clause-align high-value Arthapada passages on debate, purity, conflict and non-grasping;
+4. continue Milindapañha prediction/back-check exercises;
+5. expand whole-corpus semantic depth after the priority Saṃyuttas.
 
-Protocol:
-1. choose authentic early-Buddhist dialogue contexts;
-2. hide the Buddha's answer;
-3. preserve only question and necessary context;
-4. predict:
-   - response mode;
-   - hidden assumption;
-   - causal hinge;
-   - speech gate;
-   - practice prescription;
-5. reveal the canonical answer;
-6. score structural agreement and errors;
-7. record failures and update the reasoning model.
+## Consolidated current reasoning controls
 
-Priority stress set after that:
-- MN 22;
-- MN 58;
-- MN 61;
-- MN 60;
-- MN 117;
-- SN 12.15;
-- SN 22.85;
-- SN 35.28/30;
-- Sutta Nipata Atthakavagga;
-- related Agama parallels.
+Future Buddhist-study seats must preserve these controls:
+
+1. diagnose before theorizing;
+2. conditionality before essence;
+3. detect false binaries;
+4. detect hidden permanent-subject assumptions;
+5. distinguish process from appropriation;
+6. use de-appropriation rather than a simplistic "no self" slogan;
+7. distinguish primary experience from reactive suffering;
+8. choose intervention by mechanism;
+9. distinguish right view from view-grasping;
+10. correct source/quotation scope before doctrinal dispute;
+11. clarify intent before answering ambiguous ontology;
+12. apply truth + benefit + timing to speech;
+13. audit action before / during / after;
+14. under uncertainty, compare asymmetric ethical risks without pretending certainty;
+15. distinguish conventional person/social language from liberative/metaphysical claims;
+16. distinguish necessary-path knowledge from outcome-count prediction;
+17. apply anti-annihilation guard when explaining not-self;
+18. do not infer a soul-like carrier from grammar or from viññāṇa;
+19. do not fill early-text gaps with later theories unless explicitly labeled;
+20. do not enforce one universal samatha/vipassanā sequence;
+21. do not harmonize genuine textual tensions;
+22. do not reify pedagogical taxonomies;
+23. distinguish DISTINCT / FAMILY_REPEAT / PEYYĀLA_MATRIX;
+24. weight cross-traditional functional cores above one-recension technical redactions.
+
+## Mi Tiên / Milindapañha continuous-reference rule
+
+Every future Buddhist-study seat must continue consulting **Mi Tiên Vấn Đáp / Milindapañha** throughout the learning process as a reasoning reference for:
+- analogy;
+- dilemma breaking;
+- conventional designation;
+- continuity without permanent identity;
+- question classification;
+- contradiction handling;
+- debate hygiene;
+- necessary / sufficient / supportive condition distinctions.
+
+But Milindapañha remains:
+**LATER_EXPLANATORY_REASONING_LAB**.
+
+It must never override Nikāya/Āgama evidence or be cited as direct historical Buddha speech without independent early-source support.
 
 ## Continuity rule for future seats
 
@@ -337,4 +362,17 @@ Cross-recensional rule strengthened:
 
 Next:
 upgrade selected anchor IDs to DEEP with SĀ/MĀ parallels, then clause-align Arthapada high-value passages and continue Milinda prediction/back-check exercises.
+
+
+
+## Memory audit
+
+Latest memory-gap audit:
+`docs/learning/EARLY_BUDDHIST_CHAT_LEARNING_MEMORY_AUDIT_20261004.md`
+
+Audit result:
+- no major substantive Buddhist-learning result from this chat was found to exist only in chat;
+- defects were discoverability/pointer drift;
+- stale synthesis/checkpoint pointers were repaired;
+- Mi Tiên continuous-reference rule is now explicit.
 
