@@ -487,14 +487,14 @@
   "owner_learning_track_early_buddhist_canon_plan": "docs/learning/EARLY_BUDDHIST_CANON_AUTO_PROGRAM_20261004.md",
   "owner_learning_track_early_buddhist_canon_started": "2026-10-04",
   "owner_learning_track_early_buddhist_canon_background_runtime": false,
-  "owner_learning_track_early_buddhist_canon_status": "ACTIVE_L0_ESTABLISHED_L1_STRONG_CORE_L2_MODERATE_CORE_L3_DEVELOPING_L4_INTEGRATED_L5_ACTIVE",
+  "owner_learning_track_early_buddhist_canon_status": "ACTIVE_L0_ESTABLISHED_L1_STRONG_CORE_L2_STRUCTURED_L3_ACTIVE_L4_INTEGRATED_L5_ACTIVE_L6_INDEXING_STARTED",
   "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS",
   "owner_learning_track_early_buddhist_reasoning_model": "docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md",
   "owner_learning_track_early_buddhist_target": "WHOLE_CANON_TRANSLATION_COMPARATIVE_AND_BLINDED_RESPONSE_REASONING_MASTERY",
   "owner_learning_track_early_buddhist_mastery_claim": "NOT_YET_COMPLETE",
-  "owner_learning_track_early_buddhist_next_checkpoint": "CONSCIOUSNESS_REBIRTH_CONTRADICTION_CLUSTER_JHANA_INSIGHT_SEQUENCE_ATTHAKAVAGGA_RIGHT_VIEW_THEN_WHOLE_CORPUS_INDEX",
-  "owner_learning_track_early_buddhist_reasoning_synthesis": "docs/learning/EARLY_BUDDHIST_PARALLEL_TRANSLATION_CONTRADICTION_V0_6_20261004.md",
-  "owner_learning_track_early_buddhist_reasoning_status": "INTEGRATED_PARALLEL_AWARE_CONTRADICTION_LEDGER_ACTIVE",
+  "owner_learning_track_early_buddhist_next_checkpoint": "WHOLE_CORPUS_INDEX_SN12_THEN_SN22_SN35_SN36_SN45_46_WITH_PARALLELS_AND_CONTRADICTION_LINKS",
+  "owner_learning_track_early_buddhist_reasoning_synthesis": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md",
+  "owner_learning_track_early_buddhist_reasoning_status": "HARD_CLUSTER_INTEGRATED_REBIRTH_IDENTITY_ERROR_CLOSED_MECHANISM_PARTIAL",
   "owner_learning_track_early_buddhist_adversarial_cluster_1": "PASS_WITH_MODEL_REVISIONS_MN1_19_20_21_26_38_39_72_SN35_23_SN44_10",
   "owner_learning_track_early_buddhist_stress_test_2": "PASS_WITH_REFINEMENTS_MN22_58_60_61_117_SN12_15_SN22_85_SN35_28_30_ATTHAKAVAGGA_SAMPLES",
   "owner_learning_track_early_buddhist_memory_contract": "CANONICAL_PROJECT_GITHUB_ONLY_PROJECT_MEMORY_DISABLED",
@@ -506,5 +506,6 @@
   "owner_learning_track_early_buddhist_parallel_status": "CLAUSE_ALIGNED_MN22_MA200_SN12_15_SA301_MN117_MA189_MN61_MA14",
   "owner_learning_track_early_buddhist_clause_alignment": "docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
   "owner_learning_track_early_buddhist_translation_cards": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json",
-  "owner_learning_track_early_buddhist_translation_status": "HIGH_RISK_CARDS_ACTIVE_VINNANA_SANKHARA_PAPANCA_SATI_SAMADHI_NIBBANA"
+  "owner_learning_track_early_buddhist_translation_status": "HIGH_RISK_CARDS_ACTIVE_VINNANA_SANKHARA_PAPANCA_SATI_SAMADHI_NIBBANA",
+  "owner_learning_track_early_buddhist_whole_corpus_index": "docs/learning/EARLY_BUDDHIST_WHOLE_CORPUS_INDEX_V0_1.json"
 }
