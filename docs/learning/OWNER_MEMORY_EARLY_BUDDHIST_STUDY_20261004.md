@@ -301,3 +301,21 @@ New durable findings:
 Next:
 finish SN12 peyyāla matrix, then complete missing IDs in SN22/SN35/SN45/SN46; Aṭṭhakavagga lexical + Arthapada pass.
 
+## Latest progress — Milindapañha + SN12 matrix
+
+New durable source layer:
+- `docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md`
+- `docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md`
+
+Milindapañha / Mi Tiên Vấn Đáp is classified as LATER_EXPLANATORY_REASONING_LAB, not an early direct Buddha witness. It is used to sharpen analogy, dilemma-breaking, conventional designation, continuity and contradiction-solving, then back-checked against Nikāya/Āgama evidence.
+
+SN 12:
+- structural coverage now extends through 1–213;
+- 82–213 repetition matrix audited as systematic training cross-product rather than independent new doctrines.
+
+Aṭṭhakavagga:
+- lexical pass added for diṭṭhi, sacca, saññā, maññati, papañca, nissaya.
+
+Next:
+complete SN22/SN35/SN45/SN46 ID-level coverage, then Arthapada + MĀ/SĀ stress testing.
+
