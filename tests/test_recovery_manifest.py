@@ -259,6 +259,10 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["current_runtime_liveness"]["maintenance_plane"], "OFFLINE")
         self.assertEqual(manifest["current_runtime_liveness"]["secure_mcp_tunnel"], "DOWN")
         self.assertEqual(manifest["current_runtime_liveness"]["local_brain_connector"], "DOWN")
+        self.assertEqual(manifest["open_foundation_gates"], state["open_foundation_gates"])
+        architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
+        for gate in state["open_foundation_gates"]:
+            self.assertIn(gate, architecture)
         self.assertEqual(state["self_upgrade_lease_runtime"], "UNKNOWN_NOT_CURRENTLY_OBSERVED")
         self.assertIn("OPEN_UNTIL_", state["self_upgrade_authorization_window"])
 
@@ -322,6 +326,39 @@ class RecoveryManifestConsistency(unittest.TestCase):
             manifest["self_upgrade"]["candidate_a_status"],
             "REJECTED_BY_POLICY_HARDENING_AUTONOMY_PATH_NOW_PROTECTED",
         )
+
+
+    def test_learning_plan_uses_current_paired_four_arm_semantics(self):
+        plan = (ROOT / "docs" / "learning" / "LEARNING_PROOF_EXECUTION_PLAN_20261004.md").read_text(encoding="utf-8")
+        self.assertIn("paired four-arm", plan)
+        self.assertIn("D = shuffled-ledger placebo", plan)
+        self.assertNotIn("Only then run three-arm interleaved A/B/C behavioral trial.", plan)
+
+    def test_buddhist_thought_learning_track_is_routed_across_fresh_seats(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        plan = ROOT / state["owner_learning_track_buddhist_thought_plan"]
+        checkpoint = ROOT / state["owner_learning_track_buddhist_thought_state"]
+        bootstrap = (ROOT / "docs" / "GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
+        architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
+
+        self.assertTrue(plan.is_file())
+        self.assertTrue(checkpoint.is_file())
+        self.assertEqual(
+            state["owner_learning_track_buddhist_thought_status"],
+            "PHASE4_A1_A26_TAUGHT_PARTIAL_A27_NEXT_AUDIT_LANE_ACTIVE",
+        )
+        routed = manifest["owner_learning_track_buddhist_thought"]
+        self.assertEqual(routed["plan"], state["owner_learning_track_buddhist_thought_plan"])
+        self.assertEqual(routed["state"], state["owner_learning_track_buddhist_thought_state"])
+        self.assertEqual(routed["module"], state["owner_learning_track_buddhist_thought_status"])
+        self.assertEqual(routed["next_checkpoint"], state["owner_learning_track_buddhist_thought_next_checkpoint"])
+        self.assertEqual(routed["latest_note"], state["owner_learning_track_buddhist_thought_latest_note"])
+        self.assertEqual(routed["audit_progress"], state["owner_learning_track_buddhist_thought_audit_progress"])
+        self.assertFalse(routed["background_runtime"])
+        self.assertIn("PENDING_OWNER_GATED_WRITE_PLANE", routed["local_brain_mirror"])
+        self.assertIn("owner_learning_track_buddhist_thought_state", bootstrap)
+        self.assertIn("Milindapañha", architecture)
 
 
 if __name__ == "__main__":

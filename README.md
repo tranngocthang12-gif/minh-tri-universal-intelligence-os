@@ -72,3 +72,8 @@ See [SECURITY.md](SECURITY.md). Never place live API keys, Owner credentials, pr
 ## Active learning tracks
 
 The Owner-directed Economics PhD-level self-study track is registered at `docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md`, currently `M0.1 STARTED / UNTESTED`. This is evidence-bounded doctoral-level study, not an accredited degree claim.
+
+
+### Buddhist thought learning
+
+The Owner-directed Buddhist thought track is registered at `docs/learning/BUDDHIST_THOUGHT_LEARNING_PROGRAM_20261004.md`, with progress checkpointed in `docs/learning/BUDDHIST_THOUGHT_LEARNING_STATE_20261004.md`. Imported A1–A4 work is partial-source-audit only; A5 is next while the older source-audit backlog is closed in parallel.
