@@ -4,14 +4,14 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A11: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A11_NIBBANA_EARLY_TEXT_MEANING_20261004.md`.
-- A11 correction locked: Iti 43 carries the unborn/unmade/unconditioned escape formula; Iti 44 is the direct two-Nibbāna-elements discourse.
-- A11 source boundary locked: Nibbāna is securely characterized by ending of greed/hate/delusion, cessation of craving/suffering, the unconditioned/unborn/unmade/unfabricated, peace/security/deathless/release; do not silently promote this cluster into either a self-like eternal substance or sheer annihilative nonexistence.
+- Phase 4 A5-A12: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A12_PATH_UNCONDITIONED_20261004.md`.
+- A12 source boundary locked: SN 43 distinguishes the unconditioned from the path leading to it; AN 3.47 distinguishes conditioned arising/vanishing/change from the unconditioned; the claim that the path enables realization without producing Nibbāna is a CROSS_TEXT_SYNTHESIS, sharpened explicitly by the later Milindapañha.
+- Guardrail locked: do not infer from "path leads to Nibbāna" that Nibbāna is a conditioned product; do not infer from "unconditioned" that it is a hidden self-like substance.
 
 Next:
-- **Phase 4 A12:** If Nibbāna is unconditioned, how can the Noble Eightfold Path lead to it without producing it?
-- Route: SN 43.1-44 → AN 3.47/48 → Ud 8.3 → MN 26 → selected path/fruit passages → Milindapañha causal/dialectical clarification.
+- **Phase 4 A13:** If the path is a means, why does the Buddha say even the Dhamma must be let go like a raft? How can one practice intensely without turning the path itself into clinging?
+- Route: MN 22 raft simile → SN 43 path/unconditioned distinction → selected non-clinging passages → Aṭṭhakavagga bridge → Milindapañha dialectical stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
