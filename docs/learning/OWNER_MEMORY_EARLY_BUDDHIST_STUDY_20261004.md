@@ -178,3 +178,23 @@ New durable findings:
 Next:
 seek externally held-out dialogue evaluation or continue Agama/translation/contradiction testing.
 
+## Latest progress — parallels / translation / contradiction v0.6
+
+Current synthesis:
+`docs/learning/EARLY_BUDDHIST_PARALLEL_TRANSLATION_CONTRADICTION_V0_6_20261004.md`
+
+Durable new rules:
+- never promote one Pali-local technical formulation into universal Buddha-thought without parallel support;
+- keep translation cards for high-risk Pali terms;
+- actively seek apparent contradictions before synthesis;
+- unresolved textual tension must remain labeled unresolved;
+- distinguish stable cross-traditional reasoning core from transmission-specific wording/systematization.
+
+Important current tensions:
+- SN 12.15/SA 301 anti-ontological binary vs MN 117/MA 189 affirmative ethical-causal right view: contextually resolved;
+- MN 22 raft vs right view: resolved as function vs grasping;
+- SN 35.23 "the all" vs cosmological discourse: still partial/unresolved at metaphysical level;
+- MA 14 local expanded wording: textual issue remains unresolved.
+
+Next: detailed clause-by-clause parallel alignment and high-risk translation cards.
+
