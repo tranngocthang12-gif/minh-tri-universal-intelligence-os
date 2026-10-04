@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A74 COMPLETED  
-**Next checkpoint:** PHASE 4 — A75  
+**Current checkpoint:** PHASE 4 — A75 COMPLETED  
+**Next checkpoint:** PHASE 4 — A76  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -6964,6 +6964,204 @@ Required lanes:
 - distinguish remembering/tracking from knowing purpose, suitability, domain, and non-delusion where later categories are used;
 - identify which distinctions are early-text and which are commentarial;
 - mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-commentarial / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A75
+
+**Central question:** What exactly is `sampajañña` / clear comprehension, and how does it differ from `sati` while working with it to prevent mindfulness from becoming mere observation without understanding?
+
+### TEXT_ATTESTED — 1. SATI AND SAMPAJAÑÑA APPEAR TOGETHER BUT ARE NOT TEXTUALLY COLLAPSED
+
+**MN 10 / DN 22** repeatedly use the formula:
+`ardent, clearly comprehending, mindful`
+(`ātāpī sampajāno satimā`).
+
+The wording itself distinguishes:
+- ardency/energy;
+- clear comprehension;
+- mindfulness.
+
+Therefore A75 rejects:
+`sati = sampajañña`
+as a simple lexical identity.
+
+### TEXT_ATTESTED — 2. CLEAR COMPREHENSION IS APPLIED THROUGH ORDINARY BODILY ACTIVITY
+
+**MN 10 / DN 22** say that clear comprehension is applied when:
+- going forward and returning;
+- looking ahead and away;
+- bending and stretching;
+- carrying robes and bowl;
+- eating and drinking;
+- urinating and defecating;
+- walking, standing, sitting;
+- falling asleep and waking;
+- speaking and remaining silent.
+
+This places `sampajañña` inside lived activity, not only seated observation.
+
+### TEXT_ATTESTED — 3. SN 36.7 GIVES A USEFUL FUNCTIONAL DISTINCTION
+
+**SN 36.7** separately explains:
+- being mindful through the four establishments of mindfulness;
+- being clearly comprehending through clear comprehension in bodily activities such as going, looking, bending, eating, walking, standing, sleeping, speaking, and silence.
+
+This is strong evidence that early discourse usage can distinguish:
+- `sati`: keeping the relevant field established;
+- `sampajañña`: knowing clearly what one is doing/experiencing in activity.
+
+The exact formula “keeping field” versus “knowing what one is doing” is **CROSS_TEXT SYNTHESIS**, not a canonical dictionary definition.
+
+### TEXT_ATTESTED — 4. CLEAR COMPREHENSION DOES NOT MERELY LABEL ACTION
+
+In MN 10 the clear-comprehension section sits inside body contemplation and is followed by observation of arising and passing.
+
+The broader satipaṭṭhāna framework is directed toward:
+- knowledge;
+- non-clinging;
+- overcoming covetousness and distress.
+
+Therefore `sampajañña` should not be reduced to silently naming:
+`walking, walking`
+or
+`eating, eating`
+without understanding the process.
+
+That reduction is not supported by the early formula.
+
+### CENTRAL DISTINCTION — TRACKING VS CLEAR KNOWING
+
+A bounded working model is:
+
+- **`sati`**: does not lose the field/task; keeps it present and remembered;
+- **`sampajañña`**: knows clearly what is occurring and what one is doing within that field;
+- **`paññā`**: penetrates the relevant characteristics/causal truth deeply enough to cut ignorance.
+
+This three-way model is **CROSS_TEXT SYNTHESIS**.
+The early texts clearly distinguish the terms, but do not give this exact one-sentence taxonomy.
+
+### IMPORTANT COMMENTARIAL GUARDRAIL — THE FOURFOLD SAMPAJAÑÑA SCHEME IS LATER
+
+The familiar fourfold analysis:
+1. clear comprehension of purpose;
+2. suitability;
+3. resort/domain;
+4. non-delusion
+
+is found in the **commentarial explanation of Satipaṭṭhāna**, not in the wording of MN 10 / DN 22 themselves.
+
+It is useful for practice, but A75 labels it:
+**LATER/COMMENTARIAL SUPPORT**, not `TEXT_ATTESTED`.
+
+This prevents later systematization from being silently back-projected into the early discourse.
+
+### IMPORTANT GUARDRAIL — CLEAR COMPREHENSION IS NOT A PERMANENT INNER KNOWER
+
+A75 rejects:
+`there must be an unchanging subject that clearly knows all actions`.
+
+The texts describe:
+- bodily activity;
+- feeling;
+- mind;
+- dhammas;
+- mindfulness;
+- clear comprehension
+
+as functions within a conditioned practice process.
+
+No permanent witness is required.
+
+### RELATION TO RIGHT EFFORT
+
+A74 showed that mindfulness keeps the practice-field/task present.
+
+A75 adds:
+clear comprehension helps the practitioner know what is actually happening while effort is being applied.
+
+A bounded loop is:
+
+`right view identifies the task`
+→ `sati keeps it present`
+→ `sampajañña clearly knows the current activity/state`
+→ `right effort adjusts`
+→ `wisdom evaluates arising/cessation and non-clinging`.
+
+No single discourse states this loop verbatim.
+Claim class: **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary supporting theme: Nāgasena distinguishes discursive reasoning from wisdom, saying reasoning/comprehension and wisdom are not identical; wisdom has a cutting-off and illuminating function;
+- role in A75:
+  - clarifies why clear knowing should not be reduced to mere remembering or observation;
+  - supports keeping `sati`, clear comprehension, and deeper wisdom functionally distinguishable;
+- limitation: Milindapañha does **not** supply the early-discourse definition of `sampajañña`;
+- interpretation change: **MODERATE CLARIFICATION**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 10 / DN 22 — `ātāpī sampajāno satimā`; clear comprehension throughout ordinary activities.
+- SN 36.7 — separate explanations of mindfulness and clear comprehension.
+
+Later support:
+- Satipaṭṭhāna commentary — fourfold clear comprehension of purpose, suitability, resort, non-delusion.
+- Milindapañha — reasoning/wisdom distinction and wisdom as cutting/illumination.
+
+### METHOD INSIGHT
+
+A75 reveals a characteristic of the Buddha's practice architecture:
+
+**observation must stay connected to understanding.**
+
+Mindfulness prevents loss of the field.
+Clear comprehension prevents activity from becoming automatic or opaque.
+Wisdom prevents clear observation from stopping short of liberation.
+
+The three cooperate without requiring an inner controller.
+
+### PRACTICAL DIAGNOSTIC
+
+During an action, ask:
+- Am I actually mindful of the relevant field?
+- Do I clearly know what I am doing right now?
+- Do I know the state of mind accompanying the action?
+- Am I merely labeling the action, or seeing how it is conditioned and changing?
+- Is the later fourfold purpose/suitability/resort/non-delusion framework being used as commentary rather than mistaken for the exact early wording?
+- What does wisdom still need to understand beyond simple observation?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 10 Satipaṭṭhāna — mindfulness plus clear comprehension; clear comprehension in daily activities.
+- DN 22 Mahāsatipaṭṭhāna — extended parallel.
+- SN 36.7 — functional separation of mindfulness and clear comprehension.
+
+Later/commentarial layer:
+- fourfold `sampajañña`: purpose, suitability, resort/domain, non-delusion.
+
+Mandatory Milindapañha layer:
+- reasoning/comprehension distinguished from wisdom;
+- wisdom as cutting off and illumination.
+
+Open audit:
+- exact lexical boundary among `sati`, `sampajañña`, `ñāṇa`, and `paññā`;
+- whether early parallels preserve the same sati/sampajañña pairing;
+- exact degree to which purpose/suitability are inferable from early discourse rather than only later commentary remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A76
+
+**How does `paññā` / wisdom differ from mindfulness and clear comprehension, and what exactly does wisdom “see” that converts observation into disenchantment, dispassion, and release?**
+
+Required lanes:
+- MN 43 / SN 22 material on wisdom and direct knowing;
+- relation to three characteristics without forcing later systematization into every passage;
+- connect to MN 10 arising/passing and prior SN 22.89 / SN 22.59 work;
+- mandatory Milindapañha consultation on wisdom as cutting/illumination;
 - preserve early-text / synthesis / later-commentarial / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
