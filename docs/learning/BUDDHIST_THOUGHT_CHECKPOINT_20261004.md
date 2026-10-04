@@ -14323,3 +14323,316 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / cross-text synthesis / later-interpretive / lexical-open boundaries.
 
+## Completed checkpoint A97
+
+**Central question:** What exactly are `bhava` and `jāti` in dependent arising: do they refer only to future-life rebirth, also to present processes of becoming and identity formation, or to different levels depending on context?
+
+### TEXT_ATTESTED — 1. SN 12.2 GIVES AN EXPLICIT DEFINITION OF BHAVA
+
+**SN 12.2 Paṭiccasamuppādavibhaṅga** defines `bhava` as threefold:
+- sensual becoming / existence (`kāma-bhava`);
+- form becoming / existence (`rūpa-bhava`);
+- formless becoming / existence (`arūpa-bhava`).
+
+This is the first hard boundary for A97.
+
+In the explicit dependent-arising definition, `bhava` is not defined as:
+- every passing thought;
+- every temporary mood;
+- every social identity adopted during the day.
+
+It is classified according to the three broad modes/domains of existence.
+
+### TEXT_ATTESTED — 2. SN 12.2 DEFINES JĀTI AS BIRTH AMONG ORDERS OF BEINGS
+
+The same discourse defines `jāti` through:
+- birth / taking birth;
+- descent / coming-to-be;
+- coming forth;
+- manifestation of the aggregates;
+- acquisition of the sense bases
+of beings in this or that order/class of beings.
+
+This strongly anchors the standard dependent-arising `jāti` in **actual birth/rebirth**, not merely a metaphorical moment of “creating an identity.”
+
+A97 therefore records:
+
+**the explicit canonical definition of `jāti` in SN 12.2 is macro-scale birth of a being, with aggregates and sense bases becoming manifest.**
+
+### TEXT_ATTESTED — 3. MN 9 REPEATS THE SAME BASIC DEFINITIONS
+
+**MN 9 Sammādiṭṭhi** gives the same four-truth treatment of:
+- birth;
+- becoming.
+
+It defines birth by:
+- inception / conception / regeneration;
+- manifestation of aggregates;
+- acquisition of sense fields among orders of beings.
+
+It treats becoming as the condition for birth and craving as the condition for becoming.
+
+This repetition strengthens the conclusion that the early Nikāya's explicit doctrinal definition is not merely “momentary psychological identity formation.”
+
+### TEXT_ATTESTED — 4. MN 43 EXPLICITLY SPEAKS OF “FURTHER BECOMING IN THE FUTURE”
+
+**MN 43 Mahāvedalla** asks:
+- how many kinds of becoming are there?
+- how is further becoming in the future produced?
+- how is further becoming in the future not produced?
+
+It again gives:
+- sensual becoming;
+- form becoming;
+- formless becoming.
+
+And says further becoming in the future is produced through the delight of beings:
+- obstructed by ignorance;
+- fettered by craving.
+
+It is not produced when:
+- ignorance fades;
+- clear knowing arises;
+- craving ceases.
+
+This is very strong evidence that `bhava` in at least this early doctrinal context includes **future-life continued existence**, not merely present psychological “becoming.”
+
+### TEXT_ATTESTED — 5. THE DEPENDENT-ARISING ORDER IS CRAVING → CLINGING → BECOMING → BIRTH
+
+SN 12.2 gives:
+
+`taṇhā`
+→ `upādāna`
+→ `bhava`
+→ `jāti`
+→ aging-and-death and the mass of suffering.
+
+The distinction between `bhava` and `jāti` matters.
+
+If they were exact synonyms, the sequence would lose much of its analytical point.
+
+A bounded functional model is:
+
+- **craving** wants / thirsts;
+- **clinging** takes up and holds;
+- **becoming** establishes or sustains the mode of existence toward which that grasping is tending;
+- **birth** is the manifestation of a being in that conditioned existence.
+
+The middle two explanatory sentences are **CROSS-TEXT SYNTHESIS**, not verbatim dictionary definitions.
+
+### IMPORTANT GUARDRAIL — BHAVA IS DYNAMIC, BUT “DYNAMIC” DOES NOT AUTOMATICALLY MEAN “MOMENT-TO-MOMENT IDENTITY”
+
+The English word “becoming” usefully preserves a dynamic flavor.
+
+The early causal sequence does portray `bhava` as:
+- conditioned by clinging;
+- conditioning birth;
+- capable of ceasing when clinging ceases.
+
+So `bhava` is not best understood as an eternal static substance.
+
+But this does **not** prove the stronger modern interpretation:
+`bhava = every micro-moment of constructing a personal identity`.
+
+That may be a useful contemplative analogy or later interpretive model.
+It is **not the explicit definition given in SN 12.2 or MN 9**.
+
+### IMPORTANT GUARDRAIL — DO NOT REPLACE REBIRTH WITH A PURELY PSYCHOLOGICAL READING
+
+A97 rejects the claim:
+“dependent arising originally only meant moment-to-moment psychology, and rebirth was added later.”
+
+The texts consulted here explicitly define:
+- `jāti` as birth among beings;
+- `bhava` in three modes of existence;
+- future becoming as something produced by ignorance and craving.
+
+Therefore a purely present-moment reading that excludes rebirth does not adequately represent these passages.
+
+### IMPORTANT GUARDRAIL — DO NOT REJECT PRESENT-MOMENT APPLICATION EITHER
+
+The opposite overreach would be:
+“because `jāti` is explicitly rebirth, dependent arising has nothing to do with presently observable experience.”
+
+That is also too strong.
+
+Many earlier links:
+- contact;
+- feeling;
+- craving;
+- clinging;
+- intention;
+- attention
+
+are directly observable in present experience, and the early discourses repeatedly use present knowing of arising and cessation as part of the path.
+
+So A97 keeps a distinction:
+
+**canonical referent**
+→ `jāti` in the standard definition is birth/rebirth;
+→ `bhava` is threefold becoming/existence.
+
+**contemplative application**
+→ present experience can reveal the causal dynamics by which craving and clinging sustain becoming.
+
+The second line is **CROSS-TEXT PRACTICE SYNTHESIS**.
+
+### “IDENTITY FORMATION” — STATUS: LATER / MODERN INTERPRETIVE EXTENSION
+
+Modern Buddhist teachers sometimes explain:
+- craving;
+- clinging;
+- becoming;
+- birth
+
+as a rapid present-moment process in which a person creates a temporary identity or experiential “world.”
+
+A97 does not dismiss this as useless.
+
+But for the question:
+**“what did the early texts explicitly define?”**
+
+the answer must remain narrower:
+
+- SN 12.2 does not define `jāti` as “the birth of an ego-thought”;
+- it defines birth through the manifestation of aggregates and acquisition of sense bases among beings;
+- it does not define `bhava` as “identity construction,” but as sensual, form, and formless becoming/existence.
+
+Therefore:
+**moment-to-moment identity formation is an interpretive application, not the canonical lexical definition.**
+
+### RELATION TO A96 — CAUSAL CONTINUITY WITHOUT A TRANSMIGRATING SELF
+
+A96 established:
+- the same consciousness does not transmigrate;
+- causal continuity does not require an eternal self.
+
+A97 now shows how the standard chain expresses continued existence:
+
+`craving`
+→ `clinging`
+→ `becoming`
+→ `birth`.
+
+Thus rebirth is explained through **conditions**, not through a soul being transported.
+
+This is exactly why the distinction between:
+- `bhava`;
+- `jāti`
+
+matters.
+
+The process is generated causally rather than carried by an invariant owner.
+
+### RELATION TO THE THREE MODES OF EXISTENCE
+
+The three `bhava` categories:
+- sensual;
+- form;
+- formless
+
+also prevent a reduction of becoming to only ordinary sensual human identity.
+
+The category includes refined modes of existence associated with:
+- form;
+- formlessness.
+
+A97 therefore avoids equating:
+`bhava = ego-story`.
+
+The early category is broader and cosmological within the discourse's own framework.
+
+### IMPORTANT GUARDRAIL — COSMOLOGICAL DOES NOT MEAN A PERMANENT METAPHYSICAL REALM-SUBSTANCE
+
+Even where the early texts speak of modes/orders of existence, the dependent-arising structure still says:
+- they arise due to conditions;
+- they cease when conditions cease.
+
+Therefore:
+**the cosmological reading remains conditional, not eternalistic.**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant later/paracanonical material:
+  1. Nāgasena says rebirth occurs when attachment remains and does not occur when attachment is absent;
+  2. another name-and-form arises in the next existence because of deeds performed by the present name-and-form;
+  3. the lamp, milk, mango, and related analogies illustrate continuity without a transmigrating self;
+- role in A97:
+  - strongly supports the reading that `bhava/jāti` belong to a cross-life causal framework;
+  - clarifies how rebirth can be discussed without a permanent entity moving across;
+- limitation:
+  - Milindapañha's formulation “another name-and-form is reborn” is **LATER/PARACANONICAL**;
+  - it does not replace SN 12.2's explicit definitions;
+  - its analogies should not be used to turn `bhava` into a hidden substance or mechanism.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 12.2 — `bhava` as sensual/form/formless becoming; `jāti` as birth with manifestation of aggregates and acquisition of sense bases.
+- MN 9 — repeats the birth/becoming structure and definitions.
+- MN 43 — three kinds of becoming and explicit “further becoming in the future” generated by ignorance and craving.
+- SN 12 standard sequence — craving → clinging → becoming → birth → aging-and-death.
+- A96 axis — no same consciousness transmigrating; continuity explained conditionally.
+
+Later/paracanonical:
+- Milindapañha on rebirth through attachment, name-and-form, and causal analogies.
+
+Later/modern interpretive:
+- “moment-to-moment ego birth / identity formation” models, useful only when labeled as interpretive application rather than root-text definition.
+
+### METHOD INSIGHT
+
+A97 reveals an important discipline for studying the Buddha's thought:
+
+**do not confuse a useful meditation interpretation with the text's explicit lexical definition.**
+
+A concept can have:
+- a canonical doctrinal referent;
+- a present-practice application;
+- a later interpretive extension.
+
+All three may be useful.
+
+But they must not be silently collapsed into one historical claim.
+
+### PRACTICAL DIAGNOSTIC
+
+When reading `bhava` or `jāti`, ask:
+- Is the text explicitly defining the term?
+- Is it talking about future existence?
+- Is it naming sensual, form, or formless becoming?
+- Is “birth” described through aggregates and sense bases?
+- Am I importing “ego formation” from a modern teaching?
+- Is the present-moment reading being used as practice analogy or claimed as the sole original meaning?
+- Does the interpretation preserve the causal sequence craving → clinging → becoming → birth?
+- Is the claim early-text attested, cross-text synthesis, Milindapañha clarification, or modern interpretation?
+
+### Open audit
+
+- full lexical/context audit of `bhava`, `jāti`, `sambhava`, `abhinibbatti`, `okkanti`, and `sattanikāya`;
+- early Chinese parallel stress-test for SN 12.2 / MN 9 definitions;
+- audit `bhava` outside the dependent-arising formula to map its full semantic range;
+- determine whether any early text explicitly supports a momentary identity-birth reading rather than only allowing an analogous application;
+- distinguish cosmological mode of existence from meditative attainment without equating them automatically;
+- continue SN 12 ID-level audit and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A97 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A98
+
+**What exactly is `upādāna` in dependent arising: why is it translated as clinging, grasping, sustenance, or fuel, what are its four types, and how does it transform craving into becoming?**
+
+Required lanes:
+- SN 12.2 four `upādāna` definitions;
+- relation to `taṇhā` and `bhava`;
+- SN 22 material on five clinging aggregates;
+- lexical question of grasping versus sustenance/fuel;
+- distinguish desire from the stronger act of taking-up/appropriation;
+- mandatory Milindapañha consultation;
+- preserve early-text / cross-text synthesis / later-interpretive / lexical-open boundaries.
+
