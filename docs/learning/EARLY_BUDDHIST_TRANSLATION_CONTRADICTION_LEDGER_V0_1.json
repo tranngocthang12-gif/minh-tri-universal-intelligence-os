@@ -135,10 +135,31 @@
       "topic": "Atthakavagga anti-view language vs Nikaya right view",
       "status": "PARTIAL_RESOLUTION",
       "resolution": "functional right discrimination differs from identity-grasping at views; genre/stratum tension remains preserved"
+    },
+    {
+      "id": "C13",
+      "topic": "SN22.22 burden-bearer person language vs not-self analysis",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "conventional/practical person-language does not establish an eternal self; text does not itself fully settle later pudgala ontology debates"
+    },
+    {
+      "id": "C14",
+      "topic": "SN36.19 two feelings vs three and other counts",
+      "status": "EXPLICITLY_RESOLVED_IN_TEXT",
+      "resolution": "multiple valid explanatory taxonomies; classification axis is contextual rather than one exclusive ontology"
+    },
+    {
+      "id": "C15",
+      "topic": "all feeling caused by past kamma vs multiple causes",
+      "status": "RESOLVED_AGAINST_KAMMA_MONISM",
+      "resolution": "SN36.21 lists several causal sources; past kamma is not the sole explanation for every feeling"
     }
   ],
   "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation.",
   "clause_alignment": "docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
   "translation_cards_v2": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json",
-  "hard_cluster_v0_8": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md"
+  "hard_cluster_v0_8": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md",
+  "discourse_verse_pass_v0_10": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
+  "atthakavagga_verse_audit_v0_2": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json",
+  "sn36_discourse_index": "docs/learning/EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json"
 }
