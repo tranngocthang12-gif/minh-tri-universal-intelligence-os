@@ -491,5 +491,7 @@
   "owner_learning_track_buddhist_thought_source_audit": "A1_A4_CHAT_TAUGHT_PARTIAL_SOURCE_AUDIT_OLD_CORPUS_BACKLOG_PENDING",
   "owner_learning_track_buddhist_thought_status": "PHASE4_A1_A4_PARTIAL_SOURCE_AUDIT_A5_NEXT_AUDIT_LANE_ACTIVE",
   "owner_learning_track_buddhist_thought_next_checkpoint": "AUDIT_ONE_PENDING_SOURCE_SLICE_THEN_PHASE4_A5_VINNANA_NAMARUPA_WITH_MILINDAPANHA",
-  "owner_learning_track_buddhist_thought_continuity": "GITHUB_CANONICAL_STATE_REQUIRED_ACROSS_CHATS_LOCAL_BRAIN_MIRROR_PENDING"
+  "owner_learning_track_buddhist_thought_continuity": "GITHUB_CANONICAL_STATE_REQUIRED_ACROSS_CHATS_LOCAL_BRAIN_MIRROR_PENDING",
+  "owner_supreme_buddhist_learning_continuity": "docs/OWNER_SUPREME_BUDDHIST_LEARNING_CONTINUITY_20261004.md",
+  "owner_supreme_buddhist_learning_route": "CHAT_NEW_TO_PROJECT_STATE_TO_BUDDHIST_TRACK_TO_STATE_TO_NEXT_CHECKPOINT_TO_CONTINUE"
 }
