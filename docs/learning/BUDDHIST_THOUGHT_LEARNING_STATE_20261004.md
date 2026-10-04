@@ -4,14 +4,14 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A10: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A10_NIBBANA_TATHAGATA_20261004.md`.
-- Route correction locked: SN 44.10 concerns whether the self survives/does not survive; SN 44.1 and related SN 44 discourses are the direct sources for the four post-mortem Tathāgata alternatives.
-- Bounded SN 12 and SN 22 slices already recorded remain partial only. A10 adds bounded SN 44.1 / SN 22.86 / MN 72 / Ud 8.1 / Ud 8.3 source audit for its specific question.
+- Phase 4 A5-A11: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A11_NIBBANA_EARLY_TEXT_MEANING_20261004.md`.
+- A11 correction locked: Iti 43 carries the unborn/unmade/unconditioned escape formula; Iti 44 is the direct two-Nibbāna-elements discourse.
+- A11 source boundary locked: Nibbāna is securely characterized by ending of greed/hate/delusion, cessation of craving/suffering, the unconditioned/unborn/unmade/unfabricated, peace/security/deathless/release; do not silently promote this cluster into either a self-like eternal substance or sheer annihilative nonexistence.
 
 Next:
-- **Phase 4 A11:** What is Nibbāna in the early texts? Cessation, the unfabricated, or a "thing"? How to read positive and negative language without making it either a substance or mere nonexistence.
-- Route: SN 43.1-44 → Ud 8.1-8.4 → Iti 43 → AN 3.47-48 → MN 26/MN 140 as needed → Milindapañha on Nibbāna.
+- **Phase 4 A12:** If Nibbāna is unconditioned, how can the Noble Eightfold Path lead to it without producing it?
+- Route: SN 43.1-44 → AN 3.47/48 → Ud 8.3 → MN 26 → selected path/fruit passages → Milindapañha causal/dialectical clarification.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
