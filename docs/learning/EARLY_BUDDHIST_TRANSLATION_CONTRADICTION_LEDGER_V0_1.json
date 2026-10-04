@@ -171,6 +171,12 @@
       "topic": "Aṭṭhakavagga anti-view rhetoric vs right-view path teaching after lexical pass",
       "status": "PARTIAL_RESOLUTION_STRENGTHENED",
       "resolution": "distinguish truth/discrimination from possessive view-identity; lexical/genre differences remain"
+    },
+    {
+      "id": "C19",
+      "topic": "Pali Atthakavagga exact chapter order vs Chinese Arthapada sixteen-text anthology order",
+      "status": "REDACTIONAL_DIVERGENCE_ACCEPTED",
+      "resolution": "weight shared themes and cross-recensional cores more strongly than the exact Pali chapter sequence; do not infer historical development from one order alone"
     }
   ],
   "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation.",
@@ -183,5 +189,6 @@
   "reference_stack": "docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md",
   "milindapanha_reasoning_lab": "docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md",
   "sn12_peyyala_matrix": "docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md",
-  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md"
+  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md",
+  "arthapada_agama_milinda_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md"
 }
