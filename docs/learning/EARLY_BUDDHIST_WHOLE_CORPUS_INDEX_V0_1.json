@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-early-buddhist-whole-corpus-index/v1",
   "updated": "2026-10-04",
-  "status": "ANCHOR_DEEP_DIVE_SN_PRIORITY_PLUS_MN_DIALOGUE_AND_ATTHAKAVAGGA_STRUCTURAL_INDEX",
+  "status": "DISCOURSE_PASS_V0_10_SN36_COMPLETE_ID_LEVEL_ATTHAKAVAGGA_PASS1_VERSE_AUDIT",
   "purpose": "Track corpus coverage by doctrine, reasoning, translation risk, parallels, contradictions and mastery without confusing selective reading with whole-canon understanding.",
   "fields": [
     "collection",
@@ -18,7 +18,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 12 Nidāna-saṃyutta",
-      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
+      "coverage_status": "DISCOURSE_ID_PASS_1_91_PLUS_REPEAT_MATRIX_REMAINDER_PENDING",
       "primary_themes": [
         "dependent origination",
         "consciousness/name-and-form",
@@ -42,7 +42,7 @@
         "C02",
         "REBIRTH_IDENTITY_CLUSTER_V0_8"
       ],
-      "next_action": "Discourse-by-discourse index with SĀ parallels",
+      "next_action": "Audit SN12.92-213 peyyāla matrix, then depth-score all entries",
       "anchor_suttas": [
         "SN 12.2",
         "SN 12.15",
@@ -53,7 +53,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 22 Khandha-saṃyutta",
-      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
+      "coverage_status": "MAJOR_FAMILIES_INDEXED_MISSING_IDS_PENDING",
       "primary_themes": [
         "five aggregates",
         "not-self",
@@ -75,7 +75,7 @@
       "contradiction_links": [
         "SN22_85_ANNIHILATION_GUARD"
       ],
-      "next_action": "Index self-view and grasping-aggregate families across SN22",
+      "next_action": "Complete independent summaries for missing SN22.58-99 and remaining tail",
       "anchor_suttas": [
         "SN 22.59",
         "SN 22.85"
@@ -84,7 +84,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 35 Saḷāyatana-saṃyutta",
-      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
+      "coverage_status": "MAJOR_FAMILIES_INDEXED_MISSING_IDS_PENDING",
       "primary_themes": [
         "sense fields",
         "contact",
@@ -106,7 +106,7 @@
       "contradiction_links": [
         "C04"
       ],
-      "next_action": "Index all/burning/conceiving/contact clusters and parallels",
+      "next_action": "Complete all omitted middle/late SN35 discourse IDs",
       "anchor_suttas": [
         "SN 35.23",
         "SN 35.28",
@@ -116,7 +116,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 36 Vedanā-saṃyutta",
-      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
+      "coverage_status": "ALL_31_IDS_STRUCTURALLY_INDEXED",
       "primary_themes": [
         "feeling",
         "second arrow",
@@ -131,7 +131,7 @@
       ],
       "parallel_status": "PARTIAL",
       "contradiction_links": [],
-      "next_action": "Index feeling taxonomy and craving/reaction pathways",
+      "next_action": "Deepen semantic + SĀ alignment for each discourse",
       "anchor_suttas": [
         "SN 36.6",
         "SN 36.23"
@@ -140,7 +140,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 45/46 Path and awakening factors",
-      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
+      "coverage_status": "CORE_PLUS_SN46_1_76_FAMILIES_MAPPED_REPEAT_MATRICES_PENDING",
       "primary_themes": [
         "eightfold path",
         "awakening factors",
@@ -160,7 +160,7 @@
       "contradiction_links": [
         "MN117_MA189_TECHNICAL_LAYER"
       ],
-      "next_action": "Index path and awakening-factor balancing/development families",
+      "next_action": "Complete SN45 IDs and SN46.77+ repetition audit",
       "anchor_suttas": [
         "SN 45.8",
         "SN 46.3"
@@ -204,7 +204,7 @@
     {
       "collection": "Snp",
       "range_or_text": "Aṭṭhakavagga Snp 4",
-      "coverage_status": "ALL_16_STRUCTURALLY_INDEXED_VERSE_LEVEL_PENDING",
+      "coverage_status": "ALL_16_VERSE_RANGE_PASS1_AUDITED",
       "primary_themes": [
         "view-grasping",
         "debate",
@@ -227,7 +227,7 @@
         "C03",
         "ATTHAKAVAGGA_RIGHT_VIEW_V0_8"
       ],
-      "next_action": "Verse-cluster indexing of all 16 plus Arthapada parallels"
+      "next_action": "Lexical pass plus Arthapada parallels"
     },
     {
       "collection": "DN",
@@ -327,5 +327,8 @@
   },
   "anchor_deep_dive": "docs/learning/EARLY_BUDDHIST_ANCHOR_DEEP_DIVE_V0_9_20261004.md",
   "mn_dialogue_index": "docs/learning/EARLY_BUDDHIST_MN_DIALOGUE_INDEX_V0_1.json",
-  "atthakavagga_index": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json"
+  "atthakavagga_index": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json",
+  "discourse_verse_pass_v0_10": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
+  "sn36_discourse_index": "docs/learning/EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json",
+  "atthakavagga_verse_audit": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json"
 }
