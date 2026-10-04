@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A61 COMPLETED  
-**Next checkpoint:** PHASE 4 — A62  
+**Current checkpoint:** PHASE 4 — A62 COMPLETED  
+**Next checkpoint:** PHASE 4 — A63  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -4216,6 +4216,254 @@ Required lanes:
 - inspect early texts on abandoning attachment to views without collapsing into “all views are bad”;
 - mandatory Milindapañha consultation on questioning, reasoning, and release from wrong views;
 - keep `diṭṭhi / sacca / nissaya` Aṭṭhakavagga lexical audit OPEN/CHECK.
+
+
+## Completed checkpoint A62
+
+**Central question:** How does `diṭṭhupādāna` (view-clinging) differ from simply having a working view, and how can even a correct formulation become something grasped?
+
+### TEXT_ATTESTED — 1. THE PATH ITSELF CONTAINS RIGHT VIEW
+
+The early teaching does **not** say:
+`all views are bad`.
+
+Right view is explicitly a factor of the Noble Eightfold Path.
+
+**MN 9 Sammādiṭṭhi** repeatedly defines right view through direct understanding of such structures as:
+- wholesome/unwholesome and their roots;
+- nutriment and its origin/cessation/path;
+- suffering and its origin/cessation/path;
+- the links of dependent origination and their cessation.
+
+So a view can function as an orienting, diagnostic, and liberative framework.
+
+### TEXT_ATTESTED — 2. MN 2 DISTINGUISHES WISE ORIENTATION FROM A THICKET OF VIEWS
+
+**MN 2 Sabbāsava** shows that unwise attention can generate a “thicket of views,” including speculative self-positions such as:
+- “I have a self”;
+- “I have no self”;
+- variants about what the self is and what it becomes.
+
+The same discourse redirects appropriate attention toward:
+- suffering;
+- its origin;
+- its cessation;
+- the path.
+
+This gives A62 a key distinction:
+**the problem is not merely that a cognition has propositional content; the problem is how attention and grasping turn propositions into binding speculative positions.**
+
+The final sentence is **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. MN 11 TREATS VIEW-CLINGING AS ONE SPECIFIC TYPE OF CLINGING
+
+**MN 11 Cūḷasīhanāda** includes `diṭṭhupādāna` among the four kinds of clinging.
+
+Therefore:
+`having a view`
+and
+`clinging to a view`
+cannot be assumed to be identical by definition.
+
+The taxonomy itself distinguishes the act/object of view from the mode of grasping at it.
+
+The final sentence is a cautious **CROSS_TEXT SYNTHESIS** from the taxonomy.
+
+### TEXT_ATTESTED — 4. SN 12.15 SHOWS RIGHT VIEW AS A WAY OUT OF METAPHYSICAL EXTREMES
+
+**SN 12.15 Kaccānagotta** says the world is largely caught in the duality:
+- existence;
+- non-existence.
+
+The middle way is explained through dependent arising and dependent cessation.
+
+This shows right view functioning not as a new rigid metaphysical pole, but as a causal way of seeing that avoids fixation on the extremes.
+
+A62 does **not** infer:
+`right view = no propositions whatsoever`.
+
+Rather:
+right view is judged by whether it correctly discloses conditional arising/cessation and reduces fixation.
+
+The second sentence is **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 5. MN 22: DHAMMA IS FOR CROSSING, NOT FOR HOLDING
+
+**MN 22 Alagaddūpama** gives the raft simile:
+the teaching is for crossing over, not for taking up as something to carry and possess.
+
+The discourse even says that one must know how to let go of teachings, all the more what is contrary to the teaching.
+
+This is the strongest A62 guardrail against converting a correct teaching into a possession.
+
+A view/formulation can be correct in function and still become grasped if one turns it into:
+- “my doctrine”;
+- a badge of identity;
+- an object of quarrel;
+- something to carry after its liberative work has been done.
+
+The examples are **CROSS_TEXT / PRACTICAL SYNTHESIS**; the raft principle is **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 6. MN 95 WARNS AGAINST PREMATURE EXCLUSIVIST CERTAINTY
+
+**MN 95 Caṅkī** distinguishes preserving truth from having already discovered/realized truth.
+
+A person preserving truth should not simply leap from:
+- faith;
+- preference;
+- oral tradition;
+- reflection;
+- acceptance of a view
+
+to the dogmatic claim:
+`Only this is true; anything else is wrong.`
+
+This does not imply that truth is relative.
+
+It imposes an epistemic discipline:
+**do not claim more certainty than the available basis warrants.**
+
+The final formulation is **CROSS_TEXT SYNTHESIS**, but the restraint on exclusivist overclaiming is **TEXT_ATTESTED**.
+
+### CENTRAL DISTINCTION — VIEW AS TOOL VS VIEW AS POSSESSION
+
+A62 therefore distinguishes:
+
+**functional view**
+- orients attention;
+- diagnoses suffering and conditions;
+- is testable against experience and the path;
+- can be revised where evidence/text requires;
+- serves dispassion and release;
+
+from
+
+**view-clinging**
+- the view becomes something to possess, defend, identify with, or use to rank self/others;
+- losing the position feels like losing “me” or “mine”;
+- inquiry becomes subordinate to defending the position.
+
+The first four bullets under each heading are a **CROSS_TEXT SYNTHESIS** from MN 2, MN 9, MN 22, MN 95, SN 12.15, and the fourfold clinging taxonomy.
+
+### IMPORTANT GUARDRAIL — LETTING GO OF VIEWS IS NOT THE SAME AS REFUSING DISCERNMENT
+
+A62 rejects:
+`no clinging to views = never hold any working judgment`.
+
+Without discernment, one could not distinguish:
+- wholesome from unwholesome;
+- suffering from its cause;
+- path from non-path;
+- right view from wrong view.
+
+The early texts repeatedly require such distinctions.
+
+Therefore non-clinging is not intellectual paralysis.
+
+It is the capacity to use a view without turning it into an identity or ultimate possession.
+
+The last sentence is **CROSS_TEXT SYNTHESIS**.
+
+### RELATION TO A34–A35 AND AṬṬHAKAVAGGA
+
+Earlier work already treated view-clinging as different from simple discernment.
+
+A62 strengthens that boundary with:
+- MN 22 raft logic;
+- MN 95 truth-preservation discipline;
+- SN 12.15 middle-way causal seeing.
+
+However, the exact lexical relation among:
+- `diṭṭhi`;
+- `sacca`;
+- `nissaya`;
+- `maññanā`;
+- clinging vocabulary in the Aṭṭhakavagga
+
+remains **OPEN/CHECK**.
+
+No later synthesis here closes the pending lexical audit.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary themes:
+  1. the Milindapañha's structured treatment of questions—some answered directly, some analytically, some by counter-question, some set aside—shows that inquiry is method-sensitive rather than a demand to defend one fixed formula in every context;
+  2. its recurring distinction between discursive reasoning and wisdom treats reasoning as a tool whose work can be completed rather than as an identity to cling to;
+- role in A62: supports **disciplined inquiry without attachment to formulation**;
+- decisive evidence for the early technical meaning of `diṭṭhupādāna`: **NO**;
+- interpretation change: **MODERATE CLARIFICATION**;
+- early-discourse confirmation: **YES IN FUNCTION**, especially MN 2, MN 22, MN 95, and SN 12.15;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 9 — right view as a path-function;
+- MN 2 — thicket of views versus appropriate attention;
+- MN 11 — view-clinging as one of four clingings;
+- SN 12.15 — avoiding existence/non-existence extremes through dependent arising;
+- MN 22 — raft: teaching for crossing, not holding;
+- MN 95 — preserve truth without premature exclusivist certainty.
+
+Milindapañha supports question-method and reasoning discipline, but does not define the early term `diṭṭhupādāna`.
+
+### METHOD INSIGHT — A TRUE FORMULATION CAN STILL BE MISUSED
+
+A62 adds a crucial distinction to the Buddha's thought:
+
+The truth-value or usefulness of a formulation does not automatically determine one's **relationship** to it.
+
+A correct map can still be:
+- carried as an identity;
+- weaponized in dispute;
+- treated as a possession;
+- substituted for direct seeing.
+
+Thus two questions must be kept separate:
+1. **Is this view correct/useful?**
+2. **Am I grasping it?**
+
+This is a **CROSS_TEXT SYNTHESIS** strongly grounded in MN 22 and the fourfold clinging framework.
+
+### PRACTICAL DIAGNOSTIC
+
+When holding a view, ask:
+- Is this helping me see suffering and conditions more clearly?
+- What evidence would make me revise the formulation?
+- If someone rejects this view, do I experience it as an attack on “me”?
+- Am I using the teaching as a raft, or carrying the raft as an identity?
+- Am I claiming “only this is true” beyond what I have actually known?
+- Does this view reduce craving, hostility, and confusion—or feed argument and self-positioning?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 9 Sammādiṭṭhi — right view as path-function and causal understanding.
+- MN 2 Sabbāsava — thicket of views versus appropriate attention.
+- MN 11 Cūḷasīhanāda — `diṭṭhupādāna` among four clingings.
+- SN 12.15 Kaccānagotta — middle way beyond existence/non-existence fixation.
+- MN 22 Alagaddūpama — raft simile; teaching for crossing, not grasping.
+- MN 95 Caṅkī — preservation of truth without premature “only this is true” claim.
+
+Mandatory Milindapañha layer:
+- structured question-answer methods;
+- reasoning as task-bounded support to wisdom.
+
+Open audit:
+- exact lexical boundary of `diṭṭhi` vs `diṭṭhupādāna`;
+- Aṭṭhakavagga `diṭṭhi / sacca / nissaya` lexical pass remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A63
+
+**How does `sīlabbatupādāna` differ from disciplined practice, and when does a useful rule, ritual, observance, or method become an object of clinging?**
+
+Required lanes:
+- inspect early-discourse definitions/examples of `sīlabbata` and related wrong-practice material;
+- distinguish ethical discipline and path-training from belief that a form/rite purifies by itself;
+- connect to MN 22 raft logic without reducing all method to “mere convention”;
+- mandatory Milindapañha consultation on disciplined practice and reasoning;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
