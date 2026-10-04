@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A34 COMPLETED  
-**Next checkpoint:** PHASE 4 — A35  
+**Current checkpoint:** PHASE 4 — A35 COMPLETED  
+**Next checkpoint:** PHASE 4 — A36  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -64,45 +64,6 @@ Guardrail preserved:
 - early parallel stress-tests where needed.
 
 Do not close an audit lane without sufficient evidence.
-
-## Next checkpoint — PHASE 4 A34
-
-Central question:
-
-**When does a view become upādāna, especially `diṭṭhupādāna`?**
-
-Required analysis chain:
-
-`diṭṭhi`  
-→ view/judgment as such  
-→ signs of grasping/appropriation  
-→ `diṭṭhupādāna`  
-→ `nissaya` / support or dependence  
-→ self-identification  
-→ superior/equal/inferior ranking where textually warranted  
-→ dispute.
-
-Mandatory guardrail:
-
-> Strong belief is not automatically the same as view-clinging.
-
-Look for actual textual signs of:
-
-- grasping;
-- appropriation;
-- identity;
-- purification claims;
-- dependence/support;
-- dispute.
-
-Priority texts: SN 12, MN 11, MN 22, suitable Aṭṭhakavagga passages, and other early passages as needed.
-
-Every conclusion must be labelled one of:
-
-- `TEXT_ATTESTED`;
-- `CROSS_TEXT_SYNTHESIS`;
-- `LATER/PARACANONICAL`;
-- `OPEN/CHECK`.
 
 ## Completed checkpoint A34
 
@@ -168,7 +129,104 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A35
+
+**Central question:** How can Right View function as a path-tool without becoming a view-dependency (`diṭṭhi-nissaya`) or identity?
+
+### TEXT_ATTESTED
+
+1. **MN 117** treats Right View as a path factor with a practical role. It distinguishes a right view still associated with taints/merit/acquisitions from noble, taintless Right View as a factor of the path. It also says Right View “comes first” in recognizing wrong and right, while Right Effort abandons the wrong and enters the right, and Right Mindfulness supports that transition.
+2. **SN 12.15** defines Right View through seeing the origination and cessation of the world/process as it has come to be, avoiding the extremes “everything exists” and “everything does not exist.” The person with Right View does not get involved with or cling to attachments, fixations and biases, and does not take a stand in terms of “my self.”
+3. **MN 22** distinguishes wrong grasp of Dhamma from correct use. The raft simile says Dhamma is for crossing over, not for holding onto after its work is complete. The same discourse states that no `diṭṭhi-nissaya` can be found that is free from sorrow, lamentation, pain, grief and despair.
+4. **Sn 4.4** warns against abandoning one support only to depend on the next, like a monkey releasing one branch and seizing another. It describes the accomplished person as not grasping anything as “supreme.”
+5. **Sn 4.5** links dwelling on views as supreme with judging others inferior and with dispute. It describes non-dependence even in relation to knowledge and not falling back on any view as a support.
+6. **Sn 4.9** rejects both simplifications: purity is not established merely by view/learning/knowledge/practice, and it is not established merely by lacking them. The verse points toward letting go, non-grasping and independence rather than turning “no view” into a new view.
+7. **SN 35.197** identifies the raft with the Noble Eightfold Path, making explicit that Right View is part of the means of crossing, not the further shore itself.
+
+### CROSS_TEXT_SYNTHESIS
+
+The evidence supports a three-stage functional model:
+
+**1. ORIENT / CORRECT**
+`sammādiṭṭhi` distinguishes wrong from right and gives causal/moral/path orientation.
+
+**2. SEE / DE-CENTER**
+Right View is exercised as seeing arising and cessation without converting what is seen into “my self,” and without collapsing into the two ontological extremes.
+
+**3. RELEASE / DO NOT APPROPRIATE**
+Once the path-function has done its work, Dhamma is not converted into identity, supremacy, faction, or permanent support. The raft is used; it is not carried on the head.
+
+This is a cross-text model, not a single canonical formula.
+
+### CENTRAL CORRECTION
+
+The opposition is **not**:
+
+`view` versus `no-view`.
+
+The more textually defensible contrast is:
+
+`wrong view / distorted seeing`
+→ corrected by `Right View`
+→ Right View performs its path-function
+→ appropriation and dependency are relinquished.
+
+Therefore, abandoning view-clinging does **not** mean abandoning discernment, causal seeing, or the capacity to distinguish wrong from right.
+
+### TEST FOR “USING” VS “DWELLING IN” A VIEW
+
+A view is functioning as a path-tool when it:
+
+- helps identify wrong/right, cause/result, arising/cessation;
+- supports abandonment of unskillful patterns and entry into skillful ones;
+- reduces selfing, extremes, craving, and grasping;
+- remains corrigible by direct seeing and the path’s purpose.
+
+A view is drifting toward `diṭṭhi-nissaya` when it becomes:
+
+- “my view / my correctness”;
+- a basis for superiority, inferiority, or faction;
+- a support one cannot release even when its task is complete;
+- an object of grasping, praise-seeking, or dispute;
+- a fixed standpoint replacing observation of arising and cessation.
+
+These are analytical indicators synthesized across the cited passages; they are not one verbatim canonical checklist.
+
+### IMPORTANT GUARDRAILS
+
+- “Let go even of Dhammas” in MN 22 must not be used to justify discarding the path before crossing.
+- “Not depending on views” in Aṭṭhakavagga must not be flattened into “the Buddha taught no views.”
+- Right View can be right without becoming identity.
+- The endpoint is not cognitive blankness; the texts continue to use knowing, seeing, discernment and truth-language while rejecting appropriation.
+- Translation terms such as “depend,” “support,” “entrenchment,” “view-position,” and “grasp” remain lexical audit targets; do not collapse them into one Pāli term.
+
+### Sources carried into the durable checkpoint
+
+- MN 117 Mahācattārīsaka Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- MN 22 Alagaddūpama Sutta.
+- SN 35.197.
+- Sn 4.4 Suddhaṭṭhaka.
+- Sn 4.5 Paramaṭṭhaka.
+- Sn 4.9 Māgaṇḍiya.
+
+### Next checkpoint — PHASE 4 A36
+
+Central question:
+
+**How does the Buddha distinguish truth (`sacca`) from the possessive claim “this alone is true” (`idameva saccaṁ`), especially in Aṭṭhakavagga?**
+
+Required lanes:
+
+- `sacca` versus “my truth” / exclusive truth-claim;
+- Sn 4.8, 4.12 and 4.13;
+- relation among truth, view, conceit, praise-seeking and dispute;
+- whether non-clinging to truth-claims entails relativism;
+- cross-check with Right View and Four Noble Truth language before any synthesis.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A33 and routes the next work to A34.
+This checkpoint preserves A30–A35 and routes the next work to A36.
