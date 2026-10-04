@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A56 COMPLETED  
-**Next checkpoint:** PHASE 4 — A57  
+**Current checkpoint:** PHASE 4 — A57 COMPLETED  
+**Next checkpoint:** PHASE 4 — A58  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -3197,6 +3197,197 @@ Required lanes:
 - inspect the “I am” conceit remaining after identity view is abandoned;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical boundaries.
+
+
+## Completed checkpoint A57
+
+**Central question:** If conventional personhood and responsibility remain usable, what exactly is the difference among `sakkāyadiṭṭhi` (identity/self view), `asmimāna` (“I am” conceit), and ordinary first-person language?
+
+### TEXT_ATTESTED — 1. `SAKKĀYADIṬṬHI` IS A STRUCTURED VIEW ABOUT SELF AND THE FIVE AGGREGATES
+
+**MN 44 Cūḷavedalla** gives the standard twentyfold pattern.
+
+For each of the five aggregates, an uninstructed person may regard:
+- the aggregate as self;
+- self as possessing the aggregate;
+- the aggregate as in self;
+- self as in the aggregate.
+
+Four modes × five aggregates = twenty identity/self-view constructions.
+
+This makes `sakkāyadiṭṭhi` more specific than merely using the word “I.”
+
+It is a **view-structure** that relates self to the aggregates.
+
+### TEXT_ATTESTED — 2. `ASMIMĀNA` CAN REMAIN AFTER THAT VIEW-STRUCTURE IS NO LONGER HELD
+
+**SN 22.89 Khemaka** is decisive.
+
+Khemaka says:
+- he does not regard any of the five clinging aggregates as self or belonging to self;
+- yet he is not yet an arahant;
+- the residual “I am” remains, although he does not take any aggregate as “this I am.”
+
+The discourse explicitly speaks of a lingering:
+- “I am” conceit;
+- “I am” desire;
+- “I am” underlying tendency.
+
+This is a direct textual distinction between:
+- **explicit identity view**;
+and
+- a subtler residual **“I am” tendency/conceit**.
+
+### TEXT_ATTESTED — 3. `ASMIMĀNA` IS NOT JUST ORDINARY VANITY
+
+Because SN 22.89 says the residual “I am” remains even when no aggregate is taken as “this I am,” `asmimāna` cannot be reduced to ordinary boastfulness such as:
+“I am better than everyone.”
+
+It is more basic:
+a residual self-referential stance of **“I am”** in relation to the five clinging aggregates.
+
+Comparison-conceits such as “better/equal/worse” require their own lexical pass and are not silently equated with `asmimāna` here.
+
+Claim class: **TEXT_ATTESTED + OPEN/CHECK lexical guardrail**.
+
+### TEXT_ATTESTED — 4. ORDINARY FIRST-PERSON SPEECH CAN REMAIN AFTER CONCEIT IS GONE
+
+**SN 1.25 Arahanta** asks whether an arahant may still say:
+- “I speak”;
+- “they speak to me.”
+
+The answer is yes.
+
+The arahant understands the conventional expressions of the world and uses them merely as conventional speech, despite conceit having been abandoned.
+
+This is the cleanest early-text guardrail against equating:
+`using “I”`
+with
+`having identity view or conceit`.
+
+### CENTRAL THREE-WAY DISTINCTION
+
+A57 therefore distinguishes:
+
+1. **ordinary first-person language**
+   - communicative convention;
+   - can be used even by an arahant;
+   - by itself does not prove self-view or conceit.
+
+2. **`sakkāyadiṭṭhi`**
+   - a structured view identifying or relating self to the five aggregates;
+   - explicitly analyzable in twenty forms.
+
+3. **`asmimāna`**
+   - a subtler residual “I am” conceit/tendency;
+   - can remain even when the explicit twentyfold identity-view pattern is no longer held;
+   - fully uprooted only with deeper liberation.
+
+This three-way separation is strongly text-grounded in MN 44 + SN 22.89 + SN 1.25.
+
+### TEXT_ATTESTED — 5. THE “I AM” RESIDUE IS REMOVED BY SEEING ARISING AND PASSING
+
+SN 22.89 says that the residual “I am” conceit/desire/tendency is uprooted as one keeps contemplating the arising and passing of the five clinging aggregates.
+
+The method is not:
+“replace ‘I am’ with the sentence ‘I do not exist.’”
+
+It is:
+`see the aggregates as arising and passing → the residual self-reference loses its footing`.
+
+This preserves the method already learned in A55:
+the path works through seeing and disidentification, not merely through adopting a counter-slogan.
+
+### CROSS_TEXT SYNTHESIS — VIEW CAN FALL BEFORE THE FELT CENTER OF “I AM” IS FULLY GONE
+
+A bounded synthesis is:
+
+`self-view can be dismantled conceptually/structurally before the deep affective-perceptual tendency of “I am” has been completely uprooted.`
+
+SN 22.89 strongly supports the distinction, but terms such as “conceptual” and “affective-perceptual” are explanatory language, not canonical technical definitions.
+
+Therefore the synthesis is useful but must not be promoted beyond the text.
+
+### CONNECTION TO A56 — WHY RESPONSIBLE “I”-LANGUAGE REMAINS POSSIBLE
+
+A56 established that conventional person-language and causal responsibility do not require a permanent self.
+
+A57 sharpens that result:
+an awakened person can still say:
+“I did this,”
+“I am speaking,”
+“please speak to me,”
+
+without using the pronoun as evidence for a metaphysical self.
+
+Thus moral accountability and communication can remain while:
+- identity view is abandoned;
+- eventually even the residual “I am” conceit is uprooted.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary passage/theme: **Nāgasena and the chariot / conventional designation**;
+- Nāgasena accepts the personal name “Nāgasena” as a conventional designation while denying that the name establishes a permanent individual essence;
+- role in A57: clarifies the difference between **using a person-name / first-person convention** and **reifying that convention into an enduring self**;
+- additional continuity theme: “neither the same nor another” helps preserve continuity without strict identity;
+- limitation: Milindapañha does **not** replace SN 22.89’s precise distinction between explicit self-view and residual `asmimāna`;
+- interpretation change: **MODERATE** — strengthened the distinction between language convention and self-reification;
+- early-discourse confirmation: **YES IN FUNCTION**, especially SN 1.25, MN 44, and SN 22.89;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The hierarchy in A57 is:
+
+- **MN 44** defines the identity-view constructions;
+- **SN 22.89** distinguishes them from residual “I am” conceit;
+- **SN 1.25** proves ordinary “I”-speech can remain after conceit is gone;
+- **Milindapañha** clarifies conventional naming, but does not supply the root definition of either `sakkāyadiṭṭhi` or `asmimāna`.
+
+### METHOD INSIGHT — THE BUDDHA DISAGGREGATES WHAT ORDINARY LANGUAGE BLURS TOGETHER
+
+Ordinary speech can make these look identical:
+“I say ‘I,’ therefore I believe in a self.”
+
+The early texts separate:
+- linguistic convention;
+- explicit view;
+- deeper conceit/tendency.
+
+This is a characteristic analytic move:
+**do not infer an inner metaphysical state merely from a surface word; inspect the underlying mode of grasping.**
+
+### PRACTICAL DIAGNOSTIC
+
+When “I” appears in thought or speech, ask:
+- Is this just ordinary communication?
+- Am I asserting one of the twenty self/aggregate relations?
+- Is there a subtler felt stance of “I am” even without a definite theory of what I am?
+- Does the “I am” feeling intensify around praise, blame, gain, loss, success, or failure?
+- Can I observe the aggregates arising and passing without turning that observation into another identity claim?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 44 Cūḷavedalla — twenty identity-view constructions around the five aggregates.
+- SN 22.89 Khemaka — no explicit self-view yet residual “I am” conceit/desire/underlying tendency remains.
+- SN 1.25 Arahanta — arahant may still say “I” and “me” as conventional worldly speech.
+
+Mandatory Milindapañha layer:
+- Nāgasena/chariot conventional designation;
+- neither-same-nor-another continuity as supporting clarification.
+
+### Next checkpoint — PHASE 4 A58
+
+**How does the residual `asmimāna` (“I am” conceit) relate to comparison-conceit—“I am better,” “I am equal,” “I am worse”—and to the broader process of `maññanā` / conceiving?**
+
+Required lanes:
+- distinguish bare “I am” from superiority/equality/inferiority comparison;
+- audit early-discourse uses of `māna`, `asmimāna`, and `maññati/maññanā`;
+- connect cautiously to prior Aṭṭhakavagga lexical work without closing that audit prematurely;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
