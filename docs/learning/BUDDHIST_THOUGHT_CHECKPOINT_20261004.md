@@ -13572,3 +13572,419 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A95
+
+**Central question:** How do `kamma`, `vipāka/phala`, present-moment consequences, and rebirth results relate in the early discourses, and why does the Buddha reject both fatalism (“everything is caused by past kamma”) and the idea that intentions have no consequences?
+
+### TEXT_ATTESTED — 1. AN 6.63 SAYS KAMMA HAS RESULTS AT DIFFERENT TIMES
+
+**AN 6.63 Nibbedhika** says:
+- `cetanā` is kamma;
+- one acts through body, speech, and mind;
+- kamma has a threefold result:
+  - experienced in this very life;
+  - on rebirth in the next life;
+  - at some later time.
+
+This gives the first hard boundary for A95:
+
+**kammic result is not restricted to rebirth.**
+Some results are said to be experienced in the present life.
+
+But the converse is also crucial:
+**not everything experienced in the present life is therefore a kammic result.**
+
+### TEXT_ATTESTED — 2. SN 36.21 EXPLICITLY REJECTS “EVERY FEELING COMES FROM PAST KAMMA”
+
+**SN 36.21 Sīvaka** directly addresses the claim:
+“Whatever a person experiences—pleasant, painful, or neutral—is all caused by what was done in the past.”
+
+The Buddha rejects this.
+
+The discourse lists multiple sources for feeling/pain, including:
+- bile disorder;
+- phlegm disorder;
+- wind disorder;
+- imbalance of the humors;
+- climate/weather;
+- careless or improper conduct;
+- assault/external agency;
+- result of kamma.
+
+Therefore:
+
+**kamma is one causal category among several relevant to present experience.**
+
+This is the strongest early-text guardrail against explaining every illness, accident, pain, or misfortune as “your past karma.”
+
+### IMPORTANT GUARDRAIL — SN 36.21 DOES NOT SAY KAMMA IS IRRELEVANT
+
+The discourse does not deny kammic result.
+
+It includes result of kamma as one genuine source.
+
+So A95 rejects both extremes:
+
+`everything is kamma-result`
+
+and
+
+`nothing is kamma-result`.
+
+The early position is conditional and plural-causal.
+
+### TEXT_ATTESTED — 3. THE SECTARIAN-DISCUSSION MATERIAL REJECTS PAST-KAMMA FATALISM BECAUSE IT DESTROYS MEANINGFUL PRESENT EFFORT
+
+In the discourse commonly numbered **AN 3.62 Tittha/Titthāyatana** in some editions, the Buddha criticizes the view:
+“Whatever a person experiences is all due to past deeds.”
+
+He argues that if present killing, stealing, lying, and other actions were simply necessitated by past deeds, then there would be no meaningful basis for:
+- “this should be done”;
+- “this should not be done”;
+- present effort and restraint.
+
+The doctrine collapses into inaction.
+
+Therefore A95 records:
+
+**the Buddha's kamma teaching presupposes ethically significant present action.**
+
+Past kamma conditions the present, but does not abolish present training.
+
+### TEXT_ATTESTED — 4. SN 35.146 DISTINGUISHES “OLD KAMMA” FROM “NEW KAMMA”
+
+**SN 35.146, The Cessation of Deeds**, gives a striking distinction.
+
+**Old kamma**
+- eye;
+- ear;
+- nose;
+- tongue;
+- body;
+- mind;
+
+are to be seen as:
+- formed by prior choices/intentions;
+- something now to be experienced.
+
+**New kamma**
+- what one currently does by body;
+- speech;
+- mind.
+
+This gives a powerful bounded model:
+
+**the present contains both inheritance and agency.**
+
+One receives a conditioned field from prior action,
+while also producing new action in the present.
+
+This is neither:
+- total freedom from conditions;
+- nor total determination by conditions.
+
+### IMPORTANT GUARDRAIL — “OLD KAMMA” DOES NOT MEAN EVERY PRESENT EVENT IS PREDETERMINED
+
+SN 35.146 says the six sense bases are old kamma.
+
+SN 36.21 says present feelings can arise from multiple causes.
+
+These two teachings must be held together.
+
+A95 therefore rejects the inference:
+`the present sense apparatus is conditioned by old kamma`
+therefore
+`every event occurring through that apparatus is fixed by old kamma`.
+
+That stronger claim is not supported.
+
+### TEXT_ATTESTED — 5. AN 3.34 LINKS KAMMIC RIPENING TO THE ROOTS OF ACTION
+
+**AN 3.34 Nidāna** says actions rooted in:
+- greed;
+- hate;
+- delusion
+
+can ripen and yield result:
+- in this life;
+- in the next life;
+- in a later period.
+
+It also says actions rooted in the opposite qualities are cut off as greed, hate, and delusion are destroyed.
+
+This reinforces A94-A95:
+
+**kamma is not just external behavior; its moral trajectory depends on the roots from which action arises.**
+
+### TEXT_ATTESTED — 6. THE SALT-LUMP DISCOURSE REJECTS A RIGID “TIT-FOR-TAT” MODEL
+
+In the discourse commonly known as the **Loṇakapalla / Salt Lump Sutta** (numbering varies by edition), the Buddha rejects the claim that:
+“however a deed is done, exactly so must it be experienced.”
+
+A small unskillful deed can have very different experiential weight depending on whether a person is:
+- undeveloped or developed in body;
+- ethics;
+- mind;
+- wisdom;
+- narrow or expansive in heart.
+
+The salt analogy:
+- same salt in a small cup makes it undrinkable;
+- same salt in a great river does not.
+
+A95 therefore rejects:
+**kamma = fixed cosmic payback of identical intensity.**
+
+The result is patterned, but not presented as a simple one-to-one mechanical replay.
+
+### IMPORTANT GUARDRAIL — THIS DOES NOT MEAN TRAINING ERASES THE FACT THAT AN ACTION WAS DONE
+
+The salt-lump teaching concerns how result is experienced.
+
+It does not say:
+- bad action becomes good;
+- history disappears;
+- victims cease to matter;
+- repair becomes unnecessary.
+
+A93-A94 already established the need for:
+- recognition;
+- correction;
+- restraint;
+- learning from harm.
+
+So:
+**transformability of result is not moral erasure.**
+
+### VIPĀKA / PHALA — WORKING DISTINCTION
+
+A95 does not force a final lexical separation between:
+- `vipāka`;
+- `phala`.
+
+Both can function in the broad field of:
+- result;
+- ripening;
+- fruition.
+
+For this checkpoint:
+**kammic result/fruition**
+means a result specifically connected to intentional action as kamma.
+
+Exact distribution of `vipāka` and `phala` across early texts remains **LEXICAL OPEN**.
+
+### PRESENT CONSEQUENCE IS NOT AUTOMATICALLY KAMMIC RESULT
+
+This distinction is central.
+
+A present event can be a consequence in an ordinary causal sense without the text classifying it as `kamma-vipāka`.
+
+SN 36.21 explicitly names:
+- climate;
+- bodily disorder;
+- carelessness;
+- assault
+
+alongside, but distinct from, kamma-result.
+
+Therefore A95 distinguishes:
+
+**ordinary causal consequence**
+→ what happens because of physical, social, behavioral, environmental, or other conditions;
+
+**kammic result**
+→ fruition specifically tied to morally significant volitional action.
+
+The categories may interact.
+They should not be collapsed.
+
+### CROSS-TEXT SYNTHESIS — PRESENT LIFE AS CONDITIONED FIELD PLUS FRESH ACTION
+
+A95's bounded model is:
+
+**past**
+→ prior kamma contributes to the conditioned field now inherited;
+
+**present**
+→ many non-kammic conditions also operate;
+→ current `cetanā` produces new kamma;
+→ current practice changes the mental context in which results are met;
+
+**future**
+→ current action can ripen later;
+→ including in future rebirth according to the early discourse model.
+
+This is **CROSS-TEXT SYNTHESIS** from AN 6.63, SN 36.21, SN 35.146, AN 3.34, and the salt-lump discourse.
+
+No single sutta presents this exact timeline diagram.
+
+### WHY THIS IS NOT FATALISM
+
+Fatalism would say:
+- present action is already fixed;
+- current effort cannot matter;
+- moral training cannot genuinely redirect the process.
+
+But the early texts repeatedly prescribe:
+- restraint;
+- right effort;
+- right intention;
+- correction after mistakes;
+- development of virtue, mind, and wisdom.
+
+SN 35.146 explicitly names current bodily, verbal, and mental action as **new kamma**.
+
+Therefore:
+**the possibility of present transformation is built into the kamma teaching itself.**
+
+### WHY THIS IS NOT MORAL CHAOS EITHER
+
+Rejecting determinism does not mean:
+- intentions are causally irrelevant;
+- actions simply disappear;
+- anything can lead to anything.
+
+AN 6.63 and AN 3.34 explicitly say kamma has results and ripens according to morally significant roots and destinations.
+
+Therefore A95 also rejects:
+`present freedom = actions have no consequences`.
+
+The bounded middle is:
+
+**conditioned, but not predetermined;
+consequential, but not mechanically fixed.**
+
+This final sentence is **CROSS-TEXT SYNTHESIS**, not canonical wording.
+
+### IMPORTANT GUARDRAIL — “KARMA” SHOULD NOT BE USED TO BLAME SUFFERERS
+
+SN 36.21 directly blocks the blanket move:
+“you are suffering, therefore you must have done something bad.”
+
+The text itself gives multiple non-kammic sources of pain.
+
+Therefore using kamma as a universal explanation for:
+- illness;
+- disability;
+- assault;
+- accident;
+- weather-related suffering
+
+is textually unsafe.
+
+A95 does not deny that kamma may be relevant in some cases.
+It rejects **unwarranted certainty**.
+
+### RELATION TO REBIRTH RESULTS
+
+AN 6.63 explicitly includes:
+- next-life result;
+- later result.
+
+AN 3.34 likewise speaks of ripening in relation to rebirth.
+
+A95 therefore records as **TEXT_ATTESTED within the early discourse model**:
+**kamma can bear fruit beyond the present life.**
+
+But this immediately raises the next problem:
+
+if no permanent self transmigrates,
+**what exactly continues from action to result across lives?**
+
+That question is reserved for A96.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passage: the dilemma on whether all pain arises from kamma;
+- Nāgasena explicitly says:
+  - not all pain is rooted in kamma;
+  - there are eight causes;
+  - attributing every pain to kamma is false;
+- he then cites the **Sīvaka teaching** as authority;
+- role in A95:
+  - strongly confirms the anti-fatalistic reading of SN 36.21;
+  - shows a later/paracanonical tradition preserving the distinction between kammic and non-kammic causes;
+- secondary theme:
+  - Milindapañha also preserves the idea that deeds can continue to bear fruit across rebirth without a permanent soul;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - its broader karmic explanations do not override the early anti-determinist constraints;
+- interpretation change: **STRONG CONFIRMATION OF SN 36.21, NO SOURCE OVERRIDE**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 6.63 — `cetanā` as kamma; results in this life, next rebirth, or later.
+- SN 36.21 — multiple causes of feeling; blanket past-kamma explanation rejected.
+- AN 3.62/Tittha material — past-kamma determinism rejected as leading to inaction.
+- SN 35.146 — old kamma as six sense bases; new kamma as present bodily, verbal, mental action.
+- AN 3.34 — greed/hate/delusion-rooted action and later ripening.
+- Loṇakapalla / Salt Lump discourse — result not rigidly identical in experiential weight across differently developed persons.
+
+Later/paracanonical:
+- Milindapañha dilemma on pain and kamma, explicitly echoing the Sīvaka teaching.
+
+### METHOD INSIGHT
+
+A95 reveals a central structural feature of the Buddha's causal thought:
+
+**the present is neither a blank slate nor a prison sentence from the past.**
+
+It is:
+- conditioned by what came before;
+- affected by many kinds of causes;
+- and still a site where new volitional action occurs.
+
+This is why practice is possible.
+
+If everything were already fixed:
+the path would be meaningless.
+
+If action had no patterned result:
+the path would also be meaningless.
+
+The teaching requires both:
+**conditioning and transformability.**
+
+### PRACTICAL DIAGNOSTIC
+
+When saying “this is karma,” ask:
+- What textual basis identifies this event as kammic result?
+- Could bodily, environmental, social, accidental, or behavioral causes explain it?
+- Am I confusing every consequence with `vipāka`?
+- Am I blaming a sufferer without evidence?
+- What new kamma is being made by the response right now?
+- Is present effort still possible?
+- Is the mind using “past karma” to avoid responsibility?
+- Is the mind using “free choice” to ignore conditioning?
+- What can actually be trained now?
+
+### Open audit
+
+- full lexical/context audit of `kamma`, `vipāka`, `phala`, `vedanīya`, `purāṇa-kamma`, and `nava-kamma`;
+- early parallel stress-test for SN 36.21 and SN 35.146;
+- resolve numbering differences for the Tittha/Titthāyatana and Salt Lump discourses across editions before ID-level canonical lock;
+- distinguish present-life kammic result from immediate non-kammic consequence more precisely;
+- audit how mental development modifies the experience of old kamma without implying moral erasure;
+- continue SN 35 / SN 36 / SN 45–46 ID-level work;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A95 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A96
+
+**If there is no permanent self that transmigrates, what continues from kamma to rebirth and from action to result across lives, and how do the early discourses avoid both “the same self continues” and “a completely different being receives the result”?**
+
+Required lanes:
+- MN 38 on the claim that the same consciousness runs through rebirth;
+- SN 12 material on “who feels / who acts” questions and dependent arising;
+- same/not-same continuity problem in early discourse;
+- distinguish causal continuity from soul-transmigration;
+- mandatory Milindapañha consultation on name-and-form, mango/lamp/milk analogies, and “neither same nor another”;
+- preserve early-text / cross-text synthesis / later-paracanonical / lexical-open boundaries.
+
