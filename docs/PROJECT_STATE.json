@@ -488,12 +488,12 @@
   "owner_learning_track_early_buddhist_canon_started": "2026-10-04",
   "owner_learning_track_early_buddhist_canon_background_runtime": false,
   "owner_learning_track_early_buddhist_canon_status": "ACTIVE_PRIORITY_SN12_22_35_36_45_46_STRUCTURAL_ID_COVERAGE_COMPLETE_DEPTH_PARALLEL_AUDIT_CONTINUES",
-  "owner_learning_track_early_buddhist_canon_next_checkpoint": "CORE_TEN_SUTTA_COMPARATIVE_CLUSTER_PALI_ENGLISH_VIETNAMESE_AND_PARALLELS",
-  "owner_learning_track_early_buddhist_reasoning_model": "docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md",
+  "owner_learning_track_early_buddhist_canon_next_checkpoint": "UPGRADE_SELECTED_SN22_SN35_SN45_SN46_IDS_TO_DEEP_ADD_SA_MA_PARALLELS_THEN_ARTHAPADA_CLAUSE_ALIGNMENT_AND_MILINDA_PREDICTION_BACKCHECK",
+  "owner_learning_track_early_buddhist_reasoning_model": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
   "owner_learning_track_early_buddhist_target": "WHOLE_CANON_TRANSLATION_COMPARATIVE_AND_BLINDED_RESPONSE_REASONING_MASTERY",
   "owner_learning_track_early_buddhist_mastery_claim": "NOT_YET_COMPLETE",
   "owner_learning_track_early_buddhist_next_checkpoint": "UPGRADE_SELECTED_SN22_SN35_SN45_SN46_IDS_TO_DEEP_ADD_SA_MA_PARALLELS_THEN_ARTHAPADA_CLAUSE_ALIGNMENT_AND_MILINDA_PREDICTION_BACKCHECK",
-  "owner_learning_track_early_buddhist_reasoning_synthesis": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md",
+  "owner_learning_track_early_buddhist_reasoning_synthesis": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
   "owner_learning_track_early_buddhist_reasoning_status": "HARD_CLUSTER_INTEGRATED_REBIRTH_IDENTITY_ERROR_CLOSED_MECHANISM_PARTIAL",
   "owner_learning_track_early_buddhist_adversarial_cluster_1": "PASS_WITH_MODEL_REVISIONS_MN1_19_20_21_26_38_39_72_SN35_23_SN44_10",
   "owner_learning_track_early_buddhist_stress_test_2": "PASS_WITH_REFINEMENTS_MN22_58_60_61_117_SN12_15_SN22_85_SN35_28_30_ATTHAKAVAGGA_SAMPLES",
@@ -523,5 +523,8 @@
   "owner_learning_track_early_buddhist_sn35_id_index": "docs/learning/EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
   "owner_learning_track_early_buddhist_sn45_id_index": "docs/learning/EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json",
   "owner_learning_track_early_buddhist_sn46_id_index": "docs/learning/EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json",
-  "owner_learning_track_early_buddhist_cross_recensional_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md"
+  "owner_learning_track_early_buddhist_cross_recensional_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md",
+  "owner_learning_track_early_buddhist_memory_audit": "docs/learning/EARLY_BUDDHIST_CHAT_LEARNING_MEMORY_AUDIT_20261004.md",
+  "owner_learning_track_early_buddhist_milindapanha_continuity_rule": "REQUIRED_EVERY_BUDDHIST_STUDY_SEAT_AS_LATER_EXPLANATORY_REASONING_REFERENCE_BACKCHECK_WITH_NIKAYA_AGAMA",
+  "owner_learning_track_early_buddhist_memory_pointer_status": "REPAIRED_NO_KNOWN_MAJOR_CHAT_ONLY_LEARNING_GAP_2026-10-04"
 }
