@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A47_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A48",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A48_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A49",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -528,5 +528,7 @@
   "owner_learning_track_buddhist_thought_a46_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT_WITH_SN12_AND_LEXICAL_GUARDRAILS",
   "owner_learning_track_buddhist_thought_a46_milindapanha": "CONSULTED_CONSEQUENCE_SENSITIVE_SELECTION_REASONING_WISDOM_AND_SCHOLARLY_CORRECTION",
   "owner_learning_track_buddhist_thought_a47_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT_SN12_AUDIT_OPEN",
-  "owner_learning_track_buddhist_thought_a47_milindapanha": "CONSULTED_CHARIOT_DESIGNATION_CONTINUITY_WITHOUT_INVARIANT_SELF"
+  "owner_learning_track_buddhist_thought_a47_milindapanha": "CONSULTED_CHARIOT_DESIGNATION_CONTINUITY_WITHOUT_INVARIANT_SELF",
+  "owner_learning_track_buddhist_thought_a48_claim_class": "TEXT_ATTESTED_RECIPROCAL_CONDITIONALITY_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT_PARALLEL_AUDIT_OPEN",
+  "owner_learning_track_buddhist_thought_a48_milindapanha": "CONSULTED_NAME_FORM_INTERDEPENDENCE_HEN_EGG_CHARIOT_AND_CONTINUITY_WITHOUT_IDENTITY"
 }
