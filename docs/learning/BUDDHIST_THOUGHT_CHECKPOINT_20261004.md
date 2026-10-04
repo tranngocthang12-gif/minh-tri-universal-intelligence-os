@@ -8533,3 +8533,282 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A81
+
+**Central question:** How do `samatha` and `vipassanā` actually relate in the early discourses: two separate roads, two qualities that can develop in different orders, or mutually supporting functions within one path?
+
+### TEXT_ATTESTED — 1. AN 2.31 DISTINGUISHES THEIR FUNCTIONS WITHOUT MAKING THEM RIVAL PATHS
+
+**AN 2.31** says both serenity (`samatha`) and insight (`vipassanā`) have a share in clear knowing.
+
+It gives a functional distinction:
+- when serenity is developed, the mind is developed;
+- when the mind is developed, passion is abandoned;
+- when insight is developed, wisdom is developed;
+- when wisdom is developed, ignorance is abandoned.
+
+It then connects:
+- fading of passion with freedom of heart/mind;
+- fading of ignorance with freedom by wisdom.
+
+A81 therefore preserves two facts at once:
+
+1. `samatha` and `vipassanā` are **not identical functions**;
+2. the discourse presents both as participating in the liberating architecture.
+
+### TEXT_ATTESTED — 2. AN 4.170 EXPLICITLY ALLOWS MORE THAN ONE ORDER OF DEVELOPMENT
+
+**AN 4.170 Yuganaddha** is decisive.
+
+Ānanda says arahantship is declared by practitioners who have followed one of four patterns:
+
+1. insight developed with serenity going first;
+2. serenity developed with insight going first;
+3. serenity and insight developed yoked together;
+4. a case where the mind is caught in agitation regarding Dhamma, then settles, becomes unified and concentrated, after which the path arises.
+
+In each pattern:
+- the path arises;
+- it is cultivated and developed;
+- fetters are abandoned;
+- underlying tendencies come to an end.
+
+Therefore the early text does **not** impose one universal temporal order:
+`first samatha, only later vipassanā`.
+
+It also does **not** impose:
+`first vipassanā, samatha unnecessary`.
+
+### TEXT_ATTESTED — 3. AN 4.93 / AN 4.94 SHOW DIFFERENT STARTING PROFILES THAT SHOULD CONVERGE
+
+These discourses describe four types of practitioner:
+
+- internal serenity but not higher discernment;
+- higher discernment but not internal serenity;
+- neither;
+- both.
+
+The practical instruction is striking:
+
+- one who has serenity but lacks discernment should develop discernment;
+- one who has discernment but lacks serenity should develop serenity;
+- one who lacks both should energetically develop both;
+- one who has both should continue for the ending of the defilements.
+
+This strongly supports the A81 model:
+
+**different starting strengths are possible, but the training tends toward integration rather than permanent specialization.**
+
+### TEXT_ATTESTED — 4. SN 43.2 NAMES BOTH AS THE PATH TO THE UNCONDITIONED
+
+**SN 43.2** defines the unconditioned as the ending of greed, hate, and delusion.
+
+It then names the path leading to the unconditioned:
+**serenity and insight.**
+
+This is a compact early-text guardrail against turning the pair into mutually exclusive alternatives.
+
+### TEXT_ATTESTED — 5. MN 149 SAYS THE TWO PROCEED TOGETHER IN THE DEVELOPED PATH
+
+**MN 149 Mahāsaḷāyatanika** describes correct knowing and seeing at the six sense bases, the development of the Noble Eightfold Path, and states that serenity and insight proceed in conjunction.
+
+This fits AN 4.170:
+their order of emphasis may differ during development, but the mature path need not be split into two unrelated systems.
+
+### TEXT_ATTESTED — 6. SAMĀDHI CAN SUPPORT KNOWING-AND-SEEING
+
+**SN 12.23** gives the conditional sequence:
+
+`samādhi`
+→ knowing-and-seeing things as they have come to be
+→ disenchantment
+→ dispassion
+→ liberation.
+
+**AN 11.2** gives a closely related progression: when the mind is immersed in samādhi, knowing-and-seeing naturally follows.
+
+Therefore there is strong early-text support for:
+
+**collectedness / samādhi can condition liberating seeing.**
+
+But A81 does **not** turn this into a universal fixed chronology, because AN 4.170 explicitly allows insight to precede serenity.
+
+### IMPORTANT LEXICAL GUARDRAIL — SAMATHA IS NOT SIMPLY A SYNONYM FOR ALL SAMĀDHI
+
+The early texts connect serenity and concentration closely, but the words are not globally interchangeable.
+
+Working distinction:
+
+- `samatha`: calming, settling, serenity/tranquillity of mind;
+- `samādhi`: collectedness, unification, immersion/concentration;
+- `vipassanā`: clear seeing / insight into phenomena;
+- `paññā`: wisdom/discernment.
+
+Their functions overlap and support one another, but A81 does not collapse them into a one-to-one dictionary equivalence.
+
+Claim class: **LEXICAL WORKING MODEL — OPEN TO CONTEXT AUDIT**.
+
+### IMPORTANT GUARDRAIL — VIPASSANĀ IS NOT JUST “THINKING ABOUT IMPERMANENCE”
+
+If `vipassanā` merely meant holding correct concepts, AN 4.94 would not distinguish higher discernment from serenity as something to be cultivated in lived training.
+
+Prior checkpoints also showed:
+- SN 22.89: intellectual non-self understanding may coexist with residual “I am” tendency;
+- SN 22.59: liberating seeing changes appropriation and leads to dispassion.
+
+Thus:
+**vipassanā is not reducible to repeating doctrinal propositions.**
+
+### IMPORTANT GUARDRAIL — SAMATHA IS NOT MERE RELAXATION
+
+The early role of serenity is not simply:
+“feel calm.”
+
+It develops and stabilizes the mind so that:
+- passion weakens;
+- the mind becomes capable of concentration;
+- knowing-and-seeing can deepen.
+
+A pleasant relaxed state without this liberative orientation is not enough to establish the full early-text function of `samatha`.
+
+### EARLY-TEXT MODEL — DIFFERENT ORDERS, COMMON CONVERGENCE
+
+A bounded A81 synthesis is:
+
+**Path A**
+`samatha`
+→ stronger collectedness
+→ `vipassanā`
+→ path development
+→ ending fetters.
+
+**Path B**
+`vipassanā`
+→ clearer discernment
+→ `samatha`
+→ path development
+→ ending fetters.
+
+**Path C**
+`samatha + vipassanā`
+→ yoked development
+→ path development
+→ ending fetters.
+
+The exact diagrams are **CROSS_TEXT SYNTHESIS**.
+AN 4.170 attests the different orders and yoked development, but does not present these arrows as a later meditation manual.
+
+### IMPORTANT GUARDRAIL — DO NOT BACK-PROJECT LATER “TWO MEDITATION SYSTEMS” TOO EARLY
+
+Later Buddhist traditions can organize practice into explicit “samatha methods” and “vipassanā methods,” sometimes with strongly differentiated techniques and stage maps.
+
+A81 does not deny the value of those later systems.
+
+But for the present project, claims about **the Buddha’s early thought** remain narrower:
+
+- early texts distinguish serenity and insight;
+- allow different orderings;
+- expect development of both in the liberating trajectory;
+- and do not require the rigid assumption of two permanently separate roads.
+
+Any more detailed school-specific system is **LATER/SYSTEMATIC** unless independently supported by early-text evidence.
+
+### RELATION TO A80
+
+A80 found:
+- freedom of heart and freedom by wisdom are functionally distinguishable;
+- final liberation frequently integrates them.
+
+A81 now finds the same architectural pattern earlier in the path:
+
+- serenity and insight can differ in function and order;
+- but the training converges toward an integrated ending of passion, ignorance, fetters, and defilements.
+
+This is **CROSS-TEXT STRUCTURAL SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant themes:
+  1. Nāgasena compares meditation/concentration to the apex of a roof or the commander around whom other wholesome qualities incline and gather;
+  2. he says one established in meditation knows things as they really are;
+  3. wisdom is distinguished by cutting off and illuminating;
+  4. distinct wholesome qualities are said to work toward a common result: ending harmful dispositions;
+- role in A81:
+  - supports the cooperative relation of stabilized mind and wisdom;
+  - supports functional distinction without permanent path-splitting;
+  - supports the idea that concentration prepares/organizes the mind while wisdom performs penetrative discernment;
+- limitation:
+  - Milindapañha does not establish the early Nikāya chronology of serenity and insight;
+  - AN 4.170 remains the decisive source for variable order;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 2.31 — functional distinction and paired contribution to clear knowing.
+- AN 4.170 — serenity-first, insight-first, yoked, and fourth agitation-settling pattern.
+- AN 4.93 / AN 4.94 — different starting profiles should develop the missing quality and converge on both.
+- SN 43.2 — serenity and insight as path to the unconditioned.
+- MN 149 — serenity and insight proceeding in conjunction.
+- SN 12.23 / AN 11.2 — samādhi conditioning knowing-and-seeing and release sequence.
+
+Later/paracanonical:
+- Milindapañha on meditation/concentration, wisdom, and cooperative wholesome qualities.
+
+### METHOD INSIGHT
+
+A81 reveals a recurring pattern in the Buddha’s thought:
+
+**distinguish functions, but do not freeze the path into false binaries.**
+
+The relevant question is not:
+“Are you a samatha person or a vipassanā person?”
+
+The more faithful early-text questions are:
+- What quality is weak now?
+- Does the mind need greater settling?
+- Does understanding need greater penetration?
+- Are both becoming coordinated?
+- Are fetters and underlying tendencies actually weakening?
+
+### PRACTICAL DIAGNOSTIC
+
+When evaluating practice, ask:
+- Is calm increasing but understanding stagnant?
+- Is analysis increasing while the mind remains agitated and unstable?
+- Am I using “insight” as a label for intellectual thought?
+- Am I using “serenity” as a label for pleasant relaxation?
+- Which quality is currently underdeveloped?
+- Am I insisting on one universal order despite AN 4.170?
+- Am I importing a later meditation-school taxonomy and calling it the only early-Buddhist model?
+
+### Open audit
+
+- occurrence-level audit of `samatha`, `samādhi`, `vipassanā`, `paññā`, and `yuganaddha`;
+- grammar/interpretation audit of AN 4.170’s fourth pattern (`dhammuddhaccaviggahita mānasa`);
+- early Chinese parallel stress-test for AN 4.170 and serenity/insight paired formulas;
+- determine how often explicit `vipassanā` terminology occurs compared with broader “knowing-and-seeing” language;
+- distinguish early path architecture from later meditation-manual stage systems;
+- continue SN 12 / SN 22 / SN 35 / SN 45–46 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A81 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A82
+
+**What exactly is `jhāna` in the early discourses, how does it relate to right samādhi, serenity, and insight, and which claims about “absorption” belong to early text versus later meditation systematization?**
+
+Required lanes:
+- first–fourth jhāna formulas in MN / DN / SN;
+- right concentration formula in the Noble Eightfold Path;
+- AN material on jhāna plus insight/liberation;
+- distinguish jhāna from formless attainments where the texts do;
+- avoid importing later nimitta/access-concentration terminology unless explicitly labelled later;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
