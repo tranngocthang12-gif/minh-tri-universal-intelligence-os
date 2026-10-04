@@ -1111,6 +1111,148 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+
+## Completed checkpoint A45
+
+**Central question:** How does `dhammavicaya` investigate without becoming restless analysis, argument-addiction, or `papañca`?
+
+### TEXT_ATTESTED
+
+1. **SN 46.3** presents a disciplined sequence: Dhamma is first recollected mindfully; then it is discriminated, examined, and investigated **with wisdom**; this arouses energy, and the sequence proceeds through rapture, tranquillity, concentration, and equanimity. `Dhammavicaya` is therefore embedded in a whole path-process rather than treated as endless discursive activity.
+2. **MN 118** gives the same functional progression in meditation: established mindfulness conditions investigation with wisdom; investigation arouses energy; rapture is followed by tranquillity; tranquillity supports concentration; the concentrated mind is then watched with equanimity. Investigation serves a movement toward collected, balanced knowing.
+3. **SN 46.53** explicitly makes investigation state-sensitive. When the mind is sluggish, investigation, energy, and rapture are timely; when the mind is restless, those same activating factors are untimely, while tranquillity, concentration, and equanimity are timely. Mindfulness is useful in every case. This directly blocks the idea that “more analysis is always better.”
+4. **MN 10 / DN 22** frame the awakening factors within mindfulness: one knows whether each factor is present or absent, understands its arising and fulfillment, observes arising and vanishing, and remains without clinging. The task is lucid observation and cultivation, not attachment to the act of analysis.
+5. **MN 18** distinguishes a very different mental trajectory: contact conditions feeling; what is felt is perceived; what is perceived is thought about; what is thought about can become `papañca`, after which proliferated perceptions and categories assail the person. The danger is not “thinking” as such but thought becoming self-multiplying, identity-laden, and conflict-generating.
+
+### CENTRAL DISTINCTIONS
+
+**Dhammavicaya**
+- begins from mindfulness rather than losing mindfulness;
+- examines a definite Dhamma/phenomenon with wisdom;
+- has a task: discriminate, understand, test, and penetrate;
+- is responsive to the actual state of mind;
+- can hand the process onward to tranquillity, concentration, and equanimity.
+
+**Papañca**
+- multiplies beyond the task at hand;
+- recruits past/future categories and self-referential constructions;
+- begins to “assail” the thinker rather than clarify the object;
+- can fuel contention, identity, and compulsive continuation.
+
+**Precision**
+- sharpens the question;
+- discards irrelevant branches;
+- knows what evidence would settle the issue;
+- stops or changes mode when the task is complete.
+
+**Compulsive intellectualization**
+- keeps generating distinctions after they no longer clarify;
+- treats continued thinking as proof of seriousness;
+- resists stillness because stopping analysis feels like losing control;
+- converts inquiry into identity: “I am the one who understands/debates/analyzes.”
+
+The last two are analytical applications, not canonical technical categories.
+
+### CROSS_TEXT SYNTHESIS
+
+A healthy investigation loop is:
+
+`mindfulness → bounded question → investigation with wisdom → energy → clearer seeing → tranquillity → concentration → equanimous review → let go / continue only if needed`.
+
+A proliferative loop is:
+
+`contact → feeling → perception → thought → self-referential multiplication → more categories → more reaction → more thought`.
+
+The first sequence is anchored in SN 46.3, SN 46.53, and MN 118; the contrast with the second draws on MN 18. The early texts do **not** state in one sentence that “dhammavicaya is the opposite of papañca”; that formulation is therefore **CROSS_TEXT_SYNTHESIS**, not `TEXT_ATTESTED`.
+
+### WHEN ANALYSIS SERVES SEEING
+
+Analysis is serving the path when:
+- it reveals arising/ceasing, skillful/unskillful, cause/result, or what is to be abandoned/developed;
+- it reduces confusion enough for practice to become more direct;
+- it can yield to calm when the mind is already activated;
+- it remains corrigible by experience and Dhamma;
+- it weakens greed, aversion, delusion, clinging, or wrong certainty.
+
+Analysis is drifting toward proliferation when:
+- the same issue is repeatedly recombined without new evidence;
+- the mind is visibly more restless but keeps adding investigation-energy;
+- the inquiry shifts from “what is happening?” to “what does this prove about me/us/them?”;
+- categories multiply faster than understanding;
+- stopping feels intolerable even though the useful question has been answered.
+
+These are practical diagnostics derived from the textual pattern, not a verbatim canonical checklist.
+
+### RELATION AMONG THE SEVEN AWAKENING FACTORS
+
+A45 adds an important correction to a simplistic “wisdom means more analysis” reading.
+
+The seven factors behave more like a **balanced system**:
+- `sati` keeps the object and state in view;
+- `dhammavicaya`, `viriya`, and `pīti` can raise a sluggish mind;
+- `passaddhi`, `samādhi`, and `upekkhā` can settle a restless mind;
+- mature practice changes emphasis according to conditions.
+
+Thus the question is not merely “Is investigation present?” but also “Is this the right factor to strengthen **now**?”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: functional coordination of mindfulness, reasoning/wisdom, meditation, and stopping conditions;
+- Mi Tiên describes mindfulness as repeatedly bringing to mind what is good/bad and helpful/unhelpful, meditation as a leading/organizing quality, and wisdom as cutting off and illuminating;
+- in a later discussion, Nāgasena says that when reasoning wisdom has accomplished its task, the reasoning ceases while the knowledge gained by it remains;
+- use in A45: this provides a strong later analogy for **task-bounded inquiry**—thinking is an instrument, not something that must perpetuate itself;
+- interpretation change: **MODERATE** — sharpened the stopping rule: investigation is complete when its clarifying/cutting function has been fulfilled, not when every conceivable conceptual branch has been exhausted;
+- early-discourse confirmation: **PARTIAL/FUNCTIONAL**, especially via SN 46.53 (state-sensitive use), SN 46.3 / MN 118 (investigation embedded in a sequence that matures into tranquillity and concentration), and MN 18 (danger of proliferation);
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### OPEN / CHECK
+
+1. The exact semantic boundary among `dhammavicaya`, `vitakka`, `vicāra`, and `papañca` should not be collapsed. They overlap functionally in places but are not interchangeable terms.
+2. MN 18 shows the route into `papañca`, but it does not define every discursive thought as proliferation.
+3. The Aṭṭhakavagga lexical audit on `diṭṭhi`, `sacca`, `saññā`, `maññati`, `papañca`, and `nissaya` remains open and may narrow the present synthesis.
+4. Early-parallel stress tests remain required before promoting broader claims about “Buddhist anti-intellectualism” or a universal theory of conceptual thought. No such broad claim is made here.
+
+### PRACTICAL DIAGNOSTIC
+
+Before continuing an analysis, ask:
+- What exact question am I trying to settle?
+- What observation/text/practice result could actually settle it?
+- Is the mind dull, balanced, or already restless?
+- Has the investigation produced clearer seeing, or only more branches?
+- Would tranquillity/concentration now reveal more than another argument?
+- If I stop thinking about this for a moment, is the useful understanding lost—or only the momentum of thought?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 46.3 on recollection, investigation with wisdom, and the progressive awakening-factor sequence.
+- SN 46.53 on right/wrong times for activating versus calming awakening factors.
+- MN 118 on mindfulness → investigation → energy → rapture → tranquillity → concentration → equanimity.
+- MN 10 / DN 22 on knowing presence, arising, and development of awakening factors without clinging.
+- MN 18 Madhupiṇḍika on perception → thought → `papañca` and proliferated categories.
+
+Mandatory Milindapañha layer:
+- mindfulness as recollection/keeping-up of helpful and unhelpful qualities;
+- wisdom as cutting off and illumination;
+- meditation as organizing/leading quality;
+- reasoning ceases after its task while acquired knowledge remains.
+
+### Next checkpoint — PHASE 4 A46
+
+Central question:
+
+**How does wise attention (`yoniso manasikāra`) decide what is worth investigating, what should be left aside, and whether inquiry is weakening or feeding craving, self-view, and proliferation?**
+
+Required lanes:
+- MN 2 on wise versus unwise attention and the taints;
+- SN 46.13 on wise attention as forerunner of the awakening factors;
+- relation between `yoniso manasikāra`, `dhammavicaya`, and the four-task grammar of the noble truths;
+- questions that lead toward dispassion/cessation versus speculative self-entanglement;
+- relation to MN 18 and `papañca`;
+- mandatory Milindapañha consultation;
+- preserve `TEXT_ATTESTED` versus `CROSS_TEXT_SYNTHESIS` boundaries.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
