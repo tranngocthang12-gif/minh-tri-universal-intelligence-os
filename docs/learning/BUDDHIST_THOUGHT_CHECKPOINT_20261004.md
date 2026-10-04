@@ -7168,3 +7168,261 @@ Required lanes:
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
 This checkpoint preserves A30–A44 and routes the next work to A45.
+
+## Completed checkpoint A76
+
+**Central question:** How does `paññā` / wisdom differ from mindfulness and clear comprehension, and what exactly does wisdom see that turns observation into disenchantment, dispassion, and release?
+
+### TEXT_ATTESTED — 1. MN 43 DEFINES WISDOM BY WHAT IT UNDERSTANDS
+
+In **MN 43 Mahāvedalla**, the wise person is called wise because they understand:
+- suffering;
+- the origin of suffering;
+- the cessation of suffering;
+- the path leading to cessation.
+
+The same discourse gives wisdom three purposes:
+- direct knowledge;
+- full understanding;
+- abandoning.
+
+This gives A76 a strong early-text guardrail:
+**paññā is not mere noticing. It is understanding experience in a way that penetrates the problem of suffering, its arising, its cessation, and the path.**
+
+### TEXT_ATTESTED — 2. WISDOM AND CONSCIOUSNESS ARE CLOSELY CONNECTED BUT FUNCTIONALLY DISTINCT
+
+MN 43 says wisdom and consciousness are conjoined and cannot simply be pulled apart in the experienced act of knowing.
+
+Yet their task differs:
+- wisdom is to be developed;
+- consciousness is to be fully understood.
+
+Therefore A76 rejects:
+`whatever is conscious is already wise`.
+
+Consciousness can register an object or experience.
+Wisdom concerns the liberating understanding of what is known.
+
+### TEXT_ATTESTED — 3. MINDFULNESS OBSERVES ARISING AND PASSING; WISDOM DRAWS THE LIBERATING IMPLICATION
+
+**MN 10** repeatedly instructs observation of:
+- arising;
+- passing away;
+- arising-and-passing
+
+in body, feelings, mind, and dhammas, while remaining without clinging to anything in the world.
+
+A74-A75 established:
+- `sati` keeps the relevant field/task present;
+- `sampajañña` clearly knows the current activity/state.
+
+A76 adds:
+**paññā understands what the observed arising and passing mean for clinging, identity, suffering, and release.**
+
+This exact three-function division is **CROSS_TEXT SYNTHESIS** rather than one canonical dictionary sentence.
+
+### TEXT_ATTESTED — 4. SN 22.59 SHOWS THE LIBERATING CONTENT OF CORRECT WISDOM
+
+**SN 22.59 Anattalakkhaṇa** applies correct wisdom to the five aggregates.
+
+Form, feeling, perception, formations, and consciousness are to be seen in terms that deny appropriation:
+- not mine;
+- not what I am;
+- not my self.
+
+The discourse then gives the sequence:
+**seeing thus → disenchantment (`nibbidā`) → dispassion (`virāga`) → liberation (`vimutti`)**.
+
+This is decisive for A76.
+
+Wisdom does not merely add more information about the aggregates.
+It changes the relation to them:
+what was appropriated as “mine / I / self” is no longer taken that way.
+
+### TEXT_ATTESTED — 5. SN 22.89 SHOWS WHY INTELLECTUAL NON-SELF BELIEF IS NOT ENOUGH
+
+**SN 22.89 Khemaka** is especially important.
+
+Khemaka does not identify any of the five aggregates as self or belonging to self, yet a residual:
+- “I am” conceit;
+- “I am” desire;
+- “I am” underlying tendency
+
+still remains.
+
+The text says this residue is worn away by sustained contemplation of:
+- such is each aggregate;
+- such its arising;
+- such its disappearance.
+
+Therefore:
+**wisdom is not exhausted by holding the proposition “there is no self.”**
+
+The deeper transformation occurs when the conditioned arising and passing of the very field from which “I am” is built is repeatedly known and seen.
+
+### WHAT WISDOM “SEES”
+
+A76 gives a bounded synthesis.
+
+Wisdom sees that the observed phenomena are:
+- arisen through conditions;
+- subject to arising and passing;
+- unstable and therefore unfit for secure appropriation;
+- not properly held as “mine / I / self”;
+- bound up with suffering when clung to;
+- capable of cessation in the relevant causal chain.
+
+It also sees the task-structure of the Four Noble Truths:
+- suffering is to be understood;
+- its origin is to be abandoned;
+- cessation is to be realized;
+- the path is to be developed.
+
+The last four task-verbs are a broader early-Buddhist synthesis and should not be projected into every passage as though every sutta states all four together in identical wording.
+
+### WHY OBSERVATION BECOMES DISENCHANTMENT
+
+Mere observation can remain fascination.
+
+Wisdom changes the valuation of what is observed.
+
+What looked:
+- stable enough to rely on;
+- controllable enough to possess;
+- personal enough to call “me”;
+- promising enough to cling to
+
+is seen as:
+- conditioned;
+- unstable;
+- not fully controllable;
+- unable to sustain the burden placed on it by craving and identity.
+
+Thus `nibbidā` should not be reduced to hatred or aversion.
+In this context it is better treated as **disenchantment / loss of fascination / turning away born of seeing clearly**.
+
+Exact lexical range remains **OPEN/CHECK** for A77.
+
+### THREE-CHARACTERISTIC GUARDRAIL
+
+Early discourses clearly attest:
+- impermanence;
+- suffering/unsatisfactoriness;
+- not-self
+
+in major liberating analyses.
+
+But A76 does **not** assume that every early passage is built from a later fixed scholastic template called “the three characteristics.”
+
+Use the triad where the text supports it.
+Do not back-project a later systematization into passages that make a narrower argument.
+
+Claim class: **TEXT_ATTESTED CORE + CROSS_TEXT SYNTHESIS WITH LATER-SYSTEMATIZATION GUARDRAIL**.
+
+### RELATION TO RIGHT VIEW, MINDFULNESS, CLEAR COMPREHENSION, AND EFFORT
+
+A bounded functional loop is:
+
+`right view`
+→ identifies what matters for suffering and cessation
+
+`sati`
+→ keeps the relevant field and task present
+
+`sampajañña`
+→ clearly knows what is happening in activity/experience
+
+`paññā`
+→ penetrates arising, passing, appropriation, suffering, and cessation
+
+`right effort`
+→ supports abandoning and development according to that understanding
+
+No single early discourse states this complete loop verbatim.
+Claim class: **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passages/themes:
+  1. **Mil 3.1.8** distinguishes reasoning/attention from wisdom: reasoning/comprehension “grasps,” while wisdom “cuts off,” illustrated by the barley-reaper and sickle;
+  2. the wisdom-characteristic discussion says wisdom also **illuminates**: when wisdom arises it dispels the darkness of ignorance, brings the light of knowledge, and makes the Noble Truths plain;
+- role in A76:
+  - strongly supports the distinction between merely holding/attending to an object and the deeper liberating function of wisdom;
+  - clarifies why A75's clear comprehension is not yet equivalent to full liberating wisdom;
+- limitation:
+  - these formulations are **LATER/PARACANONICAL SUPPORT**;
+  - the early definition and sequence are still grounded in MN 43, MN 10, SN 22.59, and SN 22.89;
+- interpretation change: **STRONG CLARIFICATION, NO SOURCE OVERRIDE**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 43 — wisdom understands the Four Noble Truths; wisdom is developed; its purpose includes direct knowledge, full understanding, and abandoning.
+- MN 10 / DN 22 — observation of arising and passing with non-clinging orientation.
+- SN 22.59 — correct wisdom, non-appropriation, disenchantment, dispassion, liberation.
+- SN 22.89 — arising/passing contemplation erodes residual “I am” conceit/desire/tendency.
+
+Later/paracanonical support:
+- Milindapañha — wisdom as cutting off and illuminating; reasoning/attention distinguished from wisdom.
+
+### METHOD INSIGHT
+
+A76 reveals a central structure in the Buddha's thought:
+
+**liberation is not produced by observation alone, but by a transformation in understanding and valuation.**
+
+Observation supplies the field.
+Wisdom sees:
+- how it arises;
+- how it passes;
+- why clinging to it fails;
+- why it is not fit to be taken as self;
+- where suffering is being produced;
+- where cessation becomes possible.
+
+That is what allows observation to become disenchantment rather than mere description.
+
+### PRACTICAL DIAGNOSTIC
+
+When observing an experience, ask:
+- Am I merely noticing it, or understanding its arising and passing?
+- Am I seeing the conditions that support it?
+- Am I adding “mine,” “I,” or “self” to it?
+- What happens when I cling to it?
+- Does it remain under control?
+- What part of the Four Noble Truths is relevant here?
+- Is disenchantment appearing as clear loss of fascination, or am I confusing it with aversion?
+- Is the claim I am making early-text attested, cross-text synthesis, or later support?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- MN 43 Mahāvedalla — wisdom, consciousness, Four Noble Truths, purpose of wisdom.
+- MN 10 Satipaṭṭhāna — arising/passing and non-clinging orientation.
+- SN 22.59 Anattalakkhaṇa — correct wisdom → disenchantment → dispassion → liberation.
+- SN 22.89 Khemaka — residual “I am” and contemplation of aggregate arising/passing.
+
+Mandatory Milindapañha layer:
+- Mil 3.1.8 — reasoning/comprehension versus wisdom; barley-reaper/sickle analogy.
+- wisdom-characteristic passage — cutting off plus illumination; ignorance dispelled and Noble Truths made plain.
+
+Open audit:
+- exact lexical boundary among `paññā`, `ñāṇa`, `vijjā`, `vipassanā`, and `sampajañña`;
+- exact lexical range of `nibbidā` and `virāga` in early discourse;
+- how far the “three characteristics” can be treated as an explicit early formula versus a later systematic label;
+- early parallels to MN 43 / SN 22.59 / SN 22.89 remain to be stress-tested;
+- exact relation between wisdom as Four-Noble-Truth understanding and wisdom as aggregate arising/passing remains a cross-text synthesis requiring continued audit.
+
+### Next checkpoint — PHASE 4 A77
+
+**What exactly are `nibbidā` and `virāga` in the early discourses, and how do they differ from aversion, suppression, emotional deadness, or simple intellectual detachment?**
+
+Required lanes:
+- SN 22.59 and related SN 22 formulae;
+- SN 12 liberation sequences where disenchantment/dispassion appear;
+- lexical audit of `nibbidā`, `virāga`, `nandi`, and `rāga`;
+- relation to craving and appropriation without turning the teaching into emotional numbness;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
