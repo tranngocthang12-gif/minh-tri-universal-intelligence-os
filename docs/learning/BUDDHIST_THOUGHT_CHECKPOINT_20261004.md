@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A58 COMPLETED  
-**Next checkpoint:** PHASE 4 — A59  
+**Current checkpoint:** PHASE 4 — A59 COMPLETED  
+**Next checkpoint:** PHASE 4 — A60  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -3576,6 +3576,225 @@ Required lanes:
 - connect carefully to `upādāna` without making every term synonymous;
 - mandatory Milindapañha consultation;
 - continue the Aṭṭhakavagga lexical audit as OPEN/CHECK.
+
+
+## Completed checkpoint A59
+
+**Central question:** How do `ahaṅkāra` (“I-making”), `mamaṅkāra` (“mine-making”), and `mānānusaya` (underlying tendency to conceit) relate to the aggregates, `asmimāna`, `maññanā`, and clinging without collapsing these terms into synonyms?
+
+### TEXT_ATTESTED — 1. SN 22.91 DIRECTLY JOINS I-MAKING, MINE-MAKING, AND THE CONCEIT TENDENCY
+
+**SN 22.91 Rāhula** asks how one should know and see so that there is no:
+- I-making (`ahaṅkāra`);
+- mine-making (`mamaṅkāra`);
+- underlying tendency to conceit (`mānānusaya`);
+
+with regard to this conscious body and externally to all signs.
+
+The Buddha answers by applying the not-self formula to every aggregate:
+`This is not mine; I am not this; this is not my self.`
+
+Thus these three selfing/appropriating tendencies are not removed by inventing a better self-theory, but by seeing the aggregates with right understanding so that appropriation loses its basis.
+
+The final explanatory clause is **CROSS_TEXT SYNTHESIS**; the wording and practice formula are **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 2. SN 22.125 ADDS NON-GRASPING AND LIBERATION
+
+**SN 22.125 Kappa (2nd)** asks how the heart becomes rid of:
+- I-making;
+- mine-making;
+- conceit;
+
+and becomes peaceful and well liberated.
+
+The answer again applies:
+`not mine / I am not this / not my self`
+
+to all five aggregates, and explicitly says one is **freed by not grasping**.
+
+This provides a strong early-text bridge between:
+- self/mine-making;
+- aggregate appropriation;
+- grasping;
+- liberation.
+
+It does **not** say that `ahaṅkāra`, `mamaṅkāra`, `māna`, and `upādāna` are lexically identical.
+
+### CENTRAL DISTINCTION — POSSESSION, IDENTIFICATION, AND BARE “I AM” ARE RELATED BUT NOT THE SAME
+
+A59 keeps apart at least three operations:
+
+1. **possessive appropriation**
+   - “mine”;
+   - closely associated in the texts with the formula `This is mine`;
+
+2. **identificatory positioning**
+   - “I am this” / making an “I” around an aggregate or experience;
+
+3. **residual “I am” tendency**
+   - `asmimāna` / `mānānusaya`;
+   - as shown in SN 22.89, this can remain even when no aggregate is explicitly identified as “this is me.”
+
+Therefore:
+`mine-making` is not automatically identical with `I-making`,
+and neither is exhausted by the subtler `I am` tendency.
+
+This three-way formulation is **CROSS_TEXT SYNTHESIS** based on SN 22.91, SN 22.125, SN 22.89, and the standard not-self formula.
+
+### COMMENTARIAL / LATER EXEGETICAL GUARDRAIL — THE THREE “GRIPS”
+
+Later Theravāda exegesis often maps:
+- `This is mine` → craving;
+- `I am this` → conceit;
+- `This is my self` → view.
+
+This is a useful interpretive heuristic.
+
+But the mapping as a strict three-part taxonomy is not promoted here to an early-discourse statement unless directly attested.
+
+Therefore:
+- useful for interpretation: **YES**;
+- claim class for the strict mapping: **LATER/COMMENTARIAL**, not `TEXT_ATTESTED`.
+
+### TEXT_ATTESTED — 3. SN 22.89 LINKS THE CONCEIT TENDENCY TO A RESIDUAL “I AM”
+
+**SN 22.89 Khemaka** says that even when the five aggregates are no longer regarded as self or belonging to self, there can remain:
+- the conceit “I am”;
+- desire “I am”;
+- underlying tendency “I am.”
+
+This is crucial for A59.
+
+It shows why eliminating explicit identity-view does not automatically remove the deepest residual self-referential tendency.
+
+So:
+`view-level self identification`
+can fall before
+`mānānusaya / asmimāna`
+is fully uprooted.
+
+### RELATION TO `MAÑÑANĀ` — BROADER CONCEIVING, NOT A SYNONYM
+
+A58 established from MN 1 and SN 22.64 that `maññanā` is a broader conceiving/construing process involving:
+- positioning around objects;
+- “mine”-making;
+- delight;
+- self-referential construction.
+
+A59 therefore treats `ahaṅkāra` and `mamaṅkāra` as **specific self/mine-making forms within the wider field of appropriation/conceiving**, while keeping the exact lexical relation **OPEN/CHECK**.
+
+It is not safe to write:
+`maññanā = ahaṅkāra = mamaṅkāra = māna`.
+
+### RELATION TO `UPĀDĀNA` — FUNCTIONAL OVERLAP WITHOUT IDENTITY
+
+`Upādāna` has its own technical classifications in the early texts.
+
+A59 therefore does not redefine clinging as merely “I-making.”
+
+What can be said more safely is:
+- grasping gives self/mine-making something to fasten onto;
+- self/mine-making can express how aggregates and objects are appropriated;
+- SN 22.125 explicitly connects freedom from these tendencies with **non-grasping**.
+
+Thus the relation is functionally close, but lexical identity is **not established**.
+
+Claim class: **TEXT_ATTESTED CONNECTION + CROSS_TEXT SYNTHESIS**.
+
+### EXTERNAL SIGNS MATTER TOO
+
+SN 22.91 does not confine the problem to one’s internal body.
+
+Its question includes:
+- this conscious body;
+- externally, all signs.
+
+Therefore selfing/mine-making can organize itself not only around “my body” but around external objects, persons, statuses, symbols, possessions, and other signs.
+
+The examples after “external objects…” are **PRACTICAL SYNTHESIS**; the internal/external scope is **TEXT_ATTESTED**.
+
+### METHOD INSIGHT — THE BUDDHA ANALYZES SELFING AS ACTIVITY, NOT ONLY AS A BELIEF
+
+The language `I-making / mine-making` is dynamic.
+
+A59 therefore highlights a major methodological point:
+the problem is not only **what doctrine about self one consciously believes**.
+
+It also includes:
+- active appropriation;
+- identification;
+- possessiveness;
+- residual conceit;
+- latent tendency.
+
+This explains how a person can reject a self-theory verbally yet continue to organize experience around “I” and “mine.”
+
+The last sentence is **CROSS_TEXT SYNTHESIS** supported by SN 22.89 and SN 22.91.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary supporting theme: **Nāgasena and the chariot / conventional designation**;
+- the designation “Nāgasena” functions conventionally on the basis of constituent factors without requiring an extra permanent owner;
+- role in A59: helps distinguish **necessary conventional reference** from the additional operations of I-making and mine-making;
+- secondary role: the continuity reasoning prevents “no invariant self” from becoming “there is no causal continuity or responsibility”;
+- limitation: Milindapañha does not define the Pāli compound `ahaṅkāra-mamaṅkāra-mānānusaya` for the early Saṃyutta texts;
+- interpretation change: **MODERATE** — clarified convention versus appropriation;
+- early-discourse confirmation: **YES IN FUNCTION**, especially SN 5.10, SN 22.91, and SN 22.125;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The root hierarchy in A59 is:
+- SN 22.91 for I-making, mine-making, and underlying conceit tendency;
+- SN 22.125 for non-grasping and liberation from I/mine-making and conceit;
+- SN 22.89 for residual “I am” conceit/tendency;
+- prior MN 1 / SN 22.64 work for the wider `maññanā` field;
+- Milindapañha only as clarification of conventional designation without an invariant owner.
+
+### PRACTICAL DIAGNOSTIC
+
+When a selfing reaction appears, separate the layers:
+- Is this **“mine”** — possession or appropriation?
+- Is this **“I am this”** — identification?
+- Is there only a subtler **“I am”** tension without a definite identity?
+- What is being grasped?
+- What external sign—status, object, role, person, reputation—is being recruited into “me” or “mine”?
+- If the explicit belief changes, does the underlying tendency remain?
+- If grasping relaxes, what happens to I-making and mine-making?
+
+This is a practice-oriented synthesis, not a verbatim canonical checklist.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 22.91 Rāhula — I-making, mine-making, underlying tendency to conceit; five aggregates seen as not mine/not I/not self.
+- SN 22.125 Kappa (2nd) — removal of I-making, mine-making, conceit through non-grasping and right seeing of the aggregates.
+- SN 22.89 Khemaka — residual “I am” conceit/desire/underlying tendency after explicit aggregate self-view has fallen.
+- MN 1 / SN 22.64 — prior anchor for broader conceiving/appropriation.
+
+Later exegetical guardrail:
+- strict three-grip mapping of `mine / I am / my self` to craving / conceit / view is retained as later/commentarial support unless directly attested.
+
+Mandatory Milindapañha layer:
+- Nāgasena/chariot conventional designation;
+- causal continuity without an invariant owner.
+
+Open lexical work:
+- exact relation among `ahaṅkāra`, `mamaṅkāra`, `mānānusaya`, `asmimāna`, `maññanā`, and `upādāna`;
+- Aṭṭhakavagga lexical stress-test remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A60
+
+**How does “mine-making” arise from craving and contact/feeling, and how does something shift from merely being experienced to being appropriated as “mine”?**
+
+Required lanes:
+- return to `phassa → vedanā → taṇhā → upādāna`;
+- inspect early texts where the “mine” formula is applied to sense bases, objects, consciousness, contact, feeling, and craving;
+- distinguish pleasant experience from appropriation;
+- examine whether “mine-making = craving” is early-text attestation or later exegetical mapping;
+- mandatory Milindapañha consultation;
+- keep lexical and parallel audits OPEN/CHECK.
 
 ## Provenance
 
