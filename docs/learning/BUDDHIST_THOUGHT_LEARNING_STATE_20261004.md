@@ -4,15 +4,15 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A17: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A17_MANNATI_I_MINE_20261004.md`.
-- A17 source boundary locked: MN 1 distinguishes direct knowing from `maññati`/conceiving-as-mine; do not reduce `maññati` to all conceptual thought.
-- A17 bounded audit adds SN 35.30 and SN 35.191 for the current question. Sensory objects are not themselves the fetter; desire-passion/appropriation arising dependent on sensory conditions is central.
-- Lexical guardrail locked: `maññati`, `asmimāna`, and `papañca` are related analytical fields but are not treated as synonyms.
+- Phase 4 A5-A18: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A18_PAPANCA_CONFLICT_20261004.md`.
+- A18 source boundary: MN 18's detailed contact → feeling → perception → thinking → `papañca` analysis is Mahākaccāna's explanation accepted by the Buddha; it is not the exact wording of the Buddha's initial brief statement.
+- A18 lexical guardrail: `papañca` is not reduced to "overthinking" and is not treated as a synonym of `saññā`, `maññati`, `asmimāna`, or `diṭṭhi`.
+- A18 Milindapañha guardrail: no direct source-audited Milinda doctrine of `papañca` is claimed; Mi Tiên is used only as a dialectical stress-test layer here.
 
 Next:
-- **Phase 4 A18:** How does `papañca` turn contact and perception into proliferating classifications, conflict, and self-positioning?
-- Route: MN 18 Madhupiṇḍika → Snp 4.11 Kalahavivāda → Snp 4.12 Cūḷaviyūha → SN 35.30/35.191 → Milindapañha dialectical stress-test.
+- **Phase 4 A19:** How does dependent origination operate in the present without reducing it to either a one-moment psychology or a three-life scheme?
+- Route: SN 12.2 → SN 12.23 → SN 12.38/12.40/12.52/12.64 → MN 18/SN 35 bridge → Milindapañha continuity/causality stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
