@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A55 COMPLETED  
-**Next checkpoint:** PHASE 4 — A56  
+**Current checkpoint:** PHASE 4 — A56 COMPLETED  
+**Next checkpoint:** PHASE 4 — A57  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -3018,6 +3018,184 @@ Required lanes:
 - relation between conventional naming and self-view;
 - moral responsibility and causal continuity without invariant identity;
 - mandatory Milindapañha consultation, especially the chariot argument;
+- preserve early-text / synthesis / later-paracanonical boundaries.
+
+
+## Completed checkpoint A56
+
+**Central question:** How can conventional person-language (“I,” “you,” names, responsibility) continue to function after not-self analysis without reintroducing a permanent self?
+
+### TEXT_ATTESTED — 1. SN 5.10 VAJIRĀ: “BEING” IS A CONVENTIONAL DESIGNATION ON THE AGGREGATES
+
+**SN 5.10 Vajirā** uses the chariot pattern in early-discourse form:
+just as the word “chariot” is used when the relevant parts are assembled, so when the aggregates are present the conventional expression “a being” is used.
+
+This is crucial because the discourse does **not** say ordinary language must be abolished.
+
+It distinguishes:
+- conventional designation;
+from
+- reification of an independent self behind the aggregates.
+
+Thus the word “person” can function without requiring an extra permanent entity in addition to the conditioned constituents.
+
+### TEXT_ATTESTED — 2. CONVENTIONAL LANGUAGE DOES NOT CANCEL THE NOT-SELF ANALYSIS
+
+SN 22.59 says the aggregates are not fit to be regarded as:
+`mine / I / my self`.
+
+SN 5.10 nevertheless permits ordinary designation at the level of assembled conditions.
+
+These two are not contradictory.
+
+A bounded early-text reading is:
+- use names and person-language conventionally;
+- do not mistake the designation for proof of a permanent owner/substance.
+
+This is **CROSS_TEXT SYNTHESIS** grounded in SN 5.10 + SN 22.59.
+
+### TEXT_ATTESTED — 3. SN 12.46 REJECTS BOTH STRICT IDENTITY AND TOTAL DISCONNECTION IN MORAL CAUSATION
+
+In **SN 12.46**, the question is posed whether:
+- the one who acts is the same as the one who experiences the result;
+or
+- the one who acts is one person and the one who experiences is another.
+
+The Buddha rejects both extremes and teaches dependent origination in the middle.
+
+This is a direct guardrail for moral responsibility:
+causal continuity does not require a numerically identical permanent self,
+but neither does change imply that actions are disconnected from later results.
+
+### CENTRAL DISTINCTION — RESPONSIBILITY NEEDS CAUSAL CONTINUITY, NOT AN IMMUTABLE OWNER
+
+A56 therefore separates:
+
+**permanent-owner model**
+`one unchanged self performs action and later receives its result`
+
+from
+
+**dependent-continuity model**
+`intentional action conditions later states/results within a connected causal stream`.
+
+The second model preserves responsibility without requiring an invariant substance.
+
+The phrase “causal stream” is **CROSS_TEXT SYNTHESIS**; the rejection of same-versus-different extremes in the action/result relation is **TEXT_ATTESTED** in SN 12.46.
+
+### TEXT_ATTESTED — 4. “WHO?” CAN BE THE WRONG QUESTION WHERE CONDITIONALITY IS THE REAL EXPLANATORY WORK
+
+SN 12.12 already showed the Buddha correcting questions such as:
+“Who feels?” or “Who consumes consciousness as nutriment?”
+
+The discourse redirects from:
+`who is the owner/agent?`
+to
+`with what condition does this occur?`
+
+A56 does not infer that agency-language is forbidden.
+It shows that an explanatory question can become distorted when a permanent owner is presupposed.
+
+### CONVENTIONAL “I” IS NOT THE SAME AS SELF-VIEW
+
+The mere use of:
+- “I”;
+- a personal name;
+- “you”;
+- “he/she”;
+- responsibility language
+
+does not by itself establish `sakkāyadiṭṭhi` or a permanent self-theory.
+
+The problem arises when designation is appropriated as:
+- an independent essence;
+- an unchanging owner;
+- something standing outside conditioned processes.
+
+This formulation is **CROSS_TEXT SYNTHESIS**.
+
+### WHY MORAL RESPONSIBILITY DOES NOT COLLAPSE UNDER ANATTĀ
+
+A common objection is:
+“If there is no permanent self, who is responsible?”
+
+A56 reframes the objection.
+
+Responsibility in the early causal framework does not require:
+`A at time 1 = numerically identical immutable substance A at time 2`.
+
+It requires that:
+- intentions/actions are causally connected to consequences;
+- later states do not arise independently of earlier conditioning;
+- “different” cannot be used to sever the causal relation.
+
+This is exactly why the same/different dichotomy in SN 12.46 is too crude.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary themes:
+  1. **chariot / Nāgasena** — names and person-designations function conventionally without identifying a permanent essence;
+  2. **neither the same nor another** — the later person/process is not strictly numerically identical with the earlier one, yet causal continuity remains;
+  3. **responsibility analogies** — Milindapañha uses examples in which a later consequence remains attributable to an earlier causal act even though the material/person-state has changed, blocking the defense “that was a different entity, so no responsibility remains.”
+- role in A56: Mi Tiên makes the relation among **conventional naming, causal continuity, and responsibility without invariant identity** unusually clear;
+- interpretation change: **STRONG CLARIFICATION, NOT SOURCE OVERRIDE**;
+- early-discourse confirmation: **YES IN FUNCTION**, especially through SN 5.10 and SN 12.46;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The chariot argument in Milindapañha is famous and useful, but the early-discourse root remains:
+- SN 5.10 for conventional designation dependent on aggregates;
+- SN 12.46 for rejecting same/different extremes in action and result;
+- SN 22.59 for not appropriating aggregates as self.
+
+Mi Tiên clarifies the logic; it does not replace the early-text axis.
+
+### METHOD INSIGHT — THE BUDDHA SEPARATES LANGUAGE FUNCTION FROM ONTOLOGICAL COMMITMENT
+
+A56 reveals another feature of the Buddha's thinking:
+
+The usefulness of a word does not prove the independent existence of the entity imagined behind that word.
+
+“I,” “person,” “being,” and personal names can be practically useful designations.
+
+The error begins when practical language is converted into a metaphysical claim:
+`because we can name a person, there must be an invariant self-substance behind the name`.
+
+That inference is not required.
+
+### PRACTICAL DIAGNOSTIC
+
+When using person-language, ask:
+- Am I merely identifying a causal/conventional person for communication?
+- Or am I assuming an unchanging owner behind the process?
+- Does responsibility here depend on permanent identity, or on causal continuity?
+- Am I using “everything changes” as an excuse to sever responsibility?
+- Am I using “I did it” as ordinary accountable language, or turning “I” into an essence?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 5.10 Vajirā — conventional “being” designation dependent on aggregates, with chariot analogy.
+- SN 22.59 — aggregates are not fit to regard as mine/I/self.
+- SN 12.46 — action/result relation cannot be reduced to strict same-person or wholly different-person extremes.
+- SN 12.12 — correction from owner/agent questions toward conditional questions.
+
+Mandatory Milindapañha layer:
+- chariot / Nāgasena conventional designation;
+- neither-same-nor-another continuity;
+- responsibility despite change through causal-continuity analogies.
+
+### Next checkpoint — PHASE 4 A57
+
+**If conventional personhood and responsibility remain usable, what exactly is the difference among `sakkāyadiṭṭhi` (identity view), `asmimāna` (“I am” conceit), and ordinary first-person language?**
+
+Required lanes:
+- distinguish view from conceit and conventional speech;
+- return to SN 22 material on the 20 identity-view constructions;
+- inspect the “I am” conceit remaining after identity view is abandoned;
+- mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical boundaries.
 
 ## Provenance
