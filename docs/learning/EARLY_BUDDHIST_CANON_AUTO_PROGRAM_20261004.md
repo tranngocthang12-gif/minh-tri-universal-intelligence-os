@@ -511,3 +511,37 @@ Current hard-cluster conclusions:
 
 Whole-corpus indexing is now STARTED.
 
+## 19. Reference stack + Milindapañha reasoning lab
+
+Reference hierarchy:
+`docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md`
+
+Milindapañha / Mi Tiên Vấn Đáp reasoning lab:
+`docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md`
+
+Use Milindapañha as a later explanatory reasoning comparator, not as an early direct Buddha witness. Every claim about historical Buddha-thought must be back-checked against Nikāya/Āgama/early verse evidence.
+
+Current Milinda modules:
+- chariot/person and conventional designation;
+- continuity as neither simply same nor another;
+- question classification before answering;
+- contextual contradiction resolution;
+- debate hygiene;
+- sati/memory semantic expansion;
+- necessary/sufficient/supportive condition distinctions;
+- Nibbāna: path conditions vs produced-object conditions.
+
+## 20. SN 12 repetition matrix + Aṭṭhakavagga lexical pass
+
+SN 12.82–213 matrix audit:
+`docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md`
+
+Aṭṭhakavagga lexical control pass:
+`docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md`
+
+New rules:
+- peyyāla repetition is a scope-enforcing training matrix, not meaningless filler;
+- do not reify pedagogical enumerations into exclusive ontology;
+- `diṭṭhi`, `sacca`, `saññā`, `maññati`, `papañca`, `nissaya` remain context-controlled terms;
+- anti-view rhetoric is not licensed as relativism.
+
