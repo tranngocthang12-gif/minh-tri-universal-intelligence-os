@@ -435,3 +435,23 @@ Major refinements:
 
 Current reasoning status: INTEGRATED_STRESS_TESTED_CORE / NOT_WHOLE_CORPUS_MASTERED.
 
+## 15. Dialogue reconstruction v0.5
+
+Current dialogue-reconstruction artifact:
+`docs/learning/EARLY_BUDDHIST_DIALOGUE_RECONSTRUCTION_V0_5_20261004.md`.
+
+Dialogue cluster:
+- SN 42.6;
+- AN 10.95;
+- SN 12.48;
+- MN 90.
+
+New reasoning controls:
+- SOURCE-CORRECTION before doctrinal debate;
+- INTENT-CLARIFY before answering ambiguous ontology;
+- distinguish necessary-path knowledge from population forecasting;
+- distinguish conventional social description from liberative equality.
+
+Important evidence boundary:
+This is a masked-reconstruction proxy, not strict blind proof, because model pretraining exposure cannot be excluded.
+
