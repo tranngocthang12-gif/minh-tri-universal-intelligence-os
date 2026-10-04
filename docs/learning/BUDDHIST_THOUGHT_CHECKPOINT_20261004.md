@@ -13988,3 +13988,338 @@ Required lanes:
 - mandatory Milindapañha consultation on name-and-form, mango/lamp/milk analogies, and “neither same nor another”;
 - preserve early-text / cross-text synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A96
+
+**Central question:** If there is no permanent self that transmigrates, what continues from kamma to rebirth and from action to result across lives, and how do the early discourses avoid both “the same self continues” and “a completely different being receives the result”?
+
+### TEXT_ATTESTED — 1. MN 38 EXPLICITLY REJECTS THE IDEA THAT THE SAME CONSCIOUSNESS RUNS THROUGH REBIRTH
+
+In **MN 38 Mahātaṇhāsaṅkhaya**, the monk Sāti claims:
+
+- it is this same consciousness;
+- not another;
+- that runs and wanders through repeated birth.
+
+The Buddha rejects this as a serious misrepresentation.
+
+The corrective principle is:
+
+**consciousness is dependently arisen; apart from a condition there is no arising of consciousness.**
+
+This gives the first hard boundary for A96:
+
+**the early discourse does not authorize a model in which one numerically identical consciousness-substance leaves one body and enters another.**
+
+### IMPORTANT GUARDRAIL — REJECTING A TRANSMIGRATING CONSCIOUSNESS DOES NOT MEAN REJECTING REBIRTH
+
+MN 38 itself discusses repeated birth and the conditions that sustain it.
+
+The rejected claim is narrower:
+`the same consciousness itself transmigrates unchanged`.
+
+Therefore A96 keeps separate:
+
+- **rebirth / renewed birth as conditioned process**;
+- **soul-like transmigration of an identical consciousness**.
+
+The first is part of the early-discourse model.
+The second is explicitly rejected in MN 38.
+
+### TEXT_ATTESTED — 2. SN 12.17 REJECTS BOTH “THE SAME AGENT RECEIVES THE RESULT” AND “A DIFFERENT ONE RECEIVES IT”
+
+**SN 12.17 Acela Kassapa** is decisive.
+
+The discourse analyzes two positions.
+
+If:
+- the one who acts;
+- and the one who experiences the result
+
+are **the same, existing from the beginning**,
+
+the view tends toward **eternalism**.
+
+If:
+- the one who acts is one;
+- the one who experiences is another,
+
+the view tends toward **annihilationism**.
+
+The Buddha avoids both and teaches dependent arising:
+
+ignorance
+→ formations
+→ consciousness
+→ name-and-form
+→ six sense bases
+→ contact
+→ feeling
+→ craving
+→ clinging
+→ becoming
+→ birth
+→ suffering.
+
+Thus the early answer is not:
+**same entity**
+or
+**totally unrelated entity**.
+
+It is:
+**conditioned continuity.**
+
+The last phrase is a **CROSS-TEXT SYNTHESIS**, not a canonical technical term.
+
+### TEXT_ATTESTED — 3. SN 12.12 REJECTS THE “WHO?” FRAME WHEN THE TEACHING IS ABOUT CONDITIONED FUNCTIONS
+
+In **SN 12.12 Phagguna**, questions such as:
+- “Who makes contact?”
+- “Who feels?”
+
+are rejected as wrongly framed.
+
+The valid form is:
+- from what condition does contact arise?
+- from what condition does feeling arise?
+
+The answer is given in dependent-arising terms.
+
+This is central to A96.
+
+The teaching repeatedly shifts the question from:
+**“what permanent subject is doing this?”**
+
+to:
+**“under what conditions does this event arise?”**
+
+### IMPORTANT GUARDRAIL — THIS DOES NOT MEAN “NOBODY ACTS, SO RESPONSIBILITY DISAPPEARS”
+
+A94 established:
+- `cetanā` is kamma;
+- bodily, verbal, and mental actions have ethical significance.
+
+A95 established:
+- kamma has results;
+- including beyond the present life in the early-discourse model.
+
+Therefore SN 12.12 cannot be used to infer:
+“there is no agent-language conventionally, therefore actions have no consequences.”
+
+The point is narrower:
+**do not posit an unconditioned metaphysical doer underneath the conditioned process.**
+
+### TEXT_ATTESTED — 4. SN 12.15 GIVES THE ONTOLOGICAL GUARDRAIL: AVOID “EVERYTHING EXISTS” AND “NOTHING EXISTS”
+
+**SN 12.15 Kaccānagotta** rejects two extremes:
+- “everything exists”;
+- “nothing exists.”
+
+It then teaches arising and cessation through conditions.
+
+This protects A96 from two common errors.
+
+**Error 1 — eternalist continuity**
+- something permanent must exist unchanged across lives.
+
+**Error 2 — nihilist discontinuity**
+- because there is no permanent self, action and result can have no continuity.
+
+Dependent arising gives a third structure:
+**process continuity without a permanent essence.**
+
+Claim class: **CROSS-TEXT SYNTHESIS**.
+
+### WHAT CONTINUES? — BOUNDED EARLY-TEXT ANSWER
+
+A96 does **not** posit an extra hidden thing that “continues.”
+
+The early-discourse answer is better framed in terms of:
+- causal conditioning;
+- formations;
+- consciousness arising conditionally;
+- craving;
+- clinging;
+- becoming;
+- birth;
+- the results of intentional action.
+
+Thus:
+
+**what continues is not a self-substance but a causally connected process whose later phases arise dependent on earlier conditions.**
+
+This exact sentence is **CROSS-TEXT SYNTHESIS** from MN 38 and SN 12 material.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN “CAUSAL CONTINUITY” INTO A NEW SOUL
+
+Terms such as:
+- stream;
+- continuum;
+- causal series
+
+can be useful explanatory shorthand.
+
+But A96 refuses to reify them into:
+- a hidden entity;
+- a subtle self;
+- a consciousness-substance;
+- an invisible carrier of karma.
+
+The point of the dependent-arising analysis is precisely to explain continuity **without adding such an essence**.
+
+### IMPORTANT GUARDRAIL — DO NOT TURN “ANOTHER NAME-AND-FORM” INTO TOTAL DISCONNECTION
+
+The opposite mistake is:
+“if the later person is not numerically identical, then they are completely unrelated and should not receive the result.”
+
+SN 12.17 blocks this by rejecting the “one acts, another experiences” formulation when used as a metaphysical split.
+
+The relation is causal:
+later arising depends on conditions produced earlier.
+
+Therefore:
+**difference does not imply disconnection.**
+
+### EARLY-TEXT MODEL — IDENTITY QUESTIONS ARE REPLACED BY DEPENDENCE QUESTIONS
+
+A96's bounded model is:
+
+Wrong frame:
+- Is it exactly the same being?
+- Is it a totally different being?
+- What thing travels?
+
+Early causal frame:
+- What conditions consciousness?
+- What conditions name-and-form?
+- What conditions craving?
+- What conditions becoming?
+- What conditions birth?
+- What happens when those conditions cease?
+
+This is **CROSS-TEXT METHOD SYNTHESIS** from SN 12.12, SN 12.15, SN 12.17, and MN 38.
+
+### RELATION TO KAMMA
+
+A95 established:
+- present `cetanā` is new kamma;
+- kamma can produce later results;
+- the present is conditioned but still transformable.
+
+A96 now adds:
+
+**kamma does not require a permanent owner in order to have causal efficacy.**
+
+The relation can be represented as:
+
+`cetanā / action`
+→ leaves causal consequences within the conditioned process
+→ later conditions are altered
+→ later experience arises accordingly.
+
+This is **CROSS-TEXT SYNTHESIS**.
+
+The phrase “leaves causal consequences” is explanatory language, not a claim that karma is stored as a physical object somewhere.
+
+### IMPORTANT GUARDRAIL — DO NOT ASK “WHERE IS KARMA STORED?” AS THOUGH IT WERE A SUBSTANCE
+
+The early discourses do not require:
+- a karmic warehouse;
+- a soul carrying moral records;
+- a permanent consciousness carrying deposits.
+
+A96 keeps the safer causal model:
+**conditions shape subsequent conditions.**
+
+The exact mechanism of long-range karmic continuity is not described in the early discourses as a material storage theory.
+
+Claim class: **OPEN MECHANISM / CAUSAL FUNCTION ATTESTED**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary later/paracanonical formulations:
+  1. **“neither the same nor another”** — continuity illustrated by a lamp burning through the watches of the night and by milk becoming curds, butter, and ghee;
+  2. **name-and-form rebirth** — one name-and-form performs deeds, and another name-and-form arises in dependence on them;
+  3. **mango analogy** — the later mango is not numerically the seed, yet arises from it, so causal responsibility is not broken;
+  4. **fire/lamp analogy** — a later fire caused by an earlier flame is not numerically the same flame, yet is causally derived from it;
+  5. **rebirth without transmigration** — one lamp can light another without a substance passing across;
+- role in A96:
+  - gives unusually clear analogies for **causal continuity without identity**;
+  - directly addresses the concern that “not the same” might imply “unrelated”;
+- major limitation:
+  - the formula **“neither same nor another” is LATER/PARACANONICAL**, not to be falsely quoted as the wording of MN 38 or SN 12.17;
+  - “name-and-form is reborn” is Milindapañha's explanatory formulation and should not be projected backward as the sole early canonical model;
+  - the analogies illustrate continuity but do not constitute a complete mechanism of rebirth;
+- interpretation change: **STRONG CLARIFICATION, NO EARLY-TEXT OVERRIDE**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 38 — explicitly rejects the claim that the same consciousness runs and wanders through rebirth; consciousness arises dependently.
+- SN 12.12 — “who contacts / who feels?” framing rejected; replace with conditional questions.
+- SN 12.15 — avoids existence/non-existence extremes through dependent arising and cessation.
+- SN 12.17 — same agent/experiencer tends toward eternalism; different agent/experiencer tends toward annihilationism; middle explained through dependent arising.
+- A94-A95 axis — `cetanā` as kamma, later result, anti-fatalism, old/new kamma.
+
+Later/paracanonical:
+- Milindapañha lamp, milk, mango, fire, name-and-form, and rebirth-without-transmigration analogies.
+
+### METHOD INSIGHT
+
+A96 reveals a central move in the Buddha's thought:
+
+**replace the question of identity with the question of dependence.**
+
+The ordinary mind asks:
+- “Is it still me?”
+- “If not me, then who gets the result?”
+
+The dependent-arising analysis asks instead:
+- what condition produces the next event?
+- what keeps the process going?
+- what ends it?
+
+This avoids needing either:
+- an eternal owner of the process;
+- or a complete causal break between moments and lives.
+
+### PRACTICAL DIAGNOSTIC
+
+When thinking about rebirth and kamma, ask:
+- Am I secretly inserting an immortal consciousness?
+- Am I assuming “not identical” means “causally unrelated”?
+- Am I treating karma as a substance that must travel somewhere?
+- Can the relation be stated in conditional terms instead?
+- Which factors keep the process going: ignorance, craving, clinging, becoming?
+- Which present intentions are creating new conditions?
+- What ceases when those supporting conditions cease?
+- Is my claim early-text attested, cross-text synthesis, or Milindapañha clarification?
+
+### Open audit
+
+- occurrence-level audit of consciousness (`viññāṇa`) in MN 38 and SN 12 before making stronger cross-life mechanism claims;
+- full audit of `nāmarūpa`, `bhava`, `jāti`, and rebirth terminology across early parallels;
+- early Chinese parallel stress-test for MN 38, SN 12.12, SN 12.15, and SN 12.17;
+- distinguish conventional person-continuity language from metaphysical identity claims;
+- examine whether any early discourse itself states an exact “neither same nor different” formula, rather than relying on later Milindapañha;
+- keep the mechanism of long-range karmic continuity **OPEN** where the early discourses do not specify it;
+- continue SN 12 ID-level audit and Aṭṭhakavagga lexical pass.
+
+### Local Brain mirror status
+
+- A96 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A97
+
+**What exactly are `bhava` and `jāti` in dependent arising: do they refer only to future-life rebirth, also to present processes of becoming and identity formation, or to different levels depending on context?**
+
+Required lanes:
+- SN 12.2 definitions of `bhava` and `jāti`;
+- MN 9 / DN 15 where relevant;
+- distinguish explicit canonical definitions from modern “moment-to-moment becoming” interpretations;
+- relation among craving, clinging, becoming, and birth;
+- mandatory Milindapañha consultation;
+- preserve early-text / cross-text synthesis / later-interpretive / lexical-open boundaries.
+
