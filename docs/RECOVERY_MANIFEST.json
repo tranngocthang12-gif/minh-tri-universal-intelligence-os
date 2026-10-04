@@ -186,7 +186,7 @@
   "owner_learning_track_buddhist_thought": {
     "status": "ACTIVE",
     "checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-    "current": "PHASE_4_A44_COMPLETED",
+    "current": "PHASE_4_A44_COMPLETED_RECONCILED_CHAT_DRIFT",
     "next": "PHASE_4_A45",
     "open_audits": [
       "SN12",
@@ -219,6 +219,9 @@
     "a43_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
     "a43_milindapanha": "CONSULTED_FAITH_CLARIFICATION_AND_ASPIRATION",
     "a44_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-    "a44_milindapanha": "CONSULTED_DOUBT_VS_CLARIFICATION_DISTINCTION"
+    "a44_milindapanha": "CONSULTED_DOUBT_VS_CLARIFICATION_DISTINCTION",
+    "reconciliation": "docs/learning/BUDDHIST_THOUGHT_RECONCILIATION_20261005.md",
+    "chat_drift": "A98_A99_UNINTEGRATED_DRAFTS_A45_A97_NOT_DURABLY_RECOVERED",
+    "local_brain_mirror": "NOT_PROVEN_WRITTEN_2026-10-05"
   }
 }
