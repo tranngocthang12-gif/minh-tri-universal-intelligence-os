@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A47_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A48")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A48_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A49")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A47_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A48")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A48_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A49")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -398,6 +398,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a46_milindapanha"], "CONSULTED_CONSEQUENCE_SENSITIVE_SELECTION_REASONING_WISDOM_AND_SCHOLARLY_CORRECTION")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a47_milindapanha"], "CONSULTED_CHARIOT_DESIGNATION_CONTINUITY_WITHOUT_INVARIANT_SELF")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a47_milindapanha"], "CONSULTED_CHARIOT_DESIGNATION_CONTINUITY_WITHOUT_INVARIANT_SELF")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a48_milindapanha"], "CONSULTED_NAME_FORM_INTERDEPENDENCE_HEN_EGG_CHARIOT_AND_CONTINUITY_WITHOUT_IDENTITY")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a48_milindapanha"], "CONSULTED_NAME_FORM_INTERDEPENDENCE_HEN_EGG_CHARIOT_AND_CONTINUITY_WITHOUT_IDENTITY")
 
 
 if __name__ == "__main__":
