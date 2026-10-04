@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A50_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A51",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A51_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A52",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -534,5 +534,7 @@
   "owner_learning_track_buddhist_thought_a49_claim_class": "TEXT_ATTESTED_ESTABLISHMENT_NUTRIMENT_CRAVING_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a49_milindapanha": "CONSULTED_CRAVING_REBIRTH_GRANARY_CAUSAL_CESSATION_AND_REBIRTH_WITHOUT_TRANSMIGRATION",
   "owner_learning_track_buddhist_thought_a50_claim_class": "TEXT_ATTESTED_BHAVA_THREEFOLD_PLUS_CROSS_TEXT_IDENTITY_BECOMING_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a50_milindapanha": "CONSULTED_REBIRTH_WITHOUT_TRANSMIGRATION_LAMP_CONTINUITY_AND_CRAVING_REBIRTH"
+  "owner_learning_track_buddhist_thought_a50_milindapanha": "CONSULTED_REBIRTH_WITHOUT_TRANSMIGRATION_LAMP_CONTINUITY_AND_CRAVING_REBIRTH",
+  "owner_learning_track_buddhist_thought_a51_claim_class": "TEXT_ATTESTED_JATI_TECHNICAL_BIRTH_PLUS_BROADER_BIRTH_LANGUAGE_WITH_CROSS_TEXT_IDENTITY_BIRTH_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a51_milindapanha": "CONSULTED_NAME_FORM_REBIRTH_WITHOUT_TRANSMIGRATION_NEITHER_SAME_NOR_OTHER_AND_CAUSAL_CESSATION"
 }
