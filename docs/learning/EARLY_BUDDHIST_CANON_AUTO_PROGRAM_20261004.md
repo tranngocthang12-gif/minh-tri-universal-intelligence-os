@@ -493,3 +493,21 @@ Cross-traditional functional cores receive higher confidence than exact local te
 High-risk cards expanded:
 `viññāṇa`, `saṅkhāra`, `papañca`, `sati`, `samādhi`, `nibbāna`.
 
+## 18. Hard cluster v0.8 — consciousness/rebirth, jhāna-insight, views
+
+Current synthesis:
+`docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md`
+
+Whole-corpus index:
+`docs/learning/EARLY_BUDDHIST_WHOLE_CORPUS_INDEX_V0_1.json`
+
+Current hard-cluster conclusions:
+- MN 38 / MĀ 201 reject an unchanged consciousness-substance transmigrating across lives;
+- SN 12.12 / SĀ 372 replace hidden-subject "who?" questions with conditional analysis;
+- SN 12.38 / SĀ 359 support causal continuity into renewed existence without proving a permanent carrier;
+- DN 15's womb-consciousness language is retained as rebirth-conditioning evidence but may not be read as the same unchanging consciousness rejected in MN 38;
+- samatha/vipassanā can develop in more than one order; standard gradual training remains important but is not a single universal chronology;
+- Aṭṭhakavagga anti-view language is read primarily as anti-grasping/anti-dispute, not as simple relativism or denial of right view.
+
+Whole-corpus indexing is now STARTED.
+
