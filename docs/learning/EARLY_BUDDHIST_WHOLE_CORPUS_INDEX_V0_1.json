@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-early-buddhist-whole-corpus-index/v1",
   "updated": "2026-10-04",
-  "status": "SN_PRIORITY_STRUCTURAL_PHASE1_COMPLETE_WHOLE_CORPUS_NOT_COMPLETE",
+  "status": "ANCHOR_DEEP_DIVE_SN_PRIORITY_PLUS_MN_DIALOGUE_AND_ATTHAKAVAGGA_STRUCTURAL_INDEX",
   "purpose": "Track corpus coverage by doctrine, reasoning, translation risk, parallels, contradictions and mastery without confusing selective reading with whole-canon understanding.",
   "fields": [
     "collection",
@@ -18,7 +18,7 @@
     {
       "collection": "SN",
       "range_or_text": "SN 12 Nidāna-saṃyutta",
-      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_DISCOURSE_MATRIX_PENDING",
+      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
       "primary_themes": [
         "dependent origination",
         "consciousness/name-and-form",
@@ -42,12 +42,18 @@
         "C02",
         "REBIRTH_IDENTITY_CLUSTER_V0_8"
       ],
-      "next_action": "Build discourse-ID matrix by causal pattern, rebirth function, practice function, and SĀ parallel"
+      "next_action": "Discourse-by-discourse index with SĀ parallels",
+      "anchor_suttas": [
+        "SN 12.2",
+        "SN 12.15",
+        "SN 12.23",
+        "SN 12.38"
+      ]
     },
     {
       "collection": "SN",
       "range_or_text": "SN 22 Khandha-saṃyutta",
-      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_SELF_VIEW_MATRIX_PENDING",
+      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
       "primary_themes": [
         "five aggregates",
         "not-self",
@@ -69,12 +75,16 @@
       "contradiction_links": [
         "SN22_85_ANNIHILATION_GUARD"
       ],
-      "next_action": "Build self-view/de-appropriation/annihilation formula matrix with Chinese parallels"
+      "next_action": "Index self-view and grasping-aggregate families across SN22",
+      "anchor_suttas": [
+        "SN 22.59",
+        "SN 22.85"
+      ]
     },
     {
       "collection": "SN",
       "range_or_text": "SN 35 Saḷāyatana-saṃyutta",
-      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_SENSE_PROCESS_MATRIX_PENDING",
+      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
       "primary_themes": [
         "sense fields",
         "contact",
@@ -96,12 +106,17 @@
       "contradiction_links": [
         "C04"
       ],
-      "next_action": "Build faculty-object-consciousness-contact-feeling-grasping matrix and metaphysical-scope checks"
+      "next_action": "Index all/burning/conceiving/contact clusters and parallels",
+      "anchor_suttas": [
+        "SN 35.23",
+        "SN 35.28",
+        "SN 35.30"
+      ]
     },
     {
       "collection": "SN",
       "range_or_text": "SN 36 Vedanā-saṃyutta",
-      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_FEELING_MATRIX_PENDING",
+      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
       "primary_themes": [
         "feeling",
         "second arrow",
@@ -116,12 +131,16 @@
       ],
       "parallel_status": "PARTIAL",
       "contradiction_links": [],
-      "next_action": "Build feeling taxonomy and reaction/path matrix"
+      "next_action": "Index feeling taxonomy and craving/reaction pathways",
+      "anchor_suttas": [
+        "SN 36.6",
+        "SN 36.23"
+      ]
     },
     {
       "collection": "SN",
       "range_or_text": "SN 45/46 Path and awakening factors",
-      "coverage_status": "STRUCTURAL_PHASE1_COMPLETE_PATH_FACTOR_MATRIX_PENDING",
+      "coverage_status": "ANCHOR_DEEP_DIVE_COMPLETE_DISCOURSE_BY_DISCOURSE_PENDING",
       "primary_themes": [
         "eightfold path",
         "awakening factors",
@@ -141,12 +160,16 @@
       "contradiction_links": [
         "MN117_MA189_TECHNICAL_LAYER"
       ],
-      "next_action": "Build path/awakening-factor definition, sequence, condition, and parallel matrix"
+      "next_action": "Index path and awakening-factor balancing/development families",
+      "anchor_suttas": [
+        "SN 45.8",
+        "SN 46.3"
+      ]
     },
     {
       "collection": "MN",
       "range_or_text": "problem-solving/dialogue cluster",
-      "coverage_status": "ACTIVE_PARTIAL",
+      "coverage_status": "DIALOGUE_CLUSTER_EXPANDED_STRUCTURAL",
       "primary_themes": [
         "question handling",
         "method selection",
@@ -176,12 +199,12 @@
         "C06",
         "C09"
       ],
-      "next_action": "Expand held-out dialogue matrix and MA parallels"
+      "next_action": "Add remaining MN problem-solving cases and MA parallels"
     },
     {
       "collection": "Snp",
       "range_or_text": "Aṭṭhakavagga Snp 4",
-      "coverage_status": "ACTIVE_PARTIAL",
+      "coverage_status": "ALL_16_STRUCTURALLY_INDEXED_VERSE_LEVEL_PENDING",
       "primary_themes": [
         "view-grasping",
         "debate",
@@ -204,7 +227,7 @@
         "C03",
         "ATTHAKAVAGGA_RIGHT_VIEW_V0_8"
       ],
-      "next_action": "Index all 16 suttas and map view-language against Nikāya right-view usage"
+      "next_action": "Verse-cluster indexing of all 16 plus Arthapada parallels"
     },
     {
       "collection": "DN",
@@ -301,5 +324,8 @@
     "sn45_46": "STRUCTURAL_PHASE1_COMPLETE_PATH_FACTOR_MATRIX_PENDING",
     "mn": "ACTIVE_PARTIAL",
     "atthakavagga": "ACTIVE_PARTIAL"
-  }
+  },
+  "anchor_deep_dive": "docs/learning/EARLY_BUDDHIST_ANCHOR_DEEP_DIVE_V0_9_20261004.md",
+  "mn_dialogue_index": "docs/learning/EARLY_BUDDHIST_MN_DIALOGUE_INDEX_V0_1.json",
+  "atthakavagga_index": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json"
 }
