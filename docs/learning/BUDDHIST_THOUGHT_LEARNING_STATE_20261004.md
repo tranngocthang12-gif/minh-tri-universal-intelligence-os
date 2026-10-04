@@ -4,15 +4,15 @@ Status: ACTIVE.
 
 Current:
 - Phase 4 A1-A4: taught in chat, partial source audit only, not VERIFIED.
-- Phase 4 A5-A18: taught in chat, partial source audit.
-- Latest note: `docs/learning/BUDDHIST_PHASE4_A18_PAPANCA_CONFLICT_20261004.md`.
-- A18 source boundary: MN 18's detailed contact → feeling → perception → thinking → `papañca` analysis is Mahākaccāna's explanation accepted by the Buddha; it is not the exact wording of the Buddha's initial brief statement.
-- A18 lexical guardrail: `papañca` is not reduced to "overthinking" and is not treated as a synonym of `saññā`, `maññati`, `asmimāna`, or `diṭṭhi`.
-- A18 Milindapañha guardrail: no direct source-audited Milinda doctrine of `papañca` is claimed; Mi Tiên is used only as a dialectical stress-test layer here.
+- Phase 4 A5-A19: taught in chat, partial source audit.
+- Latest note: `docs/learning/BUDDHIST_PHASE4_A19_DEPENDENT_ORIGINATION_TEMPORAL_SCALE_20261004.md`.
+- A19 source boundary locked: dependent origination is not reduced to either a one-moment psychology or a rigid three-life chart. Early passages apply conditional analysis to present experience and also explicitly to future renewed existence/rebirth.
+- A19 correction locked: later three-life allocations may be useful systematizations but are not treated as the sole explicit meaning of every early dependent-origination discourse.
+- A19 bounded audit adds SN 12.38 and SN 12.40 on intention/underlying tendencies → established consciousness → future rebirth; full SN 12 audit remains open.
 
 Next:
-- **Phase 4 A19:** How does dependent origination operate in the present without reducing it to either a one-moment psychology or a three-life scheme?
-- Route: SN 12.2 → SN 12.23 → SN 12.38/12.40/12.52/12.64 → MN 18/SN 35 bridge → Milindapañha continuity/causality stress-test.
+- **Phase 4 A20:** What exactly is `saṅkhāra` in dependent origination—formations, fabrications, choices, or karmically potent volitions—and how does it differ from the broader use "all conditioned things"?
+- Route: SN 12.2 → SN 12.51 → MN 9 → SN 22.79 → Dhammapada 277-279 usage contrast → Milindapañha kamma/continuity stress-test.
 
 Pending audit lane:
 - outstanding SN 12 ID-level work beyond bounded slices;
