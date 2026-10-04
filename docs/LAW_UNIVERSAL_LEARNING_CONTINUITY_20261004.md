@@ -95,6 +95,20 @@ This law applies to every learning track, including but not limited to:
 
 No domain-specific learning record can opt out of this continuity rule unless the Owner explicitly changes the law.
 
+## 7A. Buddhist-study mandatory Milindapañha rule
+
+For the Owner's learning track **Học hiểu tư duy, tư tưởng Phật**, every chat/seat doing material Buddhist-study work must study and consult **Mi Tiên Vấn Đáp / Milindapañha throughout the learning process**, not only as an occasional optional reference.
+
+Mandatory rules:
+
+1. Milindapañha must be revisited continuously as the Buddhist-thought track advances, especially where it clarifies argument structure, distinctions, objections, analogies, or reasoning methods.
+2. A Buddhist-study seat must not silently omit Milindapañha from the research plan for a material checkpoint.
+3. Milindapañha is a **supporting/paracanonical reasoning layer**, not the authority that overrides early-discourse evidence.
+4. Claims about the Buddha's early thought must still return to the early discourses for attestation.
+5. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
+6. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
+7. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
+
 ## 8. Blocked write-path rule
 
 If durable recording is blocked:
