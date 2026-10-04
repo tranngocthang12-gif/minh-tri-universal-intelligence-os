@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A53_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A54",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A55_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A56",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -540,5 +540,9 @@
   "owner_learning_track_buddhist_thought_a52_claim_class": "TEXT_ATTESTED_JARAMARANA_AND_TWO_ARROWS_PLUS_CROSS_TEXT_EMBODIED_VULNERABILITY_VS_MENTAL_BONDAGE_PLUS_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a52_milindapanha": "CONSULTED_BODILY_PAIN_WITHOUT_MENTAL_PAIN_MIL_3_2_4",
   "owner_learning_track_buddhist_thought_a53_claim_class": "TEXT_ATTESTED_ITI44_SN36_6_SN12_CESSATION_PLUS_CROSS_TEXT_CAUSAL_NONPRODUCTION_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a53_milindapanha": "CONSULTED_MIL_3_2_4_BODILY_PAIN_WITHOUT_MENTAL_PAIN_AND_NO_PREMATURE_DEATH"
+  "owner_learning_track_buddhist_thought_a53_milindapanha": "CONSULTED_MIL_3_2_4_BODILY_PAIN_WITHOUT_MENTAL_PAIN_AND_NO_PREMATURE_DEATH",
+  "owner_learning_track_buddhist_thought_a54_claim_class": "TEXT_ATTESTED_AVYAKATA_PLUS_CROSS_TEXT_CATEGORY_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a54_milindapanha": "CONSULTED_QUESTION_CLASSIFICATION_AND_EXTINGUISHED_FLAME",
+  "owner_learning_track_buddhist_thought_a55_claim_class": "TEXT_ATTESTED_ANATTA_PRACTICE_PLUS_CROSS_TEXT_ANTI_SLOGAN_GUARDRAIL_PLUS_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a55_milindapanha": "CONSULTED_CHARIOT_CONVENTIONAL_DESIGNATION"
 }
