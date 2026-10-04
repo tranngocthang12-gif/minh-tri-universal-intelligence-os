@@ -10498,3 +10498,386 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A87
+
+**Central question:** How does `yoniso manasikāra` work across the early discourses: what makes attention “wise,” how does it differ from mere analysis, and how does it connect right view, mindfulness, the hindrances, and the awakening factors?
+
+### TEXT_ATTESTED — 1. MN 2 DEFINES WISE ATTENTION FUNCTIONALLY: BY WHAT IT FEEDS OR ABANDONS
+
+**MN 2 Sabbāsava** says that the ending of the `āsava` is for one who knows and sees, and then immediately distinguishes:
+- things fit for attention;
+- things unfit for attention.
+
+The criterion is causal.
+
+Attention is unwise when it:
+- gives rise to unarisen defilements;
+- increases arisen defilements.
+
+Attention is wise when it:
+- prevents unarisen defilements from arising;
+- helps arisen defilements be abandoned.
+
+Therefore A87 does **not** define `yoniso manasikāra` merely as:
+- thinking harder;
+- concentrating more intensely;
+- analyzing in greater detail.
+
+Its “wisdom” is shown by the direction of causality:
+**does this way of attending lead toward abandonment, or toward feeding bondage?**
+
+### TEXT_ATTESTED — 2. MN 2 SHOWS THAT HIGHLY INTELLECTUAL SPECULATION CAN STILL BE UNWISE ATTENTION
+
+MN 2 gives a striking example.
+
+The uninstructed person attends to questions such as:
+- Was I in the past?
+- What was I?
+- Will I exist in the future?
+- What am I now?
+- Where did this being come from?
+- Where is it going?
+
+The discourse says that this mode of attention can generate a thicket of self-views.
+
+By contrast, the trained disciple attends in the Four-Noble-Truth structure:
+- this is suffering;
+- this is the origin of suffering;
+- this is the cessation of suffering;
+- this is the path leading to cessation.
+
+This gives a decisive A87 guardrail:
+
+**mere philosophical sophistication is not the same as wise attention.**
+
+A question can be intelligent in the ordinary sense and still be unwise if it strengthens identity-view, confusion, or irrelevant speculation instead of understanding suffering and its cessation.
+
+### TEXT_ATTESTED — 3. MN 43 CONNECTS WISE ATTENTION TO THE ARISING OF RIGHT VIEW
+
+**MN 43 Mahāvedalla** says there are two conditions for the arising of right view:
+- the voice/instruction of another;
+- wise attention (`yoniso manasikāra`).
+
+This means wise attention is not only an antidote to a hindrance.
+
+It helps transform received teaching into right orientation.
+
+A bounded formulation is:
+
+**teaching supplies a direction; wise attention works with that direction in a way that allows right view to arise.**
+
+This is **CROSS-TEXT SYNTHESIS**.
+MN 43 itself gives the two conditions but does not state the explanatory sentence verbatim.
+
+### TEXT_ATTESTED — 4. AN 10.61 PUTS WISE ATTENTION UPSTREAM OF MINDFULNESS AND CLEAR COMPREHENSION
+
+**AN 10.61** gives the positive nourishment chain:
+
+true-person association
+→ hearing true Dhamma
+→ faith
+→ wise attention
+→ mindfulness and clear comprehension
+→ sense restraint
+→ good conduct
+→ four establishments of mindfulness
+→ seven awakening factors
+→ knowledge and freedom.
+
+The negative chain reverses the pattern:
+unwise attention
+→ lack of mindfulness/clear comprehension
+→ lack of restraint
+→ misconduct
+→ hindrances
+→ ignorance.
+
+This demonstrates that wise attention is **not identical with mindfulness**.
+
+In this discourse it functions upstream as a condition that helps mindfulness and clear comprehension become established.
+
+### TEXT_ATTESTED — 5. SN 46.51 SHOWS THAT ATTENTION IS A NUTRIMENT: IT CAN FEED HINDRANCES OR FEED AWAKENING FACTORS
+
+**SN 46.51 Āhāra** gives one of the clearest causal maps.
+
+Unwise attention feeds:
+- sensual desire through repeated attention to the attractive sign;
+- ill will through the irritating/repulsive sign;
+- sloth and torpor through conditions of sluggishness;
+- restlessness and remorse through unsettledness;
+- doubt through things that are grounds for doubt.
+
+Wise attention deprives these hindrances of nutriment through context-specific counter-conditions.
+
+The same discourse says wise attention nourishes the seven awakening factors:
+- mindfulness;
+- investigation of Dhamma;
+- energy;
+- rapture;
+- tranquility;
+- samādhi;
+- equanimity.
+
+Therefore:
+**attention is not neutral background processing in this architecture; it actively feeds one causal network or another.**
+
+### IMPORTANT GUARDRAIL — “WISE ATTENTION” DOES NOT MEAN APPLYING ONE SINGLE CONTENT TO EVERY MENTAL STATE
+
+SN 46.51 is especially useful here.
+
+Different problems require different nutriment/counter-nutriment:
+- sensual desire: attention to unattractiveness;
+- ill will: lovingkindness / release of heart;
+- sloth: arousal, persistence, exertion;
+- restlessness: a settled mind;
+- doubt: discriminating wholesome/unwholesome, blameworthy/blameless, dark/bright and their counterparts.
+
+Therefore A87 rejects:
+`yoniso manasikāra = always contemplate impermanence`
+or
+`yoniso manasikāra = always contemplate unattractiveness`.
+
+The exact content is **task-sensitive**.
+
+What makes attention “wise” is partly that it selects the **right object/aspect for the actual causal problem**.
+
+### TEXT_ATTESTED — 6. WISE ATTENTION AND DHAMMA-INVESTIGATION ARE RELATED BUT DISTINCT
+
+SN 46.51 says wise attention to:
+- wholesome and unwholesome states;
+- blameworthy and blameless states;
+- inferior and superior states;
+- dark and bright counterparts
+
+nourishes the awakening factor of **investigation of Dhamma (`dhammavicaya`)**.
+
+Thus wise attention can be a nutriment for investigation.
+
+This argues against collapsing the two terms.
+
+A bounded distinction is:
+- `yoniso manasikāra`: directs/selects the field in a causally appropriate way;
+- `dhammavicaya`: investigates/discriminates within that field.
+
+This exact wording is **CROSS-TEXT FUNCTIONAL SYNTHESIS**.
+
+### TEXT_ATTESTED — 7. WISE ATTENTION IS NOT THE SAME AS WISDOM
+
+The early corpus connects wise attention with:
+- right view;
+- abandoning `āsava`;
+- weakening hindrances;
+- feeding awakening factors.
+
+But it does not require the equation:
+`yoniso manasikāra = paññā`.
+
+The distinction is made explicit in the **Milindapañha**:
+- attention/wise attention has the mark of examination or taking hold;
+- wisdom has the mark of severing/cutting off;
+- the barley-reaper analogy says attention takes hold while wisdom cuts.
+
+A87 therefore keeps:
+**wise attention prepares, holds, and directs the field; wisdom penetrates and cuts through defilement.**
+
+Claim class for the exact functional wording:
+**LATER/PARACANONICAL SUPPORT**, consistent with the early causal architecture but not its replacement.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION IS NOT PERCEPTION
+
+`saññā` recognizes/marks experience in its own domain.
+
+Wise attention concerns how the mind turns toward and works with what is present:
+- what is selected;
+- what is emphasized;
+- which causal frame is used.
+
+A87 does not claim a complete Abhidhamma psychology of the difference.
+
+It records only the bounded conclusion:
+**recognizing an object and attending to it wisely are not the same function.**
+
+Claim class: **FUNCTIONAL SYNTHESIS / LEXICAL OPEN**.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION IS NOT THE SAME AS DISCUSSIVE THOUGHT
+
+`vitakka-vicāra` can involve directing/examining thought and, in MN 44, are linked to verbal formation.
+
+But MN 2 proves that a great deal of discursive questioning can still be **ayoniso**.
+
+Therefore:
+**thinking about something is not sufficient evidence that one is attending wisely.**
+
+A thought becomes relevant to A87 only when its direction:
+- clarifies causes;
+- weakens defilement;
+- supports right view;
+- supports the path toward cessation.
+
+### RIGHT VIEW RELATION — A87 BOUNDED MODEL
+
+MN 43 says:
+`parato ghosa + yoniso manasikāra`
+→ arising of right view.
+
+AN 10.61 says:
+hearing true Dhamma
+→ faith
+→ wise attention
+→ downstream path factors.
+
+A bounded synthesis is:
+
+**external correction / true teaching**
+provides a map,
+
+**wise attention**
+tests and applies that map to experience in a causally useful way,
+
+**right view**
+begins to organize understanding around suffering, origin, cessation, and path,
+
+**mindfulness**
+keeps the relevant task present,
+
+**wisdom**
+penetrates deeply enough to abandon.
+
+No single discourse states this entire sequence in these exact words.
+Claim class: **CROSS-TEXT SYNTHESIS**.
+
+### HINDRANCE / AWAKENING-FACTOR RELATION
+
+A87 now makes the architecture explicit:
+
+**Unwise attention**
+→ repeatedly selects and feeds the wrong nutriment
+→ hindrances grow
+→ mindfulness/clear comprehension weaken
+→ ignorance is reinforced.
+
+**Wise attention**
+→ selects the fitting nutriment
+→ hindrances are starved
+→ awakening factors are nourished
+→ knowledge and freedom become more likely.
+
+This is **TEXT-BASED CROSS-TEXT SYNTHESIS** from AN 1.11–20, AN 10.61, and SN 46.51.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION IS NOT “POSITIVE THINKING”
+
+For ill will, the text does not merely recommend:
+“think something nice.”
+
+It recommends a specific causal antidote such as lovingkindness.
+
+For doubt, the antidote is not cheerfulness but discriminating relevant states.
+
+For sloth, the antidote involves arousal and energy.
+
+Therefore:
+**yoniso manasikāra is not generic optimism.**
+It is condition-sensitive mental work.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION IS NOT WHATEVER FEELS CALM
+
+Some wrong or unskillful views can feel subjectively coherent or calming.
+
+MN 2 judges attention by whether it:
+- feeds sensuality, becoming, ignorance;
+- or prevents/abandons those defilements.
+
+So subjective comfort is not enough.
+
+A87 retains the causal and liberative criterion.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passages/themes:
+  1. proper/wise attention and wisdom are not identical;
+  2. freedom from renewed rebirth depends on wise attention, wisdom, and other wholesome qualities together;
+  3. in the barley-reaper analogy, attention examines/takes hold and wisdom severs;
+- role in A87:
+  - clarifies why correct attention is necessary but not sufficient for liberating penetration;
+  - supports a cooperative model rather than collapsing attention into wisdom;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - the early evidence for the causal role of `yoniso manasikāra` remains MN 2, MN 43, AN 1.11–20, AN 10.61, and SN 46.51.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- MN 2 — wise/unwise attention distinguished by whether defilements are fed or abandoned; speculative self-questions versus Four-Noble-Truth attention.
+- MN 43 — wise attention plus the voice/instruction of another as conditions for arising of right view.
+- AN 1.11–20 — attention can feed or abandon the hindrances.
+- AN 10.61 — wise attention upstream of mindfulness, restraint, conduct, awakening factors, knowledge and freedom.
+- SN 46.51 — explicit nutriment/non-nutriment model for five hindrances and seven awakening factors.
+- SN 46.37 / MN 118 — awakening factors are developed toward knowledge, awakening, and release.
+
+Later/paracanonical:
+- Milindapañha on proper attention versus wisdom.
+
+### METHOD INSIGHT
+
+A87 reveals a major feature of the Buddha's thinking:
+
+**attention is a causal act of selection, not a passive spotlight.**
+
+What the mind repeatedly selects as salient becomes nutriment.
+
+This is why:
+- the same sensory field can feed lust or restraint;
+- the same difficulty can feed anger or compassion;
+- the same uncertainty can feed doubt or investigation;
+- the same teaching can remain words or become right view.
+
+The practice question is therefore not only:
+“What am I thinking?”
+
+It is:
+**“What am I feeding by attending this way?”**
+
+### PRACTICAL DIAGNOSTIC
+
+When attention locks onto something, ask:
+- Is this object/aspect fit for attention right now?
+- What state will repeated attention feed?
+- Is this genuine investigation or identity-based speculation?
+- Is the actual problem lust, anger, sloth, restlessness, doubt, or ignorance?
+- Am I applying the fitting counter-condition?
+- Is this attention helping right view arise?
+- Is mindfulness getting stronger downstream?
+- Am I confusing analysis with wisdom?
+- What would have to be abandoned for this to count as wise attention?
+
+### Open audit
+
+- full lexical/context audit of `yoniso`, `manasikāra`, `ayoniso manasikāra`, `dhammavicaya`, `saññā`, `vitakka`, and `paññā`;
+- verify all early parallels for MN 2's wise-attention / self-speculation contrast;
+- early parallel stress-test for MN 43 / AN 2.126 conditions for right view;
+- occurrence-level audit of AN 1 and SN 46 nutriment formulas;
+- determine how wise attention relates to dependent-origination contemplation in DN 14 / SN 12 material;
+- distinguish early `yoniso manasikāra` from later commentarial definitions such as explicit “attention by way of impermanence” when not directly stated in the root passage;
+- continue SN 35 / SN 36 / SN 45–46 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A87 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A88
+
+**How does `dhammavicaya`—investigation of Dhamma as an awakening factor—differ from ordinary thinking, doubt, and wise attention, and why does the Buddha treat investigation itself as something that must be balanced with tranquility, samādhi, and equanimity?**
+
+Required lanes:
+- SN 46.51 nutriment for investigation;
+- MN 118 awakening-factor sequence;
+- SN 46 material on energizing versus calming factors;
+- distinguish `dhammavicaya` from `vicikicchā`, `vitakka`, and `yoniso manasikāra`;
+- connect investigation to wisdom without prematurely equating them;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
