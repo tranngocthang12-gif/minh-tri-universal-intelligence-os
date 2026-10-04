@@ -1,0 +1,295 @@
+{
+  "schema": "minhtri-early-buddhist-whole-corpus-index/v1",
+  "updated": "2026-10-04",
+  "status": "INDEXING_STARTED_NOT_COMPLETE",
+  "purpose": "Track corpus coverage by doctrine, reasoning, translation risk, parallels, contradictions and mastery without confusing selective reading with whole-canon understanding.",
+  "fields": [
+    "collection",
+    "range_or_text",
+    "coverage_status",
+    "primary_themes",
+    "reasoning_patterns",
+    "translation_risks",
+    "parallel_status",
+    "contradiction_links",
+    "next_action"
+  ],
+  "blocks": [
+    {
+      "collection": "SN",
+      "range_or_text": "SN 12 Nidāna-saṃyutta",
+      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "primary_themes": [
+        "dependent origination",
+        "consciousness/name-and-form",
+        "rebirth continuity",
+        "conditioned cessation"
+      ],
+      "reasoning_patterns": [
+        "CONDITIONAL",
+        "ANTI_REIFICATION",
+        "WHO_TO_CONDITION_REFRAME"
+      ],
+      "translation_risks": [
+        "viññāṇa",
+        "saṅkhāra",
+        "nāmarūpa",
+        "upādāna",
+        "bhava"
+      ],
+      "parallel_status": "ACTIVE_SN_SA_ALIGNMENT",
+      "contradiction_links": [
+        "C02",
+        "REBIRTH_IDENTITY_CLUSTER_V0_8"
+      ],
+      "next_action": "Index all SN12 discourse IDs by causal pattern and SA parallel"
+    },
+    {
+      "collection": "SN",
+      "range_or_text": "SN 22 Khandha-saṃyutta",
+      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "primary_themes": [
+        "five aggregates",
+        "not-self",
+        "appropriation",
+        "annihilation misread"
+      ],
+      "reasoning_patterns": [
+        "DE_APPROPRIATIVE",
+        "ANTI_NIHILISM"
+      ],
+      "translation_risks": [
+        "attā",
+        "upādānakkhandha",
+        "saññā",
+        "saṅkhāra",
+        "viññāṇa"
+      ],
+      "parallel_status": "PARTIAL_SN_SA",
+      "contradiction_links": [
+        "SN22_85_ANNIHILATION_GUARD"
+      ],
+      "next_action": "Index self-view formulas and Chinese parallel stability"
+    },
+    {
+      "collection": "SN",
+      "range_or_text": "SN 35 Saḷāyatana-saṃyutta",
+      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "primary_themes": [
+        "sense fields",
+        "contact",
+        "feeling",
+        "burning",
+        "the all"
+      ],
+      "reasoning_patterns": [
+        "EXPERIENTIAL_DOMAIN",
+        "CONDITIONAL",
+        "ANTI_ONTOLOGICAL_OVERREACH"
+      ],
+      "translation_risks": [
+        "sabba",
+        "phassa",
+        "viññāṇa"
+      ],
+      "parallel_status": "PARTIAL",
+      "contradiction_links": [
+        "C04"
+      ],
+      "next_action": "Index the-all/burning/conceiving clusters and parallels"
+    },
+    {
+      "collection": "SN",
+      "range_or_text": "SN 36 Vedanā-saṃyutta",
+      "coverage_status": "PRIORITY_ACTIVE_PARTIAL",
+      "primary_themes": [
+        "feeling",
+        "second arrow",
+        "craving hinge"
+      ],
+      "reasoning_patterns": [
+        "PRIMARY_SECONDARY_SUFFERING",
+        "METHOD_SELECTION"
+      ],
+      "translation_risks": [
+        "vedanā"
+      ],
+      "parallel_status": "PARTIAL",
+      "contradiction_links": [],
+      "next_action": "Index feeling categories and reaction pathways"
+    },
+    {
+      "collection": "SN",
+      "range_or_text": "SN 45/46 Path and awakening factors",
+      "coverage_status": "PRIORITY_PENDING",
+      "primary_themes": [
+        "eightfold path",
+        "awakening factors",
+        "integration"
+      ],
+      "reasoning_patterns": [
+        "PATH_COORDINATION",
+        "DEVELOPMENT"
+      ],
+      "translation_risks": [
+        "sammā",
+        "samādhi",
+        "sati",
+        "bojjhaṅga"
+      ],
+      "parallel_status": "PENDING",
+      "contradiction_links": [
+        "MN117_MA189_TECHNICAL_LAYER"
+      ],
+      "next_action": "Index path definitions against MN117/MA189"
+    },
+    {
+      "collection": "MN",
+      "range_or_text": "problem-solving/dialogue cluster",
+      "coverage_status": "ACTIVE_PARTIAL",
+      "primary_themes": [
+        "question handling",
+        "method selection",
+        "speech",
+        "ethics",
+        "views",
+        "meditation"
+      ],
+      "reasoning_patterns": [
+        "REFRAME",
+        "INTENT_CLARIFY",
+        "SOURCE_CORRECTION",
+        "SPEECH_GATE",
+        "METHOD_SELECTION"
+      ],
+      "translation_risks": [
+        "diṭṭhi",
+        "yoniso manasikāra",
+        "papañca",
+        "samādhi"
+      ],
+      "parallel_status": "ACTIVE_MA_ALIGNMENT",
+      "contradiction_links": [
+        "C01",
+        "C03",
+        "C05",
+        "C06",
+        "C09"
+      ],
+      "next_action": "Expand held-out dialogue matrix and MA parallels"
+    },
+    {
+      "collection": "Snp",
+      "range_or_text": "Aṭṭhakavagga Snp 4",
+      "coverage_status": "ACTIVE_PARTIAL",
+      "primary_themes": [
+        "view-grasping",
+        "debate",
+        "conflict",
+        "non-appropriation"
+      ],
+      "reasoning_patterns": [
+        "ANTI_DOGMATISM",
+        "NON_DISPUTE",
+        "CAUSAL_CONFLICT_ANALYSIS"
+      ],
+      "translation_risks": [
+        "diṭṭhi",
+        "sacca",
+        "papañca",
+        "nissaya"
+      ],
+      "parallel_status": "SELECTED_CROSS_RECENSIONAL_CHECKS",
+      "contradiction_links": [
+        "C03",
+        "ATTHAKAVAGGA_RIGHT_VIEW_V0_8"
+      ],
+      "next_action": "Index all 16 suttas and map view-language against Nikāya right-view usage"
+    },
+    {
+      "collection": "DN",
+      "range_or_text": "DN 1, DN 15 and gradual-training materials",
+      "coverage_status": "ACTIVE_PARTIAL",
+      "primary_themes": [
+        "views",
+        "dependent origination",
+        "consciousness/name-and-form",
+        "gradual training"
+      ],
+      "reasoning_patterns": [
+        "VIEW_CAUSAL_ANALYSIS",
+        "CONDITIONAL",
+        "GRADUAL_TRAINING"
+      ],
+      "translation_risks": [
+        "attā",
+        "viññāṇa",
+        "nāmarūpa",
+        "samādhi"
+      ],
+      "parallel_status": "PENDING_DETAILED",
+      "contradiction_links": [
+        "REBIRTH_IDENTITY_CLUSTER_V0_8"
+      ],
+      "next_action": "Align DN15 with parallels and index gradual-training recurrence"
+    },
+    {
+      "collection": "AN",
+      "range_or_text": "AN epistemic/training clusters incl. AN 3.65, AN 4.170",
+      "coverage_status": "ACTIVE_PARTIAL",
+      "primary_themes": [
+        "epistemic caution",
+        "samatha-vipassana sequencing",
+        "practical lists"
+      ],
+      "reasoning_patterns": [
+        "EVIDENCE_DISCIPLINE",
+        "MULTIPLE_DEVELOPMENT_ROUTES"
+      ],
+      "translation_risks": [
+        "samatha",
+        "vipassanā",
+        "sati"
+      ],
+      "parallel_status": "PENDING",
+      "contradiction_links": [
+        "JHANA_INSIGHT_SEQUENCE_V0_8"
+      ],
+      "next_action": "Index training-route and epistemic clusters"
+    },
+    {
+      "collection": "Vinaya",
+      "range_or_text": "whole",
+      "coverage_status": "NOT_STARTED_SYSTEMATIC",
+      "primary_themes": [
+        "institutional ethics",
+        "conflict handling",
+        "rule formation"
+      ],
+      "reasoning_patterns": [
+        "CASE_BASED_GOVERNANCE",
+        "HARM_PREVENTION"
+      ],
+      "translation_risks": [],
+      "parallel_status": "NOT_STARTED",
+      "contradiction_links": [],
+      "next_action": "Start only after core sutta indexing reaches stable coverage"
+    },
+    {
+      "collection": "Abhidhamma",
+      "range_or_text": "whole",
+      "coverage_status": "DEFERRED",
+      "primary_themes": [
+        "systematization"
+      ],
+      "reasoning_patterns": [
+        "LATER_SYSTEMATIZATION"
+      ],
+      "translation_risks": [],
+      "parallel_status": "N/A_EARLY_COMPARATIVE_SCOPE",
+      "contradiction_links": [],
+      "next_action": "Study after early discourse map stabilizes"
+    }
+  ],
+  "invariant": "Coverage status is evidence of what has been indexed, not proof of understanding. No block becomes COMPLETE without source coverage and unresolved-issue review."
+}
