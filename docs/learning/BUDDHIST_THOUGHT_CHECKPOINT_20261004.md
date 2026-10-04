@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A37 COMPLETED  
-**Next checkpoint:** PHASE 4 — A38  
+**Current checkpoint:** PHASE 4 — A38 COMPLETED  
+**Next checkpoint:** PHASE 4 — A39  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -402,7 +402,108 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A38
+
+**Central question:** How does a small act of self-conceiving expand into `papañca` and interpersonal conflict?
+
+### TEXT_ATTESTED
+
+1. **MN 18 Madhupiṇḍika** gives a sequence: dependent on sense faculty and object, consciousness arises; the meeting of the three is contact; with contact as condition there is feeling; what one feels, one perceives; what one perceives, one thinks about; what one thinks about, one `papañceti`; because of that, the perceptions/categories of `papañca` assail the person with respect to past, future, and present forms cognizable by the senses.
+2. MN 18 therefore does not define `papañca` as mere quantity of thought. It appears after perception and thinking as a further process whose products then “beset/assail” the person.
+3. The same discourse links the cessation side to there being nothing that is relished, welcomed, and held to. When that does not occur, the underlying tendencies/obsessions connected with passion, aversion, views, uncertainty, conceit, becoming, and ignorance cease, together with quarrels, disputes, accusations, divisive speech, and false speech.
+4. **Sn 4.14 Tuvaṭaka** places `asmīti` (“I am”) in the verse on the root of `papañca-saṅkhā`, and then warns not to build a standpoint out of what is directly known and not to conceive oneself superior, inferior, or equal on that basis.
+5. **DN 21 Sakkapañha** traces conflict through a chain in which jealousy/avarice and the “dear/not-dear” polarity arise from desire, and conceptual proliferation/perception-and-notion processes are part of the conditions supporting conflict. This supports a bridge from affective appropriation to social conflict, though terminology differs from MN 18.
+
+### CENTRAL DISTINCTION
+
+`thinking` is not automatically `papañca`.
+
+In MN 18, thinking precedes `papañca`. Therefore:
+- planning;
+- analysis;
+- remembering;
+- comparing evidence;
+- reasoning carefully
+
+cannot be called `papañca` merely because they involve many thoughts.
+
+The more textually defensible marker is the transition from ordinary cognitive processing into a self-reinforcing proliferative structure that generates categories/perceptions which then dominate the person.
+
+### CROSS_TEXT_SYNTHESIS
+
+A cautious mechanism is:
+
+sense contact
+→ feeling
+→ perception
+→ thinking
+→ `papañca`
+→ proliferated categories/perceptions
+→ those categories “assail” the person across time
+→ when fused with relishing, resistance, views, conceit, becoming, and ignorance, they support identity/faction
+→ quarrel, dispute, accusation, divisive speech.
+
+This chain must not be read as saying every listed defilement is a synonym for `papañca`. MN 18 itself lists several distinct tendencies around the cessation point.
+
+### HOW SELFING ENTERS
+
+A37 established that knowing can be followed by `maññati` and “mine”-making without that layer being necessary for knowing itself.
+
+A38 adds:
+- once experience is organized around “I / mine / my standpoint,”
+- perception and thought can increasingly select, interpret, and rehearse material in ways that stabilize that standpoint;
+- those proliferated categories can then feel like an external reality that “attacks” the person, even though they arose through the person’s own cognitive-affective process.
+
+The second and third bullets are `CROSS_TEXT_SYNTHESIS`, not verbatim canonical wording.
+
+### CONFLICT DYNAMICS
+
+A small self-position can scale:
+
+“this happened”
+→ “this happened to me”
+→ “this says something about me”
+→ “my side / their side”
+→ “I must defend this”
+→ selective recollection and anticipation
+→ increasingly rigid categories
+→ accusation / counter-accusation
+→ group conflict.
+
+This is an analytical application of the MN 18 / Sn 4.14 pattern. Do not present it as a direct sutta quotation.
+
+### LEXICAL GUARDRAILS
+
+- `taṇhā`, `diṭṭhi`, `māna`, `upādāna`, and `papañca` are related but distinct.
+- `papañca` must not be reduced to “overthinking.”
+- `maññati` must not be collapsed into `māna`.
+- Sn 4.14 gives a strong link between `asmīti` and `papañca-saṅkhā`, but exact lexical/syntactic interpretation remains an audit lane.
+- DN 21 provides corroborating conflict structure, not a one-to-one lexical identity with MN 18.
+
+### Sources carried into durable checkpoint
+
+- MN 18 Madhupiṇḍika Sutta.
+- Sn 4.14 Tuvaṭaka Sutta.
+- DN 21 Sakkapañha Sutta.
+- A37 on knowing versus identity-construction.
+
+### Next checkpoint — PHASE 4 A39
+
+Central question:
+
+**What exactly is the role of feeling (`vedanā`) at the fork between bare experience and craving/proliferation?**
+
+Required lanes:
+
+- SN 36, especially feeling without adding a second arrow;
+- dependent origination `vedanā → taṇhā`;
+- distinguish pain/pleasure from craving for or resistance to them;
+- how selfing and papañca recruit feeling after contact;
+- whether equanimity means dullness, suppression, or a different relation to feeling.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A37 and routes the next work to A38.
+This checkpoint preserves A30–A38 and routes the next work to A39.
