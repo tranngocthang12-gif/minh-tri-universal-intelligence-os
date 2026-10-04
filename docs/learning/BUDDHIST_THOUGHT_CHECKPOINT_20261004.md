@@ -12742,3 +12742,408 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A93
+
+**Central question:** How do right intention, right speech, and right action connect: when does an inner movement of renunciation, good will, or harmlessness become ethical speech and conduct, and why does early Buddhist ethics evaluate intention together with truth, harm, timing, and result rather than motive alone?
+
+### TEXT_ATTESTED — 1. THE NOBLE EIGHTFOLD PATH DISTINGUISHES INNER DIRECTION FROM VERBAL AND BODILY CONDUCT
+
+**SN 45.8 / DN 22** define:
+
+**Right intention**
+- renunciation;
+- non-ill-will;
+- harmlessness.
+
+**Right speech**
+- abstaining from false speech;
+- divisive speech;
+- harsh speech;
+- idle/frivolous speech.
+
+**Right action**
+- abstaining from killing;
+- taking what is not given;
+- sexual misconduct / unchastity according to recension/context.
+
+This distinction matters.
+
+A wholesome inner orientation is indispensable, but the path still gives **speech and bodily action their own criteria**.
+
+Therefore:
+**good motive does not automatically make every resulting utterance or action right.**
+
+### TEXT_ATTESTED — 2. MN 41 SHOWS THAT BODY, SPEECH, AND MIND ARE DISTINCT ETHICAL DOMAINS
+
+**MN 41 Sāleyyaka** analyzes misconduct and good conduct in three domains:
+
+**body**
+- killing;
+- stealing;
+- sexual misconduct;
+
+**speech**
+- lying;
+- divisive speech;
+- harsh speech;
+- idle/frivolous speech;
+
+**mind**
+- covetousness;
+- ill will;
+- wrong view.
+
+This gives an important structural result:
+
+**ethical cultivation is not reduced either to “pure intentions” or to outward behavior alone.**
+
+The mental domain matters.
+The verbal and bodily domains also matter.
+
+### TEXT_ATTESTED — 3. MN 61 REQUIRES REFLECTION BEFORE, DURING, AND AFTER ACTION
+
+**MN 61 Ambalaṭṭhikarāhulovāda** instructs Rāhula to examine bodily, verbal, and mental action:
+
+- **before** doing it;
+- **while** doing it;
+- **after** doing it.
+
+The central questions include:
+- does it harm oneself?
+- others?
+- both?
+- is it unskillful?
+- does it lead to suffering as outcome/result?
+
+If harm becomes apparent while acting:
+- stop.
+
+If a harmful bodily or verbal action has already been done:
+- disclose/confess it;
+- restrain oneself in the future.
+
+If the action is harmless and skillful:
+- continue/develop it.
+
+This is decisive for A93.
+
+Early Buddhist ethics contains **feedback**.
+One does not merely check the initial motive and then ignore what the action actually does.
+
+### IMPORTANT GUARDRAIL — MN 61 DOES NOT REDUCE ETHICS TO CONSEQUENCES ALONE
+
+MN 61 strongly requires attention to harm and outcome.
+
+But the early path also independently prohibits:
+- false speech;
+- killing;
+- stealing;
+- and other unskillful patterns.
+
+And MN 58 refuses false speech even where speech might be agreeable.
+
+Therefore A93 rejects both extremes:
+
+`good intention alone decides morality`
+
+and
+
+`only final consequences matter`.
+
+The early model is **multi-criteria and causal**.
+
+### TEXT_ATTESTED — 4. MN 58 SHOWS THAT RIGHT SPEECH REQUIRES MORE THAN GOOD INTENT
+
+**MN 58 Abhayarājakumāra** gives a remarkably precise speech test.
+
+The Tathāgata does not speak what is:
+- false/untrue;
+- or true but not beneficial.
+
+When speech is:
+- true;
+- beneficial;
+
+he knows the proper time to say it, whether it is:
+- welcome and agreeable;
+- or unwelcome and disagreeable.
+
+The discourse closes the explanation with compassion for beings.
+
+Thus skillful speech involves at least:
+- truth;
+- benefit;
+- timing;
+- compassionate concern.
+
+This means:
+**“I meant well” is not enough if the speech is false, uselessly harmful, or badly timed.**
+
+### IMPORTANT GUARDRAIL — TRUTH ALONE IS ALSO NOT ENOUGH
+
+MN 58 explicitly withholds speech that is true but not beneficial.
+
+So:
+`it is true`
+does not by itself settle:
+`I should say it now`.
+
+A92 established that correction and disagreement can coexist with non-ill-will.
+
+A93 adds:
+**correction must also be assessed for benefit and timing.**
+
+### TEXT_ATTESTED — 5. UNPLEASANT SPEECH CAN STILL BE RIGHT WHEN TRUE, BENEFICIAL, TIMELY, AND COMPASSIONATE
+
+MN 58 rejects the simple equation:
+
+`unpleasant to hear = wrong speech`.
+
+The Tathāgata may speak something unwelcome when:
+- it is true;
+- it is beneficial;
+- the time is appropriate.
+
+Therefore Buddhist kindness is not mere pleasantness.
+
+A compassionate utterance may sometimes:
+- correct;
+- warn;
+- expose an error;
+- refuse;
+- set a boundary.
+
+But the text does not license cruelty merely by calling it “truth.”
+
+### TEXT_ATTESTED — 6. MN 61 MAKES ETHICAL ACTION CORRIGIBLE
+
+A particularly important feature of MN 61 is what happens **after error**.
+
+The practitioner is not told:
+“a good person never makes mistakes.”
+
+Instead, if a harmful bodily or verbal action has occurred:
+- acknowledge it;
+- reveal it;
+- learn from it;
+- restrain future repetition.
+
+Thus early Buddhist ethics includes:
+**error → recognition → disclosure → correction → future restraint.**
+
+This is not only moral judgment.
+It is a learning architecture.
+
+### CROSS-TEXT SYNTHESIS — INTENTION BECOMES ETHICAL CONDUCT THROUGH FILTERS
+
+A93's bounded model is:
+
+`right intention`
+→ gives the inward direction:
+  renunciation / good will / harmlessness
+
+then before speech/action:
+→ check truth, harm, benefit, appropriateness
+
+during:
+→ monitor actual effects and mental state
+
+after:
+→ review outcome
+→ acknowledge error
+→ correct future conduct.
+
+This is **CROSS-TEXT SYNTHESIS** from SN 45.8, MN 41, MN 61, and MN 58.
+
+No single discourse states this exact full pipeline.
+
+### IMPORTANT GUARDRAIL — BENEVOLENT INTENTION CAN BE UNWISE IN EXECUTION
+
+A person may sincerely want to help but:
+- speak falsely;
+- misjudge timing;
+- humiliate someone;
+- act without understanding;
+- create more harm than expected.
+
+MN 61 requires checking and revision.
+MN 58 requires benefit, truth, and timing.
+
+Therefore:
+**sincerity is ethically relevant but not sufficient evidence of skillfulness.**
+
+### IMPORTANT GUARDRAIL — HARMFUL RESULT DOES NOT PROVE MALICIOUS MOTIVE
+
+The converse also matters.
+
+An action may produce an unwanted result without:
+- ill will;
+- cruelty;
+- deliberate intention to harm.
+
+A93 therefore does not infer inner malice solely from a bad outcome.
+
+The correct response is to examine distinct questions:
+- what was intended?
+- what was known?
+- what was done?
+- what harm occurred?
+- what should be learned and changed?
+
+This is **CROSS-TEXT ETHICAL SYNTHESIS**.
+
+A dedicated checkpoint on `cetanā` and `kamma` is required before making stronger claims about karmic weight.
+
+### RELATION TO A92
+
+A92 established:
+- renunciation;
+- non-ill-will;
+- harmlessness
+
+as the three directions of right intention.
+
+A93 shows why the path immediately continues into:
+- right speech;
+- right action.
+
+**Inner goodness must become competent conduct.**
+
+The path is not complete at:
+“I had no bad intention.”
+
+### WHY EFFECT MATTERS WITHOUT TURNING THE PATH INTO PURE CONSEQUENTIALISM
+
+MN 61 asks about:
+- harm;
+- painful outcome/result;
+- what is actually occurring during action;
+- what has happened after action.
+
+MN 58 separately preserves:
+- truth as a non-negotiable speech criterion;
+- benefit;
+- timing;
+- compassion.
+
+Therefore a bounded description is:
+
+**early Buddhist ethics is intention-sensitive, action-sensitive, and consequence-aware.**
+
+It is not adequately captured by:
+- pure motive ethics;
+- pure rule formalism;
+- or pure consequence maximization.
+
+The last sentence is a **modern comparative synthesis**, not canonical terminology.
+
+### PRACTICAL ETHICAL TEST — BOUNDED FROM EARLY TEXTS
+
+Before speaking or acting:
+- What is my intention?
+- Is greed, ill will, cruelty, fear, or vanity driving this?
+- Is what I plan to say true?
+- Is it actually beneficial?
+- Is this the right time?
+- Is this likely to harm myself, another, or both?
+
+While acting:
+- What is actually happening?
+- Is unforeseen harm appearing?
+- Should I stop or modify the action?
+
+After:
+- What happened?
+- Did harm occur?
+- Was my prediction wrong?
+- Do I need to acknowledge, repair, and refrain in future?
+
+This is an **APPLICATION SYNTHESIS** grounded especially in MN 61 and MN 58.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant later/paracanonical themes:
+  1. the Milindapañha preserves a dilemma where **truthful abuse can still be censurable**, because truthful content does not erase the harmful mode and social effect of abusive speech;
+  2. the **kindness and punishment** dilemma tries to hold together non-injury/loving-kindness with correction, showing awareness that ethical judgment cannot be reduced to surface pleasantness;
+  3. its discussions of moral law versus monastic rule also warn that different kinds of ethical or disciplinary fault should not be collapsed into one simple test;
+- role in A93:
+  - supports the early-text result that truth or subjective intent alone is not sufficient;
+  - supports multi-factor ethical assessment;
+- limitation:
+  - Milindapañha solutions are **LATER/PARACANONICAL SUPPORT**;
+  - they do not override MN 58 or MN 61;
+  - especially difficult issues of punishment or unintended harm remain OPEN rather than being settled from a later dilemma.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 45.8 / DN 22 — right intention, right speech, right action as distinct path factors.
+- MN 41 — bodily, verbal, and mental good/bad conduct as distinct domains.
+- MN 61 — reflect before, during, after action; assess harm to self/others/both and painful/pleasant result; correct mistakes.
+- MN 58 — truthful + beneficial + timely speech; agreeable/unagreeable is secondary; compassion provides the orientation.
+- MN 19 / A92 sources — mental inclination and non-harming orientation upstream of conduct.
+
+Later/paracanonical:
+- Milindapañha dilemmas on truthful abuse, kindness/correction, and categories of ethical/disciplinary fault.
+
+### METHOD INSIGHT
+
+A93 reveals a major feature of the Buddha's ethical thought:
+
+**ethics is a feedback process, not merely a declaration of good motives.**
+
+A practitioner must:
+- purify intention;
+- choose a skillful form of action;
+- predict harm;
+- monitor reality;
+- learn from consequences;
+- correct future behavior.
+
+This is why wisdom matters even in compassion.
+
+**Goodness without discernment can still act badly.**
+
+### PRACTICAL DIAGNOSTIC
+
+When saying “I meant well,” ask:
+- Was the statement true?
+- Was it beneficial?
+- Was the time right?
+- Did I actually examine possible harm?
+- What happened while I was acting?
+- What happened afterward?
+- Am I defending my identity as a “good person,” or learning from the result?
+- If the result was harmful, what exactly should change next time?
+- If someone disliked the truth, was the speech nevertheless beneficial and timely—or was I using “truth” to justify aggression?
+
+### Open audit
+
+- full lexical/context audit of `saṅkappa`, `cetanā`, `kamma`, `vāca`, `kammanta`, `hita/attha`, and harm vocabulary;
+- early parallel stress-test for MN 61 and MN 58;
+- distinguish predicted harm, actual harm, karmic result, and worldly consequence;
+- determine more precisely how intention changes karmic significance when outcomes are accidental;
+- audit cases of truthful but harmful speech across the early corpus;
+- continue SN 45 right speech/right action ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A93 mirror attempt: **UNREACHABLE**;
+- read-only connector remained unavailable because the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A94
+
+**What exactly does the Buddha mean by `cetanā` in the statement “intention is kamma,” and how should intention, deliberate action, accident, ignorance, and consequence be distinguished without reducing Buddhist ethics either to motive alone or to outcome alone?**
+
+Required lanes:
+- AN 6.63 on `cetanā` and kamma;
+- MN 61 before/during/after review;
+- ten courses of action and roots of action;
+- selected Vinaya/early-discourse evidence only where relevant to intentionality;
+- distinguish karmic significance from ordinary causal responsibility;
+- mandatory Milindapañha consultation, with special caution around later “unconscious crime” dilemmas;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
