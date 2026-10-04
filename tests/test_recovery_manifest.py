@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A63_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A64")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A64_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A65")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A63_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A64")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A64_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A65")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -430,6 +430,8 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a62_milindapanha"], "CONSULTED_QUESTION_CLASSIFICATION_AND_TASK_BOUNDED_REASONING_AS_SUPPORT_TO_WISDOM")
         self.assertEqual(state["owner_learning_track_buddhist_thought_a63_milindapanha"], "CONSULTED_MIL_3_1_9_VIRTUE_AS_FOUNDATION_FOR_WHOLESOME_QUALITIES")
         self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a63_milindapanha"], "CONSULTED_MIL_3_1_9_VIRTUE_AS_FOUNDATION_FOR_WHOLESOME_QUALITIES")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a64_milindapanha"], "CONSULTED_NAGASENA_CHARIOT_AND_NEITHER_SAME_NOR_OTHER_NO_DECISIVE_TERM_EQUIVALENCE")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a64_milindapanha"], "CONSULTED_NAGASENA_CHARIOT_AND_NEITHER_SAME_NOR_OTHER_NO_DECISIVE_TERM_EQUIVALENCE")
 
 
 if __name__ == "__main__":
