@@ -7426,3 +7426,337 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
+## Completed checkpoint A77
+
+**Central question:** What exactly are `nibbidā` and `virāga` in the early discourses, and how do they differ from aversion, suppression, emotional deadness, or merely intellectual detachment?
+
+### CORRECTION FROM A76 — “CHÁN LÌA” NEEDS A GUARDRAIL
+
+A76 used “disenchantment / loss of fascination / turning away” for `nibbidā`.
+
+A77 refines that wording.
+
+The lexical range of `nibbidā` is broad. Dictionaries and translators use terms such as:
+- weariness;
+- disenchantment;
+- disgust/revulsion;
+- detachment/turning away.
+
+Therefore no single Vietnamese word should be treated as the only exact equivalent.
+
+For this learning track, **“chán lìa / hết mê thích / không còn bị cuốn hút”** is usable only with the following guardrail:
+
+**`nibbidā` in the liberation sequence is not ordinary irritation, hatred, depressive withdrawal, or `dosa`. It is a turning away that follows seeing and understanding.**
+
+Claim class:
+- lexical range: **LEXICAL / TRANSLATION OPEN**;
+- functional position in the path: **TEXT_ATTESTED**.
+
+### TEXT_ATTESTED — 1. SN 12.23 MAKES NIBBIDĀ AN EFFECT OF KNOWLEDGE-AND-VISION
+
+**SN 12.23 Upanisā** gives the sequence:
+
+`samādhi`
+→ knowledge-and-vision of things as they have come to be
+→ `nibbidā`
+→ `virāga`
+→ liberation
+→ knowledge of ending.
+
+This is decisive for A77.
+
+`Nibbidā` is not inserted before understanding as a mood one should manufacture blindly.
+
+It arises downstream from:
+**knowing and seeing things as they have come to be.**
+
+Therefore the safest functional reading is:
+**clear seeing removes enchantment.**
+
+This does not mean effort and cultivation are absent; it means the liberating turn-away is insight-grounded rather than mere emotional suppression.
+
+### TEXT_ATTESTED — 2. SN 22.59 SHOWS THE SAME SEQUENCE AT THE FIVE AGGREGATES
+
+In **SN 22.59**, form, feeling, perception, formations, and consciousness are seen with right discernment as:
+- impermanent / subject to change;
+- stressful when appropriated;
+- not fitting to regard as “mine / I / self.”
+
+Then:
+
+`seeing thus`
+→ disenchantment
+→ dispassion
+→ release.
+
+A77 therefore distinguishes three moments:
+
+1. **seeing correctly**;
+2. **loss of enchantment / turning away (`nibbidā`)**;
+3. **fading of passion (`virāga`)**.
+
+The text does not present them as one identical mental event.
+
+### TEXT_ATTESTED — 3. SN 35.28 BLOCKS THE EQUATION “NIBBIDĀ = AVERSION”
+
+**SN 35.28, the Fire Discourse**, says the six-sense field is burning with:
+- passion;
+- aversion;
+- delusion;
+- and the suffering tied to birth, aging, and death.
+
+Seeing this, the instructed disciple becomes disenchanted and then dispassionate and released.
+
+This is a strong functional guardrail.
+
+**Aversion itself is one of the fires to be escaped.**
+Therefore the disenchantment that leads out of the fire should not be collapsed into the very aversion that belongs to the burning.
+
+A77 does not claim that every lexical occurrence of `nibbidā` excludes all shades of “revulsion.”
+It claims that in the liberation sequence, interpreting it as ordinary `dosa` is structurally wrong.
+
+### TEXT_ATTESTED — 4. AN 3.72 MAKES THE ANTI-AVERSION GUARDRAIL EXPLICIT
+
+**AN 3.72** describes aversion as:
+- blinding;
+- conducive to mental suffering;
+- conducive to misconduct;
+- obstructive to discerning benefit.
+
+The Noble Eightfold Path is given as the way to abandon passion, aversion, and delusion.
+
+Therefore:
+**a state produced by cultivating hatred cannot be the liberating `nibbidā → virāga` movement.**
+
+If “disgust” is used as a translation for `nibbidā`, it must not import the unwholesome structure of hatred/ill-will.
+
+### TEXT_ATTESTED — 5. VIRĀGA IS THE FADING / ENDING OF RĀGA, NOT EMOTIONAL NUMBNESS
+
+The word `virāga` is transparently related to `rāga` and is repeatedly rendered:
+- dispassion;
+- fading of passion;
+- fading away.
+
+In **DN 22**, craving that produces renewed becoming is described as accompanied by passion and delight, and cessation is described through the remainderless fading/cessation, relinquishment, release, and letting go of that craving.
+
+In **SN 22.25**, abandoning desire-and-passion for the aggregates destroys the conditions for their future arising in the relevant renewed-becoming sense.
+
+Thus A77 uses:
+**`virāga` = the fading/ending of the passion that keeps grasping, feeding, and renewed production going.**
+
+This is not the claim:
+`virāga = inability to feel`.
+
+### TEXT_ATTESTED — 6. NIBBIDĀ IS THE REVERSAL OF NANDI IN THE CLINGING PROCESS
+
+**SN 22.5** describes aggregate origination in terms of:
+- enjoying/relishing;
+- welcoming;
+- remaining fastened.
+
+When one delights in an aggregate, `nandi` arises; in this context, that delight functions as clinging.
+
+For cessation, one does not relish, welcome, or remain fastened; delight ceases, then clinging ceases, followed by the downstream cessation sequence.
+
+This helps situate A77:
+
+`nandi`
+= delight/relishing that keeps fastening to the aggregate
+
+whereas
+
+`nibbidā`
+= the loss of enchantment that occurs when the aggregate is known and seen correctly.
+
+This is a **CROSS_TEXT FUNCTIONAL CONTRAST**, not a claim that the two words are dictionary antonyms in every context.
+
+### IMPORTANT GUARDRAIL — NANDI IS NOT “ALL JOY”
+
+The early discourses also value wholesome joy and rapture in the path.
+
+Therefore A77 does **not** equate:
+`nandi = every form of joy or happiness`.
+
+The relevant `nandi` here is delight/relishing that participates in craving, appropriation, and fastening.
+
+Exact lexical range remains **OPEN/CHECK**.
+
+### TEXT_ATTESTED — 7. DISPASSION DOES NOT ABOLISH FEELING
+
+**SN 36.6** says both the ordinary person and the instructed noble disciple experience:
+- pleasant feeling;
+- painful feeling;
+- neutral feeling.
+
+The difference is the relation to feeling:
+- the ordinary person adds resistance, passion, and ignorance;
+- the instructed disciple does not become bound in the same way.
+
+**Iti 44** likewise describes the living arahant as still having intact sense faculties and still experiencing the pleasing/displeasing and pleasure/pain, while passion, aversion, delusion, and the fetter of renewed existence are ended.
+
+Therefore A77 rejects:
+`virāga = emotional anesthesia`.
+
+A safer formulation is:
+**feeling can remain while compulsive appropriation, passion, and resistance cease.**
+
+### IMPORTANT GUARDRAIL — NOT SUPPRESSION
+
+Suppression says:
+“I still take this as desirable or threatening, but I force the reaction underground.”
+
+The early sequence in SN 12.23 instead says:
+**knowledge-and-vision → disenchantment → dispassion → release.**
+
+That means the object’s apparent promise has been seen through.
+
+A bounded analogy:
+- suppression = wanting the bait but forcibly refusing to reach for it;
+- `nibbidā / virāga` = seeing clearly that the bait cannot deliver what craving imagined, so its grip fades.
+
+The analogy is **EXPLANATORY SYNTHESIS**, not canonical wording.
+
+### IMPORTANT GUARDRAIL — NOT MERE INTELLECTUAL DETACHMENT
+
+One may intellectually repeat:
+- “everything is impermanent”;
+- “nothing is self”;
+- “I should not be attached”
+
+while attraction, identity-making, and resistance continue.
+
+SN 22.59 and SN 12.23 tie disenchantment to actual seeing/knowledge, and prior A76 showed from SN 22.89 that residual “I am” can remain even when gross self-identification is no longer endorsed.
+
+Therefore:
+**correct propositions are not yet the same thing as the transformation called `nibbidā → virāga`.**
+
+### LEXICAL AUDIT — BOUNDED RESULT
+
+For this track, the working distinctions are:
+
+- `rāga`: passion / lust / coloring attraction; exact range is context-sensitive.
+- `virāga`: fading/absence/ending of that passion; often “dispassion.”
+- `nandi`: delight/relishing; in the aggregate/craving context it helps sustain fastening.
+- `nibbidā`: disenchantment / weariness / turning away after the object has lost its compelling promise.
+
+Do **not** freeze these as one-word universal translations.
+
+Claim class:
+**LEXICAL WORKING MODEL — OPEN TO PARALLEL AND CONTEXT AUDIT**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- relevant themes:
+  1. **Mil 3.2.3** distinguishes what has been accomplished by insight from ordinary unlearned matters: insight removes delusion regarding impermanence, suffering, and non-self while ordinary informational uncertainty can remain;
+  2. **Mil 4.2** treats lust/passion, ill-will, delusion, and pride as states that corrupt sound inquiry;
+- role in A77:
+  - supports the distinction between insight-grounded release and mere mood or ignorance;
+  - supports keeping ill-will distinct from liberating understanding;
+- limitation:
+  - Milindapañha does not provide the decisive early lexical definition of `nibbidā` or `virāga`;
+  - it remains **LATER/PARACANONICAL SUPPORT**;
+- interpretation change: **MODERATE CLARIFICATION, NO SOURCE OVERRIDE**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 12.23 — knowledge-and-vision → disenchantment → dispassion → release.
+- SN 22.59 — right discernment of aggregates → disenchantment → dispassion → release.
+- SN 35.28 — aversion is part of the fire; seeing the fire leads to disenchantment/dispassion.
+- AN 3.72 — aversion blinds and is to be abandoned by the Noble Eightfold Path.
+- SN 22.5 — delight/relishing/fastening and its cessation.
+- DN 22 — craving accompanied by passion-and-delight; cessation through fading/letting go.
+- SN 22.25 — abandoning desire-and-passion removes future-arising conditions.
+- SN 36.6 / Iti 44 — feeling remains possible without bondage by passion/aversion.
+
+Lexical aids:
+- Pāli dictionaries and translation comparisons are supporting lexical evidence only.
+- Translation glosses do not outrank discourse function.
+
+Later/paracanonical:
+- Milindapañha 3.2.3 and 4.2.
+
+### METHOD INSIGHT
+
+A77 reveals an important feature of the Buddha’s practice logic:
+
+**freedom is not achieved by replacing attraction with hatred.**
+
+The causal reversal is deeper:
+
+`not seeing clearly`
+→ fascination / delight
+→ craving / fastening
+→ renewed production
+
+becomes
+
+`knowing-and-seeing`
+→ disenchantment
+→ fading of passion
+→ release.
+
+This is a **CROSS_TEXT SYNTHESIS**.
+
+The “middle” here is not emotional neutrality imposed by force.
+It is the ending of the misvaluation that made the object seem worth clinging to.
+
+### PRACTICAL DIAGNOSTIC
+
+When “chán” or “buông” appears, ask:
+- Did it arise from clearly seeing impermanence, drawback, non-control, and the cost of clinging?
+- Or is it irritation, hurt, fear, disappointment, or hatred?
+- Am I suppressing a desire that still feels unquestionably valuable?
+- Or has its apparent value actually changed under understanding?
+- Are pleasant/painful feelings still present while grasping and resistance are weaker?
+- Am I confusing loss of craving with loss of kindness, responsiveness, or feeling?
+- Is the claim text-attested, cross-text synthesis, lexical working model, or later support?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.23 Upanisā.
+- SN 22.59 Pañca / Anattalakkhaṇa.
+- SN 35.28 Ādittapariyāya.
+- AN 3.72 Channa.
+- SN 22.5 Samādhi.
+- DN 22 Mahāsatipaṭṭhāna.
+- SN 22.25 Chanda-rāga.
+- SN 36.6 Sallattha.
+- Iti 44 Nibbānadhātu.
+
+Mandatory Milindapañha layer:
+- Mil 3.2.3 — insight removes delusion in its proper domain while ordinary informational uncertainty can remain.
+- Mil 4.2 — lust, ill-will, delusion, pride, and related states corrupt inquiry.
+
+### Open audit
+
+- full occurrence-level lexical audit of `nibbidā`, `nibbindati`, `virāga`, `virajjati`, `rāga`, and `nandi`;
+- check early Chinese parallels for the standard disenchantment → dispassion → release sequence;
+- distinguish contexts where `virāga` means a process of fading from contexts where it functions almost as a designation of cessation/Nibbāna;
+- determine whether “revulsion” is ever the best translation of `nibbidā` without importing `dosa`;
+- continue SN 12 / SN 22 / SN 35 / SN 36 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- attempted during A77: **UNREACHABLE**;
+- reason returned by read-only connector: tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted;
+- GitHub branch remains the durable working record for this checkpoint;
+- current runtime liveness must not be inferred from historical PASS evidence.
+
+### Next checkpoint — PHASE 4 A78
+
+**What exactly are `nirodha` and `vimutti` in the early discourses: what ceases, what is released, and why is liberation neither annihilation of a self nor mere emotional calm?**
+
+Required lanes:
+- Four Noble Truths definitions of cessation;
+- dependent-cessation formula;
+- SN 22 / SN 35 release sequences;
+- Iti 44 distinction between liberation with present-life remainder and final remainderless unbinding;
+- avyākata / “what happens to the Tathāgata” guardrail from prior A54;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
