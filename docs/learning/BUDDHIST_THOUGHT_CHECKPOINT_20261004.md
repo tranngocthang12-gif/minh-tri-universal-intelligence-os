@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A98 COMPLETED  
-**Next checkpoint:** PHASE 4 — A99  
+**Current checkpoint:** PHASE 4 — A99 COMPLETED  
+**Next checkpoint:** PHASE 4 — A100  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -14716,6 +14716,87 @@ Required lanes:
 - relation of grasping to renewed becoming/existence;
 - continuity without a permanent self;
 - guardrail against prematurely importing later `kamma-bhava / upapatti-bhava` analysis;
+- mandatory Milindapañha consultation;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
+
+
+## Completed checkpoint A99
+
+**Central question:** What exactly is `bhava` in the sequence `upādāna → bhava → jāti`, and how should the three kinds of bhava be understood without reducing them either to a modern psychological identity model or to a later scholastic scheme?
+
+### TEXT_ATTESTED
+
+1. **SN 12.2** defines three kinds of `bhava`: sensual-sphere existence/becoming (`kāmabhava`), form-sphere existence/becoming (`rūpabhava`), and formless-sphere existence/becoming (`arūpabhava`).
+2. **MN 9** gives the same threefold definition, states that `bhava` originates from `upādāna`, and that `jāti` originates from `bhava`.
+3. **MN 43** likewise enumerates the same three kinds of `bhava`, then directly asks how renewed existence in the future occurs: beings hindered by ignorance, fettered by craving, and delighting here and there generate future renewed becoming/existence; when ignorance fades, knowledge arises, and craving ceases, such future renewed existence does not occur.
+4. The early-text category `bhavataṇhā` is a kind of craving; `bhava` is a distinct term and a distinct nidāna in dependent arising. They must not be collapsed into one concept.
+
+### WHAT BHAVA IS NOT
+
+- `bhava` is not adequately reduced to “identity formation” or a purely moment-to-moment psychological self-image.
+- `bhava` is not identical with `bhavataṇhā`.
+- The early discourses do not require later scholastic `kamma-bhava / upapatti-bhava` terminology in order to state the basic threefold definition and causal relations.
+- Later systematic distinctions may be useful as later analysis, but must be labelled as such.
+
+### CROSS_TEXT SYNTHESIS
+
+A cautious synthesis from SN 12.2, MN 9, MN 43, and the surrounding dependent-arising material is:
+
+`upādāna` supplies the taking-hold/sustaining condition  
+→ `bhava` is the conditioned mode/process of existence or becoming that is thereby generated/sustained  
+→ `jāti` is birth on that basis.
+
+This synthesis should preserve both dimensions visible in the texts:
+- `bhava` is discussed as a mode/state of existence (sensual, form, formless);
+- `bhava` is also causally active within dependent arising, where it arises from grasping and conditions birth.
+
+It is therefore safer to speak of **conditioned existence/becoming** than to force the term into either a purely static ontology or a purely psychological metaphor.
+
+### CONTINUITY WITHOUT A PERMANENT SELF
+
+The early-text argument does not need a permanent entity that travels unchanged across lives. The causal account is expressed in terms of ignorance, craving, grasping, becoming, birth, and cessation conditions.
+
+This is a `CROSS_TEXT_SYNTHESIS`, not a quotation saying “there is no bearer at all.”
+
+The key guardrail is to avoid both:
+- an eternalist reading in which an invariant self-substance migrates unchanged;
+- an annihilationist reading in which causal continuity and moral consequence become unintelligible because later existence is treated as wholly unrelated.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.  
+**Relevant passage:** Milindapañha 3.5.5, rebirth without transmigration.  
+**Analogy:** one lamp lights another; a verse learned from a teacher does not physically transmigrate from teacher to student.  
+**Role:** clarifies causal continuity without transfer of an invariant substance.  
+**Evidence class:** `LATER/PARACANONICAL`.  
+**Guardrail:** this analogy does not define `bhava` in the early discourses and does not override SN 12.2, MN 9, or MN 43.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate `bhava` with `bhavataṇhā`.
+- Do not reduce `bhava` to modern identity psychology.
+- Do not present the later `kamma-bhava / upapatti-bhava` distinction as though it were the explicit early-text definition.
+- Do not claim that causal continuity requires a permanent soul or a numerically identical consciousness-substance.
+- Do not turn Milindapañha’s “rebirth without transmigration” formula into an early-sutta quotation.
+
+### Sources carried into durable checkpoint
+
+- SN 12.2 Vibhaṅga Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- MN 43 Mahāvedalla Sutta.
+- Milindapañha 3.5.5 as later/paracanonical clarification.
+
+## Next checkpoint — PHASE 4 A100
+
+**How does the full causal segment `taṇhā → upādāna → bhava → jāti` work as one integrated model, and where do modern psychological readings illuminate the sequence versus overreach the early-text evidence?**
+
+Required lanes:
+- SN 12.2 definitions;
+- MN 9 origin/cessation relations;
+- SN 12.52 fuel/sustenance imagery;
+- SN 22 grasping-aggregate material;
+- `bhavataṇhā` versus `bhava`;
+- birth definition and guardrail against purely momentary reinterpretation;
 - mandatory Milindapañha consultation;
 - preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
