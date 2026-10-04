@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A69 COMPLETED  
-**Next checkpoint:** PHASE 4 — A70  
+**Current checkpoint:** PHASE 4 — A70 COMPLETED  
+**Next checkpoint:** PHASE 4 — A71  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -5980,6 +5980,223 @@ Required lanes:
 - distinguish functional intention/action from rebirth-producing karmic accumulation without importing later Abhidhamma categories as early-text fact;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / open-check boundaries.
+
+
+## Completed checkpoint A70
+
+**Central question:** If intention is kamma, how can an arahant still intend, choose, speak, and act without producing future renewed becoming?
+
+### TEXT_ATTESTED — 1. AN 6.63 DOES NOT SAY “EVERY INTENTION MUST PRODUCE A FUTURE REBIRTH”
+
+**AN 6.63 Nibbedhika** says:
+`intention is kamma; intending, one acts by body, speech, and mind`.
+
+The same discourse also speaks of:
+- the cessation of kamma;
+- the Noble Eightfold Path as the way leading to that cessation.
+
+Therefore “intention is kamma” must be read together with the possibility of **kamma-cessation**, not as a rule that every intentional movement necessarily generates another existence.
+
+### TEXT_ATTESTED — 2. ITI 44 SHOWS THE LIVING ARAHANT STILL FUNCTIONS
+
+**Iti 44 Nibbānadhātu** says the arahant with residue remaining:
+- still has the five sense faculties;
+- still encounters agreeable and disagreeable objects;
+- still feels pleasure and pain;
+- while greed, hate, and delusion are extinguished;
+- and the fetter of continued existence is ended.
+
+Thus awakening does not mean:
+- no perception;
+- no choice;
+- no speech;
+- no action;
+- biological or mental inertness.
+
+The living process continues, but its defiling roots and future-binding structure have been cut.
+
+The final clause is **CROSS_TEXT SYNTHESIS**.
+
+### TEXT_ATTESTED — 3. AN 3.34 MAKES THE ROOTS OF ACTION CAUSALLY DECISIVE
+
+**AN 3.34 Nidāna** identifies:
+- greed;
+- hate;
+- delusion
+
+as sources from which deeds arise and ripen in future existence.
+
+It then contrasts deeds related to:
+- non-greed;
+- non-hate;
+- non-delusion,
+
+and uses a burnt-seed image for what is cut off and unable to arise in the future when greed, hate, and delusion are destroyed.
+
+A70 therefore treats the presence or eradication of the defilement-roots as crucial to whether action continues to project a future becoming.
+
+Exact doctrinal mechanics of every post-awakening action remain **OPEN/CHECK**.
+
+### TEXT_ATTESTED — 4. AN 4.238 SHOWS A KIND OF KAMMA THAT LEADS TO THE ENDING OF KAMMA
+
+**AN 4.238** distinguishes four kinds of deeds and describes one class as:
+- neither dark nor bright;
+- with neither dark nor bright result;
+- leading to the ending of deeds.
+
+The awakening factors are given as the practice in this fourth category.
+
+This is decisive against the simplistic equation:
+`intentional cultivation = more future-producing kamma`.
+
+Some intentional practice has the function of **ending** karmic production.
+
+### CENTRAL DISTINCTION — ACTION CAN CONTINUE WHILE FUTURE-PRODUCTION CEASES
+
+A bounded synthesis is:
+
+**before liberation**
+`intention/action + ignorance/craving/clinging + greed/hate/delusion`
+can participate in renewed becoming;
+
+**after liberation**
+`functional intending/choosing/speaking/acting`
+continues while:
+- greed, hate, and delusion are uprooted;
+- craving and clinging no longer feed renewed becoming;
+- the fetter of continued existence is ended.
+
+The wording “functional” is explanatory only.
+
+A70 does **not** promote the later Abhidhamma technical category `kiriya` as an early-discourse term unless directly attested.
+
+### IMPORTANT GUARDRAIL — DO NOT SOLVE THE PROBLEM BY SAYING “AN ARAHANT HAS NO INTENTION”
+
+That would conflict with:
+- the arahant’s continuing sensory and practical life in Iti 44;
+- the obvious early-discourse portrayal of awakened persons teaching, walking, choosing, responding, and undertaking purposeful activity;
+- the Milindapañha support below.
+
+The better question is not:
+`Does intention disappear?`
+
+but:
+`What causal conditions that make intention future-binding have disappeared?`
+
+### IMPORTANT GUARDRAIL — DO NOT SOLVE IT BY IMPORTING LATER `KIRIYA` TERMINOLOGY AS IF IT WERE THE EARLY TEXT’S OWN ANSWER
+
+Later Theravāda analysis commonly calls an arahant’s actions `kiriya`—functional action that does not generate future karmic result.
+
+That framework is useful.
+
+But A70 keeps it:
+**LATER/COMMENTARIAL**, not `TEXT_ATTESTED`, unless the exact early source is established.
+
+The early-discourse case can already be made without that terminology:
+- faculties remain;
+- action remains possible;
+- greed/hate/delusion are ended;
+- continued-existence fetters are ended;
+- karmic cessation is taught as possible.
+
+### HOW A70 FITS A68–A69
+
+A68 separated:
+- intention/kamma;
+- craving;
+- clinging;
+- consciousness-establishment;
+- becoming.
+
+A69 showed:
+- intention is closely related to kamma;
+- `saṅkhāra` and `cetanā` overlap but are not globally identical.
+
+A70 adds:
+**future production depends on the wider condition-network, not on bare intention alone.**
+
+This is a **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- supporting themes:
+  1. a living arahant may still make a deliberate determination (`adhiṭṭhāna`), showing that purposive volition is not absent after awakening;
+  2. the arahant neither delights in life nor in death and does not force premature death, but waits for the appropriate time;
+  3. bodily experience can continue while the mental causes of bondage are absent;
+- role in A70:
+  - strongly supports the distinction between **continued purposeful functioning** and **renewed-birth production**;
+  - helps block the false inference that liberation requires mental passivity;
+- decisive evidence for the early technical status of all arahant intentions: **NO**;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- AN 6.63 — intention/kamma and cessation of kamma;
+- Iti 44 — living arahant still has faculties and feeling while greed/hate/delusion and continued-existence fetters are ended;
+- AN 3.34 — greed/hate/delusion as sources of future-ripening deeds and burnt-seed cessation imagery;
+- AN 4.238 — a kind of intentional cultivation that leads to the ending of kamma.
+
+Milindapañha supports continued purposeful activity after liberation but does not replace the early causal argument.
+
+### METHOD INSIGHT
+
+A70 reveals a key feature of the Buddha’s causal thinking:
+
+The same outward category “action” does not have one identical causal meaning in every condition-network.
+
+The question is not only:
+`Was there intention?`
+
+It is also:
+- what roots were present?
+- was craving feeding it?
+- was clinging present?
+- was becoming being produced?
+- had the fetter of continued existence already been ended?
+
+This is why action can remain while renewed becoming does not.
+
+### PRACTICAL DIAGNOSTIC
+
+When acting, ask:
+- What is the intention?
+- Is greed, hate, or delusion behind it?
+- Is craving seeking a future result, identity, possession, or continuation?
+- Is there clinging to outcome?
+- Is the act strengthening becoming, or weakening the conditions that feed it?
+- Am I confusing purposeful action with future-binding action?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- AN 6.63 Nibbedhika — intention is kamma; cessation of kamma and path.
+- Iti 44 Nibbānadhātu — living arahant’s faculties and feelings remain; greed/hate/delusion and fetter of continued existence ended.
+- AN 3.34 Nidāna — roots of kamma and burnt-seed cessation imagery.
+- AN 4.238 Bojjhaṅga — neither-dark-nor-bright deeds leading to ending of deeds.
+
+Mandatory Milindapañha layer:
+- post-awakening deliberate determination;
+- neither delighting in life nor death / no forced premature death;
+- bodily experience continuing without mental bondage.
+
+Open audit:
+- exact early-text technical classification of all post-awakening intentions/actions;
+- whether any Nikāya passage explicitly uses a term equivalent to the later `kiriya` category for arahant action;
+- exact reconciliation of AN 6.63’s broad “intention is kamma” wording with all post-awakening volitional acts remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A71
+
+**What exactly is meant by “cessation of kamma” if the living arahant can still act, and how do “old kamma,” present action, and the end of future karmic production differ?**
+
+Required lanes:
+- SN 35.146 old/new/cessation of kamma;
+- AN 6.63 kamma and its cessation;
+- Iti 44 remainder in this life;
+- AN 3.34 root-destruction/burnt-seed imagery;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-commentarial / open-check boundaries.
 
 ## Provenance
 
