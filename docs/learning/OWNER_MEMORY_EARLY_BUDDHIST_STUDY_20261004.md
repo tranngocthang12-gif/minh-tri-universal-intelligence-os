@@ -261,3 +261,25 @@ This is structural coverage, not sutta-by-sutta completion.
 Next:
 SN 12 discourse-ID matrix -> SN 22 self-view matrix -> SN 35 sense-process matrix -> SN 36 feeling matrix -> SN 45/46 path-factor matrix.
 
+## Latest progress — anchor deep dive v0.9
+
+Completed:
+- anchor-level deep dive for priority blocks SN 12 / 22 / 35 / 36 / 45-46;
+- expanded MN dialogue/problem-solving structural index;
+- structurally indexed all 16 Aṭṭhakavagga suttas.
+
+Key integrated map:
+SN 12 = conditional architecture;
+SN 22 = appropriation/self-view architecture;
+SN 35 = sensory-cognitive interface;
+SN 36 = feeling/reaction hinge;
+SN 45-46 = intervention/development architecture.
+
+New durable artifacts:
+- `docs/learning/EARLY_BUDDHIST_ANCHOR_DEEP_DIVE_V0_9_20261004.md`
+- `docs/learning/EARLY_BUDDHIST_MN_DIALOGUE_INDEX_V0_1.json`
+- `docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json`
+
+Next:
+discourse-by-discourse indexing inside priority Saṃyuttas, then verse-level Aṭṭhakavagga audit and more MĀ/SĀ parallel alignment.
+
