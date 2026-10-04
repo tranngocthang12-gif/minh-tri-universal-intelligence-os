@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A59 COMPLETED  
-**Next checkpoint:** PHASE 4 — A60  
+**Current checkpoint:** PHASE 4 — A60 COMPLETED  
+**Next checkpoint:** PHASE 4 — A61  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -3795,6 +3795,223 @@ Required lanes:
 - examine whether “mine-making = craving” is early-text attestation or later exegetical mapping;
 - mandatory Milindapañha consultation;
 - keep lexical and parallel audits OPEN/CHECK.
+
+
+## Completed checkpoint A60
+
+**Central question:** How does “mine-making” arise from contact, feeling, craving, and clinging, and how does something shift from merely being experienced to being appropriated as “mine”?
+
+### TEXT_ATTESTED — 1. THE SENSE OBJECT ITSELF IS NOT THE FETTER
+
+**SN 35.233** says:
+- the eye is not the fetter of sights;
+- sights are not the fetter of the eye;
+- the fetter is the **desire and lust** that arises dependent on the pair.
+
+The same pattern is applied to the other sense pairs.
+
+This is decisive for A60:
+**mere contact with an object is not yet bondage.**
+
+The binding factor is the desire/lust that arises in relation to the encounter.
+
+### TEXT_ATTESTED — 2. EXPERIENCE HAS A CONDITIONAL SEQUENCE BEFORE GRASPING
+
+**SN 35.61** lays out:
+`eye + sights → eye-consciousness → contact → feeling`
+
+and similarly for the other senses.
+
+Seeing this process clearly, the noble disciple becomes disenchanted; desire fades; liberation follows; the fuel for grasping is exhausted.
+
+A60 therefore distinguishes:
+- object;
+- consciousness;
+- contact;
+- feeling;
+from
+- the later desire/grasping response.
+
+### EARLY PARALLEL STRESS-TEST — SA 221 MAKES THE CRAVING → CLINGING LINK EXPLICIT
+
+A Chinese Saṃyukta Āgama parallel (**SA 221**) gives the sequence:
+`eye + forms → consciousness → contact → feeling → craving → clinging`.
+
+The same pattern is repeated across the other senses.
+
+This is useful as an early parallel stress-test because it confirms the causal grammar:
+**feeling is followed by craving; craving conditions clinging.**
+
+It is not used to replace the Pāli evidence, but to strengthen the cross-early-text comparison.
+
+### TEXT_ATTESTED — 3. “THIS IS MINE” IS A GRASPING POSITION, NOT A PROPERTY OF THE OBJECT
+
+**SN 22.8** describes grasping in terms of regarding the aggregates as:
+`This is mine; I am this; this is my self.`
+
+When what has been grasped changes and breaks up, sorrow, lamentation, pain, grief, and distress arise.
+
+The corresponding non-grasping formula:
+`This is not mine; I am not this; this is not my self`
+does not produce the same anxiety when change occurs.
+
+Thus “mine” is not found inside the object as an intrinsic feature.
+It is a **mode of appropriation** imposed on a conditioned aggregate/experience.
+
+### TEXT_ATTESTED — 4. MINE-MAKING IS REMOVED THROUGH NON-GRASPING, NOT THROUGH DENYING EXPERIENCE
+
+**SN 22.125** directly links freedom from:
+- I-making;
+- mine-making;
+- conceit
+
+with seeing the aggregates as:
+`not mine / not I / not self`
+and being **freed by not grasping**.
+
+The practice does not require pretending that form, feeling, perception, formations, or consciousness are absent.
+
+It changes the relation to them.
+
+### CENTRAL DISTINCTION — PLEASANT FEELING IS NOT YET “MINE”
+
+A60 therefore rejects this collapse:
+`pleasant feeling = craving = mine-making = clinging`.
+
+The early-text structure is more discriminating:
+- contact conditions feeling;
+- craving can arise dependent on feeling;
+- craving conditions clinging;
+- grasping then supports appropriation and self/mine-making.
+
+So a pleasant, painful, or neutral feeling can be **experienced** without the text requiring that it already be possessed as “mine.”
+
+The last sentence is **CROSS_TEXT SYNTHESIS** grounded in SN 35.233, SN 35.61, SA 221, and SN 22.125.
+
+### IMPORTANT GUARDRAIL — “MINE-MAKING = CRAVING” IS NOT YET EARLY-TEXT ATTESTED
+
+Later exegetical traditions often associate:
+`This is mine`
+with craving.
+
+That mapping is useful.
+
+But A60 does **not** promote:
+`mamaṅkāra = taṇhā`
+as a strict early-discourse lexical identity.
+
+Current evidence supports:
+- craving as the condition for clinging in dependent origination;
+- mine-making as a form of appropriation associated with grasping/non-grasping;
+- close functional relation between the two.
+
+Exact lexical identity remains **OPEN/CHECK**.
+
+### CROSS_TEXT SYNTHESIS — HOW EXPERIENCE BECOMES “MINE”
+
+A bounded practice model is:
+
+`sense object encountered`
+→ `consciousness`
+→ `contact`
+→ `feeling`
+→ `desire/craving develops`
+→ `grasping`
+→ `appropriation: “mine / for me / part of me”`.
+
+No single cited Pāli discourse gives this entire sequence with the word `mamaṅkāra` at the last step.
+
+Therefore the full chain is **CROSS_TEXT SYNTHESIS**.
+
+### WHY THIS MATTERS FOR UNDERSTANDING THE BUDDHA'S THOUGHT
+
+The Buddha does not blame the mere existence of objects or sensation.
+
+The analytical move is:
+**locate the point where experience becomes bound up with desire, grasping, and appropriation.**
+
+That prevents two mistakes:
+- thinking liberation requires eliminating all sensory experience;
+- thinking every pleasant feeling is already attachment.
+
+The critical question becomes:
+**what happens after feeling?**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- primary themes used:
+  1. the craving/rebirth exchange — Nāgasena says renewed rebirth depends on craving being present;
+  2. the Nāgasena/chariot conventional-designation dialogue — ordinary designation does not require a permanent owner-substance;
+- role in A60: the craving passage clarifies craving as a continuation condition; the chariot passage guards against turning “mine” into proof of an invariant possessor;
+- decisive evidence on the exact lexical equation `mamaṅkāra = taṇhā`: **NO**;
+- interpretation change: **LOW/MODERATE** — useful clarification, but no new early-text definition;
+- early-discourse confirmation: **YES IN FUNCTION**, especially SN 35.233, SN 22.125, and the dependent-origination chain;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+The root hierarchy in A60 is:
+- SN 35.233 for desire/lust as fetter rather than eye/object;
+- SN 35.61 for consciousness → contact → feeling and depletion of grasping;
+- SN 22.8 for “mine/I/self” grasping and anxiety;
+- SN 22.125 for mine-making and freedom by non-grasping;
+- SA 221 as an early parallel stress-test for feeling → craving → clinging;
+- Milindapañha only as supporting clarification.
+
+### METHOD INSIGHT — OWNERSHIP IS ANALYZED AS A CONDITIONED ACT
+
+A60 adds another important feature to the model of selfing:
+
+“Mine” is not treated merely as a grammatical possessive.
+
+It can function as an **act of appropriation**:
+an experience that was simply occurring becomes something to defend, preserve, repeat, or build identity around.
+
+This is **CROSS_TEXT SYNTHESIS**, not a lexical definition of `mamaṅkāra`.
+
+### PRACTICAL DIAGNOSTIC
+
+When something becomes “mine,” ask:
+- What was the raw contact?
+- What feeling followed?
+- What craving appeared?
+- At what point did “I like/dislike this” become “this is mine / this must stay / this must not be lost”?
+- Is the object itself binding me, or is desire/lust functioning as the yoke?
+- If the feeling is known without feeding craving, does ownership harden?
+- What anxiety appears when the appropriated object changes?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 35.233 — sense object and sense faculty are not the fetter; desire and lust arising dependent on them is the fetter.
+- SN 35.61 — sense base/object → consciousness → contact → feeling; dispassion and depletion of grasping.
+- SN 22.8 — “mine/I/self” grasping produces anxiety when aggregates change.
+- SN 22.125 — mine-making is removed through right seeing and non-grasping.
+
+Early parallel:
+- SA 221 — contact → feeling → craving → clinging across the six sense fields.
+
+Mandatory Milindapañha layer:
+- craving as a continuation condition;
+- chariot/conventional designation without a permanent owner.
+
+Open audit:
+- whether the strict mapping `“mine” = craving` is early-text attested or only later exegetical;
+- exact lexical relation among `mamaṅkāra`, `taṇhā`, and `upādāna`;
+- Aṭṭhakavagga lexical audit remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A61
+
+**What are the four kinds of `upādāna` (clinging), and how do sensual clinging, view clinging, practice/observance clinging, and self-doctrine clinging differ while still feeding becoming?**
+
+Required lanes:
+- SN 12.2 / MN 11 fourfold clinging;
+- distinguish `kāmupādāna`, `diṭṭhupādāna`, `sīlabbatupādāna`, and `attavādupādāna`;
+- connect to A34–A35 view-clinging work without collapsing all clinging into self-view;
+- test relation to mine-making and identity production;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
 ## Provenance
 
