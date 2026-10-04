@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A65 COMPLETED  
-**Next checkpoint:** PHASE 4 — A66  
+**Current checkpoint:** PHASE 4 — A66 COMPLETED  
+**Next checkpoint:** PHASE 4 — A67  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -5199,6 +5199,238 @@ Required lanes:
 - audit `taṇhā → upādāna` in SN 12 / MN 9;
 - inspect sense-field passages for desire/lust versus grasping;
 - distinguish craving, delight, passion, appropriation, and clinging without forcing synonyms;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
+
+
+## Completed checkpoint A66
+
+**Central question:** What happens at the transition from `taṇhā` (craving) to `upādāna` (clinging): when does wanting become taking-hold, and can craving be distinguished from full clinging without inventing a phenomenological threshold the early texts do not give?
+
+### TEXT_ATTESTED — 1. THE EARLY TEXTS PLACE CRAVING AND CLINGING AS DISTINCT LINKS
+
+**SN 12.2** and **MN 9** preserve:
+`feeling → craving → clinging → becoming`.
+
+They also define the two links differently:
+- craving is classified by the six sense fields / objects;
+- clinging is classified fourfold as sensual, view, precept-observance, and self-doctrine clinging.
+
+This is strong evidence that:
+`taṇhā` and `upādāna` are not merely two names for one identical factor.
+
+### TEXT_ATTESTED — 2. SN 12.12 REFUSES TO TURN THE LINK INTO A HIDDEN OWNER
+
+**SN 12.12 Moḷiyaphagguna** rejects the question:
+“Who clings?”
+
+The correct question is:
+“With what as condition does clinging occur?”
+
+The answer is:
+`with craving as condition, clinging`.
+
+This is directly relevant to A66 because the transition is analyzed causally rather than by inserting a permanent subject who first wants and then possesses.
+
+### TEXT_ATTESTED — 3. SN 12.52 SHOWS HOW FEEDING GRATIFICATION STRENGTHENS THE DOWNSTREAM CHAIN
+
+**SN 12.52 Upādāna** contrasts:
+- contemplating gratification in things liable to be clung to;
+- contemplating their danger/drawback.
+
+When gratification is dwelt upon, craving increases, and the dependent sequence continues through clinging, becoming, birth, and suffering.
+
+When the drawbacks are understood and craving ceases, clinging and the downstream links cease.
+
+This supports:
+**clinging is downstream of craving and depends on whether craving is fed rather than abandoned.**
+
+It still does not define a single exact moment at which “mere craving” becomes “full clinging.”
+
+### TEXT_ATTESTED — 4. DESIRE/LUST CAN BE IDENTIFIED BEFORE IT IS EQUATED WITH TECHNICAL CLINGING
+
+**SN 35.233** says:
+- the eye is not the fetter of forms;
+- forms are not the fetter of the eye;
+- desire and lust arising dependent on the pair are the fetter.
+
+This gives an observable early stage:
+the encounter becomes binding through desire/lust.
+
+But A66 does **not** equate:
+`chandarāga = taṇhā = upādāna`
+as a lexical identity.
+
+The terms overlap functionally in the field of attachment but remain distinct until direct evidence establishes equivalence.
+
+### TEXT_ATTESTED — 5. “CRAVING CONDITIONS CLINGING” DOES NOT MEAN THE TEXT GIVES A MICROSECOND-BY-MICROSECOND PSYCHOLOGY
+
+The dependent-origination formula establishes conditional order.
+
+It does not supply:
+- a neurological threshold;
+- a fixed duration;
+- a universal phenomenological timestamp at which one technical term turns into the next.
+
+Therefore A66 refuses to invent one.
+
+The safest early-text statement is:
+**where craving is present and fed, clinging can arise; with cessation of craving, clinging ceases.**
+
+The word “can” here is deliberately cautious: the texts state conditionality, not a laboratory-style temporal measurement.
+
+### CAN CRAVING OCCUR WITHOUT FULL CLINGING?
+
+A66 distinguishes two questions.
+
+**TEXTUAL question:**
+Are craving and clinging distinct factors?
+
+**YES.**
+They are separately named, differently classified, and causally ordered.
+
+**Phenomenological question:**
+Can an individual episode of craving be noticed and cease before it consolidates into a recognizable clinging episode?
+
+The early texts do not give a direct micro-phenomenological rule phrased this way.
+
+A practical answer is therefore **CROSS_TEXT SYNTHESIS**:
+because the cessation formula says:
+`with cessation of craving, clinging ceases`,
+one can train at the craving link rather than waiting for the downstream grasping structure to mature.
+
+But this should not be promoted into:
+“every craving episode always exists for a fixed interval before clinging.”
+
+### CENTRAL DISTINCTION — WANTING VS TAKING-HOLD
+
+A bounded functional model is:
+
+**`taṇhā`**
+- thirsts;
+- seeks continuation/repetition/escape;
+- moves toward or away from experience;
+
+**`upādāna`**
+- takes hold;
+- organizes around an object/view/practice/self-doctrine;
+- feeds becoming.
+
+The first two bullets in each group are explanatory glosses based on the early classifications and causal roles, not canonical dictionary definitions.
+
+The key point is:
+`desire begins to bind`
+and
+`a grasped structure is maintained`
+are analytically distinguishable even when they occur very close together.
+
+### IMPORTANT GUARDRAIL — “UPĀDĀNA = INTENSIFIED TAṆHĀ” IS A LATER EXEGETICAL SHORTCUT, NOT YET AN EARLY-TEXT DEFINITION
+
+Later Theravāda exegesis often explains clinging as stronger/intensified craving or as the more tenacious taking-hold that follows thirst.
+
+This is useful as a heuristic.
+
+But A66 does not promote that gloss to `TEXT_ATTESTED` unless an early discourse explicitly says so.
+
+Current classification:
+**LATER/COMMENTARIAL SUPPORT / OPEN-CHECK for exact lexical identity.**
+
+### RELATION TO DELIGHT, PASSION, APPROPRIATION, AND CLINGING
+
+Earlier checkpoints established:
+- delight/passion/craving can provide support for consciousness and renewed becoming;
+- desire/lust can be the fetter around sense contact;
+- “mine/I/self” formulas mark appropriation;
+- `upādāna` has a distinct fourfold taxonomy.
+
+A66 therefore rejects a one-word collapse:
+`nandi = rāga = taṇhā = mamaṅkāra = upādāna`.
+
+A safer model is:
+these terms describe overlapping but non-identical operations in the broader attachment/selfing process.
+
+Exact lexical relations remain **OPEN/CHECK**.
+
+### METHOD INSIGHT — THE BUDDHA LOCATES AN INTERVENTION POINT BEFORE FULL IDENTITY STRUCTURE HARDENS
+
+A66 reveals a practical implication of the causal ordering.
+
+If:
+`feeling → craving → clinging → becoming`,
+then the path need not wait until a rigid self-story, ideology, possession, or practice-identity has formed.
+
+Attention can turn at:
+- feeling;
+- the arising of craving;
+- desire/lust;
+- delight;
+before downstream grasping is further fed.
+
+This is a **CROSS_TEXT / PRACTICAL SYNTHESIS**, but it preserves the causal grammar rather than inventing a hidden agent.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY IN THIS CHAT
+
+- consulted: **YES**;
+- supporting themes:
+  1. **taste without lust** — the liberated person can experience taste without the lust attached to it, clarifying that bare experience and binding passion are not identical;
+  2. **cause of rebirth / remaining attachment** — continued rebirth depends on remaining attachment/craving, while its absence ends renewed birth;
+  3. **cessation sequence** — cessation of craving is connected with cessation of grasping, becoming, birth, aging, and death;
+- role in A66: clarifies the difference between experience, passion, and downstream grasping without supplying a new early-text definition;
+- decisive evidence for an exact threshold between `taṇhā` and `upādāna`: **NO**;
+- interpretation change: **MODERATE CLARIFICATION**;
+- early-discourse confirmation: **YES IN FUNCTION**, especially SN 12.2, SN 12.12, SN 12.52, MN 9, and SN 35.233;
+- claim class: **LATER/PARACANONICAL SUPPORT**.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- SN 12.2 — distinct craving and clinging links and definitions;
+- MN 9 — craving as origin of clinging and fourfold clinging;
+- SN 12.12 — “who clings?” redirected to conditionality;
+- SN 12.52 — gratification feeds craving and downstream clinging; cessation cuts the sequence;
+- SN 35.233 — desire/lust as the fetter around sense encounter.
+
+Milindapañha clarifies the functional distinction but does not define a technical threshold.
+
+### PRACTICAL DIAGNOSTIC
+
+When wanting appears, ask:
+- Is this simply a pleasant/unpleasant feeling?
+- Has thirst for repetition, continuation, or escape appeared?
+- Is desire/lust now fastening onto the object?
+- Has the mind begun defending, possessing, identifying, or structuring life around it?
+- Which of the four clinging domains is becoming active?
+- Can craving be known and allowed to cease before it recruits a larger grasping structure?
+- Am I describing what is actually observed, or importing a theory about an exact threshold the texts do not give?
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 12.2 Vibhaṅga — `taṇhā → upādāna`; distinct definitions/classifications.
+- MN 9 Sammādiṭṭhi — craving as origin of clinging; four kinds of clinging.
+- SN 12.12 Moḷiyaphagguna — conditional rather than agent-centered question about clinging.
+- SN 12.52 Upādāna — gratification increases craving and downstream clinging; cessation cuts the chain.
+- SN 35.233 — desire/lust as fetter dependent on sense encounter.
+
+Mandatory Milindapañha layer:
+- taste without lust;
+- remaining attachment and renewed birth;
+- craving/grasping cessation sequence.
+
+Open audit:
+- exact lexical relation among `taṇhā`, `chandarāga`, `nandi`, `rāga`, `mamaṅkāra`, and `upādāna`;
+- whether “upādāna = intensified taṇhā” is found in any early parallel rather than only later exegesis;
+- Aṭṭhakavagga lexical stress-test remains OPEN/CHECK.
+
+### Next checkpoint — PHASE 4 A67
+
+**How does `upādāna → bhava` work: by what mechanism does grasping at pleasure, views, practices, or self-doctrine become a mode of becoming rather than remaining only a momentary attachment?**
+
+Required lanes:
+- return to SN 12.2 / MN 9 `upādāna → bhava`;
+- distinguish the four objects/modes of clinging from the threefold definition of `bhava`;
+- inspect AN 3.76 kamma-field / consciousness-seed / craving-moisture model;
+- test carefully whether “identity formation” is explanatory synthesis rather than lexical definition of `bhava`;
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-paracanonical / lexical-open boundaries.
 
