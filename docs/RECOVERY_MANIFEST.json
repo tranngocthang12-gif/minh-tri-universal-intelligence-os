@@ -186,8 +186,8 @@
   "owner_learning_track_buddhist_thought": {
     "status": "ACTIVE",
     "checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-    "current": "PHASE_4_A37_COMPLETED",
-    "next": "PHASE_4_A38",
+    "current": "PHASE_4_A39_COMPLETED",
+    "next": "PHASE_4_A40",
     "open_audits": [
       "SN12",
       "SN22",
@@ -205,6 +205,10 @@
     "milindapanha_required": true,
     "milindapanha_scope": "ALL_MATERIAL_CHECKPOINTS_CONTINUOUS",
     "milindapanha_role": "MANDATORY_SUPPORTING_PARACANONICAL_REASONING_SOURCE_NOT_EARLY_TEXT_AUTHORITY",
-    "milindapanha_checkpoint_record_required": true
+    "milindapanha_checkpoint_record_required": true,
+    "a38_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_WITH_LEXICAL_GUARDRAILS",
+    "a38_milindapanha": "CONSULTED_RETROACTIVE_NO_DECISIVE_ADDITION",
+    "a39_claim_class": "TEXT_ATTESTED_PLUS_CROSS_TEXT_SYNTHESIS_PLUS_LATER_PARACANONICAL_SUPPORT",
+    "a39_milindapanha": "CONSULTED_BODY_VS_MENTAL_PAIN_AND_FEELING_CLASSIFICATION"
   }
 }

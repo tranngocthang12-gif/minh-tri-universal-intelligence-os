@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A37 COMPLETED  
-**Next checkpoint:** PHASE 4 — A38  
+**Current checkpoint:** PHASE 4 — A39 COMPLETED  
+**Next checkpoint:** PHASE 4 — A40  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -415,7 +415,161 @@ Required lanes:
 
 Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
 
+## Completed checkpoint A38
+
+**Central question:** How does a small act of self-conceiving expand into `papañca` and interpersonal conflict?
+
+### TEXT_ATTESTED
+
+1. **MN 18 Madhupiṇḍika** gives a sequence: sense faculty + object → consciousness → contact → feeling → perception → thinking → `papañca`; the perceptions/categories of `papañca` then assail the person across past, future, and present experience.
+2. MN 18 therefore does not reduce `papañca` to mere quantity of thought. Thinking precedes `papañca`.
+3. The cessation side of MN 18 links non-relishing/non-holding with the ending of tendencies associated with passion, aversion, views, uncertainty, conceit, becoming, and ignorance, together with quarrels, disputes, accusation, divisive speech, and false speech.
+4. **Sn 4.14 Tuvaṭaka** places `asmīti` (“I am”) in the verse on the root of `papañca-saṅkhā`, then warns against building a standpoint from what is directly known and against superior/inferior/equal self-positioning.
+5. **DN 21 Sakkapañha** supplies a corroborating conflict structure in which desire, dear/not-dear polarity, jealousy/avarice, and conceptual processes condition conflict.
+
+### CENTRAL DISTINCTION
+
+`thinking` is not automatically `papañca`.
+
+Planning, analysis, memory, evidence comparison, and careful reasoning cannot be labelled `papañca` merely because many thoughts are present. The stronger textual marker is a proliferative process whose generated categories/perceptions then dominate the person.
+
+### CROSS_TEXT_SYNTHESIS
+
+sense contact
+→ feeling
+→ perception
+→ thinking
+→ `papañca`
+→ proliferated categories/perceptions
+→ those categories “assail” the person
+→ when fused with relishing, resistance, views, conceit, becoming, and ignorance, they support identity/faction
+→ quarrel and dispute.
+
+The terms `taṇhā`, `diṭṭhi`, `māna`, `upādāna`, and `papañca` remain distinct.
+
+### MILINDAPAÑHA CONSULTATION — RETROACTIVE UNDER OWNER LAW
+
+- consulted: **YES**;
+- role: search for supporting argument material on conceit/view/conflict after the Owner made Milindapañha mandatory;
+- result: no Milindapañha passage was used as decisive evidence for the A38 mechanism;
+- interpretation change: **NO**;
+- early-discourse attestation remains MN 18 / Sn 4.14 / DN 21;
+- claim class for Milindapañha contribution here: **LATER/PARACANONICAL — NO DECISIVE ADDITION**.
+
+### Sources carried into durable checkpoint
+
+- MN 18 Madhupiṇḍika Sutta.
+- Sn 4.14 Tuvaṭaka Sutta.
+- DN 21 Sakkapañha Sutta.
+- A37 on knowing versus identity-construction.
+
+## Completed checkpoint A39
+
+**Central question:** What is the role of feeling (`vedanā`) at the fork between experience and craving/proliferation?
+
+### TEXT_ATTESTED
+
+1. **SN 36.6 Sallattha** says both the uninstructed person and the instructed noble disciple still feel pleasant, painful, and neither-pleasant-nor-painful feeling. The difference is not whether feeling occurs.
+2. When painful feeling occurs, the uninstructed person adds sorrow, grief, lamentation, distress, and resistance—the “second arrow.” The instructed disciple still feels bodily pain but does not add that second mental arrow.
+3. SN 36.6 also shows the pleasure side: the uninstructed person seeks sensual pleasure as escape and is caught by passion; the instructed disciple does not have to convert painful feeling into sensual craving. Pleasant feeling therefore is not identical with craving.
+4. Neutral feeling is not automatically wisdom or equanimity. SN 36.6 says ignorance can obsess the uninstructed person in relation to neither-pleasant-nor-painful feeling when its arising, passing, allure, drawback, and escape are not discerned.
+5. **SN 12.2 / SN 12.44** place `vedanā → taṇhā → upādāna` in dependent origination. Feeling is a condition for craving in the suffering process; it is not lexically the same thing as craving.
+6. **SN 12.12 Phagguna** explicitly rejects the reifying question “Who feels?” / “Who craves?” and redirects inquiry to conditionality: with contact as condition feeling; with feeling as condition craving. This is a major methodological guardrail against inserting a self into the chain.
+7. **SN 36.7** says pleasant, painful, and neutral feeling can be known as conditioned, impermanent, not grasped, and not relished. The feeling can remain present while appropriation is absent.
+8. **SN 36.23** identifies the escape from feeling as the abandoning of desire-passion for feeling. This supports the distinction between ending attachment to feeling and merely suppressing the capacity to feel.
+9. **SN 36.31** distinguishes forms of equanimity and includes purified equanimity with mindfulness in the fourth jhāna. Equanimity therefore cannot simply mean dullness or unconsciousness.
+
+### CENTRAL DISTINCTIONS
+
+- painful `vedanā` ≠ the added mental suffering of resistance;
+- pleasant `vedanā` ≠ `taṇhā`;
+- neutral `vedanā` ≠ automatically `upekkhā` or wisdom;
+- `upekkhā` must not be collapsed into the neutral feeling category `adukkhamasukha vedanā`, even where the two occur together in specific meditative contexts;
+- feeling is experienced; craving is a conditioned response/relation to experience.
+
+### CROSS_TEXT_SYNTHESIS
+
+A cautious fork model is:
+
+contact
+→ feeling
+→ **two broad possibilities**
+
+A. ignorance / resistance / relishing
+→ craving
+→ clinging
+→ selfing and proliferation can recruit the feeling
+→ further suffering;
+
+B. mindfulness / discernment
+→ feeling known as conditioned and changing
+→ no compulsory resistance or sensual escape
+→ no second arrow
+→ feeling can cease without becoming identity or fuel.
+
+“Fork” is an analytical model. The suttas supply the conditional relations and contrasting responses; they do not present this exact diagram as a single formula.
+
+### WHY EQUANIMITY IS NOT NUMBNESS
+
+The instructed disciple in SN 36.6 still feels all three feeling tones. The difference lies in non-resistance, non-relishing, and knowledge of arising/passing/allure/drawback/escape.
+
+Thus equanimity in this study track is better understood as a **different relation to feeling**, not abolition of sensory-affective registration.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- role: objection-resolution and analogy;
+- relevant passage 1: Nāgasena argues that an arahant can still suffer bodily pain but not the corresponding mental pain because the mind is trained; this closely parallels the one-arrow/two-arrow distinction;
+- relevant passage 2: the dialogue asks whether pleasant sensation is good, evil, or neutral and answers that it may belong to different ethical classes, reinforcing that hedonic tone should not be mechanically equated with moral quality;
+- interpretation change: **NO MAJOR CHANGE**; it sharpened the distinction between sensation, mental reaction, and ethical classification;
+- early-discourse confirmation: **YES** for bodily versus mental pain via SN 36.6; the ethical-classification discussion remains supporting later reasoning here;
+- claim class: **LATER/PARACANONICAL SUPPORT**, never promoted by itself to `TEXT_ATTESTED`.
+
+### METHOD INSIGHT
+
+SN 12.12 is especially important for the Owner’s stated goal of understanding Buddhist reasoning:
+
+Instead of:
+“Who is the one that feels?”
+
+the Buddha redirects to:
+“What conditions feeling?”
+
+This shifts analysis from substance/agent speculation to conditional process. It is not a denial that experience occurs; it is a refusal to smuggle an enduring experiencer into the causal explanation.
+
+### Sources carried into durable checkpoint
+
+Early-discourse axis:
+- SN 36.6 Sallattha Sutta.
+- SN 36.7 Gelañña Sutta.
+- SN 36.23 Bhikkhu Sutta.
+- SN 36.31 Nirāmisa Sutta.
+- SN 12.2 Paṭiccasamuppāda Vibhaṅga.
+- SN 12.12 Phagguna Sutta.
+- SN 12.44 Loka Sutta.
+
+Mandatory Milindapañha layer:
+- Milindapañha dilemma on the arahant suffering bodily but not mental pain.
+- Milindapañha discussion “Is a pleasant sensation good?” used only as later/paracanonical reasoning support.
+
+### Next checkpoint — PHASE 4 A40
+
+Central question:
+
+**Is every desire a cause of suffering, or must `taṇhā` be distinguished from `chanda` and other forms of intention?**
+
+Required lanes:
+
+- `taṇhā` after `vedanā`;
+- sensual craving, craving for becoming, craving for non-becoming;
+- `chanda` in Right Effort and practice;
+- desire to abandon craving: paradox or functional distinction?;
+- Milindapañha consultation mandatory;
+- do not translate every wanting/wishing as `taṇhā` without textual support.
+
+Every conclusion remains labelled `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, or `OPEN/CHECK`.
+
 ## Provenance
 
 Originating Owner continuity directive: GitHub Issue #171, 2026-10-04.  
-This checkpoint preserves A30–A37 and routes the next work to A38.
+This checkpoint preserves A30–A39 and routes the next work to A40.

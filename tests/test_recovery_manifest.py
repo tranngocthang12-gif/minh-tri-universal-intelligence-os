@@ -341,11 +341,11 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertTrue(state["universal_learning_prework_bootstrap_required"])
         self.assertTrue(state["universal_learning_durable_checkpoint_required"])
         self.assertFalse(state["chat_memory_is_canonical_project_memory"])
-        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A37_COMPLETED")
-        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A38")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_status"], "PHASE_4_A39_COMPLETED")
+        self.assertEqual(state["owner_learning_track_buddhist_thought_next_checkpoint"], "PHASE_4_A40")
         self.assertEqual(manifest["universal_learning_continuity"]["law"], state["universal_learning_continuity_law"])
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A37_COMPLETED")
-        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A38")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["current"], "PHASE_4_A39_COMPLETED")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["next"], "PHASE_4_A40")
         self.assertIn("LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md", law_index)
         self.assertIn("Universal learning continuity invariant", architecture)
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
@@ -379,6 +379,9 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("MILINDAPAÑHA / MI TIÊN VẤN ĐÁP", bootstrap)
         self.assertIn("Mandatory Milindapañha consultation record", checkpoint)
         self.assertIn("must never be silently promoted to `TEXT_ATTESTED`", checkpoint)
+        self.assertEqual(state["owner_learning_track_buddhist_thought_a39_milindapanha"], "CONSULTED_BODY_VS_MENTAL_PAIN_AND_FEELING_CLASSIFICATION")
+        self.assertEqual(manifest["owner_learning_track_buddhist_thought"]["a39_milindapanha"], "CONSULTED_BODY_VS_MENTAL_PAIN_AND_FEELING_CLASSIFICATION")
+        self.assertIn("MILINDAPAÑHA CONSULTATION — MANDATORY", checkpoint)
 
 
 if __name__ == "__main__":
