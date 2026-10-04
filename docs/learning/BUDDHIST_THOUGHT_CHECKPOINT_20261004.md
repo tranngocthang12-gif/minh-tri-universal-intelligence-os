@@ -10148,3 +10148,353 @@ Required lanes:
 - mandatory Milindapañha consultation;
 - preserve early-text / synthesis / later-systematic / lexical-open boundaries.
 
+## Completed checkpoint A86
+
+**Central question:** How do sense restraint (`indriya-saṃvara`) and wise attention (`yoniso manasikāra`) interrupt the movement from contact and feeling into sensual desire without requiring sensory suppression?
+
+### TEXT_ATTESTED — 1. SENSE RESTRAINT BEGINS AFTER SEEING, HEARING, ETC.; IT IS NOT SENSORY SHUTDOWN
+
+The standard sense-restraint formula preserved in DN and SN says:
+
+- having seen a form with the eye;
+- heard a sound with the ear;
+- smelled an odor with the nose;
+- tasted a flavor with the tongue;
+- touched a tangible with the body;
+- cognized a mental object with the mind;
+
+the practitioner **does not grasp at the sign (`nimitta`) or the details/features (`anubyañjana`)**.
+
+The reason is practical:
+if the faculty is left unrestrained, covetousness and distress and other unskillful states may invade.
+
+Therefore:
+
+**sense restraint does not mean preventing all sensory contact.**
+The contact has already occurred in the formula.
+The training concerns what the mind does next.
+
+### TEXT_ATTESTED — 2. THE RESTRAINT FORMULA TARGETS THE WAY ATTENTION TAKES UP SIGNS AND FEATURES
+
+A86 does not equate:
+`nimitta/anubyañjana = the object itself`.
+
+The formula distinguishes:
+- seeing/hearing/etc.;
+- then taking up a sign or particular features in a way that can feed covetousness or distress.
+
+This gives a bounded functional reading:
+
+**restraint protects the transition from raw sensory encounter into selective mental elaboration that feeds defilement.**
+
+The sentence above is **CROSS-TEXT SYNTHESIS**.
+The exact lexical range of `nimitta` and `anubyañjana` remains OPEN/CHECK.
+
+### IMPORTANT TERMINOLOGICAL GUARDRAIL — THIS `NIMITTA` MUST NOT BE AUTOMATICALLY IDENTIFIED WITH LATER JHĀNA-NIMITTA THEORY
+
+A82 noted later standardized concentration-`nimitta` systems.
+
+A86 adds:
+the word `nimitta` also occurs in the early sense-restraint formula as “sign/feature.”
+
+Therefore:
+**same Pāli word does not guarantee same technical function in every context.**
+
+Do not import later visual/mental concentration-sign mechanics into the sense-restraint passage merely because the word is the same.
+
+### TEXT_ATTESTED — 3. UNWISE ATTENTION FEEDS SENSUAL DESIRE
+
+**AN 1.11–20** says:
+- attending unwisely to the attractive/beautiful feature gives rise to sensual desire and makes arisen sensual desire grow;
+- wise attention to the unattractive feature prevents sensual desire from arising or helps abandon it once arisen.
+
+This is extremely important.
+
+The external form does not mechanically create `kāmacchanda`.
+**How the mind attends to a feature changes the causal result.**
+
+This confirms the A85 distinction:
+the world is not itself the fetter; the binding relation is conditionally produced.
+
+### TEXT_ATTESTED — 4. MN 2 DEFINES WISE ATTENTION BY WHETHER IT FEEDS OR ABANDONS THE ĀSAVAS
+
+**MN 2 Sabbāsava** says an untrained person does not know:
+- what should be attended to;
+- what should not be attended to.
+
+They attend to things in ways that:
+- give rise to unarisen `āsava`;
+- increase arisen `āsava`.
+
+The trained disciple does the opposite:
+they attend so that unarisen `āsava` do not arise and arisen ones are abandoned.
+
+Thus A86 does not define `yoniso manasikāra` merely as:
+“paying a lot of attention.”
+
+It is **causally intelligent attention**:
+attention applied in a way that supports abandoning rather than feeding bondage.
+
+### TEXT_ATTESTED — 5. AN 10.61 PUTS WISE ATTENTION UPSTREAM OF MINDFULNESS, CLEAR COMPREHENSION, AND SENSE RESTRAINT
+
+**AN 10.61** gives an explicit nourishment chain:
+
+wise attention
+→ mindfulness and clear comprehension
+→ sense restraint
+→ good conduct
+→ establishments of mindfulness
+→ awakening factors
+→ knowledge and freedom.
+
+The reverse chain says:
+
+unwise attention
+→ lack of mindfulness and clear comprehension
+→ lack of sense restraint
+→ misconduct
+→ hindrances
+→ ignorance.
+
+This is one of the clearest early-text statements that **attention is not a minor preliminary detail**.
+It changes what the whole later training can become.
+
+### TEXT_ATTESTED — 6. RESTRAINT AND AVOIDANCE ARE NOT THE SAME PRACTICE
+
+MN 2 lists multiple distinct ways of abandoning defilements, including:
+- restraint;
+- wise use;
+- endurance;
+- avoidance;
+- dispelling;
+- development.
+
+This matters for A86.
+
+If sense restraint simply meant:
+“avoid every object that could trigger desire,”
+
+there would be little reason to distinguish restraint from avoidance as separate training modes.
+
+Therefore:
+
+**avoidance can sometimes be appropriate, but sense restraint is a different skill: remaining uninvaded even when sensory contact occurs.**
+
+### IMPORTANT GUARDRAIL — RESTRAINT IS NOT REPRESSION
+
+Repression can mean:
+- desire is fully active;
+- the object is still regarded as unquestionably desirable;
+- but the reaction is forcibly pushed underground.
+
+The early restraint formula instead trains:
+- what signs and details are taken up;
+- mindfulness and clear comprehension;
+- wise attention;
+- prevention of covetousness/distress from invading.
+
+So the direction is not merely:
+`desire arises strongly → crush it`.
+
+It is also earlier and more causal:
+**do not keep feeding the attentional pattern from which desire grows.**
+
+This is **CROSS-TEXT SYNTHESIS** from the restraint formula, AN 1.11–20, MN 2, and AN 10.61.
+
+### TEXT_ATTESTED — 7. SENSE RESTRAINT CAN COEXIST WITH INNER HAPPINESS
+
+The standard gradual-training formula says that one endowed with noble sense restraint experiences a blameless/unblemished happiness within.
+
+This matters because sense restraint is not presented merely as deprivation.
+
+A well-trained restraint:
+- protects the mind from invasion;
+- reduces agitation;
+- creates conditions for collectedness and later jhāna.
+
+Thus restraint belongs to a positive training architecture, not just prohibition.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION IS NOT THE SAME AS WISDOM
+
+The early texts closely connect wise attention and liberating development, but A86 does not collapse `yoniso manasikāra` into `paññā`.
+
+The **Milindapañha** explicitly distinguishes them:
+- wise attention/attention has a considering or taking-hold function;
+- wisdom has a cutting-off function.
+
+This fits the early architecture:
+attention selects and structures the field;
+wisdom penetrates and cuts through delusion.
+
+Claim class for this exact formulation:
+**LATER/PARACANONICAL SUPPORT**.
+
+### WHAT HAPPENS AT THE CONTACT → FEELING → CRAVING INTERFACE?
+
+A85 established:
+contact
+→ feeling
+→ craving
+is a conditional sequence, not an irresistible mechanical fate.
+
+A86 adds two intervention layers.
+
+**Attention layer**
+- which feature is selected?
+- is beauty/attractiveness repeatedly amplified?
+- is the object framed wisely or unwisely?
+
+**Restraint layer**
+- after seeing/hearing/etc., does the mind grasp the sign/details?
+- does covetousness or distress get invited in?
+- are mindfulness and clear comprehension still functioning?
+
+Bounded model:
+
+`contact`
+→ `feeling`
+→ attention selects/interprets features
+
+if unwise:
+→ attractive sign repeatedly elaborated
+→ sensual desire grows
+→ craving/grasping
+
+if wise + restrained:
+→ feeling is known
+→ sign/details are not appropriated in the same way
+→ sensual desire is not fed
+→ the chain can weaken before craving consolidates.
+
+This is **CROSS-TEXT SYNTHESIS**, not a single canonical micro-sequence.
+
+### IMPORTANT GUARDRAIL — WISE ATTENTION TO “UNATTRACTIVENESS” IS CONTEXTUAL, NOT A COMMAND TO HATE THE BODY OR WORLD
+
+AN 1.16 uses attention to the unattractive as an antidote to sensual desire.
+
+A86 does **not** infer:
+- everything beautiful is secretly disgusting;
+- the practitioner should cultivate hatred of bodies;
+- aversion is the cure for lust.
+
+A77 already established that aversion is itself an unwholesome fire.
+
+The function here is corrective:
+**counter the one-sided attractive framing that feeds sensual desire.**
+
+Exact practice range and later `asubha` systems remain for separate audit.
+
+### RELATION TO SATI AND SAMPAJAÑÑA
+
+A74–A75 distinguished:
+- `sati`: keeping the relevant field/task present;
+- `sampajañña`: clearly knowing what is occurring in activity.
+
+AN 10.61 now places these immediately upstream of sense restraint.
+
+So a bounded practice architecture is:
+
+`yoniso manasikāra`
+→ selects/frames experience in a causally skillful way
+
+`sati-sampajañña`
+→ keeps the training task present and knows what is happening
+
+`indriya-saṃvara`
+→ prevents the sensory encounter from being taken up in a way that feeds covetousness/distress
+
+→ hindrances weaken
+→ collectedness and insight become easier.
+
+This is **CROSS-TEXT SYNTHESIS**.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+- consulted: **YES**;
+- primary passage: the **Yonisomanasikāra question**;
+- Nāgasena says freedom from renewed rebirth depends on:
+  - wise attention;
+  - wisdom;
+  - other wholesome qualities;
+- he explicitly rejects the equation:
+  `wise attention = wisdom`;
+- role in A86:
+  - clarifies wise attention as a necessary but non-identical partner of wisdom;
+  - supports the architecture in which attention holds/considers the field and wisdom cuts through defilement;
+- secondary continuity:
+  - the prior taste-without-lust example remains consistent with sensory experience continuing without passion;
+- limitation:
+  - Milindapañha is **LATER/PARACANONICAL SUPPORT**;
+  - the early basis for restraint and wise attention remains DN/SN restraint formulas, AN 1.11–20, MN 2, and AN 10.61.
+
+### SOURCE-HIERARCHY GUARDRAIL
+
+Root early-discourse axis:
+- standard DN/SN sense-restraint formula — see/hear/etc. but do not grasp sign/details; prevent covetousness and distress from invading.
+- AN 1.11–20 — unwise attention to attractive signs feeds sensual desire; wise attention can starve it.
+- MN 2 — wise attention distinguished by whether it prevents/abandons `āsava`; restraint and avoidance are separate methods.
+- AN 10.61 — wise attention → mindfulness/clear comprehension → sense restraint → path development → knowledge and freedom.
+- A85 sources — contact/feeling can occur without inevitable sensual bondage.
+
+Later/paracanonical:
+- Milindapañha Yonisomanasikāra question — wise attention distinguished from wisdom.
+
+### METHOD INSIGHT
+
+A86 reveals another characteristic move in the Buddha's thought:
+
+**practice intervenes in causality before the reaction becomes fully formed.**
+
+The task is not only:
+“what do I do after craving has become strong?”
+
+It is also:
+- what am I attending to?
+- what feature am I magnifying?
+- what am I repeatedly rehearsing?
+- am I still mindful and clearly comprehending?
+- am I letting the sensory field recruit covetousness or distress?
+
+This is a much earlier intervention point than brute-force suppression.
+
+### PRACTICAL DIAGNOSTIC
+
+When an attractive object appears, ask:
+- Did I simply see it, or am I now repeatedly selecting attractive details?
+- Is attention making the desire larger?
+- Is mindfulness still present?
+- Can I feel the pleasant feeling without building a story of acquisition or possession?
+- Do I need actual avoidance here, or can restraint handle the contact?
+- Am I using “restraint” as a disguise for fear or repression?
+- Am I confusing wise attention with intellectual analysis?
+- Is the practice reducing greed, hate, and delusion, or just changing their form?
+
+### Open audit
+
+- lexical/context audit of `indriya-saṃvara`, `nimitta`, `anubyañjana`, `yoniso manasikāra`, and `ayoniso manasikāra`;
+- early parallel stress-test for the standard sense-restraint formula;
+- determine the range of `nimitta` in sense restraint, concentration, memory, and recognition contexts;
+- audit how attention, perception, underlying tendencies, and craving interlock across SN 35 / SN 36;
+- distinguish early unattractiveness practices from later detailed `asubha` systems;
+- continue SN 35 / SN 36 / SN 45–46 ID-level audit;
+- Aṭṭhakavagga lexical pass remains open.
+
+### Local Brain mirror status
+
+- A86 mirror attempt: **UNREACHABLE**;
+- read-only connector reported that the tunnel-client had not been seen for 300 seconds;
+- no Local Brain write was attempted.
+
+### Next checkpoint — PHASE 4 A87
+
+**How does `yoniso manasikāra` itself work across the early discourses: what makes attention “wise,” how does it differ from mere analysis, and how does it connect right view, mindfulness, and the arising or non-arising of the hindrances?**
+
+Required lanes:
+- MN 2;
+- AN 1.11–20;
+- AN 10.61;
+- SN 46 material on nutriment for hindrances and awakening factors;
+- distinguish attention from wisdom, perception, mindfulness, and discursive thought;
+- mandatory Milindapañha consultation;
+- preserve early-text / synthesis / later-systematic / lexical-open boundaries.
+
