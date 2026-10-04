@@ -368,3 +368,17 @@ For each:
 - Claim "understands the entire canon": FORBIDDEN UNTIL EVIDENCE SUPPORTS IT.
 
 The program must prefer "not yet known" over forced doctrinal certainty.
+
+## 11. Reasoning-synthesis artifact
+
+Current text-grounded reasoning model:
+`docs/learning/EARLY_BUDDHIST_REASONING_SYNTHESIS_V0_1_20261004.md`.
+
+This artifact converts the study track from a reading plan into an evaluated reasoning program:
+- reconstruct response modes on unseen questions;
+- preserve Pali-English-Vietnamese translation uncertainty;
+- test hidden assumptions, causal hinges and practice implications;
+- use blinded held-out dialogue reconstruction rather than self-asserted "Buddha-like" understanding.
+
+The target is source-grounded reconstruction of recurring response logic, never impersonation of the Buddha or a claim of awakening.
+
