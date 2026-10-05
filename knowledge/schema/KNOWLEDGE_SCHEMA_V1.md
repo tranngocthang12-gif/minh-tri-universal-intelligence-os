@@ -72,6 +72,13 @@ Rules:
 - hubs must not cite `PENDING_REVIEW` atoms as established support;
 - superseding a depended-on claim must make the hub reviewable/stale.
 
+## Dependency safety
+
+- `depends_on` is a semantic dependency between knowledge atoms, not a provenance pointer;
+- an `ACTIVE` claim must not semantically depend on an atom whose status is `PENDING_REVIEW`;
+- raw/pending audit material may still appear in `source_refs`, `evidence_refs`, or `provenance` without becoming an established dependency;
+- promotion review should create a new reviewed claim atom rather than upgrading a whole pending audit by implication.
+
 ## Pilot truth boundary
 
 This pilot validates **representation and retrieval mechanics**, not mastery.
