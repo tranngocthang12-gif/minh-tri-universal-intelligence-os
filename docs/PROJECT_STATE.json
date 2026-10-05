@@ -795,5 +795,13 @@
   "owner_learning_track_buddhist_thought_pali_control_when_material": true,
   "owner_learning_track_buddhist_thought_systematic_continuity_required": true,
   "owner_learning_track_buddhist_thought_no_isolated_passage_system_claim": true,
-  "owner_learning_track_buddhist_thought_deep_system_goal": "BUDDHA_THINKING_REASONING_CONCEPTUAL_CAUSAL_PRACTICAL_SYSTEM_DEEP_COHERENT_CONTINUOUS"
+  "owner_learning_track_buddhist_thought_deep_system_goal": "BUDDHA_THINKING_REASONING_CONCEPTUAL_CAUSAL_PRACTICAL_SYSTEM_DEEP_COHERENT_CONTINUOUS",
+  "owner_learning_track_buddhist_thought_program_status": "IN_PROGRESS_NOT_COMPLETE",
+  "owner_learning_track_buddhist_thought_completion_report_allowed": false,
+  "owner_learning_track_buddhist_thought_completion_rule": "LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004_SECTION_7A_COMPLETION",
+  "owner_learning_track_buddhist_thought_completion_audit": "REQUIRED_NOT_YET_PASSED",
+  "owner_learning_track_buddhist_thought_completion_requires_system_map": true,
+  "owner_learning_track_buddhist_thought_completion_requires_critical_audits_closed_or_bounded": true,
+  "owner_learning_track_buddhist_thought_completion_requires_contradiction_review": true,
+  "owner_learning_track_buddhist_thought_completion_requires_fresh_seat_recoverability": true
 }
