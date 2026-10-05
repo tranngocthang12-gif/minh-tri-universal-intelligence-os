@@ -3,8 +3,11 @@
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** STACKED DURABLE CHECKPOINT / NOT CANONICAL UNTIL A161 AND THIS PR MERGE  
 **Checkpoint:** PHASE 4 — A162 COMPLETED ON STACKED BRANCH  
+**Current checkpoint:** PHASE 4 — A162 COMPLETED  
 **Next checkpoint:** PHASE 4 — A163  
 **Parent:** A161 branch `learning/buddhist-a161-20261005`
+
+## Completed checkpoint A162
 
 ## Central question
 
@@ -307,6 +310,8 @@ This is CROSS_TEXT APPLICATION, not a canonical checklist.
 
 CURRENT STACKED CHECKPOINT: PHASE 4 — A162 COMPLETED  
 NEXT CHECKPOINT: PHASE 4 — A163
+
+## Next checkpoint — PHASE 4 A163
 
 ### A163 topic
 
