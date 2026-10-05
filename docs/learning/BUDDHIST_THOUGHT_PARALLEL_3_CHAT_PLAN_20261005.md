@@ -1,6 +1,10 @@
+# SUPERSEDED — FIXED 3-CHAT PLAN NO LONGER ACTIVE
+
+Owner decision 2026-10-05 removes the standing three-chat operating model. The source-audit and adversarial-review techniques remain reusable ad hoc, but there are no permanent CHAT 1/2/3 roles. See `docs/OWNER_DECISION_LEARNING_FIRST_NO_FIXED_3CHAT_20261005.md`.
+
 # MINH TRI — Buddhist Thought 3-Chat Parallel Work Plan — 2026-10-05
 
-Status: ACTIVE COORDINATION PLAN / DOES NOT OVERRIDE CANONICAL LEARNING LAW
+Status: HISTORICAL / SUPERSEDED AS FIXED STAFFING MODEL
 
 ## Purpose
 
