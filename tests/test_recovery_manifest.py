@@ -385,6 +385,33 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertIn("chat memory was not used as canonical authority", checkpoint.lower())
 
 
+    def test_supreme_buddhist_study_learning_law_is_routed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        law_index = (ROOT / state["current_law_index"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+        track = manifest["owner_learning_track_buddhist_thought"]
+
+        self.assertEqual(state["owner_learning_track_buddhist_thought_supreme_learning_rule"], "LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004_SECTION_7A")
+        self.assertEqual(track["supreme_learning_rule"], state["owner_learning_track_buddhist_thought_supreme_learning_rule"])
+        self.assertTrue(state["owner_learning_track_buddhist_thought_multiple_translations_required"])
+        self.assertEqual(state["owner_learning_track_buddhist_thought_translation_minimum_material"], 2)
+        self.assertEqual(state["owner_learning_track_buddhist_thought_translation_minimum_disputed_practicable"], 3)
+        self.assertTrue(state["owner_learning_track_buddhist_thought_translation_conflict_record_required"])
+        self.assertTrue(state["owner_learning_track_buddhist_thought_pali_control_when_material"])
+        self.assertTrue(state["owner_learning_track_buddhist_thought_systematic_continuity_required"])
+        self.assertTrue(state["owner_learning_track_buddhist_thought_no_isolated_passage_system_claim"])
+        self.assertIn("SUPREME BUDDHIST-STUDY LEARNING LAW", law)
+        self.assertIn("Multiple-translation rule", law)
+        self.assertIn("Translation-conflict rule", law)
+        self.assertIn("Pāli control rule", law)
+        self.assertIn("Systematic continuity rule", law)
+        self.assertIn("Supreme Buddhist-study learning law", law_index)
+        self.assertIn("Supreme Buddhist-study learning invariant", architecture)
+        self.assertIn("SUPREME BUDDHIST-STUDY SOURCE DISCIPLINE", bootstrap)
+
     def test_buddhist_track_requires_milindapanha_continuously(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
