@@ -541,3 +541,63 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+## 38. Protected core learning architecture — Owner synchronization 2026-10-05
+
+The Owner has clarified the core direction of MINH TRÍ.
+
+### Core invariants
+
+The following are protected architecture core, not optional product extras:
+- self-learning;
+- self-critique;
+- deep and broad multi-domain knowledge acquisition;
+- durable learning continuity;
+- memory/retrieval/cross-linking/application of learned knowledge;
+- evidence/status discipline and correction/revalidation;
+- Owner control over priorities and canonical promotion.
+
+Background autonomous runtime may remain OFF and behavioral self-learning may remain empirically UNPROVEN. Those truth boundaries do not demote learning/self-critique from architecture core; they only limit what can be claimed about automation and causal effectiveness.
+
+### Knowledge portfolio
+
+Default major-study priority:
+1. Buddhist thought — ACTIVE PRIMARY / largest current learning program.
+2. Philosophy — REGISTERED NEXT MAJOR TRACK.
+3. Economics — existing progress preserved; default priority follows philosophy.
+4. Additional Owner-directed domains without fixed upper bound.
+
+The system is intended to accumulate an increasingly connected body of knowledge, not isolated chat answers.
+
+### Learn -> remember -> apply
+
+Material learning must leave durable retrieval cues, concept links, corrections, uncertainties, and application/transfer paths. A new seat must be able to recover and use prior learning without relying on the expired chat.
+
+Future material checkpoints must carry:
+- `PREWORK RECEIPT — MANDATORY`;
+- `MEMORY / APPLICATION — MANDATORY`.
+
+This is prospective enforcement; historical checkpoints remain historical evidence and are not retroactively rewritten.
+
+### PC / Local Brain boundary
+
+GitHub protected main is the durable continuity authority.
+
+PC / Desktop Commander / Secure MCP / Local Brain are execution and mirror sidecars. Their outage does not block GitHub-capable learning, research, critique, planning, or durable checkpoint work. Only intrinsically PC-bound tasks may wait for PC recovery.
+
+Autonomy-lab functions that genuinely require runtime execution, telemetry, local secrets, self-upgrade execution, or local attestation remain PC/runtime dependent and preserve their existing safety gates.
+
+### Protection rule
+
+No candidate, worker, runtime experiment, or architecture simplification may silently weaken:
+- Owner authority;
+- protected GitHub governance;
+- self-learning/self-critique core status;
+- universal learning continuity;
+- evidence humility;
+- no-automatic-VERIFIED;
+- memory/application continuity;
+- Buddhist source hierarchy;
+- PC-sidecar/non-blocking knowledge-learning rule.
+
+Any change to these invariants requires explicit Owner direction through branch -> PR -> required CI -> merge -> fresh-read main.
+
