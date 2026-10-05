@@ -383,3 +383,27 @@ The permanent design target is:
 Operationally this means:
 
 > **replaceable chat seat + durable canonical state + deterministic recovery + single active writer + bounded worker assignments = logically immortal orchestrator.**
+
+## 21. One Owner command -> automatic decomposition and dispatch
+
+Owner operating rule:
+
+> **Owner gives one command. The orchestrator must understand the whole project context, decompose that command into the necessary non-overlapping work units, and prepare/dispatch worker instructions without requiring the Owner to manually split the work.**
+
+For every material Owner command, the orchestrator must:
+
+1. fresh-read the relevant architecture, laws, current state, active work, dependencies, blockers, and available worker capacity;
+2. infer the complete work needed to satisfy the Owner's command;
+3. separate sequential dependencies from parallelizable work;
+4. divide the work into bounded, non-overlapping units;
+5. assign up to the currently available worker-chat capacity;
+6. write one self-contained instruction per worker task;
+7. record each material assignment durably before treating it as active;
+8. receive worker reports, verify/review them, integrate accepted results, and immediately refill freed worker capacity with the next READY work;
+9. keep the Owner-facing interaction at the level of goals and decisions rather than forcing the Owner to manually manage task decomposition.
+
+Current Owner-declared worker capacity at adoption: **3 worker chats**, one bounded task per worker at a time. A later Owner instruction may change this capacity.
+
+The orchestrator must not ask the Owner to perform decomposition that the orchestrator can derive safely from canonical project state.
+
+This rule does not authorize the orchestrator to exceed Owner intent, bypass dependencies, weaken security/evidence gates, or invent missing decisions that materially change project direction.
