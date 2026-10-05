@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A117 COMPLETED  
-**Next checkpoint:** PHASE 4 — A118  
+**Current checkpoint:** PHASE 4 — A118 COMPLETED  
+**Next checkpoint:** PHASE 4 — A119  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -17461,6 +17461,247 @@ Required lanes:
 - `ajāta / abhūta / akata / asaṅkhata` material where textually secure;
 - guard against “unconditioned = eternal self/substance” and “unconditioned = mere nonexistence”;
 - distinguish early-text attestation from later Abhidhamma/metaphysical systematization;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A118
+
+**Central question:** What does `asaṅkhata` (“the unconditioned”) mean in the early discourses, how is it related to Nibbāna, and how can it be distinguished from any conditioned meditative state without turning it into a hidden eternal Self or metaphysical substance?
+
+### TEXT_ATTESTED
+
+1. **SN 43.1–2** directly defines the unconditioned (`asaṅkhata`) as the ending of greed, hate, and delusion. The discourses then distinguish the unconditioned from the path leading to it, such as mindfulness of the body or serenity-and-discernment.
+2. **SN 43.4** says emptiness concentration, signless concentration, and undirected concentration are **paths leading to the unconditioned**. This is decisive for A118: even highly refined concentrations are not automatically identical with the unconditioned.
+3. **AN 3.47** contrasts conditioned and unconditioned by arising, vanishing, and change: arising/vanishing/change are evident for the conditioned; they are not evident for the unconditioned.
+4. **SN 43.42** gives a cluster of terms associated with the same unconditioned/Nibbāna domain: truth, far shore, subtle, peaceful, deathless, ending of craving, Nibbāna, dispassion, purity, release, non-clinging, island, shelter, refuge, and related terms. This establishes a rich sutta vocabulary without requiring that every synonym be a separate metaphysical entity.
+5. **Iti 44** distinguishes the Nibbāna element with residue and without residue. In the living arahant, the five sense faculties still function; greed, hate, and delusion are extinguished. This confirms that realization of Nibbāna does not require immediate disappearance of the living sensory process.
+6. **MN 121** treats signless concentration as produced/conditioned and subject to cessation. It must therefore remain distinct from the unconditioned as defined in SN 43.
+7. **SN 12.15** remains a guardrail against forcing the teaching into the extremes “everything exists” or “everything does not exist.”
+
+### THE UNCONDITIONED IS DEFINED FUNCTIONALLY IN SN 43
+
+The safest early-text anchor is unusually direct:
+
+`asaṅkhata`
+= **ending of greed, hate, and delusion**.
+
+This matters because it prevents an immediate speculative leap from the word “unconditioned” to:
+- an eternal cosmic substance;
+- a hidden Self;
+- a creator;
+- a permanent consciousness underlying all experience.
+
+SN 43 gives a liberative definition before any such metaphysical reconstruction.
+
+### PATH ≠ GOAL
+
+SN 43 repeatedly gives this structure:
+
+**the unconditioned**
+versus
+**the path leading to the unconditioned**.
+
+This is especially important in SN 43.4:
+
+emptiness concentration,
+signless concentration,
+undirected concentration
+
+are named as a **path leading to** the unconditioned.
+
+Therefore:
+
+`animitta samādhi`
+≠ automatically
+`asaṅkhata`.
+
+This directly confirms A117.
+
+A refined state may be a vehicle, support, or path-factor while still being conditioned.
+
+### CONDITIONED AND UNCONDITIONED MUST NOT BE TURNED INTO TWO “THINGS”
+
+AN 3.47 provides a contrast in characteristics:
+- conditioned: arising, vanishing, change are evident;
+- unconditioned: these are not evident.
+
+A118 uses this contrast carefully.
+
+It does **not** infer that early Buddhism posits:
+“one giant class of changing substances” versus “one eternal substance called Nibbāna.”
+
+The text gives a diagnostic contrast concerning arising, vanishing, and change.
+
+A full metaphysical ontology beyond that remains **OPEN/CHECK** unless directly established.
+
+### NIBBĀNA AND ASAṄKHATA
+
+SN 43's collection strongly links the unconditioned with Nibbāna terminology.
+
+The most secure synthesis is:
+
+- `asaṅkhata` marks Nibbāna under the aspect of not being conditioned/produced in the way conditioned phenomena are;
+- Nibbāna is also described through cessation language: ending of greed, hate, delusion and craving;
+- other synonyms emphasize peace, refuge, dispassion, release, deathlessness, and non-clinging.
+
+This is a `CROSS_TEXT_SYNTHESIS` based on SN 43 rather than a claim that every synonym has one identical lexical meaning.
+
+### “UNCONDITIONED” DOES NOT MEAN AN ETERNAL SELF
+
+Nothing in the secure A118 texts says:
+- “this is your true Self”;
+- “there is an eternal person beneath the aggregates”;
+- “Nibbāna is a permanent subject of experience.”
+
+Such claims would conflict with the not-self analysis already established in SN 22.59 and the identity-view guardrails of MN 44 / SN 22.89.
+
+Therefore:
+
+`asaṅkhata`
+≠ evidence for
+`attā`.
+
+A118 treats any “Nibbāna = true Self” doctrine as **UNSUPPORTED BY THESE EARLY TEXTS** unless a separate early passage directly establishes it.
+
+### “UNCONDITIONED” ALSO DOES NOT MEAN MERE NONEXISTENCE
+
+The opposite mistake is to translate Nibbāna into “nothing at all.”
+
+That also overshoots the texts.
+
+Early discourses:
+- speak of a path leading to the unconditioned;
+- speak of realization/release;
+- describe the living arahant in whom greed, hate, and delusion are ended while sensory life continues;
+- use positive functional terms such as peace, refuge, deathless, release.
+
+So the secure early-text position is not:
+“a metaphysical thing exists forever”
+and not:
+“nothing whatsoever exists.”
+
+It is:
+**the causal complex of greed, hate, delusion, craving, and bondage is extinguished; that cessation is called Nibbāna / the unconditioned.**
+
+Any stronger ontology remains guarded.
+
+### THE LIVING ARAHANT PROVES A CRUCIAL DISTINCTION
+
+Iti 44 is especially useful.
+
+The living arahant:
+- has defilements ended;
+- is liberated;
+- still has functioning sense faculties;
+- can still experience agreeable/disagreeable and pleasure/pain.
+
+Therefore realization of the unconditioned does not entail that every conditioned process vanishes immediately.
+
+This gives a precise distinction:
+
+**unconditioned liberation**
+can be realized
+while
+**conditioned bodily/sensory processes**
+continue until death.
+
+### WHY “DEATHLESS” MUST NOT BE READ AS PERSONAL IMMORTALITY
+
+SN 43 includes “deathless” among its Nibbāna vocabulary.
+
+A118 preserves a critical guardrail:
+
+“deathless”
+does not automatically mean
+“an immortal individual self survives forever.”
+
+In the surrounding early-Buddhist framework, what ends is greed, hate, delusion, craving, and bondage.
+
+To convert “deathless” into an eternal-person doctrine would require independent textual evidence that is not supplied by SN 43 itself.
+
+### AJĀTA / ABHŪTA / AKATA / ASAṄKHATA — SOURCE GUARDRAIL
+
+Early Buddhist sources also preserve a formula commonly translated as:
+“unborn, unbecome, unmade, unconditioned.”
+
+A118 treats this family as important but keeps exact textual and lexical claims passage-sensitive.
+
+The safe doctrinal use is:
+there is an escape from what is born, become, made, and conditioned.
+
+The unsafe move would be:
+take four negative descriptors,
+then invent a detailed positive metaphysical substance behind them.
+
+That stronger ontology remains **OPEN/CHECK** unless separately attested.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's Akammajādi discussion explicitly distinguishes:
+- a cause/path for the realization of Nibbāna;
+- from a cause that would produce Nibbāna itself.
+
+Nāgasena says Nibbāna is not produced by kamma, cause, or season, and calls it unconditioned. He also resists the inference that “unproduced” means “nonexistent.”
+
+**Role:** later/paracanonical clarification of the distinction:
+**conditions for realization**
+≠
+**conditions producing Nibbāna**.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** this later argument supports but does not override SN 43's early-discourse functional definition of the unconditioned as the ending of greed, hate, and delusion.
+
+### BUDDHA'S REASONING METHOD
+
+A118 reveals another recurring discipline:
+
+**do not confuse the route with the destination.**
+
+A practice can be conditioned.
+A concentration can be conditioned.
+An insight episode can be conditioned.
+Yet they may lead to the ending of the very causes that sustain bondage.
+
+This is analogous to using a raft:
+the path functions causally,
+but the goal is not reducible to the temporary state of traveling.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate signless concentration with the unconditioned.
+- Do not turn `asaṅkhata` into a hidden eternal Self.
+- Do not reduce Nibbāna to mere nonexistence.
+- Do not infer personal immortality from “deathless.”
+- Do not turn SN 43's synonyms into separate metaphysical substances.
+- Do not infer a complete ontology from the negative terms unborn/unmade/unconditioned alone.
+- Do not use Milindapañha to overwrite the early-text definition.
+
+### Sources
+
+- SN 43.1–2 Asaṅkhata-saṁyutta.
+- SN 43.4 Suññatasamādhi Sutta.
+- SN 43.42 synonym collection.
+- AN 3.47 Saṅkhatalakkhaṇa Sutta.
+- Iti 44 Nibbānadhātu Sutta.
+- MN 121 Cūḷasuññata Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- Milindapañha Akammajādipañha / Nibbāna realization discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A119
+
+**How do the two Nibbāna elements in Iti 44—“with residue” and “without residue”—distinguish liberation while alive from final cessation at death, without turning the latter into either annihilation of a Self or survival of an eternal Self?**
+
+Required lanes:
+- Iti 44 two Nibbāna elements;
+- living arahant: five sense faculties, pleasure/pain, defilement-ending;
+- “without residue” and what exactly the text says ceases;
+- relation to SN 12.15 anti-eternalism/anti-annihilationism;
+- relation to unanswered post-mortem Tathāgata questions where relevant;
+- avoid importing later parinibbāna ontology as if fully explicit in one early passage;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
