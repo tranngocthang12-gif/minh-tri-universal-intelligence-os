@@ -305,3 +305,33 @@ It is mandatory as a supporting/paracanonical reasoning source, especially for a
 
 Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
 
+## 13. PROTECTED LEARNING CORE — Owner synchronization 2026-10-05
+
+Every material chat/seat must treat the following as core architecture:
+- self-learning;
+- self-critique;
+- deep multi-domain knowledge acquisition;
+- durable memory and retrieval;
+- linking new learning to prior knowledge;
+- application/transfer/revalidation;
+- evidence humility and correction.
+
+Before material learning, fresh-read the canonical route and leave the mandatory pre-work receipt required by Universal Learning Continuity Law.
+
+Future material learning checkpoints must also leave a `MEMORY / APPLICATION — MANDATORY` section so learning remains usable by later seats rather than disappearing with the chat.
+
+Default major-study order is:
+`BUDDHIST THOUGHT -> PHILOSOPHY -> ECONOMICS -> FUTURE OWNER-DIRECTED DOMAINS`.
+
+The order is a default priority; the Owner may explicitly authorize bounded parallel work.
+
+## 14. PC / LOCAL BRAIN IS A SIDECAR, NOT A LEARNING BLOCKER
+
+If Owner PC, Desktop Commander, Secure MCP Tunnel, or Local Brain is down, continue all work that is possible through canonical GitHub and available research/tools.
+
+Do not block ordinary knowledge learning because the PC is unavailable.
+
+Wait for the PC only when the assigned task intrinsically requires local files/apps, local secrets, persistent local runtime, Local Brain transport/write, runtime attestation, or PC-bound empirical execution.
+
+GitHub remains the durable continuity authority. A Local Brain mirror is supportive and may be pending without invalidating a GitHub-durable learning checkpoint.
+
