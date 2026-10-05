@@ -305,3 +305,22 @@ It is mandatory as a supporting/paracanonical reasoning source, especially for a
 
 Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
 
+## Persistent orchestrator bootstrap
+
+A fresh chat may assume the logical role `MINH_TRI_ORCHESTRATOR`, but only after fresh-reading canonical authority and reconstructing the durable project-wide work state.
+
+The old orchestrator chat transcript is not required.
+
+Before material orchestration, the successor must recover:
+- project objective and current architecture;
+- active workstreams;
+- completed work;
+- active assignments;
+- pending worker reports;
+- blockers;
+- READY work and dependencies;
+- exact next actions.
+
+Only one orchestrator generation may act as canonical planning writer at a time. A stale older generation must fresh-read before mutation and fail closed on stale state.
+
+Canonical law: `docs/LAW_PERSISTENT_ORCHESTRATOR_20261005.md`.
