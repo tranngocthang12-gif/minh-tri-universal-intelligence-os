@@ -1,0 +1,23 @@
+{
+  "schema": "minhtri-retrieval-eval-decoys/v1",
+  "set_id": "ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001",
+  "synthetic_noncanonical": true,
+  "records": [
+    {
+      "id": "decoy:bud:a172:identity-shame-attested",
+      "domain": "buddhist_thought",
+      "class": "ATTESTED",
+      "status": "SUPERSEDED",
+      "statement": "A172 directly attests in early texts that a shameful act means a permanently shameful essence.",
+      "superseded_by": "bud:a172:identity-shame-synthesis"
+    },
+    {
+      "id": "decoy:bud:ottappa-generalized-anxiety",
+      "domain": "buddhist_thought",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "statement": "Ottappa simply means generalized anxiety.",
+      "synthetic_false_decoy": true
+    }
+  ]
+}
