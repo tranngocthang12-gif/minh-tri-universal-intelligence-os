@@ -1,0 +1,29 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:atthaka:lex02:sanna-mannati-audit-evidence",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #230 contains a bounded Aṭṭhakavagga lexical audit for saññā and maññati, including text locations, morphology traps, overclaims, counter-readings, uncertainties, and Milindapañha as later/paracanonical support.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/PHAT_ATTHAKA_LEX_02_PR230_SALVAGED_20261006.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#230",
+      "locator": "docs/learning/PHAT_ATTHAKA_LEX_02_20261005.md @ a3a254c3b6598484b7165fb8bff86e5755f740fb"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 230,
+    "source_head_sha": "a3a254c3b6598484b7165fb8bff86e5755f740fb",
+    "source_blob_sha": "a1275558b11b3c89993daef8f015507892d552fb",
+    "salvaged_on_base_sha": "9c511472f80d0eb0b3cbbadd2d4942d5b913b13a",
+    "promotion_requirement": "BUDDHIST_T1_REVIEW",
+    "note": "Evidence of what the audit reported; not automatic verification of its lexical conclusions."
+  }
+}
