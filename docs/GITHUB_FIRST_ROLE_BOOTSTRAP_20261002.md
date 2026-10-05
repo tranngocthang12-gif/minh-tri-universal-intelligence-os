@@ -312,6 +312,14 @@ For every material Buddhist-thought task, after the universal bootstrap and befo
 
 A seat that omits these duties may produce notes, but the material checkpoint is NOT PROMOTABLE.
 
+## 11B. BUDDHIST-STUDY WHOLE-TRACK COMPLETION GATE
+
+A Buddhist checkpoint marked COMPLETED is only a local checkpoint result. It must never be interpreted as completion of the whole Buddhist-thought learning program.
+
+Until the explicit completion audit required by Section 7A-COMPLETION passes, the whole-track status is `IN_PROGRESS_NOT_COMPLETE`.
+
+Every Buddhist-study seat must preserve continuity toward a final coherent system-level synthesis and must not declare the program complete from checkpoint count, duration, confidence, or chat impression.
+
 ## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
 For any material work in the Buddhist-thought learning track, the seat must include Mi Tiên Vấn Đáp / Milindapañha in the study process throughout the track.
