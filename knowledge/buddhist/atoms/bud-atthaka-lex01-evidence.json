@@ -1,0 +1,29 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:atthaka:lex01:ditthi-sacca-audit-evidence",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #216 contains a bounded Aṭṭhakavagga lexical audit for diṭṭhi and sacca, including text locations, morphology guardrails, overclaims, counter-readings, uncertainties, and Milindapañha as later/paracanonical support.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/PHAT_ATTHAKA_LEX_01_PR216_SALVAGED_20261006.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#216",
+      "locator": "docs/learning/PHAT_ATTHAKA_LEX_01_20261005.md @ 6bc822b3361fbb9fa99622073c08cb369053f121"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 216,
+    "source_head_sha": "6bc822b3361fbb9fa99622073c08cb369053f121",
+    "source_blob_sha": "d442d90a88cbbf472a36d84d0e430c86bcb7e796",
+    "salvaged_on_base_sha": "9c511472f80d0eb0b3cbbadd2d4942d5b913b13a",
+    "promotion_requirement": "BUDDHIST_T1_REVIEW",
+    "note": "Evidence of what the audit reported; not automatic verification of its lexical conclusions."
+  }
+}
