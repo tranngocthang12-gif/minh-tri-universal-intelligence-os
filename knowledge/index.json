@@ -24,6 +24,24 @@
       "statement": "A172 treats the move from 'this act was shameful' to 'my permanent essence is shameful' as a cross-text synthesis rather than direct early-text attestation."
     },
     {
+      "id": "bud:atthaka:lex01:ditthi-sacca-audit-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-atthaka-lex01-evidence.json",
+      "statement": "PR #216 contains a bounded Aṭṭhakavagga lexical audit for diṭṭhi and sacca, including text locations, morphology guardrails, overclaims, counter-readings, uncertainties, and Milindapañha as later/paracanonical support."
+    },
+    {
+      "id": "bud:atthaka:lex02:sanna-mannati-audit-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-atthaka-lex02-evidence.json",
+      "statement": "PR #230 contains a bounded Aṭṭhakavagga lexical audit for saññā and maññati, including text locations, morphology traps, overclaims, counter-readings, uncertainties, and Milindapañha as later/paracanonical support."
+    },
+    {
       "id": "econ:program:identification-assumptions",
       "domain": "economics",
       "record_type": "claim",
