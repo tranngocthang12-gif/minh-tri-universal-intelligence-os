@@ -764,5 +764,27 @@
     "one_task_per_worker_at_a_time": true,
     "orchestrator_must_manage_dependencies": true,
     "orchestrator_refills_capacity_after_review": true
+  },
+  "canonical_role_callsigns": {
+    "orchestrator": {
+      "display_name": "ĐIỀU HÀNH",
+      "ascii_fallback": "DIEU HANH",
+      "logical_role": "MINH_TRI_ORCHESTRATOR",
+      "invocation_behavior": "FRESH_READ_AND_RECOVER_FULL_ORCHESTRATOR_STATE"
+    },
+    "workers": [
+      {
+        "display_name": "QUÂN-1",
+        "slot": 1
+      },
+      {
+        "display_name": "QUÂN-2",
+        "slot": 2
+      },
+      {
+        "display_name": "QUÂN-3",
+        "slot": 3
+      }
+    ]
   }
 }
