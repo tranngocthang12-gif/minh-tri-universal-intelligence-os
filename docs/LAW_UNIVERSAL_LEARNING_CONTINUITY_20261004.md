@@ -165,6 +165,27 @@ Mandatory rules:
 
 16. **Protected-governance durability:** this rule remains in force until explicitly superseded by a later Owner decision through protected project governance.
 
+### 7A-COMPLETION. Buddhist-study completion rule
+
+The Buddhist-thought learning track must remain **ACTIVE / INCOMPLETE** until the project can recover a deep, coherent, continuous, and systematic understanding of the Buddha's thought from durable records without relying on chat memory.
+
+A numbered checkpoint being COMPLETED does **not** mean the Buddhist-thought program is complete.
+
+The project may report the whole Buddhist-thought track as COMPLETE only when all of the following are satisfied:
+
+1. **System map complete enough for the project goal:** the major conceptual domains studied in the track are connected into one explicit map of problems, distinctions, causal relations, practice logic, and liberation logic.
+2. **Continuity:** the final synthesis can trace how later checkpoints confirm, narrow, correct, or supersede earlier understandings; no material learning is silently lost.
+3. **Source control:** major conclusions retain early-discourse attestation, mandatory Milindapañha support where required, translation comparison, Pāli/lexical control where material, and explicit claim classes.
+4. **Critical open audits:** every audit designated completion-blocking is either closed with evidence or explicitly resolved by Owner as non-blocking. Mere fatigue, checkpoint count, or elapsed time cannot close an audit.
+5. **Contradiction review:** material internal tensions across the project are either reconciled with evidence, narrowed to context, or preserved as genuine uncertainty. Artificial harmony is forbidden.
+6. **Deep-understanding review:** the final synthesis explains not only what the Buddha is reported to say, but how the reasoning works, what errors are being corrected, how neighboring concepts differ, what causal sequences connect them, and how the parts form a practical system.
+7. **Fresh-seat recoverability:** a zero-chat seat must be able to fresh-read the canonical records and reconstruct the same high-level system, current uncertainties, and source hierarchy.
+8. **Completion audit:** an explicit final Buddhist-study completion audit must PASS before the project may use the status COMPLETE.
+
+Until these conditions pass, the only lawful whole-track status is `IN_PROGRESS_NOT_COMPLETE` (or an explicitly paused variant). The assistant must not tell the Owner that the Buddhist-thought learning program is complete.
+
+If some uncertainty is irreducible from available evidence, completion may still be possible only if that uncertainty is explicitly bounded, non-blocking, and preserved in the final synthesis rather than silently erased.
+
 ## 8. Blocked write-path rule
 
 If durable recording is blocked:
