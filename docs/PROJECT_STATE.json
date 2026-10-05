@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A133_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A134",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A142_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A143",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -702,5 +702,7 @@
   "owner_learning_track_buddhist_thought_a132_claim_class": "TEXT_ATTESTED_MN4_SN12_41_SN22_7_FEAR_CONDUCT_ATTACHMENT_AND_TRAINING_PLUS_CROSS_TEXT_DANGER_AWARENESS_VS_IDENTITY_THREAT_SYNTHESIS_WITH_HIRI_OTTAPPA_GUARDRAILS_AND_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a132_milindapanha": "CONSULTED_ARAHANT_FEARLESSNESS_AND_PRUDENT_WITHDRAWAL_AS_LATER_SUPPORT_NO_OVERRIDE_OF_EARLY_TEXTS",
   "owner_learning_track_buddhist_thought_a133_claim_class": "TEXT_ATTESTED_SN22_59_DEPENDENT_ARISING_FOUR_RIGHT_EFFORTS_IMPERMANENCE_PLUS_CROSS_TEXT_EFFECTIVE_AGENCY_VS_TOTAL_CONTROL_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a133_milindapanha": "CONSULTED_DEPENDENT_CONTINUITY_EFFORT_DISCIPLINE_AND_NO_FIXED_CONTROLLER_AS_LATER_SUPPORT_NO_OVERRIDE_OF_SN22_59"
+  "owner_learning_track_buddhist_thought_a133_milindapanha": "CONSULTED_DEPENDENT_CONTINUITY_EFFORT_DISCIPLINE_AND_NO_FIXED_CONTROLLER_AS_LATER_SUPPORT_NO_OVERRIDE_OF_SN22_59",
+  "owner_learning_track_buddhist_thought_continuation_file": "docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A136_A142_20261005.md",
+  "owner_learning_track_buddhist_thought_a142_claim_class": "TEXT_ATTESTED_UNWHOLESOME_ROOTS_MN62_RIGHT_VIEW_WISE_ATTENTION_MN58_MN61_PLUS_CROSS_TEXT_BRAHMAVIHARAS_WITH_WISDOM_VS_SENTIMENTAL_MISDIRECTION_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT"
 }
