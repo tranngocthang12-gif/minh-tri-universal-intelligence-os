@@ -229,6 +229,14 @@ This is CROSS_TEXT APPLICATION, not a canonical nine-step list.
 
 `CONSULTED_DISCIPLINED_AUTHORITY_CORRECTION_WITHOUT_ANGER_ANTI_PRIDE_AND_CONVENTIONAL_ROLE_SUPPORT_NO_OVERRIDE_OF_EARLY_TEXTS`
 
+## Continuity compliance record
+
+- **Durable GitHub location:** `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A175_DRAFT_20261005.md`
+- **Record status:** DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED
+- **Material corrections/errors:** no new source-conflict or material factual correction identified inside this checkpoint beyond the explicit guardrails/uncertainties already recorded; any later correction must remain append-visible and must not silently overwrite claim class.
+- **Local Brain mirror status:** NOT WRITTEN / NOT PROVEN in this checkpoint. Current canonical runtime state reports the Local Brain connector unavailable; GitHub remains the durable authority surface.
+- **Provenance/date:** MINH TRÍ Buddhist-thought learning track, 2026-10-05.
+
 ## Handoff
 
 DRAFT CHECKPOINT: PHASE 4 — A175  
