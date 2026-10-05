@@ -49,12 +49,12 @@
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
       "title": "Review and salvage unique knowledge or Owner intent from the 21 pre-vNext open PRs before closure",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "pull_requests:167,168,169,170,177,193,215,216,218,226,227,228,230,232,233,234,235,237,249,250,251"
       ],
-      "branch": null,
-      "base_sha": "d1bc70b04ff38108d5162f0b6a9d99f02db9b566",
+      "branch": "owner/architecture-vnext-phase4b-blocked-salvage-wave1-20261006",
+      "base_sha": "3d5049df488e8438195d55134cdff555df4faf65",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PHASE2"
@@ -126,7 +126,7 @@
     {
       "task_id": "ARCH-VNEXT-PHASE4-GRADED-RUN",
       "title": "Run retrieval baseline in a different fresh seat using canonical Phase 4 packet",
-      "status": "READY",
+      "status": "BLOCKED",
       "scope": [
         "eval/retrieval/v1/packets/ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001.json",
         "eval/retrieval/v1/results/"
@@ -138,7 +138,7 @@
         "ARCH-VNEXT-PHASE4-HARNESS"
       ],
       "supersedes": [],
-      "result_ref": "eval/retrieval/v1/packets/ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001.json"
+      "result_ref": "BLOCKED_NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06"
     }
   ]
 }
