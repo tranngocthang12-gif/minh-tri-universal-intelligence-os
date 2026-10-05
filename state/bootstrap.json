@@ -1,0 +1,33 @@
+{
+  "schema": "minhtri-bootstrap-root/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "status": "CURRENT_BOOT_ROOT",
+  "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+  "current_state": "state/current.yaml",
+  "task_registry": "state/tasks.yaml",
+  "stable_learning_law": "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+  "resolve_from_current_state": {
+    "current_architecture": "current_architecture",
+    "law_precedence": "law_precedence",
+    "role_bootstrap": "role_bootstrap"
+  },
+  "boot_sequence": [
+    "state/bootstrap.json",
+    "state/current.yaml",
+    "<state.current.law_precedence>",
+    "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+    "<state.current.current_architecture>",
+    "<state.current.role_bootstrap>",
+    "state/tasks.yaml",
+    "<active-domain-working-set-or-task-sources>"
+  ],
+  "legacy_compatibility": {
+    "project_state": "docs/PROJECT_STATE.json",
+    "recovery_manifest": "docs/RECOVERY_MANIFEST.json",
+    "law_index": "docs/LAW_INDEX_20261003.md",
+    "architecture": "docs/ARCHITECTURE_NOW_20261003.md",
+    "mode": "UNMIGRATED_KEYS_OR_HISTORY_ONLY",
+    "must_not_override_migrated_current_state": true
+  },
+  "fail_closed_rule": "IF_BOOT_POINTERS_CONFLICT_OR_A_REQUIRED_TARGET_IS_MISSING_STOP_THE_AFFECTED_MUTATION_AND_REPORT_CONFLICT"
+}
