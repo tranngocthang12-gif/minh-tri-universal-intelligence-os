@@ -541,3 +541,16 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+## 38. Learning compliance hardening — 2026-10-05
+
+New material learning work must now distinguish CANONICAL / CANDIDATE / CHAT_DRAFT explicitly.
+
+Operational invariant:
+- pre-work fresh-read must cover PROJECT_STATE -> current Law Index -> Universal Learning Continuity Law -> current Architecture -> Role Bootstrap -> active learning checkpoint/plan -> task/domain sources;
+- TEXT_ATTESTED, exact morphology and exact-source claims require fresh primary-source checking when a direct source path is available;
+- open PR, stacked PR, or CI PASS alone never advances canonical CURRENT/NEXT;
+- only protected merge followed by fresh-read live main advances canonical learning state;
+- parallel chats may create candidate work but must not create parallel canonical histories.
+
+This hardening is intended specifically to prevent new chats from treating branch/PR research as canonical project state or model recall as freshly verified evidence.
+
