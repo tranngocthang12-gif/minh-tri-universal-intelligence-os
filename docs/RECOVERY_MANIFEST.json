@@ -403,5 +403,26 @@
     "a147_milindapanha": "CONSULTED_DIALOGICAL_DISTINCTION_AND_CLARIFICATION_BEFORE_CONCLUSION_AS_LATER_SUPPORT_NO_OVERRIDE_OF_MN95_MN63_MN2",
     "a148_claim_class": "TEXT_ATTESTED_SN48_10_FAITH_FACULTY_MN95_PRESERVING_TRUTH_AN3_65_KALAMA_MN47_TEACHER_EXAMINATION_PLUS_CROSS_TEXT_CONFIDENCE_INVESTIGATION_AND_AUTHORITY_GUARDRAILS_WITH_LATER_PARACANONICAL_SUPPORT",
     "a148_milindapanha": "CONSULTED_FAITH_SERENING_AND_ASPIRATIONAL_FUNCTION_AS_LATER_SUPPORT_NO_OVERRIDE_OF_SN48_10_MN95_AN3_65_MN47"
+  },
+  "persistent_orchestrator": {
+    "law": "docs/LAW_PERSISTENT_ORCHESTRATOR_20261005.md",
+    "logical_role": "MINH_TRI_ORCHESTRATOR",
+    "continuity_model": "FUNCTIONALLY_IMMORTAL_ROLE_WITH_REPLACEABLE_CHAT_GENERATIONS",
+    "old_chat_transcript_required": false,
+    "single_active_writer_required": true,
+    "recovery_requirements": [
+      "PROJECT_OBJECTIVE",
+      "CURRENT_ARCHITECTURE_AND_CONSTRAINTS",
+      "ACTIVE_WORKSTREAMS",
+      "LAST_DURABLE_COMPLETIONS",
+      "ACTIVE_ASSIGNMENTS",
+      "PENDING_REPORTS",
+      "BLOCKERS",
+      "READY_NEXT_WORK",
+      "EXACT_NEXT_ACTIONS"
+    ],
+    "future_self_learning_coordination": true,
+    "future_self_critique_coordination": true,
+    "current_background_autonomy": false
   }
 }
