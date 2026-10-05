@@ -1,0 +1,66 @@
+{
+  "schema": "minhtri-retrieval-eval-gold/v1",
+  "set_id": "ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001",
+  "note": "Do not provide this file to the graded seat.",
+  "answers": [
+    {
+      "qid": "Q1",
+      "expected_status": "SUPPORTED",
+      "expected_record_ids": [
+        "bud:a172:identity-shame-synthesis"
+      ],
+      "forbidden_record_ids": [
+        "decoy:bud:a172:identity-shame-attested"
+      ],
+      "required_concepts": [
+        "SYNTHESIS"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "expected_status": "PENDING_REVIEW",
+      "expected_record_ids": [
+        "bud:a172:hiri-lexical-open"
+      ],
+      "forbidden_record_ids": [],
+      "required_concepts": [
+        "PENDING_REVIEW"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "expected_status": "SUPPORTED",
+      "expected_record_ids": [
+        "econ:program:identification-assumptions"
+      ],
+      "forbidden_record_ids": [],
+      "required_concepts": [
+        "identification assumptions"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "expected_status": "UNSUPPORTED",
+      "expected_record_ids": [],
+      "forbidden_record_ids": [
+        "decoy:bud:ottappa-generalized-anxiety"
+      ],
+      "required_concepts": [
+        "UNSUPPORTED"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "expected_status": "SUPPORTED",
+      "expected_record_ids": [
+        "bud:a172:identity-shame-synthesis"
+      ],
+      "forbidden_record_ids": [
+        "decoy:bud:a172:identity-shame-attested"
+      ],
+      "required_concepts": [
+        "do not use superseded"
+      ]
+    }
+  ]
+}
