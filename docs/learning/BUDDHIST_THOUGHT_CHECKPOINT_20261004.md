@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A124 COMPLETED  
-**Next checkpoint:** PHASE 4 — A125  
+**Current checkpoint:** PHASE 4 — A126 COMPLETED  
+**Next checkpoint:** PHASE 4 — A127  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -18788,6 +18788,154 @@ Required lanes:
 - MN 19, MN 20, AN anger-removal strategies;
 - patience and metta as interventions;
 - distinguish suppression from abandoning;
+- mandatory Milindapanha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+
+## Completed checkpoint A125
+
+**Central question:** How does the Buddha understand anger/ill will as a conditioned process, and where can it be interrupted?
+
+### TEXT_ATTESTED
+- **MN 19:** ill-will and cruelty are unskillful thought; repeated thinking inclines the mind in that direction; such thought is judged by harm to self/others, obstruction of wisdom, and direction away from release.
+- **SN 36.6:** painful feeling does not equal aversion by necessity; the untrained person adds resistance to pain, while the trained disciple can experience painful feeling without the second reactive layer.
+- **MN 20:** unskillful thought can be worked with by substitution, seeing drawbacks, withdrawing attention, calming formations, and forceful restraint as a last resort.
+- **AN 5.161:** resentment may be addressed through loving-kindness, compassion, equanimity, non-attention, and reflection that beings are heirs to their actions.
+- **DN 1:** anger obstructs accurate judgment even when one is responding to criticism; false claims should be corrected on factual grounds rather than from anger.
+
+### CROSS_TEXT SYNTHESIS
+A125 models anger as condition-dependent rather than a fixed identity:
+contact/trigger -> feeling -> interpretation/thought -> possible rehearsal -> stronger inclination to ill-will -> speech/action if not restrained.
+
+This exact chain is **CROSS_TEXT SYNTHESIS**, not a verbatim canonical formula.
+
+The practical intervention points are:
+1. tolerate pain without adding the second arrow;
+2. notice ill-will as ill-will;
+3. examine its harmful consequences;
+4. redirect attention/theme;
+5. stop rehearsal;
+6. cultivate metta/karuna/upekkha;
+7. use restraint without wishing harm.
+
+### GUARDRAILS
+- painful feeling != inevitable anger;
+- moral clarity != wholesome hatred;
+- non-anger != non-action;
+- suppression != full abandoning;
+- metta != liking or restored trust.
+
+### MILINDAPANHA
+**Consulted:** YES. Later Milindapanha material on firm disciplinary action without anger and the mongoose simile of preparing the mind with loving-kindness is used as **LATER/PARACANONICAL** support only.
+
+**Claim class:** `TEXT_ATTESTED_MN19_SN36_6_MN20_AN5_161_DN1_ILL_WILL_CONDITIONING_AND_REMOVAL_PLUS_CROSS_TEXT_MULTI_POINT_INTERVENTION_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Completed checkpoint A126
+
+**Central question:** How do perception, thought, proliferation, and self-referential conceiving turn an event into a durable story of “me against them,” and how is that construction interrupted?
+
+### TEXT_ATTESTED
+1. **MN 18** gives a process sequence: with sense base and object there is consciousness; the meeting is contact; with contact, feeling; what one feels one perceives; what one perceives one thinks about; what one thinks about can become the basis for `papañca` and the associated categories that beset the person.
+2. **MN 1** shows a distinct but related self-referential operation: after perceiving an object, the uninstructed person conceives it, conceives in relation to it, conceives self in/around it, and conceives “it is mine.” This is a strong early-text anchor for how experience becomes appropriated as “me/mine.”
+3. **SN 35.95** gives an interruption strategy: in the seen, heard, sensed, and cognized, let there be only the seen, heard, sensed, and cognized; when the extra “by that / in that” identification does not occur, suffering ends.
+4. **SN 22.89** shows that even after explicit identity view is gone, a residual “I am” conceit can remain in relation to the aggregates. This prevents reducing the whole identity problem to explicit doctrine alone.
+
+### LEXICAL GUARDRAILS
+- Do **not** translate `papañca` simply as modern “overthinking.” The term has a difficult semantic range involving proliferation/expansion/complication and remains under the project's lexical audit.
+- Do **not** equate `saññā` with memory alone. In MN 18 it is perception/recognition within the sequence; autobiographical memory may feed later resentment, but that is a modern explanatory application rather than the direct lexical definition.
+- Do **not** equate `maññati` with mere neutral thinking. MN 1 uses it in a self-referential conceiving/appropriating pattern.
+
+### FROM EVENT TO IDENTITY STORY — CROSS_TEXT SYNTHESIS
+A126 distinguishes four layers:
+
+**Layer 1 — event:** something is seen/heard/remembered and unpleasant feeling may arise.
+
+**Layer 2 — recognition and thought:** the event is perceived and mentally handled.
+
+**Layer 3 — proliferation:** the event is expanded into categories, comparisons, imagined motives, future scenarios, and repeated narratives.
+
+**Layer 4 — appropriation:** the story becomes organized around “me,” “mine,” “what they did to me,” “what kind of person I am,” or “what kind of enemy they are.”
+
+The exact four-layer map is **CROSS_TEXT SYNTHESIS** using MN 18, MN 1, SN 35.95, and SN 22.89; it is not a canonical four-step formula.
+
+### WHY RESENTMENT CAN OUTLIVE THE EVENT
+The external event can cease while the internal construction continues.
+
+A person can repeatedly react not to the original event but to:
+- a remembered image;
+- a label assigned to the other person;
+- a prediction of future harm;
+- a self-story of humiliation, betrayal, superiority, or victimhood.
+
+The early-text anchors do not define “resentment memory” as a technical category. A126 therefore treats this as a **CROSS_TEXT APPLICATION**: proliferation and appropriation can keep re-presenting an already-past event as a present identity conflict.
+
+### INTERRUPTION POINTS
+A126 yields several points of interruption:
+1. **At sense contact:** restraint prevents immediate capture by attractive/aversive signs.
+2. **At feeling:** do not add the second arrow of resistance.
+3. **At perception/thought:** know the event without assuming the first interpretation is final.
+4. **At proliferation:** stop feeding chains of comparison, motive-reading, and imagined retaliation.
+5. **At appropriation:** do not turn the experience into “this is me,” “this is mine,” or “this defines us.”
+6. **At direct experience:** SN 35.95's discipline—only the seen in the seen, etc.—cuts the extra self-positioning around experience.
+
+### IMPORTANT DISTINCTION
+The Buddha's method here is not “erase memory.”
+
+Remembering an injury can be needed for prudence, accountability, and boundaries.
+
+The target is not factual memory itself but the additional construction that binds:
+**event + self-claim + craving/aversion + repeated proliferation.**
+
+That formulation is **CROSS_TEXT SYNTHESIS**.
+
+### MILINDAPANHA — MANDATORY
+**Consulted:** YES.
+
+The Nāgasena/chariot discussion is used as later/paracanonical support for the distinction between conventional designation and a supposedly fixed underlying person. This helps stress-test the move from “an event happened involving this person” to “this permanent self/enemy is what they truly are.”
+
+**Guardrail:** the chariot argument is not used to erase moral responsibility, nor to replace MN 1/MN 18/SN 35.95/SN 22.89 as the early-text anchors.
+
+### BUDDHA'S REASONING METHOD
+A126 adds a diagnostic question:
+
+**At what point did direct experience become a story about self and other?**
+
+Instead of treating the finished resentment-story as a single indivisible truth, the method decomposes it:
+- what was actually sensed?
+- what feeling arose?
+- what was perceived?
+- what was inferred?
+- what was proliferated?
+- what was appropriated as “me/mine”?
+- what remains observable if the self-story is not continuously rehearsed?
+
+This is one of the clearest examples of Buddhist reasoning by **decomposition of a seemingly solid experience into conditioned operations**.
+
+### CORRECTIONS PRESERVED
+- memory != `saññā` as a one-to-one translation;
+- `papañca` != merely “thinking too much”;
+- conventional personhood != permanent self;
+- non-self analysis != denial of responsibility;
+- “only the seen in the seen” != sensory blankness or denial of meaning;
+- stopping proliferation != suppressing all thought.
+
+### Sources
+- MN 18 Madhupindika Sutta.
+- MN 1 Mulapariyaya Sutta.
+- SN 35.95 Malunkyaputta Sutta.
+- SN 22.89 Khemaka Sutta.
+- Milindapanha, chariot/designation discussion, as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A127
+
+**How does craving for being right, being seen correctly, status, and self-image turn disagreement into identity-defense, and how does the Buddha distinguish right view from clinging to views?**
+
+Required lanes:
+- ditthi vs ditthupadana;
+- right view as path factor vs possession/identity;
+- MN 2/MN 22/MN 95 and Atthakavagga stress-test;
+- relation to mana and mannana;
 - mandatory Milindapanha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
