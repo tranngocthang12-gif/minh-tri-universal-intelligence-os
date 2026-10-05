@@ -748,5 +748,13 @@
     "autonomous_background_runtime": false,
     "automatic_verified": false,
     "automatic_law_mutation": false
+  },
+  "orchestrator_worker_pool": {
+    "declared_by_owner": "2026-10-05",
+    "available_worker_chats": 3,
+    "assignment_model": "ONE_BOUNDED_TASK_PER_CHAT_AT_A_TIME",
+    "orchestrator_assigns_work": true,
+    "worker_chats_are_interchangeable": true,
+    "note": "Operational capacity declared by Owner; may be revised by later Owner instruction."
   }
 }
