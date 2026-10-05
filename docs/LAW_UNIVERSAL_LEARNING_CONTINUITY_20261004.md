@@ -152,3 +152,52 @@ branch
 → fresh-read live main.
 
 No direct-main mutation, protection bypass, or silent weakening is permitted.
+
+## 11. New-seat learning compliance gate
+
+For every new material learning checkpoint or audit created after this amendment is merged, the durable record must state the canonical main SHA observed at task start and confirm fresh-read of:
+- PROJECT_STATE;
+- current Law Index;
+- this Universal Learning Continuity Law;
+- current Architecture;
+- Role Bootstrap;
+- active learning checkpoint/plan;
+- task/domain sources.
+
+Chat memory, pasted SHAs, PR descriptions, or prior summaries do not satisfy this gate.
+
+## 12. Learning-state labels
+
+A checkpoint is CANONICAL only after branch -> PR -> required CI -> merge -> fresh-read live main.
+
+A branch/PR result not yet merged is CANDIDATE. A stacked child may be researched only as CANDIDATE/STACKED, must name its parent dependency, must not be described as current canonical state, and must be revalidated after its parent is merged.
+
+A result existing only in chat is CHAT_DRAFT / NOT YET DURABLY RECORDED.
+
+When multiple levels exist, Owner-facing summaries must state CANONICAL, CANDIDATE, and CHAT_DRAFT separately.
+
+## 13. Fresh primary-source rule
+
+A material claim labelled TEXT_ATTESTED, an exact morphology/lexical claim, or an exact source citation must be based on a primary source freshly checked in the current task when a direct source path is available.
+
+Model recall alone is not source verification. A web citation is checked evidence only when the source was actually retrieved in that task, or when a durable project source with a stable locator was freshly read.
+
+If fresh verification is unavailable, keep the claim under UNCERTAINTY, OPEN_CHECK, CROSS_TEXT_SYNTHESIS, or another non-attested class appropriate to the evidence.
+
+For Buddhist study, Pali morphology must not be promoted from memory alone. Milindapanha remains mandatory later/paracanonical support and never substitutes for root-text attestation.
+
+## 14. Canonical advancement rule
+
+Research in chat, an open PR, a CI PASS, or a stacked child PR does not advance canonical CURRENT/NEXT.
+
+Only branch -> PR -> required CI -> merge -> fresh-read live main advances canonical learning state.
+
+Parallel chats may create parallel candidate work, but they must not create parallel canonical histories.
+
+## 15. Durable-status footer
+
+If material work is durably recorded, use:
+`Đã ghi trong project, chưa ghi sổ máy.`
+
+If it is not durably recorded, report that honestly instead of claiming it was recorded.
+
