@@ -412,6 +412,23 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("Supreme Buddhist-study learning invariant", architecture)
         self.assertIn("SUPREME BUDDHIST-STUDY SOURCE DISCIPLINE", bootstrap)
 
+    def test_buddhist_program_cannot_complete_without_completion_gate(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+        track = manifest["owner_learning_track_buddhist_thought"]
+
+        self.assertEqual(state["owner_learning_track_buddhist_thought_program_status"], "IN_PROGRESS_NOT_COMPLETE")
+        self.assertFalse(state["owner_learning_track_buddhist_thought_completion_report_allowed"])
+        self.assertEqual(track["program_status"], state["owner_learning_track_buddhist_thought_program_status"])
+        self.assertFalse(track["completion_report_allowed"])
+        self.assertEqual(state["owner_learning_track_buddhist_thought_completion_audit"], "REQUIRED_NOT_YET_PASSED")
+        self.assertIn("7A-COMPLETION. Buddhist-study completion rule", law)
+        self.assertIn("BUDDHIST-STUDY WHOLE-TRACK COMPLETION GATE", bootstrap)
+        self.assertIn("Buddhist-study whole-track completion invariant", architecture)
+
     def test_buddhist_track_requires_milindapanha_continuously(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
