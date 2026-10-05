@@ -42,6 +42,33 @@
       "statement": "PR #230 contains a bounded Aṭṭhakavagga lexical audit for saññā and maññati, including text locations, morphology traps, overclaims, counter-readings, uncertainties, and Milindapañha as later/paracanonical support."
     },
     {
+      "id": "bud:atthaka:sn4_12:view-truth-claim-dispute",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-atthaka-sn4-12-view-truth-claim-dispute.json",
+      "statement": "Snp 4.12 directly portrays disputants making or defending truth-claims in connection with views, reasoning, self-elevation, and dispute; this does not establish relativism or identify the verse's 'one truth' with a specific later doctrine."
+    },
+    {
+      "id": "bud:atthaka:sn842:mannati-comparison-dispute",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-atthaka-sn842-mannati-comparison-dispute.json",
+      "statement": "Snp 4.9 (Sn 842) directly places maññati in an equal/superior/inferior comparison structure and links that self-positioning to dispute."
+    },
+    {
+      "id": "bud:atthaka:sn874:sanna-papancasankha-relation",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-atthaka-sn874-sanna-papancasankha-relation.json",
+      "statement": "Snp 4.11 (Sn 874) directly states a relation in which papañcasaṅkhā are saññānidāna; this does not by itself define all papañca or prove a complete identity/dispute psychology."
+    },
+    {
       "id": "econ:program:identification-assumptions",
       "domain": "economics",
       "record_type": "claim",
