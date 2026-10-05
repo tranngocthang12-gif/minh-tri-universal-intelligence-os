@@ -557,3 +557,11 @@ Architecture enforcement must preserve:
 - fail-closed uncertainty when translation/lexical conflict remains unresolved.
 
 This invariant aims at deep, coherent, systematic understanding of the Buddha's thought, not quotation accumulation or forced artificial harmony.
+
+## 37B. Buddhist-study whole-track completion invariant — 2026-10-05
+
+Checkpoint completion and whole-program completion are separate state dimensions.
+
+The Buddhist-thought program remains `IN_PROGRESS_NOT_COMPLETE` until the Section 7A-COMPLETION gate passes: coherent system map, continuity, source control, completion-blocking audit closure, contradiction review, deep-understanding review, fresh-seat recoverability, and explicit completion-audit PASS.
+
+No seat may derive whole-track completion from a high A-number or from the absence of an immediate next task.
