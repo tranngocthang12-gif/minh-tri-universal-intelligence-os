@@ -1,0 +1,69 @@
+{
+  "schema": "minhtri-knowledge-index/v1",
+  "generated_from": {
+    "atom_glob": "knowledge/**/atoms/*.json",
+    "hub_glob": "knowledge/**/concepts/*.md"
+  },
+  "atoms": [
+    {
+      "id": "bud:a172:hiri-lexical-open",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "UNCERTAIN",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-a172-hiri-lexical-open.json",
+      "statement": "A full lexical audit of hiri, ottappa, kukkucca, and related shame/remorse vocabulary remains open."
+    },
+    {
+      "id": "bud:a172:identity-shame-synthesis",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "SYNTHESIS",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-a172-identity-shame-synthesis.json",
+      "statement": "A172 treats the move from 'this act was shameful' to 'my permanent essence is shameful' as a cross-text synthesis rather than direct early-text attestation."
+    },
+    {
+      "id": "econ:program:identification-assumptions",
+      "domain": "economics",
+      "record_type": "claim",
+      "class": "SECONDARY",
+      "status": "ACTIVE",
+      "path": "knowledge/economics/atoms/econ-program-identification-assumptions.json",
+      "statement": "The economics learning program requires causal claims to state identification assumptions."
+    }
+  ],
+  "hubs": [
+    {
+      "id": "bud:concept:moral-shame-hiri-ottappa",
+      "domain": "buddhist_thought",
+      "hub_type": "concept",
+      "status": "ACTIVE",
+      "aliases": [
+        "hiri",
+        "ottappa",
+        "moral shame",
+        "moral caution"
+      ],
+      "depends_on_claims": [
+        "bud:a172:identity-shame-synthesis"
+      ],
+      "path": "knowledge/buddhist/concepts/moral-shame-hiri-ottappa.md"
+    },
+    {
+      "id": "econ:concept:causal-identification",
+      "domain": "economics",
+      "hub_type": "concept",
+      "status": "ACTIVE",
+      "aliases": [
+        "identification",
+        "causal identification",
+        "identification assumptions"
+      ],
+      "depends_on_claims": [
+        "econ:program:identification-assumptions"
+      ],
+      "path": "knowledge/economics/concepts/causal-identification.md"
+    }
+  ]
+}
