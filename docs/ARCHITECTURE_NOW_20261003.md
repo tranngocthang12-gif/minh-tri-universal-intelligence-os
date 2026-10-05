@@ -541,3 +541,18 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+## 39. Learning-first phase and no fixed 3-chat dispatch — 2026-10-05
+
+Owner direction now prioritizes deep knowledge acquisition before sustained practical execution.
+
+Default project learning strategy:
+- learn broadly and deeply across important domains;
+- study external success/failure/mixed market cases as learning capital;
+- preserve provenance, context, counterevidence and transfer limits;
+- use ĐIỀU HÀNH primarily for synthesis, critique, contradiction detection and continuity;
+- do not maintain a standing three-chat worker pool;
+- use additional chats only ad hoc for independent critique or specialist/source review;
+- defer sustained first-party execution until Owner explicitly decides the knowledge base is mature enough, unless Owner orders execution earlier.
+
+This does not change the current self-learning classification and does not weaken GitHub-first, evidence, security or no-auto-VERIFIED rules.
+
