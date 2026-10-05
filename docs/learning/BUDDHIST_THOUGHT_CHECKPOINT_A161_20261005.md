@@ -15,6 +15,16 @@ If the five aggregates are not-self, why do early discourses still speak of a "p
 
 A161 is primarily an integration checkpoint. It incorporates the merged SN 22 ID-level audit while preserving the fact that the SN 22 audit lane remains open.
 
+## Mandatory Milindapañha consultation record
+
+- Consultation is mandatory for every material Buddhist checkpoint.
+- Milindapañha is used only as LATER/PARACANONICAL support for distinctions, objections, analogies, and reasoning method.
+- Milindapañha-only support must never be silently promoted to `TEXT_ATTESTED`.
+
+## MILINDAPAÑHA CONSULTATION — MANDATORY
+
+Consulted: YES. The checkpoint-specific role and guardrails are recorded below.
+
 ## TEXT_ATTESTED
 
 ### 1. SN 22.22 — the burden and the burden-carrier
