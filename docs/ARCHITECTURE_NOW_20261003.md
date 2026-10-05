@@ -541,3 +541,19 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+
+## 37A. Supreme Buddhist-study learning invariant — 2026-10-05
+
+Section 7A of `LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md` is the single canonical and highest Buddhist-study learning rule inside MINH TRÍ.
+
+Architecture enforcement must preserve:
+- early discourses as primary/root attestation;
+- continuous mandatory Milindapañha consultation as later/paracanonical reasoning support;
+- multiple independent translation comparison for material passages when available;
+- explicit recording of material translation conflicts;
+- Pāli/lexical control where wording materially affects interpretation;
+- no whole-system conclusion from an isolated verse/translation when wider evidence exists;
+- checkpoint-to-checkpoint conceptual continuity and explicit claim classes;
+- fail-closed uncertainty when translation/lexical conflict remains unresolved.
+
+This invariant aims at deep, coherent, systematic understanding of the Buddha's thought, not quotation accumulation or forced artificial harmony.
