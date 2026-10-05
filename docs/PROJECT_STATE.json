@@ -735,5 +735,18 @@
   "owner_learning_track_buddhist_thought_a148_claim_class": "TEXT_ATTESTED_SN48_10_FAITH_FACULTY_MN95_PRESERVING_TRUTH_AN3_65_KALAMA_MN47_TEACHER_EXAMINATION_PLUS_CROSS_TEXT_CONFIDENCE_INVESTIGATION_AND_AUTHORITY_GUARDRAILS_WITH_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a148_milindapanha": "CONSULTED_FAITH_SERENING_AND_ASPIRATIONAL_FUNCTION_AS_LATER_SUPPORT_NO_OVERRIDE_OF_SN48_10_MN95_AN3_65_MN47",
   "owner_learning_track_buddhist_thought_a149_claim_class": "TEXT_ATTESTED_MN47_TEACHER_EXAMINATION_AN3_65_AUTHORITY_GUARDRAIL_DN16_DHAMMA_VINAYA_TEACHER_MN22_RAFT_PLUS_CROSS_TEXT_REVERENCE_VS_DEPENDENCY_IDENTITY_SYNTHESIS_AND_MILINDAPANHA_DIALOGICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a149_milindapanha": "CONSULTED_DIALOGICAL_REVERENCE_WITH_RIGOROUS_QUESTIONING_AS_LATER_SUPPORT_NO_OVERRIDE_OF_MN47_AN3_65_DN16_MN22"
+  "owner_learning_track_buddhist_thought_a149_milindapanha": "CONSULTED_DIALOGICAL_REVERENCE_WITH_RIGOROUS_QUESTIONING_AS_LATER_SUPPORT_NO_OVERRIDE_OF_MN47_AN3_65_DN16_MN22",
+  "persistent_orchestrator": {
+    "status": "LAW_CANDIDATE_ON_PROTECTED_BRANCH",
+    "logical_role": "MINH_TRI_ORCHESTRATOR",
+    "continuity_model": "FUNCTIONALLY_IMMORTAL_ROLE_WITH_REPLACEABLE_CHAT_GENERATIONS",
+    "canonical_state_source": "GITHUB_FIRST",
+    "single_active_writer_required": true,
+    "old_chat_transcript_required_for_recovery": false,
+    "self_learning_coordination_future": true,
+    "self_critique_coordination_future": true,
+    "autonomous_background_runtime": false,
+    "automatic_verified": false,
+    "automatic_law_mutation": false
+  }
 }
