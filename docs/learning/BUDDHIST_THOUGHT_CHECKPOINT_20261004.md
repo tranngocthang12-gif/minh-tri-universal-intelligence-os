@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A159 COMPLETED  
-**Next checkpoint:** PHASE 4 — A160  
+**Current checkpoint:** PHASE 4 — A160 COMPLETED  
+**Next checkpoint:** PHASE 4 — A161  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19593,3 +19593,19 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 
 **Topic:** abandoning resentment without restoring unsafe trust; non-hatred, forgiveness, reconciliation, boundaries, and evidence of changed conduct.
 
+
+## Completed checkpoint A160
+
+**Topic:** abandoning resentment without restoring unsafe trust; non-hatred, forgiveness, reconciliation, boundaries, and evidence of changed conduct.
+
+- Primary anchors: AN 5.161, AN 5.162, MN 21, MN 61, MN 65, AN 4.192, MN 47, AN 5.167/AN 5.198.
+- Core guardrail: resentment-removal is an inner training target and can include non-attention; it does not itself require renewed access. AN 5.162 also preserves the distinction between subduing hatred and accurately seeing impure conduct.
+- Evidence-of-change synthesis: truthful acknowledgment + future restraint + repair where possible + long-term consistency across dealings/conditions; apology alone is not proof.
+- Trust/reconciliation/boundary terminology remains CROSS_TEXT_SYNTHESIS / APPLICATION rather than a single early-text technical taxonomy.
+- Milindapañha consulted: YES; Mil 7.5.5 and the later kindness/correction/dismissal dilemmas support non-hatred alongside firmness, but do not override early texts or supply the trust standard.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A160_20261005.md`.
+- Recorded does not mean automatically VERIFIED.
+
+## Next checkpoint — PHASE 4 A161
+
+**Status:** NOT EXECUTED BY PHAT-A160. Topic to be assigned by the orchestrator/Owner from canonical continuity.
