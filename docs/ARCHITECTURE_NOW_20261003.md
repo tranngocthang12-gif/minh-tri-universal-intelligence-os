@@ -541,3 +541,18 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+## Persistent orchestrator
+
+MINH TRÍ now defines one logical orchestration role: `MINH_TRI_ORCHESTRATOR`.
+
+This role is intended to be functionally immortal even though any individual chat instance is replaceable.
+
+Architecture rule:
+- each chat generation is a temporary seat;
+- project-wide planning state, dependencies, assignments, pending reports, blockers, and exact next actions must be durably recoverable;
+- only one orchestrator generation may act as canonical planning writer at a time;
+- worker chats receive bounded complete work units;
+- successor orchestrators must continue without requiring the old chat transcript;
+- the orchestrator is the future coordination layer for self-learning and self-critique, but current autonomous background runtime remains OFF and existing evidence/security gates remain unchanged.
+
+Canonical law: `docs/LAW_PERSISTENT_ORCHESTRATOR_20261005.md`.
