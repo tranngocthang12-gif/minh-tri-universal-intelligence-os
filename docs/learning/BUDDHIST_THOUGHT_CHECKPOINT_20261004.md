@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A158 COMPLETED  
-**Next checkpoint:** PHASE 4 — A159  
+**Current checkpoint:** PHASE 4 — A159 COMPLETED  
+**Next checkpoint:** PHASE 4 — A160  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19578,4 +19578,18 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A159
 
 **Topic:** living with consequences that cannot be fully repaired; kamma/consequence, fatalism, self-absolution, and forgiveness boundaries.
+
+## Completed checkpoint A159
+
+**Topic:** irreversible consequence, kamma, fatalism, self-absolution, and forgiveness boundaries.
+
+- Anchors: AN 6.63, AN 3.61, SN 36.21, AN 5.57, MN 61, DN 2.
+- Guardrail: kamma is not fatalism; present suffering is not proof of past moral desert; non-hatred does not automatically restore trust or remove consequences.
+- Milindapañha consulted: YES; later support for causal continuity and conventional responsibility without immutable self.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A159_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A160
+
+**Topic:** abandoning resentment without restoring unsafe trust; non-hatred, forgiveness, reconciliation, boundaries, and evidence of changed conduct.
 
