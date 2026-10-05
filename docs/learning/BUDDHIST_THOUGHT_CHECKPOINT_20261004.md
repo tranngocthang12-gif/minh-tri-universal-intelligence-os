@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A119 COMPLETED  
-**Next checkpoint:** PHASE 4 — A120  
+**Current checkpoint:** PHASE 4 — A120 COMPLETED  
+**Next checkpoint:** PHASE 4 — A121  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -17912,6 +17912,255 @@ Required lanes:
 - distinguish “undeclared” from agnosticism, secret eternalism, or secret annihilationism;
 - relation to MN 63/MN 72 pragmatic reasons for undeclared questions;
 - mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A120
+
+**Central question:** Why are the four post-mortem propositions about the Tathāgata—exists, does not exist, both, neither—left undeclared, and what does this reveal about the Buddha's method of handling metaphysical questions?
+
+### TEXT_ATTESTED
+
+1. **SN 22.86 (Anurādha)** tests every obvious way of pinning down the Tathāgata through the five aggregates: as form, apart from form, as feeling, apart from feeling, and so on. Anurādha agrees that the Tathāgata cannot be apprehended in those ways even here and now. The Buddha then asks whether it is fitting to make any of the four post-mortem assertions. The answer is no.
+2. The same discourse closes with the methodological statement that what the Buddha teaches is suffering and the cessation of suffering. The force is not “nothing else can ever be discussed,” but that the post-mortem tetralemma does not improve on the actual diagnostic task.
+3. **SN 44.1 (Khemā)** rejects all four post-mortem alternatives and explains the refusal through the aggregates: the Tathāgata is released from reckoning in terms of form, feeling, perception, formations, and consciousness. The text compares this to the great ocean as deep, immeasurable, and hard to fathom.
+4. **SN 44.8** ties the undeclared questions to self-view: other wanderers take form (and the other aggregates) as self, self as possessing them, them as in self, or self as in them. This connects the speculative question-set to identity construction.
+5. **MN 72 (Aggi-Vacchagotta)** says the Tathāgata has abandoned “positions” and instead sees the arising and disappearance of the five aggregates. It links release with the ending of suppositions, I-making, mine-making, and conceit, and says each of the four post-mortem predicates “does not apply.”
+6. MN 72's fire simile explains why: a fire burns dependent on fuel; when the fuel is exhausted and no new fuel is supplied, asking which direction the extinguished fire has “gone” is inapplicable. The simile is then applied to the abandoned aggregate-bases by which a Tathāgata would be described.
+7. **MN 63** gives a second, distinct reason for leaving the same speculative questions undeclared: regardless of which position one adopts, birth, aging, death, sorrow, pain, and distress remain. The questions are not fundamental to the holy life and do not lead to disenchantment, dispassion, cessation, peace, direct knowledge, awakening, or Nibbāna.
+8. MN 63 contrasts those undeclared questions with the Four Noble Truths, which are declared because they directly serve the end of suffering.
+
+### THERE ARE AT LEAST TWO EARLY-TEXT REASONS FOR “UNDECLARED”
+
+A120 corrects a possible over-simplification.
+
+It is **not enough** to say:
+“the Buddha refused these questions only because they were useless.”
+
+And it is also **not enough** to say:
+“he refused them only because the grammar was logically malformed.”
+
+The early texts supply at least two overlapping reasons.
+
+**Diagnostic/framework reason**
+- SN 22.86, SN 44.1, SN 44.8, and MN 72 show that the four alternatives presuppose a way of fixing or measuring the Tathāgata through aggregate/self categories that has been abandoned.
+
+**Pragmatic/soteriological reason**
+- MN 63 says the questions do not conduce to the goal, while suffering, its origin, its cessation, and the path do.
+
+These two reasons reinforce one another but should not be collapsed.
+
+### “UNDECLARED” ≠ “THE BUDDHA DID NOT KNOW”
+
+Nothing in the cited passages says:
+“I do not know the answer.”
+
+The repeated term is that the position is not declared, and the discourses give reasons for that non-declaration.
+
+Therefore A120 does not classify this as ordinary agnosticism.
+
+The safe claim is:
+**the Buddha declines to affirm the offered propositions because the framing is tied to views/measurement that do not apply and because adopting them does not serve liberation.**
+
+Whether one wants to add a broader theory of omniscience is a separate question and is not needed here.
+
+### “UNDECLARED” ≠ SECRET ETERNALISM OR SECRET ANNIHILATIONISM
+
+A common interpretive mistake is:
+
+“he would not say the Tathāgata does not exist after death, so secretly the Tathāgata must exist.”
+
+The mirror-image mistake is:
+
+“he would not say the Tathāgata exists, so secretly the Tathāgata must be annihilated.”
+
+But SN 44 / MN 72 reject all four boxes.
+
+A120 therefore preserves:
+
+not #1,
+not #2,
+not #3,
+not #4,
+
+without converting the refusal into a hidden fifth metaphysical substance.
+
+### SN 22.86: THE PROBLEM EXISTS EVEN BEFORE DEATH
+
+This is one of the strongest points in A120.
+
+Anurādha is asked whether the Tathāgata is identifiable:
+- as one aggregate;
+- apart from an aggregate;
+- as the set of aggregates;
+- as one without the aggregates.
+
+The answer is no.
+
+So the difficulty is not created only by death.
+
+The post-mortem question inherits a prior problem:
+**the awakened person was never correctly captured as a fixed self-entity in the aggregates to begin with.**
+
+This is why “what happens to that entity after death?” can import a false premise.
+
+### THE FIRE SIMILE IS ABOUT DEPENDENCE, NOT A SOUL TRAVELING SOMEWHERE
+
+MN 72 says the fire burns dependent on grass and timber as sustenance.
+
+When that sustenance is exhausted and no more is supplied, asking whether the fire went east, west, north, or south does not apply.
+
+The safe lesson is:
+- a process depends on sustenance;
+- when the sustaining conditions are gone, ordinary continuation/location predicates can fail.
+
+The unsafe lessons would be:
+- “the soul moved to an invisible realm”;
+- “a substance called fire was annihilated”;
+- “Nibbāna is literally a physical flame.”
+
+The analogy is functional and conditional.
+
+### “MALFORMED QUESTION” IS A WORKING ANALYTICAL LABEL
+
+A120 uses “malformed metaphysical question” as a **CROSS_TEXT SYNTHESIS**, not as a Pāli technical term.
+
+It means:
+the offered alternatives may all depend on assumptions the Buddha has already rejected or ceased to use.
+
+The method is then:
+1. expose the assumption;
+2. test whether the referent can actually be fixed in that way;
+3. trace the view to clinging/self-identification;
+4. refuse the forced alternatives;
+5. redirect to the causal problem of suffering and its cessation.
+
+This is more precise than saying merely “the Buddha avoided philosophy.”
+
+### MN 63: THE POISONED-ARROW TEST
+
+MN 63 adds a practical criterion.
+
+A person wounded by a poisoned arrow who refuses treatment until speculative details are answered can die before the useful work is done.
+
+The analogy does **not** mean that all theoretical questions are worthless.
+
+It means that a question can be intellectually interesting yet not be necessary for solving the urgent causal problem at hand.
+
+The Buddha explicitly says that whichever speculative position one holds, birth, aging, death, sorrow, and distress remain.
+
+Thus one test of a question is:
+**does answering it materially advance the ending of suffering?**
+
+### MN 72: VIEWS CAN THEMSELVES BECOME BONDAGE
+
+MN 72 describes doctrinal positions as a thicket/wilderness/writhing/fetter of views and associates them with distress and fever.
+
+A120 therefore adds another layer:
+
+The danger is not only that a proposition might be false.
+
+The act of taking a speculative position as identity and clinging to it can itself become part of the problem.
+
+That connects undeclared questions to the broader work on:
+`diṭṭhi`,
+`upādāna`,
+I-making,
+mine-making,
+and conceit.
+
+### NOT EVERY UNANSWERED QUESTION HAS THE SAME REASON
+
+A120 preserves a major guardrail.
+
+One must not infer:
+“whenever the Buddha does not answer, the question is logically meaningless.”
+
+Some questions are set aside because they are not conducive to liberation.
+Some are tied to faulty self/aggregate framing.
+Some may require analysis rather than a yes/no answer.
+
+Therefore the *reason for non-answer must be read passage by passage*.
+
+This becomes the bridge to A121.
+
+### RELATION TO THE FOUR NOBLE TRUTHS
+
+The repeated redirection is not anti-intellectual.
+
+It is a change in priority from speculative ontology to causal diagnosis:
+
+- what is suffering?
+- from what does it arise?
+- can that condition cease?
+- what path brings cessation?
+
+This is the same reasoning architecture seen throughout dependent arising:
+**identify conditions and intervention points instead of defending a metaphysical identity.**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's “pointing out the Buddha” dialogue says that after the Buddha's final Nibbāna he cannot be pointed out as “here or there,” and uses an extinguished-flame analogy.
+
+Milindapañha elsewhere also preserves a structured concern with how different kinds of questions should be handled rather than assuming every question deserves the same response form.
+
+**Role:** later/paracanonical support for:
+- resisting spatial/post-mortem reification;
+- treating question-form itself as part of philosophical method.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not convert the SN 44 / MN 72 refusal into a new positive post-mortem ontology.
+
+### BUDDHA'S REASONING METHOD
+
+A120 yields a reusable method:
+
+**Before answering a question, inspect the question.**
+
+Ask:
+- What does it presuppose?
+- Does the referent exist in the way the grammar assumes?
+- Does one of the offered answers intensify view-clinging?
+- Is the question causally relevant to liberation?
+- Should it be answered directly, analyzed, answered by counter-question, or put aside?
+
+This is not refusal of reasoning.
+It is reasoning about the validity and usefulness of the question itself.
+
+### CORRECTIONS PRESERVED
+
+- Do not call the undeclared questions mere ignorance/agnosticism.
+- Do not make non-answer into secret eternalism.
+- Do not make non-answer into secret annihilationism.
+- Do not assume the four alternatives exhaust reality just because the questioner supplied four.
+- Do not infer from the fire simile that a soul travels elsewhere or is annihilated.
+- Do not say all metaphysical inquiry is forbidden; MN 63 is a relevance test, not an anti-thought slogan.
+- Do not say every unanswered question is malformed for the same reason.
+- Do not use Milindapañha to fill in an ontology intentionally left undeclared in the early texts.
+
+### Sources
+
+- SN 22.86 Anurādha Sutta.
+- SN 44.1 Khemā Sutta.
+- SN 44.8 Vacchagotta Sutta.
+- MN 72 Aggi-Vacchagotta Sutta.
+- MN 63 Cūḷa-Māluṅkyovāda Sutta.
+- Milindapañha “pointing out the Buddha” discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A121
+
+**What are the Buddha's different legitimate ways of answering questions—direct answer, analytical/qualified answer, counter-question, and setting aside—and how does choosing the response form itself reveal his reasoning method?**
+
+Required lanes:
+- AN 4.42 four modes of answering questions;
+- examples of categorical versus analytical answers;
+- counter-question as diagnostic method, not evasion;
+- “put aside” in relation to A120's undeclared questions;
+- distinguish question classification from truth relativism;
+- compare with Milindapañha's question-handling method as later/paracanonical support;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
