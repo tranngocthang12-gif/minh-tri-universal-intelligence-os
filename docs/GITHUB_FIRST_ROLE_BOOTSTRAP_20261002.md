@@ -324,3 +324,14 @@ Before material orchestration, the successor must recover:
 Only one orchestrator generation may act as canonical planning writer at a time. A stale older generation must fresh-read before mutation and fail closed on stale state.
 
 Canonical law: `docs/LAW_PERSISTENT_ORCHESTRATOR_20261005.md`.
+
+## Canonical role call-signs
+
+Owner call-signs are bootstrap commands:
+
+- `ĐIỀU HÀNH` (or ASCII fallback `DIEU HANH`) -> assume `MINH_TRI_ORCHESTRATOR`, fresh-read canonical state, recover the project-wide work map, and continue orchestration without requiring the old chat transcript.
+- `QUÂN-1` -> recover worker slot 1's active assignment.
+- `QUÂN-2` -> recover worker slot 2's active assignment.
+- `QUÂN-3` -> recover worker slot 3's active assignment.
+
+These are logical role names, not permanent chat identities.
