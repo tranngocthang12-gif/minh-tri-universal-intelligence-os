@@ -18,7 +18,7 @@
     {
       "task_id": "ARCH-VNEXT-PHASE2",
       "title": "Introduce vNext current-state core and canonical task registry",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "state/current.yaml",
         "state/tasks.yaml",
@@ -30,7 +30,7 @@
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "PR#254"
     },
     {
       "task_id": "BUDDHIST-A173",
@@ -74,6 +74,30 @@
       "base_sha": "d1bc70b04ff38108d5162f0b6a9d99f02db9b566",
       "requires": "pc",
       "dependencies": [],
+      "supersedes": [],
+      "result_ref": null
+    },
+    {
+      "task_id": "ARCH-VNEXT-PHASE3-PILOT",
+      "title": "Pilot atom+hub knowledge schema on Buddhist and economics samples",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "knowledge/schema/",
+        "knowledge/buddhist/",
+        "knowledge/economics/",
+        "knowledge/index.json",
+        "tools/generate_knowledge_index.py",
+        "tests/test_vnext_knowledge_pilot.py",
+        "docs/vnext/ARCHITECTURE_VNEXT_PHASE3_KNOWLEDGE_PILOT_20261006.md",
+        "state/current.yaml",
+        "state/tasks.yaml"
+      ],
+      "branch": "owner/architecture-vnext-phase3-knowledge-pilot-20261006",
+      "base_sha": "31a789342b3933e4a1fc2882a1b38ecf240c755e",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE2"
+      ],
       "supersedes": [],
       "result_ref": null
     }

@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "claim",
+  "id": "bud:a172:hiri-lexical-open",
+  "domain": "buddhist_thought",
+  "class": "UNCERTAIN",
+  "status": "PENDING_REVIEW",
+  "statement": "A full lexical audit of hiri, ottappa, kukkucca, and related shame/remorse vocabulary remains open.",
+  "source_refs": [
+    "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md",
+      "locator": "UNCERTAINTY / OPEN CHECK item 1"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "created_from_canonical_checkpoint": "A172",
+    "base_sha": "31a789342b3933e4a1fc2882a1b38ecf240c755e",
+    "promotion_requirement": "T1 review before hub may cite as established support"
+  }
+}
