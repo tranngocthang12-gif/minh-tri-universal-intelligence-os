@@ -7,6 +7,8 @@
 **Next checkpoint:** PHASE 4 — A163  
 **Primary question:** perception (`saññā`), conceiving (`maññati` / maññanā-family), self-positioning, and `papañca` without collapsing distinct lemmas.
 
+## Completed checkpoint A162
+
 ## Central question
 
 How does early Buddhist material distinguish simple perception/recognition from conceiving, self-positioning, comparison, and proliferative conflict?
@@ -18,7 +20,13 @@ The key result of A162 is negative as well as positive:
 - `papañca` is not all thought;
 - the combined model is useful only as CROSS_TEXT_SYNTHESIS, not as one verbatim canonical chain.
 
-## Mandatory Milindapañha consultation
+## Mandatory Milindapañha consultation record
+
+- Consultation is mandatory for every material Buddhist checkpoint.
+- Milindapañha is used only as LATER/PARACANONICAL support for distinctions, objections, analogies, and reasoning method.
+- Milindapañha-only support must never be silently promoted to `TEXT_ATTESTED`.
+
+## MILINDAPAÑHA CONSULTATION — MANDATORY
 
 Consulted: YES.
 
@@ -295,6 +303,8 @@ This is CROSS_TEXT APPLICATION, not a canonical six-step list.
 
 CURRENT CHECKPOINT: PHASE 4 — A162 COMPLETED  
 NEXT CHECKPOINT: PHASE 4 — A163
+
+## Next checkpoint — PHASE 4 A163
 
 ### A163 topic
 
