@@ -1,7 +1,7 @@
-# MINH TRÍ — Architecture vNext — Owner-approved design candidate
+# MINH TRÍ — Architecture vNext — Current architecture
 
 **Date:** 2026-10-06  
-**Status:** OWNER-APPROVED DESIGN / CANDIDATE / NOT CANONICAL UNTIL MERGED  
+**Status:** CURRENT ARCHITECTURE / MIGRATION ACTIVE  
 **Base main:** `a04300f8530c7f8413e8e386c607c7f9938ce32b`  
 **Critic gate:** ARCH-VNEXT-CRITIC-01 — three rounds complete  
 **Owner decision:** the architecture skeleton is approved; implementation details remain evidence-driven and reversible.
@@ -375,11 +375,9 @@ Do not preserve as vNext:
 Disposition:
 `SALVAGE_PARTS / SUPERSEDE_AS_ARCHITECTURE_VNEXT_CANDIDATE`
 
-## 12. Canonicalization rule
+## 12. Canonicalization and migration rule
 
-This file itself is not canonical Architecture vNext merely because the Owner approved the design in chat.
+This architecture became canonical only after protected PR/CI/merge and fresh-read main. Subsequent migration still follows:
+`branch -> PR -> required CI -> merge -> fresh-read main`
 
-Canonicalization still requires:
-`candidate branch -> PR -> required CI -> merge -> fresh-read main`
-
-After merge, migration phases proceed through small reversible PRs.
+Migration phases proceed through small reversible PRs. Historical candidate wording or pre-merge base SHAs are provenance only, not current-state authority.
