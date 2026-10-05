@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A99 COMPLETED  
-**Next checkpoint:** PHASE 4 — A100  
+**Current checkpoint:** PHASE 4 — A100 COMPLETED  
+**Next checkpoint:** PHASE 4 — A101  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -14797,6 +14797,133 @@ Required lanes:
 - SN 22 grasping-aggregate material;
 - `bhavataṇhā` versus `bhava`;
 - birth definition and guardrail against purely momentary reinterpretation;
+- mandatory Milindapañha consultation;
+- preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
+
+
+## Completed checkpoint A100
+
+**Central question:** How does the causal segment `taṇhā → upādāna → bhava → jāti` work as one integrated model, and where can psychological language help without replacing the early-text meanings?
+
+### TEXT_ATTESTED
+
+1. **SN 12.2** gives the ordered relation:
+   `vedanā → taṇhā → upādāna → bhava → jāti → jarāmaraṇa`.
+   It separately defines:
+   - `taṇhā` as six classes of craving for sense/mental objects;
+   - `upādāna` as four kinds of grasping;
+   - `bhava` as sensual, form, and formless existence/becoming;
+   - `jāti` as birth, coming-to-be, appearance of aggregates, and acquisition of sense bases among beings.
+2. **MN 9** restates the threefold `bhava`, places its origination in `upādāna`, and places the origination of `jāti` in `bhava`. It also gives the reverse cessation relation.
+3. **SN 12.52** gives an intervention model rather than only a static list: contemplating gratification in clingable phenomena strengthens craving, after which `upādāna → bhava → jāti` follows; contemplating danger/drawback leads to craving ceasing and the downstream sequence ceasing.
+4. **SN 22.121** distinguishes graspable phenomena from the grasping itself: the five aggregates are liable to be grasped, while desire-passion in relation to them is the grasping there.
+5. **SN 22.82 / MN 109 parallel material** likewise rejects both crude identity and crude separation between grasping and the five grasping aggregates; desire and greed with regard to them is identified as the grasping there.
+
+### THE CAUSAL MODEL
+
+The safest integrated reading is not four isolated definitions but a **conditional production process**:
+
+`taṇhā` — thirst/craving toward experience  
+→ `upādāna` — taking hold, appropriating, sustaining  
+→ `bhava` — conditioned existence/becoming thereby sustained or produced  
+→ `jāti` — birth/coming-to-be in the technical dependent-arising sense.
+
+The important feature of the Buddha's reasoning is the conditional form:
+
+**when this condition is present, that process is supported; when this condition ceases, the downstream process ceases.**
+
+This makes the teaching explanatory and practical at once. It does not merely answer “what exists?” It asks **what sustains suffering, and what happens if that sustaining condition is removed?**
+
+### WHY THE FIRE IMAGE MATTERS
+
+SN 12.52 shows that the sequence is not best understood as four hard objects mechanically pushing one another.
+
+A fire persists when fuel is repeatedly supplied. Likewise, dwelling on gratification in graspable phenomena increases craving, and the downstream process is maintained.
+
+This makes “fuel/sustenance” a useful functional echo for `upādāna`, but not a universal replacement translation for every occurrence of the word.
+
+### WHERE PSYCHOLOGICAL LANGUAGE HELPS
+
+A psychological application can illuminate **part of the mechanism**:
+
+- feeling is experienced;
+- craving moves toward getting, keeping, escaping, or repeating;
+- desire-passion can harden into grasping;
+- grasping organizes conduct and continued patterns of becoming.
+
+This is useful as **CROSS_TEXT_SYNTHESIS / APPLICATION**, especially for observing how a person repeatedly feeds a pattern.
+
+### WHERE THE PSYCHOLOGICAL READING OVERREACHES
+
+The early-text definitions put hard limits on reduction:
+
+- `upādāna` is not merely “identifying with a thought”; it includes four explicit kinds of grasping.
+- `bhava` is not textually defined as only “constructing an identity”; SN 12.2 and MN 9 explicitly give three modes of existence/becoming.
+- `jāti` in SN 12.2 is birth among beings, including appearance of aggregates and acquisition of sense bases.
+
+Therefore “a new self-story is born every moment” may be a **modern/application-level analogy**, but it must not be promoted into the sole or primary textual definition of `jāti` in the standard nidāna sequence.
+
+### A DEEPER POINT ABOUT BUDDHA'S THINKING
+
+The method here is neither pure metaphysics nor mere introspection.
+
+It combines:
+1. **classification** — craving, four graspings, three becomings, birth;
+2. **conditional explanation** — this conditions that;
+3. **feedback diagnosis** — gratification increases craving and sustains the chain;
+4. **intervention** — seeing drawback changes the upstream condition;
+5. **cessation test** — if the condition ceases, the downstream consequence ceases.
+
+So the distinctive reasoning pattern is:
+
+**identify the sustaining condition → test what feeds it → remove the feed → observe whether the consequence stops.**
+
+This is a `CROSS_TEXT_SYNTHESIS` of the reasoning structure, not a direct quotation.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Relevant later passages:
+- **Mil 3.3.1** restates dependent arising as an explanation of temporal continuity beginning with ignorance and proceeding through becoming and birth.
+- **Mil 3.2.1** uses lamp/flame and milk-to-curds analogies to explain continuity as neither strict identity nor total otherness.
+- **Mil 3.5.5** gives rebirth without transmigration using one lamp lighting another and a verse learned from a teacher.
+
+**Role:** stress-test the continuity problem created by `bhava → jāti`: causal continuation need not be modeled as an invariant substance physically moving from one stage to the next.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** these analogies clarify a problem; they do not redefine the early-text meanings of `upādāna`, `bhava`, or `jāti`.
+
+### CORRECTIONS PRESERVED
+
+- Do not collapse `taṇhā` and `upādāna` into synonyms.
+- Do not collapse `bhava` and `bhavataṇhā`.
+- Do not treat `upādāna` as only “mine-making.”
+- Do not reduce `bhava` to psychological identity formation.
+- Do not reduce standard `jāti` to momentary thought-generation.
+- Do not turn the fire/fuel image into proof that every use of `upādāna` literally means physical fuel.
+- Do not use later Milindapañha analogies as if they were early-sutta definitions.
+
+### Sources carried into durable checkpoint
+
+- SN 12.2 Paṭiccasamuppādavibhaṅga Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- SN 12.52 Upādāna Sutta.
+- SN 22.121 Upādāna Sutta.
+- SN 22.82 Puṇṇamā Sutta / MN 109 parallel material.
+- Milindapañha 3.3.1, 3.2.1, and 3.5.5 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A101
+
+**What exactly does `jāti → jarāmaraṇa` mean, and what does liberation end if an awakened person still ages, becomes ill, experiences bodily pain, and dies?**
+
+Required lanes:
+- SN 12.2 technical definitions of `jāti` and `jarāmaraṇa`;
+- distinction between present bodily vulnerability and production of future birth;
+- revisit SN 36.6 two arrows;
+- revisit Iti 44 / relevant liberation-with-remainder material already studied in A52–A53;
+- distinguish cessation of renewed birth from immediate disappearance of the living body;
 - mandatory Milindapañha consultation;
 - preserve `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `OPEN/CHECK` boundaries.
 
