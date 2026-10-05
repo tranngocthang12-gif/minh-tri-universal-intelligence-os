@@ -22,6 +22,33 @@ Before material work, every chat/seat must fresh-read the current authority chai
 
 A pasted SHA, model memory, chat summary, or user restatement is not sufficient current-state proof when live canonical state is available.
 
+## 2A. Mandatory pre-work receipt
+
+A material learning checkpoint may not be promoted to canonical merely because a chat claims that bootstrap was performed.
+
+Every new material learning checkpoint created after this rule is integrated must contain a machine-readable section titled exactly:
+
+`## PREWORK RECEIPT — MANDATORY`
+
+The receipt must record all of the following live-canonical inputs used before material learning work:
+
+- `PROJECT_STATE` path;
+- current Law Index path routed by PROJECT_STATE;
+- Universal Learning Continuity Law path;
+- current Architecture path routed by PROJECT_STATE;
+- role bootstrap path routed by PROJECT_STATE;
+- active learning checkpoint path read before work;
+- task/domain sources used;
+- receipt status `FRESH_READ_BEFORE_MATERIAL_WORK`;
+- date/provenance;
+- explicit statement that chat memory was not used as canonical authority.
+
+For the Buddhist-thought track, the same checkpoint must also preserve the mandatory Milindapañha consultation record required by section 7A.
+
+**Fail-closed rule:** if the receipt is absent, incomplete, points to stale/non-routed authority files, or claims an active checkpoint inconsistent with the predecessor/current state, the checkpoint is **NOT PROMOTABLE**. CI must reject promotion. No chat statement, summary, pasted SHA, or prior-seat memory can substitute for the receipt.
+
+This receipt proves procedural bootstrap evidence only. It does not prove that the learning content is true or VERIFIED.
+
 ## 3. Mandatory durable learning record
 
 Every material learning checkpoint in any domain must durably record at least:
