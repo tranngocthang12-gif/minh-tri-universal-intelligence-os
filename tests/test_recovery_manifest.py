@@ -358,6 +358,33 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertIn("MANDATORY UNIVERSAL LEARNING BOOTSTRAP", bootstrap)
 
 
+    def test_material_learning_checkpoint_requires_prework_receipt(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        checkpoint = (ROOT / state["owner_learning_track_buddhist_thought_checkpoint"]).read_text(encoding="utf-8")
+
+        self.assertTrue(state["universal_learning_prework_receipt_required"])
+        self.assertTrue(manifest["universal_learning_continuity"]["prework_receipt_required"])
+        self.assertIn("## 2A. Mandatory pre-work receipt", law)
+        self.assertEqual(
+            state["universal_learning_prework_receipt_heading"],
+            "## PREWORK RECEIPT — MANDATORY",
+        )
+        # Enforcement is prospective at integration: the currently promoted checkpoint
+        # may predate this rule. Every future promoted Buddhist checkpoint must carry
+        # the exact receipt heading and routed authority paths.
+        current = state["owner_learning_track_buddhist_thought_status"]
+        if current != "PHASE_4_A172_COMPLETED":
+            self.assertIn("## PREWORK RECEIPT — MANDATORY", checkpoint)
+            self.assertIn("FRESH_READ_BEFORE_MATERIAL_WORK", checkpoint)
+            self.assertIn(state["current_law_index"], checkpoint)
+            self.assertIn(state["universal_learning_continuity_law"], checkpoint)
+            self.assertIn(state["current_architecture"], checkpoint)
+            self.assertIn(state["role_bootstrap"], checkpoint)
+            self.assertIn("chat memory was not used as canonical authority", checkpoint.lower())
+
+
     def test_buddhist_track_requires_milindapanha_continuously(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
         manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
