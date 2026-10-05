@@ -15,6 +15,16 @@ How should `saññā` and `maññati` be distinguished lexically and functionall
 
 This checkpoint is deliberately narrow. It does not close the full Aṭṭhakavagga lexical lane.
 
+## Mandatory Milindapañha consultation record
+
+- Consultation is mandatory for every material Buddhist checkpoint.
+- Milindapañha is used only as LATER/PARACANONICAL support for distinctions, objections, analogies, and reasoning method.
+- Milindapañha-only support must never be silently promoted to `TEXT_ATTESTED`.
+
+## MILINDAPAÑHA CONSULTATION — MANDATORY
+
+Consulted: YES. The checkpoint-specific role and guardrails are recorded below.
+
 ## TEXT_ATTESTED
 
 ### 1. `saññā` and `maññati` are not the same lemma
