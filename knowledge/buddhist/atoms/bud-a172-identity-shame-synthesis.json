@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "claim",
+  "id": "bud:a172:identity-shame-synthesis",
+  "domain": "buddhist_thought",
+  "class": "SYNTHESIS",
+  "status": "ACTIVE",
+  "statement": "A172 treats the move from 'this act was shameful' to 'my permanent essence is shameful' as a cross-text synthesis rather than direct early-text attestation.",
+  "source_refs": [
+    "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md",
+      "locator": "TEXT_ATTESTED section 6 / CROSS_TEXT_SYNTHESIS sections D-E"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "created_from_canonical_checkpoint": "A172",
+    "base_sha": "31a789342b3933e4a1fc2882a1b38ecf240c755e",
+    "note": "This atom represents what A172 explicitly classifies; it does not independently verify SN 22.59/22.89."
+  }
+}
