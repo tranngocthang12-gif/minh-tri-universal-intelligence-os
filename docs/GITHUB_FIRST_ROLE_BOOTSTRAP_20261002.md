@@ -305,3 +305,17 @@ It is mandatory as a supporting/paracanonical reasoning source, especially for a
 
 Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
 
+
+
+## 13. PC-OPTIONAL / GITHUB-PRIMARY EXECUTION RULE — 2026-10-05
+
+When the Owner PC, Desktop Commander, tunnel, or Local Brain is offline:
+
+- continue all work that can be completed from live canonical GitHub and available task/domain sources;
+- do not stop learning or research merely to restore the PC;
+- mark only genuinely PC-dependent subtasks as `PENDING/OFFLINE`;
+- Local Brain mirror status is metadata, not a checkpoint gate;
+- use branch → required CI → merge → fresh-read main for durable GitHub mutations;
+- never claim host-specific work was completed while the host is unavailable.
+
+The primary question is not “is the PC online?” but “does this task intrinsically require the PC?”
