@@ -5,7 +5,7 @@
 **Checkpoint:** PHASE 4 — A164 COMPLETED ON STACKED BRANCH  
 **Current checkpoint:** PHASE 4 — A164 COMPLETED  
 **Next checkpoint:** PHASE 4 — A165  
-**Parent:** A163 branch `learning/buddhist-a163-20261005`
+**Parent:** A163 clean-chain branch `learning/buddhist-a163-v2-20261005`
 
 ## Completed checkpoint A164
 
