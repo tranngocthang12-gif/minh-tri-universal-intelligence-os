@@ -78,6 +78,7 @@ Milindapañha remains later/paracanonical support only and does not promote a cl
 
 - raw evidence atoms remain `PENDING_REVIEW` as whole-audit records;
 - selected reviewed claims become separate ACTIVE claim atoms;
+- promoted ACTIVE claim atoms use the salvaged audit only as evidence/provenance and do not semantically depend on its `PENDING_REVIEW` evidence atom;
 - active hubs may depend only on the promoted claim atoms, not on the pending whole-audit evidence;
 - PR #216 and #230 may be closed after this review PR merges because their unique audit contents are then durably preserved and their reviewed subset is explicitly represented.
 
