@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A121 COMPLETED  
-**Next checkpoint:** PHASE 4 — A122  
+**Current checkpoint:** PHASE 4 — A122 COMPLETED  
+**Next checkpoint:** PHASE 4 — A123  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -18402,6 +18402,184 @@ Required lanes:
 - relation to intention and consequences;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A122
+
+**Central question:** How does the Buddha decide what counts as skillful speech when truth, benefit, agreeableness, timing, and compassion pull in different directions?
+
+### TEXT_ATTESTED
+
+1. **MN 58** gives the clearest decision structure. The Tathagata does not speak what is false. Even when something is true, if it is not beneficial he does not say it. When something is true and beneficial, whether agreeable or disagreeable, he knows the proper time to say it.
+2. MN 58 explicitly grounds this selectivity in **anukampa**—sympathy/compassion for living beings. Compassion therefore does not mean saying what the listener prefers; it explains why truth and benefit are handled with care.
+3. Early right-speech formulas prohibit lying, divisive speech, harsh speech, and idle chatter. They positively praise speech that is timely, true, meaningful/beneficial, connected with Dhamma and discipline, and conducive to concord.
+4. The early texts therefore do not present “truthfulness” as permission for indiscriminate disclosure, nor “kindness” as permission to falsify.
+
+### THE DECISION MATRIX
+
+A122 can be reduced to three decisive filters and one secondary variable:
+
+- **Truth:** false speech is excluded.
+- **Benefit:** true-but-unbeneficial speech is excluded.
+- **Timing:** true-and-beneficial speech may still need to wait for the right occasion.
+- **Agreeableness:** whether the listener likes the words does not determine whether they are valid; it affects the difficulty and timing of delivery.
+
+So the working structure is:
+
+`false -> do not say`
+
+`true but unbeneficial -> do not say`
+
+`true + beneficial -> say at the proper time`
+
+This is not a complete modern communication theory. It is the decision pattern attested in MN 58.
+
+### COMPASSION IS NOT PEOPLE-PLEASING
+
+MN 58 uses the image of removing a dangerous object from a child's mouth even if the removal causes pain.
+
+The point is not that causing pain is good.
+
+The point is that immediate unpleasantness can be compatible with compassionate action when:
+- the danger is real;
+- the intervention is genuinely beneficial;
+- the intervention is proportionate to the need.
+
+Thus:
+**pleasantness is not the measure of compassion.**
+
+A pleasant lie fails the truth condition.
+A gratifying but harmful truth fails the benefit condition.
+A painful truth can be justified, but only when it is true, beneficial, and timely.
+
+### TRUTHFULNESS IS NOT INDISCRIMINATE DISCLOSURE
+
+A122 rejects the slogan:
+“if it is true, it should be said.”
+
+MN 58 explicitly blocks this.
+
+Truth is necessary but not sufficient.
+
+This matters because a true statement can still be:
+- gratuitously humiliating;
+- divisive;
+- irrelevant to the present task;
+- badly timed;
+- incapable of helping the listener.
+
+Therefore restraint can be part of truthful conduct without becoming deception.
+
+### UNPLEASANT SPEECH CAN STILL BE RIGHT
+
+A difficult correction is not automatically harsh speech merely because the hearer dislikes it.
+
+The distinction must be functional.
+
+An unpleasant statement may still fit the Buddha's criterion when it is:
+- factually grounded;
+- aimed at benefit rather than injury;
+- delivered at the proper time;
+- not driven by hatred.
+
+This guards against two opposite errors:
+- using “kindness” to avoid necessary correction;
+- using “truth” to justify cruelty.
+
+### RELATION TO RIGHT SPEECH
+
+The broader right-speech formulas add social dimensions to MN 58:
+
+- **no lying** -> fidelity to what is true;
+- **no divisive speech** -> do not weaponize information to fracture relationships;
+- **no harsh speech** -> do not use speech as an instrument of hostility;
+- **no idle chatter** -> speech should have purpose, timing, and relevance.
+
+This means Buddhist speech ethics evaluates more than sentence-level factuality.
+
+It also asks:
+- What is this speech doing?
+- What motive carries it?
+- What relation does it create?
+- Is this the time for it?
+
+That four-question formulation is a **CROSS_TEXT_SYNTHESIS**, not a verbatim canonical formula.
+
+### INTENTION AND CONSEQUENCE
+
+A122 must avoid reducing the teaching either to pure intention or pure outcome.
+
+Intention matters because speech rooted in ill will is ethically different from correction rooted in care.
+
+But claimed good intention is not enough. MN 58 still tests the speech for truth, benefit, and timing.
+
+Likewise, an immediately painful reaction from the listener does not by itself prove the speech was wrong. The text explicitly allows true, beneficial, disagreeable speech at the proper time.
+
+So the practical structure is:
+**motive + truth + benefit + timing**, with actual effects supplying feedback rather than replacing the other criteria.
+
+This integrated formula is a **CROSS_TEXT_SYNTHESIS**.
+
+### MILINDAPANHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+A relevant later dilemma is the **Pharusavaca-abhava-panha**, which asks how the Buddha can be said to be pure in speech while sometimes using language that sounds severe in disciplinary contexts.
+
+Milindapanha's answer attempts to distinguish hostile/defiled harsh speech from severe expression used without hatred and for corrective purpose.
+
+**Role:** later/paracanonical clarification that outward severity and ethically “harsh speech” should not be identified mechanically.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** this later resolution does not override MN 58 or the early right-speech formulas. Its stronger apologetic claims are not imported automatically into the early-text layer.
+
+### BUDDHA'S REASONING METHOD
+
+A122 adds a practical speech procedure:
+
+1. **Is it true?**
+   - no -> do not say it.
+2. **Is it beneficial/relevant to the good being pursued?**
+   - no -> do not say it.
+3. **Is this the proper time and situation?**
+   - no -> wait, reformulate, or remain silent.
+4. **Is dislike the only remaining obstacle?**
+   - dislike alone does not veto speech.
+5. **What is driving the speech?**
+   - compassion and non-hostility are required guardrails, not excuses to bypass truth.
+
+The deep point is that in this framework **speech is an intervention**, not merely transmission of information.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate compassion with making people feel good.
+- Do not equate truthfulness with saying every true thing.
+- Do not equate unpleasant speech with wrong speech.
+- Do not use “benefit” to justify falsehood.
+- Do not use “good intention” to bypass truth, relevance, or timing.
+- Do not infer that timing makes truth relative.
+- Do not import Milindapanha's later defenses as if they were the wording of MN 58.
+
+### Sources
+
+- MN 58 Abhayarajakumara Sutta.
+- Early right-speech formulas preserved across Nikaya passages, including the abstentions from false, divisive, harsh, and idle speech.
+- Milindapanha, Pharusavaca-abhava-panha, as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A123
+
+**How does right speech operate in disagreement, correction, conflict, and reconciliation without turning non-harm into passivity or correction into hostility?**
+
+Required lanes:
+- reconciliation vs divisive speech;
+- gentle speech vs necessary correction;
+- MN 21 and non-hostility under provocation;
+- correction of misconduct without hatred;
+- difference between silence, restraint, and avoidance;
+- mandatory Milindapanha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
 
 ## 2026-10-05 continuity recovery
 
