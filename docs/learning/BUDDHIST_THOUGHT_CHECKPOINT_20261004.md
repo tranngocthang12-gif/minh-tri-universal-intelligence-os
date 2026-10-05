@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A104 COMPLETED  
-**Next checkpoint:** PHASE 4 — A105  
+**Current checkpoint:** PHASE 4 — A105 COMPLETED  
+**Next checkpoint:** PHASE 4 — A106  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15322,6 +15322,152 @@ Required lanes:
 - MN 70 / relevant direct-knowing material;
 - revisit faith, doubt, and inquiry from A43–A46;
 - distinguish experiential verification from private infallibility;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A105
+
+**Central question:** How does the Buddha distinguish direct knowing/seeing from merely holding a correct doctrine, and what role do experience, verification, and “knowledge independent of another” play in right view?
+
+### TEXT_ATTESTED
+
+1. **SN 12.15** says that when one no longer clings to “my self,” one knows without doubt that only suffering arises and only suffering ceases; this knowledge is “independent of another.” The discourse immediately identifies this as right view.
+2. **MN 95** distinguishes preserving truth from discovering/realizing truth. Faith, oral tradition, reasoned reflection, and reflective acceptance can be honestly reported without yet declaring “only this is true.” They preserve truth, but do not by themselves amount to realization.
+3. **MN 95** then gives a progression: investigate the teacher, hear the Dhamma, remember it, examine its meaning, gain reflective acceptance, arouse zeal, apply the will, scrutinize, strive, and finally directly realize the truth and penetrate it with wisdom.
+4. **MN 70** repeats that final knowledge is not achieved all at once but through gradual training, practice, and progress. It distinguishes faith-followers and Dhamma-followers from those who have directly realized and entered the final goal.
+
+### PRESERVING TRUTH IS NOT YET REALIZING TRUTH
+
+This is one of the clearest epistemic guardrails in the early discourses.
+
+A person may have:
+- faith;
+- a received tradition;
+- a reasoned argument;
+- reflective acceptance of a view.
+
+These may be important and even well-founded. But MN 95 does not let any of them automatically become final knowledge.
+
+The disciplined statement is:
+> “This is what I currently believe / have received / have reasoned.”
+
+not:
+> “Therefore this alone must be finally true.”
+
+This preserves both intellectual honesty and room for deeper verification.
+
+### “KNOWLEDGE INDEPENDENT OF ANOTHER”
+
+In SN 12.15, independence does not mean:
+- private infallibility;
+- immunity to correction;
+- refusal to learn from teachers;
+- “whatever I personally feel is true.”
+
+Its context is the removal of doubt through direct understanding of arising and cessation.
+
+So a careful reading is:
+**teaching may be learned from another; certainty about the relevant Dhamma becomes one’s own through seeing/knowing the causal process.**
+
+This is `CROSS_TEXT_SYNTHESIS`, grounded in SN 12.15, MN 95, and MN 70.
+
+### THE ROLE OF REASON
+
+Reason is neither rejected nor enthroned.
+
+MN 95 explicitly recognizes reasoned cogitation and reflective acceptance as legitimate stages in preserving and approaching truth. But they are not the final endpoint.
+
+Thus:
+- reasoning can test coherence;
+- reasoning can compare alternatives;
+- reasoning can prepare understanding;
+- but final liberating knowledge requires penetration/realization, not merely winning an argument.
+
+### EXPERIENCE IS ALSO NOT AUTOMATICALLY INFALLIBLE
+
+The texts do not support:
+> “I experienced it, therefore my interpretation cannot be wrong.”
+
+MN 95 includes investigation, hearing, remembering, examining meaning, reflective acceptance, striving, realization, and wisdom. This is a disciplined sequence, not raw subjectivism.
+
+Therefore “direct experience” should be guarded by:
+- causal coherence;
+- consistency with the path structure;
+- reduction of greed, hate, and delusion;
+- careful distinction between experience itself and the interpretation placed on it.
+
+The last item is `CROSS_TEXT_SYNTHESIS`, not a single quoted rule.
+
+### BUDDHA'S REASONING METHOD
+
+A105 reveals an epistemic ladder:
+
+1. receive a claim;
+2. report its status honestly;
+3. investigate the source/teacher;
+4. examine meaning;
+5. reason and reflect;
+6. practice;
+7. directly realize;
+8. confirm through wisdom;
+9. avoid pretending that an earlier stage already equals the later one.
+
+This is a strong anti-dogmatic and anti-credulity structure without collapsing into skepticism.
+
+### RELATION TO A43–A46
+
+Earlier checkpoints separated:
+- faith from certainty;
+- doubt from intelligent inquiry;
+- investigation from restless proliferation;
+- wise attention from compulsive analysis.
+
+A105 integrates them:
+**faith can start the path; inquiry tests it; practice operationalizes it; direct knowing stabilizes it.**
+
+No single stage should impersonate the others.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+**Mil 3.1.8**: reasoning/comprehension gathers or grasps the object; wisdom cuts off the defilements.  
+**Mil 3.1.15**: wisdom illuminates, dispels ignorance, and makes the truths visible.
+
+**Role:** later/paracanonical clarification that conceptual examination has a legitimate preparatory function, while wisdom is marked by actual cutting/illumination rather than mere possession of concepts.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** this does not override SN 12.15, MN 95, or MN 70 as the early-text attestation axis.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate faith with final knowledge.
+- Do not equate logical coherence with realization.
+- Do not equate personal experience with infallible interpretation.
+- Do not interpret “independent of another” as anti-teacher or anti-text.
+- Do not say the Buddha rejects reasoning; he limits its epistemic role.
+- Do not promote Milindapañha’s later analogies into early-sutta definitions.
+
+### Sources
+
+- SN 12.15 Kaccānagotta Sutta.
+- MN 95 Caṅkī Sutta.
+- MN 70 Kīṭāgiri Sutta.
+- Recovered A43–A46 on faith, doubt, inquiry, and wise attention.
+- Milindapañha 3.1.8 and 3.1.15 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A106
+
+**What is the role of `ehipassika` / “come and see,” personal verification, and teacher authority in early Buddhist thought, and how can verification avoid becoming individualistic subjectivism?**
+
+Required lanes:
+- early formulas about “come and see” and directly knowable Dhamma;
+- teacher scrutiny and trust from MN 47 / MN 95;
+- distinguish authority, testimony, inference, and direct knowledge;
+- relation to “knowledge independent of another” in SN 12.15;
+- revisit Kalama-style epistemic guardrails without turning them into “believe nothing” slogans;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
