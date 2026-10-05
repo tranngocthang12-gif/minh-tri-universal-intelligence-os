@@ -756,5 +756,13 @@
     "orchestrator_assigns_work": true,
     "worker_chats_are_interchangeable": true,
     "note": "Operational capacity declared by Owner; may be revised by later Owner instruction."
+  },
+  "orchestrator_owner_command_contract": {
+    "mode": "ONE_OWNER_COMMAND_AUTOMATIC_DECOMPOSITION",
+    "owner_manual_task_splitting_required": false,
+    "current_worker_chat_capacity": 3,
+    "one_task_per_worker_at_a_time": true,
+    "orchestrator_must_manage_dependencies": true,
+    "orchestrator_refills_capacity_after_review": true
   }
 }
