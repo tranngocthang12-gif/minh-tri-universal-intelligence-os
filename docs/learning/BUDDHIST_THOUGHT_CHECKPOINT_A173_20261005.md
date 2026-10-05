@@ -260,6 +260,14 @@ This is CROSS_TEXT APPLICATION, not a canonical nine-step list.
 
 `CONSULTED_PRUDENT_WITHDRAWAL_FEARLESSNESS_AND_RESTRAINT_AS_LATER_SUPPORT_NO_OVERRIDE_OF_EARLY_OTTAPPA_MN61_MN4`
 
+## Continuity compliance record
+
+- **Durable GitHub location:** `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_20261005.md`
+- **Record status:** PHASE 4 — A173 COMPLETED / NOT AUTOMATICALLY VERIFIED
+- **Material corrections/errors:** no new source-conflict or material factual correction identified inside this checkpoint beyond the explicit guardrails/uncertainties already recorded; any later correction must remain append-visible and must not silently overwrite claim class.
+- **Local Brain mirror status:** NOT WRITTEN / NOT PROVEN in this checkpoint. Current canonical runtime state reports the Local Brain connector unavailable; GitHub remains the durable authority surface.
+- **Provenance/date:** MINH TRÍ Buddhist-thought learning track, 2026-10-05.
+
 ## Handoff
 
 CURRENT CHECKPOINT: PHASE 4 — A173 COMPLETED  
