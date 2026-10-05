@@ -541,3 +541,50 @@ This does not alter source authority:
 
 This is a cross-session continuity invariant. A new Buddhist-study seat that omits Milindapañha from material study work is out of compliance with Owner law.
 
+
+
+## 38. GitHub-primary / PC-optional operating architecture — 2026-10-05
+
+The default durable operating path is:
+
+```text
+OWNER
+→ CHATGPT PROJECT SEAT
+→ LIVE GITHUB AUTHORITY
+→ TASK / SOURCE WORK
+→ BRANCH
+→ REQUIRED CI
+→ MERGE
+→ FRESH-READ MAIN
+```
+
+This path is sufficient for work whose state and write-path are available through GitHub. Owner PC availability is not a prerequisite.
+
+Local Brain, secure tunnel, Desktop Commander, local runtime, witness tooling, self-upgrade runtime, and external critics are secondary capability planes. They are invoked only when the task materially needs them or when they provide a demonstrated Owner benefit. Their outage must not downgrade GitHub-capable learning/research work.
+
+### Two operating lanes
+
+**GitHub-capable lane — remains active while PC is off**
+- learning and research;
+- planning and architecture review;
+- checkpoint progression;
+- branch / PR / CI / merge / fresh-read;
+- repository documentation and code work.
+
+**PC-required lane — may remain pending while PC is off**
+- local-only files;
+- desktop application work;
+- Local Brain mirror/readback;
+- Owner-PC runtime deployment;
+- host security and persistence verification.
+
+### Minimal-core principle
+
+The durable core is:
+1. Owner authority;
+2. GitHub canonical authority;
+3. one active checkpoint/plan per learning track;
+4. evidence/status discipline;
+5. CI protecting continuity and consistency.
+
+Secondary layers must not become mandatory merely because they exist.
