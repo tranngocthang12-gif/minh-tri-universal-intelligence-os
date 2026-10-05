@@ -1,0 +1,81 @@
+{
+  "schema": "minhtri-task-registry/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "registry_authority": "state/tasks.yaml",
+  "task_states": [
+    "READY",
+    "ASSIGNED",
+    "IN_PROGRESS",
+    "REPORTED",
+    "REVIEWED_ACCEPTED",
+    "REVIEWED_REVISE",
+    "BLOCKED",
+    "DONE",
+    "STALE",
+    "DRAFT"
+  ],
+  "tasks": [
+    {
+      "task_id": "ARCH-VNEXT-PHASE2",
+      "title": "Introduce vNext current-state core and canonical task registry",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/ARCHITECTURE_VNEXT_PHASE2_STATE_TASK_MIGRATION_20261006.md",
+        "tests/test_vnext_state_task.py"
+      ],
+      "branch": "owner/architecture-vnext-phase2-state-task-20261006",
+      "base_sha": "d1bc70b04ff38108d5162f0b6a9d99f02db9b566",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": null
+    },
+    {
+      "task_id": "BUDDHIST-A173",
+      "title": "Continue Buddhist thought checkpoint A173 without blocking on architecture migration",
+      "status": "DRAFT",
+      "scope": [
+        "docs/learning/"
+      ],
+      "branch": "learning/buddhist-a173-20261005-2205",
+      "base_sha": "a04300f8530c7f8413e8e386c607c7f9938ce32b",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": "PR#249"
+    },
+    {
+      "task_id": "ARCH-VNEXT-PR-SALVAGE",
+      "title": "Review and salvage unique knowledge or Owner intent from the 21 pre-vNext open PRs before closure",
+      "status": "READY",
+      "scope": [
+        "pull_requests:167,168,169,170,177,193,215,216,218,226,227,228,230,232,233,234,235,237,249,250,251"
+      ],
+      "branch": null,
+      "base_sha": "d1bc70b04ff38108d5162f0b6a9d99f02db9b566",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE2"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/ARCHITECTURE_VNEXT_PHASE0_1_MIGRATION_20261006.md"
+    },
+    {
+      "task_id": "RUNTIME-ASSURANCE-PC",
+      "title": "Runtime assurance work that intrinsically requires Owner PC or local runtime",
+      "status": "BLOCKED",
+      "scope": [
+        "runtime/",
+        "docs/runtime_evidence/"
+      ],
+      "branch": null,
+      "base_sha": "d1bc70b04ff38108d5162f0b6a9d99f02db9b566",
+      "requires": "pc",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": null
+    }
+  ]
+}
