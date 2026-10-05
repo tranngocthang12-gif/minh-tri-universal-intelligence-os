@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A106 COMPLETED  
-**Next checkpoint:** PHASE 4 — A107  
+**Current checkpoint:** PHASE 4 — A107 COMPLETED  
+**Next checkpoint:** PHASE 4 — A108  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15620,6 +15620,44 @@ Required lanes:
 - relation to direct knowledge and path-fruit;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A107
+
+**Central question:** How does the Buddha test whether practice is actually working?
+
+### TEXT_ATTESTED
+- **AN 3.66:** evaluate teachings by whether enacted qualities are skillful/unskillful, blameworthy/blameless, praised/criticized by the observant, and lead to welfare or harm.
+- **MN 61:** examine action before, during, and after it; compare expected harm with actual result and correct future conduct.
+- **MN 19:** classify thoughts by trajectory and consequence, not merely by immediate pleasantness.
+- **MN 2:** different āsavas require different methods—seeing, restraint, use, endurance, avoidance, removal, and development.
+
+### SYNTHESIS
+A practice is not proven by strong belief or an unusual state alone. A stronger test is whether, over time, it reduces unskillful causes and harmful conduct, strengthens skillful qualities, and moves toward dispassion, cessation, and release.
+
+A107 therefore exposes a recurring reasoning loop:
+**predict → practice → observe → compare outcome → correct → choose method suited to cause.**
+
+### GUARDRAILS
+- Strong belief is not equivalent to success.
+- An altered or blissful state is not automatically liberation.
+- Immediate pleasantness is not enough; trajectory matters.
+- One technique is not assumed to fit every defilement.
+- Behavioral change matters, but mental causes and direct knowledge also remain part of the evaluation.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+**Consulted:** YES.  
+**Role:** later/paracanonical support for the idea that wisdom is evaluated by whether defilements are actually cut, not by conceptual sophistication alone.  
+**Guardrail:** early-text evaluation procedures remain primary.
+
+### Sources
+AN 3.66; MN 61; MN 19; MN 2; Milindapañha wisdom/defilement material.
+
+## Next checkpoint — PHASE 4 A108
+
+**How does the Buddha distinguish suppression, temporary calm, and uprooting of a defilement, and what counts as genuine abandonment rather than temporary non-appearance?**
+
+Required lanes: MN 2; latent tendency (`anusaya`) material; restraint/concentration/insight/eradication distinction; relevant SN 36 and MN 64; path-fruit and āsava destruction; mandatory Milindapañha consultation; preserve evidence classes.
 
 ## 2026-10-05 continuity recovery
 
