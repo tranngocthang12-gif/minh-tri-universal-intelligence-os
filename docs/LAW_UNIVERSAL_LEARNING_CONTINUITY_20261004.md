@@ -12,13 +12,17 @@ MINH TRÍ must not depend on chat memory for learning continuity. Every material
 
 Before material work, every chat/seat must fresh-read the current authority chain from live canonical GitHub:
 
-1. `docs/PROJECT_STATE.json`;
-2. the `current_law_index` routed by PROJECT_STATE;
-3. this Universal Learning Continuity Law;
-4. the `current_architecture` routed by PROJECT_STATE;
-5. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`;
-6. for learning work, the active learning checkpoint/plan for that track;
-7. the task/domain sources needed for the work.
+1. `state/bootstrap.json`;
+2. `state/current.yaml`;
+3. the `law_precedence` target routed by current state;
+4. this Universal Learning Continuity Law;
+5. the `current_architecture` target routed by current state;
+6. the `role_bootstrap` target routed by current state;
+7. `state/tasks.yaml`;
+8. for learning work, the active learning checkpoint/working set for that track;
+9. the task/domain sources needed for the work.
+
+Legacy `docs/PROJECT_STATE.json`, Recovery Manifest, Law Index and pre-vNext Architecture remain authoritative only for explicitly unmigrated compatibility facts or historical provenance. They must not override keys migrated into `state/current.yaml`.
 
 A pasted SHA, model memory, chat summary, or user restatement is not sufficient current-state proof when live canonical state is available.
 
