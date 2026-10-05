@@ -143,7 +143,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
       "title": "Salvage and review unique Atthakavagga lexical audits from PRs 230 and 216",
-      "status": "REPORTED",
+      "status": "DONE",
       "scope": [
         "PR#230:docs/learning/PHAT_ATTHAKA_LEX_02_20261005.md",
         "PR#216:docs/learning/PHAT_ATTHAKA_LEX_01_20261005.md",
@@ -156,7 +156,27 @@
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/BUDDHIST_T1_LEXICAL_REVIEW_216_230_20261006.md"
+      "result_ref": "PR#261 / docs/vnext/history/BUDDHIST_T1_LEXICAL_REVIEW_216_230_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR218",
+      "title": "Salvage durable Buddhist planning principles from stale PR 218 without importing its obsolete queue",
+      "status": "REPORTED",
+      "scope": [
+        "PR#218:docs/learning/BUDDHIST_THOUGHT_MASTER_REVIEW_PLAN_20261005.md",
+        "docs/vnext/history/BUDDHIST_MASTER_REVIEW_PR218_SALVAGE_20261006.md",
+        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+        "state/current.yaml",
+        "state/tasks.yaml"
+      ],
+      "branch": "owner/architecture-vnext-salvage-pr218-20261006",
+      "base_sha": "9b4bf7f7c2fc89b0d534d2b9f6e71d1832aee598",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PR-SALVAGE"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/history/BUDDHIST_MASTER_REVIEW_PR218_SALVAGE_20261006.md"
     }
   ]
 }
