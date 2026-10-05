@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A105 COMPLETED  
-**Next checkpoint:** PHASE 4 — A106  
+**Current checkpoint:** PHASE 4 — A106 COMPLETED  
+**Next checkpoint:** PHASE 4 — A107  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15468,6 +15468,156 @@ Required lanes:
 - distinguish authority, testimony, inference, and direct knowledge;
 - relation to “knowledge independent of another” in SN 12.15;
 - revisit Kalama-style epistemic guardrails without turning them into “believe nothing” slogans;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A106
+
+**Central question:** What is the role of “come and see” (`ehipassika`), personal verification, and teacher authority in early Buddhist thought, and how can verification avoid becoming individualistic subjectivism?
+
+### TEXT_ATTESTED
+
+1. The standard recollection of the Dhamma describes it as `sandiṭṭhika`, `akālika`, `ehipassika`, `opanāyika`, and `paccattaṁ veditabbaṁ viññūhi`: to be seen here and now, timeless, inviting one to come and see, to be brought inward/applied, and to be known individually by the discerning.
+2. **MN 95** does not oppose testimony, teachers, or reasoning. It places them in a graded process: confidence, approaching, listening, remembering, examining meaning, reflective acceptance, effort, realization, and wisdom.
+3. **AN 3.66** warns against accepting a claim merely because it is tradition, scripture, inference, probability, or because “this contemplative is our teacher.” It then requires testing qualities by whether they are unskillful/blameworthy, criticized by the observant, and lead to harm and suffering—or the reverse.
+4. **MN 47** authorizes scrutiny of the teacher rather than blind submission: the student is to investigate the Tathāgata's conduct and qualities, build justified confidence, learn the teaching, practice, and then penetrate it through direct knowledge.
+5. **SN 12.15** describes mature right view as knowledge “independent of others,” in the context of direct understanding of arising and cessation, not rejection of all teaching or community.
+
+### “COME AND SEE” IS AN INVITATION TO TEST
+
+`ehipassika` should not be reduced to the slogan:
+> “Believe whatever your own experience tells you.”
+
+The surrounding epistemic pattern is stronger:
+
+- teaching can be received from a teacher;
+- teacher and teaching can be examined;
+- claims can be provisionally accepted;
+- practice tests their function;
+- results are assessed;
+- deeper certainty comes through direct knowing.
+
+Thus “come and see” is an invitation to **enter a testable path**, not an instruction to treat first-person impressions as self-validating.
+
+### WHY THE TEACHER STILL MATTERS
+
+The Buddha's model does not eliminate authority; it makes authority **accountable**.
+
+A teacher can:
+- point out distinctions not yet seen;
+- transmit a practice;
+- supply examples and correction;
+- be evaluated by conduct, consistency, and the effects of the teaching.
+
+MN 47 and MN 95 together imply a teacher is neither:
+- an unquestionable oracle;
+- nor unnecessary.
+
+The relationship is better understood as **guided verification**.
+
+This is a `CROSS_TEXT_SYNTHESIS`.
+
+### KĀLĀMA GUARDRAIL
+
+AN 3.66 is often overextended into:
+> “Do not believe anything unless you personally prove it from scratch.”
+
+The discourse itself is more disciplined.
+
+It rejects **automatic acceptance** based on pedigree alone, then immediately gives evaluative criteria:
+- skillful or unskillful;
+- blameworthy or blameless;
+- criticized or praised by the observant/wise;
+- conducive to harm/suffering or welfare/happiness when enacted.
+
+Therefore personal verification is not isolated subjectivism. It includes:
+- consequences;
+- ethical quality;
+- intersubjective correction by competent observers.
+
+### FOUR EPISTEMIC ROLES
+
+A106 distinguishes four roles:
+
+**Testimony / authority** — can legitimately start inquiry.  
+**Reasoning / inference** — can assess coherence and alternatives.  
+**Practice / experiment** — puts a teaching into operation.  
+**Direct knowledge** — gives a level of certainty not reducible to borrowed opinion.
+
+The mistake is not using any one of these. The mistake is pretending one role has already accomplished all the others.
+
+### “KNOWN FOR ONESELF” DOES NOT MEAN “PRIVATE TRUTH”
+
+A teaching that must be known individually can still have shared criteria.
+
+For example, greed, hatred, and delusion are evaluated through:
+- observable consequences;
+- effects on conduct;
+- whether suffering increases or decreases;
+- whether wise/observant people converge in their criticism or praise.
+
+Thus:
+**personal realization ≠ private relativism.**
+
+### BUDDHA'S REASONING METHOD
+
+A106 reveals another pattern:
+
+1. do not demand blind belief before practice;
+2. do not demand total certainty before beginning;
+3. use provisional trust to enter inquiry;
+4. test teacher and teaching;
+5. observe consequences;
+6. deepen from borrowed knowledge to direct knowledge;
+7. remain corrigible until the relevant realization is actually attained.
+
+This creates a path between:
+- authoritarian dogmatism;
+- isolated subjectivism.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's distinction between reasoning and wisdom remains useful here:
+- reasoning can take up an object for examination;
+- wisdom is judged by cutting ignorance/defilement and illuminating what was obscured.
+
+**Role:** later/paracanonical clarification of why examination and direct knowing have different functions.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not override MN 95, AN 3.66, MN 47, or SN 12.15.
+
+### CORRECTIONS PRESERVED
+
+- Do not translate `ehipassika` into “believe whatever feels true.”
+- Do not turn AN 3.66 into “reject scripture, teachers, and inference.”
+- Do not treat teacher authority as self-authenticating.
+- Do not treat personal experience as infallible interpretation.
+- Do not equate “independent of another” with social or intellectual isolation.
+- Do not erase the role of wise observers and ethical consequences in verification.
+
+### Sources
+
+- Standard Dhamma recollection formula: `sandiṭṭhiko akālika ehipassiko opanāyiko paccattaṁ veditabbo viññūhi`.
+- MN 95 Caṅkī Sutta.
+- AN 3.66 Kesamutti/Kālāma Sutta.
+- MN 47 Vīmaṃsaka Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- Milindapañha 3.1.8 / 3.1.15 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A107
+
+**How does the Buddha evaluate whether a practice is actually working: by belief, by altered states, by ethical transformation, by reduced greed/hatred/delusion, or by some combination?**
+
+Required lanes:
+- AN 3.66 practical consequence criteria;
+- MN 61 reflection before/during/after action;
+- MN 19 thought classification by consequence;
+- MN 2 and removal of āsavas by appropriate methods;
+- relation to direct knowledge and path-fruit;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 

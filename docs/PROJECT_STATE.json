@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A105_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A106",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A106_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A107",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -646,5 +646,7 @@
   "owner_learning_track_buddhist_thought_a104_claim_class": "TEXT_ATTESTED_RIGHT_VIEW_AS_PATH_TOOL_PLUS_RAFT_NONCLINGING_AND_ATTHAKAVAGGA_VIEW_GRASPING_GUARDRAILS_WITH_LEXICAL_AUDIT_OPEN",
   "owner_learning_track_buddhist_thought_a104_milindapanha": "CONSULTED_REASONING_GRASPS_WISDOM_CUTS_AND_WISDOM_ILLUMINATES_NO_OVERRIDE_OF_EARLY_RIGHT_VIEW_AND_VIEW_CLINGING_TEXTS",
   "owner_learning_track_buddhist_thought_a105_claim_class": "TEXT_ATTESTED_TRUTH_PRESERVATION_VS_REALIZATION_INDEPENDENT_KNOWLEDGE_AND_GRADUAL_DIRECT_KNOWING_PLUS_CROSS_TEXT_VERIFICATION_GUARDRAILS",
-  "owner_learning_track_buddhist_thought_a105_milindapanha": "CONSULTED_REASONING_GRASPS_WISDOM_CUTS_AND_ILLUMINATES_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN95_MN70_SN12_15"
+  "owner_learning_track_buddhist_thought_a105_milindapanha": "CONSULTED_REASONING_GRASPS_WISDOM_CUTS_AND_ILLUMINATES_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN95_MN70_SN12_15",
+  "owner_learning_track_buddhist_thought_a106_claim_class": "TEXT_ATTESTED_COME_AND_SEE_SELF_VERIFICATION_TEACHER_SCRUTINY_AND_KALAMA_TESTING_PLUS_CROSS_TEXT_ANTI_SUBJECTIVISM_GUARDRAILS",
+  "owner_learning_track_buddhist_thought_a106_milindapanha": "CONSULTED_REASONING_AND_WISDOM_DISTINCTION_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN95_AN3_66_MN47"
 }
