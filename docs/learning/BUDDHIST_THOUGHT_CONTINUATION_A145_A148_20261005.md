@@ -174,3 +174,137 @@ TEXT_ATTESTED_SN48_10_FAITH_FACULTY_MN95_PRESERVING_TRUTH_AN3_65_KALAMA_MN47_TEA
 
 Next checkpoint — A149:
 How does devotion/reverence relate to non-attachment: when can respect for Buddha, teacher, community, or tradition support practice, and when does it become identity, dependency, or refusal to examine?
+
+
+## A149 — reverence, devotion, and non-attachment
+
+Central question:
+When can respect for Buddha, teacher, community, or tradition support practice, and when does it become identity, dependency, or refusal to examine?
+
+### TEXT_ATTESTED
+
+1. Early-discourse confidence and recollection of the Buddha, Dhamma, and Sangha can steady the mind, inspire practice, and support joy and collectedness. Respect and confidence therefore have a positive training role.
+2. At the same time, MN 47 gives an explicit model of examining the Teacher rather than relying on reputation alone. Reverence does not cancel investigation.
+3. AN 3.65 remains a guardrail against treating lineage, tradition, texts, reasoning, charisma, or “this teacher is ours” as sufficient proof by themselves.
+4. DN 16 preserves the principle that after the Buddha's passing, Dhamma-Vinaya functions as teacher. This prevents the entire path from depending on the continuing physical presence of one charismatic person.
+5. MN 22's raft simile remains relevant: even correct teaching is for crossing over, not for appropriation as identity-possession.
+
+### REVERENCE != SUBMISSION OF DISCERNMENT
+
+A149 distinguishes:
+- reverence: honoring qualities, teaching, and exemplary conduct;
+- dependence: needing a person/group to decide truth for oneself;
+- identity-clinging: “because this is my teacher/tradition, criticism of it is criticism of me”;
+- obedience without examination: suspending ethical and epistemic judgment because authority has spoken.
+
+These are CROSS_TEXT SYNTHESIS categories, not a canonical fourfold taxonomy.
+
+### WHY REVERENCE CAN HELP
+
+Healthy reverence can:
+- make the mind receptive;
+- support gratitude;
+- counter arrogance;
+- sustain effort;
+- keep exemplary qualities salient.
+
+But it remains wholesome only insofar as it supports the path rather than replacing right view and personal responsibility.
+
+### THE TEACHER IS NOT THE PATH'S OWNER
+
+A149's key guardrail:
+A teacher may transmit, clarify, model, and correct.
+The teacher does not become the owner of the disciple's discernment.
+
+MN 47 and AN 3.65 together support a model in which respect and examination coexist.
+
+### DEVOTION CAN TURN INTO IDENTITY
+
+A devotional form becomes risky when:
+- loyalty to the group overrides truth;
+- criticism of the teacher produces immediate hostility;
+- belonging matters more than Dhamma;
+- reputation of the tradition must be protected at the cost of facts;
+- the disciple cannot act without approval even where ethical principles are already clear.
+
+These are CROSS_TEXT APPLICATION examples.
+
+### GRATITUDE WITHOUT INFALLIBILITY
+
+One can be deeply grateful to a teacher and still recognize:
+- the teacher can be limited;
+- an interpretation can be wrong;
+- institutional behavior can be harmful;
+- correction can be necessary.
+
+Thus:
+gratitude != infallibility.
+
+This is CROSS_TEXT SYNTHESIS.
+
+### DHAMMA-VINAYA AS A DECENTERING PRINCIPLE
+
+DN 16's post-parinibbāna principle is crucial:
+the teaching and discipline, not permanent personal dependence on the Buddha's physical presence, carry the normative role forward.
+
+A149 uses this as a guardrail against personality-centered religion.
+
+It does NOT erase the value of teachers.
+It limits their role by reference to Dhamma-Vinaya.
+
+### REVERENCE AND NON-SELF
+
+Respect can also become “mine”:
+- my teacher;
+- my lineage;
+- my community;
+- my purity.
+
+Then inter-group comparison and māna can enter.
+
+A149 therefore links devotion back to A127–A136:
+what is honored can become identity material unless appropriation is watched.
+
+### PRACTICAL DIAGNOSTIC
+
+When devotion or reverence is strong, ask:
+1. What quality am I actually honoring?
+2. Does this respect increase humility, virtue, effort, and clarity?
+3. Can I still examine claims?
+4. Can I distinguish the teacher from the Dhamma?
+5. If evidence contradicts the teacher, what happens in my mind?
+6. Does criticism trigger a need to defend identity?
+7. Am I grateful, or dependent?
+8. Am I following because something is wholesome, or because “our group says so”?
+9. Can respect remain if I disagree on a point?
+10. Does this relationship reduce greed, hatred, and delusion—or increase fear, conformity, and status-clinging?
+
+### MILINDAPANHA — MANDATORY
+
+Consulted: YES.
+
+Milindapanha itself models strong respect for the Buddha and the teaching while proceeding through sustained questioning, objections, distinctions, and demands for coherent explanation.
+
+Role:
+- later/paracanonical support for the compatibility of reverence and rigorous inquiry;
+- dialogical structure used as a model against the false equation “respect = no questioning.”
+
+Guardrail:
+Milindapanha does not override MN 47, AN 3.65, DN 16, or MN 22.
+
+### CORRECTIONS PRESERVED
+
+- reverence != credulity;
+- gratitude != infallibility;
+- questioning != disrespect by definition;
+- teacher-guidance != surrender of discernment;
+- tradition != proof;
+- community belonging != truth;
+- Dhamma-Vinaya decentering != rejection of teachers;
+- devotion can become identity material if appropriated.
+
+Claim class:
+TEXT_ATTESTED_MN47_TEACHER_EXAMINATION_AN3_65_AUTHORITY_GUARDRAIL_DN16_DHAMMA_VINAYA_TEACHER_MN22_RAFT_PLUS_CROSS_TEXT_REVERENCE_VS_DEPENDENCY_IDENTITY_SYNTHESIS_AND_MILINDAPANHA_DIALOGICAL_SUPPORT
+
+Next checkpoint — A150:
+How does community (saṅgha/kalyāṇamittatā) support liberation without becoming conformity, tribal identity, or outsourcing responsibility? Required anchors: good friendship material, community discipline, AN 3.65, right speech, mandatory Milindapanha consultation.
