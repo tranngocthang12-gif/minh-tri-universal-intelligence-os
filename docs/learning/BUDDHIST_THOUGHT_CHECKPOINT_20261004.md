@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A122 COMPLETED  
-**Next checkpoint:** PHASE 4 — A123  
+**Current checkpoint:** PHASE 4 — A124 COMPLETED  
+**Next checkpoint:** PHASE 4 — A125  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -18577,6 +18577,217 @@ Required lanes:
 - MN 21 and non-hostility under provocation;
 - correction of misconduct without hatred;
 - difference between silence, restraint, and avoidance;
+- mandatory Milindapanha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+
+## Completed checkpoint A123
+
+**Central question:** How does right speech operate in disagreement, correction, conflict, and reconciliation without turning non-harm into passivity or correction into hostility?
+
+### TEXT_ATTESTED
+
+1. **AN 5.167** sets five conditions for reproving another: speak at the right time, speak what is true, speak gently, speak for benefit, and speak with a mind of loving-kindness rather than hatred. The one being reproved should be established in truth and non-anger.
+2. **MN 21** trains the practitioner not to let the mind become hostile even when addressed falsely, harshly, untimely, harmfully, or with hatred. The saw simile radicalizes the non-hatred requirement.
+3. Standard right-speech passages oppose divisive speech and positively value reconciliation and concord.
+4. **MN 139** allows true and beneficial criticism when one knows the proper time, preventing the mistaken equation of all sharp correction with wrong speech.
+
+### CROSS_TEXT SYNTHESIS
+
+Correction is not passivity, and non-hatred is not silence.
+
+Disciplined correction has two sides:
+- external criteria: true, timely, beneficial, and as gentle as the task permits;
+- internal criterion: no hatred; the aim is welfare and correction, not victory or retaliation.
+
+Recipient-side discipline is complementary: remain with truth and non-anger.
+
+Thus Buddhist conflict handling is dual-sided:
+**purify the correction and purify the reception.**
+
+### DISTINCTIONS
+
+- silence != restraint != avoidance;
+- reconciliation != appeasement;
+- gentle speech != refusal to name wrongdoing;
+- non-hatred != approval;
+- correction != retaliation.
+
+### MILINDAPANHA — MANDATORY
+
+**Consulted:** YES.
+
+Milindapanha material on non-harming and restraint is used only as later/paracanonical support for the distinction between non-hatred and blanket non-intervention.
+
+**Guardrail:** it does not override AN 5.167, MN 21, MN 139, or early right-speech criteria.
+
+### WORKING METHOD
+
+1. Is there an actual wrong or harm to address?
+2. Is the criticism true?
+3. Is addressing it beneficial?
+4. Is this the right time?
+5. Can it be said without hostility?
+6. Is the motive correction/welfare rather than victory/punishment?
+7. If corrected in return, can one remain with truth and non-anger?
+
+### Claim class
+
+`TEXT_ATTESTED_AN5_167_MN21_MN139_RIGHT_SPEECH_RECONCILIATION_PLUS_CROSS_TEXT_CORRECTION_WITHOUT_HATRED_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Completed checkpoint A124
+
+**Central question:** How can non-hatred, patience, forgiveness, boundaries, and consequences coexist without confusing forgiveness with permissiveness?
+
+### TEXT_ATTESTED
+
+1. **Dhammapada 3–5** contrasts fixation on injury with the ending of hatred by non-hatred. The principle concerns the ending of retaliatory hostility, not the denial that harm occurred.
+2. **MN 21** demands extraordinary patience and non-hostility under abuse and violence. This establishes that non-hatred is an inner discipline independent of whether the other person behaves well.
+3. **MN 61** shows that harmful action is to be reviewed, acknowledged, confessed where appropriate, and trained against in future. This means Buddhist ethics does not erase responsibility merely because resentment is abandoned.
+4. Early Vinaya and admonition patterns preserve consequences, restraint, confession, and correction alongside goodwill. Non-hatred therefore does not logically imply absence of boundaries or consequences.
+5. **AN 10.60 / related metta-karuna formulations** support the cultivation of goodwill and compassion even toward difficult persons, but do not define goodwill as trust, access, or approval.
+
+### FORGIVENESS IS NOT ONE SINGLE EARLY-BUDDHIST TECHNICAL TERM
+
+A124 uses “forgiveness” cautiously as a modern umbrella term.
+
+The early-text material more directly emphasizes:
+- abandoning hatred;
+- patience;
+- goodwill;
+- confession and correction;
+- non-retaliation;
+- restraint;
+- reconciliation where possible.
+
+Therefore:
+**“forgiveness” here is a CROSS_TEXT SYNTHESIS, not a claim that one Pali term exactly matches the modern concept.**
+
+### NON-HATRED != RESTORED TRUST
+
+The crucial distinction is:
+
+**I can abandon hatred without concluding that the other person is trustworthy.**
+
+Trust concerns prediction about future conduct.
+Non-hatred concerns the condition of one's own mind.
+
+These can diverge.
+
+A person may be met with goodwill while access is restricted.
+A relationship may be ended without revenge.
+A wrongdoer may face consequences without being hated.
+
+This distinction is a **CROSS_TEXT SYNTHESIS** grounded in the coexistence of metta/non-hatred with discipline, confession, restraint, and consequence structures.
+
+### PATIENCE != PASSIVITY
+
+Khanti/patience does not mean allowing harmful behavior to continue unchecked.
+
+Its primary function is not to retaliate from anger when pain, insult, frustration, or delay occurs.
+
+A124 therefore distinguishes:
+- **patience:** not being driven by reactive hostility;
+- **passivity:** failure to take needed action;
+- **restraint:** limiting harmful action;
+- **boundary:** controlling access or conditions to prevent repeated harm.
+
+Only the first is directly an early Buddhist virtue term here; the latter terms are modern analytic labels used to clarify function.
+
+### CONSEQUENCES WITHOUT HATRED
+
+MN 61 gives a strong model of moral accountability:
+- examine conduct;
+- recognize harm;
+- acknowledge it;
+- disclose/confess where appropriate;
+- restrain oneself in future.
+
+That sequence shows why abandoning resentment does not abolish consequences.
+
+One may still:
+- require repair;
+- refuse unsafe access;
+- impose discipline;
+- end cooperation;
+- seek accountability.
+
+The Buddhist guardrail is that these responses should not be fueled by cruelty, vengeance, or delight in another's suffering.
+
+### RECONCILIATION IS CONDITIONAL
+
+Reconciliation is valuable when it genuinely reduces division and can occur without falsifying the situation.
+
+But reconciliation is not identical with:
+- pretending no wrong happened;
+- immediate restoration of trust;
+- return to previous intimacy;
+- removal of all consequences.
+
+Thus A124 rejects:
+**“if I forgive, everything must go back to how it was.”**
+
+That is not established by the early-text evidence.
+
+### MILINDAPANHA — MANDATORY
+
+**Consulted:** YES.
+
+Milindapanha discussions that distinguish non-harming from failure to restrain wrongdoing, and that defend corrective action without hatred, support the later/paracanonical side of A124.
+
+**Role:** clarification only.
+
+**Guardrail:** no later apologetic or disciplinary claim is allowed to override early-text standards of truth, non-hatred, restraint, confession, and benefit.
+
+### BUDDHA'S REASONING METHOD
+
+A124 yields a layered response to injury:
+
+1. **Name the harm truthfully.**
+2. **Do not cultivate retaliatory hatred.**
+3. **Assess whether correction or restraint is needed.**
+4. **Preserve proportionate boundaries.**
+5. **Allow consequences aimed at prevention/correction rather than revenge.**
+6. **Restore trust only to the degree evidence supports it.**
+7. **Reconcile where truthful and safe, not by denial.**
+
+The deep distinction is:
+
+**release hatred internally; manage risk externally.**
+
+This compact formula is a **CROSS_TEXT SYNTHESIS**, not a verbatim canonical sentence.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate forgiveness with restored trust.
+- Do not equate patience with passivity.
+- Do not equate compassion with unrestricted access.
+- Do not equate consequences with hatred.
+- Do not equate non-retaliation with denial of wrongdoing.
+- Do not claim a single early Pali term exactly equals the modern concept “forgiveness.”
+- Do not import later Milindapanha reasoning as if it were an early-text definition.
+
+### Sources
+
+- Dhammapada 3–5.
+- MN 21 Kakacupama Sutta.
+- MN 61 Ambalatthika-Rahulovada Sutta.
+- Early Vinaya/admonition patterns concerning confession, restraint, and correction.
+- Early metta/karuna material.
+- Milindapanha as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A125
+
+**How does the Buddha understand anger itself: what triggers it, what feeds it, what is mistaken about it, and what actually weakens it before it becomes speech or action?**
+
+Required lanes:
+- anger as conditioned process rather than fixed trait;
+- feeling/contact/perception/thought links;
+- ill will vs righteous-seeming anger;
+- MN 19, MN 20, AN anger-removal strategies;
+- patience and metta as interventions;
+- distinguish suppression from abandoning;
 - mandatory Milindapanha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
