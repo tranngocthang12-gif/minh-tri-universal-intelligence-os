@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A149 COMPLETED  
-**Next checkpoint:** PHASE 4 — A150  
+**Current checkpoint:** PHASE 4 — A159 COMPLETED  
+**Next checkpoint:** PHASE 4 — A160  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19534,3 +19534,62 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A150
 
 **Topic:** community, good friendship, conformity, and responsibility.
+
+
+## Completed checkpoint A155
+
+**Topic:** moral courage vs conformity and contrarian identity.
+
+- Anchors: AN 3.65, MN 47, MN 58, AN 5.198.
+- Guardrail: dissent is not courage by definition; unpopularity is not evidence of truth; resistance can itself become māna.
+- Milindapañha consulted: YES; later support for disciplined challenge without hostility.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A155_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A156
+
+**Topic:** integrity when no one is watching; hiri-ottappa, secrecy, reputation, and internalized restraint.
+
+
+## Completed checkpoint A157
+
+**Topic:** integrity and self-deception.
+
+- Anchors: MN 61, MN 2, MN 19, MN 58, AN 5.198.
+- Guardrail: self-deception is not simple ignorance; integrity is willingness to update without collapsing into shame-identity.
+- Milindapañha consulted: YES; later support for distinction-making and exposing hidden assumptions.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINTS_A156_A157_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A158
+
+**Topic:** confession/acknowledgment of fault, repair, and remorse without self-punishment.
+
+## Completed checkpoint A158
+
+**Topic:** acknowledgment of fault, confession, repair, and remorse without self-punishment.
+
+- Anchors: MN 61, DN 2, SN 42.8, SN 46.37.
+- Guardrail: acknowledgment does not erase consequence; wholesome moral sensitivity is not the same as repetitive self-torment; repair requires future restraint and, where possible, amends.
+- Milindapañha consulted: YES; later support for distinguishing fault-awareness from obstructive remorse, without overriding early-discourse anchors.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A158_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A159
+
+**Topic:** living with consequences that cannot be fully repaired; kamma/consequence, fatalism, self-absolution, and forgiveness boundaries.
+
+## Completed checkpoint A159
+
+**Topic:** irreversible consequence, kamma, fatalism, self-absolution, and forgiveness boundaries.
+
+- Anchors: AN 6.63, AN 3.61, SN 36.21, AN 5.57, MN 61, DN 2.
+- Guardrail: kamma is not fatalism; present suffering is not proof of past moral desert; non-hatred does not automatically restore trust or remove consequences.
+- Milindapañha consulted: YES; later support for causal continuity and conventional responsibility without immutable self.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A159_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A160
+
+**Topic:** abandoning resentment without restoring unsafe trust; non-hatred, forgiveness, reconciliation, boundaries, and evidence of changed conduct.
+
