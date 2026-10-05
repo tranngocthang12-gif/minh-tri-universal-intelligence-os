@@ -122,24 +122,48 @@ This law applies to every learning track, including but not limited to:
 
 No domain-specific learning record can opt out of this continuity rule unless the Owner explicitly changes the law.
 
-## 7A. Buddhist-study mandatory Milindapañha rule
+## 7A. SUPREME BUDDHIST-STUDY LEARNING LAW — early discourses + Milindapañha + multiple translations
 
-For the Owner's learning track **Học hiểu tư duy, tư tưởng Phật**, every chat/seat doing material Buddhist-study work must study and consult **Mi Tiên Vấn Đáp / Milindapañha throughout the learning process**, not only as an occasional optional reference.
+For the Owner's learning track **Học hiểu tư duy, tư tưởng Phật**, this section is the **single canonical and highest Buddhist-study learning rule inside MINH TRÍ**. It governs source hierarchy, translation discipline, synthesis discipline, and continuity for all current and future Buddhist-study checkpoints. Do not create a parallel or competing Buddhist-study law for the same subject.
 
-This section is the single canonical source-hierarchy rule for this Buddhist-thought track. Do not create a parallel or competing Buddhist-study law for the same subject.
+The objective is not merely to collect isolated teachings. The project must progressively reconstruct and understand the Buddha's **thinking, reasoning method, conceptual distinctions, causal logic, practical training logic, and overall thought-system** as deeply, coherently, continuously, and systematically as the evidence allows.
 
 Mandatory rules:
 
-1. **Study objective:** the purpose of this track is to understand the Buddha's thinking, reasoning method, and thought as closely as the evidence allows; it is not primarily a project to judge Buddhism by a later philosophical system or by modern science.
-2. **Primary/root source:** early discourses are the main attestation axis for claims about the Buddha's early thought. When a material interpretation is attributed to the Buddha, it must return to the early-discourse evidence for confirmation.
-3. **Milindapañha role:** Milindapañha must be revisited continuously as the Buddhist-thought track advances, especially where it clarifies argument structure, distinctions, objections, analogies, or reasoning methods.
-4. A Buddhist-study seat must not silently omit Milindapañha from the research plan for a material checkpoint.
-5. Milindapañha is a **mandatory supporting/paracanonical reasoning layer**, not the authority that overrides early-discourse evidence.
-6. **Source-conflict rule:** if a later/paracanonical explanation conflicts with the early-discourse evidence on a claim about early Buddhist thought, the early-discourse evidence has priority and the disagreement must be recorded rather than harmonized silently.
-7. **Modern-science boundary:** modern science may be used only when it helps clarify context or comparison requested by the Owner; it is not the judging framework that validates or invalidates the Buddha's thought in this track.
-8. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
-9. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
-10. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
+1. **Primary/root source — early discourses:** early Buddhist discourses remain the primary attestation axis for claims about the Buddha's early thought. Any material interpretation attributed to the Buddha must return to early-discourse evidence for confirmation.
+
+2. **Milindapañha is mandatory continuous support:** because early discourse passages can be terse, compressed, context-dependent, and difficult to interpret in isolation, every material Buddhist-study checkpoint must consult **Mi Tiên Vấn Đáp / Milindapañha** as a continuous later/paracanonical reasoning layer for objections, distinctions, analogies, argument structure, causal clarification, and explanatory stress-testing.
+
+3. **Milindapañha never silently overrides early attestation:** Milindapañha is mandatory for understanding, but it is not promoted into early-discourse authority. If Milindapañha conflicts with early-discourse evidence about early Buddhist thought, the early-discourse evidence has priority and the disagreement must be recorded.
+
+4. **Multiple-translation rule:** a material passage should not be treated as securely understood from a single translation when multiple independent translations are reasonably available.
+   - For material doctrinal passages, use **at least two independent translations when available**.
+   - For disputed, lexically difficult, or interpretation-critical passages, use **three or more translations where practicable**.
+   - The checkpoint must record which translations were used when translation choice materially affects the conclusion.
+
+5. **Translation-conflict rule:** when translations differ in a way that changes doctrine, causal structure, agency, identity, ethics, meditation, or liberation meaning, the difference must be recorded explicitly. The project must not silently choose the translation that best fits a preferred interpretation.
+
+6. **Pāli control rule:** when translation divergence, key terminology, morphology, syntax, or doctrinal weight makes the wording material, the seat must inspect the relevant Pāli wording/lemma/morphology as far as available competence and tools permit. If the Pāli remains uncertain, mark UNCERTAINTY / OPEN-CHECK; do not manufacture lexical certainty.
+
+7. **Parallel-text stress test:** where useful and available, early parallels or alternate recensions may be used to stress-test interpretation. They support historical/interpretive control but do not automatically flatten genuine textual differences.
+
+8. **No isolated-verse system building:** no single verse, translation, simile, later commentary, or isolated discourse may by itself be used to define the Buddha's whole thought when broader early-text evidence is available. Material conclusions should be tested across relevant contexts and discourse families.
+
+9. **Systematic continuity rule:** every material checkpoint must connect new learning to the existing conceptual map of the track: what prior understanding it confirms; what it narrows or corrects; what apparent tension it resolves or leaves open; how it relates to neighboring concepts; and what remains uncertain. The project must build a coherent system without forcing artificial harmony where sources remain genuinely ambiguous.
+
+10. **Claim-class discipline:** durable Buddhist-study records must preserve, at minimum, the distinction among TEXT_ATTESTED, CROSS_TEXT_SYNTHESIS, LATER/PARACANONICAL, and UNCERTAINTY / OPEN-CHECK. A synthesis, however plausible, must never be silently promoted to text-attested fact.
+
+11. **Deep-understanding standard:** the target is not quotation accumulation or translation comparison for its own sake. Comparison must serve understanding of how the Buddha frames a problem; what distinctions he makes; what causal sequence he uses; what error he is correcting; what practical transformation is intended; and how the point fits with the wider early-discourse system.
+
+12. **Modern-science boundary:** modern science may be used only when the Owner asks for comparison or when it helps clarify context. It is not the judging framework that validates or invalidates the Buddha's thought in this track.
+
+13. **Checkpoint evidence record:** every durable Buddhist-study checkpoint must record early-discourse sources used; Milindapañha consultation and exact role; translations compared when materially relevant; Pāli/lexical check when materially relevant; translation conflicts or unresolved ambiguities; claim class; continuity link to prior checkpoints; current/next/open audits; provenance/date and durable location.
+
+14. **Fail-closed interpretation rule:** if a material doctrinal conclusion depends on an unresolved translation conflict, uncertain lexical point, or later-only explanation, the checkpoint may continue learning but must preserve the uncertainty and may not silently call the conclusion early-text verified.
+
+15. **Continuity across all chats/seats:** this rule applies to every current and future chat/seat working on Buddhist thought in MINH TRÍ. A chat may not skip the source hierarchy because prior chats already studied the topic. Each material checkpoint must freshly satisfy the relevant evidence duties.
+
+16. **Protected-governance durability:** this rule remains in force until explicitly superseded by a later Owner decision through protected project governance.
 
 ## 8. Blocked write-path rule
 
