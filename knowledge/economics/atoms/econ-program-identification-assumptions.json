@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "claim",
+  "id": "econ:program:identification-assumptions",
+  "domain": "economics",
+  "class": "SECONDARY",
+  "status": "ACTIVE",
+  "statement": "The economics learning program requires causal claims to state identification assumptions.",
+  "source_refs": [
+    "docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md",
+      "locator": "AUTO learning loop rules"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_kind": "project_learning_program_rule",
+    "base_sha": "31a789342b3933e4a1fc2882a1b38ecf240c755e",
+    "note": "This is a program rule, not evidence that a causal claim is true."
+  }
+}
