@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A107 COMPLETED  
-**Next checkpoint:** PHASE 4 — A108  
+**Current checkpoint:** PHASE 4 — A108 COMPLETED  
+**Next checkpoint:** PHASE 4 — A109  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15658,6 +15658,53 @@ AN 3.66; MN 61; MN 19; MN 2; Milindapañha wisdom/defilement material.
 **How does the Buddha distinguish suppression, temporary calm, and uprooting of a defilement, and what counts as genuine abandonment rather than temporary non-appearance?**
 
 Required lanes: MN 2; latent tendency (`anusaya`) material; restraint/concentration/insight/eradication distinction; relevant SN 36 and MN 64; path-fruit and āsava destruction; mandatory Milindapañha consultation; preserve evidence classes.
+
+
+## Completed checkpoint A108
+
+**Central question:** How does the Buddha distinguish temporary non-appearance of a defilement from genuine abandonment?
+
+### TEXT_ATTESTED
+- **MN 2** distinguishes several ways āsavas are abandoned: seeing, restraint, proper use, endurance, avoidance, removal, and development.
+- **MN 64** shows that a defilement may be non-manifest while its latent tendency remains. The infant example blocks the inference that “not currently expressed” means “eradicated.”
+- **SN 36 latent-tendency material** links feeling with underlying tendencies when feeling is not rightly understood.
+- Arahant/āsava-destruction formulas use finality language that is stronger than temporary calm.
+
+### WORKING DISTINCTION
+Restraint prevents expression or feeding.  
+Concentration can quiet manifestation.  
+Insight weakens ignorance and misapprehension.  
+Uprooting means the relevant causal basis no longer regenerates that defilement.
+
+This fourfold distinction is partly **CROSS_TEXT_SYNTHESIS**, not one single canonical ladder.
+
+### MAIN GUARDRAIL
+**Absence of manifestation ≠ absence of latent capacity.**
+
+So “I am not angry now” does not prove anger has been uprooted. The stronger question is whether the causal structure can still regenerate the old reaction when conditions change.
+
+### STRONGER EVIDENCE OF ABANDONMENT
+Evidence becomes stronger when the same triggers no longer produce the old pattern across changing conditions, related grasping also weakens, conduct changes consistently, and the relevant canonical path-stage criteria are met. Self-report alone is insufficient for claiming irreversible eradication.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+**Consulted:** YES.  
+**Role:** later/paracanonical support for the distinction between quieting a defilement and cutting its root.  
+**Guardrail:** early-text evidence remains primary.
+
+### CORRECTIONS PRESERVED
+- Do not infer uprooting from one calm meditation.
+- Do not equate restraint or concentration with final eradication.
+- Do not infer absence of adult-style expression means absence of latent tendency.
+- Do not devalue concentration; temporary quieting can still be an important support.
+
+### Sources
+MN 2; MN 64; relevant SN 36 latent-tendency material; early āsava-destruction formulas; Milindapañha support.
+
+## Next checkpoint — PHASE 4 A109
+
+**What are the latent tendencies (`anusaya`), how do they relate to feeling, craving, self-view, and repeated reaction, and how should they be distinguished from later theories of an unconscious mind?**
+
+Required lanes: SN 36 anusaya material; MN 64; feeling→craving relation; latent tendency vs habit vs active defilement; guardrail against importing modern unconscious theory; mandatory Milindapañha consultation.
 
 ## 2026-10-05 continuity recovery
 
