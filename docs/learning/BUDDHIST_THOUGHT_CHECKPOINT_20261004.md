@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A118 COMPLETED  
-**Next checkpoint:** PHASE 4 — A119  
+**Current checkpoint:** PHASE 4 — A119 COMPLETED  
+**Next checkpoint:** PHASE 4 — A120  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -17702,6 +17702,215 @@ Required lanes:
 - relation to SN 12.15 anti-eternalism/anti-annihilationism;
 - relation to unanswered post-mortem Tathāgata questions where relevant;
 - avoid importing later parinibbāna ontology as if fully explicit in one early passage;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A119
+
+**Central question:** How do the two Nibbāna elements in Iti 44—“with residue” and “without residue”—distinguish liberation while alive from final cessation at death, without turning the latter into either annihilation of a Self or survival of an eternal Self?
+
+### TEXT_ATTESTED
+
+1. **Iti 44** explicitly presents two Nibbāna elements: `saupādisesā nibbānadhātu` (with residue remaining) and `anupādisesā nibbānadhātu` (without residue remaining).
+2. For the Nibbāna element with residue, the monk is already an arahant: the taints are destroyed, the task completed, the burden laid down, the fetter of becoming exhausted, and liberation known. Yet the five sense faculties remain intact, so agreeable/disagreeable objects are still experienced and pleasure/pain are still felt.
+3. Iti 44 then defines this “with residue” element in terms of the destruction of greed, hate, and delusion.
+4. For the Nibbāna element without residue, the same arahant description is retained, but the discourse says that “all that is felt/experienced” (`sabbavedayitāni`), not delighted in (`anabhinanditāni`), will become cool (`sīti bhavissanti`).
+5. The verse appended to Iti 44 says that in the no-residue case all modes of becoming/existence (`bhavāni`) cease entirely.
+6. **SN 12.15** rejects both “everything exists” and “everything does not exist,” so Iti 44 should not be forced into either eternal survival of a Self or annihilation of a Self.
+7. **SN 44.1–8 / SN 44.11** repeatedly decline the four post-mortem predicates “the Tathāgata exists / does not exist / both / neither” after death, linking that refusal to the aggregates, their cessation, and freedom from craving/appropriation around them.
+8. **SN 44.2 / the Anurādha material** adds a decisive guardrail: even in the present life, when the Tathāgata cannot be pinned down as a truth/reality in any of the five aggregates, it is not appropriate to describe him after death using those four positions.
+
+### “WITH RESIDUE” MEANS LIBERATION WHILE THE LIVING SYSTEM CONTINUES
+
+The with-residue case is not partial enlightenment.
+
+The arahant is already described with full completion language.
+
+What remains is the functioning living basis:
+- five sense faculties remain;
+- agreeable/disagreeable contact is experienced;
+- pleasure and pain can still be felt.
+
+So A119 distinguishes:
+
+**defilement-ending**
+from
+**immediate ending of bodily/sensory life**.
+
+This confirms A101, A114, A116, and A118:
+liberation while alive does not erase conditioned sensory functioning.
+
+### “RESIDUE” MUST REMAIN LEXICALLY GUARDED
+
+The term `upādi/upādisesa` has a history of translation and interpretation.
+
+Iti 44 itself gives a practical contrast:
+- in the with-residue case, the faculties and feeling continue;
+- in the no-residue case, all experienced feeling not delighted in becomes cool and future becoming ceases.
+
+A119 therefore does **not** force one later technical definition such as “the residue is exactly the five aggregates” unless independently attested in the passage under study.
+
+The safe claim is functional:
+**there is still a living conditioned remainder in the arahant before death.**
+
+### “WITHOUT RESIDUE” DOES NOT MEAN A SELF IS DESTROYED
+
+To say:
+“after the arahant dies, a Self is annihilated”
+would first posit a Self that the earlier not-self analysis never established.
+
+Iti 44 instead says:
+- the person is already an arahant;
+- greed, hate, and delusion are ended;
+- the cord/fetter of becoming is destroyed;
+- what is experienced, not delighted in, becomes cool;
+- all modes of future becoming cease.
+
+The target of cessation is the conditioned continuation of experience/becoming sustained by craving and appropriation.
+
+A119 therefore classifies “an eternal Self gets annihilated” as **UNSUPPORTED / WRONG FRAME** relative to these early texts.
+
+### “WITHOUT RESIDUE” ALSO DOES NOT MEAN AN ETERNAL SELF SURVIVES
+
+The opposite move is equally unsupported.
+
+Iti 44 does not say:
+“after death a permanent subject continues in another metaphysical form.”
+
+The SN 44 post-mortem material explicitly resists describing the Tathāgata as:
+- existing;
+- not existing;
+- both;
+- neither.
+
+Therefore the early-text discipline is not to replace annihilationism with eternalism.
+
+It is to recognize that the four predicates rely on a framework of identification and designation that no longer applies cleanly when craving/appropriation around the aggregates has ended.
+
+This last sentence is a **CROSS_TEXT_SYNTHESIS** anchored in the SN 44 explanations.
+
+### WHAT EXACTLY “COOLS” IN ITI 44?
+
+The Pāli phrase is:
+`sabbavedayitāni anabhinanditāni sīti bhavissanti`.
+
+A119 keeps the lexical minimum:
+- `sabbavedayitāni`: all that is felt/experienced;
+- `anabhinanditāni`: not delighted in / not relished;
+- `sīti bhavissanti`: will become cool.
+
+This is safer than importing a later ontological formula such as:
+“a metaphysical consciousness is extinguished”
+or
+“the person becomes nothing.”
+
+The verse's stronger future-facing claim is that all modes of `bhava` cease.
+
+### WHY FEELING CAN CONTINUE WITHOUT NEW BECOMING
+
+The living arahant still feels pleasure/pain, yet greed, hate, and delusion are destroyed.
+
+This means:
+
+**feeling**
+does not automatically entail
+**craving → clinging → becoming**.
+
+The dependent-arising chain is not a mechanical inevitability once the relevant ignorance/craving conditions have been cut.
+
+This is a **CROSS_TEXT SYNTHESIS** consistent with SN 36.6 and the earlier A109–A110 distinction between feeling and latent/reactive continuation.
+
+### POST-MORTEM TATHĀGATA QUESTIONS: THE FOURFOLD TRAP
+
+The SN 44 collection repeatedly treats the four claims:
+1. Tathāgata exists after death;
+2. does not exist;
+3. both exists and does not exist;
+4. neither exists nor does not exist;
+
+as questions the Buddha does not endorse.
+
+A119 does not reduce this to:
+“the answer is secretly #2.”
+
+Nor does it reduce it to:
+“the answer is secretly #1.”
+
+The deeper diagnostic is that the predicates assume a describable entity whose relation to the aggregates can be fixed in the relevant way.
+
+Once that appropriation framework is removed, the question itself ceases to function as intended.
+
+### FIRE SIMILES — USE WITH CAUTION
+
+Early and later Buddhist materials use extinguished-fire imagery.
+
+The correct minimum is:
+when fuel/sustenance is absent, the fire is no longer describable as continuing in the same fuel-dependent mode.
+
+A119 does **not** infer from the simile:
+- that Nibbāna is literal physical fire;
+- that an entity travels elsewhere;
+- that an entity is destroyed into absolute nothingness.
+
+The simile is about the failure of ordinary location/continuation predicates once supporting conditions are gone.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+In the Milindapañha question on pointing out the Buddha, Nāgasena says that after the Buddha's parinibbāna he cannot be pointed out as “here or there,” and uses the image of a flame that has gone out and cannot be located.
+
+**Role:** later/paracanonical support for the early-discourse refusal to assign a post-mortem location/status to the liberated Tathāgata.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the fire analogy is not used to decide a metaphysical question that the SN 44 material deliberately leaves outside the fourfold “exists / not exists / both / neither” framework.
+
+### BUDDHA'S REASONING METHOD
+
+A119 reveals a recurring pattern:
+
+**do not answer a malformed question by choosing one of its preset boxes.**
+
+If the alternatives all presuppose a mistaken identification, the Buddha may refuse the frame itself.
+
+So the method is:
+1. inspect the assumptions hidden in the question;
+2. trace them to craving, identification, or aggregate-view;
+3. remove the supporting assumptions;
+4. do not manufacture a speculative answer after the frame has dissolved.
+
+### CORRECTIONS PRESERVED
+
+- Do not interpret “with residue” as incomplete arahantship.
+- Do not equate “without residue” with annihilation of an eternal Self.
+- Do not equate “without residue” with survival of an eternal Self.
+- Do not turn `sabbavedayitāni sīti bhavissanti` into a stronger ontology than the Pāli supports.
+- Do not treat the SN 44 silence as covert endorsement of one of the four positions.
+- Do not infer that feeling itself necessarily recreates craving and becoming in an arahant.
+- Do not use the Milindapañha fire simile to override the early-discourse refusal of the post-mortem tetralemma.
+
+### Sources
+
+- Iti 44 Nibbānadhātu Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 44.1–8 and SN 44.11, especially the post-mortem Tathāgata discussions.
+- SN 44.2 / Anurādha material on not pinning down the Tathāgata in the aggregates.
+- SN 36.6 Sallattha Sutta as supporting evidence that feeling need not produce the same reactive chain.
+- Milindapañha Buddhanidassanapañha / “pointing out the Buddha” discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A120
+
+**Why are the four post-mortem propositions about the Tathāgata—exists, does not exist, both, neither—treated as inapplicable/undeclared, and what does this reveal about the Buddha's method for dissolving rather than answering malformed metaphysical questions?**
+
+Required lanes:
+- SN 44.1–8 and SN 44.11 in detail;
+- SN 22.86 / Anurādha parallel material where relevant;
+- relation to aggregate identification and craving;
+- fire/sustenance imagery and its limits;
+- distinguish “undeclared” from agnosticism, secret eternalism, or secret annihilationism;
+- relation to MN 63/MN 72 pragmatic reasons for undeclared questions;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
