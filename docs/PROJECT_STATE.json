@@ -13,12 +13,12 @@
   "current_law_index": "docs/LAW_INDEX_20261003.md",
   "current_architecture": "docs/ARCHITECTURE_NOW_20261003.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "RUNTIME_ASSURANCE_AND_LEARNING_ASSURANCE_EMPIRICAL_VALIDATION",
+  "active_workstream": "OWNER_VALUE_AND_LEARNING_OUTPUT_WITH_RUNTIME_MAINTENANCE_SECONDARY",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
-  "local_brain_connected": true,
-  "next_checkpoint": "RESTORE_RUNTIME_THEN_AUDIT_RESOLUTION_PROVENANCE_AND_CREATE_NEW_NON_ENFORCEMENT_CANDIDATE",
+  "local_brain_connected": false,
+  "next_checkpoint": "CONTINUE_OWNER_VALUE_WORK_FROM_CANONICAL_GITHUB; HANDLE_PC_RUNTIME_ONLY_WHEN_TASK_REQUIRES_PC",
   "brain_readonly_module": "IMPLEMENTED_AND_MERGED",
   "zero_chat_local_recovery_contract": "CI_PROVEN",
   "external_anchor_verifier": "IMPLEMENTED_AND_MERGED",
@@ -634,5 +634,27 @@
   "owner_learning_track_buddhist_thought_a98_claim_class": "TEXT_ATTESTED_FOURFOLD_UPADANA_AND_TANHA_UPADANA_BHAVA_CHAIN_PLUS_AGGREGATE_GRASPING_EVIDENCE_WITH_LEXICAL_FUEL_GUARDRAIL_AND_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a98_milindapanha": "CONSULTED_ATTACHMENT_MINE_MAKING_SUPPORT_NO_OVERRIDE_OF_EARLY_UPADANA_DEFINITIONS",
   "owner_learning_track_buddhist_thought_a99_claim_class": "TEXT_ATTESTED_THREEFOLD_BHAVA_UPADANA_ORIGIN_FUTURE_RENEWED_EXISTENCE_AND_BHAVATANHA_DISTINCTION_PLUS_CROSS_TEXT_CAUSAL_CONTINUITY_WITH_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a99_milindapanha": "CONSULTED_REBIRTH_WITHOUT_TRANSMIGRATION_LAMP_AND_VERSE_ANALOGIES_NO_OVERRIDE_OF_EARLY_BHAVA_DEFINITIONS"
+  "owner_learning_track_buddhist_thought_a99_milindapanha": "CONSULTED_REBIRTH_WITHOUT_TRANSMIGRATION_LAMP_AND_VERSE_ANALOGIES_NO_OVERRIDE_OF_EARLY_BHAVA_DEFINITIONS",
+  "project_operating_mode": "GITHUB_PRIMARY_PC_OPTIONAL",
+  "pc_local_brain_outage_blocks_github_capable_work": false,
+  "local_brain_role": "OPTIONAL_CACHE_LEDGER_ACCELERATOR_AND_LOCAL_PRIVATE_DATA_ADAPTER",
+  "local_brain_required_for_learning_continuity": false,
+  "github_only_work_allowed": [
+    "LEARNING",
+    "RESEARCH",
+    "PLANNING",
+    "ARCHITECTURE_REVIEW",
+    "GITHUB_PR_CI_CHECKPOINT_WORK",
+    "DOCUMENTATION",
+    "REPOSITORY_CODE_WORK"
+  ],
+  "pc_required_work": [
+    "LOCAL_ONLY_FILES",
+    "DESKTOP_APPS",
+    "OWNER_PC_RUNTIME",
+    "LOCAL_BRAIN_MIRROR",
+    "DEVICE_DEPLOYMENT",
+    "HOST_SECURITY_VERIFICATION"
+  ],
+  "local_brain_connection_semantics": "CURRENTLY_OFFLINE_BY_OWNER_PC_POWER_STATE; NOT_REQUIRED_FOR_GITHUB_CAPABLE_WORK"
 }
