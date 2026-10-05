@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A110 COMPLETED  
-**Next checkpoint:** PHASE 4 — A111  
+**Current checkpoint:** PHASE 4 — A111 COMPLETED  
+**Next checkpoint:** PHASE 4 — A112  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16005,6 +16005,212 @@ Required lanes:
 - āsava destruction as arahant marker;
 - jhāna/hindrance temporary absence versus irreversible path attainment;
 - avoid premature one-to-one mapping of all seven anusaya to each attainment stage;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A111
+
+**Central question:** How do stream-entry, once-return, non-return, and arahantship differ in what is ended, weakened, temporarily absent, or still capable of arising, without importing later stage-maps where the early discourses do not explicitly supply them?
+
+### TEXT_ATTESTED
+
+1. **DN 16** gives a compact four-stage distinction:
+   - stream-entry: the first three fetters are ended;
+   - once-return: the first three fetters are ended and greed, hatred, and delusion are weakened;
+   - non-return: the five lower fetters are ended;
+   - arahantship: through destruction of the `āsavas`, one directly realizes liberation of mind and liberation by wisdom.
+2. **AN 10.13** gives the ten-fetter list: five lower fetters—identity view, doubt, misapprehension of precepts/observances, sensual desire, ill will—and five higher fetters—desire for form-realm rebirth, desire for formless-realm rebirth, conceit, restlessness, and ignorance.
+3. **MN 43** states that the five hindrances are given up in first jhāna. This provides an explicit case where obstructive states are absent without thereby establishing stream-entry, non-return, or arahantship.
+4. The repeated arahant formula in the early discourses uses **destruction of the āsavas** as a final-liberation marker, a stronger claim than temporary suppression, weakening, or the ending of only a subset of fetters.
+
+### FOUR DIFFERENT STRENGTHS OF CLAIM
+
+A111 requires keeping four verbs/functions apart:
+
+**temporarily absent**
+- a state is not operating under present conditions;
+- example: five hindrances absent in first jhāna.
+
+**weakened**
+- the defiling pattern has less force/frequency;
+- the once-returner formula says greed, hatred, and delusion are weakened, not destroyed.
+
+**fetter ended**
+- a specified binding structure has been cut;
+- stream-entry ends three fetters;
+- non-return ends five lower fetters.
+
+**āsavas destroyed**
+- the standard arahant formula marks complete liberation.
+
+These are not interchangeable descriptions.
+
+### STREAM-ENTRY: RADICAL CHANGE WITHOUT TOTAL PURIFICATION
+
+The stream-enterer has ended:
+- identity view (`sakkāyadiṭṭhi`);
+- doubt (`vicikicchā`);
+- misapprehension of precepts and observances (`sīlabbataparāmāsa`).
+
+But the early stage formula does **not** say:
+- all greed has ended;
+- all hatred has ended;
+- all delusion has ended;
+- all five hindrances can never occur;
+- all seven latent tendencies have been eradicated.
+
+Therefore stream-entry is irreversible in specified respects without being identical to final purification.
+
+### ONCE-RETURN: "WEAKENED" IS DELIBERATELY NOT "DESTROYED"
+
+The once-returner has the same first three fetters ended and has made greed, hatred, and delusion **weaker**.
+
+This matters methodologically.
+
+The text does not supply:
+- a percentage reduction;
+- a one-to-one list of exactly which `anusaya` remain;
+- a claim that sensual desire and ill will are already eradicated.
+
+A111 therefore preserves `weakened` as its own category rather than silently converting it into fetter-destruction.
+
+### NON-RETURN: FIVE LOWER FETTERS ENDED
+
+The non-returner has ended the five lower fetters.
+
+Relative to stream-entry this adds:
+- sensual-desire fetter;
+- ill-will fetter.
+
+This is much stronger than saying sensual desire or ill will happens to be absent during meditation.
+
+At the same time, the ten-fetter list leaves higher fetters such as:
+- form-realm desire;
+- formless-realm desire;
+- conceit;
+- restlessness;
+- ignorance.
+
+Therefore non-return is profound liberation from lower bondage without yet being the final arahant formula.
+
+### ARAHANTSHIP: FINALITY IS MARKED BY ĀSAVA DESTRUCTION
+
+Arahantship is repeatedly expressed as:
+- the āsavas being destroyed;
+- liberation of mind and liberation by wisdom directly known in this very life.
+
+This is qualitatively different from:
+- a calm session;
+- a hindrance temporarily absent;
+- greed/hatred/delusion merely weakened;
+- only three or five lower fetters ended.
+
+A111 therefore treats "final liberation" as a stronger textual claim than all preceding conditions.
+
+### WHAT MAY STILL ARISE?
+
+A safe early-text reading is:
+
+- **ordinary person:** hindrances, fetters, latent tendencies, and active defilements remain available for renewed manifestation.
+- **stream-enterer:** the first three fetters do not return as binding fetters; other defilements can still occur.
+- **once-returner:** greed, hatred, and delusion remain possible but weakened; the text does not license converting this into a precise later quantitative psychology.
+- **non-returner:** sensual-desire and ill-will fetters are ended along with the first three; higher fetters remain to be abandoned.
+- **arahant:** the liberation formula marks destruction of the āsavas and completion of the path.
+
+The first four lines combine direct stage formulas with the ten-fetter list. Any exact mapping from every path stage to every one of the seven `anusaya` remains **OPEN/CHECK** unless directly established by an early passage.
+
+### DO NOT MAP THE SEVEN ANUSAYA MECHANICALLY ONTO THE FOUR STAGES
+
+A109 established seven latent tendencies; A110 distinguished latent tendency from fetter, hindrance, and āsava.
+
+A111 therefore rejects a tempting but unsafe move:
+
+`fetter X ended` → automatically infer a fully specified `anusaya` table for that stage.
+
+There are important overlaps in vocabulary, but overlap is not identity.
+
+A later systematic tradition may provide more exact stage-by-stage correspondences. Those may be studied later, but must remain labelled **LATER SYSTEMATIZATION** unless an early-discourse basis is independently supplied.
+
+### WHY JHĀNA CANNOT BY ITSELF PROVE A PATH STAGE
+
+First jhāna entails absence of the five hindrances in MN 43.
+
+Yet path stages are described through:
+- fetters ended;
+- greed/hatred/delusion weakened;
+- lower fetters ended;
+- āsavas destroyed.
+
+Therefore:
+
+`deep concentration`
+does not logically entail
+`stream-entry`,
+`non-return`,
+or `arahantship`.
+
+Concentration can be a powerful path factor while the diagnostic criterion for irreversible liberation remains stronger.
+
+### BUDDHA'S DIAGNOSTIC METHOD
+
+A111 reveals a graded language of transformation.
+
+The Buddha does not flatten spiritual progress into "better" versus "worse."
+
+He distinguishes:
+1. state-level suppression/absence;
+2. weakening;
+3. irreversible cutting of specified bonds;
+4. complete destruction of the deepest taints.
+
+This graded precision protects against two errors:
+- **overclaiming:** "I feel calm, therefore I am liberated";
+- **underclaiming:** "If any greed remains, no irreversible transformation has occurred."
+
+The middle structure allows genuine irreversible progress before final completion.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Milindapañha discussion of wisdom uses the image of wisdom cutting/severing defilements, while other passages distinguish a mind being cleared of hindrances from defilements being decisively broken.
+
+**Role:** later/paracanonical support for the distinction between temporary clearing, weakening, and decisive severing.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha is not used to manufacture a stage-by-stage `anusaya` chart or to override the DN 16 / AN 10.13 early-discourse formulas. Numbering varies across editions, so the doctrinal use here is kept at the level of the known wisdom/severing discussion rather than asserting a single universal section number.
+
+### CORRECTIONS PRESERVED
+
+- Do not treat "weakened" as "eradicated."
+- Do not treat temporary hindrance absence as a path attainment.
+- Do not infer from stream-entry that all greed, hatred, and delusion are gone.
+- Do not infer from non-return that all higher fetters are gone.
+- Do not force every `anusaya` into a one-to-one four-stage table without direct early-text evidence.
+- Do not use later stage maps as though DN 16 itself stated them.
+- Do not turn the four stages into a metaphysical ranking of persons; in the texts they diagnose irreversible changes in bondage and liberation.
+
+### Sources
+
+- DN 16 Mahāparinibbāna Sutta.
+- AN 10.13 Saṁyojana Sutta.
+- MN 43 Mahāvedalla Sutta.
+- Repeated early-discourse arahant formula on destruction of the āsavas.
+- Milindapañha wisdom/severing and hindrance-clearing discussions as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A112
+
+**What makes stream-entry irreversible: what exactly changes in view, doubt, practice, and relation to the Dhamma when the first three fetters are ended?**
+
+Required lanes:
+- first three fetters in early texts;
+- Dhamma-eye (`dhammacakkhu`) formula and its relation to stream-entry;
+- four factors/qualities associated with stream-entry where textually relevant;
+- identity view versus residual "I am" conceit;
+- why confidence is not mere belief and why doubt-ending is not prohibition of inquiry;
+- avoid importing later moment-of-path technical mechanics unless labelled;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
