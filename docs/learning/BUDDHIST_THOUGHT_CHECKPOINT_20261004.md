@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A111 COMPLETED  
-**Next checkpoint:** PHASE 4 — A112  
+**Current checkpoint:** PHASE 4 — A112 COMPLETED  
+**Next checkpoint:** PHASE 4 — A113  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16211,6 +16211,195 @@ Required lanes:
 - identity view versus residual "I am" conceit;
 - why confidence is not mere belief and why doubt-ending is not prohibition of inquiry;
 - avoid importing later moment-of-path technical mechanics unless labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A112
+
+**Central question:** What makes stream-entry irreversible: what exactly changes in view, doubt, practice, and relation to the Dhamma when the first three fetters are ended?
+
+### TEXT_ATTESTED
+
+1. **DN 16** identifies stream-entry with the ending of the first three fetters: identity view (`sakkāyadiṭṭhi`), doubt (`vicikicchā`), and misapprehension/clinging regarding precepts and observances (`sīlabbataparāmāsa`). The stream-enterer is described as no longer liable to the lower destinations and as fixed in destiny toward awakening.
+2. **SN 56.11** records the arising of the Dhamma-eye in Koṇḍañña with the formula: whatever is subject to arising is subject to cessation. This is an early model of breakthrough as seeing conditionality and cessation, not merely accepting a proposition on authority.
+3. **SN 55** repeatedly characterizes stream-enterers through confirmed confidence (`aveccappasāda`) in Buddha, Dhamma, and Saṅgha, together with ethical qualities dear to the noble ones. Other SN 55 passages also give four conditions conducive to stream-entry: association with good persons, hearing the true Dhamma, wise attention, and practice in accordance with the Dhamma.
+4. **SN 22.89 (Khemaka)** gives a decisive distinction between identity view and the residual `asmimāna` / “I am” tendency. Khemaka does not take any of the five aggregates as self or belonging to self in the identity-view pattern, yet an “I am” conceit, desire, and underlying tendency remain to be removed. Therefore ending identity view does not mean every subtle self-referential tendency has ended.
+5. Early-discourse stream-entry formulas therefore combine a change in view, confidence, practice, and destiny without claiming complete destruction of greed, hatred, conceit, or ignorance.
+
+### WHAT ENDS AT STREAM-ENTRY
+
+The safest minimum is not “all selfing ends.”
+
+It is:
+
+- the view that identifies self in relation to the five aggregates is cut as a fetter;
+- destabilizing doubt that functions as a fetter is cut;
+- the belief that mere observances, rules, or ritualized practices are sufficient in themselves for purification is cut;
+- the relation to Buddha, Dhamma, Saṅgha, and training becomes grounded in confirmed confidence and irreversible orientation.
+
+This is stronger than intellectual agreement but weaker than arahantship.
+
+### DHAMMA-EYE: SEEING CONDITIONALITY, NOT ACQUIRING A NEW IDENTITY
+
+The Dhamma-eye formula—“whatever is subject to arising is subject to cessation”—matters because it reorients understanding from:
+
+“what permanent thing am I?”
+
+toward:
+
+“what arises dependent on conditions, and what ceases when those conditions cease?”
+
+A112 therefore treats stream-entry as an irreversible shift in the framework of seeing, not as installation of a new metaphysical self called “stream-enterer.”
+
+The exact technical relation between every occurrence of `dhammacakkhu` and a formally named stream-entry event should remain passage-sensitive. The early texts strongly associate the formula with breakthrough, but later moment-by-moment path mechanics must not be read back into every occurrence without direct evidence.
+
+### IDENTITY VIEW ≠ RESIDUAL “I AM” CONCEIT
+
+SN 22.89 prevents a major misunderstanding.
+
+One may no longer hold:
+- “form is self”;
+- “self possesses form”;
+- “form is in self”;
+- “self is in form”;
+and the analogous constructions for the other aggregates,
+
+yet still have a subtler `asmimāna`, desire, and underlying tendency “I am.”
+
+Therefore:
+
+`sakkāyadiṭṭhi` ended
+≠ every use of “I”
+≠ every self-referential feeling
+≠ `asmimāna` destroyed
+≠ arahantship.
+
+This preserves the earlier A57–A59 distinction between explicit self-view, conceit, mine-making, and latent tendency.
+
+### WHY CONFIRMED CONFIDENCE IS NOT MERE BELIEF
+
+`Aveccappasāda` in stream-entry contexts is better understood as confidence that has become settled through breakthrough and practice, not as “believe because a teacher said so.”
+
+A112's cross-text model is:
+
+hearing the Dhamma
+→ wise attention
+→ practice in accordance with Dhamma
+→ direct seeing / breakthrough
+→ confirmed confidence.
+
+This is a **CROSS_TEXT_SYNTHESIS**, not a single canonical sequence stated verbatim in one passage.
+
+The important guardrail is that faith and verification are not opposites. Faith can motivate investigation; stream-entry confidence is presented as more stable because something decisive has been seen.
+
+### WHY DOUBT-ENDING DOES NOT MEAN “STOP ASKING QUESTIONS”
+
+The fetter `vicikicchā` is not best understood as every possible intellectual question.
+
+Ending it means the path is no longer undermined by the kind of uncertainty that prevents committed seeing and practice.
+
+A noble disciple can still:
+- ask for clarification;
+- investigate finer points;
+- distinguish what is known from what is not yet known;
+- continue training toward higher stages.
+
+Therefore:
+“no fetter of doubt”
+does **not** mean
+“omniscient”
+or
+“forbidden to inquire.”
+
+This is a **CROSS_TEXT_SYNTHESIS** grounded in the stream-entry fetter formula and the broader early-discourse culture of questioning and progressive training.
+
+### SĪLABBATAPARĀMĀSA: NOT A REJECTION OF ETHICS OR DISCIPLINE
+
+The third fetter is often mistranslated too broadly.
+
+Its ending does not mean:
+- precepts are useless;
+- discipline is abandoned;
+- ritual action is always meaningless.
+
+Rather, the problem is treating mere observance as inherently sufficient for purification or liberation.
+
+This preserves A63:
+discipline can be an essential path support without being transformed into a magical or identity-based guarantee of purity.
+
+### WHAT MAKES THE CHANGE “IRREVERSIBLE”
+
+A112's working synthesis is that stream-entry becomes irreversible because several layers change together:
+
+1. **view:** identity-view is cut;
+2. **epistemic orientation:** the Dhamma has been seen in a way that stabilizes confidence;
+3. **practice:** ritual/observance is no longer mistaken for the liberating mechanism by itself;
+4. **direction:** the disciple is described as fixed toward awakening and no longer liable to the lower destinations.
+
+No single psychological feeling defines this irreversibility.
+
+It is a structured transformation in how reality, practice, and liberation are understood.
+
+### TWO DIFFERENT “FOURS” MUST NOT BE COLLAPSED
+
+SN 55 material uses closely related but distinct fourfold frameworks.
+
+One set concerns **conditions conducive to stream-entry**:
+- association with good persons;
+- hearing true Dhamma;
+- wise attention;
+- practice in accordance with Dhamma.
+
+Another set concerns **qualities of a stream-enterer**:
+- confirmed confidence in Buddha;
+- confirmed confidence in Dhamma;
+- confirmed confidence in Saṅgha;
+- ethical qualities dear to the noble ones.
+
+A112 keeps “causes/supports for entry” distinct from “marks/qualities after entry.”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha discussions of faith emphasize its clarifying and aspirational functions: faith can settle the mind and orient it toward a goal that has been seen or exemplified by noble persons.
+
+**Role:** later/paracanonical support for distinguishing faith that clarifies and directs practice from blind assent.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not override the early-discourse criteria for stream-entry, nor is it used to supply later technical path-moment mechanics.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate stream-entry with total absence of greed, hatred, or delusion.
+- Do not equate ending identity view with ending `asmimāna`.
+- Do not equate confirmed confidence with blind belief.
+- Do not equate ending doubt with ending inquiry.
+- Do not equate ending `sīlabbataparāmāsa` with rejecting ethics or discipline.
+- Do not collapse the four supports for stream-entry into the four qualities of a stream-enterer.
+- Do not import later path-moment micro-mechanics unless explicitly labelled as later systematization.
+
+### Sources
+
+- DN 16 Mahāparinibbāna Sutta.
+- SN 56.11 Dhammacakkappavattana Sutta.
+- SN 55 stream-entry collections on confirmed confidence and conditions for stream-entry.
+- SN 22.89 Khemaka Sutta.
+- Milindapañha faith discussions as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A113
+
+**How should `sakkāyadiṭṭhi` (identity view) be distinguished from `asmimāna` (“I am” conceit), `ahaṅkāra/mamaṅkāra` (I-making/mine-making), and ordinary conventional self-reference after stream-entry?**
+
+Required lanes:
+- SN 22.89 in detail;
+- twenty identity-view modes where textually explicit;
+- `asmimāna` versus explicit view;
+- I-making / mine-making language;
+- conventional speech without ontological reification;
+- implications for stream-entry versus arahantship;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
