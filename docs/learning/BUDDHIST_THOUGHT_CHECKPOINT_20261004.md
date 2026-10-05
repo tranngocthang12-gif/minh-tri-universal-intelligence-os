@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A155 COMPLETED  
-**Next checkpoint:** PHASE 4 — A156  
+**Current checkpoint:** PHASE 4 — A157 COMPLETED  
+**Next checkpoint:** PHASE 4 — A158  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19549,3 +19549,18 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A156
 
 **Topic:** integrity when no one is watching; hiri-ottappa, secrecy, reputation, and internalized restraint.
+
+
+## Completed checkpoint A157
+
+**Topic:** integrity and self-deception.
+
+- Anchors: MN 61, MN 2, MN 19, MN 58, AN 5.198.
+- Guardrail: self-deception is not simple ignorance; integrity is willingness to update without collapsing into shame-identity.
+- Milindapañha consulted: YES; later support for distinction-making and exposing hidden assumptions.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINTS_A156_A157_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A158
+
+**Topic:** confession/acknowledgment of fault, repair, and remorse without self-punishment.
