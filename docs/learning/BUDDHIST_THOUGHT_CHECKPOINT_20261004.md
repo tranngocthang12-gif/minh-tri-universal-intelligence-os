@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A157 COMPLETED  
-**Next checkpoint:** PHASE 4 — A158  
+**Current checkpoint:** PHASE 4 — A158 COMPLETED  
+**Next checkpoint:** PHASE 4 — A159  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19564,3 +19564,18 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A158
 
 **Topic:** confession/acknowledgment of fault, repair, and remorse without self-punishment.
+
+## Completed checkpoint A158
+
+**Topic:** acknowledgment of fault, confession, repair, and remorse without self-punishment.
+
+- Anchors: MN 61, DN 2, SN 42.8, SN 46.37.
+- Guardrail: acknowledgment does not erase consequence; wholesome moral sensitivity is not the same as repetitive self-torment; repair requires future restraint and, where possible, amends.
+- Milindapañha consulted: YES; later support for distinguishing fault-awareness from obstructive remorse, without overriding early-discourse anchors.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A158_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A159
+
+**Topic:** living with consequences that cannot be fully repaired; kamma/consequence, fatalism, self-absolution, and forgiveness boundaries.
+
