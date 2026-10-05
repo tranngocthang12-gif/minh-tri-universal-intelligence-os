@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A116 COMPLETED  
-**Next checkpoint:** PHASE 4 — A117  
+**Current checkpoint:** PHASE 4 — A117 COMPLETED  
+**Next checkpoint:** PHASE 4 — A118  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -17216,6 +17216,251 @@ Required lanes:
 - living-body/six-sense-base remainder after liberation;
 - relation to A108–A110 state-versus-eradication distinctions;
 - avoid importing later “three doors to liberation” schemas unless explicitly labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A117
+
+**Central question:** Why does MN 121 treat even `animitta cetosamādhi` (signless concentration of mind) as conditioned and subject to cessation, and what distinguishes that refined state from liberation through destruction of the `āsavas`?
+
+### TEXT_ATTESTED
+
+1. **MN 121** says of the signless concentration of mind: `ayampi kho animitto cetosamādhi abhisaṅkhato abhisañcetayito`—even this signless concentration is produced/constructed and intentionally or mentally fashioned. The discourse immediately adds that whatever is so produced is impermanent and subject to cessation.
+2. The exact wording is important. The text does not merely apply the generic label `saṅkhata`; it uses the stronger verbal forms `abhisaṅkhata` and `abhisañcetayita`. Translation varies (“conditioned/fabricated,” “constructed,” “volitionally produced,” “mentally fashioned”), so A117 preserves the Pāli and does not force one English gloss into a complete metaphysical theory.
+3. When the practitioner knows and sees the signless concentration in this way, MN 121 says the mind is liberated from the taint of sensuality (`kāmāsava`), the taint of becoming (`bhavāsava`), and the taint of ignorance (`avijjāsava`).
+4. Liberation is then explicitly known as liberation, with the standard completion formula: birth is destroyed, the holy life fulfilled, what had to be done done, no further coming to such a state of being.
+5. After those taints are absent, MN 121 still acknowledges a residual disturbance associated with this living body and the six sense bases dependent on life. Thus destruction of the `āsavas` does not imply that the living sensory organism vanishes immediately.
+6. The discourse therefore distinguishes a refined meditative state that can be entered and ceased from the liberative destruction of the causes of bondage.
+
+### SIGNLESS CONCENTRATION IS STILL AN OBJECT OF INSIGHT
+
+A117's central correction is:
+
+**a state can be extremely subtle, peaceful, and “signless” and still itself be something to be known as conditioned.**
+
+The practitioner does not stop at:
+“this state is extraordinary.”
+
+They turn discernment onto the state itself:
+
+- how is it produced?
+- is it permanent?
+- is it liable to cessation?
+- is there still appropriation or ignorance around it?
+
+This preserves the broader Buddhist method:
+**no experience receives final status merely because it is refined.**
+
+### WHY “SIGNLESS” DOES NOT MEAN “UNCONDITIONED”
+
+`Animitta` describes the state in terms of absence/non-attending to signs, but MN 121 explicitly says that this concentration is produced and liable to cessation.
+
+Therefore:
+
+`signless`
+≠ automatically
+`unconditioned`.
+
+The absence of ordinary signs or conceptual markers is a feature of the concentration, not proof that the concentration itself is Nibbāna.
+
+This conclusion is **TEXT_ATTESTED + CROSS_TEXT SYNTHESIS**: the conditioned status is explicit in MN 121; the warning against equating subtle state with final liberation follows from the contrast with the subsequent `āsava)-destruction formula.
+
+### STATE-ATTAINMENT VERSUS ERADICATION
+
+A108–A110 established:
+- hindrance absent ≠ latent tendency eradicated;
+- calm ≠ fetter cut;
+- concentration ≠ `āsavas` destroyed.
+
+A117 provides a particularly strong case.
+
+Even the signless concentration can:
+- arise under conditions;
+- be stabilized;
+- be known;
+- cease.
+
+By contrast, the liberation formula concerns the **destruction of taints that generate bondage**.
+
+Thus:
+
+**meditative attainment** asks:
+“What state is present?”
+
+**eradication** asks:
+“What causal source of renewed bondage no longer operates?”
+
+This distinction is a `CROSS_TEXT_SYNTHESIS`, but MN 121 gives unusually direct support because both occur in one sequence.
+
+### THE KEY MOVE IS REFLEXIVE INSIGHT
+
+The practitioner applies impermanence not merely to coarse experience but to the very concentration through which insight is being cultivated.
+
+That produces a methodological pattern:
+
+1. use concentration to simplify and stabilize experience;
+2. do not identify with the concentration;
+3. inspect the concentration itself as produced;
+4. see it as impermanent and cessation-bound;
+5. thereby do not make even a sublime state into “mine / I / self” or final refuge;
+6. the mind is released from the `āsavas`.
+
+A117 calls this **reflexive insight** as a working analytical phrase, not an early canonical technical term.
+
+### WHY THIS IS DIFFERENT FROM DESTROYING THE STATE
+
+Liberation does not require hating or violently terminating the signless concentration.
+
+The text says the concentration is understood correctly as conditioned and impermanent.
+
+The liberative movement is through **knowledge and seeing**, not through aversion toward the state.
+
+So:
+
+“subject to cessation”
+does not mean
+“must be forcibly destroyed.”
+
+The insight removes ignorance and appropriation regarding the state.
+
+### THE THREE ĀSAVAS DEFINE A DIFFERENT LEVEL OF CLAIM
+
+MN 121 names:
+- `kāmāsava` — taint of sensuality;
+- `bhavāsava` — taint of becoming;
+- `avijjāsava` — taint of ignorance.
+
+Their destruction is not another temporary meditative configuration.
+
+It marks a transformation in the causal basis of bondage.
+
+A117 therefore keeps separate:
+
+`animitta cetosamādhi`
+= conditioned refined state;
+
+`āsavakkhaya`
+= destruction of deep taints / completion formula.
+
+They are related in the path but not identical.
+
+### THE LIVING-BODY REMAINDER
+
+After liberation, MN 121 says there remains a modicum of disturbance associated with:
+- this very body;
+- the six sense bases;
+- life as condition.
+
+This is important.
+
+The arahant is liberated from the named taints while:
+- seeing can still occur;
+- hearing can still occur;
+- contact and bodily life continue;
+- conditioned sensory functioning remains until life ends.
+
+Therefore final liberation in this life is not described as immediate disappearance of all conditioned phenomena.
+
+### WHAT “CONDITIONED” MUST NOT BE MADE TO MEAN
+
+A117 preserves several lexical guardrails.
+
+Do not infer from `abhisaṅkhata / abhisañcetayita` that:
+- every conditioned phenomenon is consciously manufactured by a little inner agent;
+- “volitionally produced” proves a metaphysical free will;
+- all uses of `saṅkhāra`, `saṅkhata`, and `abhisaṅkhata` are exact synonyms.
+
+The text securely says this concentration is produced/fashioned and therefore impermanent and cessation-bound.
+
+A complete lexical theory of these related terms remains passage-sensitive.
+
+### RELATION TO THE UNCONDITIONED — OPENING, NOT YET FULLY CLOSED
+
+A117 establishes a negative boundary:
+the signless concentration itself is **not** treated as unconditioned in MN 121.
+
+But A117 does not yet fully define the early-discourse meaning of `asaṅkhata` or its relation to Nibbāna.
+
+That becomes A118.
+
+This prevents an unsafe jump from:
+“this state is conditioned”
+straight to
+“therefore I already have a complete ontology of the unconditioned.”
+
+### LATER “THREE DOORS TO LIBERATION” — GUARDRAIL
+
+Later Buddhist systems often organize emptiness, signlessness, and wishlessness into highly structured “three doors/gateways to liberation” schemes.
+
+A117 does not reject those systems.
+
+But it does not import that later architecture into MN 121 unless separately labelled and sourced.
+
+For this checkpoint the secure early-text finding is narrower:
+**the signless concentration itself is produced and cessation-bound, while liberation is marked by destruction of the `āsavas`.**
+
+### BUDDHA'S REASONING METHOD
+
+A117 shows a demanding form of epistemic discipline:
+
+**do not exempt your best experience from scrutiny.**
+
+Ordinary pleasure is examined.
+Jhāna is examined.
+Formless attainments are examined.
+Even signless concentration is examined.
+
+The more refined the state, the greater the danger of mistaking subtlety for finality.
+
+The Buddha's method therefore asks:
+not “how impressive is this?”
+but
+“is this conditioned, impermanent, appropriated, and still connected with the causes of bondage?”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's `Samādhipañha` describes concentration as the leading/organizing quality toward which wholesome states incline, and quotes the principle that a concentrated practitioner knows things as they really are.
+
+The immediately following wisdom discussion gives wisdom the marks of cutting/severing and illumination.
+
+**Role:** later/paracanonical support for a functional distinction:
+- concentration organizes/stabilizes;
+- wisdom sees and cuts through ignorance.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not override MN 121, and its functional similes are not used to claim that every concentration/wisdom relation is fully defined by one later passage.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate signlessness with the unconditioned.
+- Do not equate a refined state with eradication.
+- Do not infer final liberation from peace, subtlety, or conceptual quiet alone.
+- Do not interpret “subject to cessation” as a command to hate or forcibly destroy the state.
+- Do not treat `abhisaṅkhata`, `abhisañcetayita`, `saṅkhata`, and `saṅkhāra` as automatically identical in every context.
+- Do not infer that `āsava)-destruction means the living six-sense system immediately disappears.
+- Do not import later “three liberation doors” schemas into MN 121 without explicit labelling.
+
+### Sources
+
+- MN 121 Cūḷasuññata Sutta.
+- SN 35.99 Samādhi Sutta as a supporting early-discourse concentration → seeing-things-as-they-are formula.
+- Milindapañha 3.1.14 Samādhipañha and the following wisdom discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A118
+
+**What does `asaṅkhata` (“the unconditioned”) mean in the early discourses, how is it related to Nibbāna, and how can it be distinguished from any conditioned meditative state without turning it into a hidden eternal Self or metaphysical substance?**
+
+Required lanes:
+- SN 43 `asaṅkhata` material;
+- Nibbāna synonyms and cessation language;
+- relation to MN 121 conditioned signless concentration;
+- `ajāta / abhūta / akata / asaṅkhata` material where textually secure;
+- guard against “unconditioned = eternal self/substance” and “unconditioned = mere nonexistence”;
+- distinguish early-text attestation from later Abhidhamma/metaphysical systematization;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
