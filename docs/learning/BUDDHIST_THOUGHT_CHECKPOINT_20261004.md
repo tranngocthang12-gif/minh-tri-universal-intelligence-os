@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A109 COMPLETED  
-**Next checkpoint:** PHASE 4 — A110  
+**Current checkpoint:** PHASE 4 — A110 COMPLETED  
+**Next checkpoint:** PHASE 4 — A111  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15844,6 +15844,167 @@ Required lanes:
 - anusaya material from A109;
 - distinguish state, tendency, bond, and deep outflow/conditioning categories;
 - avoid importing later one-to-one systematizations unless labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A110
+
+**Central question:** How do `anusaya`, `saṁyojana` (fetters), `āsava` (taints/effluents), `nīvaraṇa` (hindrances), and presently active defilements relate without collapsing distinct early-Buddhist diagnostic categories into one?
+
+### TEXT_ATTESTED
+
+1. **AN 7.12** enumerates seven `anusaya`: sensual desire, aversion, views, doubt, conceit, desire for rebirth/becoming, and ignorance. This category is explicitly about underlying tendencies to be abandoned and cut out.
+2. **AN 10.13** enumerates ten `saṁyojana`: five lower fetters—identity view, doubt, misapprehension of precepts/observances, sensual desire, and ill will—and five higher fetters—desire for form-realm rebirth, desire for formless rebirth, conceit, restlessness, and ignorance.
+3. **SN 46.37** and related hindrance texts define the five `nīvaraṇa` as sensual desire, ill will, dullness/drowsiness, restlessness/remorse, and doubt; they are described as obstacles/corruptions of the heart that weaken wisdom.
+4. **MN 43** says that on entering the first jhāna the five hindrances have been given up. This proves that the hindrance category tracks states that obstruct concentration and can be absent in a concentrated mind.
+5. **MN 9**, **MN 2**, and repeated liberation formulas give a threefold early-discourse `āsava` pattern: sensuality, desire for rebirth/becoming, and ignorance; destruction of the āsavas is a standard marker of arahant liberation.
+6. **DN 16** distinguishes path attainments through fetter-cutting: stream-entry is associated with ending three fetters, non-return with ending the five lower fetters, while arahantship is described through ending the āsavas. This prevents equating temporary calm with irreversible liberation.
+
+### THE CATEGORIES ARE FUNCTIONAL, NOT MUTUALLY EXCLUSIVE SUBSTANCES
+
+A110's central correction is that these terms do not name five separate "things" stored in the mind.
+
+They are different diagnostic lenses:
+
+- `nīvaraṇa` asks: **what is obstructing clarity, meditation, and wisdom right now?**
+- `anusaya` asks: **what disposition can regenerate when supporting conditions occur, even if it is not presently manifest?**
+- `saṁyojana` asks: **what still binds the person to saṁsāric becoming and marks irreversible path-stage bondage?**
+- `āsava` asks: **what deep taint/flow sustains ignorance, sensuality, and becoming until final liberation?**
+- "active defilement" asks: **what greed, aversion, delusion, doubt, conceit, restlessness, or related unskillful state is actually manifest now?**
+
+This five-lens scheme is a `CROSS_TEXT_SYNTHESIS`. The early discourses provide the categories and lists, but not one passage that defines the entire comparison in these exact terms.
+
+### ONE DOMAIN CAN APPEAR IN SEVERAL CATEGORIES
+
+The overlap is deliberate evidence that the categories are not synonyms.
+
+**Sensuality:**
+`kāmarāga-anusaya` — latent tendency;
+`kāmarāga-saṁyojana` — fetter/bond;
+`kāmāsava` — taint;
+`kāmacchanda-nīvaraṇa` — present hindrance;
+present lust/greed — active manifestation.
+
+**Doubt:**
+`vicikicchānusaya` — latent tendency;
+`vicikicchā-saṁyojana` — fetter;
+`vicikicchā-nīvaraṇa` — hindrance;
+present indecision/confusion — active manifestation.
+There is no need to invent a standard "doubt-āsava" to force symmetry.
+
+**Ignorance:**
+`avijjānusaya` — latent tendency;
+`avijjā-saṁyojana` — higher fetter;
+`avijjāsava` — taint.
+Ignorance is not itself named as one of the five hindrances, even though the hindrances obstruct wisdom and can feed ignorance.
+
+**Restlessness:**
+`uddhacca` appears in the hindrance pair `uddhacca-kukkucca` and also as a higher fetter, but it is not one of the standard seven anusaya and not one of the three āsavas.
+
+Therefore there is no valid one-to-one mapping in which every defilement must have one member in every category.
+
+### WHY "HINDRANCE ABSENT" DOES NOT MEAN "FETTER CUT"
+
+MN 43 gives the decisive practical contrast: the five hindrances are absent in first jhāna.
+
+But early path-stage descriptions reserve irreversible claims such as "three fetters ended," "five lower fetters ended," or "āsavas destroyed" for liberative attainment.
+
+So:
+
+`hindrance presently absent`
+≠ `latent tendency eradicated`
+≠ `fetter cut`
+≠ `āsava destroyed`.
+
+A concentrated mind can be temporarily free of a hindrance while deeper bondage remains unresolved.
+
+This is a `CROSS_TEXT_SYNTHESIS`, but it is tightly constrained by MN 43, AN 10.13, AN 7.12, MN 9/MN 2, and DN 16.
+
+### WHY "ACTIVE DEFILEMENT" MUST REMAIN A WORKING LABEL
+
+The early discourses use several vocabularies for presently arisen unskillful states: greed, aversion, delusion, sensual thought, malicious thought, cruel thought, hindrances, corruptions, and other specific terms.
+
+A fixed universal list "ten kilesas" is characteristic of later systematic presentation.
+
+Therefore A110 uses **active kilesa-type defilement** only as a working analytical phrase meaning "a defiling state presently manifest." It must not be silently treated as a single early-sutta technical taxonomy.
+
+### EARLY-BUDDHIST DIAGNOSTIC LOGIC
+
+The same observed calm can have very different meanings:
+
+A person is not angry now.
+That establishes only non-manifestation.
+
+If painful contact quickly produces resistance, the aversion tendency is still conditionally active.
+
+If the relevant fetter has not been irreversibly cut, saṁsāric bondage remains.
+
+If the āsavas are not destroyed, final liberation has not been reached.
+
+Thus diagnosis moves from surface state to deeper conditional structure without assuming a hidden permanent substance.
+
+### RELATION TO A108–A109
+
+A108 established that restraint or calm is not yet eradication.
+
+A109 established that `anusaya` explains how a tendency can remain without explicit manifestation.
+
+A110 now adds a broader taxonomy:
+- hindrance = present obstacle;
+- latent tendency = regenerative disposition;
+- fetter = binding structure tied to stages of awakening;
+- āsava = deep taint whose ending is associated with arahantship;
+- active defilement = presently manifest unskillful state.
+
+These are related perspectives on bondage, not interchangeable labels.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+**Milindapañha 3.1.10** uses the image of faith clearing the five hindrances so that the mind becomes clear and serene.
+
+Another Milindapañha discussion of knowledge and wisdom compares defilements to an opposing army and says that when they are decisively broken through the spiritual faculties they do not arise again.
+
+**Role:** later/paracanonical support for distinguishing a mind becoming clear of hindrances from the stronger language of defilements being decisively broken.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** these Milindapañha analogies do not define the early categories and do not justify forcing `nīvaraṇa`, `anusaya`, `saṁyojana`, `āsava`, and `kilesa` into one later systematic hierarchy.
+
+### CORRECTIONS PRESERVED
+
+- Do not translate every category simply as "defilement" and then assume identity.
+- Do not infer eradication from temporary absence.
+- Do not infer that every item must appear in every category.
+- Do not equate `kāmacchanda`, `kāmarāga`, and `kāmāsava` as lexically identical merely because all concern sensuality.
+- Do not treat the later fixed ten-kilesa list as though one early discourse supplied it.
+- Do not use Milindapañha to overwrite early-discourse taxonomy.
+- Do not treat the categories as metaphysical substances; their textual force is diagnostic and functional.
+
+### Sources
+
+- AN 7.12 Dutiya-anusaya Sutta.
+- AN 10.13 Saṁyojana Sutta.
+- SN 46.37 Āvaraṇa-nīvaraṇa Sutta.
+- MN 43 Mahāvedalla Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- MN 2 Sabbāsava Sutta.
+- DN 16 Mahāparinibbāna Sutta.
+- Milindapañha 3.1.10 and the knowledge/wisdom discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A111
+
+**How do stream-entry, once-return, non-return, and arahantship differ in what is ended, weakened, temporarily absent, or still capable of arising, without importing later stage-maps where the early discourses do not explicitly supply them?**
+
+Required lanes:
+- DN 16 attainment descriptions;
+- three fetters, five lower fetters, five higher fetters;
+- "weakened greed, hate, and delusion" versus fetter-cutting;
+- āsava destruction as arahant marker;
+- jhāna/hindrance temporary absence versus irreversible path attainment;
+- avoid premature one-to-one mapping of all seven anusaya to each attainment stage;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
