@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A120 COMPLETED  
-**Next checkpoint:** PHASE 4 — A121  
+**Current checkpoint:** PHASE 4 — A121 COMPLETED  
+**Next checkpoint:** PHASE 4 — A122  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -18161,6 +18161,246 @@ Required lanes:
 - “put aside” in relation to A120's undeclared questions;
 - distinguish question classification from truth relativism;
 - compare with Milindapañha's question-handling method as later/paracanonical support;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A121
+
+**Central question:** What are the Buddha's different legitimate ways of answering questions—direct answer, analytical/qualified answer, counter-question, and setting aside—and how does choosing the response form itself reveal his reasoning method?
+
+### TEXT_ATTESTED
+
+1. **AN 4.42** explicitly distinguishes four ways a question may be answered:
+   - categorically/directly (`ekaṃsavyākaraṇīya`);
+   - analytically/after distinction (`vibhajjavyākaraṇīya`);
+   - by counter-question (`paṭipucchāvyākaraṇīya`);
+   - by setting aside (`ṭhapanīya`).
+2. The verse attached to AN 4.42 praises the person who knows which mode a question requires and answers accordingly. Thus correct reasoning includes not only truth-content but also selecting the appropriate **form of response**.
+3. **MN 58** provides an example of analytical qualification in speech: the Buddha does not use a one-rule policy such as “always say only agreeable things.” He distinguishes truth/falsity, benefit/harm, agreeableness/disagreeableness, and proper timing.
+4. **MN 63 / MN 72 / SN 44 material** provide clear examples of questions that are set aside rather than answered inside the questioner's forced alternatives.
+5. Throughout the discourses, counter-questioning is repeatedly used to expose premises, obtain missing distinctions, or get the interlocutor to acknowledge an observable relation before the Buddha gives the conclusion.
+
+### FOUR RESPONSE MODES ARE NOT FOUR DEGREES OF TRUTH
+
+A121's first guardrail is:
+
+The fourfold classification concerns **how a question should be handled**, not whether truth itself is relative.
+
+A categorical answer is appropriate when the proposition is sufficiently well-formed and the relevant distinction is settled.
+
+An analytical answer is appropriate when a bare yes/no would erase a necessary distinction.
+
+A counter-question is appropriate when the questioner's assumptions or missing information must first be exposed.
+
+Setting aside is appropriate when the question is not fit to be answered in the offered form, or when answering it does not conduce to the declared goal.
+
+Therefore:
+
+`different answer form`
+does not imply
+`different truth for different people`.
+
+### 1. CATEGORICAL / DIRECT ANSWER
+
+A categorical answer is not “dogmatic speech.”
+
+It is a response where no further qualification is required for the question as posed.
+
+The method requires confidence that:
+- the terms are sufficiently clear;
+- the proposition is not hiding a material ambiguity;
+- a direct answer will not create a false implication.
+
+Thus the Buddha's directness is conditional on the **quality of the question**.
+
+### 2. ANALYTICAL / QUALIFIED ANSWER
+
+A121 treats `vibhajja` as especially important for understanding Buddhist reasoning.
+
+The point is not to evade commitment by endless nuance.
+
+It is to avoid false binaries.
+
+MN 58 gives the clearest functional model:
+before speaking, distinguish:
+- true vs false;
+- beneficial vs harmful;
+- agreeable vs disagreeable;
+- timely vs untimely.
+
+A simplistic rule such as:
+“the Buddha only says pleasant things”
+or
+“truth should always be said immediately regardless of consequences”
+does not survive the analysis.
+
+So analytical answering means:
+**separate variables before judging the case.**
+
+### 3. COUNTER-QUESTION AS DIAGNOSTIC METHOD
+
+A counter-question can serve several functions:
+
+- clarify what the questioner means;
+- expose an assumption;
+- establish a premise the interlocutor already accepts;
+- move from abstract assertion to direct observation;
+- reveal that the original question was too coarse.
+
+This is not automatically evasion.
+
+If the original question depends on an unexamined premise, answering it immediately may strengthen confusion.
+
+A121 therefore treats counter-questioning as:
+**premise inspection before conclusion.**
+
+This is a `CROSS_TEXT_SYNTHESIS` based on the fourfold classification and repeated dialogue structure.
+
+### 4. SETTING ASIDE
+
+A120 already showed that some metaphysical questions are not answered within their own frame.
+
+AN 4.42 now gives that practice a general response category:
+some questions are to be **set aside**.
+
+This does not mean:
+- every difficult question is avoided;
+- the Buddha lacks an answer;
+- anything inconvenient can be declared “unanswerable.”
+
+The decision must be justified by the question's structure and role.
+
+MN 63 adds a relevance criterion.
+MN 72 / SN 44 add a framework criterion.
+
+Thus “set aside” is disciplined by reasons.
+
+### QUESTION FORM CAN ITSELF BE A SOURCE OF ERROR
+
+A121 makes explicit a principle already visible in A120:
+
+A question can be wrong before any answer is given.
+
+It may:
+- conflate two categories;
+- contain a false presupposition;
+- force a yes/no where analysis is needed;
+- ask for a predicate that does not apply;
+- be irrelevant to the actual causal problem.
+
+Therefore rigorous reasoning requires:
+**classifying the question before producing the answer.**
+
+This is one of the most reusable features of the Buddha's dialogue method.
+
+### MN 58 AS A MODEL OF MULTI-CRITERIA REASONING
+
+MN 58 matters because it shows that Buddhist practical judgment is not governed by a single slogan.
+
+Speech is evaluated through multiple dimensions.
+
+Truth is necessary, but truth alone is not the whole decision rule.
+
+Benefit and timing matter too.
+
+This prevents:
+- brutal speech defended as “just being truthful”;
+- comforting falsehood defended as “being kind.”
+
+The reasoning is conjunctive and context-sensitive without becoming relativistic.
+
+### COUNTER-QUESTION DOES NOT AUTOMATICALLY MEAN SOCRATIC METHOD
+
+A121 preserves a comparative guardrail.
+
+The Buddha often uses questions to lead an interlocutor through premises.
+
+This may resemble other dialogical traditions.
+
+But the project does not label the method “Socratic” as if the two systems were historically or technically identical.
+
+The safe description is:
+**diagnostic and elicitive questioning** within an early Buddhist soteriological framework.
+
+### PUTTING ASIDE ≠ SILENCE AS AUTHORITY
+
+Another guardrail:
+
+A teacher's refusal to answer is not valid merely because the teacher is authoritative.
+
+In the early-text examples, refusal is linked to:
+- wrong framing;
+- self-view;
+- speculative fixation;
+- lack of relevance to cessation of suffering.
+
+Therefore A121 does not turn “the Buddha stayed silent” into a universal license for unaccountable authority.
+
+The non-answer itself requires a reason.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha preserves an explicit concern with different legitimate modes of handling questions and uses debate/dialogue form throughout to separate ambiguity, expose assumptions, answer by analogy, and refuse false implications.
+
+**Role:** later/paracanonical support for the broader principle that the **form of answering must match the form of the question**.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha is not used to replace AN 4.42 as the early-text anchor for the four response modes.
+
+### BUDDHA'S REASONING METHOD
+
+A121 yields a compact decision procedure:
+
+1. **Can this be answered directly without distortion?**
+   - yes → categorical answer.
+2. **Does the question hide distinctions?**
+   - yes → analyze first.
+3. **Does the question depend on an unstated premise or missing clarification?**
+   - yes → counter-question.
+4. **Is the frame itself inapplicable or irrelevant to liberation?**
+   - yes → set aside.
+
+The reasoning skill is therefore not merely:
+“know the right answer.”
+
+It is:
+**know what kind of answer this question deserves.**
+
+### CORRECTIONS PRESERVED
+
+- Do not treat all questions as yes/no questions.
+- Do not confuse qualified answering with evasiveness.
+- Do not confuse counter-questioning with refusal to reason.
+- Do not treat “set aside” as proof that the Buddha did not know.
+- Do not infer truth relativism from context-sensitive answer forms.
+- Do not turn teacherly silence into unaccountable authority.
+- Do not collapse Milindapañha's later question-handling discussions into the early AN 4.42 source.
+
+### Sources
+
+- AN 4.42 Pañhabyākaraṇa Sutta.
+- MN 58 Abhayarājakumāra Sutta.
+- MN 63 Cūḷa-Māluṅkyovāda Sutta.
+- MN 72 Aggi-Vacchagotta Sutta.
+- SN 44 post-mortem Tathāgata discussions.
+- Milindapañha question-handling/dialogical method as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A122
+
+**How does the Buddha decide what counts as skillful speech and useful truth-telling when truth, benefit, agreeableness, timing, and compassion can pull in different directions?**
+
+Required lanes:
+- MN 58 in detail;
+- truth/benefit/timing matrix;
+- relation to right speech;
+- distinguish compassion from pleasing people;
+- distinguish truthfulness from indiscriminate disclosure;
+- examples where unpleasant speech is still justified;
+- relation to intention and consequences;
+- mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
