@@ -58,7 +58,7 @@ def build_index(root: Path = ROOT) -> dict:
 
 
 def render_index(root: Path = ROOT) -> str:
-    return json.dumps(build_index(root), ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    return json.dumps(build_index(root), ensure_ascii=False, indent=2) + "\n"
 
 
 if __name__ == "__main__":
