@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A115 COMPLETED  
-**Next checkpoint:** PHASE 4 — A116  
+**Current checkpoint:** PHASE 4 — A116 COMPLETED  
+**Next checkpoint:** PHASE 4 — A117  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16976,6 +16976,246 @@ Required lanes:
 - SN 35.85 emptiness-of-self comparison;
 - distinguish emptiness as attribute, perception, liberation, and meditative dwelling where the texts require;
 - guard against treating emptiness as blankness, trance, or nonexistence;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A116
+
+**Central question:** How does “emptiness” function as a meditative dwelling in MN 121 / MN 122, and how is that use related to—but not identical with—SN 35.85’s “empty of self and what belongs to self”?
+
+### TEXT_ATTESTED
+
+1. **MN 121** begins with the Buddha affirming that he dwells much in emptiness. Its opening example is concrete: Migāra’s Mother’s palace is empty of elephants, cattle, gold, crowds, and other absent things, while what remains—the community of monks—is known as present.
+2. MN 121 then states the governing method: what is absent is seen as empty of that; whatever remains is understood as present—“there is this.” The discourse calls this an entry into emptiness that accords with actuality and is undistorted.
+3. The practice proceeds by progressively simplifying the field of attention: from village/person perceptions to wilderness, earth, the formless attainments, and finally signless concentration. At each stage, certain disturbances are absent while a subtler remainder is explicitly acknowledged.
+4. MN 121 does **not** define emptiness as blankness. Every stage requires accurate recognition of both:
+   - what is absent;
+   - what is still present.
+5. At the level of signless concentration, the practitioner sees that even this refined concentration is fabricated/conditioned, impermanent, and subject to cessation. With that seeing, the mind is liberated from the taints of sensuality, becoming, and ignorance.
+6. Even after the taints are destroyed, MN 121 still notes a residual disturbance connected with the living body and six sense bases dependent on life. This is another direct guardrail against interpreting emptiness as absence of all experience.
+7. **MN 122** treats emptiness as an internal meditative dwelling requiring a mind that is first steadied, settled, unified, and concentrated. If the mind does not settle in internal emptiness, the practitioner is instructed to know that fact rather than pretend success.
+8. MN 122 integrates the emptiness dwelling with conduct: walking, standing, sitting, lying down, speech, and thought are monitored so that covetousness, sadness, and other unskillful states do not take possession.
+9. **SN 35.85** uses “empty” in a different but related way: the sixfold sensory world is empty of self and what belongs to self.
+
+### THE CORE METHOD OF MN 121: ABSENCE + REMAINDER
+
+A116's central finding is that MN 121 defines meditative emptiness relationally.
+
+The practitioner does not merely ask:
+“What has disappeared?”
+
+They also ask:
+“What remains?”
+
+The repeated structure is:
+
+**empty of X**
++
+**Y remains present**
++
+**know both accurately**.
+
+This is crucial.
+
+If a mode of perception is empty of village and human-being perceptions but still contains wilderness perception, the practitioner does not call the whole field “nothing.”
+
+Likewise, if a subtler meditative state remains, its residual disturbance is explicitly acknowledged.
+
+Therefore MN 121 trains **precision about absence**, not metaphysical denial.
+
+### EMPTINESS AS REDUCTION OF DISTURBANCE
+
+Each move in MN 121 removes coarser disturbances while exposing a subtler remainder.
+
+A useful functional reading is:
+
+village/person perception
+→ wilderness
+→ earth
+→ infinite space
+→ infinite consciousness
+→ nothingness
+→ neither-perception-nor-non-perception
+→ signless concentration
+→ seeing even that conditioned state as impermanent
+→ liberation from the āsavas.
+
+This sequence is **TEXT_ATTESTED in broad structure**, but any claim that it is the only possible Buddhist meditation sequence would exceed the text.
+
+The governing logic is not “higher = more metaphysically real.”
+
+It is:
+**what disturbances have ceased, and what conditioned disturbance still remains?**
+
+### “THERE IS THIS” — EMPTINESS WITHOUT DENIAL
+
+MN 121's repeated recognition that what remains is present gives a strong anti-nihilist safeguard.
+
+Emptiness practice requires one to avoid both:
+- adding what is not there;
+- denying what is there.
+
+This means that “empty” is disciplined by actuality.
+
+A116 therefore summarizes the method as:
+
+**do not reify absence;
+do not erase remainder;
+know both.**
+
+This is a `CROSS_TEXT / FUNCTIONAL SYNTHESIS` grounded directly in the repeated MN 121 formula.
+
+### MN 122: EMPTINESS REQUIRES A TRAINED, STABLE MIND
+
+MN 122 adds an operational condition.
+
+Before internal emptiness can become a stable dwelling, the mind is made:
+- steady;
+- settled;
+- unified;
+- concentrated.
+
+The discourse explicitly routes this through the jhānas.
+
+Then the practitioner checks:
+“Does the mind actually settle into internal emptiness?”
+
+If not, that failure is itself known.
+
+This is important for Buddhist reasoning method:
+**the instruction contains an internal falsification check.**
+
+The meditator is not told to declare attainment by belief or aspiration.
+
+They test whether the mind really enters, settles, and remains.
+
+### EMPTINESS IS NOT ONLY A SITTING-TRANCE
+
+MN 122 carries the training into ordinary activities.
+
+While walking, standing, sitting, lying down, speaking, and thinking, the practitioner monitors whether unskillful states are taking possession.
+
+Therefore the emptiness dwelling is not safely reduced to:
+- sensory shutdown;
+- a blank trance;
+- a special state disconnected from conduct.
+
+The meditative center must generalize into how movement, speech, thought, and social contact are handled.
+
+### SECLUSION IS A CONDITION, NOT A METAPHYSICAL CLAIM
+
+MN 122 strongly praises seclusion and warns against delight in company and crowds when that undermines renunciation and concentration.
+
+A116 does not turn this into the universal proposition:
+“other people are bad” or “liberation requires permanent social isolation.”
+
+The textual point is functional:
+certain forms of social entanglement can disturb the conditions needed for deep emptiness practice.
+
+This is a training claim, not an ontology of society.
+
+### RELATION TO SN 35.85
+
+SN 35.85:
+**the sensory world is empty of self and what belongs to self.**
+
+MN 121:
+**a meditative field is empty of whatever disturbance/perception is absent, while what remains is accurately known.**
+
+MN 122:
+**emptiness is cultivated as an internal/external meditative dwelling supported by concentration and guarded conduct.**
+
+These uses are related but not identical.
+
+A safe synthesis is:
+
+- SN 35.85 emphasizes **what experience is empty of** with respect to self;
+- MN 121 emphasizes **progressively noticing absence and remainder**;
+- MN 122 emphasizes **how emptiness is entered, stabilized, and carried into practice**.
+
+This threefold comparison is `CROSS_TEXT_SYNTHESIS`.
+
+### EMPTINESS AS ATTRIBUTE, LIBERATION, AND DWELLING
+
+The early discourses use emptiness in several connected functions:
+
+- **attribute:** a field is empty of self/what belongs to self;
+- **meditative dwelling:** one abides in a mode of perception by accurately attending to absence and remainder;
+- **heart/mind liberation through emptiness:** other early texts such as MN 43 / SN 41.7 use emptiness as a liberation mode.
+
+A116 does not assume that these are one technical state under three names.
+
+They overlap in practice and de-appropriation, but the textual functions must remain distinct.
+
+### WHY THE SIGNLESS STATE IS NOT THE END
+
+MN 121 contains an especially important correction.
+
+The signless concentration is extremely refined, yet the practitioner sees:
+- it is fabricated/conditioned;
+- it is impermanent;
+- it is subject to cessation.
+
+Therefore even a very refined meditative state must not be mistaken for final liberation merely because it is peaceful or subtle.
+
+The decisive transition occurs when clinging/taints are ended, not when an impressive state is merely attained.
+
+This preserves the A108–A114 distinction between temporary state and eradication.
+
+### THE LIVING ARAHANT IS NOT “BLANK”
+
+MN 121 says that when the sensuality, becoming, and ignorance taints are absent, a remainder connected with the living body and six sense bases dependent on life is still present.
+
+So:
+
+**āsavas destroyed**
+does not mean
+**the sensory organism instantly disappears**.
+
+This is consistent with the earlier distinction between liberation and the continuing conditioned life of the arahant.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Milindapañha discussion of `samādhi` describes concentration as a leading/organizing quality toward which wholesome states incline, and cites the principle that a concentrated practitioner knows things as they really are.
+
+**Role:** later/paracanonical support for MN 122's insistence that the mind first become steady, unified, and concentrated before emptiness can be reliably entered and examined.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha is not used to define MN 121's emptiness sequence or to override the early-discourse tests of absence, remainder, conditionedness, and āsava destruction.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate emptiness with blankness.
+- Do not notice only absence; MN 121 requires knowing what remains.
+- Do not equate refined concentration with final liberation.
+- Do not treat “internal emptiness” as a self-certified attainment; MN 122 requires checking whether the mind actually settles there.
+- Do not reduce emptiness to a sitting trance disconnected from conduct.
+- Do not equate SN 35.85's emptiness-of-self formula with every meditative use of emptiness.
+- Do not use later/paracanonical concentration theory to overwrite MN 121 / MN 122.
+
+### Sources
+
+- MN 121 Cūḷasuññata Sutta.
+- MN 122 Mahāsuññata Sutta.
+- SN 35.85 Suñña Sutta.
+- MN 43 / SN 41.7 for emptiness as a mode of mind/heart liberation.
+- Milindapañha Samādhipañha (concentration discussion) as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A117
+
+**Why does MN 121 treat even `animitta cetosamādhi` (signless concentration of mind) as conditioned and subject to cessation, and what exactly distinguishes that refined state from liberation through destruction of the āsavas?**
+
+Required lanes:
+- MN 121 signless concentration and its conditioned status;
+- `saṅkhata` / intentional construction guardrail;
+- signless concentration versus destruction of sensuality-, becoming-, and ignorance-āsavas;
+- living-body/six-sense-base remainder after liberation;
+- relation to A108–A110 state-versus-eradication distinctions;
+- avoid importing later “three doors to liberation” schemas unless explicitly labelled;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
