@@ -1,0 +1,37 @@
+{
+  "schema": "minhtri-retrieval-eval-response/v1",
+  "set_id": "ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001",
+  "graded_seat_id": "REPLACE_WITH_FRESH_SEAT_ID",
+  "answers": [
+    {
+      "qid": "Q1",
+      "answer_status": "SUPPORTED|UNSUPPORTED|PENDING_REVIEW",
+      "record_ids": [],
+      "answer": ""
+    },
+    {
+      "qid": "Q2",
+      "answer_status": "SUPPORTED|UNSUPPORTED|PENDING_REVIEW",
+      "record_ids": [],
+      "answer": ""
+    },
+    {
+      "qid": "Q3",
+      "answer_status": "SUPPORTED|UNSUPPORTED|PENDING_REVIEW",
+      "record_ids": [],
+      "answer": ""
+    },
+    {
+      "qid": "Q4",
+      "answer_status": "SUPPORTED|UNSUPPORTED|PENDING_REVIEW",
+      "record_ids": [],
+      "answer": ""
+    },
+    {
+      "qid": "Q5",
+      "answer_status": "SUPPORTED|UNSUPPORTED|PENDING_REVIEW",
+      "record_ids": [],
+      "answer": ""
+    }
+  ]
+}
