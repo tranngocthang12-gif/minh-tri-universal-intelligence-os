@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A112 COMPLETED  
-**Next checkpoint:** PHASE 4 — A113  
+**Current checkpoint:** PHASE 4 — A113 COMPLETED  
+**Next checkpoint:** PHASE 4 — A114  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16400,6 +16400,214 @@ Required lanes:
 - I-making / mine-making language;
 - conventional speech without ontological reification;
 - implications for stream-entry versus arahantship;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A113
+
+**Central question:** How should `sakkāyadiṭṭhi` (identity view) be distinguished from `asmimāna` (“I am” conceit), `ahaṅkāra/mamaṅkāra` (I-making/mine-making), and ordinary conventional self-reference after stream-entry?
+
+### TEXT_ATTESTED
+
+1. **MN 44** gives a precise definition of identity view in relation to each of the five aggregates. For each aggregate, one may regard:
+   - the aggregate **as self**;
+   - self **as possessing** the aggregate;
+   - the aggregate **as in self**;
+   - self **as in** the aggregate.
+   Across five aggregates, this yields twenty identity-view modes.
+2. **SN 22.89 (Khemaka)** shows that a practitioner can reject all such aggregate-as-self identifications and yet still retain a subtler `asmīti` / `asmimāna`—the residual sense or conceit “I am”—together with desire and underlying tendency connected with it.
+3. **SN 1.25** explicitly allows conventional first-person speech in an arahant. An arahant may say “I speak” and others may say “they speak to me,” while being skilled in worldly expression and not construing an ego behind the words.
+4. **MN 1** distinguishes direct knowing from conceiving and mine-making. One may know an object without adding the conceivings “in it,” “from it,” “mine,” or delighting in it.
+5. These passages together establish that **using first-person language is not by itself identity view**.
+
+### SAKKĀYADIṬṬHI IS A VIEW-STRUCTURE, NOT EVERY SELF-REFERENCE
+
+The twentyfold pattern in MN 44 is crucial.
+
+`Sakkāyadiṭṭhi` is not safely defined as:
+- saying “I”;
+- remembering one's biography;
+- making plans;
+- recognizing one's body;
+- using one's name;
+- distinguishing oneself from another person in ordinary speech.
+
+Those can all occur without asserting any aggregate, or a self related to an aggregate, as an enduring self in the twentyfold identity-view pattern.
+
+Therefore:
+
+`ordinary self-reference`
+≠ automatically
+`sakkāyadiṭṭhi`.
+
+### THE TWENTY MODES: FOUR RELATIONS × FIVE AGGREGATES
+
+For each aggregate—form, feeling, perception, formations, consciousness—the identity-view pattern takes four forms:
+
+1. **X is self**
+2. **self possesses X**
+3. **X is in self**
+4. **self is in X**
+
+This is more precise than the slogan “taking the aggregates as self.”
+
+The view may assert identity, ownership, containment, or location.
+
+That matters because self-view can survive in subtler metaphysical forms even when one no longer literally says, for example, “the body itself is the soul.”
+
+### ASMI-MĀNA: A SUBTLER “I AM” AFTER VIEW IS GONE
+
+SN 22.89 provides one of the clearest distinctions in the early discourses.
+
+Khemaka does **not** identify any aggregate as self in the standard identity-view way, yet says that among the five aggregates there remains an “I am” that is not tied to a specific claim such as “I am this.”
+
+The discourse compares this residual “I am” to the scent remaining in a freshly washed cloth.
+
+This means:
+
+`sakkāyadiṭṭhi` = explicit/distorted view-structure about self and aggregates;
+
+`asmimāna` = subtler self-positioning or conceit “I am” that can persist even after that view is cut.
+
+They are related but not identical.
+
+### I-MAKING / MINE-MAKING ARE FUNCTIONAL PROCESSES
+
+Early-discourse language such as `ahaṅkāra` / `mamaṅkāra`, and the repeated “mine” patterns in MN 1 and aggregate texts, points to active appropriation:
+
+- turning an experience into “I”;
+- turning an experience into “mine”;
+- using it as support for identity;
+- defending or comparing based on it.
+
+A113 therefore uses **I-making / mine-making** as a functional process term.
+
+It must not be collapsed into:
+- identity view;
+- conceit;
+- craving;
+- clinging;
+- latent tendency.
+
+These can interact, but the words are not synonyms.
+
+### CONVENTIONAL “I” WITHOUT ONTOLOGICAL REIFICATION
+
+SN 1.25 supplies the cleanest guardrail.
+
+An arahant may still use ordinary expressions:
+- “I speak”;
+- “they speak to me”;
+- ordinary pronouns and social reference.
+
+The difference is not grammar.
+
+The difference is whether the language is backed by appropriation, conceit, and reification.
+
+Thus:
+
+**conventional designation**
+can remain,
+
+while
+**identity-view and egoic appropriation**
+can be absent.
+
+This directly blocks the false inference:
+“someone said ‘I’, therefore they still hold a self-view.”
+
+### STREAM-ENTRY VERSUS ARAHANTSHIP
+
+A113 sharpens the distinction from A112:
+
+**At stream-entry**
+- identity view is cut;
+- ordinary self-reference remains;
+- residual `asmimāna` can remain;
+- other defilements and higher fetters remain.
+
+**At arahantship**
+- even the residual conceit “I am” is removed;
+- conventional first-person language can still be used;
+- no ontological self has to be inserted behind that language.
+
+So the disappearance of self-view and the disappearance of all self-referential language are entirely different claims.
+
+### RELATION TO UPĀDĀNA
+
+Identity view and clinging can support each other, but they are not identical categories.
+
+A view can be:
+- held as a proposition;
+- appropriated as “my view”;
+- used as identity;
+- clung to;
+- defended in dispute.
+
+A113 therefore preserves:
+`diṭṭhi` ≠ `upādāna` ≠ `asmimāna` ≠ `mamaṅkāra`.
+
+The early texts often show causal or functional relationships among them, but collapsing them erases diagnostic precision.
+
+### BUDDHA'S METHOD OF DECONSTRUCTING SELF
+
+The Buddha's method is not simply to replace:
+“there is a self”
+with
+“there is no self”
+as another identity-position.
+
+The recurring method is more operational:
+
+1. identify what is being taken as self;
+2. inspect its arising, change, and cessation;
+3. see whether it can be controlled as “let it be thus”;
+4. examine ownership and identification;
+5. remove “this is mine, this I am, this is my self”;
+6. continue until even the residual “I am” conceit is gone.
+
+This is a `CROSS_TEXT_SYNTHESIS` drawing on aggregate analysis, MN 44, SN 22.89, and the non-conceiving patterns of MN 1.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Nāgasena chariot dialogue is directly useful here. “Nāgasena” and “chariot” function as conventional designations dependent on parts and conditions; the designation is usable without requiring an independently existing essence corresponding to the name.
+
+**Role:** later/paracanonical clarification of how conventional person-language can remain useful without establishing a permanent self.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the chariot analogy is not used to replace the early-discourse definition of `sakkāyadiṭṭhi`, which remains anchored in MN 44 and SN 22 material.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate saying “I” with identity view.
+- Do not equate memory, agency, personality, or social identity with `sakkāyadiṭṭhi` by default.
+- Do not equate ending identity view with ending `asmimāna`.
+- Do not equate conventional designation with ontological assertion.
+- Do not collapse I-making, mine-making, conceit, clinging, and view into one term.
+- Do not use the Milindapañha chariot as though it were the canonical definition of identity view.
+
+### Sources
+
+- MN 44 Cūḷavedalla Sutta.
+- SN 22.89 Khemaka Sutta.
+- SN 1.25 Arahanta Sutta.
+- MN 1 Mūlapariyāya Sutta.
+- Milindapañha Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A114
+
+**How does the formula “this is not mine, this I am not, this is not my self” function as a practice, and how should it be distinguished from mere verbal denial or philosophical annihilationism?**
+
+Required lanes:
+- SN 22.59 and related aggregate texts;
+- relation among impermanence, stress, not-self, and relinquishment;
+- “not mine / not I / not self” as de-appropriation rather than slogan;
+- relation to control criterion (“let it be thus”);
+- distinction from annihilationism and from emotional dissociation;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
