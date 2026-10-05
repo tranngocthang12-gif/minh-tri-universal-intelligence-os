@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A126 COMPLETED  
-**Next checkpoint:** PHASE 4 — A127  
+**Current checkpoint:** PHASE 4 — A128 COMPLETED  
+**Next checkpoint:** PHASE 4 — A129  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -18939,6 +18939,182 @@ Required lanes:
 - mandatory Milindapanha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
+
+
+## Completed checkpoint A127
+
+**Central question:** How does craving for being right, being seen correctly, status, and self-image turn disagreement into identity-defense, and how does the Buddha distinguish right view from clinging to views?
+
+### TEXT_ATTESTED
+- Right view is explicitly a path factor; early Buddhism therefore does not reject all views indiscriminately.
+- **MN 2** distinguishes wise attention from self-binding speculative views.
+- **MN 22** uses the raft simile to show that Dhamma is for crossing, not for possession.
+- **MN 95** distinguishes preserving truth from prematurely claiming exclusive certainty.
+- **Snp 4.8 / 4.9 / 4.12** show debate entangled with praise, defeat, conceit, comparison, and “my view alone is true.”
+- **MN 1 / SN 22.89** connect view-defense to self-referential conceiving and residual “I am” conceit.
+
+### CORE DISTINCTION
+`diṭṭhi` != `diṭṭhupādāna`.
+
+Having/using a view is not the same as clinging to a view.
+
+Right view functions as orientation and path tool.
+View-clinging functions as appropriation and identity-defense.
+
+### CROSS_TEXT SYNTHESIS
+Disagreement becomes identity-defense when proposition + possession + comparison + self-image converge:
+“this is my view” -> “my view is me/mine” -> “if challenged, I lose status” -> “I must defeat the other.”
+
+### GUARDRAILS
+- criticism of view-clinging != rejection of right view;
+- humility about evidence != relativism;
+- winning debate != realization;
+- Atthakavagga anti-dispute material != “all views are false.”
+
+### MILINDAPANHA
+**Consulted:** YES. Later/paracanonical support only: distinction between reasoning that grasps a problem and wisdom that cuts through delusion; dilemma method as disciplined distinction-making rather than mere victory.
+
+**Claim class:** `TEXT_ATTESTED_RIGHT_VIEW_MN2_MN22_MN95_SNP4_8_4_9_4_12_PLUS_DITTHUPADANA_MANA_MANNANA_CROSS_TEXT_IDENTITY_DEFENSE_SYNTHESIS_WITH_ATTHAKAVAGGA_GUARDRAILS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Completed checkpoint A128
+
+**Central question:** How does `māna` operate through “better/equal/worse,” praise/blame, status, and comparison even after explicit identity-view weakens, and how is humility distinguished from self-devaluation?
+
+### TEXT_ATTESTED
+1. **SN 22.89** is the anchor: a practitioner may no longer regard the five aggregates as self, yet a residual “I am” conceit/desire/tendency remains until deeper insight removes it. This shows that explicit self-view and `asmimāna` are not identical.
+2. **Snp 4.8 (Pasūra)** depicts debate driven by praise, fear of defeat, elation at approval, distress at refutation, and conceit after victory. Status sensitivity is part of the problem, not just doctrinal content.
+3. **Snp 4.9** explicitly links dispute with notions of equal, superior, or inferior. Comparison itself can keep self-positioning alive.
+4. Early teachings on the “eight worldly conditions” (gain/loss, fame/disrepute, praise/blame, pleasure/pain) show how identity can be pulled around by social evaluation and changing conditions.
+5. Earlier checkpoints remain relevant: **MN 1** on self-referential conceiving and **MN 21 / MN 58 / AN 5.167** on non-hostile response to criticism.
+
+### MĀNA IS NOT ONLY “I AM BETTER”
+
+A128 preserves a crucial guardrail:
+
+`māna` is not exhausted by obvious arrogance.
+
+Self-comparison can take forms such as:
+- “I am better.”
+- “I am equal.”
+- “I am worse.”
+
+All three still organize experience around a measured “I” in relation to others.
+
+Therefore **inferiority can still be self-centered comparison**.
+
+This does not mean ordinary recognition of unequal skill, responsibility, or status is itself conceit. The issue is appropriation of comparison into self-worth and identity.
+
+### HUMILITY != SELF-DEVALUATION
+
+Humility in this framework is not:
+“I am worthless,”
+“I am worse than everyone,”
+or
+“I must make myself small.”
+
+Those still revolve around “me.”
+
+A more faithful working distinction is:
+
+- **humility:** accurate assessment without self-exaltation, defensiveness, or status-hunger;
+- **self-devaluation:** negative identity-making around “I am inferior.”
+
+This wording is **CROSS_TEXT SYNTHESIS**.
+
+### PRAISE AND BLAME AS TESTS
+
+Praise can feed:
+- craving for recognition;
+- attachment to reputation;
+- superiority;
+- fear of losing status.
+
+Blame can feed:
+- defensiveness;
+- humiliation;
+- retaliation;
+- urgent self-justification.
+
+A128 does not conclude that praise or blame are unreal or always irrelevant. It asks whether the mind converts them into:
+**“this determines what I am.”**
+
+The eight-worldly-conditions framework helps show that social evaluation is unstable and conditioned.
+
+### STATUS WITHOUT FIXED SELF
+
+A person can have a conventional role:
+teacher, student, senior, junior, skilled, unskilled.
+
+The problem is not functional distinction.
+
+The problem begins when:
+role -> value of self -> comparison -> clinging -> fear/hostility.
+
+Thus:
+**conventional hierarchy != ontological superiority.**
+
+This is **CROSS_TEXT SYNTHESIS**.
+
+### SN 22.89 — WHY “I KNOW THERE IS NO SELF” IS NOT THE END
+
+SN 22.89 is especially important because it blocks a purely intellectual reading of anattā.
+
+A person may reject explicit identity-view and still retain:
+- the felt center “I am”;
+- comparison;
+- sensitivity to rank;
+- appropriation of experience.
+
+So intellectual agreement with “not-self” is not identical with the ending of `asmimāna`.
+
+### MILINDAPANHA — MANDATORY
+
+**Consulted:** YES.
+
+The Nāgasena/chariot material is relevant as later/paracanonical support for distinguishing conventional designation from a fixed self. The “full vessel” and related anti-pride similes are also useful as later moral illustrations of non-conceit.
+
+**Guardrail:** Milindapanha does not replace SN 22.89 or the Atthakavagga as the early-text anchors.
+
+### BUDDHA'S REASONING METHOD
+
+A128 adds a diagnostic:
+
+When praise/blame or comparison triggers distress, separate:
+1. **fact:** what ability, role, or mistake is actually present?
+2. **comparison:** where is the mind ranking self vs others?
+3. **identity:** what is being turned into “what I am”?
+4. **clinging:** what reputation/status must be preserved?
+5. **action:** what correction or learning is actually needed?
+
+This allows one to keep accurate feedback while dropping unnecessary self-making.
+
+### CORRECTIONS PRESERVED
+- humility != self-hatred;
+- inferiority feeling != absence of conceit;
+- accurate skill comparison != automatically māna;
+- praise/blame sensitivity != proof of moral failure by itself;
+- explicit non-self belief != end of “I am” conceit;
+- conventional role != permanent self-status.
+
+### Sources
+- SN 22.89 Khemaka Sutta.
+- Snp 4.8 Pasūra Sutta.
+- Snp 4.9 material on comparison/dispute.
+- Early eight-worldly-conditions teaching.
+- MN 1 as supporting self-referential-conceiving background.
+- Milindapanha as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A129
+
+**How does craving for praise, recognition, and reputation become a form of upādāna/bhava, and how does the Buddha distinguish healthy confidence from dependency on external validation?**
+
+Required lanes:
+- praise/blame and worldly conditions;
+- faith/confidence vs reputation dependence;
+- status as conditioned designation;
+- relation to māna, taṇhā, upādāna, bhava;
+- mandatory Milindapanha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
 
