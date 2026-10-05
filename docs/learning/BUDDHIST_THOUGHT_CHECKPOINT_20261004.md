@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A114 COMPLETED  
-**Next checkpoint:** PHASE 4 — A115  
+**Current checkpoint:** PHASE 4 — A115 COMPLETED  
+**Next checkpoint:** PHASE 4 — A116  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16795,6 +16795,187 @@ Required lanes:
 - relation to dependent arising and SN 12.15;
 - distinguish early-discourse emptiness from later expanded emptiness philosophies unless labelled;
 - distinguish experiential emptiness from “nothing exists”;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A115
+
+**Central question:** How do `anattā` (not-self) and `suññatā` (emptiness) relate in the early discourses, and why does “empty of self or what belongs to self” not mean nihilistic nothingness?
+
+### TEXT_ATTESTED
+
+1. **SN 35.85** answers the question “in what respect is the world empty?” by saying that it is empty of a self or of what belongs to a self.
+2. The discourse applies this not merely to one abstract object but throughout the sensory field: eye, forms, eye-consciousness, eye-contact, and the feeling arising dependent on contact; likewise ear, nose, tongue, body, and mind with their corresponding objects, consciousness, contact, and feeling.
+3. Thus, in this early-discourse context, `suñña/suññatā` does not mean that the sensory processes are verbally erased. They are named and analyzed, while being declared empty **of self and what belongs to self**.
+4. **MN 43** independently defines “liberation of mind through emptiness” by the reflection that a place/experience is “empty of self or what belongs to self.” This confirms that the self/not-self axis is one important early meaning of emptiness.
+5. **SN 12.15** rejects the extremes “everything exists” and “everything does not exist,” and teaches dependent arising/cessation instead. This guards the emptiness teaching from being converted into annihilationist “nothing exists.”
+6. **SN 22.59** and related aggregate texts give the complementary not-self practice: conditioned aggregates are not fit to be regarded as “mine, I, my self.” The emptiness formula and the not-self formula therefore converge on de-appropriation, though the terms are not simply interchangeable in every context.
+
+### SUÑÑATĀ HERE IS A RELATIONAL PREDICATE
+
+A115 preserves a grammatical and doctrinal point:
+
+SN 35.85 says the world is empty **of** something:
+- empty of self;
+- empty of what belongs to self.
+
+That is different from saying:
+- the world is nonexistent;
+- experience is an illusion in the sense of “nothing is there”;
+- all distinctions are meaningless.
+
+The discourse names the six sense bases, their objects, consciousness, contact, and feeling, then denies that a self or self-property is discoverable in that field.
+
+So the safest early-discourse reading is:
+**experience is present and conditionally functioning, but it is empty of an appropriable self-essence or owner.**
+
+The phrase “self-essence” here is an explanatory gloss, not a direct Pāli technical term in SN 35.85.
+
+### ANATTĀ AND SUÑÑATĀ: OVERLAP WITHOUT TOTAL IDENTITY
+
+`Anattā` asks of phenomena:
+“Is this appropriately regarded as self?”
+
+`Suññatā`, in SN 35.85, describes the sensory world as:
+“empty of self and what belongs to self.”
+
+They therefore overlap strongly.
+
+But A115 does **not** conclude:
+`anattā = suññatā` in every early-Buddhist use.
+
+Why?
+Because early discourses also use emptiness in meditative contexts—such as an emptiness liberation or an emptiness dwelling—where the emphasis can include absence of disturbance or progressive simplification.
+
+Therefore the safe conclusion is:
+
+**not-self is one central content of early emptiness teaching, but “emptiness” has more than one early-discourse use.**
+
+### THE SIX SENSE BASES MAKE EMPTINESS EXPERIENTIAL
+
+SN 35.85 locates the analysis in lived experience:
+
+eye + form → eye-consciousness → contact → feeling,
+and similarly for the other senses.
+
+This matters because emptiness is not presented only as a remote cosmological thesis.
+
+It can be investigated where experience actually occurs.
+
+The question becomes:
+- where in seeing is a permanent owner found?
+- where in hearing is an enduring “mine” found?
+- where in contact or feeling is a self that can command the process found?
+
+This connects A115 directly to A114's de-appropriation practice.
+
+### WHY EMPTY DOES NOT MEAN “NOTHING”
+
+If “empty” meant merely “nonexistent,” SN 35.85 would collapse its own analysis: it explicitly discusses eye, forms, consciousness, contact, and feeling.
+
+The emptiness is specified:
+**empty of self or what belongs to self.**
+
+Therefore:
+`suñña`
+in this passage
+≠ simple nonexistence.
+
+This is a **CROSS_TEXT / SEMANTIC SYNTHESIS** grounded in the explicit syntax of SN 35.85 and the middle-way guardrail of SN 12.15.
+
+### RELATION TO DEPENDENT ARISING
+
+Dependent arising gives a positive causal account of how experience and suffering arise:
+when conditions are present, effects arise;
+when conditions cease, effects cease.
+
+A115 therefore reads early emptiness and dependent arising as complementary:
+
+- dependent arising blocks the need for an independent self-controller;
+- emptiness blocks appropriation of the conditioned process as self or belonging to self;
+- cessation shows that release is achieved by ending the relevant conditions, not by annihilating a metaphysical person.
+
+This three-part relation is a **CROSS_TEXT_SYNTHESIS**, not a single canonical formula.
+
+### “THE WORLD IS EMPTY” MUST REMAIN CONTEXT-BOUND
+
+SN 35.85 answers a specific question about the “world” in the context of the six sense domains.
+
+A115 therefore does not silently universalize the sentence into every later philosophical claim that has been expressed using the word “emptiness.”
+
+The early-discourse claim securely attested here is:
+the sensory world is empty of self and what belongs to self.
+
+Broader theories about:
+- intrinsic nature;
+- universal ontological emptiness;
+- two truths;
+- emptiness of emptiness;
+- Madhyamaka dialectics;
+
+belong to later philosophical development and must be labelled **LATER** when studied.
+
+This distinction is about historical/source classification, not a judgment that later philosophies are false.
+
+### EMPTINESS DOES NOT ERASE ETHICS OR CAUSALITY
+
+If emptiness meant that nothing mattered because nothing existed, the broader early-discourse framework of:
+- intentional action;
+- consequences;
+- training;
+- craving;
+- clinging;
+- cessation;
+- liberation
+
+would become unintelligible.
+
+Instead, emptiness removes self-appropriation while causal relations remain operational.
+
+Thus the practical consequence is not nihilism but greater care with causes:
+if suffering depends on conditions, change the conditions;
+do not search for an eternal owner inside the process.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Nāgasena/chariot dialogue is again relevant as a later/paracanonical clarification: a conventional designation can function dependently on parts and relations without requiring an independently findable permanent entity corresponding to the name.
+
+**Role:** support for understanding how conventional experience and person-language can remain while self-substantialization is removed.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the chariot argument is not treated as the definition of `suññatā`; the early-discourse emptiness claim remains anchored in SN 35.85 and MN 43.
+
+### CORRECTIONS PRESERVED
+
+- Do not translate “empty” as “nothing exists.”
+- Do not equate every use of `suññatā` with exactly one doctrine.
+- Do not collapse `anattā` and `suññatā` into universal synonyms.
+- Do not read later Madhyamaka technical vocabulary back into SN 35.85 without explicit historical labelling.
+- Do not infer that emptiness eliminates causal efficacy, ethics, experience, or conventional language.
+- Do not use the Milindapañha chariot dialogue to override early-discourse definitions.
+
+### Sources
+
+- SN 35.85 Suñña Sutta.
+- MN 43 Mahāvedalla Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 22.59 Anattalakkhaṇa / Pañcavaggi Sutta.
+- Milindapañha Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A116
+
+**How does “emptiness” function as a meditative dwelling in MN 121 / MN 122, and how is that use related to—but not identical with—SN 35.85’s “empty of self and what belongs to self”?**
+
+Required lanes:
+- MN 121 progressive emptiness and the principle of noticing what is absent and what remains;
+- MN 122 internal emptiness / seclusion and disturbance;
+- SN 35.85 emptiness-of-self comparison;
+- distinguish emptiness as attribute, perception, liberation, and meditative dwelling where the texts require;
+- guard against treating emptiness as blankness, trance, or nonexistence;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
