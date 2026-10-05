@@ -1,9 +1,10 @@
 # MINH TRÍ — Universal Intelligence OS
 
 **Current phase:** `FOUNDATION_PROTOTYPE`.  
-**Canonical state:** [docs/PROJECT_STATE.json](docs/PROJECT_STATE.json).  
-**Current architecture:** [docs/ARCHITECTURE_NOW_20261003.md](docs/ARCHITECTURE_NOW_20261003.md).  
-**Current law router:** [docs/LAW_INDEX_20261003.md](docs/LAW_INDEX_20261003.md).
+**Canonical boot root:** [state/bootstrap.json](state/bootstrap.json).  
+**Current state:** [state/current.yaml](state/current.yaml).  
+**Current architecture/law precedence:** resolve from `state/current.yaml`.  
+Legacy `docs/PROJECT_STATE.json`, Recovery Manifest, Law Index and pre-vNext Architecture remain compatibility/history surfaces for unmigrated facts; they must not override migrated vNext state.
 
 MINH TRÍ is a provider-neutral, evidence-first learning/control plane built around one durable Owner ledger and replaceable AI seats. GitHub is the durable project authority; chat is not canonical truth.
 
@@ -27,13 +28,16 @@ The ChatGPT-to-Owner-PC read-only connector has been runtime-proven in bounded h
 
 For important work, read in this order:
 
-1. `docs/PROJECT_STATE.json`
-2. the Law Index referenced by PROJECT_STATE
-3. the architecture record referenced by PROJECT_STATE
-4. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
-5. the task/domain source
+1. `state/bootstrap.json`
+2. `state/current.yaml`
+3. law precedence referenced by current state
+4. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`
+5. architecture referenced by current state
+6. role bootstrap referenced by current state
+7. `state/tasks.yaml`
+8. the active task/domain source
 
-Historical documents remain provenance only after they are superseded.
+If a legacy surface conflicts with a migrated key in `state/current.yaml`, the migrated vNext state wins. Historical documents remain provenance only after they are superseded.
 
 ## Core invariants
 

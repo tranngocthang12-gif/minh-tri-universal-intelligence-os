@@ -1,5 +1,23 @@
 # GITHUB FIRST + ROLE BOOTSTRAP — Owner Decision — 2026-10-02
 
+## VNEXT BOOT ROOT OVERRIDE — 2026-10-06
+
+For all material work after Architecture vNext migration began, the single recovery entrypoint is:
+
+`state/bootstrap.json`
+→ `state/current.yaml`
+→ current law precedence
+→ Universal Learning Continuity Law
+→ current architecture
+→ this role bootstrap
+→ `state/tasks.yaml`
+→ active task/domain working set.
+
+This section supersedes older bootstrap-order examples in this file wherever they point directly to PROJECT_STATE/Law Index/ARCHITECTURE_NOW as the current root. Those older sections remain historical implementation context only.
+
+Legacy PROJECT_STATE/Recovery/Law Index/ARCHITECTURE_NOW remain usable for unmigrated facts and provenance, but cannot override migrated vNext keys.
+
+
 **Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE + CURRENT ARCHITECTURE  
 **Base main when recorded:** `620875e68c97ccc1734aff8a8ab34af0bbe82750`  
 **Scope:** MINH TRÍ project governance, architecture continuity, learning, critique, synchronization and handoff.
