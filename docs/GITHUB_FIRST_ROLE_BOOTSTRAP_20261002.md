@@ -297,6 +297,21 @@ Every material checkpoint must be durably recorded in GitHub with learned/correc
 
 The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`. Always read CURRENT/NEXT from the live checkpoint plus PROJECT_STATE and RECOVERY_MANIFEST; do not rely on a checkpoint number hard-coded in bootstrap prose.
 
+## 11A. SUPREME BUDDHIST-STUDY SOURCE DISCIPLINE
+
+For every material Buddhist-thought task, after the universal bootstrap and before synthesis:
+
+1. read the active Buddhist checkpoint;
+2. use early discourses as primary attestation;
+3. consult Milindapañha continuously as mandatory later/paracanonical reasoning support;
+4. compare at least two independent translations for material doctrinal passages when available;
+5. for disputed or lexical-critical passages, compare three or more translations where practicable;
+6. inspect Pāli/lemma/morphology when translation divergence or lexical weight is material;
+7. record translation conflicts and uncertainty rather than silently choosing a preferred reading;
+8. connect the conclusion to the prior conceptual map and preserve claim-class boundaries.
+
+A seat that omits these duties may produce notes, but the material checkpoint is NOT PROMOTABLE.
+
 ## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
 For any material work in the Buddhist-thought learning track, the seat must include Mi Tiên Vấn Đáp / Milindapañha in the study process throughout the track.
