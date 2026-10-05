@@ -198,6 +198,30 @@
       ],
       "supersedes": [],
       "result_ref": null
+    },
+    {
+      "task_id": "ARCH-VNEXT-BOOT-ROOT",
+      "title": "Unify all fresh-seat bootstrap paths on one vNext root and add drift fitness tests",
+      "status": "REPORTED",
+      "scope": [
+        "state/bootstrap.json",
+        "state/current.yaml",
+        "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+        "docs/LAW_INDEX_20261003.md",
+        "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+        "docs/PROJECT_STATE.json",
+        "docs/RECOVERY_MANIFEST.json",
+        "README.md",
+        "tests/test_vnext_bootstrap_root.py"
+      ],
+      "branch": "owner/vnext-boot-root-unification-20261006",
+      "base_sha": "3c61a37165232c148b4e9efb59423f5789d3a10b",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE2"
+      ],
+      "supersedes": [],
+      "result_ref": "PENDING_PR"
     }
   ]
 }
