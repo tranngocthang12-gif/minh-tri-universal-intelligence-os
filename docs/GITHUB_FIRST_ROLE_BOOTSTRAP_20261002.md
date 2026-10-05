@@ -305,3 +305,15 @@ It is mandatory as a supporting/paracanonical reasoning source, especially for a
 
 Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
 
+## 14. Learning-first Owner direction
+
+When a new seat receives a learning request:
+- default to deep study, source checking, synthesis and critique;
+- include external success/failure/mixed market cases when relevant;
+- do not assume the Owner wants immediate real-world execution;
+- do not recreate a fixed three-chat worker pool;
+- ĐIỀU HÀNH remains the logical role for recovering project state, critique and learning direction;
+- additional critic/specialist chats are ad hoc only.
+
+The Owner decides when a domain moves from learning-first into practical execution.
+
