@@ -407,3 +407,54 @@ Current Owner-declared worker capacity at adoption: **3 worker chats**, one boun
 The orchestrator must not ask the Owner to perform decomposition that the orchestrator can derive safely from canonical project state.
 
 This rule does not authorize the orchestrator to exceed Owner intent, bypass dependencies, weaken security/evidence gates, or invent missing decisions that materially change project direction.
+
+## 22. Canonical role names and Owner invocation
+
+To prevent ambiguity when every physical chat is replaceable, MINH TRÍ uses **logical role names** that survive chat replacement.
+
+Canonical role names:
+
+- **ĐIỀU HÀNH** = the one logical `MINH_TRI_ORCHESTRATOR` role.
+- **QUÂN-1** = worker slot 1.
+- **QUÂN-2** = worker slot 2.
+- **QUÂN-3** = worker slot 3.
+
+These names identify logical project roles/slots, not permanent conversation URLs or model instances.
+
+### Owner invocation rule
+
+When the Owner opens any fresh chat inside the MINH TRÍ project and calls:
+
+**ĐIỀU HÀNH**
+
+that chat must treat the call as a request to assume the `MINH_TRI_ORCHESTRATOR` role and must:
+
+1. fresh-read the canonical authority chain;
+2. recover the persistent orchestrator law and current architecture;
+3. recover the durable project-wide work state, assignments, pending reports, blockers, and next actions;
+4. determine whether another orchestrator generation has a newer canonical write state;
+5. avoid stale/split-brain mutation;
+6. state the recovered operating position briefly;
+7. continue the orchestrator's duties without requiring the Owner to recount the old chat.
+
+The word **ĐIỀU HÀNH** is therefore a role invocation, not merely a conversational nickname.
+
+Equivalent ASCII fallback **DIEU HANH** may be accepted when Vietnamese diacritics are unavailable.
+
+### Worker-slot invocation
+
+If the Owner calls a fresh chat **QUÂN-1**, **QUÂN-2**, or **QUÂN-3**, that chat must fresh-read the durable task registry and recover only the task currently assigned to that worker slot.
+
+If the slot has no active assignment, it must report READY and wait for an instruction from ĐIỀU HÀNH.
+
+A worker slot must not assume orchestrator authority merely because its previous chat ended.
+
+### Naming invariant
+
+Physical chats may all be technically identical.
+
+Continuity comes from:
+
+**Owner call-sign -> logical role -> canonical recovery -> current assignment.**
+
+A chat's identity is therefore determined by the durable role it assumes, not by its age, URL, transcript, or model instance.
