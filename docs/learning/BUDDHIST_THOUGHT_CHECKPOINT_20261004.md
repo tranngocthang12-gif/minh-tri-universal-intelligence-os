@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A108 COMPLETED  
-**Next checkpoint:** PHASE 4 — A109  
+**Current checkpoint:** PHASE 4 — A120 COMPLETED  
+**Next checkpoint:** PHASE 4 — A121  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15705,6 +15705,2463 @@ MN 2; MN 64; relevant SN 36 latent-tendency material; early āsava-destruction f
 **What are the latent tendencies (`anusaya`), how do they relate to feeling, craving, self-view, and repeated reaction, and how should they be distinguished from later theories of an unconscious mind?**
 
 Required lanes: SN 36 anusaya material; MN 64; feeling→craving relation; latent tendency vs habit vs active defilement; guardrail against importing modern unconscious theory; mandatory Milindapañha consultation.
+
+
+## Completed checkpoint A109
+
+**Central question:** What are the latent tendencies (`anusaya`), how do they relate to feeling, craving, self-view, and repeated reaction, and how should they be distinguished from later theories of an unconscious mind?
+
+### TEXT_ATTESTED
+
+1. **MN 64** gives a decisive guardrail: a baby may not presently entertain explicit self-view, doubt, attachment to rites, sensual desire, or ill will, yet the corresponding latent tendencies can still lie latent. Therefore non-manifestation is not the same as eradication.
+2. **MN 44** links pleasant feeling with the underlying tendency to passion, painful feeling with the underlying tendency to resistance, and neutral feeling with the underlying tendency to ignorance. It also explicitly says that these tendencies do **not** necessarily underlie every instance of the corresponding feeling.
+3. **SN 36.6** shows the same dynamic in the uninstructed person: painful feeling can activate resistance; turning toward sensual pleasure can activate passion; failure to understand feeling's origin, cessation, gratification, drawback, and escape leaves ignorance operative.
+4. The instructed disciple is described in the opposite way: feeling occurs without those underlying tendencies taking possession in the same manner because the origin, cessation, gratification, drawback, and escape are understood.
+
+### LATENT TENDENCY ≠ ACTIVE DEFILEMENT
+
+The minimum safe distinction is:
+
+- **active defilement** — greed, aversion, view, etc. presently manifest in thought, speech, feeling-response, or action;
+- **latent tendency** — a disposition capable of conditioning renewed manifestation when relevant conditions occur;
+- **eradication** — the relevant tendency no longer regenerates the defilement.
+
+This explains why temporary calm can coexist with unresolved conditioning.
+
+### FEELING AS A TRIGGERING FIELD
+
+MN 44 and SN 36.6 show why `vedanā` is so important.
+
+Pleasant feeling does not automatically equal lust.  
+Painful feeling does not automatically equal aversion.  
+Neutral feeling does not automatically equal ignorance.
+
+Rather, these feelings are contexts in which corresponding tendencies can become active **when not rightly understood**.
+
+This prevents a deterministic reading of:
+`pleasant → greed`, `pain → aversion`, `neutral → ignorance`.
+
+The texts preserve trainability: the same feeling can be experienced differently by the instructed disciple.
+
+### RELATION TO CRAVING
+
+Dependent arising gives:
+`vedanā → taṇhā`.
+
+A109 adds an important refinement:
+the transition is not best read as an unavoidable mechanical jump.
+
+The latent-tendency material shows a conditioned vulnerability:
+feeling provides a field in which craving/reaction can arise, but training changes whether the old pattern is activated and fed.
+
+This is a `CROSS_TEXT_SYNTHESIS` joining the standard dependent-arising sequence with MN 44 / SN 36 material.
+
+### RELATION TO SELF-VIEW
+
+MN 64 is particularly important because it includes the latent tendency to self-identification view.
+
+That means absence of an explicit thought such as “I have a self-theory” does not by itself prove that self-related appropriation has been uprooted.
+
+This supports the earlier distinction:
+- explicit doctrine about self;
+- “I am” conceit;
+- mine-making/appropriation;
+- latent tendency.
+
+These must not be collapsed into one identical phenomenon.
+
+### NOT A MODERN THEORY OF THE UNCONSCIOUS
+
+`Anusaya` can resemble modern language about implicit or unconscious dispositions, but the equivalence must remain **OPEN / GUARDED**.
+
+The early texts establish:
+- non-manifest dispositions;
+- conditional activation;
+- specific links to passion, aversion, ignorance, view, doubt, and fetters;
+- abandonment through the path.
+
+They do **not** by themselves establish any particular modern psychological model of:
+- subconscious storage;
+- repression;
+- neural mechanisms;
+- psychoanalytic unconscious structures.
+
+Therefore “latent tendency” is safer than importing a full modern theory.
+
+### BUDDHA'S REASONING METHOD
+
+A109 reveals a subtle diagnostic rule:
+
+**do not infer absence of a cause from absence of its current expression.**
+
+Instead:
+1. distinguish manifestation from disposition;
+2. vary the conditions;
+3. observe whether the old pattern regenerates;
+4. trace which feeling/contact contexts activate it;
+5. train the relevant causal link;
+6. reserve “eradicated” for a stronger condition than temporary non-occurrence.
+
+This is one reason Buddhist diagnosis can distinguish calm from liberation.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha II.1.8 describes wisdom as severing defilements, using the image of cutting with a sickle.
+
+**Role:** later/paracanonical support for the distinction between merely having a defilement quiet and actually cutting the condition that sustains it.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the early-text meaning of `anusaya` remains anchored in MN 64, MN 44, and SN 36 material.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate “not currently angry” with eradication of aversion.
+- Do not read feeling → tendency as deterministic in every case.
+- Do not equate `anusaya` with one modern unconscious theory.
+- Do not treat latent tendency, active defilement, habit, and fetter as universally interchangeable terms.
+- Do not infer that explicit absence of self-view means all self-related tendencies are gone.
+- Do not turn Milindapañha imagery into an early-sutta definition.
+
+### Sources
+
+- MN 64 Mahā Māluṅkyovāda Sutta.
+- MN 44 Cūḷavedalla Sutta.
+- SN 36.6 Sallattha Sutta.
+- Standard dependent-arising feeling → craving relation.
+- Milindapañha II.1.8 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A110
+
+**How do `anusaya`, `saṁyojana` (fetters), `āsava` (effluents), `nīvaraṇa` (hindrances), and active `kilesa`-type defilements relate without collapsing distinct early-Buddhist diagnostic categories into one?**
+
+Required lanes:
+- five hindrances and their temporary abandonment;
+- five lower fetters / ten fetters;
+- āsava destruction;
+- anusaya material from A109;
+- distinguish state, tendency, bond, and deep outflow/conditioning categories;
+- avoid importing later one-to-one systematizations unless labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A110
+
+**Central question:** How do `anusaya`, `saṁyojana` (fetters), `āsava` (taints/effluents), `nīvaraṇa` (hindrances), and presently active defilements relate without collapsing distinct early-Buddhist diagnostic categories into one?
+
+### TEXT_ATTESTED
+
+1. **AN 7.12** enumerates seven `anusaya`: sensual desire, aversion, views, doubt, conceit, desire for rebirth/becoming, and ignorance. This category is explicitly about underlying tendencies to be abandoned and cut out.
+2. **AN 10.13** enumerates ten `saṁyojana`: five lower fetters—identity view, doubt, misapprehension of precepts/observances, sensual desire, and ill will—and five higher fetters—desire for form-realm rebirth, desire for formless rebirth, conceit, restlessness, and ignorance.
+3. **SN 46.37** and related hindrance texts define the five `nīvaraṇa` as sensual desire, ill will, dullness/drowsiness, restlessness/remorse, and doubt; they are described as obstacles/corruptions of the heart that weaken wisdom.
+4. **MN 43** says that on entering the first jhāna the five hindrances have been given up. This proves that the hindrance category tracks states that obstruct concentration and can be absent in a concentrated mind.
+5. **MN 9**, **MN 2**, and repeated liberation formulas give a threefold early-discourse `āsava` pattern: sensuality, desire for rebirth/becoming, and ignorance; destruction of the āsavas is a standard marker of arahant liberation.
+6. **DN 16** distinguishes path attainments through fetter-cutting: stream-entry is associated with ending three fetters, non-return with ending the five lower fetters, while arahantship is described through ending the āsavas. This prevents equating temporary calm with irreversible liberation.
+
+### THE CATEGORIES ARE FUNCTIONAL, NOT MUTUALLY EXCLUSIVE SUBSTANCES
+
+A110's central correction is that these terms do not name five separate "things" stored in the mind.
+
+They are different diagnostic lenses:
+
+- `nīvaraṇa` asks: **what is obstructing clarity, meditation, and wisdom right now?**
+- `anusaya` asks: **what disposition can regenerate when supporting conditions occur, even if it is not presently manifest?**
+- `saṁyojana` asks: **what still binds the person to saṁsāric becoming and marks irreversible path-stage bondage?**
+- `āsava` asks: **what deep taint/flow sustains ignorance, sensuality, and becoming until final liberation?**
+- "active defilement" asks: **what greed, aversion, delusion, doubt, conceit, restlessness, or related unskillful state is actually manifest now?**
+
+This five-lens scheme is a `CROSS_TEXT_SYNTHESIS`. The early discourses provide the categories and lists, but not one passage that defines the entire comparison in these exact terms.
+
+### ONE DOMAIN CAN APPEAR IN SEVERAL CATEGORIES
+
+The overlap is deliberate evidence that the categories are not synonyms.
+
+**Sensuality:**
+`kāmarāga-anusaya` — latent tendency;
+`kāmarāga-saṁyojana` — fetter/bond;
+`kāmāsava` — taint;
+`kāmacchanda-nīvaraṇa` — present hindrance;
+present lust/greed — active manifestation.
+
+**Doubt:**
+`vicikicchānusaya` — latent tendency;
+`vicikicchā-saṁyojana` — fetter;
+`vicikicchā-nīvaraṇa` — hindrance;
+present indecision/confusion — active manifestation.
+There is no need to invent a standard "doubt-āsava" to force symmetry.
+
+**Ignorance:**
+`avijjānusaya` — latent tendency;
+`avijjā-saṁyojana` — higher fetter;
+`avijjāsava` — taint.
+Ignorance is not itself named as one of the five hindrances, even though the hindrances obstruct wisdom and can feed ignorance.
+
+**Restlessness:**
+`uddhacca` appears in the hindrance pair `uddhacca-kukkucca` and also as a higher fetter, but it is not one of the standard seven anusaya and not one of the three āsavas.
+
+Therefore there is no valid one-to-one mapping in which every defilement must have one member in every category.
+
+### WHY "HINDRANCE ABSENT" DOES NOT MEAN "FETTER CUT"
+
+MN 43 gives the decisive practical contrast: the five hindrances are absent in first jhāna.
+
+But early path-stage descriptions reserve irreversible claims such as "three fetters ended," "five lower fetters ended," or "āsavas destroyed" for liberative attainment.
+
+So:
+
+`hindrance presently absent`
+≠ `latent tendency eradicated`
+≠ `fetter cut`
+≠ `āsava destroyed`.
+
+A concentrated mind can be temporarily free of a hindrance while deeper bondage remains unresolved.
+
+This is a `CROSS_TEXT_SYNTHESIS`, but it is tightly constrained by MN 43, AN 10.13, AN 7.12, MN 9/MN 2, and DN 16.
+
+### WHY "ACTIVE DEFILEMENT" MUST REMAIN A WORKING LABEL
+
+The early discourses use several vocabularies for presently arisen unskillful states: greed, aversion, delusion, sensual thought, malicious thought, cruel thought, hindrances, corruptions, and other specific terms.
+
+A fixed universal list "ten kilesas" is characteristic of later systematic presentation.
+
+Therefore A110 uses **active kilesa-type defilement** only as a working analytical phrase meaning "a defiling state presently manifest." It must not be silently treated as a single early-sutta technical taxonomy.
+
+### EARLY-BUDDHIST DIAGNOSTIC LOGIC
+
+The same observed calm can have very different meanings:
+
+A person is not angry now.
+That establishes only non-manifestation.
+
+If painful contact quickly produces resistance, the aversion tendency is still conditionally active.
+
+If the relevant fetter has not been irreversibly cut, saṁsāric bondage remains.
+
+If the āsavas are not destroyed, final liberation has not been reached.
+
+Thus diagnosis moves from surface state to deeper conditional structure without assuming a hidden permanent substance.
+
+### RELATION TO A108–A109
+
+A108 established that restraint or calm is not yet eradication.
+
+A109 established that `anusaya` explains how a tendency can remain without explicit manifestation.
+
+A110 now adds a broader taxonomy:
+- hindrance = present obstacle;
+- latent tendency = regenerative disposition;
+- fetter = binding structure tied to stages of awakening;
+- āsava = deep taint whose ending is associated with arahantship;
+- active defilement = presently manifest unskillful state.
+
+These are related perspectives on bondage, not interchangeable labels.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+**Milindapañha 3.1.10** uses the image of faith clearing the five hindrances so that the mind becomes clear and serene.
+
+Another Milindapañha discussion of knowledge and wisdom compares defilements to an opposing army and says that when they are decisively broken through the spiritual faculties they do not arise again.
+
+**Role:** later/paracanonical support for distinguishing a mind becoming clear of hindrances from the stronger language of defilements being decisively broken.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** these Milindapañha analogies do not define the early categories and do not justify forcing `nīvaraṇa`, `anusaya`, `saṁyojana`, `āsava`, and `kilesa` into one later systematic hierarchy.
+
+### CORRECTIONS PRESERVED
+
+- Do not translate every category simply as "defilement" and then assume identity.
+- Do not infer eradication from temporary absence.
+- Do not infer that every item must appear in every category.
+- Do not equate `kāmacchanda`, `kāmarāga`, and `kāmāsava` as lexically identical merely because all concern sensuality.
+- Do not treat the later fixed ten-kilesa list as though one early discourse supplied it.
+- Do not use Milindapañha to overwrite early-discourse taxonomy.
+- Do not treat the categories as metaphysical substances; their textual force is diagnostic and functional.
+
+### Sources
+
+- AN 7.12 Dutiya-anusaya Sutta.
+- AN 10.13 Saṁyojana Sutta.
+- SN 46.37 Āvaraṇa-nīvaraṇa Sutta.
+- MN 43 Mahāvedalla Sutta.
+- MN 9 Sammādiṭṭhi Sutta.
+- MN 2 Sabbāsava Sutta.
+- DN 16 Mahāparinibbāna Sutta.
+- Milindapañha 3.1.10 and the knowledge/wisdom discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A111
+
+**How do stream-entry, once-return, non-return, and arahantship differ in what is ended, weakened, temporarily absent, or still capable of arising, without importing later stage-maps where the early discourses do not explicitly supply them?**
+
+Required lanes:
+- DN 16 attainment descriptions;
+- three fetters, five lower fetters, five higher fetters;
+- "weakened greed, hate, and delusion" versus fetter-cutting;
+- āsava destruction as arahant marker;
+- jhāna/hindrance temporary absence versus irreversible path attainment;
+- avoid premature one-to-one mapping of all seven anusaya to each attainment stage;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A111
+
+**Central question:** How do stream-entry, once-return, non-return, and arahantship differ in what is ended, weakened, temporarily absent, or still capable of arising, without importing later stage-maps where the early discourses do not explicitly supply them?
+
+### TEXT_ATTESTED
+
+1. **DN 16** gives a compact four-stage distinction:
+   - stream-entry: the first three fetters are ended;
+   - once-return: the first three fetters are ended and greed, hatred, and delusion are weakened;
+   - non-return: the five lower fetters are ended;
+   - arahantship: through destruction of the `āsavas`, one directly realizes liberation of mind and liberation by wisdom.
+2. **AN 10.13** gives the ten-fetter list: five lower fetters—identity view, doubt, misapprehension of precepts/observances, sensual desire, ill will—and five higher fetters—desire for form-realm rebirth, desire for formless-realm rebirth, conceit, restlessness, and ignorance.
+3. **MN 43** states that the five hindrances are given up in first jhāna. This provides an explicit case where obstructive states are absent without thereby establishing stream-entry, non-return, or arahantship.
+4. The repeated arahant formula in the early discourses uses **destruction of the āsavas** as a final-liberation marker, a stronger claim than temporary suppression, weakening, or the ending of only a subset of fetters.
+
+### FOUR DIFFERENT STRENGTHS OF CLAIM
+
+A111 requires keeping four verbs/functions apart:
+
+**temporarily absent**
+- a state is not operating under present conditions;
+- example: five hindrances absent in first jhāna.
+
+**weakened**
+- the defiling pattern has less force/frequency;
+- the once-returner formula says greed, hatred, and delusion are weakened, not destroyed.
+
+**fetter ended**
+- a specified binding structure has been cut;
+- stream-entry ends three fetters;
+- non-return ends five lower fetters.
+
+**āsavas destroyed**
+- the standard arahant formula marks complete liberation.
+
+These are not interchangeable descriptions.
+
+### STREAM-ENTRY: RADICAL CHANGE WITHOUT TOTAL PURIFICATION
+
+The stream-enterer has ended:
+- identity view (`sakkāyadiṭṭhi`);
+- doubt (`vicikicchā`);
+- misapprehension of precepts and observances (`sīlabbataparāmāsa`).
+
+But the early stage formula does **not** say:
+- all greed has ended;
+- all hatred has ended;
+- all delusion has ended;
+- all five hindrances can never occur;
+- all seven latent tendencies have been eradicated.
+
+Therefore stream-entry is irreversible in specified respects without being identical to final purification.
+
+### ONCE-RETURN: "WEAKENED" IS DELIBERATELY NOT "DESTROYED"
+
+The once-returner has the same first three fetters ended and has made greed, hatred, and delusion **weaker**.
+
+This matters methodologically.
+
+The text does not supply:
+- a percentage reduction;
+- a one-to-one list of exactly which `anusaya` remain;
+- a claim that sensual desire and ill will are already eradicated.
+
+A111 therefore preserves `weakened` as its own category rather than silently converting it into fetter-destruction.
+
+### NON-RETURN: FIVE LOWER FETTERS ENDED
+
+The non-returner has ended the five lower fetters.
+
+Relative to stream-entry this adds:
+- sensual-desire fetter;
+- ill-will fetter.
+
+This is much stronger than saying sensual desire or ill will happens to be absent during meditation.
+
+At the same time, the ten-fetter list leaves higher fetters such as:
+- form-realm desire;
+- formless-realm desire;
+- conceit;
+- restlessness;
+- ignorance.
+
+Therefore non-return is profound liberation from lower bondage without yet being the final arahant formula.
+
+### ARAHANTSHIP: FINALITY IS MARKED BY ĀSAVA DESTRUCTION
+
+Arahantship is repeatedly expressed as:
+- the āsavas being destroyed;
+- liberation of mind and liberation by wisdom directly known in this very life.
+
+This is qualitatively different from:
+- a calm session;
+- a hindrance temporarily absent;
+- greed/hatred/delusion merely weakened;
+- only three or five lower fetters ended.
+
+A111 therefore treats "final liberation" as a stronger textual claim than all preceding conditions.
+
+### WHAT MAY STILL ARISE?
+
+A safe early-text reading is:
+
+- **ordinary person:** hindrances, fetters, latent tendencies, and active defilements remain available for renewed manifestation.
+- **stream-enterer:** the first three fetters do not return as binding fetters; other defilements can still occur.
+- **once-returner:** greed, hatred, and delusion remain possible but weakened; the text does not license converting this into a precise later quantitative psychology.
+- **non-returner:** sensual-desire and ill-will fetters are ended along with the first three; higher fetters remain to be abandoned.
+- **arahant:** the liberation formula marks destruction of the āsavas and completion of the path.
+
+The first four lines combine direct stage formulas with the ten-fetter list. Any exact mapping from every path stage to every one of the seven `anusaya` remains **OPEN/CHECK** unless directly established by an early passage.
+
+### DO NOT MAP THE SEVEN ANUSAYA MECHANICALLY ONTO THE FOUR STAGES
+
+A109 established seven latent tendencies; A110 distinguished latent tendency from fetter, hindrance, and āsava.
+
+A111 therefore rejects a tempting but unsafe move:
+
+`fetter X ended` → automatically infer a fully specified `anusaya` table for that stage.
+
+There are important overlaps in vocabulary, but overlap is not identity.
+
+A later systematic tradition may provide more exact stage-by-stage correspondences. Those may be studied later, but must remain labelled **LATER SYSTEMATIZATION** unless an early-discourse basis is independently supplied.
+
+### WHY JHĀNA CANNOT BY ITSELF PROVE A PATH STAGE
+
+First jhāna entails absence of the five hindrances in MN 43.
+
+Yet path stages are described through:
+- fetters ended;
+- greed/hatred/delusion weakened;
+- lower fetters ended;
+- āsavas destroyed.
+
+Therefore:
+
+`deep concentration`
+does not logically entail
+`stream-entry`,
+`non-return`,
+or `arahantship`.
+
+Concentration can be a powerful path factor while the diagnostic criterion for irreversible liberation remains stronger.
+
+### BUDDHA'S DIAGNOSTIC METHOD
+
+A111 reveals a graded language of transformation.
+
+The Buddha does not flatten spiritual progress into "better" versus "worse."
+
+He distinguishes:
+1. state-level suppression/absence;
+2. weakening;
+3. irreversible cutting of specified bonds;
+4. complete destruction of the deepest taints.
+
+This graded precision protects against two errors:
+- **overclaiming:** "I feel calm, therefore I am liberated";
+- **underclaiming:** "If any greed remains, no irreversible transformation has occurred."
+
+The middle structure allows genuine irreversible progress before final completion.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Milindapañha discussion of wisdom uses the image of wisdom cutting/severing defilements, while other passages distinguish a mind being cleared of hindrances from defilements being decisively broken.
+
+**Role:** later/paracanonical support for the distinction between temporary clearing, weakening, and decisive severing.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha is not used to manufacture a stage-by-stage `anusaya` chart or to override the DN 16 / AN 10.13 early-discourse formulas. Numbering varies across editions, so the doctrinal use here is kept at the level of the known wisdom/severing discussion rather than asserting a single universal section number.
+
+### CORRECTIONS PRESERVED
+
+- Do not treat "weakened" as "eradicated."
+- Do not treat temporary hindrance absence as a path attainment.
+- Do not infer from stream-entry that all greed, hatred, and delusion are gone.
+- Do not infer from non-return that all higher fetters are gone.
+- Do not force every `anusaya` into a one-to-one four-stage table without direct early-text evidence.
+- Do not use later stage maps as though DN 16 itself stated them.
+- Do not turn the four stages into a metaphysical ranking of persons; in the texts they diagnose irreversible changes in bondage and liberation.
+
+### Sources
+
+- DN 16 Mahāparinibbāna Sutta.
+- AN 10.13 Saṁyojana Sutta.
+- MN 43 Mahāvedalla Sutta.
+- Repeated early-discourse arahant formula on destruction of the āsavas.
+- Milindapañha wisdom/severing and hindrance-clearing discussions as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A112
+
+**What makes stream-entry irreversible: what exactly changes in view, doubt, practice, and relation to the Dhamma when the first three fetters are ended?**
+
+Required lanes:
+- first three fetters in early texts;
+- Dhamma-eye (`dhammacakkhu`) formula and its relation to stream-entry;
+- four factors/qualities associated with stream-entry where textually relevant;
+- identity view versus residual "I am" conceit;
+- why confidence is not mere belief and why doubt-ending is not prohibition of inquiry;
+- avoid importing later moment-of-path technical mechanics unless labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A112
+
+**Central question:** What makes stream-entry irreversible: what exactly changes in view, doubt, practice, and relation to the Dhamma when the first three fetters are ended?
+
+### TEXT_ATTESTED
+
+1. **DN 16** identifies stream-entry with the ending of the first three fetters: identity view (`sakkāyadiṭṭhi`), doubt (`vicikicchā`), and misapprehension/clinging regarding precepts and observances (`sīlabbataparāmāsa`). The stream-enterer is described as no longer liable to the lower destinations and as fixed in destiny toward awakening.
+2. **SN 56.11** records the arising of the Dhamma-eye in Koṇḍañña with the formula: whatever is subject to arising is subject to cessation. This is an early model of breakthrough as seeing conditionality and cessation, not merely accepting a proposition on authority.
+3. **SN 55** repeatedly characterizes stream-enterers through confirmed confidence (`aveccappasāda`) in Buddha, Dhamma, and Saṅgha, together with ethical qualities dear to the noble ones. Other SN 55 passages also give four conditions conducive to stream-entry: association with good persons, hearing the true Dhamma, wise attention, and practice in accordance with the Dhamma.
+4. **SN 22.89 (Khemaka)** gives a decisive distinction between identity view and the residual `asmimāna` / “I am” tendency. Khemaka does not take any of the five aggregates as self or belonging to self in the identity-view pattern, yet an “I am” conceit, desire, and underlying tendency remain to be removed. Therefore ending identity view does not mean every subtle self-referential tendency has ended.
+5. Early-discourse stream-entry formulas therefore combine a change in view, confidence, practice, and destiny without claiming complete destruction of greed, hatred, conceit, or ignorance.
+
+### WHAT ENDS AT STREAM-ENTRY
+
+The safest minimum is not “all selfing ends.”
+
+It is:
+
+- the view that identifies self in relation to the five aggregates is cut as a fetter;
+- destabilizing doubt that functions as a fetter is cut;
+- the belief that mere observances, rules, or ritualized practices are sufficient in themselves for purification is cut;
+- the relation to Buddha, Dhamma, Saṅgha, and training becomes grounded in confirmed confidence and irreversible orientation.
+
+This is stronger than intellectual agreement but weaker than arahantship.
+
+### DHAMMA-EYE: SEEING CONDITIONALITY, NOT ACQUIRING A NEW IDENTITY
+
+The Dhamma-eye formula—“whatever is subject to arising is subject to cessation”—matters because it reorients understanding from:
+
+“what permanent thing am I?”
+
+toward:
+
+“what arises dependent on conditions, and what ceases when those conditions cease?”
+
+A112 therefore treats stream-entry as an irreversible shift in the framework of seeing, not as installation of a new metaphysical self called “stream-enterer.”
+
+The exact technical relation between every occurrence of `dhammacakkhu` and a formally named stream-entry event should remain passage-sensitive. The early texts strongly associate the formula with breakthrough, but later moment-by-moment path mechanics must not be read back into every occurrence without direct evidence.
+
+### IDENTITY VIEW ≠ RESIDUAL “I AM” CONCEIT
+
+SN 22.89 prevents a major misunderstanding.
+
+One may no longer hold:
+- “form is self”;
+- “self possesses form”;
+- “form is in self”;
+- “self is in form”;
+and the analogous constructions for the other aggregates,
+
+yet still have a subtler `asmimāna`, desire, and underlying tendency “I am.”
+
+Therefore:
+
+`sakkāyadiṭṭhi` ended
+≠ every use of “I”
+≠ every self-referential feeling
+≠ `asmimāna` destroyed
+≠ arahantship.
+
+This preserves the earlier A57–A59 distinction between explicit self-view, conceit, mine-making, and latent tendency.
+
+### WHY CONFIRMED CONFIDENCE IS NOT MERE BELIEF
+
+`Aveccappasāda` in stream-entry contexts is better understood as confidence that has become settled through breakthrough and practice, not as “believe because a teacher said so.”
+
+A112's cross-text model is:
+
+hearing the Dhamma
+→ wise attention
+→ practice in accordance with Dhamma
+→ direct seeing / breakthrough
+→ confirmed confidence.
+
+This is a **CROSS_TEXT_SYNTHESIS**, not a single canonical sequence stated verbatim in one passage.
+
+The important guardrail is that faith and verification are not opposites. Faith can motivate investigation; stream-entry confidence is presented as more stable because something decisive has been seen.
+
+### WHY DOUBT-ENDING DOES NOT MEAN “STOP ASKING QUESTIONS”
+
+The fetter `vicikicchā` is not best understood as every possible intellectual question.
+
+Ending it means the path is no longer undermined by the kind of uncertainty that prevents committed seeing and practice.
+
+A noble disciple can still:
+- ask for clarification;
+- investigate finer points;
+- distinguish what is known from what is not yet known;
+- continue training toward higher stages.
+
+Therefore:
+“no fetter of doubt”
+does **not** mean
+“omniscient”
+or
+“forbidden to inquire.”
+
+This is a **CROSS_TEXT_SYNTHESIS** grounded in the stream-entry fetter formula and the broader early-discourse culture of questioning and progressive training.
+
+### SĪLABBATAPARĀMĀSA: NOT A REJECTION OF ETHICS OR DISCIPLINE
+
+The third fetter is often mistranslated too broadly.
+
+Its ending does not mean:
+- precepts are useless;
+- discipline is abandoned;
+- ritual action is always meaningless.
+
+Rather, the problem is treating mere observance as inherently sufficient for purification or liberation.
+
+This preserves A63:
+discipline can be an essential path support without being transformed into a magical or identity-based guarantee of purity.
+
+### WHAT MAKES THE CHANGE “IRREVERSIBLE”
+
+A112's working synthesis is that stream-entry becomes irreversible because several layers change together:
+
+1. **view:** identity-view is cut;
+2. **epistemic orientation:** the Dhamma has been seen in a way that stabilizes confidence;
+3. **practice:** ritual/observance is no longer mistaken for the liberating mechanism by itself;
+4. **direction:** the disciple is described as fixed toward awakening and no longer liable to the lower destinations.
+
+No single psychological feeling defines this irreversibility.
+
+It is a structured transformation in how reality, practice, and liberation are understood.
+
+### TWO DIFFERENT “FOURS” MUST NOT BE COLLAPSED
+
+SN 55 material uses closely related but distinct fourfold frameworks.
+
+One set concerns **conditions conducive to stream-entry**:
+- association with good persons;
+- hearing true Dhamma;
+- wise attention;
+- practice in accordance with Dhamma.
+
+Another set concerns **qualities of a stream-enterer**:
+- confirmed confidence in Buddha;
+- confirmed confidence in Dhamma;
+- confirmed confidence in Saṅgha;
+- ethical qualities dear to the noble ones.
+
+A112 keeps “causes/supports for entry” distinct from “marks/qualities after entry.”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha discussions of faith emphasize its clarifying and aspirational functions: faith can settle the mind and orient it toward a goal that has been seen or exemplified by noble persons.
+
+**Role:** later/paracanonical support for distinguishing faith that clarifies and directs practice from blind assent.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not override the early-discourse criteria for stream-entry, nor is it used to supply later technical path-moment mechanics.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate stream-entry with total absence of greed, hatred, or delusion.
+- Do not equate ending identity view with ending `asmimāna`.
+- Do not equate confirmed confidence with blind belief.
+- Do not equate ending doubt with ending inquiry.
+- Do not equate ending `sīlabbataparāmāsa` with rejecting ethics or discipline.
+- Do not collapse the four supports for stream-entry into the four qualities of a stream-enterer.
+- Do not import later path-moment micro-mechanics unless explicitly labelled as later systematization.
+
+### Sources
+
+- DN 16 Mahāparinibbāna Sutta.
+- SN 56.11 Dhammacakkappavattana Sutta.
+- SN 55 stream-entry collections on confirmed confidence and conditions for stream-entry.
+- SN 22.89 Khemaka Sutta.
+- Milindapañha faith discussions as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A113
+
+**How should `sakkāyadiṭṭhi` (identity view) be distinguished from `asmimāna` (“I am” conceit), `ahaṅkāra/mamaṅkāra` (I-making/mine-making), and ordinary conventional self-reference after stream-entry?**
+
+Required lanes:
+- SN 22.89 in detail;
+- twenty identity-view modes where textually explicit;
+- `asmimāna` versus explicit view;
+- I-making / mine-making language;
+- conventional speech without ontological reification;
+- implications for stream-entry versus arahantship;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A113
+
+**Central question:** How should `sakkāyadiṭṭhi` (identity view) be distinguished from `asmimāna` (“I am” conceit), `ahaṅkāra/mamaṅkāra` (I-making/mine-making), and ordinary conventional self-reference after stream-entry?
+
+### TEXT_ATTESTED
+
+1. **MN 44** gives a precise definition of identity view in relation to each of the five aggregates. For each aggregate, one may regard:
+   - the aggregate **as self**;
+   - self **as possessing** the aggregate;
+   - the aggregate **as in self**;
+   - self **as in** the aggregate.
+   Across five aggregates, this yields twenty identity-view modes.
+2. **SN 22.89 (Khemaka)** shows that a practitioner can reject all such aggregate-as-self identifications and yet still retain a subtler `asmīti` / `asmimāna`—the residual sense or conceit “I am”—together with desire and underlying tendency connected with it.
+3. **SN 1.25** explicitly allows conventional first-person speech in an arahant. An arahant may say “I speak” and others may say “they speak to me,” while being skilled in worldly expression and not construing an ego behind the words.
+4. **MN 1** distinguishes direct knowing from conceiving and mine-making. One may know an object without adding the conceivings “in it,” “from it,” “mine,” or delighting in it.
+5. These passages together establish that **using first-person language is not by itself identity view**.
+
+### SAKKĀYADIṬṬHI IS A VIEW-STRUCTURE, NOT EVERY SELF-REFERENCE
+
+The twentyfold pattern in MN 44 is crucial.
+
+`Sakkāyadiṭṭhi` is not safely defined as:
+- saying “I”;
+- remembering one's biography;
+- making plans;
+- recognizing one's body;
+- using one's name;
+- distinguishing oneself from another person in ordinary speech.
+
+Those can all occur without asserting any aggregate, or a self related to an aggregate, as an enduring self in the twentyfold identity-view pattern.
+
+Therefore:
+
+`ordinary self-reference`
+≠ automatically
+`sakkāyadiṭṭhi`.
+
+### THE TWENTY MODES: FOUR RELATIONS × FIVE AGGREGATES
+
+For each aggregate—form, feeling, perception, formations, consciousness—the identity-view pattern takes four forms:
+
+1. **X is self**
+2. **self possesses X**
+3. **X is in self**
+4. **self is in X**
+
+This is more precise than the slogan “taking the aggregates as self.”
+
+The view may assert identity, ownership, containment, or location.
+
+That matters because self-view can survive in subtler metaphysical forms even when one no longer literally says, for example, “the body itself is the soul.”
+
+### ASMI-MĀNA: A SUBTLER “I AM” AFTER VIEW IS GONE
+
+SN 22.89 provides one of the clearest distinctions in the early discourses.
+
+Khemaka does **not** identify any aggregate as self in the standard identity-view way, yet says that among the five aggregates there remains an “I am” that is not tied to a specific claim such as “I am this.”
+
+The discourse compares this residual “I am” to the scent remaining in a freshly washed cloth.
+
+This means:
+
+`sakkāyadiṭṭhi` = explicit/distorted view-structure about self and aggregates;
+
+`asmimāna` = subtler self-positioning or conceit “I am” that can persist even after that view is cut.
+
+They are related but not identical.
+
+### I-MAKING / MINE-MAKING ARE FUNCTIONAL PROCESSES
+
+Early-discourse language such as `ahaṅkāra` / `mamaṅkāra`, and the repeated “mine” patterns in MN 1 and aggregate texts, points to active appropriation:
+
+- turning an experience into “I”;
+- turning an experience into “mine”;
+- using it as support for identity;
+- defending or comparing based on it.
+
+A113 therefore uses **I-making / mine-making** as a functional process term.
+
+It must not be collapsed into:
+- identity view;
+- conceit;
+- craving;
+- clinging;
+- latent tendency.
+
+These can interact, but the words are not synonyms.
+
+### CONVENTIONAL “I” WITHOUT ONTOLOGICAL REIFICATION
+
+SN 1.25 supplies the cleanest guardrail.
+
+An arahant may still use ordinary expressions:
+- “I speak”;
+- “they speak to me”;
+- ordinary pronouns and social reference.
+
+The difference is not grammar.
+
+The difference is whether the language is backed by appropriation, conceit, and reification.
+
+Thus:
+
+**conventional designation**
+can remain,
+
+while
+**identity-view and egoic appropriation**
+can be absent.
+
+This directly blocks the false inference:
+“someone said ‘I’, therefore they still hold a self-view.”
+
+### STREAM-ENTRY VERSUS ARAHANTSHIP
+
+A113 sharpens the distinction from A112:
+
+**At stream-entry**
+- identity view is cut;
+- ordinary self-reference remains;
+- residual `asmimāna` can remain;
+- other defilements and higher fetters remain.
+
+**At arahantship**
+- even the residual conceit “I am” is removed;
+- conventional first-person language can still be used;
+- no ontological self has to be inserted behind that language.
+
+So the disappearance of self-view and the disappearance of all self-referential language are entirely different claims.
+
+### RELATION TO UPĀDĀNA
+
+Identity view and clinging can support each other, but they are not identical categories.
+
+A view can be:
+- held as a proposition;
+- appropriated as “my view”;
+- used as identity;
+- clung to;
+- defended in dispute.
+
+A113 therefore preserves:
+`diṭṭhi` ≠ `upādāna` ≠ `asmimāna` ≠ `mamaṅkāra`.
+
+The early texts often show causal or functional relationships among them, but collapsing them erases diagnostic precision.
+
+### BUDDHA'S METHOD OF DECONSTRUCTING SELF
+
+The Buddha's method is not simply to replace:
+“there is a self”
+with
+“there is no self”
+as another identity-position.
+
+The recurring method is more operational:
+
+1. identify what is being taken as self;
+2. inspect its arising, change, and cessation;
+3. see whether it can be controlled as “let it be thus”;
+4. examine ownership and identification;
+5. remove “this is mine, this I am, this is my self”;
+6. continue until even the residual “I am” conceit is gone.
+
+This is a `CROSS_TEXT_SYNTHESIS` drawing on aggregate analysis, MN 44, SN 22.89, and the non-conceiving patterns of MN 1.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Nāgasena chariot dialogue is directly useful here. “Nāgasena” and “chariot” function as conventional designations dependent on parts and conditions; the designation is usable without requiring an independently existing essence corresponding to the name.
+
+**Role:** later/paracanonical clarification of how conventional person-language can remain useful without establishing a permanent self.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the chariot analogy is not used to replace the early-discourse definition of `sakkāyadiṭṭhi`, which remains anchored in MN 44 and SN 22 material.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate saying “I” with identity view.
+- Do not equate memory, agency, personality, or social identity with `sakkāyadiṭṭhi` by default.
+- Do not equate ending identity view with ending `asmimāna`.
+- Do not equate conventional designation with ontological assertion.
+- Do not collapse I-making, mine-making, conceit, clinging, and view into one term.
+- Do not use the Milindapañha chariot as though it were the canonical definition of identity view.
+
+### Sources
+
+- MN 44 Cūḷavedalla Sutta.
+- SN 22.89 Khemaka Sutta.
+- SN 1.25 Arahanta Sutta.
+- MN 1 Mūlapariyāya Sutta.
+- Milindapañha Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A114
+
+**How does the formula “this is not mine, this I am not, this is not my self” function as a practice, and how should it be distinguished from mere verbal denial or philosophical annihilationism?**
+
+Required lanes:
+- SN 22.59 and related aggregate texts;
+- relation among impermanence, stress, not-self, and relinquishment;
+- “not mine / not I / not self” as de-appropriation rather than slogan;
+- relation to control criterion (“let it be thus”);
+- distinction from annihilationism and from emotional dissociation;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A114
+
+**Central question:** How does the formula “this is not mine, this I am not, this is not my self” function as a practice, and how should it be distinguished from mere verbal denial or philosophical annihilationism?
+
+### TEXT_ATTESTED
+
+1. **SN 22.59** applies the not-self analysis to each of the five aggregates. It first argues that if an aggregate were self, it would be amenable to control—“let it be thus; let it not be thus”—and would not lead to affliction in the stated way. But form, feeling, perception, formations, and consciousness are not controllable on that basis.
+2. The same discourse asks whether each aggregate is permanent or impermanent, and whether what is impermanent, stressful/afflictive, and subject to change is fit to be regarded as “this is mine, this I am, this is my self.” The answer is no.
+3. SN 22.59 then instructs that every instance of each aggregate—past, future, or present; internal or external; coarse or subtle; inferior or superior; far or near—should be seen with right discernment as “not mine, not I, not my self.”
+4. The result described is not verbal negation for its own sake. Seeing in this way leads to disenchantment (`nibbidā`), dispassion (`virāga`), and release (`vimutti`).
+5. **SN 12.15** rejects the two extremes “everything exists” and “everything does not exist,” teaching dependent arising and cessation instead. The practitioner does not cling to “my self,” while seeing suffering arise and cease conditionally.
+6. **SN 36.6** shows that the instructed disciple can still feel painful bodily feeling without adding the second arrow of mental resistance. Therefore liberation/de-appropriation does not require erasing the fact of felt experience.
+
+### THE FORMULA IS A PRACTICE OF DE-APPROPRIATION
+
+A114's safest working interpretation is:
+
+- **“not mine”** loosens ownership/appropriation;
+- **“I am not this”** loosens identification;
+- **“this is not my self”** loosens the view that an aggregate is, contains, belongs to, or is possessed by an enduring self.
+
+This three-function reading is a **CROSS_TEXT_SYNTHESIS**. It reflects the grammar and the broader identity-view/clinging material, but the early discourses do not present a single technical table saying that each phrase has only one exclusive psychological function.
+
+The practical point is that experience continues to be known while the possessive/self-identifying relation to it is dismantled.
+
+### WHY IT IS NOT A MAGIC SENTENCE
+
+Repeating:
+“not mine, not I, not my self”
+without seeing impermanence, affliction, change, craving, clinging, and conditionality is not what SN 22.59 depicts.
+
+The discourse proceeds through investigation:
+
+aggregate
+→ cannot be commanded as self
+→ impermanent
+→ subject to change/affliction
+→ therefore not fit for appropriation as mine/I/self
+→ disenchantment
+→ dispassion
+→ release.
+
+Thus the formula functions as a conclusion repeatedly applied with discernment, not as a verbal charm.
+
+### THE CONTROL CRITERION: IMPORTANT BUT NOT A SINGLE TOTAL PROOF
+
+SN 22.59's “let it be thus” argument is text-attested.
+
+A114 preserves a guardrail:
+the Buddha is not merely arguing, “anything I cannot perfectly control is therefore metaphysically unreal.”
+
+Rather, in context the inability to command each aggregate undermines its suitability as the autonomous self that one would treat as “me” and “mine.”
+
+The control argument works together with impermanence, affliction, change, and de-appropriation.
+
+### NOT-SELF DOES NOT MEAN “NOTHING EXISTS”
+
+SN 12.15 is crucial.
+
+The Buddha rejects both:
+- “everything exists”;
+- “everything does not exist.”
+
+He redirects attention to:
+- conditioned arising;
+- conditioned cessation;
+- non-clinging.
+
+Therefore the not-self formula is not safely reduced to the proposition:
+“there is absolutely nothing.”
+
+Its practical force is:
+**do not appropriate conditioned phenomena as self or belonging to self.**
+
+This avoids converting not-self into annihilationism.
+
+### NOT-SELF DOES NOT MEAN “I MUST DESTROY MYSELF”
+
+To say:
+“form is not self”
+is not to say:
+“a truly existing self must now be killed.”
+
+That would first posit the very self-entity the analysis is dismantling and then imagine its destruction.
+
+The early-text strategy is different:
+identify the processes being appropriated,
+see their conditioned and changing nature,
+stop taking them as mine/I/self,
+and let craving and clinging cease.
+
+This is a **CROSS_TEXT_SYNTHESIS** anchored in SN 22.59 and SN 12.15.
+
+### NOT-SELF IS NOT EMOTIONAL NUMBING OR DISSOCIATION
+
+These modern labels are not early-Buddhist technical terms, so any equivalence remains **OPEN/GUARDED**.
+
+The textual minimum is clear:
+- feeling can still occur;
+- bodily pain can still occur;
+- experience is still known;
+- the training changes the relation of craving, aversion, identification, and clinging to that experience.
+
+SN 36.6 is especially useful: the trained disciple still feels the first arrow but does not add the second arrow in the same way.
+
+Therefore A114 does not interpret “not mine” as “I must stop feeling” or “pretend the experience is not occurring.”
+
+### IMPERMANENCE → DISENCHANTMENT, NOT HATRED
+
+SN 22.59's progression culminates in `nibbidā → virāga → vimutti`.
+
+A114 preserves the earlier lexical guardrail:
+`nibbidā` is not simply aversion or disgust in the ordinary hostile sense,
+and `virāga` is not emotional deadness.
+
+The direction is loss of fascination and passion for appropriation, culminating in release.
+
+### RELATION TO A113
+
+A113 showed that conventional “I” language can remain without identity view.
+
+A114 now shows why the not-self formula does not require linguistic self-erasure.
+
+One can still say:
+“I am walking,”
+while seeing the relevant form, feeling, perception, formations, and consciousness as not fit to be appropriated as a permanent self.
+
+The target is not grammar.
+The target is appropriation.
+
+### BUDDHA'S REASONING METHOD
+
+A114 reveals a recurring reasoning pattern:
+
+1. start from directly inspectable experience;
+2. test control and stability;
+3. examine whether the object is fit for appropriation;
+4. refrain from solving the problem by asserting either eternal existence or total non-existence;
+5. use the insight to weaken craving and clinging;
+6. judge the teaching by whether it culminates in dispassion and release.
+
+This is neither a bare metaphysical declaration nor a purely verbal exercise.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's discussions of wisdom describe wisdom as both **cutting** and **illuminating**: it dispels ignorance and makes impermanence, suffering, and not-self clear. The Nāgasena/chariot dialogue also preserves the usefulness of conventional designation without requiring an independently findable self-essence.
+
+**Role:** later/paracanonical support for reading not-self as discernment that cuts appropriation rather than as a command to deny ordinary experience or conventional language.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not replace SN 22.59's early-discourse sequence or SN 12.15's middle-way guardrail.
+
+### CORRECTIONS PRESERVED
+
+- Do not treat “not mine, not I, not my self” as a magic sentence detached from discernment.
+- Do not interpret not-self as “nothing exists.”
+- Do not interpret not-self as “destroy a real self.”
+- Do not equate non-appropriation with inability to feel.
+- Do not turn the control criterion into a stand-alone universal metaphysical proof.
+- Do not equate `nibbidā` with hatred or `virāga` with emotional deadness.
+- Do not use later/paracanonical explanations to override the early-text sequence.
+
+### Sources
+
+- SN 22.59 Anattalakkhaṇa / Pañcavaggi Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 36.6 Sallattha Sutta.
+- Milindapañha wisdom/cutting/illumination discussion and Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A115
+
+**How do `anattā` (not-self) and `suññatā` (emptiness) relate in the early discourses, and why does “empty of self or what belongs to self” not mean nihilistic nothingness?**
+
+Required lanes:
+- SN 35.85–86 emptiness material;
+- five aggregates / six sense bases;
+- “empty of self and what belongs to self”;
+- relation to dependent arising and SN 12.15;
+- distinguish early-discourse emptiness from later expanded emptiness philosophies unless labelled;
+- distinguish experiential emptiness from “nothing exists”;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A115
+
+**Central question:** How do `anattā` (not-self) and `suññatā` (emptiness) relate in the early discourses, and why does “empty of self or what belongs to self” not mean nihilistic nothingness?
+
+### TEXT_ATTESTED
+
+1. **SN 35.85** answers the question “in what respect is the world empty?” by saying that it is empty of a self or of what belongs to a self.
+2. The discourse applies this not merely to one abstract object but throughout the sensory field: eye, forms, eye-consciousness, eye-contact, and the feeling arising dependent on contact; likewise ear, nose, tongue, body, and mind with their corresponding objects, consciousness, contact, and feeling.
+3. Thus, in this early-discourse context, `suñña/suññatā` does not mean that the sensory processes are verbally erased. They are named and analyzed, while being declared empty **of self and what belongs to self**.
+4. **MN 43** independently defines “liberation of mind through emptiness” by the reflection that a place/experience is “empty of self or what belongs to self.” This confirms that the self/not-self axis is one important early meaning of emptiness.
+5. **SN 12.15** rejects the extremes “everything exists” and “everything does not exist,” and teaches dependent arising/cessation instead. This guards the emptiness teaching from being converted into annihilationist “nothing exists.”
+6. **SN 22.59** and related aggregate texts give the complementary not-self practice: conditioned aggregates are not fit to be regarded as “mine, I, my self.” The emptiness formula and the not-self formula therefore converge on de-appropriation, though the terms are not simply interchangeable in every context.
+
+### SUÑÑATĀ HERE IS A RELATIONAL PREDICATE
+
+A115 preserves a grammatical and doctrinal point:
+
+SN 35.85 says the world is empty **of** something:
+- empty of self;
+- empty of what belongs to self.
+
+That is different from saying:
+- the world is nonexistent;
+- experience is an illusion in the sense of “nothing is there”;
+- all distinctions are meaningless.
+
+The discourse names the six sense bases, their objects, consciousness, contact, and feeling, then denies that a self or self-property is discoverable in that field.
+
+So the safest early-discourse reading is:
+**experience is present and conditionally functioning, but it is empty of an appropriable self-essence or owner.**
+
+The phrase “self-essence” here is an explanatory gloss, not a direct Pāli technical term in SN 35.85.
+
+### ANATTĀ AND SUÑÑATĀ: OVERLAP WITHOUT TOTAL IDENTITY
+
+`Anattā` asks of phenomena:
+“Is this appropriately regarded as self?”
+
+`Suññatā`, in SN 35.85, describes the sensory world as:
+“empty of self and what belongs to self.”
+
+They therefore overlap strongly.
+
+But A115 does **not** conclude:
+`anattā = suññatā` in every early-Buddhist use.
+
+Why?
+Because early discourses also use emptiness in meditative contexts—such as an emptiness liberation or an emptiness dwelling—where the emphasis can include absence of disturbance or progressive simplification.
+
+Therefore the safe conclusion is:
+
+**not-self is one central content of early emptiness teaching, but “emptiness” has more than one early-discourse use.**
+
+### THE SIX SENSE BASES MAKE EMPTINESS EXPERIENTIAL
+
+SN 35.85 locates the analysis in lived experience:
+
+eye + form → eye-consciousness → contact → feeling,
+and similarly for the other senses.
+
+This matters because emptiness is not presented only as a remote cosmological thesis.
+
+It can be investigated where experience actually occurs.
+
+The question becomes:
+- where in seeing is a permanent owner found?
+- where in hearing is an enduring “mine” found?
+- where in contact or feeling is a self that can command the process found?
+
+This connects A115 directly to A114's de-appropriation practice.
+
+### WHY EMPTY DOES NOT MEAN “NOTHING”
+
+If “empty” meant merely “nonexistent,” SN 35.85 would collapse its own analysis: it explicitly discusses eye, forms, consciousness, contact, and feeling.
+
+The emptiness is specified:
+**empty of self or what belongs to self.**
+
+Therefore:
+`suñña`
+in this passage
+≠ simple nonexistence.
+
+This is a **CROSS_TEXT / SEMANTIC SYNTHESIS** grounded in the explicit syntax of SN 35.85 and the middle-way guardrail of SN 12.15.
+
+### RELATION TO DEPENDENT ARISING
+
+Dependent arising gives a positive causal account of how experience and suffering arise:
+when conditions are present, effects arise;
+when conditions cease, effects cease.
+
+A115 therefore reads early emptiness and dependent arising as complementary:
+
+- dependent arising blocks the need for an independent self-controller;
+- emptiness blocks appropriation of the conditioned process as self or belonging to self;
+- cessation shows that release is achieved by ending the relevant conditions, not by annihilating a metaphysical person.
+
+This three-part relation is a **CROSS_TEXT_SYNTHESIS**, not a single canonical formula.
+
+### “THE WORLD IS EMPTY” MUST REMAIN CONTEXT-BOUND
+
+SN 35.85 answers a specific question about the “world” in the context of the six sense domains.
+
+A115 therefore does not silently universalize the sentence into every later philosophical claim that has been expressed using the word “emptiness.”
+
+The early-discourse claim securely attested here is:
+the sensory world is empty of self and what belongs to self.
+
+Broader theories about:
+- intrinsic nature;
+- universal ontological emptiness;
+- two truths;
+- emptiness of emptiness;
+- Madhyamaka dialectics;
+
+belong to later philosophical development and must be labelled **LATER** when studied.
+
+This distinction is about historical/source classification, not a judgment that later philosophies are false.
+
+### EMPTINESS DOES NOT ERASE ETHICS OR CAUSALITY
+
+If emptiness meant that nothing mattered because nothing existed, the broader early-discourse framework of:
+- intentional action;
+- consequences;
+- training;
+- craving;
+- clinging;
+- cessation;
+- liberation
+
+would become unintelligible.
+
+Instead, emptiness removes self-appropriation while causal relations remain operational.
+
+Thus the practical consequence is not nihilism but greater care with causes:
+if suffering depends on conditions, change the conditions;
+do not search for an eternal owner inside the process.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Nāgasena/chariot dialogue is again relevant as a later/paracanonical clarification: a conventional designation can function dependently on parts and relations without requiring an independently findable permanent entity corresponding to the name.
+
+**Role:** support for understanding how conventional experience and person-language can remain while self-substantialization is removed.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the chariot argument is not treated as the definition of `suññatā`; the early-discourse emptiness claim remains anchored in SN 35.85 and MN 43.
+
+### CORRECTIONS PRESERVED
+
+- Do not translate “empty” as “nothing exists.”
+- Do not equate every use of `suññatā` with exactly one doctrine.
+- Do not collapse `anattā` and `suññatā` into universal synonyms.
+- Do not read later Madhyamaka technical vocabulary back into SN 35.85 without explicit historical labelling.
+- Do not infer that emptiness eliminates causal efficacy, ethics, experience, or conventional language.
+- Do not use the Milindapañha chariot dialogue to override early-discourse definitions.
+
+### Sources
+
+- SN 35.85 Suñña Sutta.
+- MN 43 Mahāvedalla Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 22.59 Anattalakkhaṇa / Pañcavaggi Sutta.
+- Milindapañha Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A116
+
+**How does “emptiness” function as a meditative dwelling in MN 121 / MN 122, and how is that use related to—but not identical with—SN 35.85’s “empty of self and what belongs to self”?**
+
+Required lanes:
+- MN 121 progressive emptiness and the principle of noticing what is absent and what remains;
+- MN 122 internal emptiness / seclusion and disturbance;
+- SN 35.85 emptiness-of-self comparison;
+- distinguish emptiness as attribute, perception, liberation, and meditative dwelling where the texts require;
+- guard against treating emptiness as blankness, trance, or nonexistence;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A116
+
+**Central question:** How does “emptiness” function as a meditative dwelling in MN 121 / MN 122, and how is that use related to—but not identical with—SN 35.85’s “empty of self and what belongs to self”?
+
+### TEXT_ATTESTED
+
+1. **MN 121** begins with the Buddha affirming that he dwells much in emptiness. Its opening example is concrete: Migāra’s Mother’s palace is empty of elephants, cattle, gold, crowds, and other absent things, while what remains—the community of monks—is known as present.
+2. MN 121 then states the governing method: what is absent is seen as empty of that; whatever remains is understood as present—“there is this.” The discourse calls this an entry into emptiness that accords with actuality and is undistorted.
+3. The practice proceeds by progressively simplifying the field of attention: from village/person perceptions to wilderness, earth, the formless attainments, and finally signless concentration. At each stage, certain disturbances are absent while a subtler remainder is explicitly acknowledged.
+4. MN 121 does **not** define emptiness as blankness. Every stage requires accurate recognition of both:
+   - what is absent;
+   - what is still present.
+5. At the level of signless concentration, the practitioner sees that even this refined concentration is fabricated/conditioned, impermanent, and subject to cessation. With that seeing, the mind is liberated from the taints of sensuality, becoming, and ignorance.
+6. Even after the taints are destroyed, MN 121 still notes a residual disturbance connected with the living body and six sense bases dependent on life. This is another direct guardrail against interpreting emptiness as absence of all experience.
+7. **MN 122** treats emptiness as an internal meditative dwelling requiring a mind that is first steadied, settled, unified, and concentrated. If the mind does not settle in internal emptiness, the practitioner is instructed to know that fact rather than pretend success.
+8. MN 122 integrates the emptiness dwelling with conduct: walking, standing, sitting, lying down, speech, and thought are monitored so that covetousness, sadness, and other unskillful states do not take possession.
+9. **SN 35.85** uses “empty” in a different but related way: the sixfold sensory world is empty of self and what belongs to self.
+
+### THE CORE METHOD OF MN 121: ABSENCE + REMAINDER
+
+A116's central finding is that MN 121 defines meditative emptiness relationally.
+
+The practitioner does not merely ask:
+“What has disappeared?”
+
+They also ask:
+“What remains?”
+
+The repeated structure is:
+
+**empty of X**
++
+**Y remains present**
++
+**know both accurately**.
+
+This is crucial.
+
+If a mode of perception is empty of village and human-being perceptions but still contains wilderness perception, the practitioner does not call the whole field “nothing.”
+
+Likewise, if a subtler meditative state remains, its residual disturbance is explicitly acknowledged.
+
+Therefore MN 121 trains **precision about absence**, not metaphysical denial.
+
+### EMPTINESS AS REDUCTION OF DISTURBANCE
+
+Each move in MN 121 removes coarser disturbances while exposing a subtler remainder.
+
+A useful functional reading is:
+
+village/person perception
+→ wilderness
+→ earth
+→ infinite space
+→ infinite consciousness
+→ nothingness
+→ neither-perception-nor-non-perception
+→ signless concentration
+→ seeing even that conditioned state as impermanent
+→ liberation from the āsavas.
+
+This sequence is **TEXT_ATTESTED in broad structure**, but any claim that it is the only possible Buddhist meditation sequence would exceed the text.
+
+The governing logic is not “higher = more metaphysically real.”
+
+It is:
+**what disturbances have ceased, and what conditioned disturbance still remains?**
+
+### “THERE IS THIS” — EMPTINESS WITHOUT DENIAL
+
+MN 121's repeated recognition that what remains is present gives a strong anti-nihilist safeguard.
+
+Emptiness practice requires one to avoid both:
+- adding what is not there;
+- denying what is there.
+
+This means that “empty” is disciplined by actuality.
+
+A116 therefore summarizes the method as:
+
+**do not reify absence;
+do not erase remainder;
+know both.**
+
+This is a `CROSS_TEXT / FUNCTIONAL SYNTHESIS` grounded directly in the repeated MN 121 formula.
+
+### MN 122: EMPTINESS REQUIRES A TRAINED, STABLE MIND
+
+MN 122 adds an operational condition.
+
+Before internal emptiness can become a stable dwelling, the mind is made:
+- steady;
+- settled;
+- unified;
+- concentrated.
+
+The discourse explicitly routes this through the jhānas.
+
+Then the practitioner checks:
+“Does the mind actually settle into internal emptiness?”
+
+If not, that failure is itself known.
+
+This is important for Buddhist reasoning method:
+**the instruction contains an internal falsification check.**
+
+The meditator is not told to declare attainment by belief or aspiration.
+
+They test whether the mind really enters, settles, and remains.
+
+### EMPTINESS IS NOT ONLY A SITTING-TRANCE
+
+MN 122 carries the training into ordinary activities.
+
+While walking, standing, sitting, lying down, speaking, and thinking, the practitioner monitors whether unskillful states are taking possession.
+
+Therefore the emptiness dwelling is not safely reduced to:
+- sensory shutdown;
+- a blank trance;
+- a special state disconnected from conduct.
+
+The meditative center must generalize into how movement, speech, thought, and social contact are handled.
+
+### SECLUSION IS A CONDITION, NOT A METAPHYSICAL CLAIM
+
+MN 122 strongly praises seclusion and warns against delight in company and crowds when that undermines renunciation and concentration.
+
+A116 does not turn this into the universal proposition:
+“other people are bad” or “liberation requires permanent social isolation.”
+
+The textual point is functional:
+certain forms of social entanglement can disturb the conditions needed for deep emptiness practice.
+
+This is a training claim, not an ontology of society.
+
+### RELATION TO SN 35.85
+
+SN 35.85:
+**the sensory world is empty of self and what belongs to self.**
+
+MN 121:
+**a meditative field is empty of whatever disturbance/perception is absent, while what remains is accurately known.**
+
+MN 122:
+**emptiness is cultivated as an internal/external meditative dwelling supported by concentration and guarded conduct.**
+
+These uses are related but not identical.
+
+A safe synthesis is:
+
+- SN 35.85 emphasizes **what experience is empty of** with respect to self;
+- MN 121 emphasizes **progressively noticing absence and remainder**;
+- MN 122 emphasizes **how emptiness is entered, stabilized, and carried into practice**.
+
+This threefold comparison is `CROSS_TEXT_SYNTHESIS`.
+
+### EMPTINESS AS ATTRIBUTE, LIBERATION, AND DWELLING
+
+The early discourses use emptiness in several connected functions:
+
+- **attribute:** a field is empty of self/what belongs to self;
+- **meditative dwelling:** one abides in a mode of perception by accurately attending to absence and remainder;
+- **heart/mind liberation through emptiness:** other early texts such as MN 43 / SN 41.7 use emptiness as a liberation mode.
+
+A116 does not assume that these are one technical state under three names.
+
+They overlap in practice and de-appropriation, but the textual functions must remain distinct.
+
+### WHY THE SIGNLESS STATE IS NOT THE END
+
+MN 121 contains an especially important correction.
+
+The signless concentration is extremely refined, yet the practitioner sees:
+- it is fabricated/conditioned;
+- it is impermanent;
+- it is subject to cessation.
+
+Therefore even a very refined meditative state must not be mistaken for final liberation merely because it is peaceful or subtle.
+
+The decisive transition occurs when clinging/taints are ended, not when an impressive state is merely attained.
+
+This preserves the A108–A114 distinction between temporary state and eradication.
+
+### THE LIVING ARAHANT IS NOT “BLANK”
+
+MN 121 says that when the sensuality, becoming, and ignorance taints are absent, a remainder connected with the living body and six sense bases dependent on life is still present.
+
+So:
+
+**āsavas destroyed**
+does not mean
+**the sensory organism instantly disappears**.
+
+This is consistent with the earlier distinction between liberation and the continuing conditioned life of the arahant.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+The Milindapañha discussion of `samādhi` describes concentration as a leading/organizing quality toward which wholesome states incline, and cites the principle that a concentrated practitioner knows things as they really are.
+
+**Role:** later/paracanonical support for MN 122's insistence that the mind first become steady, unified, and concentrated before emptiness can be reliably entered and examined.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha is not used to define MN 121's emptiness sequence or to override the early-discourse tests of absence, remainder, conditionedness, and āsava destruction.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate emptiness with blankness.
+- Do not notice only absence; MN 121 requires knowing what remains.
+- Do not equate refined concentration with final liberation.
+- Do not treat “internal emptiness” as a self-certified attainment; MN 122 requires checking whether the mind actually settles there.
+- Do not reduce emptiness to a sitting trance disconnected from conduct.
+- Do not equate SN 35.85's emptiness-of-self formula with every meditative use of emptiness.
+- Do not use later/paracanonical concentration theory to overwrite MN 121 / MN 122.
+
+### Sources
+
+- MN 121 Cūḷasuññata Sutta.
+- MN 122 Mahāsuññata Sutta.
+- SN 35.85 Suñña Sutta.
+- MN 43 / SN 41.7 for emptiness as a mode of mind/heart liberation.
+- Milindapañha Samādhipañha (concentration discussion) as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A117
+
+**Why does MN 121 treat even `animitta cetosamādhi` (signless concentration of mind) as conditioned and subject to cessation, and what exactly distinguishes that refined state from liberation through destruction of the āsavas?**
+
+Required lanes:
+- MN 121 signless concentration and its conditioned status;
+- `saṅkhata` / intentional construction guardrail;
+- signless concentration versus destruction of sensuality-, becoming-, and ignorance-āsavas;
+- living-body/six-sense-base remainder after liberation;
+- relation to A108–A110 state-versus-eradication distinctions;
+- avoid importing later “three doors to liberation” schemas unless explicitly labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A117
+
+**Central question:** Why does MN 121 treat even `animitta cetosamādhi` (signless concentration of mind) as conditioned and subject to cessation, and what distinguishes that refined state from liberation through destruction of the `āsavas`?
+
+### TEXT_ATTESTED
+
+1. **MN 121** says of the signless concentration of mind: `ayampi kho animitto cetosamādhi abhisaṅkhato abhisañcetayito`—even this signless concentration is produced/constructed and intentionally or mentally fashioned. The discourse immediately adds that whatever is so produced is impermanent and subject to cessation.
+2. The exact wording is important. The text does not merely apply the generic label `saṅkhata`; it uses the stronger verbal forms `abhisaṅkhata` and `abhisañcetayita`. Translation varies (“conditioned/fabricated,” “constructed,” “volitionally produced,” “mentally fashioned”), so A117 preserves the Pāli and does not force one English gloss into a complete metaphysical theory.
+3. When the practitioner knows and sees the signless concentration in this way, MN 121 says the mind is liberated from the taint of sensuality (`kāmāsava`), the taint of becoming (`bhavāsava`), and the taint of ignorance (`avijjāsava`).
+4. Liberation is then explicitly known as liberation, with the standard completion formula: birth is destroyed, the holy life fulfilled, what had to be done done, no further coming to such a state of being.
+5. After those taints are absent, MN 121 still acknowledges a residual disturbance associated with this living body and the six sense bases dependent on life. Thus destruction of the `āsavas` does not imply that the living sensory organism vanishes immediately.
+6. The discourse therefore distinguishes a refined meditative state that can be entered and ceased from the liberative destruction of the causes of bondage.
+
+### SIGNLESS CONCENTRATION IS STILL AN OBJECT OF INSIGHT
+
+A117's central correction is:
+
+**a state can be extremely subtle, peaceful, and “signless” and still itself be something to be known as conditioned.**
+
+The practitioner does not stop at:
+“this state is extraordinary.”
+
+They turn discernment onto the state itself:
+
+- how is it produced?
+- is it permanent?
+- is it liable to cessation?
+- is there still appropriation or ignorance around it?
+
+This preserves the broader Buddhist method:
+**no experience receives final status merely because it is refined.**
+
+### WHY “SIGNLESS” DOES NOT MEAN “UNCONDITIONED”
+
+`Animitta` describes the state in terms of absence/non-attending to signs, but MN 121 explicitly says that this concentration is produced and liable to cessation.
+
+Therefore:
+
+`signless`
+≠ automatically
+`unconditioned`.
+
+The absence of ordinary signs or conceptual markers is a feature of the concentration, not proof that the concentration itself is Nibbāna.
+
+This conclusion is **TEXT_ATTESTED + CROSS_TEXT SYNTHESIS**: the conditioned status is explicit in MN 121; the warning against equating subtle state with final liberation follows from the contrast with the subsequent `āsava)-destruction formula.
+
+### STATE-ATTAINMENT VERSUS ERADICATION
+
+A108–A110 established:
+- hindrance absent ≠ latent tendency eradicated;
+- calm ≠ fetter cut;
+- concentration ≠ `āsavas` destroyed.
+
+A117 provides a particularly strong case.
+
+Even the signless concentration can:
+- arise under conditions;
+- be stabilized;
+- be known;
+- cease.
+
+By contrast, the liberation formula concerns the **destruction of taints that generate bondage**.
+
+Thus:
+
+**meditative attainment** asks:
+“What state is present?”
+
+**eradication** asks:
+“What causal source of renewed bondage no longer operates?”
+
+This distinction is a `CROSS_TEXT_SYNTHESIS`, but MN 121 gives unusually direct support because both occur in one sequence.
+
+### THE KEY MOVE IS REFLEXIVE INSIGHT
+
+The practitioner applies impermanence not merely to coarse experience but to the very concentration through which insight is being cultivated.
+
+That produces a methodological pattern:
+
+1. use concentration to simplify and stabilize experience;
+2. do not identify with the concentration;
+3. inspect the concentration itself as produced;
+4. see it as impermanent and cessation-bound;
+5. thereby do not make even a sublime state into “mine / I / self” or final refuge;
+6. the mind is released from the `āsavas`.
+
+A117 calls this **reflexive insight** as a working analytical phrase, not an early canonical technical term.
+
+### WHY THIS IS DIFFERENT FROM DESTROYING THE STATE
+
+Liberation does not require hating or violently terminating the signless concentration.
+
+The text says the concentration is understood correctly as conditioned and impermanent.
+
+The liberative movement is through **knowledge and seeing**, not through aversion toward the state.
+
+So:
+
+“subject to cessation”
+does not mean
+“must be forcibly destroyed.”
+
+The insight removes ignorance and appropriation regarding the state.
+
+### THE THREE ĀSAVAS DEFINE A DIFFERENT LEVEL OF CLAIM
+
+MN 121 names:
+- `kāmāsava` — taint of sensuality;
+- `bhavāsava` — taint of becoming;
+- `avijjāsava` — taint of ignorance.
+
+Their destruction is not another temporary meditative configuration.
+
+It marks a transformation in the causal basis of bondage.
+
+A117 therefore keeps separate:
+
+`animitta cetosamādhi`
+= conditioned refined state;
+
+`āsavakkhaya`
+= destruction of deep taints / completion formula.
+
+They are related in the path but not identical.
+
+### THE LIVING-BODY REMAINDER
+
+After liberation, MN 121 says there remains a modicum of disturbance associated with:
+- this very body;
+- the six sense bases;
+- life as condition.
+
+This is important.
+
+The arahant is liberated from the named taints while:
+- seeing can still occur;
+- hearing can still occur;
+- contact and bodily life continue;
+- conditioned sensory functioning remains until life ends.
+
+Therefore final liberation in this life is not described as immediate disappearance of all conditioned phenomena.
+
+### WHAT “CONDITIONED” MUST NOT BE MADE TO MEAN
+
+A117 preserves several lexical guardrails.
+
+Do not infer from `abhisaṅkhata / abhisañcetayita` that:
+- every conditioned phenomenon is consciously manufactured by a little inner agent;
+- “volitionally produced” proves a metaphysical free will;
+- all uses of `saṅkhāra`, `saṅkhata`, and `abhisaṅkhata` are exact synonyms.
+
+The text securely says this concentration is produced/fashioned and therefore impermanent and cessation-bound.
+
+A complete lexical theory of these related terms remains passage-sensitive.
+
+### RELATION TO THE UNCONDITIONED — OPENING, NOT YET FULLY CLOSED
+
+A117 establishes a negative boundary:
+the signless concentration itself is **not** treated as unconditioned in MN 121.
+
+But A117 does not yet fully define the early-discourse meaning of `asaṅkhata` or its relation to Nibbāna.
+
+That becomes A118.
+
+This prevents an unsafe jump from:
+“this state is conditioned”
+straight to
+“therefore I already have a complete ontology of the unconditioned.”
+
+### LATER “THREE DOORS TO LIBERATION” — GUARDRAIL
+
+Later Buddhist systems often organize emptiness, signlessness, and wishlessness into highly structured “three doors/gateways to liberation” schemes.
+
+A117 does not reject those systems.
+
+But it does not import that later architecture into MN 121 unless separately labelled and sourced.
+
+For this checkpoint the secure early-text finding is narrower:
+**the signless concentration itself is produced and cessation-bound, while liberation is marked by destruction of the `āsavas`.**
+
+### BUDDHA'S REASONING METHOD
+
+A117 shows a demanding form of epistemic discipline:
+
+**do not exempt your best experience from scrutiny.**
+
+Ordinary pleasure is examined.
+Jhāna is examined.
+Formless attainments are examined.
+Even signless concentration is examined.
+
+The more refined the state, the greater the danger of mistaking subtlety for finality.
+
+The Buddha's method therefore asks:
+not “how impressive is this?”
+but
+“is this conditioned, impermanent, appropriated, and still connected with the causes of bondage?”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's `Samādhipañha` describes concentration as the leading/organizing quality toward which wholesome states incline, and quotes the principle that a concentrated practitioner knows things as they really are.
+
+The immediately following wisdom discussion gives wisdom the marks of cutting/severing and illumination.
+
+**Role:** later/paracanonical support for a functional distinction:
+- concentration organizes/stabilizes;
+- wisdom sees and cuts through ignorance.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not override MN 121, and its functional similes are not used to claim that every concentration/wisdom relation is fully defined by one later passage.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate signlessness with the unconditioned.
+- Do not equate a refined state with eradication.
+- Do not infer final liberation from peace, subtlety, or conceptual quiet alone.
+- Do not interpret “subject to cessation” as a command to hate or forcibly destroy the state.
+- Do not treat `abhisaṅkhata`, `abhisañcetayita`, `saṅkhata`, and `saṅkhāra` as automatically identical in every context.
+- Do not infer that `āsava)-destruction means the living six-sense system immediately disappears.
+- Do not import later “three liberation doors” schemas into MN 121 without explicit labelling.
+
+### Sources
+
+- MN 121 Cūḷasuññata Sutta.
+- SN 35.99 Samādhi Sutta as a supporting early-discourse concentration → seeing-things-as-they-are formula.
+- Milindapañha 3.1.14 Samādhipañha and the following wisdom discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A118
+
+**What does `asaṅkhata` (“the unconditioned”) mean in the early discourses, how is it related to Nibbāna, and how can it be distinguished from any conditioned meditative state without turning it into a hidden eternal Self or metaphysical substance?**
+
+Required lanes:
+- SN 43 `asaṅkhata` material;
+- Nibbāna synonyms and cessation language;
+- relation to MN 121 conditioned signless concentration;
+- `ajāta / abhūta / akata / asaṅkhata` material where textually secure;
+- guard against “unconditioned = eternal self/substance” and “unconditioned = mere nonexistence”;
+- distinguish early-text attestation from later Abhidhamma/metaphysical systematization;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A118
+
+**Central question:** What does `asaṅkhata` (“the unconditioned”) mean in the early discourses, how is it related to Nibbāna, and how can it be distinguished from any conditioned meditative state without turning it into a hidden eternal Self or metaphysical substance?
+
+### TEXT_ATTESTED
+
+1. **SN 43.1–2** directly defines the unconditioned (`asaṅkhata`) as the ending of greed, hate, and delusion. The discourses then distinguish the unconditioned from the path leading to it, such as mindfulness of the body or serenity-and-discernment.
+2. **SN 43.4** says emptiness concentration, signless concentration, and undirected concentration are **paths leading to the unconditioned**. This is decisive for A118: even highly refined concentrations are not automatically identical with the unconditioned.
+3. **AN 3.47** contrasts conditioned and unconditioned by arising, vanishing, and change: arising/vanishing/change are evident for the conditioned; they are not evident for the unconditioned.
+4. **SN 43.42** gives a cluster of terms associated with the same unconditioned/Nibbāna domain: truth, far shore, subtle, peaceful, deathless, ending of craving, Nibbāna, dispassion, purity, release, non-clinging, island, shelter, refuge, and related terms. This establishes a rich sutta vocabulary without requiring that every synonym be a separate metaphysical entity.
+5. **Iti 44** distinguishes the Nibbāna element with residue and without residue. In the living arahant, the five sense faculties still function; greed, hate, and delusion are extinguished. This confirms that realization of Nibbāna does not require immediate disappearance of the living sensory process.
+6. **MN 121** treats signless concentration as produced/conditioned and subject to cessation. It must therefore remain distinct from the unconditioned as defined in SN 43.
+7. **SN 12.15** remains a guardrail against forcing the teaching into the extremes “everything exists” or “everything does not exist.”
+
+### THE UNCONDITIONED IS DEFINED FUNCTIONALLY IN SN 43
+
+The safest early-text anchor is unusually direct:
+
+`asaṅkhata`
+= **ending of greed, hate, and delusion**.
+
+This matters because it prevents an immediate speculative leap from the word “unconditioned” to:
+- an eternal cosmic substance;
+- a hidden Self;
+- a creator;
+- a permanent consciousness underlying all experience.
+
+SN 43 gives a liberative definition before any such metaphysical reconstruction.
+
+### PATH ≠ GOAL
+
+SN 43 repeatedly gives this structure:
+
+**the unconditioned**
+versus
+**the path leading to the unconditioned**.
+
+This is especially important in SN 43.4:
+
+emptiness concentration,
+signless concentration,
+undirected concentration
+
+are named as a **path leading to** the unconditioned.
+
+Therefore:
+
+`animitta samādhi`
+≠ automatically
+`asaṅkhata`.
+
+This directly confirms A117.
+
+A refined state may be a vehicle, support, or path-factor while still being conditioned.
+
+### CONDITIONED AND UNCONDITIONED MUST NOT BE TURNED INTO TWO “THINGS”
+
+AN 3.47 provides a contrast in characteristics:
+- conditioned: arising, vanishing, change are evident;
+- unconditioned: these are not evident.
+
+A118 uses this contrast carefully.
+
+It does **not** infer that early Buddhism posits:
+“one giant class of changing substances” versus “one eternal substance called Nibbāna.”
+
+The text gives a diagnostic contrast concerning arising, vanishing, and change.
+
+A full metaphysical ontology beyond that remains **OPEN/CHECK** unless directly established.
+
+### NIBBĀNA AND ASAṄKHATA
+
+SN 43's collection strongly links the unconditioned with Nibbāna terminology.
+
+The most secure synthesis is:
+
+- `asaṅkhata` marks Nibbāna under the aspect of not being conditioned/produced in the way conditioned phenomena are;
+- Nibbāna is also described through cessation language: ending of greed, hate, delusion and craving;
+- other synonyms emphasize peace, refuge, dispassion, release, deathlessness, and non-clinging.
+
+This is a `CROSS_TEXT_SYNTHESIS` based on SN 43 rather than a claim that every synonym has one identical lexical meaning.
+
+### “UNCONDITIONED” DOES NOT MEAN AN ETERNAL SELF
+
+Nothing in the secure A118 texts says:
+- “this is your true Self”;
+- “there is an eternal person beneath the aggregates”;
+- “Nibbāna is a permanent subject of experience.”
+
+Such claims would conflict with the not-self analysis already established in SN 22.59 and the identity-view guardrails of MN 44 / SN 22.89.
+
+Therefore:
+
+`asaṅkhata`
+≠ evidence for
+`attā`.
+
+A118 treats any “Nibbāna = true Self” doctrine as **UNSUPPORTED BY THESE EARLY TEXTS** unless a separate early passage directly establishes it.
+
+### “UNCONDITIONED” ALSO DOES NOT MEAN MERE NONEXISTENCE
+
+The opposite mistake is to translate Nibbāna into “nothing at all.”
+
+That also overshoots the texts.
+
+Early discourses:
+- speak of a path leading to the unconditioned;
+- speak of realization/release;
+- describe the living arahant in whom greed, hate, and delusion are ended while sensory life continues;
+- use positive functional terms such as peace, refuge, deathless, release.
+
+So the secure early-text position is not:
+“a metaphysical thing exists forever”
+and not:
+“nothing whatsoever exists.”
+
+It is:
+**the causal complex of greed, hate, delusion, craving, and bondage is extinguished; that cessation is called Nibbāna / the unconditioned.**
+
+Any stronger ontology remains guarded.
+
+### THE LIVING ARAHANT PROVES A CRUCIAL DISTINCTION
+
+Iti 44 is especially useful.
+
+The living arahant:
+- has defilements ended;
+- is liberated;
+- still has functioning sense faculties;
+- can still experience agreeable/disagreeable and pleasure/pain.
+
+Therefore realization of the unconditioned does not entail that every conditioned process vanishes immediately.
+
+This gives a precise distinction:
+
+**unconditioned liberation**
+can be realized
+while
+**conditioned bodily/sensory processes**
+continue until death.
+
+### WHY “DEATHLESS” MUST NOT BE READ AS PERSONAL IMMORTALITY
+
+SN 43 includes “deathless” among its Nibbāna vocabulary.
+
+A118 preserves a critical guardrail:
+
+“deathless”
+does not automatically mean
+“an immortal individual self survives forever.”
+
+In the surrounding early-Buddhist framework, what ends is greed, hate, delusion, craving, and bondage.
+
+To convert “deathless” into an eternal-person doctrine would require independent textual evidence that is not supplied by SN 43 itself.
+
+### AJĀTA / ABHŪTA / AKATA / ASAṄKHATA — SOURCE GUARDRAIL
+
+Early Buddhist sources also preserve a formula commonly translated as:
+“unborn, unbecome, unmade, unconditioned.”
+
+A118 treats this family as important but keeps exact textual and lexical claims passage-sensitive.
+
+The safe doctrinal use is:
+there is an escape from what is born, become, made, and conditioned.
+
+The unsafe move would be:
+take four negative descriptors,
+then invent a detailed positive metaphysical substance behind them.
+
+That stronger ontology remains **OPEN/CHECK** unless separately attested.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's Akammajādi discussion explicitly distinguishes:
+- a cause/path for the realization of Nibbāna;
+- from a cause that would produce Nibbāna itself.
+
+Nāgasena says Nibbāna is not produced by kamma, cause, or season, and calls it unconditioned. He also resists the inference that “unproduced” means “nonexistent.”
+
+**Role:** later/paracanonical clarification of the distinction:
+**conditions for realization**
+≠
+**conditions producing Nibbāna**.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** this later argument supports but does not override SN 43's early-discourse functional definition of the unconditioned as the ending of greed, hate, and delusion.
+
+### BUDDHA'S REASONING METHOD
+
+A118 reveals another recurring discipline:
+
+**do not confuse the route with the destination.**
+
+A practice can be conditioned.
+A concentration can be conditioned.
+An insight episode can be conditioned.
+Yet they may lead to the ending of the very causes that sustain bondage.
+
+This is analogous to using a raft:
+the path functions causally,
+but the goal is not reducible to the temporary state of traveling.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate signless concentration with the unconditioned.
+- Do not turn `asaṅkhata` into a hidden eternal Self.
+- Do not reduce Nibbāna to mere nonexistence.
+- Do not infer personal immortality from “deathless.”
+- Do not turn SN 43's synonyms into separate metaphysical substances.
+- Do not infer a complete ontology from the negative terms unborn/unmade/unconditioned alone.
+- Do not use Milindapañha to overwrite the early-text definition.
+
+### Sources
+
+- SN 43.1–2 Asaṅkhata-saṁyutta.
+- SN 43.4 Suññatasamādhi Sutta.
+- SN 43.42 synonym collection.
+- AN 3.47 Saṅkhatalakkhaṇa Sutta.
+- Iti 44 Nibbānadhātu Sutta.
+- MN 121 Cūḷasuññata Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- Milindapañha Akammajādipañha / Nibbāna realization discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A119
+
+**How do the two Nibbāna elements in Iti 44—“with residue” and “without residue”—distinguish liberation while alive from final cessation at death, without turning the latter into either annihilation of a Self or survival of an eternal Self?**
+
+Required lanes:
+- Iti 44 two Nibbāna elements;
+- living arahant: five sense faculties, pleasure/pain, defilement-ending;
+- “without residue” and what exactly the text says ceases;
+- relation to SN 12.15 anti-eternalism/anti-annihilationism;
+- relation to unanswered post-mortem Tathāgata questions where relevant;
+- avoid importing later parinibbāna ontology as if fully explicit in one early passage;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A119
+
+**Central question:** How do the two Nibbāna elements in Iti 44—“with residue” and “without residue”—distinguish liberation while alive from final cessation at death, without turning the latter into either annihilation of a Self or survival of an eternal Self?
+
+### TEXT_ATTESTED
+
+1. **Iti 44** explicitly presents two Nibbāna elements: `saupādisesā nibbānadhātu` (with residue remaining) and `anupādisesā nibbānadhātu` (without residue remaining).
+2. For the Nibbāna element with residue, the monk is already an arahant: the taints are destroyed, the task completed, the burden laid down, the fetter of becoming exhausted, and liberation known. Yet the five sense faculties remain intact, so agreeable/disagreeable objects are still experienced and pleasure/pain are still felt.
+3. Iti 44 then defines this “with residue” element in terms of the destruction of greed, hate, and delusion.
+4. For the Nibbāna element without residue, the same arahant description is retained, but the discourse says that “all that is felt/experienced” (`sabbavedayitāni`), not delighted in (`anabhinanditāni`), will become cool (`sīti bhavissanti`).
+5. The verse appended to Iti 44 says that in the no-residue case all modes of becoming/existence (`bhavāni`) cease entirely.
+6. **SN 12.15** rejects both “everything exists” and “everything does not exist,” so Iti 44 should not be forced into either eternal survival of a Self or annihilation of a Self.
+7. **SN 44.1–8 / SN 44.11** repeatedly decline the four post-mortem predicates “the Tathāgata exists / does not exist / both / neither” after death, linking that refusal to the aggregates, their cessation, and freedom from craving/appropriation around them.
+8. **SN 44.2 / the Anurādha material** adds a decisive guardrail: even in the present life, when the Tathāgata cannot be pinned down as a truth/reality in any of the five aggregates, it is not appropriate to describe him after death using those four positions.
+
+### “WITH RESIDUE” MEANS LIBERATION WHILE THE LIVING SYSTEM CONTINUES
+
+The with-residue case is not partial enlightenment.
+
+The arahant is already described with full completion language.
+
+What remains is the functioning living basis:
+- five sense faculties remain;
+- agreeable/disagreeable contact is experienced;
+- pleasure and pain can still be felt.
+
+So A119 distinguishes:
+
+**defilement-ending**
+from
+**immediate ending of bodily/sensory life**.
+
+This confirms A101, A114, A116, and A118:
+liberation while alive does not erase conditioned sensory functioning.
+
+### “RESIDUE” MUST REMAIN LEXICALLY GUARDED
+
+The term `upādi/upādisesa` has a history of translation and interpretation.
+
+Iti 44 itself gives a practical contrast:
+- in the with-residue case, the faculties and feeling continue;
+- in the no-residue case, all experienced feeling not delighted in becomes cool and future becoming ceases.
+
+A119 therefore does **not** force one later technical definition such as “the residue is exactly the five aggregates” unless independently attested in the passage under study.
+
+The safe claim is functional:
+**there is still a living conditioned remainder in the arahant before death.**
+
+### “WITHOUT RESIDUE” DOES NOT MEAN A SELF IS DESTROYED
+
+To say:
+“after the arahant dies, a Self is annihilated”
+would first posit a Self that the earlier not-self analysis never established.
+
+Iti 44 instead says:
+- the person is already an arahant;
+- greed, hate, and delusion are ended;
+- the cord/fetter of becoming is destroyed;
+- what is experienced, not delighted in, becomes cool;
+- all modes of future becoming cease.
+
+The target of cessation is the conditioned continuation of experience/becoming sustained by craving and appropriation.
+
+A119 therefore classifies “an eternal Self gets annihilated” as **UNSUPPORTED / WRONG FRAME** relative to these early texts.
+
+### “WITHOUT RESIDUE” ALSO DOES NOT MEAN AN ETERNAL SELF SURVIVES
+
+The opposite move is equally unsupported.
+
+Iti 44 does not say:
+“after death a permanent subject continues in another metaphysical form.”
+
+The SN 44 post-mortem material explicitly resists describing the Tathāgata as:
+- existing;
+- not existing;
+- both;
+- neither.
+
+Therefore the early-text discipline is not to replace annihilationism with eternalism.
+
+It is to recognize that the four predicates rely on a framework of identification and designation that no longer applies cleanly when craving/appropriation around the aggregates has ended.
+
+This last sentence is a **CROSS_TEXT_SYNTHESIS** anchored in the SN 44 explanations.
+
+### WHAT EXACTLY “COOLS” IN ITI 44?
+
+The Pāli phrase is:
+`sabbavedayitāni anabhinanditāni sīti bhavissanti`.
+
+A119 keeps the lexical minimum:
+- `sabbavedayitāni`: all that is felt/experienced;
+- `anabhinanditāni`: not delighted in / not relished;
+- `sīti bhavissanti`: will become cool.
+
+This is safer than importing a later ontological formula such as:
+“a metaphysical consciousness is extinguished”
+or
+“the person becomes nothing.”
+
+The verse's stronger future-facing claim is that all modes of `bhava` cease.
+
+### WHY FEELING CAN CONTINUE WITHOUT NEW BECOMING
+
+The living arahant still feels pleasure/pain, yet greed, hate, and delusion are destroyed.
+
+This means:
+
+**feeling**
+does not automatically entail
+**craving → clinging → becoming**.
+
+The dependent-arising chain is not a mechanical inevitability once the relevant ignorance/craving conditions have been cut.
+
+This is a **CROSS_TEXT SYNTHESIS** consistent with SN 36.6 and the earlier A109–A110 distinction between feeling and latent/reactive continuation.
+
+### POST-MORTEM TATHĀGATA QUESTIONS: THE FOURFOLD TRAP
+
+The SN 44 collection repeatedly treats the four claims:
+1. Tathāgata exists after death;
+2. does not exist;
+3. both exists and does not exist;
+4. neither exists nor does not exist;
+
+as questions the Buddha does not endorse.
+
+A119 does not reduce this to:
+“the answer is secretly #2.”
+
+Nor does it reduce it to:
+“the answer is secretly #1.”
+
+The deeper diagnostic is that the predicates assume a describable entity whose relation to the aggregates can be fixed in the relevant way.
+
+Once that appropriation framework is removed, the question itself ceases to function as intended.
+
+### FIRE SIMILES — USE WITH CAUTION
+
+Early and later Buddhist materials use extinguished-fire imagery.
+
+The correct minimum is:
+when fuel/sustenance is absent, the fire is no longer describable as continuing in the same fuel-dependent mode.
+
+A119 does **not** infer from the simile:
+- that Nibbāna is literal physical fire;
+- that an entity travels elsewhere;
+- that an entity is destroyed into absolute nothingness.
+
+The simile is about the failure of ordinary location/continuation predicates once supporting conditions are gone.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+In the Milindapañha question on pointing out the Buddha, Nāgasena says that after the Buddha's parinibbāna he cannot be pointed out as “here or there,” and uses the image of a flame that has gone out and cannot be located.
+
+**Role:** later/paracanonical support for the early-discourse refusal to assign a post-mortem location/status to the liberated Tathāgata.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the fire analogy is not used to decide a metaphysical question that the SN 44 material deliberately leaves outside the fourfold “exists / not exists / both / neither” framework.
+
+### BUDDHA'S REASONING METHOD
+
+A119 reveals a recurring pattern:
+
+**do not answer a malformed question by choosing one of its preset boxes.**
+
+If the alternatives all presuppose a mistaken identification, the Buddha may refuse the frame itself.
+
+So the method is:
+1. inspect the assumptions hidden in the question;
+2. trace them to craving, identification, or aggregate-view;
+3. remove the supporting assumptions;
+4. do not manufacture a speculative answer after the frame has dissolved.
+
+### CORRECTIONS PRESERVED
+
+- Do not interpret “with residue” as incomplete arahantship.
+- Do not equate “without residue” with annihilation of an eternal Self.
+- Do not equate “without residue” with survival of an eternal Self.
+- Do not turn `sabbavedayitāni sīti bhavissanti` into a stronger ontology than the Pāli supports.
+- Do not treat the SN 44 silence as covert endorsement of one of the four positions.
+- Do not infer that feeling itself necessarily recreates craving and becoming in an arahant.
+- Do not use the Milindapañha fire simile to override the early-discourse refusal of the post-mortem tetralemma.
+
+### Sources
+
+- Iti 44 Nibbānadhātu Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 44.1–8 and SN 44.11, especially the post-mortem Tathāgata discussions.
+- SN 44.2 / Anurādha material on not pinning down the Tathāgata in the aggregates.
+- SN 36.6 Sallattha Sutta as supporting evidence that feeling need not produce the same reactive chain.
+- Milindapañha Buddhanidassanapañha / “pointing out the Buddha” discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A120
+
+**Why are the four post-mortem propositions about the Tathāgata—exists, does not exist, both, neither—treated as inapplicable/undeclared, and what does this reveal about the Buddha's method for dissolving rather than answering malformed metaphysical questions?**
+
+Required lanes:
+- SN 44.1–8 and SN 44.11 in detail;
+- SN 22.86 / Anurādha parallel material where relevant;
+- relation to aggregate identification and craving;
+- fire/sustenance imagery and its limits;
+- distinguish “undeclared” from agnosticism, secret eternalism, or secret annihilationism;
+- relation to MN 63/MN 72 pragmatic reasons for undeclared questions;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A120
+
+**Central question:** Why are the four post-mortem propositions about the Tathāgata—exists, does not exist, both, neither—left undeclared, and what does this reveal about the Buddha's method of handling metaphysical questions?
+
+### TEXT_ATTESTED
+
+1. **SN 22.86 (Anurādha)** tests every obvious way of pinning down the Tathāgata through the five aggregates: as form, apart from form, as feeling, apart from feeling, and so on. Anurādha agrees that the Tathāgata cannot be apprehended in those ways even here and now. The Buddha then asks whether it is fitting to make any of the four post-mortem assertions. The answer is no.
+2. The same discourse closes with the methodological statement that what the Buddha teaches is suffering and the cessation of suffering. The force is not “nothing else can ever be discussed,” but that the post-mortem tetralemma does not improve on the actual diagnostic task.
+3. **SN 44.1 (Khemā)** rejects all four post-mortem alternatives and explains the refusal through the aggregates: the Tathāgata is released from reckoning in terms of form, feeling, perception, formations, and consciousness. The text compares this to the great ocean as deep, immeasurable, and hard to fathom.
+4. **SN 44.8** ties the undeclared questions to self-view: other wanderers take form (and the other aggregates) as self, self as possessing them, them as in self, or self as in them. This connects the speculative question-set to identity construction.
+5. **MN 72 (Aggi-Vacchagotta)** says the Tathāgata has abandoned “positions” and instead sees the arising and disappearance of the five aggregates. It links release with the ending of suppositions, I-making, mine-making, and conceit, and says each of the four post-mortem predicates “does not apply.”
+6. MN 72's fire simile explains why: a fire burns dependent on fuel; when the fuel is exhausted and no new fuel is supplied, asking which direction the extinguished fire has “gone” is inapplicable. The simile is then applied to the abandoned aggregate-bases by which a Tathāgata would be described.
+7. **MN 63** gives a second, distinct reason for leaving the same speculative questions undeclared: regardless of which position one adopts, birth, aging, death, sorrow, pain, and distress remain. The questions are not fundamental to the holy life and do not lead to disenchantment, dispassion, cessation, peace, direct knowledge, awakening, or Nibbāna.
+8. MN 63 contrasts those undeclared questions with the Four Noble Truths, which are declared because they directly serve the end of suffering.
+
+### THERE ARE AT LEAST TWO EARLY-TEXT REASONS FOR “UNDECLARED”
+
+A120 corrects a possible over-simplification.
+
+It is **not enough** to say:
+“the Buddha refused these questions only because they were useless.”
+
+And it is also **not enough** to say:
+“he refused them only because the grammar was logically malformed.”
+
+The early texts supply at least two overlapping reasons.
+
+**Diagnostic/framework reason**
+- SN 22.86, SN 44.1, SN 44.8, and MN 72 show that the four alternatives presuppose a way of fixing or measuring the Tathāgata through aggregate/self categories that has been abandoned.
+
+**Pragmatic/soteriological reason**
+- MN 63 says the questions do not conduce to the goal, while suffering, its origin, its cessation, and the path do.
+
+These two reasons reinforce one another but should not be collapsed.
+
+### “UNDECLARED” ≠ “THE BUDDHA DID NOT KNOW”
+
+Nothing in the cited passages says:
+“I do not know the answer.”
+
+The repeated term is that the position is not declared, and the discourses give reasons for that non-declaration.
+
+Therefore A120 does not classify this as ordinary agnosticism.
+
+The safe claim is:
+**the Buddha declines to affirm the offered propositions because the framing is tied to views/measurement that do not apply and because adopting them does not serve liberation.**
+
+Whether one wants to add a broader theory of omniscience is a separate question and is not needed here.
+
+### “UNDECLARED” ≠ SECRET ETERNALISM OR SECRET ANNIHILATIONISM
+
+A common interpretive mistake is:
+
+“he would not say the Tathāgata does not exist after death, so secretly the Tathāgata must exist.”
+
+The mirror-image mistake is:
+
+“he would not say the Tathāgata exists, so secretly the Tathāgata must be annihilated.”
+
+But SN 44 / MN 72 reject all four boxes.
+
+A120 therefore preserves:
+
+not #1,
+not #2,
+not #3,
+not #4,
+
+without converting the refusal into a hidden fifth metaphysical substance.
+
+### SN 22.86: THE PROBLEM EXISTS EVEN BEFORE DEATH
+
+This is one of the strongest points in A120.
+
+Anurādha is asked whether the Tathāgata is identifiable:
+- as one aggregate;
+- apart from an aggregate;
+- as the set of aggregates;
+- as one without the aggregates.
+
+The answer is no.
+
+So the difficulty is not created only by death.
+
+The post-mortem question inherits a prior problem:
+**the awakened person was never correctly captured as a fixed self-entity in the aggregates to begin with.**
+
+This is why “what happens to that entity after death?” can import a false premise.
+
+### THE FIRE SIMILE IS ABOUT DEPENDENCE, NOT A SOUL TRAVELING SOMEWHERE
+
+MN 72 says the fire burns dependent on grass and timber as sustenance.
+
+When that sustenance is exhausted and no more is supplied, asking whether the fire went east, west, north, or south does not apply.
+
+The safe lesson is:
+- a process depends on sustenance;
+- when the sustaining conditions are gone, ordinary continuation/location predicates can fail.
+
+The unsafe lessons would be:
+- “the soul moved to an invisible realm”;
+- “a substance called fire was annihilated”;
+- “Nibbāna is literally a physical flame.”
+
+The analogy is functional and conditional.
+
+### “MALFORMED QUESTION” IS A WORKING ANALYTICAL LABEL
+
+A120 uses “malformed metaphysical question” as a **CROSS_TEXT SYNTHESIS**, not as a Pāli technical term.
+
+It means:
+the offered alternatives may all depend on assumptions the Buddha has already rejected or ceased to use.
+
+The method is then:
+1. expose the assumption;
+2. test whether the referent can actually be fixed in that way;
+3. trace the view to clinging/self-identification;
+4. refuse the forced alternatives;
+5. redirect to the causal problem of suffering and its cessation.
+
+This is more precise than saying merely “the Buddha avoided philosophy.”
+
+### MN 63: THE POISONED-ARROW TEST
+
+MN 63 adds a practical criterion.
+
+A person wounded by a poisoned arrow who refuses treatment until speculative details are answered can die before the useful work is done.
+
+The analogy does **not** mean that all theoretical questions are worthless.
+
+It means that a question can be intellectually interesting yet not be necessary for solving the urgent causal problem at hand.
+
+The Buddha explicitly says that whichever speculative position one holds, birth, aging, death, sorrow, and distress remain.
+
+Thus one test of a question is:
+**does answering it materially advance the ending of suffering?**
+
+### MN 72: VIEWS CAN THEMSELVES BECOME BONDAGE
+
+MN 72 describes doctrinal positions as a thicket/wilderness/writhing/fetter of views and associates them with distress and fever.
+
+A120 therefore adds another layer:
+
+The danger is not only that a proposition might be false.
+
+The act of taking a speculative position as identity and clinging to it can itself become part of the problem.
+
+That connects undeclared questions to the broader work on:
+`diṭṭhi`,
+`upādāna`,
+I-making,
+mine-making,
+and conceit.
+
+### NOT EVERY UNANSWERED QUESTION HAS THE SAME REASON
+
+A120 preserves a major guardrail.
+
+One must not infer:
+“whenever the Buddha does not answer, the question is logically meaningless.”
+
+Some questions are set aside because they are not conducive to liberation.
+Some are tied to faulty self/aggregate framing.
+Some may require analysis rather than a yes/no answer.
+
+Therefore the *reason for non-answer must be read passage by passage*.
+
+This becomes the bridge to A121.
+
+### RELATION TO THE FOUR NOBLE TRUTHS
+
+The repeated redirection is not anti-intellectual.
+
+It is a change in priority from speculative ontology to causal diagnosis:
+
+- what is suffering?
+- from what does it arise?
+- can that condition cease?
+- what path brings cessation?
+
+This is the same reasoning architecture seen throughout dependent arising:
+**identify conditions and intervention points instead of defending a metaphysical identity.**
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's “pointing out the Buddha” dialogue says that after the Buddha's final Nibbāna he cannot be pointed out as “here or there,” and uses an extinguished-flame analogy.
+
+Milindapañha elsewhere also preserves a structured concern with how different kinds of questions should be handled rather than assuming every question deserves the same response form.
+
+**Role:** later/paracanonical support for:
+- resisting spatial/post-mortem reification;
+- treating question-form itself as part of philosophical method.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not convert the SN 44 / MN 72 refusal into a new positive post-mortem ontology.
+
+### BUDDHA'S REASONING METHOD
+
+A120 yields a reusable method:
+
+**Before answering a question, inspect the question.**
+
+Ask:
+- What does it presuppose?
+- Does the referent exist in the way the grammar assumes?
+- Does one of the offered answers intensify view-clinging?
+- Is the question causally relevant to liberation?
+- Should it be answered directly, analyzed, answered by counter-question, or put aside?
+
+This is not refusal of reasoning.
+It is reasoning about the validity and usefulness of the question itself.
+
+### CORRECTIONS PRESERVED
+
+- Do not call the undeclared questions mere ignorance/agnosticism.
+- Do not make non-answer into secret eternalism.
+- Do not make non-answer into secret annihilationism.
+- Do not assume the four alternatives exhaust reality just because the questioner supplied four.
+- Do not infer from the fire simile that a soul travels elsewhere or is annihilated.
+- Do not say all metaphysical inquiry is forbidden; MN 63 is a relevance test, not an anti-thought slogan.
+- Do not say every unanswered question is malformed for the same reason.
+- Do not use Milindapañha to fill in an ontology intentionally left undeclared in the early texts.
+
+### Sources
+
+- SN 22.86 Anurādha Sutta.
+- SN 44.1 Khemā Sutta.
+- SN 44.8 Vacchagotta Sutta.
+- MN 72 Aggi-Vacchagotta Sutta.
+- MN 63 Cūḷa-Māluṅkyovāda Sutta.
+- Milindapañha “pointing out the Buddha” discussion as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A121
+
+**What are the Buddha's different legitimate ways of answering questions—direct answer, analytical/qualified answer, counter-question, and setting aside—and how does choosing the response form itself reveal his reasoning method?**
+
+Required lanes:
+- AN 4.42 four modes of answering questions;
+- examples of categorical versus analytical answers;
+- counter-question as diagnostic method, not evasion;
+- “put aside” in relation to A120's undeclared questions;
+- distinguish question classification from truth relativism;
+- compare with Milindapañha's question-handling method as later/paracanonical support;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
 
