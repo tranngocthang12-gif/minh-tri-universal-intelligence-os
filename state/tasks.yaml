@@ -53,14 +53,14 @@
       "scope": [
         "pull_requests:167,168,169,170,177,193,215,216,218,226,227,228,230,232,233,234,235,237,249,250,251"
       ],
-      "branch": "owner/architecture-vnext-phase4b-blocked-salvage-wave1-20261006",
-      "base_sha": "3d5049df488e8438195d55134cdff555df4faf65",
+      "branch": "owner/architecture-vnext-salvage-wave2-inventory-20261006",
+      "base_sha": "140276378356ee48559879689c64cd1684975d00",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PHASE2"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/ARCHITECTURE_VNEXT_PHASE0_1_MIGRATION_20261006.md"
+      "result_ref": "docs/vnext/history/KNOWLEDGE_PR_SALVAGE_WAVE2_INVENTORY_20261006.md"
     },
     {
       "task_id": "RUNTIME-ASSURANCE-PC",
@@ -139,6 +139,24 @@
       ],
       "supersedes": [],
       "result_ref": "BLOCKED_NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
+      "title": "Salvage and review unique Atthakavagga lexical audits from PRs 230 and 216",
+      "status": "READY",
+      "scope": [
+        "PR#230:docs/learning/PHAT_ATTHAKA_LEX_02_20261005.md",
+        "PR#216:docs/learning/PHAT_ATTHAKA_LEX_01_20261005.md",
+        "knowledge/buddhist/"
+      ],
+      "branch": null,
+      "base_sha": "140276378356ee48559879689c64cd1684975d00",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PR-SALVAGE"
+      ],
+      "supersedes": [],
+      "result_ref": null
     }
   ]
 }
