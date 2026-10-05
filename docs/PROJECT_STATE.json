@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A110_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A111",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A111_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A112",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -656,5 +656,7 @@
   "owner_learning_track_buddhist_thought_a109_claim_class": "TEXT_ATTESTED_ANUSAYA_AS_UNDERLYING_TENDENCY_DISTINCT_FROM_MANIFEST_DEFILEMENT_WITH_FEELING_LINKS_AND_MODERN_UNCONSCIOUS_GUARDRAIL",
   "owner_learning_track_buddhist_thought_a109_milindapanha": "CONSULTED_WISDOM_SEVERS_DEFILEMENTS_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN64_MN44_SN36",
   "owner_learning_track_buddhist_thought_a110_claim_class": "TEXT_ATTESTED_FUNCTIONAL_DISTINCTIONS_ANUSAYA_SAMYOJANA_ASAVA_NIVARANA_PLUS_CROSS_TEXT_NONIDENTITY_SYNTHESIS_WITH_KILESA_TAXONOMY_GUARDRAIL_AND_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a110_milindapanha": "CONSULTED_FIVE_HINDRANCES_CLEARING_AND_DEFILEMENTS_BROKEN_ANALOGIES_NO_OVERRIDE_OF_EARLY_TAXONOMIES"
+  "owner_learning_track_buddhist_thought_a110_milindapanha": "CONSULTED_FIVE_HINDRANCES_CLEARING_AND_DEFILEMENTS_BROKEN_ANALOGIES_NO_OVERRIDE_OF_EARLY_TAXONOMIES",
+  "owner_learning_track_buddhist_thought_a111_claim_class": "TEXT_ATTESTED_FOUR_STAGE_FORMULAS_FETTER_ENDING_WEAKENING_LOWER_FETTERS_AND_ASAVA_DESTRUCTION_PLUS_CROSS_TEXT_IRREVERSIBILITY_GRADIENT_WITH_ANUSAYA_MAPPING_GUARDRAIL_AND_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a111_milindapanha": "CONSULTED_WISDOM_SEVERING_AND_HINDRANCE_CLEARING_DISTINCTION_NO_STAGE_BY_STAGE_ANUSAYA_OVERRIDE"
 }
