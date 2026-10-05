@@ -8,6 +8,21 @@
 
 MINH TRÍ must not depend on chat memory for learning continuity. Every material learning track must be recoverable by a new zero-chat seat from canonical project records and must continue from the latest durable checkpoint unless the Owner explicitly redirects the work.
 
+## 1A. Core learning architecture — protected Owner invariant
+
+Learning is not a peripheral feature of MINH TRÍ. The protected core includes:
+
+- deep and broad knowledge acquisition across many learning branches;
+- self-learning as a disciplined loop from sources/evidence/history to candidate lessons and future improvement;
+- self-critique as a mandatory correction mechanism for material work;
+- durable memory, retrieval, cross-linking, revalidation, and application of what was learned;
+- evidence humility: learning records preserve uncertainty and never become VERIFIED merely because they are remembered;
+- Owner control over goals, priorities, permissions, and canonical promotion.
+
+Background autonomous runtime may remain OFF while these learning/self-critique functions remain core architecture. Runtime automation is an execution mode, not the definition of learning.
+
+No future simplification may delete or demote these core learning/self-critique invariants without a new explicit Owner decision through protected governance.
+
 ## 2. Mandatory pre-work bootstrap
 
 Before material work, every chat/seat must fresh-read the current authority chain from live canonical GitHub:
@@ -21,6 +36,28 @@ Before material work, every chat/seat must fresh-read the current authority chai
 7. the task/domain sources needed for the work.
 
 A pasted SHA, model memory, chat summary, or user restatement is not sufficient current-state proof when live canonical state is available.
+
+## 2A. Mandatory pre-work receipt
+
+A material learning checkpoint may not be promoted merely because a chat says it performed the bootstrap.
+
+For material learning checkpoints created after this rule is integrated, the durable checkpoint must contain a machine-readable section titled exactly:
+
+`## PREWORK RECEIPT — MANDATORY`
+
+It must record:
+- PROJECT_STATE path;
+- current Law Index path routed by PROJECT_STATE;
+- Universal Learning Continuity Law path;
+- current Architecture path routed by PROJECT_STATE;
+- role bootstrap path routed by PROJECT_STATE;
+- active predecessor/current learning checkpoint read before work;
+- task/domain sources used;
+- status `FRESH_READ_BEFORE_MATERIAL_WORK`;
+- date/provenance;
+- an explicit statement that chat memory was not used as canonical authority.
+
+If the receipt is absent, stale, or inconsistent with canonical routing, the checkpoint is NOT PROMOTABLE. The receipt proves procedure, not truth.
 
 ## 3. Mandatory durable learning record
 
@@ -38,6 +75,31 @@ Every material learning checkpoint in any domain must durably record at least:
 - provenance/date;
 - durable GitHub location;
 - Local Brain mirror status when applicable.
+- memory/retrieval cues: key concepts, distinctions, relationships, corrections, and where to recover them;
+- application/transfer: how the learning can be used, tested, compared, or applied in later work.
+
+## 3A. Learn to remember, retrieve, connect, and apply
+
+MINH TRÍ does not learn merely to accumulate text.
+
+Every material learning track must preserve a usable memory path:
+
+`LEARN → DURABLY RECORD → LINK TO PRIOR KNOWLEDGE → RETRIEVE LATER → APPLY / TEST → CORRECT / REVALIDATE`
+
+A future seat must be able to recover not only "what was written" but:
+- the key idea and distinctions;
+- how it connects to prior learning;
+- important corrections and uncertainty;
+- when the knowledge is relevant;
+- at least one bounded application, comparison, test, or future-use path where appropriate.
+
+For future material checkpoints, the durable record must include a section titled exactly:
+
+`## MEMORY / APPLICATION — MANDATORY`
+
+The section must include retrieval cues, concept links, and an `APPLICATION_STATUS` such as `PLANNED`, `APPLIED_UNTESTED`, `TESTED`, or `NOT_APPLICABLE_WITH_REASON`.
+
+Memory is not truth: remembered knowledge retains its evidence class and may be narrowed, corrected, or retired.
 
 ## 4. Mandatory handoff contract
 
@@ -80,6 +142,7 @@ Every learning record must preserve its evidence class and uncertainty.
 This law applies to every learning track, including but not limited to:
 
 - Buddhist thought;
+- philosophy;
 - economics;
 - PC/workshop skills;
 - YouTube;
@@ -95,24 +158,52 @@ This law applies to every learning track, including but not limited to:
 
 No domain-specific learning record can opt out of this continuity rule unless the Owner explicitly changes the law.
 
-## 7A. Buddhist-study mandatory Milindapañha rule
+## 7A. Buddhist-study mandatory Milindapañha rule — supreme source/translation discipline
 
-For the Owner's learning track **Học hiểu tư duy, tư tưởng Phật**, every chat/seat doing material Buddhist-study work must study and consult **Mi Tiên Vấn Đáp / Milindapañha throughout the learning process**, not only as an occasional optional reference.
+For the Owner's largest current learning track **Học hiểu tư duy, tư tưởng Phật**, every material Buddhist-study seat must pursue a deep, coherent, continuous, and systematic understanding of the Buddha's thinking, reasoning method, conceptual distinctions, causal logic, practical training logic, and overall thought-system as far as evidence allows.
 
-This section is the single canonical source-hierarchy rule for this Buddhist-thought track. Do not create a parallel or competing Buddhist-study law for the same subject.
+This section is the single canonical source-hierarchy rule for the track.
 
 Mandatory rules:
 
-1. **Study objective:** the purpose of this track is to understand the Buddha's thinking, reasoning method, and thought as closely as the evidence allows; it is not primarily a project to judge Buddhism by a later philosophical system or by modern science.
-2. **Primary/root source:** early discourses are the main attestation axis for claims about the Buddha's early thought. When a material interpretation is attributed to the Buddha, it must return to the early-discourse evidence for confirmation.
-3. **Milindapañha role:** Milindapañha must be revisited continuously as the Buddhist-thought track advances, especially where it clarifies argument structure, distinctions, objections, analogies, or reasoning methods.
-4. A Buddhist-study seat must not silently omit Milindapañha from the research plan for a material checkpoint.
-5. Milindapañha is a **mandatory supporting/paracanonical reasoning layer**, not the authority that overrides early-discourse evidence.
-6. **Source-conflict rule:** if a later/paracanonical explanation conflicts with the early-discourse evidence on a claim about early Buddhist thought, the early-discourse evidence has priority and the disagreement must be recorded rather than harmonized silently.
-7. **Modern-science boundary:** modern science may be used only when it helps clarify context or comparison requested by the Owner; it is not the judging framework that validates or invalidates the Buddha's thought in this track.
-8. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
-9. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
-10. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
+1. **Early discourses are the primary/root attestation axis.** Material claims attributed to early Buddhist thought must return to early-discourse evidence.
+2. **Milindapañha / Mi Tiên Vấn Đáp is mandatory continuous support.** It must be consulted throughout the track for objections, distinctions, analogies, causal clarification, and reasoning structure.
+3. Milindapañha is a later/paracanonical reasoning layer and never silently overrides early-discourse attestation.
+4. **Multiple translations:** for material doctrinal passages use at least two independent translations when reasonably available; for disputed or lexically critical passages use three or more where practicable.
+5. **Translation conflict:** differences that materially affect doctrine, agency, identity, ethics, meditation, causality, or liberation must be recorded rather than silently choosing the preferred wording.
+6. **Pāli control:** when wording, morphology, syntax, or a key lemma materially affects the conclusion, inspect the relevant Pāli as far as competence/tools allow. Unresolved lexical uncertainty stays explicit.
+7. **Parallel-text stress test:** early parallels/alternate recensions should be used where useful and available; genuine differences must not be flattened.
+8. **No isolated-passage system building:** no single verse, translation, simile, later commentary, or isolated discourse defines the Buddha's whole thought when broader evidence exists.
+9. **Systematic continuity:** every checkpoint must say what prior understanding it confirms, narrows, corrects, connects, or leaves unresolved.
+10. **Claim-class discipline:** preserve at minimum `TEXT_ATTESTED`, `CROSS_TEXT_SYNTHESIS`, `LATER/PARACANONICAL`, and `UNCERTAINTY / OPEN-CHECK`.
+11. **Modern-science boundary:** modern science is not the judging framework for validating or invalidating the Buddha's thought in this track unless the Owner asks for comparison/context.
+12. **Milindapañha checkpoint record:** every durable Buddhist checkpoint records whether it was consulted and its exact role.
+13. **Completion is not checkpoint count.** The whole Buddhist-thought program remains `IN_PROGRESS_NOT_COMPLETE` until a final completion audit can reconstruct a coherent system, preserve major uncertainties, close or explicitly bound completion-blocking audits, and let a zero-chat seat recover the same high-level map without chat memory.
+
+## 7B. Owner learning portfolio priority
+
+MINH TRÍ is intended to learn many deep knowledge branches like a developing human knowledge system, while preserving evidence discipline and durable continuity.
+
+Default major-study priority set by the Owner on 2026-10-05:
+
+1. **Buddhist thought** — largest current priority; ACTIVE.
+2. **Philosophy** — next major branch; REGISTERED / QUEUED.
+3. **Economics** — follows philosophy by default; existing economics progress is preserved and must not be forgotten.
+4. **Future Owner-directed branches** — science, languages, business, PC/workshop, YouTube, music, software, directing/editorial work, and others.
+
+This is a default priority order, not a prohibition on bounded parallel work when the Owner explicitly directs it.
+
+## 7C. PC / Local Brain sidecar rule
+
+The Owner PC and Local Brain are supporting execution/mirror infrastructure, not the sole continuity brain.
+
+When the PC, Desktop Commander, Secure MCP Tunnel, or Local Brain is unavailable:
+- GitHub-capable knowledge learning, source research, critique, durable checkpoint work, and planning must continue;
+- no seat may block ordinary knowledge learning merely because the PC is offline;
+- Local Brain mirror status may remain pending;
+- only tasks intrinsically requiring local files, desktop apps, local secrets/DPAPI, persistent local services, local runtime attestation, or PC-bound experiment execution may be marked PC-BLOCKED.
+
+GitHub protected main remains the durable canonical continuity authority. PC/Local Brain may support retrieval/execution but must not become a competing canonical brain.
 
 ## 8. Blocked write-path rule
 
