@@ -469,6 +469,21 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertIn(manifest_key, manifest["owner_learning_track_buddhist_thought"], manifest_key)
             self.assertEqual(state[state_key], manifest["owner_learning_track_buddhist_thought"][manifest_key])
 
+    def test_github_primary_pc_optional_mode(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+
+        self.assertEqual(state["project_operating_mode"], "GITHUB_PRIMARY_PC_OPTIONAL")
+        self.assertFalse(state["pc_local_brain_outage_blocks_github_capable_work"])
+        self.assertFalse(state["local_brain_required_for_learning_continuity"])
+        self.assertIn("LEARNING", state["github_only_work_allowed"])
+        self.assertIn("LOCAL_BRAIN_MIRROR", state["pc_required_work"])
+        self.assertIn("PC/Local Brain outage MUST NOT block", law)
+        self.assertIn("GitHub-primary / PC-optional operating architecture", architecture)
+        self.assertIn("PC-OPTIONAL / GITHUB-PRIMARY EXECUTION RULE", bootstrap)
+
 
 if __name__ == "__main__":
     unittest.main()
