@@ -1,0 +1,43 @@
+{
+  "schema": "minhtri-current-state/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "architecture_generation": "VNEXT_PHASE2",
+  "phase": "FOUNDATION_PROTOTYPE",
+  "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+  "current_architecture": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+  "law_precedence": "docs/vnext/ARCHITECTURE_VNEXT_PHASE0_1_MIGRATION_20261006.md",
+  "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+  "active_workstream": "ARCHITECTURE_VNEXT_PHASE2_STATE_AND_TASK_REGISTRY",
+  "next_checkpoint": "MERGE_PHASE2_THEN_BEGIN_BOUNDED_PHASE3_KNOWLEDGE_SCHEMA_PILOT",
+  "autonomous_learning_runtime": false,
+  "automatic_self_critique_runtime": false,
+  "meta_learning_runtime": false,
+  "knowledge_learning_requires_owner_pc": false,
+  "pc_local_brain_role": "NON_CANONICAL_EXECUTION_AND_MIRROR_SIDECAR",
+  "owner_learning_priority_order": [
+    "BUDDHIST_THOUGHT",
+    "PHILOSOPHY",
+    "ECONOMICS",
+    "FUTURE_OWNER_DIRECTED_DOMAINS"
+  ],
+  "authority_scope": {
+    "this_file_is_authoritative_for": [
+      "architecture_generation",
+      "phase",
+      "durable_continuity_authority",
+      "current_architecture",
+      "law_precedence",
+      "role_bootstrap",
+      "active_workstream",
+      "next_checkpoint",
+      "autonomous_learning_runtime",
+      "automatic_self_critique_runtime",
+      "meta_learning_runtime",
+      "knowledge_learning_requires_owner_pc",
+      "pc_local_brain_role",
+      "owner_learning_priority_order"
+    ],
+    "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
+    "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
+  }
+}
