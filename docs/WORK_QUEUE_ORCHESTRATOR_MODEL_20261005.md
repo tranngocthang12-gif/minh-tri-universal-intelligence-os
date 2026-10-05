@@ -1,3 +1,7 @@
+# SUPERSEDED OPERATING MODEL — FIXED MULTI-CHAT DISPATCH NO LONGER DEFAULT
+
+Owner decision 2026-10-05 supersedes this document wherever it implies a standing worker pool or routine multi-chat dispatch. The dependency, bounded-task, review and handoff ideas remain reusable methods. Current default is learning-first with ĐIỀU HÀNH as synthesis/critique/continuity role. See `docs/OWNER_DECISION_LEARNING_FIRST_NO_FIXED_3CHAT_20261005.md`.
+
 # MINH TRI — ORCHESTRATOR DYNAMIC WORK QUEUE MODEL — 2026-10-05
 
 Status: OWNER-DIRECTED OPERATING MODEL / PENDING PROTECTED INTEGRATION
