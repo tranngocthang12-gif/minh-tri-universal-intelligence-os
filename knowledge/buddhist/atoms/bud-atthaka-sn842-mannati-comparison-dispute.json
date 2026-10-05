@@ -22,13 +22,11 @@
   ],
   "contradicts": [],
   "supersedes": [],
-  "depends_on": [
-    "bud:atthaka:lex02:sanna-mannati-audit-evidence"
-  ],
+  "depends_on": [],
   "provenance": {
     "review_level": "T1",
     "reviewed_on_base_sha": "fc90bee08df5c8d6e929a6de3f5c47fd97ed98a2",
     "review_date": "2026-10-06",
-    "review_note": "Does not make every maññati occurrence a technical identity term."
+    "review_note": "Direct Pāli review supports this narrow claim; salvaged audit remains an evidence reference, not a semantic dependency. This does not make every maññati occurrence a technical identity term."
   }
 }
