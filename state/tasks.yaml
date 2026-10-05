@@ -143,20 +143,20 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
       "title": "Salvage and review unique Atthakavagga lexical audits from PRs 230 and 216",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "PR#230:docs/learning/PHAT_ATTHAKA_LEX_02_20261005.md",
         "PR#216:docs/learning/PHAT_ATTHAKA_LEX_01_20261005.md",
         "knowledge/buddhist/"
       ],
-      "branch": null,
-      "base_sha": "140276378356ee48559879689c64cd1684975d00",
+      "branch": "owner/architecture-vnext-salvage-lexical-230-216-20261006",
+      "base_sha": "9c511472f80d0eb0b3cbbadd2d4942d5b913b13a",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "knowledge/buddhist/evidence/"
     }
   ]
 }
