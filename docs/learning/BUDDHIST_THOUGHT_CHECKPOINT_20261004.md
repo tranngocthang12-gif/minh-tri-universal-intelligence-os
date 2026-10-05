@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A103 COMPLETED  
-**Next checkpoint:** PHASE 4 — A104  
+**Current checkpoint:** PHASE 4 — A104 COMPLETED  
+**Next checkpoint:** PHASE 4 — A105  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15203,6 +15203,125 @@ Required lanes:
 - SN 12.15 right view without existence/non-existence fixation;
 - revisit A62 on `diṭṭhupādāna`;
 - Aṭṭhakavagga lexical guardrail for `diṭṭhi`;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A104
+
+**Central question:** How should right view (`sammādiṭṭhi`) function without becoming another object of clinging, and how does the Buddha distinguish useful view from view-clinging?
+
+### TEXT_ATTESTED
+
+1. **MN 9** treats right view as an operative understanding of what is unwholesome/wholesome, their roots, nutriment, the Four Noble Truths, and dependent-arising factors. Right view is therefore not merely a badge or opinion; it is an understanding tied to causal diagnosis and release.
+2. **SN 12.15** defines right view in a way that avoids fixation on the extremes “everything exists” and “everything does not exist,” and links right view with non-clinging to standpoints about “my self.”
+3. **MN 22** gives the raft simile: the Dhamma is for crossing over, not for holding onto. The discourse also warns that even correct teachings can be mishandled if grasped wrongly.
+4. **Snp 4.9 Māgandiya** says purity is not defined merely in terms of view, learning, knowledge, precepts, or practices, nor by simply lacking them. The text repeatedly targets grasping/adoption of views rather than requiring blank absence of all orientation.
+5. **Snp 4.8 Pasūra** criticizes contentious attachment to “this alone is true” positions and the pride, victory-seeking, and dispute that follow when views become possessions.
+
+### RIGHT VIEW AS TOOL, NOT IDENTITY
+
+The core distinction is functional:
+
+- a **useful view** orients practice, distinguishes skillful from unskillful, clarifies causes and cessation, and guides action;
+- **view-clinging** turns a formulation into possession, identity, status, or a ground for conflict.
+
+Thus the problem is not simply “having a view.” The problem is the transformation:
+
+`orientation / understanding`
+→ `appropriation`
+→ “this is mine / this makes me superior / only this formulation may exist”
+→ dispute and bondage.
+
+This is consistent with the A62 distinction between right view as a working instrument and `diṭṭhupādāna` as grasping at views.
+
+### WHY MN 22 MATTERS
+
+The raft image corrects a common misreading in both directions.
+
+Wrong reading A:
+> “Since views are dangerous, no view or teaching is needed.”
+
+Wrong reading B:
+> “Since right view is correct, it should be held as a permanent possession.”
+
+The raft model implies:
+- the raft is genuinely useful for crossing;
+- one must use it competently;
+- its value is instrumental, not possessive;
+- after its task is fulfilled, grasping it becomes unnecessary.
+
+Therefore “non-clinging to views” is not equivalent to indifference, relativism, or refusal to distinguish right from wrong.
+
+### AṬṬHAKAVAGGA GUARDRAIL
+
+Snp 4.8 and 4.9 strongly warn against taking views as personal truth-possessions, purity-markers, or weapons in debate.
+
+But the lexical audit remains **OPEN**:
+- `diṭṭhi` is context-sensitive;
+- Aṭṭhakavagga anti-view language must not be flattened into “all views are equally false”;
+- it must be reconciled with explicit early teachings on `sammādiṭṭhi`.
+
+Working synthesis:
+**right view is a path function; view-clinging is bondage.**
+
+This is `CROSS_TEXT_SYNTHESIS`, pending the wider Aṭṭhakavagga lexical audit.
+
+### BUDDHA'S REASONING METHOD
+
+A104 reveals a further pattern:
+
+1. keep distinctions that are pragmatically and ethically necessary;
+2. test whether the distinction leads toward cessation or toward appropriation and conflict;
+3. refuse to convert a useful model into a permanent identity;
+4. release even a successful instrument when its work is finished.
+
+The Buddha's method therefore avoids both:
+- dogmatism: “my formulation is my identity and must be defended”;
+- empty relativism: “there is no difference between right and wrong understanding.”
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+**Mil 3.1.8** distinguishes reasoning from wisdom: reasoning gathers/grasps the object for examination, while wisdom cuts off the defilements.  
+**Mil 3.1.15** adds the image of wisdom illuminating what was obscured by ignorance.
+
+**Role:** later/paracanonical clarification that conceptual examination has a task, while wisdom is evaluated by whether ignorance/defilement is actually cut rather than by attachment to the conceptual instrument.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not redefine `sammādiṭṭhi` or `diṭṭhupādāna`; early-discourse evidence remains primary.
+
+### CORRECTIONS PRESERVED
+
+- Do not say “Buddhism has no views.”
+- Do not say all views are equally valid.
+- Do not equate right view with intellectual identity.
+- Do not use MN 22 to justify abandoning the path before using it.
+- Do not use Aṭṭhakavagga anti-view language to erase explicit teachings on right view.
+- Do not promote a single English gloss of `diṭṭhi` into a universal lexical rule.
+
+### Sources
+
+- MN 9 Sammādiṭṭhi Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- MN 22 Alagaddūpama Sutta.
+- Snp 4.8 Pasūra Sutta.
+- Snp 4.9 Māgandiya Sutta.
+- Recovered A62 on `diṭṭhupādāna`.
+- Milindapañha 3.1.8 and 3.1.15 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A105
+
+**How does the Buddha distinguish direct knowing/seeing from merely holding a correct doctrine, and what role do experience, verification, and “knowledge independent of another” play in right view?**
+
+Required lanes:
+- SN 12.15 “knowledge independent of another”;
+- MN 95 on preservation of truth versus discovery/realization of truth;
+- MN 70 / relevant direct-knowing material;
+- revisit faith, doubt, and inquiry from A43–A46;
+- distinguish experiential verification from private infallibility;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
