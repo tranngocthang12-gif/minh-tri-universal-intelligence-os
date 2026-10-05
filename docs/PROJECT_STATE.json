@@ -489,8 +489,8 @@
   "universal_learning_durable_checkpoint_required": true,
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
-  "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A162_COMPLETED_STACKED_PENDING_PARENT",
+  "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A162_20261005.md",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A162_COMPLETED",
   "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A163",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
