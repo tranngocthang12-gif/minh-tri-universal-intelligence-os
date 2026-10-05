@@ -132,7 +132,8 @@
     "plan": "docs/learning/ECONOMICS_PHD_AUTO_PROGRAM_20261004.md",
     "module": "M0_1_STARTED_UNTESTED",
     "background_runtime": false,
-    "research_adapter": "BLOCKED_UNTIL_FRESH_SEAT_PASS"
+    "research_adapter": "BLOCKED_UNTIL_FRESH_SEAT_PASS",
+    "priority": "AFTER_PHILOSOPHY_BY_DEFAULT_PROGRESS_PRESERVED"
   },
   "architecture_sync": {
     "status": "FULL_SYNC_2026-10-04",
@@ -449,5 +450,27 @@
     "a171_milindapanha": "CONSULTED_CONVENTIONAL_DESIGNATION_CONTINUITY_AND_FAULT_CORRECTION_AS_LATER_SUPPORT_FOR_RESPONSIBILITY_WITHOUT_FIXED_SELF_NO_OVERRIDE_OF_EARLY_TEXTS",
     "a172_claim_class": "TEXT_ATTESTED_HIRI_OTTAPPA_AS_WHOLESOME_MORAL_GUARDIANS_MN61_HARM_BASED_ACTION_REVIEW_SN42_8_REMORSE_NOT_REPAIR_SN22_59_NONAPPROPRIATION_SN22_89_I_AM_GUARDRAIL_PLUS_CROSS_TEXT_MORAL_SHAME_VS_STATUS_SHAME_IDENTITY_SHAME_AND_KUKKUCCA_WITH_LATER_MILINDAPANHA_VIRTUE_SUPPORT",
     "a172_milindapanha": "CONSULTED_VIRTUE_FAULT_RECOGNITION_AND_DISCIPLINE_AS_LATER_SUPPORT_NO_OVERRIDE_OF_EARLY_HIRI_OTTAPPA_OR_REMORSE_DISTINCTIONS"
+  },
+  "core_learning_architecture": {
+    "status": "PROTECTED_OWNER_INVARIANT",
+    "self_learning_and_self_critique_are_core": true,
+    "background_autonomy_required_for_core_learning": false,
+    "memory_application_required": true,
+    "prework_receipt_required": true,
+    "buddhist_prework_enforcement_from_checkpoint": 173,
+    "knowledge_learning_requires_owner_pc": false,
+    "knowledge_learning_continues_when_pc_offline": true,
+    "pc_local_brain_role": "OPTIONAL_EXECUTION_AND_MIRROR_SIDECAR_FOR_PC_BOUND_WORK"
+  },
+  "owner_learning_priority_order": [
+    "BUDDHIST_THOUGHT",
+    "PHILOSOPHY",
+    "ECONOMICS",
+    "FUTURE_OWNER_DIRECTED_DOMAINS"
+  ],
+  "owner_learning_track_philosophy": {
+    "status": "QUEUED_NOT_STARTED",
+    "priority": "NEXT_MAJOR_TRACK_AFTER_BUDDHIST_THOUGHT",
+    "plan": "docs/learning/PHILOSOPHY_DEEP_STUDY_PROGRAM_20261005.md"
   }
 }
