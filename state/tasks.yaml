@@ -221,7 +221,7 @@
         "ARCH-VNEXT-PHASE2"
       ],
       "supersedes": [],
-      "result_ref": "PENDING_PR"
+      "result_ref": "PR#265"
     }
   ]
 }
