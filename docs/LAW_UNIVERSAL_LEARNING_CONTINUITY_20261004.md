@@ -114,6 +114,20 @@ Mandatory rules:
 9. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
 10. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
 
+## 7B. GitHub-primary / PC-optional operating rule
+
+MINH TRÍ uses **GitHub main as the durable canonical authority for learning and project continuity**. Owner PC, Desktop Commander, the secure tunnel, and Local Brain are optional execution/mirror surfaces unless a task intrinsically requires them.
+
+Mandatory rules:
+
+1. **PC/Local Brain outage MUST NOT block any task whose required state, sources, and write-path are available through canonical GitHub and the active ChatGPT seat.**
+2. PC-off is a normal supported operating condition for learning, research, planning, repository work, documentation, checkpoint progression, PR/CI governance, and other GitHub-capable work.
+3. Local Brain is an **optional cache/ledger accelerator and local/private-data adapter**, not the primary durable project brain and not a prerequisite for learning continuity.
+4. Tasks that intrinsically require the Owner PC remain pending until the PC is available, including local-only files, desktop applications, local runtime deployment, Local Brain mirroring, device-level security checks, and other host-specific actions.
+5. A Local Brain mirror may be recorded as `PENDING/OFFLINE` without blocking a GitHub-durable checkpoint.
+6. GitHub-only operation does **not** imply autonomous 24/7 background learning. Autonomous/background runtimes remain separately governed and must not be inferred from this rule.
+7. Architecture and learning workflows should prefer the smallest durable path that preserves Owner authority, evidence discipline, checkpoint continuity, and required CI. Additional runtime/witness/critic layers must justify themselves by a concrete Owner benefit or risk requirement.
+
 ## 8. Blocked write-path rule
 
 If durable recording is blocked:
