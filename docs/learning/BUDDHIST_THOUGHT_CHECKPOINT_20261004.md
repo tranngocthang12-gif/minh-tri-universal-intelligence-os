@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A101 COMPLETED  
-**Next checkpoint:** PHASE 4 — A102  
+**Current checkpoint:** PHASE 4 — A102 COMPLETED  
+**Next checkpoint:** PHASE 4 — A103  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -14978,6 +14978,131 @@ Required lanes:
 - conventional person-language versus permanent substance claims;
 - revisit A55–A72;
 - mandatory Milindapañha consultation, especially “neither the same nor another” and rebirth-without-transmigration;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A102
+
+**Central question:** If there is no permanent self, who acts, who receives kamma-result, and what exactly continues across death and rebirth?
+
+### TEXT_ATTESTED
+
+1. **MN 38** explicitly rejects the view that “this very same consciousness” roams and transmigrates unchanged. The discourse insists that consciousness is dependently arisen and is reckoned according to the condition on which it arises.
+2. **SN 12.17** rejects both formulations “the same one acts and experiences” and “one acts, another experiences” as extremes; dependent arising is taught as the middle way between them.
+3. **SN 12.12** repeatedly redirects “who?” questions about feeling, craving, grasping, and becoming into conditional questions: what is the condition for these processes?
+4. Earlier recovered checkpoints on kamma preserve that intention (`cetanā`) is kamma, that action has results, and that present experience is not reducible to past kamma alone.
+
+### CORE DISTINCTION
+
+The early-text strategy is not to solve responsibility by inserting a hidden permanent owner behind the process.
+
+Instead, it shifts the explanatory unit:
+
+from:
+**“Which enduring thing is the doer and receiver?”**
+
+to:
+**“What conditioned process gives rise to intention, action, result, grasping, becoming, and renewed birth?”**
+
+This does not erase responsibility. It relocates responsibility in causal continuity rather than in an unchanging substance.
+
+### SAME / DIFFERENT GUARDRAIL
+
+Two crude models both fail:
+
+- **Strict identity:** exactly the same invariant consciousness/self persists unchanged and later receives the result.
+- **Total discontinuity:** the later being/process is wholly unrelated to the earlier action, so responsibility becomes unintelligible.
+
+SN 12.17 blocks both extremes at the level of formulation. MN 38 blocks a particularly strong identity theory in which one and the same consciousness migrates unchanged.
+
+A careful synthesis is:
+
+**causally continuous, not substantially invariant.**
+
+This is a `CROSS_TEXT_SYNTHESIS`, not a single canonical slogan.
+
+### CONVENTIONAL PERSON-LANGUAGE
+
+Ordinary language can still say:
+- “a person acts,”
+- “a person receives a result,”
+- “I did this yesterday.”
+
+Such speech need not imply a metaphysically permanent self.
+
+The guardrail is to distinguish:
+- conventional designation useful for ethics and communication;
+- ontological claim that there is an independent, unchanging bearer behind the aggregates and conditioned processes.
+
+### WHAT CONTINUES?
+
+The safest early-text answer is not “a thing.”
+
+What continues is a **conditioned causal sequence** involving consciousness, name-and-form, contact, feeling, craving, grasping, becoming, action, and results, depending on context.
+
+MN 38 is especially important because consciousness itself is not permitted to become the hidden permanent carrier. It too is condition-dependent.
+
+Therefore:
+- continuity: YES;
+- causal responsibility: YES;
+- invariant transmigrating consciousness/self: NOT TEXT-ATTESTED and explicitly rejected in MN 38.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's “neither the same nor another” discussion uses:
+- child → adult;
+- one lamp burning through the night;
+- milk → curds → butter → ghee.
+
+Its purpose is to explain continuity without strict numerical identity. It also preserves responsibility by rejecting the idea that one person acts while a wholly unrelated other bears the result.
+
+**Role:** later/paracanonical stress-test of causal continuity and responsibility.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the exact phrase “neither the same nor another” is not to be back-projected as a quotation from SN 12.17; the early sutta itself rejects the same/other extremes through dependent arising.
+
+### BUDDHA'S REASONING METHOD
+
+A102 reveals a major methodological pattern:
+
+1. detect a question whose grammar presupposes an entity;
+2. refuse to accept the hidden presupposition automatically;
+3. reformulate the problem in terms of conditions and processes;
+4. preserve causal and ethical consequences without adding a permanent substance.
+
+This is why “Who feels?”, “Who craves?”, and “Who is reborn?” can be misleading if the word “who” already assumes the very self that is under examination.
+
+### CORRECTIONS PRESERVED
+
+- Do not say “there is nobody who acts” as though ethics disappears.
+- Do not say “the exact same consciousness reincarnates”; MN 38 rejects that model.
+- Do not say “a completely unrelated other receives the kamma-result.”
+- Do not turn the Milindapañha formula “neither same nor another” into an early-sutta quotation.
+- Do not use conventional person-language as proof of a permanent self.
+- Do not infer from anattā that causal continuity or moral responsibility is denied.
+
+### Sources
+
+- MN 38 Mahātaṇhāsaṅkhaya Sutta.
+- SN 12.17 Acela Kassapa Sutta.
+- SN 12.12 Moḷiyaphagguna Sutta.
+- Recovered A55–A72 kamma/anattā checkpoints.
+- Milindapañha 3.2.1 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A103
+
+**How does dependent arising avoid both eternalism and annihilationism, and what exactly does the “middle” mean in early Buddhist thought?**
+
+Required lanes:
+- SN 12.15 Kaccānagotta on “everything exists / everything does not exist”;
+- SN 12.17 same-one / another-one extremes;
+- relation between dependent arising and anattā;
+- distinguish epistemic, causal, and ontological uses of “middle”;
+- revisit right view from A35–A37;
+- mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
