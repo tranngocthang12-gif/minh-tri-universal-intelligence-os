@@ -470,5 +470,50 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertEqual(state[state_key], manifest["owner_learning_track_buddhist_thought"][manifest_key])
 
 
+    def test_protected_learning_core_owner_sync(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / "docs" / "LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md").read_text(encoding="utf-8")
+        architecture = (ROOT / "docs" / "ARCHITECTURE_NOW_20261003.md").read_text(encoding="utf-8")
+        bootstrap = (ROOT / "docs" / "GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
+        philosophy = (ROOT / "docs" / "learning" / "PHILOSOPHY_DEEP_STUDY_PROGRAM_20261005.md").read_text(encoding="utf-8")
+
+        self.assertEqual(state["core_learning_architecture_owner_invariant"], "PROTECTED")
+        self.assertTrue(state["self_learning_and_self_critique_are_core_architecture"])
+        self.assertTrue(state["learning_memory_application_required"])
+        self.assertTrue(state["learning_prework_receipt_required"])
+        self.assertFalse(state["knowledge_learning_requires_owner_pc"])
+        self.assertTrue(state["knowledge_learning_continues_when_pc_offline"])
+        self.assertEqual(
+            state["owner_learning_priority_order"],
+            ["BUDDHIST_THOUGHT", "PHILOSOPHY", "ECONOMICS", "FUTURE_OWNER_DIRECTED_DOMAINS"],
+        )
+        self.assertEqual(manifest["owner_learning_priority_order"], state["owner_learning_priority_order"])
+        self.assertEqual(manifest["core_learning_architecture"]["status"], "PROTECTED_OWNER_INVARIANT")
+        self.assertTrue(manifest["core_learning_architecture"]["self_learning_and_self_critique_are_core"])
+        self.assertFalse(manifest["core_learning_architecture"]["knowledge_learning_requires_owner_pc"])
+        self.assertIn("## 1A. Core learning architecture", law)
+        self.assertIn("## 3A. Learn to remember, retrieve, connect, and apply", law)
+        self.assertIn("## 7B. Owner learning portfolio priority", law)
+        self.assertIn("## 7C. PC / Local Brain sidecar rule", law)
+        self.assertIn("## 38. Protected core learning architecture", architecture)
+        self.assertIn("## 13. PROTECTED LEARNING CORE", bootstrap)
+        self.assertIn("PC / LOCAL BRAIN IS A SIDECAR", bootstrap)
+        self.assertIn("QUEUED / NOT STARTED", philosophy)
+
+    def test_future_buddhist_checkpoint_requires_prework_and_memory_application_receipts(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        current_num = int(state["owner_learning_track_buddhist_thought_status"].split("_A", 1)[1].split("_", 1)[0])
+        enforce_from = state["learning_prework_receipt_enforcement_from_buddhist_checkpoint"]
+        if current_num < enforce_from:
+            return
+        checkpoint_path = ROOT / state["owner_learning_track_buddhist_thought_checkpoint"]
+        checkpoint = checkpoint_path.read_text(encoding="utf-8")
+        self.assertIn("## PREWORK RECEIPT — MANDATORY", checkpoint)
+        self.assertIn("FRESH_READ_BEFORE_MATERIAL_WORK", checkpoint)
+        self.assertIn("## MEMORY / APPLICATION — MANDATORY", checkpoint)
+        self.assertIn("APPLICATION_STATUS", checkpoint)
+
+
 if __name__ == "__main__":
     unittest.main()
