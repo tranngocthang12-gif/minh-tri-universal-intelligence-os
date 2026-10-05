@@ -104,7 +104,7 @@
     {
       "task_id": "ARCH-VNEXT-PHASE4-HARNESS",
       "title": "Build held-out retrieval evaluation harness without self-grading",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "eval/retrieval/v1/",
         "tools/build_retrieval_eval_packet.py",
@@ -121,23 +121,24 @@
         "ARCH-VNEXT-PHASE3-PILOT"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "PR#256"
     },
     {
       "task_id": "ARCH-VNEXT-PHASE4-GRADED-RUN",
       "title": "Run retrieval baseline in a different fresh seat using canonical Phase 4 packet",
       "status": "READY",
       "scope": [
+        "eval/retrieval/v1/packets/ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001.json",
         "eval/retrieval/v1/results/"
       ],
       "branch": null,
-      "base_sha": "a002cef755e8832c045af422e6ee9da62c375205",
+      "base_sha": "43e1ee36fcf6bd42663dfa1bc2cbc6382b503b55",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PHASE4-HARNESS"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "eval/retrieval/v1/packets/ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001.json"
     }
   ]
 }
