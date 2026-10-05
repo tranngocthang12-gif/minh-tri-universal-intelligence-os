@@ -3,8 +3,11 @@
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
 **Checkpoint:** PHASE 4 — A161 COMPLETED  
+**Current checkpoint:** PHASE 4 — A161 COMPLETED  
 **Next checkpoint:** PHASE 4 — A162  
 **Primary integration input:** merged SN 22 audit `PHAT-SN22-AUDIT-01`
+
+## Completed checkpoint A161
 
 ## Central question
 
@@ -318,6 +321,8 @@ This is CROSS_TEXT APPLICATION, not a canonical list.
 
 CURRENT CHECKPOINT: PHASE 4 — A161 COMPLETED  
 NEXT CHECKPOINT: PHASE 4 — A162
+
+## Next checkpoint — PHASE 4 A162
 
 ### A162 topic
 
