@@ -305,3 +305,19 @@ It is mandatory as a supporting/paracanonical reasoning source, especially for a
 
 Every durable Buddhist checkpoint must record whether Milindapañha was consulted and what role it played.
 
+## 13. New-chat learning preflight enforcement
+
+Before any new material learning checkpoint or audit, a fresh seat must:
+1. fresh-read PROJECT_STATE;
+2. fresh-read current Law Index;
+3. fresh-read Universal Learning Continuity Law;
+4. fresh-read current Architecture;
+5. fresh-read this Role Bootstrap;
+6. fresh-read active learning checkpoint/plan;
+7. fresh-check the task/domain primary sources required for TEXT_ATTESTED, morphology, or exact-source claims.
+
+The seat must classify its result as CANONICAL, CANDIDATE, or CHAT_DRAFT.
+
+Only merge plus fresh-read live main may advance canonical CURRENT/NEXT. Open PRs, stacked PRs, and CI PASS alone remain candidate state.
+
+If exact primary-source verification was not performed in the current task, the seat must not present the claim as freshly source-verified.
