@@ -80,7 +80,7 @@
     {
       "task_id": "ARCH-VNEXT-PHASE3-PILOT",
       "title": "Pilot atom+hub knowledge schema on Buddhist and economics samples",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "knowledge/schema/",
         "knowledge/buddhist/",
@@ -97,6 +97,44 @@
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PHASE2"
+      ],
+      "supersedes": [],
+      "result_ref": "PR#255"
+    },
+    {
+      "task_id": "ARCH-VNEXT-PHASE4-HARNESS",
+      "title": "Build held-out retrieval evaluation harness without self-grading",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "eval/retrieval/v1/",
+        "tools/build_retrieval_eval_packet.py",
+        "tools/score_retrieval_eval.py",
+        "tests/test_vnext_retrieval_harness.py",
+        "docs/vnext/ARCHITECTURE_VNEXT_PHASE4_RETRIEVAL_HARNESS_20261006.md",
+        "state/current.yaml",
+        "state/tasks.yaml"
+      ],
+      "branch": "owner/architecture-vnext-phase4-retrieval-harness-20261006",
+      "base_sha": "a002cef755e8832c045af422e6ee9da62c375205",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE3-PILOT"
+      ],
+      "supersedes": [],
+      "result_ref": null
+    },
+    {
+      "task_id": "ARCH-VNEXT-PHASE4-GRADED-RUN",
+      "title": "Run retrieval baseline in a different fresh seat using canonical Phase 4 packet",
+      "status": "READY",
+      "scope": [
+        "eval/retrieval/v1/results/"
+      ],
+      "branch": null,
+      "base_sha": "a002cef755e8832c045af422e6ee9da62c375205",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE4-HARNESS"
       ],
       "supersedes": [],
       "result_ref": null

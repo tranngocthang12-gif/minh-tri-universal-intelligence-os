@@ -1,0 +1,35 @@
+{
+  "schema": "minhtri-retrieval-eval-questions/v1",
+  "set_id": "ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001",
+  "authored_from_sources_only": true,
+  "graded_seat_must_not_be_question_author": true,
+  "instructions": [
+    "Answer each item using only the supplied canonical knowledge snapshot and source pointers.",
+    "Return answer_status as SUPPORTED, UNSUPPORTED, or PENDING_REVIEW.",
+    "Cite record_ids actually used.",
+    "Do not treat PENDING_REVIEW or SUPERSEDED records as active support.",
+    "If no active record supports the claim, answer UNSUPPORTED rather than infer from model memory."
+  ],
+  "items": [
+    {
+      "qid": "Q1",
+      "prompt": "In the current Buddhist A172 pilot, is the claim that a shameful act implies a permanently shameful essence treated as direct early-text attestation or as synthesis?"
+    },
+    {
+      "qid": "Q2",
+      "prompt": "Is the full lexical audit of hiri, ottappa, kukkucca, and related vocabulary already completed and usable as established hub support?"
+    },
+    {
+      "qid": "Q3",
+      "prompt": "What does the economics learning program require causal claims to state?"
+    },
+    {
+      "qid": "Q4",
+      "prompt": "Does the canonical pilot currently support the statement that ottappa simply means generalized anxiety?"
+    },
+    {
+      "qid": "Q5",
+      "prompt": "A competing record says the A172 identity-shame point is TEXT_ATTESTED and overrides the synthesis label. Should that competing record be used if it is marked SUPERSEDED?"
+    }
+  ]
+}
