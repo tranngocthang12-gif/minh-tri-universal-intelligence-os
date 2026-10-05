@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A108 COMPLETED  
-**Next checkpoint:** PHASE 4 — A109  
+**Current checkpoint:** PHASE 4 — A109 COMPLETED  
+**Next checkpoint:** PHASE 4 — A110  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15705,6 +15705,147 @@ MN 2; MN 64; relevant SN 36 latent-tendency material; early āsava-destruction f
 **What are the latent tendencies (`anusaya`), how do they relate to feeling, craving, self-view, and repeated reaction, and how should they be distinguished from later theories of an unconscious mind?**
 
 Required lanes: SN 36 anusaya material; MN 64; feeling→craving relation; latent tendency vs habit vs active defilement; guardrail against importing modern unconscious theory; mandatory Milindapañha consultation.
+
+
+## Completed checkpoint A109
+
+**Central question:** What are the latent tendencies (`anusaya`), how do they relate to feeling, craving, self-view, and repeated reaction, and how should they be distinguished from later theories of an unconscious mind?
+
+### TEXT_ATTESTED
+
+1. **MN 64** gives a decisive guardrail: a baby may not presently entertain explicit self-view, doubt, attachment to rites, sensual desire, or ill will, yet the corresponding latent tendencies can still lie latent. Therefore non-manifestation is not the same as eradication.
+2. **MN 44** links pleasant feeling with the underlying tendency to passion, painful feeling with the underlying tendency to resistance, and neutral feeling with the underlying tendency to ignorance. It also explicitly says that these tendencies do **not** necessarily underlie every instance of the corresponding feeling.
+3. **SN 36.6** shows the same dynamic in the uninstructed person: painful feeling can activate resistance; turning toward sensual pleasure can activate passion; failure to understand feeling's origin, cessation, gratification, drawback, and escape leaves ignorance operative.
+4. The instructed disciple is described in the opposite way: feeling occurs without those underlying tendencies taking possession in the same manner because the origin, cessation, gratification, drawback, and escape are understood.
+
+### LATENT TENDENCY ≠ ACTIVE DEFILEMENT
+
+The minimum safe distinction is:
+
+- **active defilement** — greed, aversion, view, etc. presently manifest in thought, speech, feeling-response, or action;
+- **latent tendency** — a disposition capable of conditioning renewed manifestation when relevant conditions occur;
+- **eradication** — the relevant tendency no longer regenerates the defilement.
+
+This explains why temporary calm can coexist with unresolved conditioning.
+
+### FEELING AS A TRIGGERING FIELD
+
+MN 44 and SN 36.6 show why `vedanā` is so important.
+
+Pleasant feeling does not automatically equal lust.  
+Painful feeling does not automatically equal aversion.  
+Neutral feeling does not automatically equal ignorance.
+
+Rather, these feelings are contexts in which corresponding tendencies can become active **when not rightly understood**.
+
+This prevents a deterministic reading of:
+`pleasant → greed`, `pain → aversion`, `neutral → ignorance`.
+
+The texts preserve trainability: the same feeling can be experienced differently by the instructed disciple.
+
+### RELATION TO CRAVING
+
+Dependent arising gives:
+`vedanā → taṇhā`.
+
+A109 adds an important refinement:
+the transition is not best read as an unavoidable mechanical jump.
+
+The latent-tendency material shows a conditioned vulnerability:
+feeling provides a field in which craving/reaction can arise, but training changes whether the old pattern is activated and fed.
+
+This is a `CROSS_TEXT_SYNTHESIS` joining the standard dependent-arising sequence with MN 44 / SN 36 material.
+
+### RELATION TO SELF-VIEW
+
+MN 64 is particularly important because it includes the latent tendency to self-identification view.
+
+That means absence of an explicit thought such as “I have a self-theory” does not by itself prove that self-related appropriation has been uprooted.
+
+This supports the earlier distinction:
+- explicit doctrine about self;
+- “I am” conceit;
+- mine-making/appropriation;
+- latent tendency.
+
+These must not be collapsed into one identical phenomenon.
+
+### NOT A MODERN THEORY OF THE UNCONSCIOUS
+
+`Anusaya` can resemble modern language about implicit or unconscious dispositions, but the equivalence must remain **OPEN / GUARDED**.
+
+The early texts establish:
+- non-manifest dispositions;
+- conditional activation;
+- specific links to passion, aversion, ignorance, view, doubt, and fetters;
+- abandonment through the path.
+
+They do **not** by themselves establish any particular modern psychological model of:
+- subconscious storage;
+- repression;
+- neural mechanisms;
+- psychoanalytic unconscious structures.
+
+Therefore “latent tendency” is safer than importing a full modern theory.
+
+### BUDDHA'S REASONING METHOD
+
+A109 reveals a subtle diagnostic rule:
+
+**do not infer absence of a cause from absence of its current expression.**
+
+Instead:
+1. distinguish manifestation from disposition;
+2. vary the conditions;
+3. observe whether the old pattern regenerates;
+4. trace which feeling/contact contexts activate it;
+5. train the relevant causal link;
+6. reserve “eradicated” for a stronger condition than temporary non-occurrence.
+
+This is one reason Buddhist diagnosis can distinguish calm from liberation.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha II.1.8 describes wisdom as severing defilements, using the image of cutting with a sickle.
+
+**Role:** later/paracanonical support for the distinction between merely having a defilement quiet and actually cutting the condition that sustains it.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** the early-text meaning of `anusaya` remains anchored in MN 64, MN 44, and SN 36 material.
+
+### CORRECTIONS PRESERVED
+
+- Do not equate “not currently angry” with eradication of aversion.
+- Do not read feeling → tendency as deterministic in every case.
+- Do not equate `anusaya` with one modern unconscious theory.
+- Do not treat latent tendency, active defilement, habit, and fetter as universally interchangeable terms.
+- Do not infer that explicit absence of self-view means all self-related tendencies are gone.
+- Do not turn Milindapañha imagery into an early-sutta definition.
+
+### Sources
+
+- MN 64 Mahā Māluṅkyovāda Sutta.
+- MN 44 Cūḷavedalla Sutta.
+- SN 36.6 Sallattha Sutta.
+- Standard dependent-arising feeling → craving relation.
+- Milindapañha II.1.8 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A110
+
+**How do `anusaya`, `saṁyojana` (fetters), `āsava` (effluents), `nīvaraṇa` (hindrances), and active `kilesa`-type defilements relate without collapsing distinct early-Buddhist diagnostic categories into one?**
+
+Required lanes:
+- five hindrances and their temporary abandonment;
+- five lower fetters / ten fetters;
+- āsava destruction;
+- anusaya material from A109;
+- distinguish state, tendency, bond, and deep outflow/conditioning categories;
+- avoid importing later one-to-one systematizations unless labelled;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
 ## 2026-10-05 continuity recovery
 
