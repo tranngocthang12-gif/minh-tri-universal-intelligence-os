@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A149 COMPLETED  
-**Next checkpoint:** PHASE 4 — A150  
+**Current checkpoint:** PHASE 4 — A155 COMPLETED  
+**Next checkpoint:** PHASE 4 — A156  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19534,3 +19534,18 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A150
 
 **Topic:** community, good friendship, conformity, and responsibility.
+
+
+## Completed checkpoint A155
+
+**Topic:** moral courage vs conformity and contrarian identity.
+
+- Anchors: AN 3.65, MN 47, MN 58, AN 5.198.
+- Guardrail: dissent is not courage by definition; unpopularity is not evidence of truth; resistance can itself become māna.
+- Milindapañha consulted: YES; later support for disciplined challenge without hostility.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A155_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A156
+
+**Topic:** integrity when no one is watching; hiri-ottappa, secrecy, reputation, and internalized restraint.
