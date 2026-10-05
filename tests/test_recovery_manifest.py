@@ -470,5 +470,25 @@ class RecoveryManifestConsistency(unittest.TestCase):
             self.assertEqual(state[state_key], manifest["owner_learning_track_buddhist_thought"][manifest_key])
 
 
+    def test_learning_compliance_hardening_is_routed(self):
+        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
+        manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
+        law = (ROOT / state["universal_learning_continuity_law"]).read_text(encoding="utf-8")
+        law_index = (ROOT / state["current_law_index"]).read_text(encoding="utf-8")
+        architecture = (ROOT / state["current_architecture"]).read_text(encoding="utf-8")
+        bootstrap = (ROOT / state["role_bootstrap"]).read_text(encoding="utf-8")
+
+        hardening = state["learning_compliance_hardening_20261005"]
+        self.assertTrue(hardening["requires_preflight_receipt"])
+        self.assertEqual(hardening["canonical_state_labels"], ["CANONICAL", "CANDIDATE", "CHAT_DRAFT"])
+        self.assertTrue(hardening["primary_source_fresh_check_required_for_text_attested_and_lexical_claims"])
+        self.assertTrue(hardening["canonical_advancement_requires_merge_and_fresh_read_main"])
+        self.assertIn("learning_compliance_hardening_20261005", manifest)
+        self.assertIn("## 11. New-seat learning compliance gate", law)
+        self.assertIn("### Learning compliance hardening — 2026-10-05", law_index)
+        self.assertIn("## 38. Learning compliance hardening — 2026-10-05", architecture)
+        self.assertIn("## 13. New-chat learning preflight enforcement", bootstrap)
+
+
 if __name__ == "__main__":
     unittest.main()
