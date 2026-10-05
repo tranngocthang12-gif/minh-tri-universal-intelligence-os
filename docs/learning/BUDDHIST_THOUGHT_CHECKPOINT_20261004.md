@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A144 COMPLETED  
-**Next checkpoint:** PHASE 4 — A145  
+**Current checkpoint:** PHASE 4 — A149 COMPLETED  
+**Next checkpoint:** PHASE 4 — A150  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19519,3 +19519,18 @@ Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
 ## Next checkpoint — PHASE 4 A145
 
 **Topic:** memory, anticipation, prudent planning, and fear-driven projection.
+
+
+## Completed checkpoint A149
+
+**Topic:** reverence, devotion, teacher, tradition, and non-attachment.
+
+- Anchors: MN 47, AN 3.65, DN 16, MN 22.
+- Guardrail: reverence and gratitude do not suspend examination; teacher-status is not infallibility.
+- Milindapañha consulted: YES; later support for reverence coexisting with rigorous inquiry.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A145_A148_20261005.md`.
+
+
+## Next checkpoint — PHASE 4 A150
+
+**Topic:** community, good friendship, conformity, and responsibility.
