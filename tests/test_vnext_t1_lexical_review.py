@@ -30,7 +30,8 @@ class T1LexicalReviewTests(unittest.TestCase):
             self.assertEqual(atom["status"], "ACTIVE")
             self.assertEqual(atom["class"], "ATTESTED")
             self.assertEqual(atom["provenance"]["review_level"], "T1")
-            self.assertTrue(atom["depends_on"])
+            self.assertEqual(atom["depends_on"], [])
+            self.assertTrue(any("SALVAGED" in ref for ref in atom["source_refs"]))
 
     def test_index_contains_promoted_claims_and_pending_audits(self):
         index = self.load("knowledge/index.json")
@@ -40,6 +41,19 @@ class T1LexicalReviewTests(unittest.TestCase):
         self.assertEqual(atoms["bud:atthaka:sn874:sanna-papancasankha-relation"]["status"], "ACTIVE")
         self.assertEqual(atoms["bud:atthaka:sn842:mannati-comparison-dispute"]["status"], "ACTIVE")
         self.assertEqual(atoms["bud:atthaka:sn4_12:view-truth-claim-dispute"]["status"], "ACTIVE")
+
+    def test_active_claims_do_not_depend_on_pending_atoms(self):
+        atoms = {}
+        for path in (ROOT / "knowledge").rglob("*.json"):
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if data.get("schema") == "minhtri-knowledge-atom/v1":
+                atoms[data["id"]] = data
+        for atom in atoms.values():
+            if atom.get("status") != "ACTIVE":
+                continue
+            for dep_id in atom.get("depends_on", []):
+                self.assertIn(dep_id, atoms)
+                self.assertNotEqual(atoms[dep_id].get("status"), "PENDING_REVIEW")
 
     def test_review_document_preserves_open_uncertainties(self):
         text = (ROOT / "docs" / "vnext" / "history" / "BUDDHIST_T1_LEXICAL_REVIEW_216_230_20261006.md").read_text(encoding="utf-8")
