@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A133 COMPLETED  
-**Next checkpoint:** PHASE 4 — A134  
+**Current checkpoint:** PHASE 4 — A144 COMPLETED  
+**Next checkpoint:** PHASE 4 — A145  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19489,3 +19489,33 @@ Required lanes:
 - Recovery does **not** auto-verify every doctrinal claim; existing claim classes and open audits remain in force.
 - Canonical handoff after repair: **A97 COMPLETED → A98 NEXT**.
 - Local Brain mirror is not proven because the tunnel is currently unreachable.
+
+
+## Continuity handoff — A134–A144
+
+Detailed continuation is recorded in:
+- docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A136_A142_20261005.md
+- docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A143_A144_20261005.md
+
+A134–A135 are also preserved in docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A134_A135_20261005.md.
+
+Canonical handoff target: **A144 COMPLETED → A145 NEXT**.
+
+
+## Completed checkpoint A144
+
+**Topic:** from selected attentional feature to relational papañca and conflict amplification.
+
+- Primary anchor: MN 18 contact → feeling → perception → thought → papañca process, with past/future/present range.
+- Guardrail: `papañca` is not reduced to all thinking or to the modern phrase “overthinking.”
+- Relational synthesis: observed event must be distinguished from interpretation, inferred motive, repeated scenario-building, and self-positioning.
+- Aṭṭhakavagga is used only as a conflict/dispute stress-test, not as a lexical dictionary for `papañca`.
+- Milindapañha consulted: YES; role limited to distinction-making, conventional designation, and reasoning/wisdom support; no independent papañca definition promoted.
+- Detailed record: `docs/learning/BUDDHIST_THOUGHT_CONTINUATION_A143_A144_20261005.md`.
+
+**Next:** PHASE 4 — A145.
+
+
+## Next checkpoint — PHASE 4 A145
+
+**Topic:** memory, anticipation, prudent planning, and fear-driven projection.
