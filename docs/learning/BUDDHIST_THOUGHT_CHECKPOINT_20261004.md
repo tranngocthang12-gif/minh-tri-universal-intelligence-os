@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A113 COMPLETED  
-**Next checkpoint:** PHASE 4 — A114  
+**Current checkpoint:** PHASE 4 — A114 COMPLETED  
+**Next checkpoint:** PHASE 4 — A115  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -16608,6 +16608,193 @@ Required lanes:
 - “not mine / not I / not self” as de-appropriation rather than slogan;
 - relation to control criterion (“let it be thus”);
 - distinction from annihilationism and from emotional dissociation;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A114
+
+**Central question:** How does the formula “this is not mine, this I am not, this is not my self” function as a practice, and how should it be distinguished from mere verbal denial or philosophical annihilationism?
+
+### TEXT_ATTESTED
+
+1. **SN 22.59** applies the not-self analysis to each of the five aggregates. It first argues that if an aggregate were self, it would be amenable to control—“let it be thus; let it not be thus”—and would not lead to affliction in the stated way. But form, feeling, perception, formations, and consciousness are not controllable on that basis.
+2. The same discourse asks whether each aggregate is permanent or impermanent, and whether what is impermanent, stressful/afflictive, and subject to change is fit to be regarded as “this is mine, this I am, this is my self.” The answer is no.
+3. SN 22.59 then instructs that every instance of each aggregate—past, future, or present; internal or external; coarse or subtle; inferior or superior; far or near—should be seen with right discernment as “not mine, not I, not my self.”
+4. The result described is not verbal negation for its own sake. Seeing in this way leads to disenchantment (`nibbidā`), dispassion (`virāga`), and release (`vimutti`).
+5. **SN 12.15** rejects the two extremes “everything exists” and “everything does not exist,” teaching dependent arising and cessation instead. The practitioner does not cling to “my self,” while seeing suffering arise and cease conditionally.
+6. **SN 36.6** shows that the instructed disciple can still feel painful bodily feeling without adding the second arrow of mental resistance. Therefore liberation/de-appropriation does not require erasing the fact of felt experience.
+
+### THE FORMULA IS A PRACTICE OF DE-APPROPRIATION
+
+A114's safest working interpretation is:
+
+- **“not mine”** loosens ownership/appropriation;
+- **“I am not this”** loosens identification;
+- **“this is not my self”** loosens the view that an aggregate is, contains, belongs to, or is possessed by an enduring self.
+
+This three-function reading is a **CROSS_TEXT_SYNTHESIS**. It reflects the grammar and the broader identity-view/clinging material, but the early discourses do not present a single technical table saying that each phrase has only one exclusive psychological function.
+
+The practical point is that experience continues to be known while the possessive/self-identifying relation to it is dismantled.
+
+### WHY IT IS NOT A MAGIC SENTENCE
+
+Repeating:
+“not mine, not I, not my self”
+without seeing impermanence, affliction, change, craving, clinging, and conditionality is not what SN 22.59 depicts.
+
+The discourse proceeds through investigation:
+
+aggregate
+→ cannot be commanded as self
+→ impermanent
+→ subject to change/affliction
+→ therefore not fit for appropriation as mine/I/self
+→ disenchantment
+→ dispassion
+→ release.
+
+Thus the formula functions as a conclusion repeatedly applied with discernment, not as a verbal charm.
+
+### THE CONTROL CRITERION: IMPORTANT BUT NOT A SINGLE TOTAL PROOF
+
+SN 22.59's “let it be thus” argument is text-attested.
+
+A114 preserves a guardrail:
+the Buddha is not merely arguing, “anything I cannot perfectly control is therefore metaphysically unreal.”
+
+Rather, in context the inability to command each aggregate undermines its suitability as the autonomous self that one would treat as “me” and “mine.”
+
+The control argument works together with impermanence, affliction, change, and de-appropriation.
+
+### NOT-SELF DOES NOT MEAN “NOTHING EXISTS”
+
+SN 12.15 is crucial.
+
+The Buddha rejects both:
+- “everything exists”;
+- “everything does not exist.”
+
+He redirects attention to:
+- conditioned arising;
+- conditioned cessation;
+- non-clinging.
+
+Therefore the not-self formula is not safely reduced to the proposition:
+“there is absolutely nothing.”
+
+Its practical force is:
+**do not appropriate conditioned phenomena as self or belonging to self.**
+
+This avoids converting not-self into annihilationism.
+
+### NOT-SELF DOES NOT MEAN “I MUST DESTROY MYSELF”
+
+To say:
+“form is not self”
+is not to say:
+“a truly existing self must now be killed.”
+
+That would first posit the very self-entity the analysis is dismantling and then imagine its destruction.
+
+The early-text strategy is different:
+identify the processes being appropriated,
+see their conditioned and changing nature,
+stop taking them as mine/I/self,
+and let craving and clinging cease.
+
+This is a **CROSS_TEXT_SYNTHESIS** anchored in SN 22.59 and SN 12.15.
+
+### NOT-SELF IS NOT EMOTIONAL NUMBING OR DISSOCIATION
+
+These modern labels are not early-Buddhist technical terms, so any equivalence remains **OPEN/GUARDED**.
+
+The textual minimum is clear:
+- feeling can still occur;
+- bodily pain can still occur;
+- experience is still known;
+- the training changes the relation of craving, aversion, identification, and clinging to that experience.
+
+SN 36.6 is especially useful: the trained disciple still feels the first arrow but does not add the second arrow in the same way.
+
+Therefore A114 does not interpret “not mine” as “I must stop feeling” or “pretend the experience is not occurring.”
+
+### IMPERMANENCE → DISENCHANTMENT, NOT HATRED
+
+SN 22.59's progression culminates in `nibbidā → virāga → vimutti`.
+
+A114 preserves the earlier lexical guardrail:
+`nibbidā` is not simply aversion or disgust in the ordinary hostile sense,
+and `virāga` is not emotional deadness.
+
+The direction is loss of fascination and passion for appropriation, culminating in release.
+
+### RELATION TO A113
+
+A113 showed that conventional “I” language can remain without identity view.
+
+A114 now shows why the not-self formula does not require linguistic self-erasure.
+
+One can still say:
+“I am walking,”
+while seeing the relevant form, feeling, perception, formations, and consciousness as not fit to be appropriated as a permanent self.
+
+The target is not grammar.
+The target is appropriation.
+
+### BUDDHA'S REASONING METHOD
+
+A114 reveals a recurring reasoning pattern:
+
+1. start from directly inspectable experience;
+2. test control and stability;
+3. examine whether the object is fit for appropriation;
+4. refrain from solving the problem by asserting either eternal existence or total non-existence;
+5. use the insight to weaken craving and clinging;
+6. judge the teaching by whether it culminates in dispassion and release.
+
+This is neither a bare metaphysical declaration nor a purely verbal exercise.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha's discussions of wisdom describe wisdom as both **cutting** and **illuminating**: it dispels ignorance and makes impermanence, suffering, and not-self clear. The Nāgasena/chariot dialogue also preserves the usefulness of conventional designation without requiring an independently findable self-essence.
+
+**Role:** later/paracanonical support for reading not-self as discernment that cuts appropriation rather than as a command to deny ordinary experience or conventional language.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha does not replace SN 22.59's early-discourse sequence or SN 12.15's middle-way guardrail.
+
+### CORRECTIONS PRESERVED
+
+- Do not treat “not mine, not I, not my self” as a magic sentence detached from discernment.
+- Do not interpret not-self as “nothing exists.”
+- Do not interpret not-self as “destroy a real self.”
+- Do not equate non-appropriation with inability to feel.
+- Do not turn the control criterion into a stand-alone universal metaphysical proof.
+- Do not equate `nibbidā` with hatred or `virāga` with emotional deadness.
+- Do not use later/paracanonical explanations to override the early-text sequence.
+
+### Sources
+
+- SN 22.59 Anattalakkhaṇa / Pañcavaggi Sutta.
+- SN 12.15 Kaccānagotta Sutta.
+- SN 36.6 Sallattha Sutta.
+- Milindapañha wisdom/cutting/illumination discussion and Nāgasena/chariot dialogue as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A115
+
+**How do `anattā` (not-self) and `suññatā` (emptiness) relate in the early discourses, and why does “empty of self or what belongs to self” not mean nihilistic nothingness?**
+
+Required lanes:
+- SN 35.85–86 emptiness material;
+- five aggregates / six sense bases;
+- “empty of self and what belongs to self”;
+- relation to dependent arising and SN 12.15;
+- distinguish early-discourse emptiness from later expanded emptiness philosophies unless labelled;
+- distinguish experiential emptiness from “nothing exists”;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
