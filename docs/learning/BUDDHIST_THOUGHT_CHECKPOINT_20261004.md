@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A102 COMPLETED  
-**Next checkpoint:** PHASE 4 — A103  
+**Current checkpoint:** PHASE 4 — A103 COMPLETED  
+**Next checkpoint:** PHASE 4 — A104  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -15102,6 +15102,107 @@ Required lanes:
 - relation between dependent arising and anattā;
 - distinguish epistemic, causal, and ontological uses of “middle”;
 - revisit right view from A35–A37;
+- mandatory Milindapañha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A103
+
+**Central question:** How does dependent arising avoid both eternalism and annihilationism, and what exactly does “the middle” mean in early Buddhist thought?
+
+### TEXT_ATTESTED
+
+1. **SN 12.15 Kaccānagotta** says the world mostly relies on a duality: existence and non-existence. Seeing the arising of the world with right wisdom undercuts the view of non-existence; seeing cessation with right wisdom undercuts the view of existence.
+2. The same discourse explicitly calls “Everything exists” one extreme and “Everything does not exist” the other, then says the Tathāgata teaches Dhamma by the middle through dependent arising and dependent cessation.
+3. **SN 12.17** rejects “the same one acts and experiences” as an eternalist formulation and “one acts, another experiences” as an annihilationist formulation, again teaching dependent arising as the middle.
+4. The “middle” in these discourses is therefore not mere compromise or averaging. It is a causal account that avoids reifying either an invariant entity or total discontinuity.
+
+### THREE USES THAT MUST BE DISTINGUISHED
+
+**1. Causal middle — TEXT_ATTESTED**
+Dependent arising explains events by conditions rather than by an eternal substance or causeless disappearance.
+
+**2. View/epistemic middle — TEXT_ATTESTED PLUS SYNTHESIS**
+Right view does not cling to the extreme propositions “all exists” or “all does not exist”; it sees arising and cessation conditionally.
+
+**3. Ontological interpretation — OPEN / GUARDED**
+It is reasonable to say the teaching resists both eternalism and annihilationism. But it is too strong to turn SN 12.15 into a complete later ontology or to claim that every possible metaphysical question is answered by one universal formula.
+
+### RELATION TO ANATTĀ
+
+A102 already showed that the Buddha redirects “who?” questions toward conditional processes. A103 adds the guardrail:
+
+- rejecting a permanent self does not require saying that causal continuity is unreal;
+- preserving causal continuity does not require positing a permanent self.
+
+Thus dependent arising and anattā cooperate:
+**no invariant owner is needed, yet conditioned continuity and responsibility remain intelligible.**
+
+This is a `CROSS_TEXT_SYNTHESIS`, not a single canonical sentence.
+
+### RIGHT VIEW CONNECTION
+
+SN 12.15 explicitly presents this as a question about **right view**. Right view here is not merely holding a correct proposition. It involves seeing arising and cessation in a way that weakens clinging to “my self” and dependence on rigid existence/non-existence positions.
+
+So the method is:
+- observe arising;
+- observe cessation;
+- refuse to absolutize either persistence or disappearance;
+- explain the process through conditions.
+
+### BUDDHA'S REASONING METHOD
+
+A103 reveals a recurring strategy:
+
+1. identify a binary that forces the problem into two reified extremes;
+2. test each extreme against observed conditional arising and cessation;
+3. reject the hidden assumption that only those two options exist;
+4. replace the binary with a conditional explanation.
+
+The “middle” is therefore often **structural**, not numerical: it is a different explanatory framework, not simply a midpoint between two opinions.
+
+### MILINDAPAÑHA CONSULTATION — MANDATORY
+
+**Consulted:** YES.
+
+Milindapañha 3.2.1 uses the formula “neither the same nor another,” illustrated by:
+- infant → adult;
+- a lamp burning through the night;
+- milk → curds → butter → ghee.
+
+**Role:** later/paracanonical clarification of how continuity can avoid both strict identity and total otherness.
+
+**Evidence class:** `LATER/PARACANONICAL`.
+
+**Guardrail:** Milindapañha’s formula must not replace the early-text wording of SN 12.15 or SN 12.17. Early authority remains dependent arising as the middle teaching.
+
+### CORRECTIONS PRESERVED
+
+- Do not define “middle” as simple compromise.
+- Do not say Buddhism teaches a third permanent substance between existence and non-existence.
+- Do not infer annihilationism from anattā.
+- Do not infer eternalism from causal continuity.
+- Do not use later Madhyamaka or Abhidhamma systematization as though it were the explicit content of SN 12.15 unless separately labelled.
+- Do not promote Milindapañha’s “neither same nor another” into an early-sutta quotation.
+
+### Sources
+
+- SN 12.15 Kaccānagotta Sutta.
+- SN 12.17 Acela Kassapa Sutta.
+- Recovered A35–A37 on right view.
+- A102 on causal continuity and responsibility.
+- Milindapañha 3.2.1 as later/paracanonical support.
+
+## Next checkpoint — PHASE 4 A104
+
+**How should right view (`sammādiṭṭhi`) function without becoming another object of clinging, and how does the Buddha distinguish useful view from view-clinging?**
+
+Required lanes:
+- MN 9 on right view;
+- MN 22 raft simile and release of even wholesome teachings when no longer needed;
+- SN 12.15 right view without existence/non-existence fixation;
+- revisit A62 on `diṭṭhupādāna`;
+- Aṭṭhakavagga lexical guardrail for `diṭṭhi`;
 - mandatory Milindapañha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
