@@ -785,5 +785,15 @@
   "universal_learning_prework_receipt_required": true,
   "universal_learning_prework_receipt_heading": "## PREWORK RECEIPT — MANDATORY",
   "universal_learning_prework_receipt_status": "FRESH_READ_BEFORE_MATERIAL_WORK",
-  "universal_learning_prework_receipt_enforcement": "CI_FAIL_CLOSED_FOR_PROMOTED_MATERIAL_CHECKPOINTS_AFTER_INTEGRATION"
+  "universal_learning_prework_receipt_enforcement": "CI_FAIL_CLOSED_FOR_PROMOTED_MATERIAL_CHECKPOINTS_AFTER_INTEGRATION",
+  "owner_learning_track_buddhist_thought_supreme_learning_rule": "LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004_SECTION_7A",
+  "owner_learning_track_buddhist_thought_source_hierarchy": "EARLY_DISCOURSES_PRIMARY_MILINDAPANHA_MANDATORY_CONTINUOUS_SUPPORT",
+  "owner_learning_track_buddhist_thought_multiple_translations_required": true,
+  "owner_learning_track_buddhist_thought_translation_minimum_material": 2,
+  "owner_learning_track_buddhist_thought_translation_minimum_disputed_practicable": 3,
+  "owner_learning_track_buddhist_thought_translation_conflict_record_required": true,
+  "owner_learning_track_buddhist_thought_pali_control_when_material": true,
+  "owner_learning_track_buddhist_thought_systematic_continuity_required": true,
+  "owner_learning_track_buddhist_thought_no_isolated_passage_system_claim": true,
+  "owner_learning_track_buddhist_thought_deep_system_goal": "BUDDHA_THINKING_REASONING_CONCEPTUAL_CAUSAL_PRACTICAL_SYSTEM_DEEP_COHERENT_CONTINUOUS"
 }
