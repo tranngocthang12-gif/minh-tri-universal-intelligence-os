@@ -2,8 +2,8 @@
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
 **Status:** DURABLE CONTINUITY RECORD / NOT AUTOMATICALLY VERIFIED  
-**Current checkpoint:** PHASE 4 — A128 COMPLETED  
-**Next checkpoint:** PHASE 4 — A129  
+**Current checkpoint:** PHASE 4 — A131 COMPLETED  
+**Next checkpoint:** PHASE 4 — A132  
 **Background autonomy:** OFF
 
 ## Method guardrails
@@ -19113,6 +19113,187 @@ Required lanes:
 - faith/confidence vs reputation dependence;
 - status as conditioned designation;
 - relation to māna, taṇhā, upādāna, bhava;
+- mandatory Milindapanha consultation;
+- preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
+
+
+## Completed checkpoint A129
+
+**Central question:** How does craving for praise, recognition, honor, and reputation become a support for clinging and identity-becoming, and how does the Buddha distinguish stable confidence from dependence on external validation?
+
+### TEXT_ATTESTED
+- Early material on the eight worldly conditions treats gain/loss, fame/disrepute, praise/blame, and pleasure/pain as unstable conditions that affect ordinary and trained people alike.
+- **SN 17** repeatedly warns that gain, honor, and fame can become serious obstacles.
+- **Snp 4.8** shows debate entangled with praise, defeat, status, and conceit.
+- **MN 95** distinguishes honest confidence from claiming a certainty one has not yet directly known.
+- Stream-entry material on verified confidence shows confidence grounded in seeing and stable orientation rather than fluctuating public approval.
+
+### CROSS_TEXT SYNTHESIS
+Receiving praise != craving praise.
+
+A guarded model is:
+social reward -> pleasant feeling -> craving for continuation -> appropriation of reputation -> defensive maintenance of role/image.
+
+The exact chain is **CROSS_TEXT SYNTHESIS**.
+
+A129 does not define “wanting praise” as bhava. A safer application is:
+- taṇhā may target praise/status;
+- upādāna may appropriate role/image as “mine”;
+- sustained clinging can participate in identity-becoming.
+
+### CONFIDENCE GUARDRAIL
+Saddhā is not simply modern “self-confidence,” and aveccappasāda is not social approval.
+
+A stable confidence can admit uncertainty, accept correction, and continue wholesome action without applause.
+
+### MILINDAPANHA
+**Consulted:** YES. Chariot/designation and anti-pride material are later/paracanonical support only.
+
+**Claim class:** `TEXT_ATTESTED_SN17_WORLDLY_CONDITIONS_SNP4_8_MN95_VERIFIED_CONFIDENCE_PLUS_CROSS_TEXT_PRAISE_RECOGNITION_TANHA_UPADANA_BHAVA_IDENTITY_DEPENDENCE_SYNTHESIS_WITH_TECHNICAL_GUARDRAILS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Completed checkpoint A130
+
+**Central question:** How does fear of blame, rejection, shame, and loss of belonging shape conduct, and how does the Buddha distinguish wholesome hiri-ottappa from status-anxiety and fear of social punishment?
+
+### TEXT_ATTESTED
+1. Early teachings treat **hiri** and **ottappa** as protective ethical qualities. They support restraint and ethical conduct rather than merely public image.
+2. **MN 61** gives a concrete accountability method: examine bodily, verbal, and mental action before, during, and after; if bodily/verbal action has been harmful, disclose/confess it appropriately and undertake future restraint.
+3. Because this review can operate before anyone else knows, moral restraint cannot be reduced to fear of exposure.
+4. Community confession and discipline show that social accountability can matter, but only when it serves truth, training, and non-harm rather than image preservation.
+
+### CORE DISTINCTION
+- hiri-ottappa: “this is ethically unworthy/harmful; I should not do it.”
+- status anxiety: “if people know, I will lose reputation, belonging, or position.”
+
+These may coincide externally but are not the same motive.
+
+### ACTION SHAME != SELF-CONDEMNATION
+MN 61 is corrective:
+recognize harm -> disclose/confess where appropriate -> restrain in future -> continue training.
+
+A130 therefore distinguishes:
+- healthy moral shame directed at conduct;
+- identity-condemnation: “I am permanently worthless.”
+
+The second is **CROSS_TEXT SYNTHESIS** as an identity-making problem, not an early technical definition of hiri.
+
+### GROUP PRESSURE
+Conformity and nonconformity are not intrinsically wholesome.
+
+The test returns to truth, harm, intention, consequence, and whether greed/hatred/delusion are strengthened.
+
+### MILINDAPANHA
+**Consulted:** YES. Later material distinguishing moral fault, discipline, restraint, and correction supports accountability without hatred or humiliation.
+
+**Claim class:** `TEXT_ATTESTED_HIRI_OTTAPPA_MN61_ACCOUNTABILITY_CONFESSION_RESTRAINT_PLUS_CROSS_TEXT_CONSCIENCE_VS_STATUS_ANXIETY_GROUP_PRESSURE_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Completed checkpoint A131
+
+**Central question:** When is remorse useful, when does it become the hindrance `uddhacca-kukkucca`, and how does one move from acknowledged wrongdoing to restraint without endless self-punishment?
+
+### TEXT_ATTESTED
+1. **MN 61** supplies the corrective pattern: examine conduct; when harmful bodily/verbal action has occurred, acknowledge/disclose it appropriately and train in restraint for the future. The emphasis is repair and future training, not indefinite self-torment.
+2. **MN 10 / DN 22** classify `uddhacca-kukkucca`—restlessness and remorse/worry—as one of the five hindrances. The practitioner knows when it is present, knows how it arises, how it is abandoned, and how its future arising is prevented.
+3. **SN 46.37** calls the five hindrances corruptions of the heart that weaken wisdom. Thus remorse can cease to be morally useful once it becomes an ongoing obstruction to clarity.
+4. **AN 1.14 / 1.19** links an unsettled mind with the arising/growth of restlessness-remorse and a settled mind with its prevention/abandoning.
+5. **AN 11.2** gives the positive trajectory: fulfilled ethical conduct naturally supports non-remorse; non-remorse supports joy, rapture, tranquility, bliss, samādhi, and further liberating knowledge.
+
+### REMORSE HAS A TASK
+A131 distinguishes two phases.
+
+**Corrective remorse:**
+- recognizes a specific wrong;
+- does not excuse it;
+- motivates confession/repair where appropriate;
+- produces restraint and learning.
+
+**Hindering remorse:**
+- keeps replaying what is already acknowledged;
+- adds no new correction;
+- scatters and agitates the mind;
+- blocks joy, tranquility, and concentration.
+
+The exact two-phase framework is **CROSS_TEXT SYNTHESIS**.
+
+### “NO REMORSE” DOES NOT MEAN MORAL NUMBNESS
+AN 11.2 does not praise shamelessness.
+
+Its sequence begins with fulfilled ethical conduct.
+
+So:
+ethical conduct -> non-remorse
+does not mean
+ignore wrongdoing -> feel fine.
+
+The path to non-remorse is correction and clean conduct, not denial.
+
+### REPAIR != SELF-PUNISHMENT
+A131’s working distinction:
+
+**responsibility asks:** “What was harmful, what must be admitted, repaired, and restrained?”
+
+**self-punishment asks:** “How long must I keep hurting myself to prove I am sorry?”
+
+The second question is not an early-text formula and is used here only as a modern diagnostic.
+
+Once the ethical task has been honestly completed, repeatedly manufacturing pain is not itself proof of virtue.
+
+### WHY ENDLESS REMORSE CAN BECOME SELF-CLINGING
+A131 connects with A126–A130:
+
+“I did wrong” can become
+“I am the bad person”
+-> repeated self-story
+-> agitation
+-> identity defense or collapse.
+
+This is **CROSS_TEXT SYNTHESIS**. It must not erase responsibility.
+
+The corrective move is not “nothing happened,” but:
+**the action was wrong; it has been acknowledged; now train so its causes are not repeated.**
+
+### PRACTICAL PROCEDURE
+1. Identify the exact action, not a global self-label.
+2. Determine actual harm.
+3. Admit it without minimizing.
+4. Confess/disclose or repair where appropriate.
+5. Establish concrete restraint for the future.
+6. Learn the conditions that produced the action.
+7. When no further repair is presently possible, stop feeding repetitive self-attack.
+8. Return to ethical conduct, mindfulness, and a settled mind.
+
+Steps 6–8 are **CROSS_TEXT SYNTHESIS** built on MN 61, hindrance material, and the non-remorse sequence.
+
+### MILINDAPANHA — MANDATORY
+**Consulted:** YES.
+
+Milindapanha Book 3 material says that a wrongdoer may feel remorse and acknowledge the wrongdoing, while good conduct supports non-remorse and the sequence toward joy and collectedness. Other Milindapanha dilemmas also treat remorse as something that can obstruct comprehension.
+
+**Role:** later/paracanonical confirmation of the distinction between acknowledgment of wrong and remaining trapped in remorse.
+
+**Guardrail:** Milindapanha does not replace MN 61, MN 10/DN 22, SN 46.37, or AN 11.2.
+
+### CORRECTIONS PRESERVED
+- hiri/ottappa != kukkucca;
+- acknowledging wrongdoing != endless remorse;
+- non-remorse != denial or shamelessness;
+- confession != complete repair in every case;
+- self-forgiveness language is modern and must not replace early accountability categories;
+- calming the mind after repair != declaring the wrong harmless.
+
+### Claim class
+`TEXT_ATTESTED_MN61_MN10_DN22_SN46_37_AN1_14_19_AN11_2_REMORSE_HINDRANCE_NONREMORSE_SEQUENCE_PLUS_CROSS_TEXT_REPAIR_WITHOUT_SELF_PUNISHMENT_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT`
+
+## Next checkpoint — PHASE 4 A132
+
+**How does the Buddha understand fear itself: when is fear prudent, when is it generated by attachment and self-protection, and how does fear change when “mine / I / self” is weakened?**
+
+Required lanes:
+- bhaya as danger-awareness vs panic;
+- fear linked to loss, self-protection, and attachment;
+- SN 12.41 and relevant fearlessness material;
+- relation to hiri-ottappa without collapsing ottappa into fear;
+- non-self and fear guardrails;
 - mandatory Milindapanha consultation;
 - preserve TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / OPEN-CHECK boundaries.
 
