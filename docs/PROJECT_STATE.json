@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A121_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A122",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A122_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A123",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -678,5 +678,7 @@
   "owner_learning_track_buddhist_thought_a120_claim_class": "TEXT_ATTESTED_SN22_86_SN44_1_SN44_8_MN72_POSTMORTEM_TETRALEMMA_FRAME_FAILURE_PLUS_MN63_SOTERIOLOGICAL_RELEVANCE_WITH_CROSS_TEXT_QUESTION_DIAGNOSIS_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT",
   "owner_learning_track_buddhist_thought_a120_milindapanha": "CONSULTED_POINTING_OUT_BUDDHA_EXTINGUISHED_FLAME_AND_QUESTION_HANDLING_AS_LATER_SUPPORT_NO_POSTMORTEM_ONTOLOGY_OVERRIDE",
   "owner_learning_track_buddhist_thought_a121_claim_class": "TEXT_ATTESTED_AN4_42_FOUR_ANSWER_MODES_PLUS_MN58_ANALYTICAL_SPEECH_AND_A120_SET_ASIDE_WITH_CROSS_TEXT_QUESTION_CLASSIFICATION_METHOD_AND_LATER_PARACANONICAL_SUPPORT",
-  "owner_learning_track_buddhist_thought_a121_milindapanha": "CONSULTED_QUESTION_HANDLING_DIALOGICAL_METHOD_AS_LATER_SUPPORT_NO_OVERRIDE_OF_AN4_42"
+  "owner_learning_track_buddhist_thought_a121_milindapanha": "CONSULTED_QUESTION_HANDLING_DIALOGICAL_METHOD_AS_LATER_SUPPORT_NO_OVERRIDE_OF_AN4_42",
+  "owner_learning_track_buddhist_thought_a122_claim_class": "TEXT_ATTESTED_MN58_TRUTH_BENEFIT_TIMING_COMPASSION_PLUS_RIGHT_SPEECH_SOCIAL_FUNCTION_WITH_CROSS_TEXT_INTENTION_CONSEQUENCE_SYNTHESIS_AND_LATER_PARACANONICAL_SUPPORT",
+  "owner_learning_track_buddhist_thought_a122_milindapanha": "CONSULTED_PHARUSAVACA_ABHAVA_SEVERE_EXPRESSION_VS_DEFILED_HARSH_SPEECH_AS_LATER_SUPPORT_NO_OVERRIDE_OF_MN58"
 }
