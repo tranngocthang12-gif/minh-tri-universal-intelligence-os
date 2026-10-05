@@ -490,8 +490,8 @@
   "chat_memory_is_canonical_project_memory": false,
   "owner_learning_track_buddhist_thought": "ACTIVE",
   "owner_learning_track_buddhist_thought_checkpoint": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md",
-  "owner_learning_track_buddhist_thought_status": "PHASE_4_A108_COMPLETED",
-  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A109",
+  "owner_learning_track_buddhist_thought_status": "PHASE_4_A109_COMPLETED",
+  "owner_learning_track_buddhist_thought_next_checkpoint": "PHASE_4_A110",
   "owner_learning_track_buddhist_thought_open_audits": [
     "SN12",
     "SN22",
@@ -652,5 +652,7 @@
   "owner_learning_track_buddhist_thought_a107_claim_class": "TEXT_ATTESTED_PRACTICE_EVALUATION_BY_CONSEQUENCES_BEFORE_DURING_AFTER_ACTION_REDUCED_UNWHOLESOME_STATES_AND_TARGETED_ASAVA_REMOVAL_PLUS_CROSS_TEXT_OUTCOME_GUARDRAILS",
   "owner_learning_track_buddhist_thought_a107_milindapanha": "CONSULTED_WISDOM_CUTS_DEFILEMENTS_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_AN3_66_MN61_MN19_MN2",
   "owner_learning_track_buddhist_thought_a108_claim_class": "TEXT_ATTESTED_RESTRAINT_AND_CALM_DO_NOT_EQUAL_ERADICATION_LATENT_TENDENCY_AND_ASAVA_DESTRUCTION_GUARDRAIL_PLUS_CROSS_TEXT_UPROOTING_SYNTHESIS",
-  "owner_learning_track_buddhist_thought_a108_milindapanha": "CONSULTED_WISDOM_CUTS_DEFILEMENTS_AND_ROOT_REMOVAL_ANALOGIES_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN64_SN36_MN2"
+  "owner_learning_track_buddhist_thought_a108_milindapanha": "CONSULTED_WISDOM_CUTS_DEFILEMENTS_AND_ROOT_REMOVAL_ANALOGIES_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN64_SN36_MN2",
+  "owner_learning_track_buddhist_thought_a109_claim_class": "TEXT_ATTESTED_ANUSAYA_AS_UNDERLYING_TENDENCY_DISTINCT_FROM_MANIFEST_DEFILEMENT_WITH_FEELING_LINKS_AND_MODERN_UNCONSCIOUS_GUARDRAIL",
+  "owner_learning_track_buddhist_thought_a109_milindapanha": "CONSULTED_WISDOM_SEVERS_DEFILEMENTS_AS_LATER_PARACANONICAL_SUPPORT_NO_OVERRIDE_OF_MN64_MN44_SN36"
 }
