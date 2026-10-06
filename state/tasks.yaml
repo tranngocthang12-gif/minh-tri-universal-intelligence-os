@@ -202,21 +202,21 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168",
       "title": "Inventory and selectively salvage high-value early-Buddhist source/audit artifacts from legacy PR 168",
-      "status": "IN_PROGRESS",
+      "status": "REPORTED",
       "scope": [
         "PR#168",
         "docs/learning/",
         "knowledge/buddhist/",
         "docs/vnext/history/PR168_CONTROLLED_SALVAGE_KICKOFF_20261006.md"
       ],
-      "branch": "owner/architecture-vnext-pr168-wave4-20261006",
-      "base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+      "branch": "owner/architecture-vnext-pr168-final-disposition-20261006",
+      "base_sha": "d87ffa8ab0dea6c538e73686b8a69b047708e66a",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_INVENTORY_20261006.md"
+      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE3B",
@@ -241,7 +241,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE4",
       "title": "Review PR168 parallel-text, translation, lexical, and Milindapanha artifacts for selective salvage",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "PR#168:EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md",
         "PR#168:EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
@@ -256,22 +256,41 @@
         "ARCH-VNEXT-SALVAGE-PR168-WAVE3B"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_WAVE4_20261006.md"
+      "result_ref": "PR#272"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION",
       "title": "Finalize disposition of remaining PR168 synthesis, program, memory/meta, and deep-dive files",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "PR#168:remaining-unpreserved-files",
         "docs/vnext/history/",
         "state/tasks.yaml"
       ],
-      "branch": null,
-      "base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+      "branch": "owner/architecture-vnext-pr168-final-disposition-20261006",
+      "base_sha": "d87ffa8ab0dea6c538e73686b8a69b047708e66a",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-SALVAGE-PR168-WAVE4"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR169",
+      "title": "Controlled salvage of legacy Buddhist learning bundle PR169",
+      "status": "READY",
+      "scope": [
+        "PR#169",
+        "docs/learning/",
+        "knowledge/buddhist/",
+        "docs/vnext/history/"
+      ],
+      "branch": null,
+      "base_sha": "d87ffa8ab0dea6c538e73686b8a69b047708e66a",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION"
       ],
       "supersedes": [],
       "result_ref": null
