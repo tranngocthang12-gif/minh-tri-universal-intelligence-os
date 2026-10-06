@@ -1,5 +1,7 @@
 # Kiến trúc MINH TRÍ hiện hành — 2026-10-03
 
+**HISTORICAL / SUPERSEDED FOR MIGRATED CURRENT AUTHORITY.** Start from `state/bootstrap.json`; do not use this file as the current architecture authority.
+
 **Status:** CURRENT ARCHITECTURE RECORD / FOUNDATION CORE BUILT / RUNTIME ASSURANCE INCOMPLETE  
 **Canonical branch:** `main`  
 **Authority:** Owner → stable law → PROJECT_STATE → current architecture → approved GitHub records → domain/history → chat.
