@@ -19,22 +19,24 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("law_precedence", current["authority_scope"]["mirrors_boot_root_pointers"])
         self.assertNotIn("law_precedence", current["authority_scope"]["this_file_is_authoritative_for"])
 
-    def test_master_blueprint_is_active_frontier(self):
+    def test_master_blueprint_is_accepted_and_recovery_v6_is_active_frontier(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
-        self.assertEqual(current["active_task_id"], "ARCH-MASTER-BLUEPRINT-V1")
-        t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
-        self.assertEqual(t["status"], "IN_PROGRESS")
+        self.assertEqual(current["active_task_id"], "ARCH-RECOVERY-PROOF-V6")
+        blueprint=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
+        recovery=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-RECOVERY-PROOF-V6")
+        self.assertEqual(blueprint["status"], "DONE")
+        self.assertEqual(recovery["status"], "IN_PROGRESS")
 
     def test_foundation_freeze_is_held(self):
         tasks=load("state/tasks.yaml")
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
         self.assertEqual(t["status"], "BLOCKED")
-        self.assertEqual(t["blocker"], "MASTER_BLUEPRINT_V1_ACCEPTANCE_AND_RECOVERY_PROOF_REQUIRED")
+        self.assertEqual(t["blocker"], "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED")
         closure=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-CLOSURE-V1")
         self.assertEqual(closure["status"], "BLOCKED")
         self.assertIn("Master Blueprint v1", closure["next_action"])
-        self.assertEqual(closure["handoff_ref"], "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md")
+        self.assertEqual(closure["handoff_ref"], "docs/vnext/handoff/RECOVERY_PROOF_V6.md")
 
     def test_role_separation_and_lifecycle_are_durable(self):
         bp=(ROOT/"docs/vnext/MASTER_BLUEPRINT_V1_20261006.md").read_text(encoding="utf-8")
