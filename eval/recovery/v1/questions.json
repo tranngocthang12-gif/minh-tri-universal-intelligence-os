@@ -1,0 +1,31 @@
+{
+  "schema": "minhtri-zero-chat-recovery-questions/v1",
+  "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+  "authoring_seat_must_not_self_grade": true,
+  "questions": [
+    {
+      "id": "Q1",
+      "prompt": "What is the current foundational continuity/handoff law and where is it routed?"
+    },
+    {
+      "id": "Q2",
+      "prompt": "What is the active_task_id and its current status?"
+    },
+    {
+      "id": "Q3",
+      "prompt": "What work is canonical main versus unmerged candidate work?"
+    },
+    {
+      "id": "Q4",
+      "prompt": "List DONE and NOT DONE items relevant to the active task."
+    },
+    {
+      "id": "Q5",
+      "prompt": "What is the exact NEXT ACTION and required gate before architecture continues?"
+    },
+    {
+      "id": "Q6",
+      "prompt": "What capability must NOT be claimed as proven yet?"
+    }
+  ]
+}
