@@ -609,7 +609,9 @@
         "docs/vnext/MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1_20261006.md",
         "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
         "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json",
-        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md"
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_GROK_REVIEW_R1_20261007.json",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_GROK_R1_DISPOSITION_20261007.json"
       ],
       "branch": "owner/master-blueprint-v1-20261006",
       "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
@@ -618,10 +620,10 @@
       "supersedes": [
         "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted"
       ],
-      "result_ref": "PR#300 / Supervisor PASS_TO_INDEPENDENT_REVIEW / MASTER_BLUEPRINT_RED_TEAM_PACKET_V1 frozen",
+      "result_ref": "PR#300 / Supervisor PASS_TO_INDEPENDENT_REVIEW / Grok R1 MATERIAL_DEFECTS_FOUND with 3 HIGH findings accepted for repair / repaired packet NOT YET FROZEN",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "After PR #300 exact current head passes required CI, run the identical Master Blueprint Red-Team Packet v1 independently in Claude and Grok, bind both reports to the same target commit and packet digest, then disposition and repair all material findings before asking Owner for Master Blueprint acceptance.",
-      "blocker": "PR300_CI_AND_TWO_IDENTICAL_INDEPENDENT_CRITIC_REVIEWS_REQUIRED"
+      "next_action": "Repair Grok R1 HIGH findings, bind the review packet and manifest to one exact repaired candidate SHA and digest, require CI PASS on the packet-bearing PR head, then run that identical packet independently in Claude and Grok.",
+      "blocker": "GROK_R1_REPAIR_REBIND_CI_AND_TWO_REREVIEWS_REQUIRED"
     }
   ]
 }
