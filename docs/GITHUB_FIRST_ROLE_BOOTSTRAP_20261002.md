@@ -1,5 +1,15 @@
 # GITHUB FIRST + ROLE BOOTSTRAP — Owner Decision — 2026-10-02
 
+## VNEXT SINGLE BOOT ROOT — CURRENT MIGRATED ROUTE
+
+For migrated Architecture vNext scope, the canonical boot entrypoint is `state/bootstrap.json`.
+
+Current recovery route:
+`state/bootstrap.json -> state/current.yaml -> state/tasks.yaml -> current law/bootstrap pointers -> current architecture -> active task handoff -> task/domain sources`.
+
+Older sections in this file that begin from PROJECT_STATE remain historical/unmigrated compatibility guidance only and cannot override migrated keys in `state/current.yaml` or `state/tasks.yaml`.
+
+
 **Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE + CURRENT ARCHITECTURE  
 **Base main when recorded:** `620875e68c97ccc1734aff8a8ab34af0bbe82750`  
 **Scope:** MINH TRÍ project governance, architecture continuity, learning, critique, synchronization and handoff.
