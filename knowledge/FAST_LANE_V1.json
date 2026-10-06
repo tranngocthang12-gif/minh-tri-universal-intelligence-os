@@ -1,0 +1,35 @@
+{
+  "schema": "minhtri-knowledge-fast-lane/v1",
+  "purpose": "Lightweight protected path for ordinary learning updates without creating a second authority or merge path.",
+  "knowledge_schema_ref": "knowledge/schema/KNOWLEDGE_SCHEMA_V1.md",
+  "semantic_guard_ref": "src/minhtri/semantic_guard.py",
+  "validator_ref": "src/minhtri/knowledge_fast_lane.py",
+  "domain_rule_refs": {
+    "buddhist_thought": [
+      "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+      "knowledge/schema/KNOWLEDGE_SCHEMA_V1.md"
+    ],
+    "economics": [
+      "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+      "knowledge/schema/KNOWLEDGE_SCHEMA_V1.md"
+    ]
+  },
+  "required_disciplines": [
+    "provenance",
+    "status",
+    "supersession",
+    "semantic_stale_check",
+    "domain_rules",
+    "protected_main_review"
+  ],
+  "forbidden": [
+    "self_verified_promotion",
+    "autonomous_merge",
+    "second_canonical_authority",
+    "workflow_engine_requirement"
+  ],
+  "review": {
+    "protected_main_review_required": true,
+    "autonomous_merge": false
+  }
+}
