@@ -22,7 +22,7 @@ class SingleBootRootV1Tests(unittest.TestCase):
 
     def test_required_boot_targets_exist(self):
         boot = load("state/bootstrap.json")
-        for key in ["current_state", "task_registry", "law_index", "role_bootstrap", "recovery_entrypoint"]:
+        for key in ["current_state", "task_registry", "law_precedence", "law_index_catalog", "role_bootstrap", "recovery_entrypoint"]:
             self.assertTrue((ROOT / boot[key]).is_file(), key)
 
     def test_dynamic_current_pointers_exist(self):
@@ -30,6 +30,7 @@ class SingleBootRootV1Tests(unittest.TestCase):
         current = load("state/current.yaml")
         self.assertTrue((ROOT / current["current_architecture"]).is_file())
         self.assertTrue((ROOT / current["law_precedence"]).is_file())
+        self.assertEqual(boot["law_precedence"], current["law_precedence"])
         self.assertEqual(
             boot["resolve_active_task_from"],
             "state/current.yaml:active_task_id",

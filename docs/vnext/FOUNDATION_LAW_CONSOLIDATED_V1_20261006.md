@@ -8,14 +8,16 @@ Provide one compact normative route after Foundation Closure without rewriting o
 
 ## Precedence
 
-1. Current explicit Owner instruction / constitution-level decision.
+1. Durable constitution-level Owner decision recorded on protected main.
 2. Stable Owner law.
 3. Policy.
 4. Domain rule.
 5. ADR / bounded operational decision.
 6. Current state and task registry as operational truth, not law.
 7. Historical/candidate records as evidence/provenance only.
-8. Chat memory is non-canonical.
+8. Chat memory and chat-only instructions are non-canonical for future project-wide precedence.
+
+A current-chat Owner instruction controls the present seat operationally, but it does not durably supersede Stable Law for future seats until the material decision is recorded on protected main through the protected governance path.
 
 Same-level conflict requires explicit supersession or a bounded conflict-resolution task. Missing/conflicting authority fails closed for the affected mutation.
 

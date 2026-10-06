@@ -49,7 +49,7 @@
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
       "title": "Review and salvage unique knowledge or Owner intent from the 21 pre-vNext open PRs before closure",
-      "status": "IN_PROGRESS",
+      "status": "READY",
       "scope": [
         "pull_requests:167,168,169,170,177,193,215,216,218,226,227,228,230,232,233,234,235,237,249,250,251"
       ],
@@ -62,8 +62,8 @@
       "supersedes": [],
       "result_ref": "docs/vnext/history/KNOWLEDGE_PR_SALVAGE_WAVE2_INVENTORY_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Resume controlled salvage from PR169 only after Continuity & Handoff Core v1 static gate is canonical.",
-      "blocker": "PAUSED_BEHIND_OWNER_APPROVED_CONTINUITY_HANDOFF_CORE_V1"
+      "next_action": "Legacy salvage is non-blocking knowledge/history debt after Continuity Core v1 completion; resume only when valuable.",
+      "blocker": null
     },
     {
       "task_id": "RUNTIME-ASSURANCE-PC",
@@ -132,7 +132,7 @@
     {
       "task_id": "ARCH-VNEXT-PHASE4-GRADED-RUN",
       "title": "Run retrieval baseline in a different fresh seat using canonical Phase 4 packet",
-      "status": "BLOCKED",
+      "status": "STALE",
       "scope": [
         "eval/retrieval/v1/packets/ARCH-VNEXT-PHASE4-RETRIEVAL-BASELINE-001.json",
         "eval/retrieval/v1/results/"
@@ -146,8 +146,9 @@
       "supersedes": [],
       "result_ref": "BLOCKED_NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06",
       "handoff_ref": "docs/vnext/ARCHITECTURE_VNEXT_PHASE4B_FRESH_SEAT_HANDOFF_20261006.md",
-      "next_action": "Run the sealed retrieval packet in a genuinely independent fresh seat when an eligible external/fresh seat is available.",
-      "blocker": "NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06"
+      "next_action": "Preserve as historical evaluation debt; Retrieval/Application Proof v1 supersedes this task for foundation closure.",
+      "blocker": null,
+      "superseded_by": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
@@ -342,8 +343,8 @@
       "supersedes": [],
       "result_ref": null,
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Wait until Continuity & Handoff Core v1 static gate is canonical, then inspect PR169 changed files and create bounded salvage inventory.",
-      "blocker": "PAUSED_BEHIND_OWNER_APPROVED_CONTINUITY_HANDOFF_CORE_V1"
+      "next_action": "PR169 salvage is optional bounded knowledge/history work and does not block foundation freeze.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
@@ -389,8 +390,8 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Complete Law Consolidation v1, then execute Owner-approved Foundation Acceptance & Freeze v1 red-team gate.",
-      "blocker": "DEPENDENCY_ARCH_LAW_CONSOLIDATION_V1_NOT_DONE"
+      "next_action": "Complete Claude/Grok final red-team gate; if material defects are resolved and both receipts are durable, close Foundation Closure v1 and freeze the foundation.",
+      "blocker": "DEPENDENCY_ARCH_FOUNDATION_ACCEPTANCE_FREEZE_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
@@ -539,7 +540,7 @@
     {
       "task_id": "ARCH-LAW-CONSOLIDATION-V1",
       "title": "Consolidate foundation law routing without destructive rewrite",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "docs/LAW_INDEX_20261003.md",
         "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
@@ -554,15 +555,15 @@
         "ARCH-RETRIEVAL-APPLICATION-PROOF-V1"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md / PR_PENDING",
+      "result_ref": "PR#293 / docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
       "handoff_ref": "docs/vnext/handoff/LAW_CONSOLIDATION_FREEZE_PREP_V1.md",
-      "next_action": "Run CI and merge the consolidated law router plus freeze-preparation records; then start Claude/Grok final red-team.",
-      "blocker": "CI_AND_MERGE_REQUIRED"
+      "next_action": "Law Consolidation v1 complete and canonical. Source-law history preserved.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
       "title": "Accept and freeze the foundation after final independent red-team",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "docs/vnext/FOUNDATION_BASELINE_V1.json",
         "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
@@ -570,19 +571,20 @@
         "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md",
         "docs/vnext/red_team/",
         "state/current.yaml",
-        "state/tasks.yaml"
+        "state/tasks.yaml",
+        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md"
       ],
-      "branch": null,
-      "base_sha": "95e3e61cbc89251c132f9202581070b41686c731",
+      "branch": "owner/start-foundation-freeze-red-team-20261006",
+      "base_sha": "28476960fada05e390f04318dcef8135a34891ec",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "PENDING_CLAUDE_GROK_RED_TEAM",
-      "handoff_ref": "docs/vnext/handoff/LAW_CONSOLIDATION_FREEZE_PREP_V1.md",
-      "next_action": "After Law Consolidation merges, run the same frozen packet through independent Claude and Grok read-only critics; resolve material defects, then perform final freeze transition.",
-      "blocker": "WAITING_FOR_LAW_CONSOLIDATION_AND_TWO_RED_TEAM_RECEIPTS"
+      "result_ref": "docs/vnext/FOUNDATION_BASELINE_V1.json / docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md / PENDING_TWO_RED_TEAM_RECEIPTS",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "next_action": "Run the exact same frozen red-team packet independently in Claude and Grok, preserve both responses, resolve any material defects, then perform final freeze transition.",
+      "blocker": "TWO_INDEPENDENT_RED_TEAM_RECEIPTS_REQUIRED"
     }
   ]
 }

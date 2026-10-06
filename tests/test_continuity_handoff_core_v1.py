@@ -38,7 +38,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
 
     def test_recovery_entrypoint_is_single_bounded_route(self):
         text = (ROOT / "docs" / "vnext" / "continuity" / "RECOVERY_ENTRYPOINT_V1.md").read_text(encoding="utf-8")
-        for token in ["PROJECT_STATE.json", "LAW_INDEX", "state/current.yaml", "state/tasks.yaml", "active_task_id", "handoff_ref", "next_action"]:
+        for token in ["PROJECT_STATE.json", "law_index_catalog", "state/current.yaml", "state/tasks.yaml", "active_task_id", "handoff_ref", "next_action"]:
             self.assertIn(token, text)
         self.assertNotIn("Local Brain is canonical", text)
 
@@ -69,8 +69,8 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
     def test_blocked_architecture_task_has_continuation_metadata(self):
         registry = self.load_json("state/tasks.yaml")
         task = next(t for t in registry["tasks"] if t["task_id"] == "ARCH-VNEXT-PHASE4-GRADED-RUN")
-        self.assertEqual(task["status"], "BLOCKED")
-        self.assertTrue(task.get("blocker"))
+        self.assertEqual(task["status"], "STALE")
+        self.assertEqual(task.get("superseded_by"), "ARCH-RETRIEVAL-APPLICATION-PROOF-V1")
         self.assertTrue(task.get("handoff_ref"))
         self.assertTrue(task.get("next_action"))
 

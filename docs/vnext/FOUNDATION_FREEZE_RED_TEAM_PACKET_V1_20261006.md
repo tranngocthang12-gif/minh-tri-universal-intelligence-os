@@ -43,3 +43,9 @@ Final verdict must be exactly one of:
 - MATERIAL_DEFECTS_FOUND
 
 Critics have no merge authority and are not canonical truth. Findings become durable only after project review.
+
+## Receipt contract
+
+Each critic response used for final freeze must be normalized into `docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json` and bind the critic/provider, packet reference, target main SHA, packet content SHA, findings, verdict, and project disposition.
+
+Every CRITICAL or HIGH finding requires a durable disposition and repair reference, or an explicit Owner-approved rejection with reason, before `material_defects_resolved_required` may be satisfied. Final Claude and Grok receipts must bind to the identical repaired packet version.

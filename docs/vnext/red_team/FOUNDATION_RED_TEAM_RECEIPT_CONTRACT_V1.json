@@ -1,0 +1,46 @@
+{
+  "schema": "minhtri-foundation-red-team-receipt/v1",
+  "required": [
+    "schema",
+    "critic",
+    "provider",
+    "round",
+    "packet_ref",
+    "packet_target_main_sha",
+    "packet_content_sha",
+    "verdict",
+    "findings",
+    "project_disposition"
+  ],
+  "verdict_enum": [
+    "NO_MATERIAL_DEFECT_FOUND",
+    "MATERIAL_DEFECTS_FOUND"
+  ],
+  "finding_required": [
+    "finding_id",
+    "severity",
+    "evidence_ref",
+    "defect",
+    "consequence",
+    "smallest_repair"
+  ],
+  "severity_enum": [
+    "CRITICAL",
+    "HIGH",
+    "MEDIUM",
+    "LOW"
+  ],
+  "project_disposition_required": [
+    "finding_id",
+    "disposition",
+    "reason",
+    "repair_ref"
+  ],
+  "disposition_enum": [
+    "ACCEPT",
+    "ACCEPT_AS_DEBT",
+    "REJECT_WITH_REASON",
+    "RESOLVED"
+  ],
+  "freeze_rule": "Every CRITICAL or HIGH finding must have durable project disposition and repair_ref or explicit Owner-approved rejection before material_defects_resolved_required may be true. Claude and Grok final receipts must bind to the identical packet_ref, packet_target_main_sha, and packet_content_sha."
+}

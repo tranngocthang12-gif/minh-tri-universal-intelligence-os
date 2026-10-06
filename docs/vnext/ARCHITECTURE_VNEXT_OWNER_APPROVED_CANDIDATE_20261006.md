@@ -37,50 +37,11 @@ These are mechanism-free. They must remain meaningful even if Git, CI, YAML, or 
 
 ## 3. Law hierarchy and precedence
 
-Precedence:
+Normative precedence is owned by `docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md`. This architecture does not duplicate the ladder.
 
-`Constitution > Stable Law > Policy > Domain Rule > ADR > Current State`
+Domain-specific evidence rules are owned by their domain law sources. For Buddhist study, the canonical source hierarchy and Milindapañha rule remain in `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`.
 
-Historical evidence does not win conflicts; it records what happened.
-
-Rules:
-- higher level wins;
-- same level: a later explicit supersession wins;
-- otherwise the conflict becomes a task in the canonical task registry;
-- domain rules cannot bind unrelated domains;
-- current state is never law;
-- critic output is evidence, not law;
-- generated views never outrank their canonical source.
-
-### Stable Law
-Stable Law owns:
-- write/change path;
-- schema/version compatibility;
-- supersession rules;
-- seat/task/stale-writer checks;
-- generic evidence classes and statuses;
-- secret-handling boundaries;
-- non-goal enforcement;
-- continuity rules.
-
-### Policy
-Policy owns tunable choices:
-- learning priority;
-- critic thresholds;
-- lease TTL/cadence;
-- review cadence;
-- any future delegated-merge scope.
-
-### Domain Rule
-Each domain owns its evidence discipline.
-
-For Buddhist thought:
-- early discourses are the primary attestation axis;
-- Milindapañha is mandatory continuing support and does not silently override early-discourse evidence;
-- multiple translations are compared when material;
-- Pāli is checked when lexical/morphological detail can change the conclusion;
-- unresolved uncertainty remains explicit;
-- modern science is not the judging framework unless the Owner explicitly asks for comparison.
+Architecture may point to law but does not restate or override it.
 
 ## 4. Nine core components
 
@@ -172,7 +133,7 @@ No same-session self-written quiz is sufficient proof of memory.
 Every material seat is replaceable.
 
 Boot target:
-`recovery page -> current state -> task registry -> law index -> domain working set -> task handoff if applicable`
+`state/bootstrap.json -> current state -> task registry -> authoritative law precedence -> current architecture -> active task handoff -> domain working set as needed`
 
 Required properties:
 - fresh read;
