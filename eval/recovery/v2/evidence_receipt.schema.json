@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-recovery-evidence-receipt/v1",
+  "title": "MINH TRI Recovery Evidence Receipt v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "challenge_id",
+    "challenge_nonce",
+    "response_ref",
+    "response_sha256_canonical_json",
+    "scorer_ref",
+    "scorer_version",
+    "deterministic_score",
+    "independence_provenance",
+    "main_sha",
+    "completion_eligible"
+  ],
+  "properties": {
+    "schema": {"const": "minhtri-recovery-evidence-receipt/v1"},
+    "challenge_id": {"type": "string", "minLength": 1},
+    "challenge_nonce": {"type": "string", "minLength": 1},
+    "response_ref": {"type": "string", "minLength": 1},
+    "response_sha256_canonical_json": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scorer_ref": {"type": "string", "minLength": 1},
+    "scorer_version": {"type": "string", "minLength": 1},
+    "deterministic_score": {"enum": ["PASS", "FAIL"]},
+    "deterministic_errors": {"type": "array", "items": {"type": "string"}},
+    "independence_provenance": {"enum": ["PRESENT", "ABSENT", "DISPUTED"]},
+    "independence_note": {"type": "string"},
+    "main_sha": {"type": "string", "minLength": 7},
+    "completion_eligible": {"type": "boolean"}
+  }
+}
