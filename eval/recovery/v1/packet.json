@@ -1,0 +1,16 @@
+{
+  "schema": "minhtri-zero-chat-recovery-packet/v1",
+  "purpose": "Independent fresh-seat recovery. This packet intentionally excludes gold answers.",
+  "canonical_inputs": [
+    "docs/PROJECT_STATE.json",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
+  ],
+  "questions_ref": "eval/recovery/v1/questions.json",
+  "gold_excluded": true,
+  "authoring_seat_must_not_self_grade": true
+}
