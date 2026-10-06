@@ -25,7 +25,6 @@
       "phase",
       "durable_continuity_authority",
       "current_architecture",
-      "law_precedence",
       "role_bootstrap",
       "active_workstream",
       "active_task_id",
@@ -34,13 +33,17 @@
       "automatic_self_critique_runtime",
       "meta_learning_runtime",
       "pc_local_brain_role",
-      "owner_learning_priority_order",
-      "boot_root",
-      "task_registry",
-      "master_blueprint"
+      "owner_learning_priority_order"
     ],
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
-    "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
+    "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true,
+    "mirrors_boot_root_pointers": [
+      "law_precedence",
+      "master_blueprint",
+      "boot_root",
+      "task_registry"
+    ],
+    "legacy_control_semantics_history_only": true
   },
   "active_task_id": "ARCH-MASTER-BLUEPRINT-V1",
   "boot_root": "state/bootstrap.json",
