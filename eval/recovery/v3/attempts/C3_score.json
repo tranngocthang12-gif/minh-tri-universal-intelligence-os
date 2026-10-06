@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C3",
+  "active_task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+  "errors": [],
+  "reference_normalization": "structured_facts",
+  "prose_keyword_scoring": false
+}
