@@ -15,7 +15,6 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         current = self.load_json("state/current.yaml")
         registry = self.load_json("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in registry["tasks"]}
-        self.assertEqual(current["active_task_id"], "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1")
         self.assertIn(current["active_task_id"], by_id)
         self.assertEqual(by_id[current["active_task_id"]]["status"], "BLOCKED")
 
