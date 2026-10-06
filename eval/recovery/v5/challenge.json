@@ -1,0 +1,30 @@
+{
+  "schema": "minhtri-current-boot-recovery-challenge/v5",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C5",
+  "challenge_nonce": "mtc5-b7cf536ab7614b3993f388855cf61c90",
+  "purpose": "Prospective fresh-seat proof of the repaired current boot path with an exact nested response contract aligned with deterministic scoring.",
+  "start_ref": "state/bootstrap.json",
+  "packet_ref": "eval/recovery/v5/packet.json",
+  "response_schema_ref": "eval/recovery/v5/response.schema.json",
+  "scorer_ref": "tools/score_current_boot_recovery_v5.py",
+  "snapshot_ref": "eval/recovery/v5/historical_snapshot.json",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v5/historical_snapshot.json",
+    "eval/recovery/v5/attempts/",
+    "eval/recovery/v4/historical_snapshot.json",
+    "eval/recovery/v4/attempts/",
+    "eval/recovery/v1/gold.json",
+    "eval/recovery/v2/attempts/",
+    "eval/recovery/v3/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "exact_nested_contract": true,
+    "prose_keywords_not_scored": true
+  }
+}
