@@ -1,5 +1,7 @@
 # MINH TRÍ — FOUNDATION FREEZE RED-TEAM PACKET v1 — 2026-10-06
 
+**STATUS: HELD / HISTORICAL FOR FINAL-FREEZE PURPOSES — DO NOT DISPATCH. Owner Master Blueprint directive requires Blueprint acceptance + Recovery Proof v6 before Foundation Freeze resumes.**
+
 **Target:** proposed Foundation Acceptance & Freeze v1.
 
 Review these canonical inputs only:
