@@ -17,7 +17,7 @@
 - No implementation branch is authoritative after PR #278 merge.
 - This checkpoint branch only updates post-merge status/handoff and must itself merge before becoming canonical.
 
-## DONE
+## DONE BEFORE THIS TASK
 - Foundation continuity/handoff law: DONE.
 - Machine-checkable active_task_id + task continuation metadata: DONE.
 - State–Task–Handoff validator: DONE.
@@ -40,6 +40,7 @@
 
 ## TRUTH BOUNDARY
 - STATIC PASS is not behavioral recovery proof.
+- Genuine zero-chat continuation proof has not yet passed.
 - Same-seat self-grading is not allowed.
 - Core v1 must not be called COMPLETE until independent fresh-seat PASS is durably recorded.
 - Chat memory remains non-canonical.
