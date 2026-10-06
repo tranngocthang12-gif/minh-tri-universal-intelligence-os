@@ -1,0 +1,17 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C2",
+  "challenge_nonce": "mtc2-6f1e2aa7985b4c4eaa52b4cd5d21d22f",
+  "response_ref": "eval/recovery/v2/attempts/C2_response.json",
+  "response_sha256_canonical_json": "ccc708ac0a14a7e27d2c4d82cf67abd47a712d56625ea8429c36b0f15386e744",
+  "scorer_ref": "tools/score_zero_chat_recovery.py@recovery-proof-gate-v2",
+  "scorer_version": "v2-path-normalization-plus-prose-keywords",
+  "deterministic_score": "FAIL",
+  "deterministic_errors": [
+    "Q5 missing required token: grade"
+  ],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports C2 was executed in a separate new chat from the canonical v2 fresh-seat command; response attests separate_zero_chat=true, used_prior_chat_history=false, read_gold=false.",
+  "main_sha": "3fa1b02a70fefed1494d829b1190a18074078a1c",
+  "completion_eligible": false
+}

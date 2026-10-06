@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-zero-chat-recovery-response/v3",
+  "title": "MINH TRI Zero-Chat Recovery Response v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "challenge_id",
+    "challenge_nonce",
+    "attestations",
+    "recovered_facts",
+    "evidence_refs",
+    "answers"
+  ],
+  "properties": {
+    "schema": {"const": "minhtri-zero-chat-recovery-response/v3"},
+    "challenge_id": {"type": "string", "minLength": 1},
+    "challenge_nonce": {"type": "string", "minLength": 1},
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["separate_zero_chat", "used_prior_chat_history", "read_gold"],
+      "properties": {
+        "separate_zero_chat": {"const": true},
+        "used_prior_chat_history": {"const": false},
+        "read_gold": {"const": false}
+      }
+    },
+    "recovered_facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "foundation_law",
+        "active_task",
+        "canonicality",
+        "capability_truth",
+        "next_gate"
+      ],
+      "properties": {
+        "foundation_law": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_ref", "routed_by_ref"],
+          "properties": {
+            "source_ref": {"type": "string", "minLength": 1},
+            "routed_by_ref": {"type": "string", "minLength": 1}
+          }
+        },
+        "active_task": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["task_id", "status", "handoff_ref", "blocker"],
+          "properties": {
+            "task_id": {"type": "string", "minLength": 1},
+            "status": {"type": "string", "minLength": 1},
+            "handoff_ref": {"type": "string", "minLength": 1},
+            "blocker": {"type": "string", "minLength": 1}
+          }
+        },
+        "canonicality": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "durable_continuity_authority",
+            "unmerged_candidate_authoritative",
+            "chat_memory_canonical"
+          ],
+          "properties": {
+            "durable_continuity_authority": {"type": "string", "minLength": 1},
+            "unmerged_candidate_authoritative": {"type": "boolean"},
+            "chat_memory_canonical": {"type": "boolean"}
+          }
+        },
+        "capability_truth": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "core_v1_complete",
+            "fresh_seat_behavioral_recovery_proven",
+            "autonomous_learning_proven",
+            "automatic_self_critique_proven",
+            "meta_learning_proven"
+          ],
+          "properties": {
+            "core_v1_complete": {"type": "boolean"},
+            "fresh_seat_behavioral_recovery_proven": {"type": "boolean"},
+            "autonomous_learning_proven": {"type": "boolean"},
+            "automatic_self_critique_proven": {"type": "boolean"},
+            "meta_learning_proven": {"type": "boolean"}
+          }
+        },
+        "next_gate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "challenge_ref",
+            "response_schema_ref",
+            "scorer_ref",
+            "receipt_schema_ref",
+            "deterministic_pass_required",
+            "independence_provenance_required",
+            "durable_receipt_required"
+          ],
+          "properties": {
+            "challenge_ref": {"type": "string", "minLength": 1},
+            "response_schema_ref": {"type": "string", "minLength": 1},
+            "scorer_ref": {"type": "string", "minLength": 1},
+            "receipt_schema_ref": {"type": "string", "minLength": 1},
+            "deterministic_pass_required": {"type": "boolean"},
+            "independence_provenance_required": {"type": "boolean"},
+            "durable_receipt_required": {"type": "boolean"}
+          }
+        }
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 6,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+      "properties": {
+        "Q1": {"type": "string", "minLength": 1},
+        "Q2": {"type": "string", "minLength": 1},
+        "Q3": {"type": "string", "minLength": 1},
+        "Q4": {"type": "string", "minLength": 1},
+        "Q5": {"type": "string", "minLength": 1},
+        "Q6": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

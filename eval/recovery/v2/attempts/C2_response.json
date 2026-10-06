@@ -1,0 +1,49 @@
+{
+  "schema": "minhtri-zero-chat-recovery-response/v2",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C2",
+  "challenge_nonce": "mtc2-6f1e2aa7985b4c4eaa52b4cd5d21d22f",
+  "attestations": {
+    "separate_zero_chat": true,
+    "used_prior_chat_history": false,
+    "read_gold": false
+  },
+  "foundation_law": {
+    "source_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md#8-project-wide-continuity--mandatory-handoff-law",
+    "routed_by_ref": "docs/LAW_INDEX_20261003.md"
+  },
+  "active_task": {
+    "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+    "status": "BLOCKED",
+    "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+    "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
+  },
+  "claims": {
+    "core_v1_complete": false,
+    "autonomous_learning_proven": false,
+    "chat_memory_canonical": false
+  },
+  "evidence_refs": [
+    "docs/PROJECT_STATE.json",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md#8-project-wide-continuity--mandatory-handoff-law",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+    "docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
+    "eval/recovery/v2/challenge.json",
+    "eval/recovery/v2/packet.json",
+    "eval/recovery/v1/questions.json",
+    "eval/recovery/v2/response.schema.json",
+    "tools/score_zero_chat_recovery.py"
+  ],
+  "answers": {
+    "Q1": "The foundational continuity/handoff law is the PROJECT-WIDE CONTINUITY & MANDATORY HANDOFF LAW in docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md section 8. It is routed as Stable Law by docs/LAW_INDEX_20261003.md, with docs/PROJECT_STATE.json pointing to that current Law Index.",
+    "Q2": "The active_task_id is ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1 and its current status is BLOCKED. Its blocker is GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED.",
+    "Q3": "Canonical main contains the Continuity & Handoff Core v1 static implementation merged through PR #278, the canonical current state and task registry, the recovery entrypoint and grader, and the v2 recovery challenge/packet/schema now readable from protected main. STATIC PASS is canonical evidence but is not behavioral recovery proof. No unmerged implementation branch is authoritative over main; any unmerged branch or checkpoint is candidate state only. The older handoff text pointing continuation at the v1 challenge is stale relative to the current canonical task registry, whose NEXT ACTION points to the v2 challenge.",
+    "Q4": "DONE: the foundation continuity/handoff law is canonical; machine-checkable active_task_id and continuation metadata exist; the state-task-handoff validator exists; a single recovery entrypoint exists; held-out recovery materials and deterministic grading machinery exist; and PR #278 passed the static CI gate. NOT DONE: the genuine independent zero-chat fresh-seat recovery proof has not passed, Core v1 is not complete, the required immutable recovery evidence/provenance has not yet established the completion gate, and PR169 salvage remains paused behind Core v1.",
+    "Q5": "The exact current NEXT ACTION is: Run eval/recovery/v2/challenge.json in a genuinely independent zero-chat fresh seat; require response v2 with no gold/attempt read; score with tools/score_zero_chat_recovery.py; record immutable evidence receipt; only deterministic PASS plus independence provenance PRESENT may mark Core v1 DONE. Architecture continuation remains gated until both parts of that completion rule pass and the result is durably recorded.",
+    "Q6": "Do not claim Core v1 completion or genuine behavioral fresh-seat recovery as proven yet. Autonomous learning, automatic self-critique, and meta-learning must also not be claimed as proven or active merely because architecture, code, CI, or static recovery machinery exists; chat memory is not canonical."
+  }
+}

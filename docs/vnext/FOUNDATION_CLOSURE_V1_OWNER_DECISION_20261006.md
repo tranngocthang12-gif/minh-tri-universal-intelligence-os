@@ -91,3 +91,18 @@ Approved repair:
 - add immutable evidence receipts;
 - require both deterministic PASS and independence provenance PRESENT before Core v1 can become DONE;
 - after Core v1 closes, continue the already approved Foundation Closure dependency chain without another Owner approval unless a foundation-level decision is encountered.
+
+
+## Recovery Proof Gate v3 FINAL — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT RECOVERY PROOF GATE v3 FINAL — CHẤM STRUCTURED FACTS, KHÔNG CHẤM PROSE KEYWORDS; PASS THÌ ĐÓNG CORE v1 VÀ TIẾP FOUNDATION CLOSURE`
+
+Approved final repair:
+- preserve C1 and C2 as immutable FAIL history;
+- move deterministic PASS/FAIL authority from prose keyword matching to machine-readable recovered facts;
+- keep Q1-Q6 as human-readable explanations only;
+- issue C3 with a fresh nonce;
+- require deterministic PASS + independence provenance PRESENT + durable receipt merged before Core v1 becomes DONE;
+- on PASS, close Continuity & Handoff Core v1 and continue Foundation Closure without another Owner approval unless a foundation-level decision is encountered.

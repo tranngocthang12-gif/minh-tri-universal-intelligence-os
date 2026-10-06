@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 CHALLENGE_V1 = "eval/recovery/v1/challenge.json"
 CHALLENGE_V2 = "eval/recovery/v2/challenge.json"
+CHALLENGE_V3 = "eval/recovery/v3/challenge.json"
 GOLD = "eval/recovery/v1/gold.json"
 CURRENT = "state/current.yaml"
 TASKS = "state/tasks.yaml"
@@ -67,15 +68,144 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
     elif schema == "minhtri-zero-chat-recovery-response/v2":
         challenge = load_json(ROOT / CHALLENGE_V2)
         reference_mode = "path_with_optional_fragment"
+    elif schema == "minhtri-zero-chat-recovery-response/v3":
+        challenge = load_json(ROOT / CHALLENGE_V3)
+        reference_mode = "structured_facts"
     else:
-        challenge = load_json(ROOT / CHALLENGE_V2)
-        reference_mode = "path_with_optional_fragment"
+        challenge = load_json(ROOT / CHALLENGE_V3)
+        reference_mode = "structured_facts"
     gold = load_json(ROOT / GOLD)
     current = load_json(ROOT / CURRENT)
     registry = load_json(ROOT / TASKS)
 
     if not isinstance(response, dict):
         return {"status": "FAIL", "errors": ["response must be a JSON object"]}
+
+    if schema == "minhtri-zero-chat-recovery-response/v3":
+        required_top = {
+            "schema",
+            "challenge_id",
+            "challenge_nonce",
+            "attestations",
+            "recovered_facts",
+            "evidence_refs",
+            "answers",
+        }
+        extra = sorted(set(response) - required_top)
+        missing = sorted(required_top - set(response))
+        if missing:
+            fail(errors, "missing top-level fields: " + ", ".join(missing))
+        if extra:
+            fail(errors, "unexpected top-level fields: " + ", ".join(extra))
+        if response.get("challenge_id") != challenge.get("challenge_id"):
+            fail(errors, "challenge_id mismatch")
+        if response.get("challenge_nonce") != challenge.get("challenge_nonce"):
+            fail(errors, "challenge_nonce mismatch")
+
+        attest = response.get("attestations")
+        if not isinstance(attest, dict):
+            fail(errors, "attestations must be an object")
+        else:
+            expected_attest = {
+                "separate_zero_chat": True,
+                "used_prior_chat_history": False,
+                "read_gold": False,
+            }
+            if attest != expected_attest:
+                fail(errors, "attestations mismatch")
+
+        active_id = current.get("active_task_id")
+        tasks = {t.get("task_id"): t for t in registry.get("tasks", []) if isinstance(t, dict)}
+        canonical_task = tasks.get(active_id) or {}
+        facts = response.get("recovered_facts")
+        if not isinstance(facts, dict):
+            fail(errors, "recovered_facts must be an object")
+            facts = {}
+
+        foundation = facts.get("foundation_law")
+        if not isinstance(foundation, dict):
+            fail(errors, "recovered_facts.foundation_law must be an object")
+        else:
+            if ref_path(foundation.get("source_ref")) != ref_path(gold["required_facts"]["law_source_ref"]):
+                fail(errors, "foundation law source_ref mismatch")
+            if ref_path(foundation.get("routed_by_ref")) != ref_path(gold["required_facts"]["law_routed_by_ref"]):
+                fail(errors, "foundation law routed_by_ref mismatch")
+
+        active = facts.get("active_task")
+        expected_active = {
+            "task_id": active_id,
+            "status": canonical_task.get("status"),
+            "handoff_ref": canonical_task.get("handoff_ref"),
+            "blocker": canonical_task.get("blocker"),
+        }
+        if active != expected_active:
+            fail(errors, f"active_task mismatch: expected {expected_active!r}")
+
+        canonicality = facts.get("canonicality")
+        expected_canonicality = {
+            "durable_continuity_authority": current.get("durable_continuity_authority"),
+            "unmerged_candidate_authoritative": False,
+            "chat_memory_canonical": False,
+        }
+        if canonicality != expected_canonicality:
+            fail(errors, "canonicality facts mismatch")
+
+        capability = facts.get("capability_truth")
+        expected_capability = {
+            "core_v1_complete": False,
+            "fresh_seat_behavioral_recovery_proven": False,
+            "autonomous_learning_proven": False,
+            "automatic_self_critique_proven": False,
+            "meta_learning_proven": False,
+        }
+        if capability != expected_capability:
+            fail(errors, "capability truth mismatch")
+
+        next_gate = facts.get("next_gate")
+        expected_gate = {
+            "challenge_ref": "eval/recovery/v3/challenge.json",
+            "response_schema_ref": "eval/recovery/v3/response.schema.json",
+            "scorer_ref": "tools/score_zero_chat_recovery.py",
+            "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+            "deterministic_pass_required": True,
+            "independence_provenance_required": True,
+            "durable_receipt_required": True,
+        }
+        if next_gate != expected_gate:
+            fail(errors, "next_gate facts mismatch")
+
+        evidence = response.get("evidence_refs")
+        required_refs = set(gold["required_facts"]["required_evidence_refs"]) | {
+            "eval/recovery/v3/challenge.json",
+            "eval/recovery/v3/packet.json",
+            "eval/recovery/v3/response.schema.json",
+            "tools/score_zero_chat_recovery.py",
+        }
+        if not isinstance(evidence, list) or not all(isinstance(x, str) and x for x in evidence):
+            fail(errors, "evidence_refs must be a non-empty string list")
+        else:
+            if len(evidence) != len(set(evidence)):
+                fail(errors, "evidence_refs must be unique")
+            normalized_evidence = {ref_path(x) for x in evidence}
+            normalized_required = {ref_path(x) for x in required_refs}
+            missing_refs = sorted(normalized_required - normalized_evidence)
+            if missing_refs:
+                fail(errors, "missing required evidence refs: " + ", ".join(missing_refs))
+
+        answers = response.get("answers")
+        if not isinstance(answers, dict) or set(answers) != REQUIRED_ANSWERS:
+            fail(errors, "answers must contain exactly Q1-Q6")
+        elif not all(isinstance(answers.get(q), str) and answers.get(q).strip() for q in REQUIRED_ANSWERS):
+            fail(errors, "Q1-Q6 must be non-empty strings")
+
+        return {
+            "status": "PASS" if not errors else "FAIL",
+            "challenge_id": challenge.get("challenge_id"),
+            "active_task_id": active_id,
+            "errors": errors,
+            "reference_normalization": reference_mode,
+            "prose_keyword_scoring": False,
+        }
 
     extra = sorted(set(response) - REQUIRED_TOP_LEVEL)
     missing = sorted(REQUIRED_TOP_LEVEL - set(response))
@@ -87,6 +217,7 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
     if response.get("schema") not in {
         "minhtri-zero-chat-recovery-response/v1",
         "minhtri-zero-chat-recovery-response/v2",
+        "minhtri-zero-chat-recovery-response/v3",
     }:
         fail(errors, "unsupported response schema")
     if response.get("challenge_id") != challenge.get("challenge_id"):
