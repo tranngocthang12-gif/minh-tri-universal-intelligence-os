@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "ARCHITECTURE_RECOVERY_PROOF_V6",
-  "next_checkpoint": "Build and merge the bounded Recovery Proof v6 transition and harness against the accepted Master Blueprint route, then run an independent fresh-seat response and deterministic scorer; Foundation Freeze remains blocked until v6 PASS with durable receipt.",
+  "next_checkpoint": "Complete CI and independent review of the bounded Recovery Proof v6 transition/harness, obtain explicit Owner acceptance, then protected-merge it; after fresh-read protected main, run an independent fresh-seat v6 response and deterministic scorer. Foundation Freeze remains blocked until v6 PASS with durable receipt.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
