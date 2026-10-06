@@ -12,7 +12,6 @@
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
-  "knowledge_learning_requires_owner_pc": false,
   "pc_local_brain_role": "NON_CANONICAL_EXECUTION_AND_MIRROR_SIDECAR",
   "owner_learning_priority_order": [
     "BUDDHIST_THOUGHT",
@@ -34,7 +33,6 @@
       "autonomous_learning_runtime",
       "automatic_self_critique_runtime",
       "meta_learning_runtime",
-      "knowledge_learning_requires_owner_pc",
       "pc_local_brain_role",
       "owner_learning_priority_order",
       "boot_root",
