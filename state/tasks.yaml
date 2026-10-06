@@ -706,7 +706,8 @@
         "tests/test_foundation_freeze_prep_v1.py",
         "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V1_20261007.md",
         "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_20261007.md",
-        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_MANIFEST.json"
+        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_MANIFEST.json",
+        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V1_MANIFEST.json"
       ],
       "branch": "owner/recovery-proof-v6-transition-20261007",
       "base_sha": "174d8817730063d51f6682c31e5f067094bcef95",
