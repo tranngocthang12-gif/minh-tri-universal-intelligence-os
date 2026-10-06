@@ -23,6 +23,12 @@ class ProjectContinuityHandoffLawTests(unittest.TestCase):
         self.assertIn("NEXT ACTION", text)
         self.assertIn("architecture mutation bị BLOCKED", text)
 
+    def test_law_index_does_not_hardcode_obsolete_architecture_pointer(self):
+        text = (ROOT / "docs" / "LAW_INDEX_20261003.md").read_text(encoding="utf-8")
+        self.assertIn("state/current.yaml.current_architecture", text)
+        current_block = text.split("## Current architecture", 1)[1].split("## Historical / superseded records", 1)[0]
+        self.assertNotIn("Read `ARCHITECTURE_NOW_20261003.md`", current_block)
+
     def test_vnext_cannot_claim_complete_without_zero_chat_recovery(self):
         text = (ROOT / "docs" / "vnext" / "ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md").read_text(encoding="utf-8")
         self.assertIn("Law-first foundation gate", text)
