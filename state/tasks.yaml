@@ -411,9 +411,9 @@
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
       ],
       "supersedes": [],
-      "result_ref": "PENDING_PR265_SALVAGE",
+      "result_ref": "state/bootstrap.json / tests/test_single_boot_root_v1.py / PR_PENDING",
       "handoff_ref": "docs/vnext/handoff/SINGLE_BOOT_ROOT_V1.md",
-      "next_action": "Review and salvage/rebase PR #265 into the smallest single-boot-root implementation; keep protected main as the single continuity authority and do not create a second authority.",
+      "next_action": "Run required CI on the bounded Single Boot Root v1 candidate; if PASS, merge and fresh-read main, then advance to Semantic Staleness Guard v1.",
       "blocker": null
     },
     {
