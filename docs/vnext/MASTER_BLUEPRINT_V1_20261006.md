@@ -446,7 +446,15 @@ Therefore the prior vNext architecture is a strong subsystem/foundation architec
 12. Run fresh-seat recovery proving the new seat recovers Blueprint -> Law -> State -> Task -> exact next action.
 13. Only then resume Foundation Freeze.
 
-## 17. Definition of success
+## 17. Total Architect operating contract
+
+Owner-approved operating contract: `docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md`.
+
+The short command `AUTO TỔNG CÔNG TRÌNH SƯ` means: execute the full governed architecture lifecycle, automatically continue routine authorized work, review the whole system after each major stage, select the logically-next architecture task, and stop only at explicit Owner-level foundation decisions or unresolved material defects.
+
+This does not grant self-acceptance. The Total Architect may propose and execute within the approved envelope but cannot redefine Owner objectives, change foundation authority, or self-freeze the Master Blueprint/Foundation.
+
+## 18. Definition of success
 
 MINH TRÍ has a valid Master Blueprint only when a fresh seat can identify, without chat memory:
 - what the whole system is;
