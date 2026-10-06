@@ -1,5 +1,9 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
+**ACTIVE ROLE:** `ARCHITECT_AND_BUILDER_REPAIR_PASS_NON_INDEPENDENT`  
+**SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
+**ACCEPTANCE AUTHORITY:** none
+
 **TASK_ID:** ARCH-MASTER-BLUEPRINT-V1
 
 ## CANONICAL MAIN STATE
@@ -33,7 +37,7 @@
 - Foundation Freeze remains blocked.
 
 ## NEXT ACTION
-Complete Claude R1 material-defect repairs and scope audit, then bind a new immutable Master Blueprint Red-Team packet to the exact repaired candidate SHA/digest, require CI PASS on that packet-bearing head, and run that identical packet independently in Claude and Grok.
+Complete Claude and Grok v3 material-defect repairs, then bind a new immutable Master Blueprint Red-Team Packet v4 to the exact repaired candidate SHA and digest, require CI PASS on that packet-bearing head, and run that identical v4 packet independently in Claude and Grok.
 
 ## REQUIRED GATES
 - No self-acceptance by Architect/Builder/Supervisor.
