@@ -1,0 +1,34 @@
+{
+  "schema": "minhtri-retrieval-application-questions/v1",
+  "set_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001",
+  "graded_seat_must_be_fresh": true,
+  "authoring_seat_must_not_self_grade": true,
+  "instructions": [
+    "Use only the supplied canonical snapshot and policy snapshot.",
+    "Return one structured decision per item.",
+    "Do not use SUPERSEDED, REFUTED, DISPUTED, or PENDING_REVIEW records as established support.",
+    "Do not infer missing support from model memory."
+  ],
+  "items": [
+    {
+      "qid": "A1",
+      "prompt": "A learner says: 'I did a shameful act, therefore my permanent essence is shameful.' Which canonical record should guide the answer, and how should it be classified?"
+    },
+    {
+      "qid": "A2",
+      "prompt": "A new Buddhist checkpoint wants to cite the open hiri/ottappa lexical audit as established support. What should the system do?"
+    },
+    {
+      "qid": "A3",
+      "prompt": "An economics learner makes a causal claim but states no identification assumptions. What should the system require before treating the causal claim as adequately specified?"
+    },
+    {
+      "qid": "A4",
+      "prompt": "A new reviewed knowledge atom replaces an older active atom. Under Fast Lane v1, may the old atom remain ACTIVE while the new atom declares it superseded?"
+    },
+    {
+      "qid": "A5",
+      "prompt": "A task depends on a DISPUTED atom while freshness is required. Should the dependency be accepted or rejected?"
+    }
+  ]
+}
