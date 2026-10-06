@@ -275,6 +275,26 @@
       ],
       "supersedes": [],
       "result_ref": null
+    },
+    {
+      "task_id": "ARCH-VNEXT-PHASE5A-STALE-GUARD",
+      "title": "Implement minimal generation/base-sha/write-scope stale-writer guard primitive",
+      "status": "REPORTED",
+      "generation": 1,
+      "scope": [
+        "src/minhtri/task_guard.py",
+        "tests/test_vnext_task_guard.py",
+        "docs/vnext/ARCHITECTURE_VNEXT_PHASE5_STALE_WRITER_GUARD_20261006.md",
+        "state/tasks.yaml"
+      ],
+      "branch": "owner/vnext-phase5-stale-writer-20261006",
+      "base_sha": "3c61a37165232c148b4e9efb59423f5789d3a10b",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PHASE2"
+      ],
+      "supersedes": [],
+      "result_ref": "PR#266"
     }
   ]
 }
