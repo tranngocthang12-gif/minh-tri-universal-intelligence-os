@@ -581,17 +581,17 @@
         "tools/score_current_boot_recovery_v5.py",
         "tests/test_current_boot_recovery_v5.py"
       ],
-      "branch": "owner/foundation-red-team-v2-20261006",
-      "base_sha": "6decf677b1c4310e2398cfb747cc5ec1dd8d6083",
+      "branch": "owner/foundation-red-team-packet-v2-20261006",
+      "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS",
+      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 + PR#298 / C5 PASS / RED_TEAM_PACKET_V2_PENDING_MERGE_AND_TWO_FINAL_RECEIPTS",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Freeze Red-Team Packet v2 against the repaired post-C5 canonical state, then run the identical packet independently in Claude and Grok. Record both receipts under the red-team receipt contract and resolve any material defects before final foundation freeze.",
-      "blocker": "TWO_V2_RED_TEAM_RECEIPTS_AND_MATERIAL_DEFECT_RESOLUTION_REQUIRED"
+      "next_action": "Merge the immutable Red-Team Packet v2, then run that identical packet independently in Claude and Grok. Record both normalized receipts under the receipt contract and resolve any material defects before final Foundation freeze.",
+      "blocker": "RED_TEAM_PACKET_V2_MERGE_AND_TWO_FINAL_RECEIPTS_REQUIRED"
     }
   ]
 }
