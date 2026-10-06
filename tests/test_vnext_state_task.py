@@ -19,8 +19,9 @@ class VNextStateTaskTests(unittest.TestCase):
         self.assertTrue(scope["duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only"])
         migrated = set(scope["this_file_is_authoritative_for"])
         self.assertIn("active_workstream", migrated)
-        self.assertIn("next_checkpoint", migrated)
         self.assertIn("owner_learning_priority_order", migrated)
+        self.assertNotIn("next_checkpoint", migrated)
+        self.assertIn("next_checkpoint", set(scope["mirrors_active_handoff_fields"]))
 
     def test_task_registry_is_single_vnext_task_truth(self):
         registry = self.load_json_yaml("state/tasks.yaml")
