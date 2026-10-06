@@ -91,3 +91,14 @@ Non-blocking review questions for independent critics:
 `PASS_TO_INDEPENDENT_REVIEW`
 
 This is not Foundation acceptance and not independent critic evidence.
+
+
+## POST-CLAUDE R1 SCOPE CORRECTION — 2026-10-07
+
+The original Supervisor pass did not explicitly compare the registered task scope against every changed artifact. Claude R1 finding MB-F05 correctly identified that omission.
+
+Disposition: **REVISE / REPAIRED FOR REREVIEW**, not a retroactive independent PASS.
+
+The active task scope has been amended to include the bundled stable-law, recovery-route, subsystem-architecture, manifest, and test changes carried by PR #300. The Owner acceptance request must explicitly name those bundled amendments; acceptance of "Master Blueprint v1" must not silently imply acceptance of unlisted law/continuity changes.
+
+This same-seat Supervisor record remains non-independent evidence. Final judgment requires the new frozen packet to be independently rereviewed by Claude and Grok.
