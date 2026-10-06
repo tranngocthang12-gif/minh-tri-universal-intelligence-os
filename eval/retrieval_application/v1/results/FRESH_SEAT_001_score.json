@@ -1,0 +1,34 @@
+{
+  "schema": "minhtri-retrieval-application-score/v1",
+  "status": "PASS",
+  "passed": 5,
+  "total": 5,
+  "errors": [],
+  "results": [
+    {
+      "qid": "A1",
+      "pass": true,
+      "reasons": []
+    },
+    {
+      "qid": "A2",
+      "pass": true,
+      "reasons": []
+    },
+    {
+      "qid": "A3",
+      "pass": true,
+      "reasons": []
+    },
+    {
+      "qid": "A4",
+      "pass": true,
+      "reasons": []
+    },
+    {
+      "qid": "A5",
+      "pass": true,
+      "reasons": []
+    }
+  ]
+}

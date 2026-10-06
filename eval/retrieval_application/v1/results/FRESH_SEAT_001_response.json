@@ -1,0 +1,51 @@
+{
+  "schema": "minhtri-retrieval-application-response/v1",
+  "set_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001",
+  "attestations": {
+    "fresh_seat": true,
+    "used_prior_chat_history": false,
+    "read_gold": false
+  },
+  "answers": [
+    {
+      "qid": "A1",
+      "decision": "USE_AS_SYNTHESIS",
+      "record_ids": [
+        "bud:a172:identity-shame-synthesis"
+      ],
+      "answer": "Use bud:a172:identity-shame-synthesis and classify the claim as SYNTHESIS. The move from a shameful act to a permanently shameful essence is not treated as direct early-text attestation."
+    },
+    {
+      "qid": "A2",
+      "decision": "REQUIRE_REVIEW",
+      "record_ids": [
+        "bud:a172:hiri-lexical-open"
+      ],
+      "answer": "Do not cite the open hiri/ottappa lexical audit as established support. Its status is PENDING_REVIEW and its class is UNCERTAIN, so review must be completed before it can serve as established support."
+    },
+    {
+      "qid": "A3",
+      "decision": "REQUIRE_IDENTIFICATION_ASSUMPTIONS",
+      "record_ids": [
+        "econ:program:identification-assumptions"
+      ],
+      "answer": "Require the learner to state the identification assumptions underlying the causal claim before treating that claim as adequately specified."
+    },
+    {
+      "qid": "A4",
+      "decision": "SUPERSEDE_EXPLICITLY",
+      "record_ids": [
+        "policy:knowledge-fast-lane-v1"
+      ],
+      "answer": "No. Under Fast Lane v1, the older atom must be marked SUPERSEDED in the same protected update in which the new record supersedes it; it may not remain ACTIVE."
+    },
+    {
+      "qid": "A5",
+      "decision": "REJECT_STALE_DEPENDENCY",
+      "record_ids": [
+        "policy:semantic-staleness-v1"
+      ],
+      "answer": "Reject the dependency. When freshness is required, a DISPUTED semantic dependency is not acceptable."
+    }
+  ]
+}
