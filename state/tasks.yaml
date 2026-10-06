@@ -202,21 +202,21 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168",
       "title": "Inventory and selectively salvage high-value early-Buddhist source/audit artifacts from legacy PR 168",
-      "status": "IN_PROGRESS",
+      "status": "REPORTED",
       "scope": [
         "PR#168",
         "docs/learning/",
         "knowledge/buddhist/",
         "docs/vnext/history/PR168_CONTROLLED_SALVAGE_KICKOFF_20261006.md"
       ],
-      "branch": "owner/architecture-vnext-pr168-wave4-20261006",
-      "base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+      "branch": "owner/architecture-handoff-reconcile-after-law-20261006",
+      "base_sha": "3285385a32ab693110339c00f3244719124c6e11",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_INVENTORY_20261006.md"
+      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE3B",
@@ -241,7 +241,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE4",
       "title": "Review PR168 parallel-text, translation, lexical, and Milindapanha artifacts for selective salvage",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "PR#168:EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md",
         "PR#168:EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
@@ -256,25 +256,63 @@
         "ARCH-VNEXT-SALVAGE-PR168-WAVE3B"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_WAVE4_20261006.md"
+      "result_ref": "PR#272"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION",
       "title": "Finalize disposition of remaining PR168 synthesis, program, memory/meta, and deep-dive files",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "PR#168:remaining-unpreserved-files",
         "docs/vnext/history/",
         "state/tasks.yaml"
       ],
-      "branch": null,
-      "base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+      "branch": "owner/architecture-handoff-reconcile-after-law-20261006",
+      "base_sha": "3285385a32ab693110339c00f3244719124c6e11",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-SALVAGE-PR168-WAVE4"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW",
+      "title": "Make project-wide continuity and handoff a foundation invariant before further architecture work",
+      "status": "DONE",
+      "scope": [
+        "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+        "docs/LAW_INDEX_20261003.md",
+        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+        "tests/test_project_continuity_handoff_law.py"
+      ],
+      "branch": "owner/law-project-continuity-handoff-foundation-20261006",
+      "base_sha": "0ae20aead7d2b53fcd9e443903c5e491bbc91f14",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": "PR#275 / docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md#8-project-wide-continuity--mandatory-handoff-law"
+    },
+    {
+      "task_id": "ARCH-VNEXT-HANDOFF-RECONCILE-20261006",
+      "title": "Reconcile stale architecture state and create durable post-law handoff",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+        "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
+      ],
+      "branch": "owner/architecture-handoff-reconcile-after-law-20261006",
+      "base_sha": "3285385a32ab693110339c00f3244719124c6e11",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW"
+      ],
+      "supersedes": [
+        "PR#273"
+      ],
+      "result_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
     }
   ]
 }

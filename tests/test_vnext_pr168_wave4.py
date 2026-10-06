@@ -34,7 +34,7 @@ class PR168Wave4Tests(unittest.TestCase):
     def test_final_disposition_task_is_ready(self):
         tasks = self.load("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in tasks["tasks"]}
-        self.assertEqual(by_id["ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION"]["status"], "READY")
+        self.assertIn(by_id["ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION"]["status"], {"READY", "IN_PROGRESS", "DONE"})
 
     def test_document_preserves_milinda_boundary(self):
         text = (ROOT / "docs" / "vnext" / "history" / "PR168_CONTROLLED_SALVAGE_WAVE4_20261006.md").read_text(encoding="utf-8")
