@@ -604,7 +604,11 @@
         "state/current.yaml",
         "state/tasks.yaml",
         "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
-        "docs/vnext/red_team/"
+        "docs/vnext/red_team/",
+        "docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md",
+        "docs/vnext/MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1_20261006.md",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json"
       ],
       "branch": "owner/master-blueprint-v1-20261006",
       "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
@@ -613,9 +617,9 @@
       "supersedes": [
         "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted"
       ],
-      "result_ref": "PENDING_MASTER_BLUEPRINT_REVIEW",
+      "result_ref": "PR#300 / Master Blueprint v1 candidate / Owner Auto Total Architect directive / PENDING_SUPERVISOR_AND_EXTERNAL_REVIEW",
       "handoff_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
-      "next_action": "Run Supervisor/Inspector consistency audit across Blueprint, consolidated law, boot root, current state, task registry, and existing vNext architecture; then freeze one review packet for identical independent Claude and Grok critique.",
+      "next_action": "Run and record Supervisor/Inspector audit against the complete Master Blueprint candidate; then freeze one identical review packet for independent Claude and Grok critique before Owner acceptance.",
       "blocker": null
     }
   ]
