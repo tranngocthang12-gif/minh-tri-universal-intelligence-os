@@ -1,8 +1,10 @@
 # MINH TRÍ — MASTER ARCHITECTURE / MASTER BLUEPRINT v1 — 2026-10-06
 
-**Status:** FOUNDATION CANDIDATE — REQUIRES INDEPENDENT REVIEW AND OWNER ACCEPTANCE  
+**Lifecycle status:** OWNER-ACCEPTED / MERGED TO PROTECTED MAIN — PR #300 / `174d8817730063d51f6682c31e5f067094bcef95`  
+**Review-target status (historical):** FOUNDATION CANDIDATE — independently reviewed before Owner acceptance  
+**Acceptance record:** `docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md`  
 **Canonical target:** project-wide organization + law + lifecycle architecture  
-**Durable authority:** GitHub protected main after approved merge
+**Durable authority:** GitHub protected main
 
 ## 1. Final system
 
@@ -480,4 +482,4 @@ MINH TRÍ has a valid Master Blueprint only when a fresh seat can identify, with
 - how conflicts fail closed;
 - how the system continues after every chat/model/tool is replaced.
 
-Until that is independently demonstrated, Master Blueprint v1 remains a candidate.
+Master Blueprint v1 is Owner-accepted and canonical. Foundation Freeze remains blocked until deterministic independent Recovery Proof v6 demonstrates the post-merge cold-start route.
