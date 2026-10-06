@@ -1,0 +1,28 @@
+{
+  "schema": "minhtri-zero-chat-recovery-challenge/v3",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C3",
+  "challenge_nonce": "mtc3-87f6d6418f1b4e61a9ab4f1bf548cb55",
+  "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+  "purpose": "Final fresh-seat recovery proof using structured facts for deterministic grading; prose wording is not a PASS/FAIL criterion.",
+  "start_ref": "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+  "packet_ref": "eval/recovery/v3/packet.json",
+  "questions_ref": "eval/recovery/v1/questions.json",
+  "response_schema_ref": "eval/recovery/v3/response.schema.json",
+  "grader_ref": "tools/score_zero_chat_recovery.py",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v1/gold.json",
+    "eval/recovery/v2/attempts/",
+    "eval/recovery/v3/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_gold": false,
+    "return_only_json": true,
+    "authoring_seat_must_not_self_grade": true,
+    "fresh_read_current_main": true,
+    "structured_facts_authoritative_for_grading": true,
+    "prose_keywords_not_scored": true
+  }
+}
