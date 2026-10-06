@@ -60,3 +60,19 @@ Current active task remains `ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1` until its ge
 ## PC boundary
 
 Foundation Closure v1 steps 1-4 are designed not to require Owner PC unless a specific implementation fact proves otherwise. Local Brain remains a non-canonical sidecar.
+
+
+## Execution delegation — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT TỰ TRIỂN KHAI FOUNDATION CLOSURE v1 ĐẾN HẾT, CHỈ DỪNG Ở QUYẾT ĐỊNH NỀN TẢNG`
+
+Operational meaning:
+- the current ChatGPT operating seat may continue Foundation Closure v1 through bounded branches, PRs, CI, merge, fresh-read main, testing, evidence capture, salvage, and repair without requesting Owner approval at every PR;
+- dependency order remains binding;
+- later phases may be prepared while an earlier phase is externally blocked, but may not be promoted or marked DONE out of order;
+- stop for Owner only when a proposed change alters constitutional/stable-law intent, Owner authority, canonical authority boundary, autonomous merge/runtime permission, destructive history handling, security/secret authority, or another comparable foundation decision;
+- ordinary implementation choices, test repairs, rebases, candidate salvage, and evidence-preserving refactors do not require a new Owner decision.
+
+This delegation is workflow authorization only. It does not enable autonomous runtime, autonomous merge, self-modification, or any capability previously marked OFF/NOT PROVEN.
