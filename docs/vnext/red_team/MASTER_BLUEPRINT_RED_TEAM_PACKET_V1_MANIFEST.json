@@ -1,8 +1,8 @@
 {
   "schema": "minhtri-master-blueprint-red-team-packet-manifest/v1",
   "packet_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
-  "review_target_candidate_commit": "7e02885f0e43e9c15c5e3a3f40eafda94f9a0b45",
-  "packet_content_sha": "git-blob-sha1:80be13c3c58ee229c1c0c2ec95e4aa7eff448bcc",
+  "review_target_candidate_commit": "c3fed9bd60a02b30e61e482d6b08da5589588d43",
+  "packet_content_sha": "git-blob-sha1:a4b7924151a5d171b87b97b541b8c0b826e4539a",
   "packet_content_sha_algorithm": "git-blob-sha1",
   "required_critics": [
     "CLAUDE",
