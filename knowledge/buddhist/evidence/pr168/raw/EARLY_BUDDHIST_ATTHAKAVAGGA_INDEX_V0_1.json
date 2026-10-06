@@ -1,0 +1,164 @@
+{
+  "schema": "minhtri-early-buddhist-atthakavagga-index/v1",
+  "updated": "2026-10-04",
+  "status": "ALL_16_STRUCTURALLY_INDEXED_NOT_FULL_PARALLEL_AUDIT",
+  "purpose": "Index all sixteen Aṭṭhakavagga suttas by dominant reasoning/anti-grasping themes.",
+  "suttas": [
+    {
+      "id": "Snp 4.1",
+      "pali_title": "Kāmasutta",
+      "working_theme": "sensual desire and the danger of possession",
+      "reasoning": [
+        "DESIRE_COST",
+        "NON_CLINGING"
+      ]
+    },
+    {
+      "id": "Snp 4.2",
+      "pali_title": "Guhaṭṭhakasutta",
+      "working_theme": "being enclosed in attachment/body-world; difficulty of letting go",
+      "reasoning": [
+        "NON_CLINGING",
+        "MORTALITY"
+      ]
+    },
+    {
+      "id": "Snp 4.3",
+      "pali_title": "Duṭṭhaṭṭhakasutta",
+      "working_theme": "hostile speech, self-praise, grasping at views",
+      "reasoning": [
+        "ANTI_VIEW_GRASPING",
+        "NON_DISPUTE"
+      ]
+    },
+    {
+      "id": "Snp 4.4",
+      "pali_title": "Suddhaṭṭhakasutta",
+      "working_theme": "purity is not secured by mere seeing/hearing/knowledge/ritual identity",
+      "reasoning": [
+        "ANTI_PURIFICATION_IDENTITY",
+        "NON_GRASPING"
+      ]
+    },
+    {
+      "id": "Snp 4.5",
+      "pali_title": "Paramaṭṭhakasutta",
+      "working_theme": "claims of supreme view and the instability of view-based identity",
+      "reasoning": [
+        "ANTI_DOGMATISM",
+        "NON_COMPARISON"
+      ]
+    },
+    {
+      "id": "Snp 4.6",
+      "pali_title": "Jarāsutta",
+      "working_theme": "aging, loss, mine-making and grief",
+      "reasoning": [
+        "MORTALITY",
+        "DE_APPROPRIATION"
+      ]
+    },
+    {
+      "id": "Snp 4.7",
+      "pali_title": "Tissametteyyasutta",
+      "working_theme": "sexual attachment and decline from restraint",
+      "reasoning": [
+        "SENSUAL_CAUSALITY",
+        "RESTRAINT"
+      ]
+    },
+    {
+      "id": "Snp 4.8",
+      "pali_title": "Pasūrasutta",
+      "working_theme": "debate, victory, status and doctrinal contest",
+      "reasoning": [
+        "ANTI_DEBATE_IDENTITY",
+        "NON_DISPUTE"
+      ]
+    },
+    {
+      "id": "Snp 4.9",
+      "pali_title": "Māgaṇḍiyasutta",
+      "working_theme": "inner peace not grounded in view, learning, ritual, or their simple opposites",
+      "reasoning": [
+        "ANTI_BINARY_PURIFICATION",
+        "NON_IDENTITY_IN_VIEW"
+      ]
+    },
+    {
+      "id": "Snp 4.10",
+      "pali_title": "Purābhedasutta",
+      "working_theme": "qualities of the peaceful sage before bodily breakup",
+      "reasoning": [
+        "SAGE_PROFILE",
+        "NON_CLINGING"
+      ]
+    },
+    {
+      "id": "Snp 4.11",
+      "pali_title": "Kalahavivādasutta",
+      "working_theme": "causal genealogy of quarrel and conflict",
+      "reasoning": [
+        "REGRESSIVE_CAUSAL_ANALYSIS",
+        "PAPAÑCA_CONFLICT"
+      ]
+    },
+    {
+      "id": "Snp 4.12",
+      "pali_title": "Cūḷabyūhasutta",
+      "working_theme": "many groups declare their own view the sole truth",
+      "reasoning": [
+        "ANTI_VIEW_SUPERIORITY",
+        "ONE_TRUTH_VS_MANY_CLAIMS"
+      ]
+    },
+    {
+      "id": "Snp 4.13",
+      "pali_title": "Mahābyūhasutta",
+      "working_theme": "disputants and purification claims; non-fixation",
+      "reasoning": [
+        "ANTI_DOGMATISM",
+        "NON_DISPUTE"
+      ]
+    },
+    {
+      "id": "Snp 4.14",
+      "pali_title": "Tuvaṭakasutta",
+      "working_theme": "rapid/peaceful training, restraint, non-proliferation",
+      "reasoning": [
+        "PRACTICE_DISCIPLINE",
+        "NON_PAPAÑCA"
+      ]
+    },
+    {
+      "id": "Snp 4.15",
+      "pali_title": "Attadaṇḍasutta",
+      "working_theme": "fear, violence, the inner dart, relinquishment and non-possession",
+      "reasoning": [
+        "VIOLENCE_DIAGNOSIS",
+        "INNER_DART",
+        "NON_POSSESSION"
+      ]
+    },
+    {
+      "id": "Snp 4.16",
+      "pali_title": "Sāriputtasutta",
+      "working_theme": "questions on the disciplined sage's conduct, fears and training",
+      "reasoning": [
+        "PRACTICE_PROFILE",
+        "RESTRAINT"
+      ]
+    }
+  ],
+  "cross_cutting_themes": [
+    "non-grasping at views",
+    "non-comparison/self-superiority",
+    "conflict traced to desire/contact/conceiving",
+    "purity not reducible to ritual/view identity",
+    "sensual desire and possession as bondage",
+    "sagehood as a mode of non-appropriation rather than doctrinal victory"
+  ],
+  "major_tension": "Aṭṭhakavagga anti-view rhetoric must be held together with Nikāya right-view teaching without reducing either to relativism or dogmatism.",
+  "parallel_status": "SELECTED_PARALLELS_KNOWN_FULL_16_PARALLEL_AUDIT_PENDING",
+  "next_action": "Read/index each of 16 at verse-cluster level; map diṭṭhi/sacca/maññati/papañca/nissaya vocabulary and available Arthapada parallels."
+}
