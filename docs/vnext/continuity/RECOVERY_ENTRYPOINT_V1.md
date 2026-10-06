@@ -4,7 +4,7 @@ A new seat starts from the single boot root. Do not use old chat memory as autho
 
 1. Read `state/bootstrap.json`.
 2. Follow its `current_state` and `task_registry` pointers.
-3. Read the Law Index and role bootstrap named by the boot root.
+3. Read the Law Index and role bootstrap named by the boot root (currently `docs/LAW_INDEX_20261003.md` and `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`).
 4. Resolve current architecture and law precedence from `state/current.yaml`.
 5. Resolve `active_task_id` from current state.
 6. Find that exact task in `state/tasks.yaml`.
