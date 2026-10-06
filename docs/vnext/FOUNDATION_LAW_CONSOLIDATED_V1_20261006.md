@@ -29,6 +29,25 @@ Same-level conflict requires explicit supersession or a bounded conflict-resolut
 - `state/tasks.yaml` is the single canonical task registry.
 - Material state may not exist only in chat.
 
+## Master Blueprint governance
+
+The project must maintain one project-wide Master Blueprint that defines the total system structure, authority boundaries, stable foundation, extensible zones, lifecycle, role separation, and canonical-source map.
+
+Foundation roles are distinct in responsibility:
+- Owner: final foundation authority and acceptance;
+- Architect: designs and maintains the Master Blueprint but cannot self-accept foundation architecture;
+- Builder/Implementer: implements bounded approved work but cannot self-certify acceptance;
+- Supervisor/Inspector: checks implementation against approved design, law, and task scope;
+- Independent Reviewer/Critic: challenges design/implementation without merge authority;
+- Evidence/Validation layer: binds claims to bounded machine-checkable or independently reproduced evidence.
+
+Material foundation work follows:
+`DESIGN -> LAW CHECK -> BUILD -> SUPERVISE -> VALIDATE -> INDEPENDENT REVIEW -> ACCEPT -> PROTECTED MERGE -> FRESH-READ -> OPERATE -> CONTROLLED CHANGE`.
+
+No material role may treat its own output as sufficient acceptance evidence. Separation of duties may be performed by replaceable AI seats, but the responsibility boundary must remain explicit in durable records.
+
+A new seat must resolve the current Master Blueprint as part of cold-start recovery before material architecture or implementation work. Missing or conflicting Blueprint/Law/State/Task authority fails closed for the affected mutation.
+
 ## Learning law
 
 - Owner chooses what to learn.
