@@ -1,0 +1,25 @@
+{
+  "schema": "minhtri-zero-chat-recovery-challenge/v2",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C2",
+  "challenge_nonce": "mtc2-6f1e2aa7985b4c4eaa52b4cd5d21d22f",
+  "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+  "purpose": "Fresh-seat recovery proof after fixing reference-normalization brittleness observed in C1.",
+  "start_ref": "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+  "packet_ref": "eval/recovery/v2/packet.json",
+  "questions_ref": "eval/recovery/v1/questions.json",
+  "response_schema_ref": "eval/recovery/v2/response.schema.json",
+  "grader_ref": "tools/score_zero_chat_recovery.py",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v1/gold.json",
+    "eval/recovery/v2/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_gold": false,
+    "return_only_json": true,
+    "authoring_seat_must_not_self_grade": true,
+    "fresh_read_current_main": true
+  }
+}

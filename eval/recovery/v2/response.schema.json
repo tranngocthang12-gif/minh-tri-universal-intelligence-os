@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-zero-chat-recovery-response/v2",
+  "title": "MINH TRI Zero-Chat Recovery Response v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "challenge_id",
+    "challenge_nonce",
+    "attestations",
+    "foundation_law",
+    "active_task",
+    "claims",
+    "evidence_refs",
+    "answers"
+  ],
+  "properties": {
+    "schema": {"const": "minhtri-zero-chat-recovery-response/v2"},
+    "challenge_id": {"type": "string", "minLength": 1},
+    "challenge_nonce": {"type": "string", "minLength": 1},
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["separate_zero_chat", "used_prior_chat_history", "read_gold"],
+      "properties": {
+        "separate_zero_chat": {"const": true},
+        "used_prior_chat_history": {"const": false},
+        "read_gold": {"const": false}
+      }
+    },
+    "foundation_law": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_ref", "routed_by_ref"],
+      "properties": {
+        "source_ref": {"type": "string", "minLength": 1},
+        "routed_by_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "active_task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["task_id", "status", "handoff_ref", "blocker"],
+      "properties": {
+        "task_id": {"type": "string", "minLength": 1},
+        "status": {"type": "string", "minLength": 1},
+        "handoff_ref": {"type": "string", "minLength": 1},
+        "blocker": {"type": "string", "minLength": 1}
+      }
+    },
+    "claims": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["core_v1_complete", "autonomous_learning_proven", "chat_memory_canonical"],
+      "properties": {
+        "core_v1_complete": {"type": "boolean"},
+        "autonomous_learning_proven": {"type": "boolean"},
+        "chat_memory_canonical": {"type": "boolean"}
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"],
+      "properties": {
+        "Q1": {"type": "string", "minLength": 1},
+        "Q2": {"type": "string", "minLength": 1},
+        "Q3": {"type": "string", "minLength": 1},
+        "Q4": {"type": "string", "minLength": 1},
+        "Q5": {"type": "string", "minLength": 1},
+        "Q6": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

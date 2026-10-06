@@ -15,7 +15,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 
-CHALLENGE = "eval/recovery/v1/challenge.json"
+CHALLENGE_V1 = "eval/recovery/v1/challenge.json"
+CHALLENGE_V2 = "eval/recovery/v2/challenge.json"
 GOLD = "eval/recovery/v1/gold.json"
 CURRENT = "state/current.yaml"
 TASKS = "state/tasks.yaml"
@@ -46,9 +47,29 @@ def fail(errors: list[str], message: str) -> None:
     errors.append(message)
 
 
+def ref_path(value: Any) -> str:
+    """Return the repository path portion of a canonical reference.
+
+    Section anchors are provenance detail, not a different source document.
+    Query strings and external URLs are intentionally not normalized here.
+    """
+    if not isinstance(value, str):
+        return ""
+    return value.split("#", 1)[0]
+
+
 def score_response(response: dict[str, Any]) -> dict[str, Any]:
     errors: list[str] = []
-    challenge = load_json(ROOT / CHALLENGE)
+    schema = response.get("schema") if isinstance(response, dict) else None
+    if schema == "minhtri-zero-chat-recovery-response/v1":
+        challenge = load_json(ROOT / CHALLENGE_V1)
+        reference_mode = "exact"
+    elif schema == "minhtri-zero-chat-recovery-response/v2":
+        challenge = load_json(ROOT / CHALLENGE_V2)
+        reference_mode = "path_with_optional_fragment"
+    else:
+        challenge = load_json(ROOT / CHALLENGE_V2)
+        reference_mode = "path_with_optional_fragment"
     gold = load_json(ROOT / GOLD)
     current = load_json(ROOT / CURRENT)
     registry = load_json(ROOT / TASKS)
@@ -63,7 +84,10 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
     if extra:
         fail(errors, "unexpected top-level fields: " + ", ".join(extra))
 
-    if response.get("schema") != "minhtri-zero-chat-recovery-response/v1":
+    if response.get("schema") not in {
+        "minhtri-zero-chat-recovery-response/v1",
+        "minhtri-zero-chat-recovery-response/v2",
+    }:
         fail(errors, "unsupported response schema")
     if response.get("challenge_id") != challenge.get("challenge_id"):
         fail(errors, "challenge_id mismatch")
@@ -96,10 +120,18 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
     if not isinstance(foundation, dict):
         fail(errors, "foundation_law must be an object")
     else:
-        if foundation.get("source_ref") != expected_law:
-            fail(errors, "foundation law source_ref mismatch")
-        if foundation.get("routed_by_ref") != expected_route:
-            fail(errors, "foundation law routed_by_ref mismatch")
+        actual_source = foundation.get("source_ref")
+        actual_route = foundation.get("routed_by_ref")
+        if reference_mode == "exact":
+            if actual_source != expected_law:
+                fail(errors, "foundation law source_ref mismatch")
+            if actual_route != expected_route:
+                fail(errors, "foundation law routed_by_ref mismatch")
+        else:
+            if ref_path(actual_source) != ref_path(expected_law):
+                fail(errors, "foundation law source_ref mismatch")
+            if ref_path(actual_route) != ref_path(expected_route):
+                fail(errors, "foundation law routed_by_ref mismatch")
         if set(foundation) != {"source_ref", "routed_by_ref"}:
             fail(errors, "foundation_law fields are not exact")
 
@@ -132,7 +164,12 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
     else:
         if len(evidence) != len(set(evidence)):
             fail(errors, "evidence_refs must be unique")
-        missing_refs = sorted(required_refs - set(evidence))
+        if reference_mode == "exact":
+            missing_refs = sorted(required_refs - set(evidence))
+        else:
+            normalized_evidence = {ref_path(x) for x in evidence}
+            normalized_required_refs = {ref_path(x) for x in required_refs}
+            missing_refs = sorted(normalized_required_refs - normalized_evidence)
         if missing_refs:
             fail(errors, "missing required evidence refs: " + ", ".join(missing_refs))
 
@@ -157,6 +194,7 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
         "challenge_id": challenge.get("challenge_id"),
         "active_task_id": active_id,
         "errors": errors,
+        "reference_normalization": reference_mode,
     }
 
 

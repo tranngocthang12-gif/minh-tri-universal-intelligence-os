@@ -369,7 +369,7 @@
       "supersedes": [],
       "result_ref": "PR#278 / docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Run eval/recovery/v1/challenge.json in a genuinely independent zero-chat fresh seat; require response.schema.json output with no gold read; score using tools/score_zero_chat_recovery.py; independently preserve fresh-seat provenance; only after both deterministic PASS and genuine independence evidence may Core v1 be marked DONE.",
+      "next_action": "Run eval/recovery/v2/challenge.json in a genuinely independent zero-chat fresh seat; require response v2 with no gold/attempt read; score with tools/score_zero_chat_recovery.py; record immutable evidence receipt; only deterministic PASS plus independence provenance PRESENT may mark Core v1 DONE.",
       "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
     },
     {
@@ -460,6 +460,29 @@
       "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "next_action": "After Semantic Staleness Guard v1 is DONE, implement the smallest knowledge fast lane preserving provenance, status, supersession, domain rules, stale checks, review, and no autonomous merge.",
       "blocker": "WAITING_FOR_SEMANTIC_STALENESS_V1_DONE"
+    },
+    {
+      "task_id": "ARCH-RECOVERY-PROOF-GATE-V2",
+      "title": "Harden fresh-seat recovery proof against reference-format brittleness and produce immutable receipts",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "eval/recovery/v2/",
+        "tools/score_zero_chat_recovery.py",
+        "tests/test_recovery_proof_gate_v2.py",
+        "state/tasks.yaml",
+        "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md"
+      ],
+      "branch": "owner/recovery-proof-gate-v2-20261006",
+      "base_sha": "1dc3c30f92f2333fb391e60307113bcf34e39ec5",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "eval/recovery/v2/packet.json",
+      "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
+      "next_action": "Merge Gate v2 after CI, run challenge C2 in a genuinely independent zero-chat seat, score it, write receipt, then close Core v1 only if the two-part completion rule passes.",
+      "blocker": "EXTERNAL_FRESH_SEAT_C2_EXECUTION_REQUIRED_AFTER_GATE_V2_MERGE"
     }
   ]
 }
