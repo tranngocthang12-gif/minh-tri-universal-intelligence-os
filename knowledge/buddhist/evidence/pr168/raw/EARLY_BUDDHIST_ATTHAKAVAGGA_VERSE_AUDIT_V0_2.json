@@ -1,0 +1,207 @@
+{
+  "schema": "minhtri-early-buddhist-atthakavagga-verse-audit/v2",
+  "updated": "2026-10-04",
+  "status": "ALL_16_PASS1_VERSE_RANGE_AND_ARGUMENT_MOVES_AUDITED",
+  "entries": [
+    {
+      "id": "Snp 4.1",
+      "title": "Kāma",
+      "verses": "766-771",
+      "moves": [
+        "desire fulfilled -> temporary gladness",
+        "loss/frustration -> pain",
+        "possessive accumulation -> vulnerability",
+        "abandon desire -> cross flood"
+      ],
+      "tension": "renunciation is causal risk-management, not mere moral prohibition"
+    },
+    {
+      "id": "Snp 4.2",
+      "title": "Guhaṭṭhaka",
+      "verses": "772-779",
+      "moves": [
+        "embedded in body/cave and sensuality",
+        "desire binds future/past seeking",
+        "mortality exposes insecurity",
+        "release requires non-clinging"
+      ],
+      "tension": "body language must not be collapsed into body-hatred"
+    },
+    {
+      "id": "Snp 4.3",
+      "title": "Duṭṭhaṭṭhaka",
+      "verses": "780-787",
+      "moves": [
+        "hostile criticism and self-praise",
+        "identity through views/practices",
+        "sage not defined by polemical status",
+        "conceit/deception abandoned"
+      ],
+      "tension": "anti-polemic is not anti-discernment"
+    },
+    {
+      "id": "Snp 4.4",
+      "title": "Suddhaṭṭhaka",
+      "verses": "788-795",
+      "moves": [
+        "purity claims tied to seeing/hearing/knowledge",
+        "attachment to purity systems",
+        "sage does not seize one highest identity",
+        "release not reducible to conceptual badge"
+      ],
+      "tension": "knowledge remains instrumental but not an identity-possession"
+    },
+    {
+      "id": "Snp 4.5",
+      "title": "Paramaṭṭhaka",
+      "verses": "796-803",
+      "moves": [
+        "declaring own view supreme",
+        "comparison creates lower/equal/higher identity",
+        "non-comparison",
+        "no adopted system as self-definition"
+      ],
+      "tension": "must reconcile with right view function"
+    },
+    {
+      "id": "Snp 4.6",
+      "title": "Jarā",
+      "verses": "804-813",
+      "moves": [
+        "aging/life brevity",
+        "mine-making",
+        "loss -> grief/greed",
+        "freedom through relinquishing possessiveness"
+      ],
+      "tension": "de-appropriation is practical response to mortality"
+    },
+    {
+      "id": "Snp 4.7",
+      "title": "Tissametteyya",
+      "verses": "814-823",
+      "moves": [
+        "sexual attachment",
+        "fall from celibate discipline",
+        "loss of seclusion/clarity",
+        "restore restraint"
+      ],
+      "tension": "specific renunciant discipline, not universal lay prescription"
+    },
+    {
+      "id": "Snp 4.8",
+      "title": "Pasūra",
+      "verses": "824-834",
+      "moves": [
+        "debate arena",
+        "praise/victory elation",
+        "defeat humiliation",
+        "status-seeking perpetuates dispute"
+      ],
+      "tension": "truth-seeking must be separated from debate-as-identity"
+    },
+    {
+      "id": "Snp 4.9",
+      "title": "Māgaṇḍiya",
+      "verses": "835-847",
+      "moves": [
+        "sensual attraction rejected",
+        "purity not by view/learning/knowledge/ritual nor their simple absence",
+        "contact without appropriation",
+        "lotus-like non-staining"
+      ],
+      "tension": "anti-binary purification language is easy to mistranslate as anti-knowledge"
+    },
+    {
+      "id": "Snp 4.10",
+      "title": "Purābheda",
+      "verses": "848-861",
+      "moves": [
+        "define peaceful person before breakup",
+        "no craving/possessiveness",
+        "not constructing self in world",
+        "equanimity amid views"
+      ],
+      "tension": "sage profile supplements, not replaces, formal path lists"
+    },
+    {
+      "id": "Snp 4.11",
+      "title": "Kalahavivāda",
+      "verses": "862-877",
+      "moves": [
+        "quarrels traced backward",
+        "dear things -> desire",
+        "pleasant/unpleasant discrimination",
+        "contact and naming/perception layers",
+        "cessation through removal of conditions"
+      ],
+      "tension": "papañca-related vocabulary remains translation-sensitive"
+    },
+    {
+      "id": "Snp 4.12",
+      "title": "Cūḷabyūha",
+      "verses": "878-894",
+      "moves": [
+        "sects claim own truth",
+        "others labeled fools",
+        "one truth vs many proclaimed truths",
+        "judgment/conceit drives dispute",
+        "sage does not build identity on verdict"
+      ],
+      "tension": "explicit 'one truth' blocks simple relativism"
+    },
+    {
+      "id": "Snp 4.13",
+      "title": "Mahābyūha",
+      "verses": "895-914",
+      "moves": [
+        "view factions",
+        "purity claims",
+        "praise gained in debate is small",
+        "non-dispute",
+        "do not take seen/heard/thought as identity basis"
+      ],
+      "tension": "non-dispute must not erase ethical correction"
+    },
+    {
+      "id": "Snp 4.14",
+      "title": "Tuvaṭaka",
+      "verses": "915-934",
+      "moves": [
+        "request for rapid path to peace",
+        "restraint and composure",
+        "control of speech/sensuality",
+        "non-proliferation",
+        "discipline in concrete conduct"
+      ],
+      "tension": "chapter is not merely anti-doctrinal; it contains positive training"
+    },
+    {
+      "id": "Snp 4.15",
+      "title": "Attadaṇḍa",
+      "verses": "935-954",
+      "moves": [
+        "fear from violence",
+        "world seen floundering",
+        "inner dart",
+        "possessiveness and craving",
+        "non-violence/non-possession"
+      ],
+      "tension": "social violence analysis joins inward craving analysis"
+    },
+    {
+      "id": "Snp 4.16",
+      "title": "Sāriputta",
+      "verses": "955-975",
+      "moves": [
+        "risks of secluded life",
+        "fear/endurance",
+        "speech/conduct restraint",
+        "mindful training",
+        "remove impurities"
+      ],
+      "tension": "concrete discipline closes the vagga and guards against nihilistic anti-rule readings"
+    }
+  ],
+  "cross_cutting_result": "The chapter attacks appropriation, comparison and contest around desire/views/purity, while retaining positive discipline and a non-relativist concern with truth and release.",
+  "next_pass": "lexical audit diṭṭhi/sacca/saññā/maññati/papañca/nissaya and northern Arthapada comparison"
+}
