@@ -243,14 +243,17 @@ Mandatory order:
 
 ```text
 OWNER CURRENT INSTRUCTION
-→ PROJECT_STATE pointer layer
-→ CURRENT LAW INDEX
-→ RELEVANT STABLE LAWS / BOOTSTRAP LAW
+→ state/bootstrap.json
+→ CURRENT MASTER BLUEPRINT
+→ AUTHORITATIVE LAW PRECEDENCE
 → CURRENT STATE + TASK REGISTRY
 → CURRENT ARCHITECTURE
-→ TASK/DOMAIN HANDOFF
+→ ACTIVE TASK HANDOFF
+→ TASK/DOMAIN SOURCES
 → WORK
 ```
+
+For migrated vNext scope, `state/bootstrap.json` is the single boot root. Legacy `docs/PROJECT_STATE.json` remains compatibility/history for unmigrated keys only and cannot override migrated Blueprint/Law/State/Task authority.
 
 Architecture may implement law but may not silently outrank, bypass, or redefine stable law.
 
@@ -325,13 +328,15 @@ An unmerged branch handoff may guide resumption of that branch, but it never out
 A new chat/seat/model must not start material work from model memory or an old chat summary when canonical recovery is available.
 
 It must fresh-read:
-1. `docs/PROJECT_STATE.json`;
-2. the current Law Index;
-3. this bootstrap/stable handoff law and other relevant Stable Laws;
-4. `state/current.yaml` and `state/tasks.yaml` when present for the migrated scope;
-5. the current architecture routed by authority;
+1. `state/bootstrap.json`;
+2. the current Master Blueprint routed by the boot root;
+3. the authoritative law-precedence router and relevant Stable Laws;
+4. `state/current.yaml` and `state/tasks.yaml`;
+5. the current architecture routed by current state;
 6. the active task result/handoff/branch state;
-7. task/domain sources.
+7. task/domain sources and required evidence.
+
+Legacy `docs/PROJECT_STATE.json` may be read only for unmigrated keys/history and cannot override migrated Blueprint/Law/State/Task authority.
 
 Then it must continue from the durable `NEXT ACTION` unless:
 - the Owner explicitly redirects;
@@ -431,13 +436,15 @@ A capability historically proven reachable does not mean it is currently reachab
 
 For every current or future learning track, material work requires this live canonical bootstrap order:
 
-1. `docs/PROJECT_STATE.json`;
-2. the current Law Index routed by PROJECT_STATE;
-3. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`;
-4. the current Architecture routed by PROJECT_STATE;
-5. this role bootstrap;
-6. the active learning checkpoint/plan for the relevant track;
-7. task/domain sources.
+1. `state/bootstrap.json`;
+2. the current Master Blueprint routed by the boot root;
+3. the authoritative law-precedence router;
+4. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`;
+5. `state/current.yaml` and `state/tasks.yaml`;
+6. the current Architecture routed by current state;
+7. this role bootstrap;
+8. the active learning checkpoint/plan for the relevant track;
+9. task/domain sources.
 
 Every material checkpoint must be durably recorded in GitHub with learned/corrected content, evidence/status, CURRENT, NEXT, OPEN AUDITS/UNKNOWNS and provenance. Chat memory is not a durable substitute. Recorded does not mean VERIFIED. If the durable write path is blocked, state NOT YET DURABLY RECORDED and continue only the independent work that remains safe.
 
