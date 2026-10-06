@@ -403,32 +403,37 @@ It preserves the current findings without modifying Tier-1 runtime code.
 No claim in this document is automatically VERIFIED merely because it is in GitHub.
 
 
-## 10. SYNCHRONIZATION UPDATE — 2026-10-02
+## 10. SYNCHRONIZATION UPDATE — 2026-10-02 / SUPERSEDED ROUTE NOTE
 
-Owner ordered an immediate architecture/law synchronization.
+The historical PROJECT_STATE-first route below has been superseded for migrated vNext scope by the Single Boot Root and Master Blueprint route.
 
-The durable bootstrap route is resolved dynamically from `PROJECT_STATE.json`. As of 2026-10-03:
+Current migrated route:
 
 ```text
-PROJECT_STATE.json
-→ LAW_INDEX_20261003.md
-→ ARCHITECTURE_NOW_20261003.md
-→ GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md
+state/bootstrap.json
+→ MASTER BLUEPRINT
+→ AUTHORITATIVE LAW PRECEDENCE
+→ state/current.yaml
+→ state/tasks.yaml
+→ CURRENT ARCHITECTURE
+→ ACTIVE HANDOFF
 → task/domain source
 ```
 
 Rules:
-- `PROJECT_STATE.json` points to the current Law Index and architecture; never infer "current" from the date embedded in this bootstrap file.
+- `state/bootstrap.json` is the machine-readable root for migrated current authority.
+- `docs/PROJECT_STATE.json` remains compatibility/history for unmigrated keys only.
 - historical Law Index / architecture files remain provenance only once superseded.
-- `PROJECT_STATE.json` is the machine-readable pointer to current authority.
 - Old files remain for provenance and are not deleted.
 - A seat must fresh-read live authority rather than trust a SHA copied into an old chat.
-- Synchronization means authority records agree. Current local-brain reachability must be proved by fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
+- Synchronization means Blueprint/Law/State/Task/Architecture authority records agree. Current local-brain reachability still requires fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
 
 
-## 11. CURRENT-STATE ROUTING CLARIFICATION — 2026-10-04
+## 11. CURRENT-STATE ROUTING CLARIFICATION — UPDATED FOR MIGRATED VNEXT
 
-This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
+This bootstrap contains historical implementation snapshots by design. For migrated vNext changing facts, read `state/bootstrap.json` first, then the routed Master Blueprint, law precedence, `state/current.yaml`, and `state/tasks.yaml`.
+
+Use `docs/PROJECT_STATE.json` only for unmigrated keys/history and never to override migrated Blueprint/Law/State/Task authority.
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
 
