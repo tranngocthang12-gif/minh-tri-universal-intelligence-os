@@ -11,6 +11,9 @@
 - Task registry authority: `state/tasks.yaml`.
 - Recovery entrypoint: `docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md`.
 - Recovery packet: `eval/recovery/v1/packet.json`.
+- Fresh-seat challenge: `eval/recovery/v1/challenge.json`.
+- Structured response schema: `eval/recovery/v1/response.schema.json`.
+- Deterministic grader: `tools/score_zero_chat_recovery.py`.
 - Autonomous learning / automatic self-critique / meta-learning runtimes remain OFF.
 
 ## WORKING CANDIDATE STATE
@@ -46,7 +49,7 @@
 - Chat memory remains non-canonical.
 
 ## NEXT ACTION
-Run `eval/recovery/v1/packet.json` in a genuinely independent zero-chat fresh seat using only canonical recovery inputs. Grade independently against `eval/recovery/v1/gold.json`. If PASS, record the result in GitHub and mark Core v1 DONE. If FAIL, keep Core v1 BLOCKED and repair the smallest failing continuity mechanism before retry.
+Run a genuinely independent zero-chat fresh seat from `eval/recovery/v1/challenge.json` (or the exact one-line command in `eval/recovery/v1/FRESH_SEAT_COMMAND.txt`). The fresh seat must return only JSON matching `eval/recovery/v1/response.schema.json` without reading `gold.json`. Grade that returned JSON with `tools/score_zero_chat_recovery.py`. A deterministic grader PASS is necessary but not sufficient: independently preserve execution provenance showing the seat was genuinely separate, then record evidence in GitHub before marking Core v1 DONE. On FAIL, keep Core v1 BLOCKED and repair the smallest failing continuity mechanism before retry.
 
 ## REQUIRED GATES
 - Fresh seat must not inherit this chat history.
