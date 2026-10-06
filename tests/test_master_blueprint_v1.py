@@ -35,7 +35,7 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(t["blocker"], "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED")
         closure=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-CLOSURE-V1")
         self.assertEqual(closure["status"], "BLOCKED")
-        self.assertIn("Master Blueprint v1", closure["next_action"])
+        self.assertIn("Recovery Proof v6", closure["next_action"])
         self.assertEqual(closure["handoff_ref"], "docs/vnext/handoff/RECOVERY_PROOF_V6.md")
 
     def test_role_separation_and_lifecycle_are_durable(self):
