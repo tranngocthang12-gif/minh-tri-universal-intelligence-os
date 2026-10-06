@@ -64,6 +64,32 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         for task in tasks["tasks"]:
             self.assertIn("change_class", task, task["task_id"])
 
+    def test_exact_next_action_is_identical_across_current_task_handoff(self):
+        current=load("state/current.yaml")
+        tasks=load("state/tasks.yaml")
+        active=next(x for x in tasks["tasks"] if x["task_id"]==current["active_task_id"])
+        handoff=(ROOT/active["handoff_ref"]).read_text(encoding="utf-8")
+        after=handoff.split("## NEXT ACTION",1)[1].lstrip()
+        handoff_next=after.splitlines()[0]
+        self.assertEqual(current["next_checkpoint"], active["next_action"])
+        self.assertEqual(active["next_action"], handoff_next)
+        self.assertNotIn("Packet v2", current["next_checkpoint"])
+
+    def test_change_class_and_acceptance_resume_gate(self):
+        tasks=load("state/tasks.yaml")
+        allowed={"F","S","D","O","UNCLASSIFIED_LEGACY"}
+        for task in tasks["tasks"]:
+            self.assertIn(task["change_class"], allowed, task["task_id"])
+            if task["status"]!="DONE" and task["change_class"]=="UNCLASSIFIED_LEGACY":
+                self.assertEqual(task.get("resume_gate"), "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE")
+            if task["status"]!="DONE" and task["change_class"] in {"F","S","D","O"}:
+                self.assertTrue(task.get("acceptance_authority"), task["task_id"])
+
+    def test_role_bootstrap_defers_to_sole_normative_law_router(self):
+        role=(ROOT/"docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md").read_text(encoding="utf-8")
+        self.assertIn("sole normative precedence ladder", role)
+        self.assertIn("FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md", role)
+
     def test_legacy_control_semantics_are_history_only(self):
         boot=load("state/bootstrap.json")
         self.assertTrue(boot["legacy_must_not_override_migrated_state"])
