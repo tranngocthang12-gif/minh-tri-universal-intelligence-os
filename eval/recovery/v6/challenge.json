@@ -1,0 +1,21 @@
+{
+  "schema": "minhtri-current-boot-recovery-challenge/v6",
+  "challenge_id": "ARCH-RECOVERY-PROOF-V6-20261007-C1",
+  "challenge_nonce": "mtv6-20261007-c1",
+  "purpose": "Post-merge fresh-seat proof of Blueprint -> Law -> State -> Task -> active handoff -> exact next action.",
+  "start_ref": "state/bootstrap.json",
+  "snapshot_ref": "eval/recovery/v6/historical_snapshot.json",
+  "scorer_ref": "tools/score_current_boot_recovery_v6.py",
+  "do_not_read": [
+    "eval/recovery/v6/historical_snapshot.json",
+    "eval/recovery/v6/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "exact_nested_contract": true
+  }
+}
