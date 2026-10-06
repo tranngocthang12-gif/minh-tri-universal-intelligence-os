@@ -390,7 +390,7 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Complete Claude/Grok final red-team gate; if material defects are resolved and both receipts are durable, close Foundation Closure v1 and freeze the foundation.",
+      "next_action": "Complete current boot-path Recovery Proof v4, then identical Claude/Grok Red-Team v2 receipts; freeze only after all material defects are resolved.",
       "blocker": "DEPENDENCY_ARCH_FOUNDATION_ACCEPTANCE_FREEZE_V1_NOT_DONE"
     },
     {
@@ -572,19 +572,23 @@
         "docs/vnext/red_team/",
         "state/current.yaml",
         "state/tasks.yaml",
-        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md"
+        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+        "eval/recovery/v4/",
+        "tools/score_current_boot_recovery_v4.py",
+        "tests/test_current_boot_recovery_v4.py",
+        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md"
       ],
-      "branch": "owner/start-foundation-freeze-red-team-20261006",
-      "base_sha": "28476960fada05e390f04318dcef8135a34891ec",
+      "branch": "owner/current-boot-recovery-proof-v4-20261006",
+      "base_sha": "ca107150ae7597c060cde36845d5aa8b4e65e350",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/FOUNDATION_BASELINE_V1.json / docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md / PENDING_TWO_RED_TEAM_RECEIPTS",
+      "result_ref": "PR#294 / eval/recovery/v4/challenge.json / eval/recovery/v4/historical_snapshot.json / PENDING_V4_FRESH_SEAT_RECEIPT_AND_V2_RED_TEAM",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Run the exact same frozen red-team packet independently in Claude and Grok, preserve both responses, resolve any material defects, then perform final freeze transition.",
-      "blocker": "TWO_INDEPENDENT_RED_TEAM_RECEIPTS_REQUIRED"
+      "next_action": "Run current boot-path fresh-seat Recovery Proof v4 from eval/recovery/v4/challenge.json; after deterministic PASS plus durable independence receipt, build one repaired Red-Team Packet v2 and run that identical packet independently in Claude and Grok.",
+      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED"
     }
   ]
 }

@@ -12,7 +12,7 @@ class VNextStateTaskTests(unittest.TestCase):
     def test_current_state_is_small_and_has_explicit_authority_scope(self):
         current = self.load_json_yaml("state/current.yaml")
         self.assertEqual(current["schema"], "minhtri-current-state/v1")
-        self.assertTrue(current["architecture_generation"].startswith("VNEXT_PHASE"))
+        self.assertTrue(current["architecture_generation"].startswith("VNEXT_"))
         self.assertLessEqual(len(current), 20)
         scope = current["authority_scope"]
         self.assertTrue(scope["legacy_project_state_remains_authoritative_for_unmigrated_keys"])

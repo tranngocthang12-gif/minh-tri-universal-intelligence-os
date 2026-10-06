@@ -1,0 +1,63 @@
+{
+  "schema": "minhtri-current-boot-recovery-snapshot/v4",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4",
+  "challenge_nonce": "mtc4-4d8d812f2f3b46a9916255cb3f1da21e",
+  "proof_target": "CURRENT_BOOT_PATH_AFTER_PR294_REPAIRS",
+  "expected_facts": {
+    "boot": {
+      "boot_root_ref": "state/bootstrap.json",
+      "status": "CURRENT_BOOT_ROOT",
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "current_state_ref": "state/current.yaml",
+      "task_registry_ref": "state/tasks.yaml"
+    },
+    "law": {
+      "law_precedence_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+      "law_index_catalog_ref": "docs/LAW_INDEX_20261003.md",
+      "law_index_catalog_has_independent_precedence": false
+    },
+    "active_task": {
+      "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+      "status": "IN_PROGRESS",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED",
+      "next_action": "Run current boot-path fresh-seat Recovery Proof v4 from eval/recovery/v4/challenge.json; after deterministic PASS plus durable independence receipt, build one repaired Red-Team Packet v2 and run that identical packet independently in Claude and Grok."
+    },
+    "canonicality": {
+      "chat_memory_canonical": false,
+      "unmerged_candidate_authoritative": false,
+      "pc_local_brain_canonical": false
+    },
+    "capability_truth": {
+      "historical_c3_current_path_proof": false,
+      "current_boot_path_fresh_seat_recovery_proven": false,
+      "autonomous_learning_proven": false,
+      "automatic_self_critique_proven": false,
+      "meta_learning_proven": false
+    },
+    "next_gate": {
+      "current_proof_ref": "eval/recovery/v4/challenge.json",
+      "scorer_ref": "tools/score_current_boot_recovery_v4.py",
+      "deterministic_pass_required": true,
+      "independence_provenance_required": true,
+      "durable_receipt_required": true,
+      "then_red_team_v2_required": true
+    }
+  },
+  "required_evidence_refs": [
+    "state/bootstrap.json",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+    "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
+    "docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md",
+    "eval/recovery/v4/challenge.json",
+    "eval/recovery/v4/packet.json",
+    "eval/recovery/v4/response.schema.json",
+    "tools/score_current_boot_recovery_v4.py"
+  ],
+  "note": "Frozen expected facts for Recovery Proof v4. Scoring must use this snapshot, not mutable current state, so later transitions cannot invalidate the historical proof."
+}
