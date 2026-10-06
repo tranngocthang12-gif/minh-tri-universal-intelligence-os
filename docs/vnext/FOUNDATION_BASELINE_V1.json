@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-foundation-baseline/v1",
   "status": "CANDIDATE_PENDING_RED_TEAM_AND_FREEZE",
-  "baseline_main_sha": "95e3e61cbc89251c132f9202581070b41686c731",
+  "baseline_main_sha": "28476960fada05e390f04318dcef8135a34891ec",
   "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
   "boot_root": "state/bootstrap.json",
   "current_state": "state/current.yaml",
@@ -9,11 +9,33 @@
   "consolidated_law": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "current_architecture": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
   "mechanisms": {
-    "continuity_core": "eval/recovery/v3/attempts/C3_receipt.json",
-    "single_boot_root": "state/bootstrap.json",
-    "semantic_staleness": "docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md",
-    "knowledge_fast_lane": "knowledge/FAST_LANE_V1.json",
-    "retrieval_application": "eval/retrieval_application/v1/results/FRESH_SEAT_001_receipt.json"
+    "continuity_core": {
+      "ref": "eval/recovery/v3/attempts/C3_receipt.json",
+      "attested_main_sha": "72c1b784dc813e621de73728ed2bdd502eeb1249",
+      "proof_scope": "C3_FIXTURE_ONLY",
+      "inherits_to_baseline_sha": false
+    },
+    "single_boot_root": {
+      "ref": "state/bootstrap.json",
+      "attested_main_sha": "1e91da934be8ad97c2e8b7051be4c6027717c66c",
+      "proof_scope": "CI_AND_CANONICAL_MERGE"
+    },
+    "semantic_staleness": {
+      "ref": "docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md",
+      "attested_main_sha": "9932b0c1061242473ad9b65cbfebb5ee161fb835",
+      "proof_scope": "DETERMINISTIC_GUARD_PRIMITIVE"
+    },
+    "knowledge_fast_lane": {
+      "ref": "knowledge/FAST_LANE_V1.json",
+      "attested_main_sha": "b3a9b4cea0f9b17a7a53da14a8fa2d2a4c040e3e",
+      "proof_scope": "BOUNDED_VALIDATION_CONTRACT"
+    },
+    "retrieval_application": {
+      "ref": "eval/retrieval_application/v1/results/FRESH_SEAT_001_receipt.json",
+      "attested_main_sha": "b30ed5b532b1448cdfe4c1b8fac92bd241816cc5",
+      "proof_scope": "FIXTURE_ONLY",
+      "inherits_to_baseline_sha": false
+    }
   },
   "freeze_gate": {
     "law_consolidation_merged_required": true,
