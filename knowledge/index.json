@@ -87,6 +87,24 @@
       "statement": "Legacy PR #233 records a lexical-range caution that nissaya/nissāya can mean support or reliance and is not intrinsically identical with attachment; the exact relation among nissaya, anissita/anissaya, upādāna, nivesana, and samuggahīta remains open for dedicated lexical review."
     },
     {
+      "id": "bud:pr168:milindapanha-reasoning-lab-wave4-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-pr168-milindapanha-reasoning-lab-wave4-evidence.json",
+      "statement": "PR #168 contains a Milindapañha reasoning lab preserved as later/paracanonical comparative evidence only; it must not override early-discourse evidence."
+    },
+    {
+      "id": "bud:pr168:parallel-translation-lexical-wave4-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-pr168-parallel-translation-lexical-wave4-evidence.json",
+      "statement": "PR #168 contains cross-recensional alignment, translation/contradiction, stress-test, and Aṭṭhakavagga lexical artifacts preserved for later domain review; their conclusions are not automatically promoted."
+    },
+    {
       "id": "bud:pr168:sn22-sn35-sn45-sn46-structural-index-bundle-wave3b",
       "domain": "buddhist_thought",
       "record_type": "evidence",

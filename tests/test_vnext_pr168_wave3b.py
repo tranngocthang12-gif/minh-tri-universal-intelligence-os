@@ -36,7 +36,7 @@ class PR168Wave3BTests(unittest.TestCase):
         tasks = self.load("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in tasks["tasks"]}
         task = by_id["ARCH-VNEXT-SALVAGE-PR168-WAVE4"]
-        self.assertEqual(task["status"], "READY")
+        self.assertIn(task["status"], {"READY", "IN_PROGRESS", "DONE"})
         self.assertIn("MILINDAPANHA", " ".join(task["scope"]))
 
     def test_bundle_is_in_generated_index(self):

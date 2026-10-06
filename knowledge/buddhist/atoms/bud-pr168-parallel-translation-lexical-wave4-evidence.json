@@ -1,0 +1,43 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:pr168:parallel-translation-lexical-wave4-evidence",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #168 contains cross-recensional alignment, translation/contradiction, stress-test, and Aṭṭhakavagga lexical artifacts preserved for later domain review; their conclusions are not automatically promoted.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/pr168/wave4/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md",
+    "knowledge/buddhist/evidence/pr168/wave4/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
+    "knowledge/buddhist/evidence/pr168/wave4/EARLY_BUDDHIST_PARALLEL_TRANSLATION_CONTRADICTION_V0_6_20261004.md",
+    "knowledge/buddhist/evidence/pr168/wave4/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#168",
+      "locator": "ARTHAPADA_AGAMA_MILINDA_STRESS_TEST blob 9fff3fb9d37402282784f1d1dde4f1075347a95f"
+    },
+    {
+      "source": "PR#168",
+      "locator": "CLAUSE_ALIGNMENT blob 63171984f278321780d4f72bf8e670cdfd7bc981"
+    },
+    {
+      "source": "PR#168",
+      "locator": "PARALLEL_TRANSLATION_CONTRADICTION blob 4c53362792339565c6f26bc8fa68bc05b9dc0392"
+    },
+    {
+      "source": "PR#168",
+      "locator": "ATTHAKAVAGGA_LEXICAL_PASS blob f7e2a0a9f0cff6eb9d9bea36992716f81d0ecffd"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 168,
+    "source_head_sha": "80889a3e6b83f1cb4742b1abe3e796ddfc42ce76",
+    "salvaged_on_base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+    "salvage_wave": "4",
+    "promotion_requirement": "BUDDHIST_DOMAIN_T1_REVIEW"
+  }
+}
