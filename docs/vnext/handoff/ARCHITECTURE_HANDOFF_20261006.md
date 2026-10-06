@@ -41,8 +41,15 @@
 - Continuity & Handoff Core v1 is therefore not complete.
 - PR169 salvage has not resumed.
 
+## CURRENT TASK STATE
+- `ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1`: IN_PROGRESS.
+- `ARCH-VNEXT-SALVAGE-PR169`: READY but paused behind this foundation build.
+- `ARCH-VNEXT-PHASE4-GRADED-RUN`: BLOCKED pending independent fresh seat.
+- PR #168 salvage/final disposition/reconciliation: DONE.
+
 ## TRUTH BOUNDARY
 - Static CI can prove schema/routing/consistency checks, not genuine model behavior.
+- Genuine zero-chat continuation proof has not yet passed.
 - A same-seat self-test is not a fresh-seat recovery proof.
 - No new canonical authority is being created; task registry remains task truth and handoff packets are referenced continuation evidence.
 
