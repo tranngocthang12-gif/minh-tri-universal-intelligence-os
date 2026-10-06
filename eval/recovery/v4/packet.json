@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-current-boot-recovery-packet/v4",
+  "purpose": "Independent current-path recovery proof after Single Boot Root, Law Consolidation, and Round-1 red-team repairs.",
+  "challenge_ref": "eval/recovery/v4/challenge.json",
+  "canonical_inputs": [
+    "state/bootstrap.json",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+    "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
+    "docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md"
+  ],
+  "response_schema_ref": "eval/recovery/v4/response.schema.json",
+  "scorer_ref": "tools/score_current_boot_recovery_v4.py",
+  "snapshot_excluded": true,
+  "authoring_seat_must_not_self_grade": true,
+  "completion_rule": {
+    "deterministic_score": "PASS",
+    "independence_provenance": "PRESENT",
+    "durable_receipt_merged": true,
+    "all_required": true
+  }
+}
