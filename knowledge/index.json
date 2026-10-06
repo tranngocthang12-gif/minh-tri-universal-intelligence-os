@@ -87,6 +87,15 @@
       "statement": "Legacy PR #233 records a lexical-range caution that nissaya/nissāya can mean support or reliance and is not intrinsically identical with attachment; the exact relation among nissaya, anissita/anissaya, upādāna, nivesana, and samuggahīta remains open for dedicated lexical review."
     },
     {
+      "id": "bud:pr168:structural-source-audit-bundle-wave3a",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-pr168-structural-source-audit-bundle-wave3a.json",
+      "statement": "PR #168 contributed seven structured early-Buddhist source/index/translation-audit artifacts preserved exactly in Wave 3A; preservation does not validate their completeness or doctrinal conclusions."
+    },
+    {
       "id": "bud:sn22.64:mannati-mara-bondage",
       "domain": "buddhist_thought",
       "record_type": "claim",
