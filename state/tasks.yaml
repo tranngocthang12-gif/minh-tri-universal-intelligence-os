@@ -563,7 +563,7 @@
     {
       "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
       "title": "Accept and freeze the foundation after final independent red-team",
-      "status": "IN_PROGRESS",
+      "status": "BLOCKED",
       "scope": [
         "docs/vnext/FOUNDATION_BASELINE_V1.json",
         "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
@@ -588,10 +588,35 @@
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS",
+      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS / PR#299 CLOSED_UNMERGED_SUPERSEDED_BY_MASTER_BLUEPRINT_DIRECTIVE",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Freeze Red-Team Packet v2 against the repaired post-C5 canonical state, then run the identical packet independently in Claude and Grok. Record both receipts under the red-team receipt contract and resolve any material defects before final foundation freeze.",
-      "blocker": "TWO_V2_RED_TEAM_RECEIPTS_AND_MATERIAL_DEFECT_RESOLUTION_REQUIRED"
+      "next_action": "Resume Foundation Freeze only after Master Blueprint v1 is independently reviewed, Owner-accepted, merged to protected main, and fresh-seat recovery proves the Blueprint -> Law -> State -> Task route.",
+      "blocker": "MASTER_BLUEPRINT_V1_ACCEPTANCE_AND_RECOVERY_PROOF_REQUIRED"
+    },
+    {
+      "task_id": "ARCH-MASTER-BLUEPRINT-V1",
+      "title": "Design and validate the project-wide Master Architecture / Master Blueprint",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "state/bootstrap.json",
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/red_team/"
+      ],
+      "branch": "owner/master-blueprint-v1-20261006",
+      "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [
+        "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted"
+      ],
+      "result_ref": "PENDING_MASTER_BLUEPRINT_REVIEW",
+      "handoff_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+      "next_action": "Run Supervisor/Inspector consistency audit across Blueprint, consolidated law, boot root, current state, task registry, and existing vNext architecture; then freeze one review packet for identical independent Claude and Grok critique.",
+      "blocker": null
     }
   ]
 }
