@@ -1,5 +1,7 @@
 # Foundation Acceptance & Freeze v1 handoff
 
+**STATUS: HELD — SUPERSEDED AS ACTIVE FRONTIER BY OWNER MASTER BLUEPRINT DIRECTIVE UNTIL BLUEPRINT ACCEPTANCE + RECOVERY PROOF v6.**
+
 **TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1
 
 ## DONE
@@ -18,11 +20,7 @@
 - Foundation is not frozen.
 
 ## NEXT ACTION
-- Merge this C5 transition so current state, task registry, baseline, truth matrix, debt register, and handoff agree.
-- From that merged protected-main SHA, create one immutable Red-Team Packet v2.
-- Run that identical packet independently in Claude and Grok.
-- Persist both receipts under the red-team receipt contract.
-- Resolve any material defects before final Foundation freeze.
+Resume this freeze path only after Master Blueprint v1 has independent final review, explicit Owner acceptance, protected merge, and deterministic post-merge Recovery Proof v6.
 
 ## REQUIRED GATES
 - C4 FAIL remains immutable historical evidence.

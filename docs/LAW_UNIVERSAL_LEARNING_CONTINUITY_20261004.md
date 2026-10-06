@@ -12,13 +12,17 @@ MINH TRÍ must not depend on chat memory for learning continuity. Every material
 
 Before material work, every chat/seat must fresh-read the current authority chain from live canonical GitHub:
 
-1. `docs/PROJECT_STATE.json`;
-2. the `current_law_index` routed by PROJECT_STATE;
-3. this Universal Learning Continuity Law;
-4. the `current_architecture` routed by PROJECT_STATE;
-5. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`;
-6. for learning work, the active learning checkpoint/plan for that track;
-7. the task/domain sources needed for the work.
+1. `state/bootstrap.json`;
+2. the current Master Blueprint routed by the boot root;
+3. the authoritative law-precedence router;
+4. this Universal Learning Continuity Law;
+5. `state/current.yaml` and `state/tasks.yaml`;
+6. the current architecture routed by current state;
+7. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`;
+8. for learning work, the active learning task/checkpoint routed by the task registry;
+9. the task/domain sources needed for the work.
+
+Legacy `docs/PROJECT_STATE.json`, `docs/RECOVERY_MANIFEST.json`, and superseded dated checkpoints remain historical/unmigrated compatibility records only and cannot override migrated Blueprint/Law/State/Task authority.
 
 A pasted SHA, model memory, chat summary, or user restatement is not sufficient current-state proof when live canonical state is available.
 
@@ -139,13 +143,17 @@ Issue #171 is the originating durable Owner directive/blocker record for this la
 
 The following current authority surfaces must route this law and agree on the active learning checkpoint semantics:
 
-- PROJECT_STATE;
-- current Law Index;
+- `state/bootstrap.json`;
+- current Master Blueprint;
+- authoritative law-precedence router;
+- `state/current.yaml`;
+- `state/tasks.yaml`;
 - current Architecture;
 - role bootstrap;
-- Recovery Manifest;
 - consistency tests;
-- active learning checkpoint/registry records.
+- active learning task/checkpoint records.
+
+Legacy PROJECT_STATE and Recovery Manifest may retain historical or unmigrated runtime data, but they are not current learning-authority surfaces for migrated state.
 
 A routing mismatch is a project consistency defect and must fail closed.
 

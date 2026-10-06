@@ -1,0 +1,17 @@
+{
+  "schema": "minhtri-master-blueprint-red-team-packet-manifest/v1",
+  "packet_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
+  "review_target_candidate_commit": "c3fed9bd60a02b30e61e482d6b08da5589588d43",
+  "packet_content_sha": "git-blob-sha1:a4b7924151a5d171b87b97b541b8c0b826e4539a",
+  "packet_content_sha_algorithm": "git-blob-sha1",
+  "required_critics": [
+    "CLAUDE",
+    "GROK"
+  ],
+  "identical_packet_binding_required": true,
+  "architect_self_review_is_independent_evidence": false,
+  "supervisor_same_seat_audit_is_independent_evidence": false,
+  "owner_acceptance_required_after_material_defect_resolution": true,
+  "protected_merge_required_after_owner_acceptance": true,
+  "fresh_seat_recovery_proof_required_after_merge": true
+}

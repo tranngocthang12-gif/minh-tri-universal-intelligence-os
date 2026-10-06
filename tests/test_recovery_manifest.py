@@ -12,20 +12,26 @@ class RecoveryManifestConsistency(unittest.TestCase):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
 
         self.assertEqual(manifest["project"], state["project"])
-        for rel in manifest["authority_order"]:
+        for rel in manifest["historical_authority_order"]:
+            self.assertTrue((ROOT / rel).is_file(), rel)
+        for rel in manifest["migrated_control_authority"]:
             self.assertTrue((ROOT / rel).is_file(), rel)
         for key, expected in manifest["required_state"].items():
             self.assertIn(key, state)
             self.assertEqual(state[key], expected, key)
 
-    def test_manifest_points_to_current_authority_files(self):
+    def test_manifest_is_historical_for_migrated_control_authority(self):
         manifest = json.loads((ROOT / "docs" / "RECOVERY_MANIFEST.json").read_text(encoding="utf-8"))
-        state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
-        self.assertEqual(manifest["authority_order"][0], "docs/PROJECT_STATE.json")
-        self.assertEqual(state["current_law_index"], manifest["authority_order"][1])
-        self.assertEqual(state["universal_learning_continuity_law"], manifest["authority_order"][2])
-        self.assertEqual(state["current_architecture"], manifest["authority_order"][3])
-        self.assertEqual(state["role_bootstrap"], manifest["authority_order"][4])
+        self.assertNotIn("authority_order", manifest)
+        self.assertEqual(manifest["current_authority_root"], "state/bootstrap.json")
+        self.assertEqual(
+            manifest["current_authority_status"],
+            "HISTORICAL_COMPATIBILITY_ONLY_FOR_MIGRATED_CONTROL_STATE",
+        )
+        self.assertTrue(manifest["must_not_override_migrated_authority"])
+        self.assertEqual(manifest["migrated_control_authority"][0], "state/bootstrap.json")
+        self.assertIn("docs/vnext/MASTER_BLUEPRINT_V1_20261006.md", manifest["migrated_control_authority"])
+        self.assertFalse(manifest["owner_learning_track_buddhist_thought"]["current_authority"])
 
     def test_transport_state_matches_implemented_capabilities(self):
         state = json.loads((ROOT / "docs" / "PROJECT_STATE.json").read_text(encoding="utf-8"))
@@ -169,8 +175,9 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["protocols"]["learning_assurance"], "minhtri-learning-assurance/v1.4")
         self.assertIn("adaptive deliberation", law.lower())
         self.assertIn("Learning Assurance v1.4", architecture)
-        self.assertIn("LAW_INDEX_20261003.md", bootstrap)
-        self.assertIn("ARCHITECTURE_NOW_20261003.md", bootstrap)
+        self.assertIn("state/bootstrap.json", bootstrap)
+        self.assertIn("MASTER BLUEPRINT", bootstrap)
+        self.assertIn("AUTHORITATIVE LAW PRECEDENCE", bootstrap)
         self.assertIn("HISTORICAL ARCHITECTURE ANALYSIS", roadmap)
 
     def test_current_liveness_is_fresh_observation_not_persistence_claim(self):

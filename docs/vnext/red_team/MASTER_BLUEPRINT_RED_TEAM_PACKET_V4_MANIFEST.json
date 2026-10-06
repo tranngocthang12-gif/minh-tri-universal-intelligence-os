@@ -1,0 +1,22 @@
+{
+  "schema": "minhtri-master-blueprint-red-team-packet-manifest/v4",
+  "packet_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V4_20261007.md",
+  "review_target_candidate_commit": "bec2d177b7aee1a38470a84cfe95395c85d7a9d1",
+  "packet_content_sha": "git-blob-sha1:c3fadb453a34f520eb893263125621328dcba041",
+  "packet_content_sha_algorithm": "git-blob-sha1",
+  "supersedes_packet_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V3_20261007.md",
+  "supersession_reason": "CLAUDE_AND_GROK_V3_MATERIAL_DEFECT_REPAIRS_REQUIRE_NEW_FROZEN_TARGET",
+  "required_critics": [
+    "CLAUDE",
+    "GROK"
+  ],
+  "identical_packet_binding_required": true,
+  "target_ci_required": "Security P0 success on exact review_target_candidate_commit",
+  "target_ci_observed_run": 37521305725,
+  "target_ci_observed_conclusion": "success",
+  "architect_self_review_is_independent_evidence": false,
+  "supervisor_same_seat_audit_is_independent_evidence": false,
+  "owner_acceptance_required_after_material_defect_resolution": true,
+  "protected_merge_required_after_owner_acceptance": true,
+  "deterministic_recovery_v6_required_after_merge": true
+}

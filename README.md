@@ -1,9 +1,9 @@
 # MINH TRÍ — Universal Intelligence OS
 
-**Current phase:** `FOUNDATION_PROTOTYPE`.  
-**Canonical state:** [docs/PROJECT_STATE.json](docs/PROJECT_STATE.json).  
-**Current architecture:** [docs/ARCHITECTURE_NOW_20261003.md](docs/ARCHITECTURE_NOW_20261003.md).  
-**Current law router:** [docs/LAW_INDEX_20261003.md](docs/LAW_INDEX_20261003.md).
+**Current migrated authority root:** `state/bootstrap.json`.  
+**Current state:** `state/current.yaml`.  
+**Task registry:** `state/tasks.yaml`.  
+**Master Blueprint / law / architecture:** resolve dynamically from the boot root and current state. Legacy `docs/PROJECT_STATE.json` and `docs/RECOVERY_MANIFEST.json` are compatibility/history for unmigrated keys and do not override migrated authority.
 
 MINH TRÍ is a provider-neutral, evidence-first learning/control plane built around one durable Owner ledger and replaceable AI seats. GitHub is the durable project authority; chat is not canonical truth.
 
@@ -27,11 +27,14 @@ The ChatGPT-to-Owner-PC read-only connector has been runtime-proven in bounded h
 
 For important work, read in this order:
 
-1. `docs/PROJECT_STATE.json`
-2. the Law Index referenced by PROJECT_STATE
-3. the architecture record referenced by PROJECT_STATE
-4. `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
-5. the task/domain source
+1. `state/bootstrap.json`
+2. the current Master Blueprint
+3. the authoritative law-precedence router
+4. `state/current.yaml`
+5. `state/tasks.yaml`
+6. the current architecture
+7. the active task handoff
+8. task/domain sources and required evidence
 
 Historical documents remain provenance only after they are superseded.
 
@@ -60,7 +63,7 @@ The simple CLI can operate without the remote connector. Secure MCP/runtime func
 
 ## Foundation status
 
-The foundation core is built, but runtime assurance is incomplete. The current blocking gates are maintained in `PROJECT_STATE.json` and summarized in the current architecture. They currently include old tunnel-key revocation evidence, boot/reboot persistence, endpoint-protection/BitLocker unknowns, genuine fresh-seat validation, independent witness authority, real external critic evidence, and empirical validation of Learning Assurance v1.4.
+Foundation status and architecture gates are resolved from `state/current.yaml` and `state/tasks.yaml` through the boot root. Legacy `PROJECT_STATE.json` may still carry unmigrated runtime/liveness fields, but it is not the current authority for migrated Foundation phase, architecture, task, or next-action state.
 
 Real provider/domain integration, real-data validation, real business-loop validation, and external actions are not yet production-enabled.
 

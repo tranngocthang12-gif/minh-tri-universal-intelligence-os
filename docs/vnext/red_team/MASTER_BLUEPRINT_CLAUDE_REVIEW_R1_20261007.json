@@ -1,0 +1,124 @@
+{
+  "critic": "CLAUDE",
+  "provider": "Claude",
+  "round": "MASTER_BLUEPRINT_V1_INDEPENDENT_REVIEW",
+  "packet_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
+  "review_target_candidate_commit": "c3fed9bd60a02b30e61e482d6b08da5589588d43",
+  "packet_content_sha": "git-blob-sha1:a4b7924151a5d171b87b97b541b8c0b826e4539a",
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "findings": [
+    {
+      "finding_id": "MB-F01",
+      "severity": "HIGH",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md §3 invariant 13 (line 59: 'No autonomous merge or self-modification in Foundation'), §10 Gate 7 (line 317: independent review required for 'architecture'), Gate 8 (line 320: 'Approver' undefined), §11 Class S (line 346: 'design review, supervision, validation, protected merge' — no approver, no independent review); docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md §4.7 line 154 ('does not authorize autonomous merge'); docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md lines 72-78 (operating seat may 'merge' without per-PR Owner approval); docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md ('Builder may not self-certify implementation').",
+      "defect": "For Class S (task-registry schema, knowledge schema, core pipeline interfaces) the Blueprint names no approver and requires no independent or different-seat gate; Gate 7 says independent review is required for 'architecture' while §11 Class S omits it; invariant 13 forbids autonomous merge only 'in Foundation' whereas the subordinate vNext architecture forbids it entirely; and a live Owner delegation already lets the operating ChatGPT seat merge non-foundation PRs. The Architect also self-classifies the change class with no recorded classification artifact.",
+      "consequence": "One seat can design, build, self-supervise, validate via its own tests, classify the change as 'Structural', and merge a change to canonical-state schemas without any second party — a self-certification path that contradicts invariant 11 and the Owner's unconditional no-self-certification directive, and a plausible authority-leakage route from Class F into Class S.",
+      "smallest_repair": "In §11 name the acceptance authority for Class S/D/O (Owner, or an Owner-designated approver that is not the Builder seat) and require independent or different-seat review for Class S changes touching canonical state/schemas; align Gate 7 wording with §11; reword invariant 13 to forbid autonomous merge for all classes unless Owner creates an explicit delegated-merge policy (consistent with vNext §4.7); require a `change_class` field in each task registry entry so Supervisor/critic can audit classification."
+    },
+    {
+      "finding_id": "MB-F02",
+      "severity": "MEDIUM",
+      "evidence_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md lines 7-8 ('state/bootstrap.json -> state/current.yaml -> state/tasks.yaml -> current law/bootstrap pointers -> ...', no Master Blueprint) vs same file §8.1, §8.5, §10, §11; docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md §4.6 lines 136-137 (boot target omits Master Blueprint, law after state/tasks); docs/LAW_INDEX_20261003.md 'Current boot route' (omits Master Blueprint); docs/vnext/MASTER_BLUEPRINT_V1_20261006.md §12 mandatory order; docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md; docs/vnext/MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1_20261006.md S5 'PASS FOR CANDIDATE AFTER REPAIR'.",
+      "defect": "Current authority documents state at least three different recovery orders. The Blueprint §12 and Recovery Entrypoint read Blueprint and law before state; the role-bootstrap header route, the current vNext architecture §4.6, and the Law Index boot route omit the Master Blueprint and read state/tasks before law. The Supervisor S5 claim that the route is unified is overstated; the candidate edited the role bootstrap and vNext architecture but left these routes unaligned.",
+      "consequence": "Fresh seats following different current documents recover in different orders, some never resolving the Blueprint; a strict seat must fail closed on the conflict while a lax seat proceeds — materially different behavior between seats and a stale route surviving inside stable law.",
+      "smallest_repair": "Align the three divergent route statements to the §12 order (bootstrap -> Master Blueprint -> law precedence -> current state -> task registry -> current architecture -> active handoff), or add one sentence to each declaring §12/RECOVERY_ENTRYPOINT as the sole normative order and marking the local route text informative; add a test asserting each route mention names the Master Blueprint before current state."
+    },
+    {
+      "finding_id": "MB-F03",
+      "severity": "MEDIUM",
+      "evidence_ref": "state/bootstrap.json ('legacy_mode': 'UNMIGRATED_KEYS_OR_HISTORY_ONLY'); state/current.yaml authority_scope ('legacy_project_state_remains_authoritative_for_unmigrated_keys': true, migrated key list); docs/PROJECT_STATE.json keys 'current_law_index', 'current_architecture'='docs/ARCHITECTURE_NOW_20261003.md', 'open_foundation_gates', 'learning_assurance_next_checkpoint', 'self_upgrade_next_checkpoint', 'owner_learning_track_buddhist_thought_next_checkpoint'; docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md line 13 (Status: 'CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE'), line 114, line 231, line 456 ('Always read CURRENT/NEXT from the live checkpoint plus PROJECT_STATE and RECOVERY_MANIFEST').",
+      "defect": "Demotion of legacy state is keyed by exact key name. PROJECT_STATE.json keys that carry routing or next-action semantics under different names ('current_law_index', many '*_next_checkpoint', 'open_foundation_gates') are therefore still 'authoritative for unmigrated keys', and stable-law prose in the role bootstrap still directs seats to PROJECT_STATE / ARCHITECTURE_NOW_20261003 / RECOVERY_MANIFEST for current capability, status and CURRENT/NEXT of learning tracks.",
+      "consequence": "A legacy file plausibly remains a second current authority route for learning-track continuation and for 'current architecture/capability', contradicting invariants 5-7 (one current-state authority, one task registry) and risking split-brain next-action between tasks.yaml and PROJECT_STATE.",
+      "smallest_repair": "Add to state/bootstrap.json or current.yaml a rule that any legacy key expressing law routing, architecture pointer, active work, next checkpoint/next action, or capability status is history-only regardless of key name (optionally enumerate 'current_law_index', '*_next_checkpoint', 'open_foundation_gates'); replace the role-bootstrap Status line and lines 114/231/456 references to PROJECT_STATE/ARCHITECTURE_NOW/RECOVERY_MANIFEST with the boot-root route."
+    },
+    {
+      "finding_id": "MB-F04",
+      "severity": "MEDIUM",
+      "evidence_ref": "state/tasks.yaml ARCH-FOUNDATION-CLOSURE-V1 (status IN_PROGRESS; next_action 'Complete identical Claude/Grok Red-Team v2 receipts ... then close Foundation Closure v1 and freeze the foundation'; handoff_ref docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md whose TASK_ID is ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1); docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md NEXT ACTION ('create one immutable Red-Team Packet v2 ... Resolve any material defects before final Foundation freeze'); docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md (no hold/superseded marker); docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md ('Foundation Freeze is held').",
+      "defect": "The Owner's freeze hold is recorded only on ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1. The umbrella task ARCH-FOUNDATION-CLOSURE-V1 remains IN_PROGRESS with a next_action instructing Red-Team v2 then freeze, its handoff_ref points to a stale handoff for a different, DONE task, the freeze handoff's NEXT ACTION still says proceed to Red-Team v2, and the pre-Blueprint freeze packet carries no hold marker.",
+      "consequence": "Stale records describe a freeze path that the Owner directive and Blueprint §16 step 1 have held; a seat selecting the next task (per the AUTO contract) could follow the CLOSURE-V1 next_action or the freeze handoff and run or act on the pre-Blueprint freeze route — the 'stale/historical records overriding current authority' risk the packet names.",
+      "smallest_repair": "Update ARCH-FOUNDATION-CLOSURE-V1 blocker/next_action to 'held pending Master Blueprint v1 acceptance and recovery proof' and point its handoff_ref to a current handoff; add a one-line HELD/SUPERSEDED-BY-MASTER-BLUEPRINT-DIRECTIVE status to FOUNDATION_ACCEPTANCE_FREEZE_V1.md and FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md."
+    },
+    {
+      "finding_id": "MB-F05",
+      "severity": "MEDIUM",
+      "evidence_ref": "git diff 608386ba..c3fed9bd changed files vs state/tasks.yaml ARCH-MASTER-BLUEPRINT-V1 scope: out-of-scope changes to docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md (stable law §8.1/§8.5/§10/§11, 70 lines), docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md, docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md, docs/vnext/MASTER_BLUEPRINT_GAP_AUDIT_20261006.md, tests/test_foundation_freeze_prep_v1.py, tests/test_recovery_manifest.py, tests/test_master_blueprint_v1.py; docs/vnext/handoff/MASTER_BLUEPRINT_V1.md DONE list; Blueprint Layer F ('task scope vs changed artifacts') and §6 Builder ('remain inside task scope'); MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1 (no scope check recorded).",
+      "defect": "The candidate modifies Stable Owner Law (role bootstrap), the recovery entrypoint, the current vNext architecture and tests outside the registered task scope; the Supervisor pass did not record a scope-vs-changed-artifacts check; and the handoff does not enumerate these law/continuity amendments as items bundled into 'Master Blueprint v1 acceptance'.",
+      "consequence": "The Blueprint's own scope-discipline and supervision controls are shown not operating on the Blueprint PR itself, and Owner acceptance framed as 'accept Master Blueprint v1' may silently canonicalize unlisted Stable Law and recovery-route edits — a false-acceptance-scope risk.",
+      "smallest_repair": "Add the changed paths to the ARCH-MASTER-BLUEPRINT-V1 scope (or record a scope amendment), list the bundled law/continuity amendments explicitly in the handoff DONE section and in the Owner acceptance request, and have the Supervisor audit record an explicit scope-vs-changed-files check."
+    },
+    {
+      "finding_id": "MB-F06",
+      "severity": "MEDIUM",
+      "evidence_ref": "state/tasks.yaml ARCH-MASTER-BLUEPRINT-V1 next_action ('After PR #300 exact current head passes required CI, run the identical ... Packet v1 independently in Claude and Grok ...') vs docs/vnext/handoff/MASTER_BLUEPRINT_V1.md NEXT ACTION ('Repair only compatibility/test drift ... then bind the independent review packet to the exact latest candidate commit ... Only then send'); at c3fed9bd the in-repo packet/manifest still target 7e02885f (content sha 80be13c3...); docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md steps 8-10; Blueprint §9 and §12 ('exact next action').",
+      "defect": "The registry next_action and the handoff NEXT ACTION for the active task differ: the registry omits the mandatory packet rebind step, and at the review target the in-repo packet still pointed at a stale commit. The Blueprint defines no tie-break between registry `next_action` and handoff `NEXT ACTION` when they diverge.",
+      "consequence": "A seat following the registry would have dispatched a packet whose target commit and digest did not match the candidate, producing an invalid review binding (false acceptance evidence); two seats could take materially different next actions.",
+      "smallest_repair": "State in Blueprint §9/§12 which record carries the exact next action (handoff NEXT ACTION) and require registry next_action to be a consistent summary or pointer; extend tools/validate_continuity_handoff.py to flag a registry next_action that does not reference the handoff, and add a test that the in-repo packet/manifest target equals the commit being presented for review."
+    },
+    {
+      "finding_id": "MB-F07",
+      "severity": "MEDIUM",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md §7 line 236 ('Normative hierarchy' with 9 rungs incl. 'Handoff for task continuity' and 'Generated views / reports') vs §8.1 ('not a second law-precedence router') and §16 step 5 ('without duplicating law'); docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md Precedence (8 rungs incl. 'Historical/candidate records as evidence/provenance only', lacking handoff and generated-view rungs).",
+      "defect": "The Blueprint presents its own ladder labeled 'Normative hierarchy' whose rungs differ from the consolidated law ladder (two rungs absent from law; one law rung absent from the Blueprint), while claiming not to be a precedence router.",
+      "consequence": "Conflict-resolution step 'compare authority level' can yield different answers depending on which ladder a seat uses (e.g., historical/candidate records vs handoffs vs generated views), creating inconsistent law interpretation and a de facto second precedence source.",
+      "smallest_repair": "Relabel §7 as an informative restatement that defers to FOUNDATION_LAW_CONSOLIDATED_V1 as the sole normative ladder, and either add the handoff/generated-view rungs to the consolidated law ladder or drop them from §7 so exactly one ladder exists."
+    },
+    {
+      "finding_id": "MB-F08",
+      "severity": "LOW",
+      "evidence_ref": "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md lifecycle (no AUTHORIZE, no INDEPENDENT REVIEW stage); docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md (AUTHORIZE present); Blueprint §10 (TASK AUTHORIZE, OBSERVE); docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md 'Master Blueprint governance' lifecycle (no AUTHORIZE).",
+      "defect": "Four current documents state four non-identical lifecycle strings; the normative law version omits the task-authorization gate.",
+      "consequence": "Minor interpretive drift about whether a bounded task must exist before build; mitigated by §8 continuity law.",
+      "smallest_repair": "Make the consolidated law lifecycle string identical to Blueprint §10 and note in the Owner directive that its summary line is abbreviated."
+    },
+    {
+      "finding_id": "MB-F09",
+      "severity": "LOW",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md §2 order (item 2 Master Blueprint before item 3 laws) vs §7/§8.1 (Stable Law constrains Blueprint).",
+      "defect": "§2 lists the Blueprint before laws in the 'correct order' without stating that this is design sequencing, not authority.",
+      "consequence": "A seat may read §2 as placing structure above law, contrary to §8.1.",
+      "smallest_repair": "Add one sentence to §2: 'This is a design sequence; authority precedence is governed by §7-§8.1 and the consolidated law.'"
+    },
+    {
+      "finding_id": "MB-F10",
+      "severity": "LOW",
+      "evidence_ref": "Blueprint §6 Owner ('explicit rejection of material critic findings'); OWNER_DECISION_AUTO_TOTAL_ARCHITECT stop condition ('rejecting a CRITICAL/HIGH independent finding without repair'); docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json freeze_rule (CRITICAL/HIGH only; field 'packet_target_main_sha'); packet 'Required verdict' (MEDIUM blocks acceptance); MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json ('review_target_candidate_commit').",
+      "defect": "Thresholds for who may reject a material finding and what blocks acceptance differ (MEDIUM blocks per packet; Owner needed only for CRITICAL/HIGH per AUTO contract and receipt contract), and the receipt contract's binding field names do not match the Blueprint manifest's.",
+      "consequence": "The Architect seat could disposition MEDIUM findings as REJECT_WITH_REASON without Owner, contrary to Blueprint §6; receipt binding may be ambiguous.",
+      "smallest_repair": "State one rule (e.g., CRITICAL/HIGH/MEDIUM rejection requires Owner; LOW may be dispositioned by the project) in the Blueprint §13 and the receipt contract, and add 'review_target_candidate_commit' as an accepted binding field."
+    },
+    {
+      "finding_id": "MB-F11",
+      "severity": "LOW",
+      "evidence_ref": "state/bootstrap.json ('resolve_law_precedence_from': 'state/bootstrap.json:law_precedence', 'resolve_master_blueprint_from': 'state/bootstrap.json:master_blueprint') vs state/current.yaml authority_scope.this_file_is_authoritative_for including 'law_precedence' and 'master_blueprint'; Blueprint §9 line 291 ('If two current files claim the same authority, this is a defect'); equality enforced by tests/test_single_boot_root_v1.py and tests/test_master_blueprint_v1.py.",
+      "defect": "Both the boot root and current state declare authority over the same law-precedence and Master Blueprint pointers; divergence is prevented only by CI equality tests.",
+      "consequence": "Declarative dual authority contradicts the Blueprint's own rule; outside CI a seat cannot tell which file governs if values diverge (mitigated by fail-closed guidance in the recovery entrypoint).",
+      "smallest_repair": "Move 'law_precedence' and 'master_blueprint' out of current.yaml's `this_file_is_authoritative_for` into a `mirrors_boot_root_pointers` list, keeping the equality tests."
+    },
+    {
+      "finding_id": "MB-F12",
+      "severity": "LOW",
+      "evidence_ref": "state/tasks.yaml ARCH-MASTER-BLUEPRINT-V1 'supersedes': ['ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted'].",
+      "defect": "A free-text sentence is stored in a task-id list field, and semantically the Blueprint task precedes rather than supersedes the freeze task.",
+      "consequence": "Tooling resolving supersession by id cannot match it; a seat could misread the freeze task as superseded/STALE.",
+      "smallest_repair": "Set 'supersedes' to [] and record the frontier relation in 'dependencies' of ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 or in next_action prose."
+    },
+    {
+      "finding_id": "MB-F13",
+      "severity": "LOW",
+      "evidence_ref": "MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json ('fresh_seat_recovery_proof_required_after_merge': true); Blueprint §13, §16 step 12, §18; tools/score_current_boot_recovery_v5.py and eval/recovery/v5/historical_snapshot.json (expected facts contain no Master Blueprint fact); handoff REQUIRED GATES.",
+      "defect": "The required post-merge fresh-seat proof of the Blueprint -> Law -> State -> Task -> next-action route has no defined deterministic instrument; the existing v5 snapshot grades a pre-Blueprint route.",
+      "consequence": "Risk that a prose-only or ad hoc recovery is later accepted as proof (the C1/C2/C4 failure pattern), or that acceptance is delayed while the instrument is improvised.",
+      "smallest_repair": "Register in the handoff that a v6 challenge/snapshot including master_blueprint, law_precedence, current_state, active_task and exact next_action facts is the proof instrument, reusing the v5 scorer pattern."
+    },
+    {
+      "finding_id": "MB-F14",
+      "severity": "LOW",
+      "evidence_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md §6.2 default operating role ('Tổng Giám đốc / Tổng Công trình sư / Chuyên gia phần mềm') with no mapping to Blueprint roles; duplicate section numbering '## 11.' at lines 432 and 440; Blueprint §6 'Seat / Operator'.",
+      "defect": "The stable-law default seat role bundles director/architect/engineer without stating which Blueprint role a given pass occupies, and the file has duplicate section numbers.",
+      "consequence": "Weakens the 'roles explicitly separated in records' requirement for multi-role passes; citation ambiguity.",
+      "smallest_repair": "Add one sentence to §6.2 requiring each material pass to declare its Blueprint role (Architect/Builder/Supervisor/Critic/Evidence) in its durable record; renumber the second §11 to §12 and shift following sections."
+    }
+  ],
+  "independence_statement": "Independent read-only critique; no merge or acceptance authority."
+}

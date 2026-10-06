@@ -5,12 +5,12 @@
 For migrated Architecture vNext scope, the canonical boot entrypoint is `state/bootstrap.json`.
 
 Current recovery route:
-`state/bootstrap.json -> state/current.yaml -> state/tasks.yaml -> current law/bootstrap pointers -> current architecture -> active task handoff -> task/domain sources`.
+`state/bootstrap.json -> current Master Blueprint -> authoritative law precedence -> state/current.yaml -> state/tasks.yaml -> current architecture -> active task handoff -> task/domain sources`.
 
 Older sections in this file that begin from PROJECT_STATE remain historical/unmigrated compatibility guidance only and cannot override migrated keys in `state/current.yaml` or `state/tasks.yaml`.
 
 
-**Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE + CURRENT ARCHITECTURE  
+**Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT MIGRATED AUTHORITY MUST BE READ FROM state/bootstrap.json -> Master Blueprint -> law -> state/current.yaml -> state/tasks.yaml  
 **Base main when recorded:** `620875e68c97ccc1734aff8a8ab34af0bbe82750`  
 **Scope:** MINH TRÍ project governance, architecture continuity, learning, critique, synchronization and handoff.
 
@@ -36,6 +36,8 @@ A chat may discover or draft something, but before the project treats it as dura
 This rule does **not** mean every casual sentence must become a file. It means every material decision or state that another seat must recover later must have a GitHub record.
 
 ## 2. AUTHORITY ORDER
+
+This section is an informative orientation summary only. The sole normative precedence ladder is `docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md`; on any difference, that consolidated Foundation Law governs.
 
 Current intended authority order:
 
@@ -111,7 +113,7 @@ Do not build unrestricted bidirectional auto-write between chat, repo, library a
 
 ### Current runtime boundary
 
-The original 2026-10-02 implementation snapshot below is historical. Current capability must be read from `PROJECT_STATE.json` and `ARCHITECTURE_NOW_20261003.md`.
+The original 2026-10-02 implementation snapshot below is historical. For migrated vNext scope, current capability must be resolved from the single boot route and bounded capability/evidence records routed by current state; legacy `PROJECT_STATE.json` and `ARCHITECTURE_NOW_20261003.md` cannot override migrated authority.
 
 Current high-level rule:
 - learning, critique, meta-learning and Learning Assurance engines are implemented as bounded/proposal-only mechanisms;
@@ -163,6 +165,7 @@ Every seat must recover role before doing material work.
    - Tổng Công trình sư.
    - Chuyên gia phần mềm.
    - A narrower task-specific role may be added by Owner without deleting these responsibilities.
+   - For every material pass, the durable task/handoff/evidence record must declare the active Master Blueprint role for that pass (`Architect`, `Builder`, `Supervisor`, `Independent Critic`, or `Evidence/Validation`). A seat may perform multiple roles only as separately declared passes; no pass may use its own output as independent acceptance evidence.
 
 3. **Before work, resolve**
    - PROJECT?
@@ -228,7 +231,7 @@ Historical security findings and their current classification:
 - OPEN/PARTIAL: declared provider IDs and same-provider critic runs are not proof of independent actors.
 - CLOSED governance baseline: main PR + strict required `test` check + no ruleset bypass actors are enforced; additional reviewer/CODEOWNER hardening remains optional/open.
 
-Current status must be read from `PROJECT_STATE.json` and the current architecture, not inferred from this historical bootstrap section.
+For migrated vNext scope, current status must be resolved only through `state/bootstrap.json`, the routed Master Blueprint and law, then `state/current.yaml` and `state/tasks.yaml`. `docs/PROJECT_STATE.json` is legacy compatibility/history for unmigrated keys and cannot override migrated authority.
 
 ## 8. PROJECT-WIDE CONTINUITY & MANDATORY HANDOFF LAW
 
@@ -243,14 +246,17 @@ Mandatory order:
 
 ```text
 OWNER CURRENT INSTRUCTION
-→ PROJECT_STATE pointer layer
-→ CURRENT LAW INDEX
-→ RELEVANT STABLE LAWS / BOOTSTRAP LAW
+→ state/bootstrap.json
+→ CURRENT MASTER BLUEPRINT
+→ AUTHORITATIVE LAW PRECEDENCE
 → CURRENT STATE + TASK REGISTRY
 → CURRENT ARCHITECTURE
-→ TASK/DOMAIN HANDOFF
+→ ACTIVE TASK HANDOFF
+→ TASK/DOMAIN SOURCES
 → WORK
 ```
+
+For migrated vNext scope, `state/bootstrap.json` is the single boot root. Legacy `docs/PROJECT_STATE.json` remains compatibility/history for unmigrated keys only and cannot override migrated Blueprint/Law/State/Task authority.
 
 Architecture may implement law but may not silently outrank, bypass, or redefine stable law.
 
@@ -325,13 +331,15 @@ An unmerged branch handoff may guide resumption of that branch, but it never out
 A new chat/seat/model must not start material work from model memory or an old chat summary when canonical recovery is available.
 
 It must fresh-read:
-1. `docs/PROJECT_STATE.json`;
-2. the current Law Index;
-3. this bootstrap/stable handoff law and other relevant Stable Laws;
-4. `state/current.yaml` and `state/tasks.yaml` when present for the migrated scope;
-5. the current architecture routed by authority;
+1. `state/bootstrap.json`;
+2. the current Master Blueprint routed by the boot root;
+3. the authoritative law-precedence router and relevant Stable Laws;
+4. `state/current.yaml` and `state/tasks.yaml`;
+5. the current architecture routed by current state;
 6. the active task result/handoff/branch state;
-7. task/domain sources.
+7. task/domain sources and required evidence.
+
+Legacy `docs/PROJECT_STATE.json` may be read only for unmigrated keys/history and cannot override migrated Blueprint/Law/State/Task authority.
 
 Then it must continue from the durable `NEXT ACTION` unless:
 - the Owner explicitly redirects;
@@ -398,52 +406,59 @@ It preserves the current findings without modifying Tier-1 runtime code.
 No claim in this document is automatically VERIFIED merely because it is in GitHub.
 
 
-## 10. SYNCHRONIZATION UPDATE — 2026-10-02
+## 10. SYNCHRONIZATION UPDATE — 2026-10-02 / SUPERSEDED ROUTE NOTE
 
-Owner ordered an immediate architecture/law synchronization.
+The historical PROJECT_STATE-first route below has been superseded for migrated vNext scope by the Single Boot Root and Master Blueprint route.
 
-The durable bootstrap route is resolved dynamically from `PROJECT_STATE.json`. As of 2026-10-03:
+Current migrated route:
 
 ```text
-PROJECT_STATE.json
-→ LAW_INDEX_20261003.md
-→ ARCHITECTURE_NOW_20261003.md
-→ GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md
+state/bootstrap.json
+→ MASTER BLUEPRINT
+→ AUTHORITATIVE LAW PRECEDENCE
+→ state/current.yaml
+→ state/tasks.yaml
+→ CURRENT ARCHITECTURE
+→ ACTIVE HANDOFF
 → task/domain source
 ```
 
 Rules:
-- `PROJECT_STATE.json` points to the current Law Index and architecture; never infer "current" from the date embedded in this bootstrap file.
+- `state/bootstrap.json` is the machine-readable root for migrated current authority.
+- `docs/PROJECT_STATE.json` remains compatibility/history for unmigrated keys only.
 - historical Law Index / architecture files remain provenance only once superseded.
-- `PROJECT_STATE.json` is the machine-readable pointer to current authority.
 - Old files remain for provenance and are not deleted.
 - A seat must fresh-read live authority rather than trust a SHA copied into an old chat.
-- Synchronization means authority records agree. Current local-brain reachability must be proved by fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
+- Synchronization means Blueprint/Law/State/Task/Architecture authority records agree. Current local-brain reachability still requires fresh connector observation; historical bridge/deployment evidence is not current-liveness proof.
 
 
-## 11. CURRENT-STATE ROUTING CLARIFICATION — 2026-10-04
+## 11. CURRENT-STATE ROUTING CLARIFICATION — UPDATED FOR MIGRATED VNEXT
 
-This bootstrap contains historical implementation snapshots by design. For all changing facts — runtime liveness, lease activity, active learning tracks, Candidate status, open gates — read `docs/PROJECT_STATE.json` first and treat this file only as stable governance/bootstrap guidance.
+This bootstrap contains historical implementation snapshots by design. For migrated vNext changing facts, read `state/bootstrap.json` first, then the routed Master Blueprint, law precedence, `state/current.yaml`, and `state/tasks.yaml`.
+
+Use `docs/PROJECT_STATE.json` only for unmigrated keys/history and never to override migrated Blueprint/Law/State/Task authority.
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
 
-## 11. MANDATORY UNIVERSAL LEARNING BOOTSTRAP — Owner law 2026-10-04
+## 12. MANDATORY UNIVERSAL LEARNING BOOTSTRAP — Owner law 2026-10-04
 
 For every current or future learning track, material work requires this live canonical bootstrap order:
 
-1. `docs/PROJECT_STATE.json`;
-2. the current Law Index routed by PROJECT_STATE;
-3. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`;
-4. the current Architecture routed by PROJECT_STATE;
-5. this role bootstrap;
-6. the active learning checkpoint/plan for the relevant track;
-7. task/domain sources.
+1. `state/bootstrap.json`;
+2. the current Master Blueprint routed by the boot root;
+3. the authoritative law-precedence router;
+4. `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`;
+5. `state/current.yaml` and `state/tasks.yaml`;
+6. the current Architecture routed by current state;
+7. this role bootstrap;
+8. the active learning checkpoint/plan for the relevant track;
+9. task/domain sources.
 
 Every material checkpoint must be durably recorded in GitHub with learned/corrected content, evidence/status, CURRENT, NEXT, OPEN AUDITS/UNKNOWNS and provenance. Chat memory is not a durable substitute. Recorded does not mean VERIFIED. If the durable write path is blocked, state NOT YET DURABLY RECORDED and continue only the independent work that remains safe.
 
-The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`. Always read CURRENT/NEXT from the live checkpoint plus PROJECT_STATE and RECOVERY_MANIFEST; do not rely on a checkpoint number hard-coded in bootstrap prose.
+For Buddhist-thought work, resolve the live learning checkpoint from the current task/domain handoff reached through `state/bootstrap.json -> Master Blueprint -> law -> state/current.yaml -> state/tasks.yaml`. Legacy `PROJECT_STATE.json`, `RECOVERY_MANIFEST.json`, and older checkpoint files are provenance/compatibility only for migrated authority and must not define CURRENT/NEXT.
 
-## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
+## 13. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
 For any material work in the Buddhist-thought learning track, the seat must include Mi Tiên Vấn Đáp / Milindapañha in the study process throughout the track.
 

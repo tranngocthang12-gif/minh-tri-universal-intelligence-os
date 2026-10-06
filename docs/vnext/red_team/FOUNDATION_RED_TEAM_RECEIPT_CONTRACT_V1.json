@@ -42,5 +42,15 @@
     "REJECT_WITH_REASON",
     "RESOLVED"
   ],
-  "freeze_rule": "Every CRITICAL or HIGH finding must have durable project disposition and repair_ref or explicit Owner-approved rejection before material_defects_resolved_required may be true. Claude and Grok final receipts must bind to the identical packet_ref, packet_target_main_sha, and packet_content_sha."
+  "freeze_rule": "Every CRITICAL/HIGH/MEDIUM finding must have durable project disposition and repair_ref or explicit Owner-approved rejection before material_defects_resolved_required may be true. Claude and Grok final receipts must bind to the identical packet_ref, accepted target binding field, and packet_content_sha.",
+  "accepted_target_binding_fields": [
+    "packet_target_main_sha",
+    "review_target_candidate_commit"
+  ],
+  "material_finding_severities": [
+    "CRITICAL",
+    "HIGH",
+    "MEDIUM"
+  ],
+  "material_rejection_authority": "OWNER"
 }

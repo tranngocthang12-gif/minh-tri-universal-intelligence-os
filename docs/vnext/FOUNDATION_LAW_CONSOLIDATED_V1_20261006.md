@@ -29,6 +29,27 @@ Same-level conflict requires explicit supersession or a bounded conflict-resolut
 - `state/tasks.yaml` is the single canonical task registry.
 - Material state may not exist only in chat.
 
+## Master Blueprint governance
+
+The Master Blueprint is structural authority, not a second law router. Constitution-level Owner decisions and applicable Stable Law outrank it; accepted subsystem architecture must conform to it within structural scope.
+
+The project must maintain one project-wide Master Blueprint that defines the total system structure, authority boundaries, stable foundation, extensible zones, lifecycle, role separation, and canonical-source map.
+
+Foundation roles are distinct in responsibility:
+- Owner: final foundation authority and acceptance;
+- Architect: designs and maintains the Master Blueprint but cannot self-accept foundation architecture;
+- Builder/Implementer: implements bounded approved work but cannot self-certify acceptance;
+- Supervisor/Inspector: checks implementation against approved design, law, and task scope;
+- Independent Reviewer/Critic: challenges design/implementation without merge authority;
+- Evidence/Validation layer: binds claims to bounded machine-checkable or independently reproduced evidence.
+
+Material foundation work follows:
+`DESIGN -> LAW CHECK -> TASK AUTHORIZE -> BUILD -> SUPERVISE -> VALIDATE -> INDEPENDENT REVIEW (risk-based) -> OWNER/APPROVER ACCEPT -> PROTECTED MERGE -> FRESH-READ -> OPERATE -> OBSERVE -> CONTROLLED CHANGE`.
+
+CRITICAL/HIGH/MEDIUM critic findings may be repaired or explicitly rejected only by Owner; LOW observations may be dispositioned under the governed task. No material role may treat its own output as sufficient acceptance evidence. Separation of duties may be performed by replaceable AI seats, but the responsibility boundary must remain explicit in durable records.
+
+A new seat must resolve the current Master Blueprint as part of cold-start recovery before material architecture or implementation work. Missing or conflicting Blueprint/Law/State/Task authority fails closed for the affected mutation.
+
 ## Learning law
 
 - Owner chooses what to learn.
@@ -68,5 +89,7 @@ This document consolidates routing; it does not destructively replace the follow
 - `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
 - `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`
 - `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`
+- `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md`
+- `docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md`
 
 Historical law routers and migration records remain provenance only unless routed here or by current state.

@@ -1,0 +1,143 @@
+{
+  "schema": "minhtri-master-blueprint-critic-disposition/v1",
+  "critic_review_ref": "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_REVIEW_R1_20261007.json",
+  "review_target_candidate_commit": "c3fed9bd60a02b30e61e482d6b08da5589588d43",
+  "project_disposition": [
+    {
+      "finding_id": "MB-F01",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Closed self-certification/acceptance-authority gap for F/S/D/O and made autonomous merge require explicit Owner delegated policy.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "state/tasks.yaml"
+      ]
+    },
+    {
+      "finding_id": "MB-F02",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Grok/Claude route defect closed across role bootstrap, subsystem architecture, Law Index and recovery entrypoint.",
+      "repair_refs": [
+        "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+        "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+        "docs/LAW_INDEX_20261003.md",
+        "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F03",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Legacy control semantics are history-only regardless of legacy key name; role bootstrap current routes use boot root.",
+      "repair_refs": [
+        "state/bootstrap.json",
+        "state/current.yaml",
+        "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+        "docs/RECOVERY_MANIFEST.json"
+      ]
+    },
+    {
+      "finding_id": "MB-F04",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Foundation Closure and Freeze paths are explicitly held behind Master Blueprint acceptance/merge/Recovery v6.",
+      "repair_refs": [
+        "state/tasks.yaml",
+        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F05",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Task scope amended and same-seat Supervisor record now explicitly records scope-vs-changed-artifacts correction; Owner acceptance request must enumerate bundled amendments.",
+      "repair_refs": [
+        "state/tasks.yaml",
+        "docs/vnext/MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1_20261006.md",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F06",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Exact-next-action authority/tie-break now defined; current/task/handoff must not conflict and packet versions are invalidated after target repairs.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F07",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Blueprint hierarchy relabeled informative; consolidated Foundation Law is sole normative ladder.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F08",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Consolidated law lifecycle aligned with Blueprint material lifecycle.",
+      "repair_refs": [
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F09",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Blueprint section 2 now states design sequence is not authority precedence.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F10",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. CRITICAL/HIGH/MEDIUM rejection requires Owner; receipt contract accepts candidate target binding.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json"
+      ]
+    },
+    {
+      "finding_id": "MB-F11",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. current.yaml now mirrors rather than owns boot-root law/Blueprint pointers.",
+      "repair_refs": [
+        "state/current.yaml",
+        "state/bootstrap.json"
+      ]
+    },
+    {
+      "finding_id": "MB-F12",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Removed free-text supersedes pseudo-id; freeze dependency carries frontier relation.",
+      "repair_refs": [
+        "state/tasks.yaml"
+      ]
+    },
+    {
+      "finding_id": "MB-F13",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Deterministic Recovery Proof v6 instrument is preregistered in Blueprint/handoff.",
+      "repair_refs": [
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md"
+      ]
+    },
+    {
+      "finding_id": "MB-F14",
+      "disposition": "RESOLVED",
+      "reason": "Accepted. Material passes must declare Blueprint role; duplicate section numbering corrected.",
+      "repair_refs": [
+        "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md"
+      ]
+    }
+  ],
+  "requires_rereview": true,
+  "final_acceptance_eligible": false,
+  "note": "RESOLVED means project repair applied; closure is not independently verified until Claude and Grok rereview the same post-repair frozen packet."
+}

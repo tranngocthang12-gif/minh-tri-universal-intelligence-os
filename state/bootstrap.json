@@ -16,5 +16,16 @@
   "legacy_must_not_override_migrated_state": true,
   "fail_closed_on_missing_or_conflicting_required_pointer": true,
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
-  "law_index_catalog": "docs/LAW_INDEX_20261003.md"
+  "law_index_catalog": "docs/LAW_INDEX_20261003.md",
+  "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+  "resolve_master_blueprint_from": "state/bootstrap.json:master_blueprint",
+  "legacy_control_semantics_history_only": [
+    "law_or_law_index_routing",
+    "architecture_pointer_or_generation",
+    "active_workstream_or_task",
+    "next_checkpoint_or_next_action",
+    "open_foundation_gates",
+    "capability_or_acceptance_status_for_migrated_scope"
+  ],
+  "legacy_control_semantics_rule": "Any legacy key carrying these semantics is history/compatibility only regardless of key name; migrated Blueprint/Law/State/Task authority wins."
 }
