@@ -1,0 +1,194 @@
+{
+  "schema": "minhtri-early-buddhist-translation-contradiction-ledger/v1",
+  "updated": "2026-10-04",
+  "translation_cards": [
+    {
+      "term": "sammādiṭṭhi",
+      "vi": "chánh kiến",
+      "en": "right view",
+      "risk": "one gloss hides contextual range",
+      "contexts": [
+        "CONDITIONAL_NONREIFICATION_SN12_15",
+        "ETHICAL_CAUSAL_MN117_MA189",
+        "PATH_DISCRIMINATIVE_MN117_MA189"
+      ],
+      "status": "ACTIVE"
+    },
+    {
+      "term": "upādāna",
+      "vi": "chấp thủ",
+      "en": "clinging/grasping",
+      "risk": "may sound merely intellectual or emotional",
+      "working_function": "appropriative grasping supplying identity/continuation",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "attā me",
+      "vi": "tự ngã/cái tôi của tôi depending context",
+      "en": "my self/my identity",
+      "risk": "over-metaphysicalization",
+      "working_function": "self-reckoning/appropriation in SN12.15-SA301 context",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "dhamma",
+      "vi": "Pháp",
+      "en": "Dhamma/teaching/phenomena depending context",
+      "risk": "raft simile misread as truth irrelevant",
+      "working_function": "teaching-as-instrument in MN22 raft context",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "attha / atthasaṁhita",
+      "vi": "lợi ích/có mục đích phù hợp",
+      "en": "beneficial/connected with benefit",
+      "risk": "subjective usefulness",
+      "working_function": "welfare-training-relevant benefit in MN58",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "paccavekkhati",
+      "vi": "quán xét/phản tỉnh",
+      "en": "review/reflect/examine",
+      "risk": "one-time reflection too weak",
+      "working_function": "iterative before-during-after ethical audit",
+      "status": "ACTIVE"
+    },
+    {
+      "term": "sabba",
+      "vi": "tất cả",
+      "en": "the all",
+      "risk": "premature idealist metaphysics",
+      "working_function": "sense-cognitive analytical domain first; ontology unresolved",
+      "status": "ACTIVE"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "C01",
+      "topic": "MN22 raft vs MN117/MA189 right view",
+      "status": "RESOLVED",
+      "resolution": "functional path instrument vs grasping/identity"
+    },
+    {
+      "id": "C02",
+      "topic": "SN12.15/SA301 anti-existence binary vs MN117/MA189 affirmative right view",
+      "status": "RESOLVED_CONTEXTUALLY",
+      "resolution": "anti-reified ontology is not anti-ethical/causal assertion"
+    },
+    {
+      "id": "C03",
+      "topic": "anti-view-grasping vs right view",
+      "status": "RESOLVED",
+      "resolution": "content discrimination vs identity appropriation"
+    },
+    {
+      "id": "C04",
+      "topic": "SN35.23 the all vs cosmological/rebirth discourse",
+      "status": "PARTIAL_UNRESOLVED",
+      "resolution": "treat as sense-cognitive domain first; larger corpus needed"
+    },
+    {
+      "id": "C05",
+      "topic": "MN61 consequence review vs rule-like ethics",
+      "status": "RESOLVED",
+      "resolution": "multi-layer ethics: constraints/virtues plus consequence-sensitive feedback"
+    },
+    {
+      "id": "C06",
+      "topic": "MN117 exact two-tier scheme vs parallel absence",
+      "status": "TEXTUAL_DIVERGENCE_ACCEPTED",
+      "resolution": "shared path coordination high confidence; exact systematization lower confidence"
+    },
+    {
+      "id": "C07",
+      "topic": "MA14 expanded difficult consequence wording vs MN61",
+      "status": "LOCAL_TEXTUAL_PROBLEM_UNRESOLVED",
+      "resolution": "preserve shared core; do not harmonize problematic local wording"
+    },
+    {
+      "id": "C08",
+      "topic": "shared reasoning core vs exact technical vocabulary across transmissions",
+      "status": "RESOLVED_AS_CONFIDENCE_HIERARCHY",
+      "resolution": "functional cross-traditional core receives higher confidence than local redactional/systematic wording"
+    },
+    {
+      "id": "C09",
+      "topic": "MN61 coherent purity/result logic vs MĀ14 anomalous pure-bad/impure-good clauses",
+      "status": "TEXTUAL_ANOMALY_UNRESOLVED",
+      "resolution": "retain shared ethical-audit core; do not harmonize or doctrinalize anomalous clauses"
+    },
+    {
+      "id": "C10",
+      "topic": "MN38/MA201 reject same unchanged consciousness vs DN15 consciousness descends to womb",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "rebirth-conditioning function is distinguishable from numerical identity of an unchanged consciousness-substance; exact cross-life mechanism remains underdetermined"
+    },
+    {
+      "id": "C11",
+      "topic": "gradual-training jhana-before-insight sequence vs AN4.170 multiple samatha-vipassana routes",
+      "status": "RESOLVED_AS_MULTIPLE_DEVELOPMENTAL_ROUTES",
+      "resolution": "standard pedagogical sequence is not a universal chronology; serenity and insight remain integrated capacities"
+    },
+    {
+      "id": "C12",
+      "topic": "Atthakavagga anti-view language vs Nikaya right view",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "functional right discrimination differs from identity-grasping at views; genre/stratum tension remains preserved"
+    },
+    {
+      "id": "C13",
+      "topic": "SN22.22 burden-bearer person language vs not-self analysis",
+      "status": "PARTIAL_RESOLUTION",
+      "resolution": "conventional/practical person-language does not establish an eternal self; text does not itself fully settle later pudgala ontology debates"
+    },
+    {
+      "id": "C14",
+      "topic": "SN36.19 two feelings vs three and other counts",
+      "status": "EXPLICITLY_RESOLVED_IN_TEXT",
+      "resolution": "multiple valid explanatory taxonomies; classification axis is contextual rather than one exclusive ontology"
+    },
+    {
+      "id": "C15",
+      "topic": "all feeling caused by past kamma vs multiple causes",
+      "status": "RESOLVED_AGAINST_KAMMA_MONISM",
+      "resolution": "SN36.21 lists several causal sources; past kamma is not the sole explanation for every feeling"
+    },
+    {
+      "id": "C16",
+      "topic": "Milindapanha conventional person/chariot reasoning vs early aggregate/person language",
+      "status": "LATER_EXPLANATORY_EARLY_COMPATIBLE",
+      "resolution": "use as clarifying model; do not treat as direct early Buddha formulation"
+    },
+    {
+      "id": "C17",
+      "topic": "Milindapanha neither-same-nor-another rebirth reasoning vs early rebirth mechanism",
+      "status": "PARTIAL_SUPPORT",
+      "resolution": "logic is compatible with MN38/SN12 anti-identity model, but cannot close early-text mechanism gaps by itself"
+    },
+    {
+      "id": "C18",
+      "topic": "Aṭṭhakavagga anti-view rhetoric vs right-view path teaching after lexical pass",
+      "status": "PARTIAL_RESOLUTION_STRENGTHENED",
+      "resolution": "distinguish truth/discrimination from possessive view-identity; lexical/genre differences remain"
+    },
+    {
+      "id": "C19",
+      "topic": "Pali Atthakavagga exact chapter order vs Chinese Arthapada sixteen-text anthology order",
+      "status": "REDACTIONAL_DIVERGENCE_ACCEPTED",
+      "resolution": "weight shared themes and cross-recensional cores more strongly than the exact Pali chapter sequence; do not infer historical development from one order alone"
+    }
+  ],
+  "invariant": "Unresolved tensions remain unresolved; no forced harmonization and no universal Buddha-thought claim from one local formulation.",
+  "clause_alignment": "docs/learning/EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
+  "translation_cards_v2": "docs/learning/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json",
+  "hard_cluster_v0_8": "docs/learning/EARLY_BUDDHIST_HARD_CLUSTER_V0_8_20261004.md",
+  "discourse_verse_pass_v0_10": "docs/learning/EARLY_BUDDHIST_DISCOURSE_VERSE_PASS_V0_10_20261004.md",
+  "atthakavagga_verse_audit_v0_2": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json",
+  "sn36_discourse_index": "docs/learning/EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json",
+  "reference_stack": "docs/learning/EARLY_BUDDHIST_REFERENCE_STACK_V0_1_20261004.md",
+  "milindapanha_reasoning_lab": "docs/learning/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md",
+  "sn12_peyyala_matrix": "docs/learning/EARLY_BUDDHIST_SN12_PEYYALA_MATRIX_AUDIT_V0_1_20261004.md",
+  "atthakavagga_lexical_pass": "docs/learning/EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md",
+  "arthapada_agama_milinda_stress_test": "docs/learning/EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md"
+}
