@@ -163,6 +163,7 @@ Every seat must recover role before doing material work.
    - Tổng Công trình sư.
    - Chuyên gia phần mềm.
    - A narrower task-specific role may be added by Owner without deleting these responsibilities.
+   - For every material pass, the durable task/handoff/evidence record must declare the active Master Blueprint role for that pass (`Architect`, `Builder`, `Supervisor`, `Independent Critic`, or `Evidence/Validation`). A seat may perform multiple roles only as separately declared passes; no pass may use its own output as independent acceptance evidence.
 
 3. **Before work, resolve**
    - PROJECT?
@@ -437,7 +438,7 @@ Use `docs/PROJECT_STATE.json` only for unmigrated keys/history and never to over
 
 A capability historically proven reachable does not mean it is currently reachable. An unexpired authorization timestamp does not prove its in-memory runtime process still exists.
 
-## 11. MANDATORY UNIVERSAL LEARNING BOOTSTRAP — Owner law 2026-10-04
+## 12. MANDATORY UNIVERSAL LEARNING BOOTSTRAP — Owner law 2026-10-04
 
 For every current or future learning track, material work requires this live canonical bootstrap order:
 
@@ -455,7 +456,7 @@ Every material checkpoint must be durably recorded in GitHub with learned/correc
 
 For Buddhist-thought work, resolve the live learning checkpoint from the current task/domain handoff reached through `state/bootstrap.json -> Master Blueprint -> law -> state/current.yaml -> state/tasks.yaml`. Legacy `PROJECT_STATE.json`, `RECOVERY_MANIFEST.json`, and older checkpoint files are provenance/compatibility only for migrated authority and must not define CURRENT/NEXT.
 
-## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
+## 13. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
 For any material work in the Buddhist-thought learning track, the seat must include Mi Tiên Vấn Đáp / Milindapañha in the study process throughout the track.
 
