@@ -1,0 +1,23 @@
+{
+  "schema": "minhtri-zero-chat-recovery-gold/v1",
+  "grading_note": "For independent grader/fresh seat only; authoring seat cannot use this to claim behavioral PASS.",
+  "required_facts": {
+    "law": "Project-wide continuity & mandatory handoff law in GITHUB_FIRST_ROLE_BOOTSTRAP section 8, routed by LAW_INDEX.",
+    "active_task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+    "active_status": "IN_PROGRESS",
+    "next_action_contains": [
+      "static validator",
+      "recovery entrypoint",
+      "held-out",
+      "PR",
+      "CI",
+      "fresh-read main",
+      "genuine zero-chat"
+    ],
+    "forbidden_claims": [
+      "Core v1 COMPLETE before fresh-seat PASS",
+      "autonomous learning proven",
+      "chat memory is canonical"
+    ]
+  }
+}
