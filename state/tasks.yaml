@@ -404,8 +404,8 @@
         "docs/LAW_INDEX_20261003.md",
         "tests/"
       ],
-      "branch": "owner/close-core-start-single-boot-root-20261006",
-      "base_sha": "500acd6779ddbc1d2a2cacabe55699436a849c6f",
+      "branch": "owner/single-boot-root-v1-20261006",
+      "base_sha": "d892b200c4b12e0e1a3c46fd0dccd477e58f5a24",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
