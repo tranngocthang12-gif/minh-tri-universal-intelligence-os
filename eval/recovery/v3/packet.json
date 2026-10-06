@@ -1,0 +1,28 @@
+{
+  "schema": "minhtri-zero-chat-recovery-packet/v4",
+  "purpose": "Independent fresh-seat recovery under final Recovery Proof Gate v3.",
+  "challenge_ref": "eval/recovery/v3/challenge.json",
+  "canonical_inputs": [
+    "docs/PROJECT_STATE.json",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
+  ],
+  "questions_ref": "eval/recovery/v1/questions.json",
+  "response_schema_ref": "eval/recovery/v3/response.schema.json",
+  "grader_ref": "tools/score_zero_chat_recovery.py",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "gold_excluded": true,
+  "authoring_seat_must_not_self_grade": true,
+  "structured_facts_authoritative_for_grading": true,
+  "prose_answers_required_but_not_keyword_scored": true,
+  "completion_rule": {
+    "deterministic_score": "PASS",
+    "independence_provenance": "PRESENT",
+    "durable_receipt_merged": true,
+    "all_required": true
+  }
+}
