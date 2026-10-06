@@ -389,13 +389,13 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Continue Foundation Closure v1 with Single Boot Root v1 now active, then Semantic Staleness Guard v1, Knowledge Fast Lane v1, Retrieval/Application proof, and Law consolidation.",
-      "blocker": "DEPENDENCY_ARCH_SINGLE_BOOT_ROOT_V1_NOT_DONE"
+      "next_action": "Continue Foundation Closure v1 with Semantic Staleness Guard v1 now active, then Knowledge Fast Lane v1, Retrieval/Application proof, and Law consolidation.",
+      "blocker": "DEPENDENCY_ARCH_SEMANTIC_STALENESS_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
       "title": "Unify project bootstrap on one canonical boot root",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "state/bootstrap.json",
         "state/current.yaml",
@@ -411,15 +411,15 @@
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
       ],
       "supersedes": [],
-      "result_ref": "state/bootstrap.json / tests/test_single_boot_root_v1.py / PR_PENDING",
+      "result_ref": "PR#287 / state/bootstrap.json / tests/test_single_boot_root_v1.py",
       "handoff_ref": "docs/vnext/handoff/SINGLE_BOOT_ROOT_V1.md",
-      "next_action": "Run required CI on the bounded Single Boot Root v1 candidate; if PASS, merge and fresh-read main, then advance to Semantic Staleness Guard v1.",
+      "next_action": "Single Boot Root v1 complete. Legacy compatibility surfaces remain non-authoritative for migrated keys.",
       "blocker": null
     },
     {
       "task_id": "ARCH-SEMANTIC-STALENESS-V1",
       "title": "Reject writes that depend on stale or superseded semantic knowledge",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "state/tasks.yaml",
         "knowledge/",
@@ -427,17 +427,17 @@
         "tests/",
         "docs/vnext/"
       ],
-      "branch": null,
-      "base_sha": "f5da0578e57475fe945469af0da65f34666fbe10",
+      "branch": "owner/advance-semantic-staleness-v1-20261006",
+      "base_sha": "1e91da934be8ad97c2e8b7051be4c6027717c66c",
       "requires": "none",
       "dependencies": [
         "ARCH-SINGLE-BOOT-ROOT-V1"
       ],
       "supersedes": [],
-      "result_ref": null,
-      "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "next_action": "After Single Boot Root v1 is DONE, add minimal semantic dependency freshness checks for superseded/refuted/disputed claims without introducing a workflow engine.",
-      "blocker": "WAITING_FOR_SINGLE_BOOT_ROOT_V1_DONE"
+      "result_ref": "PENDING_PR266_SALVAGE_AND_SEMANTIC_GUARD",
+      "handoff_ref": "docs/vnext/handoff/SEMANTIC_STALENESS_V1.md",
+      "next_action": "Salvage PR #266 stale-writer primitive into current main, then add semantic dependency freshness checks for superseded/refuted/disputed knowledge without creating a workflow engine.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-KNOWLEDGE-FAST-LANE-V1",
