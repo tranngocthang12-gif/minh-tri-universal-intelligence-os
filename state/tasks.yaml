@@ -348,7 +348,7 @@
     {
       "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
       "title": "Build machine-checkable continuity and handoff core before further architecture expansion",
-      "status": "BLOCKED",
+      "status": "DONE",
       "scope": [
         "state/current.yaml",
         "state/tasks.yaml",
@@ -367,10 +367,10 @@
         "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW"
       ],
       "supersedes": [],
-      "result_ref": "PR#278 / docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
+      "result_ref": "PR#278 + PR#284 + PR#285 / eval/recovery/v3/attempts/C3_receipt.json",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Run eval/recovery/v3/challenge.json in a genuinely independent zero-chat fresh seat; require response v3 with structured recovered_facts; score with tools/score_zero_chat_recovery.py; record immutable receipt; only deterministic PASS + independence provenance PRESENT + durable receipt merged may mark Core v1 DONE.",
-      "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
+      "next_action": "Core v1 complete. Future recovery changes require a new bounded task; do not reopen this task by implication.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-FOUNDATION-CLOSURE-V1",
@@ -389,13 +389,13 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Execute Foundation Closure v1 end-to-end under Owner delegation. Keep dependency order binding; prepare later bounded candidates while earlier external proof is blocked, but do not promote or mark later phases DONE out of order. Stop only for foundation-level Owner decisions.",
-      "blocker": "DEPENDENCY_ARCH_VNEXT_CONTINUITY_HANDOFF_CORE_V1_NOT_DONE"
+      "next_action": "Continue Foundation Closure v1 with Single Boot Root v1 now active, then Semantic Staleness Guard v1, Knowledge Fast Lane v1, Retrieval/Application proof, and Law consolidation.",
+      "blocker": "DEPENDENCY_ARCH_SINGLE_BOOT_ROOT_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
       "title": "Unify project bootstrap on one canonical boot root",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "state/bootstrap.json",
         "state/current.yaml",
@@ -404,17 +404,17 @@
         "docs/LAW_INDEX_20261003.md",
         "tests/"
       ],
-      "branch": null,
-      "base_sha": "f5da0578e57475fe945469af0da65f34666fbe10",
+      "branch": "owner/close-core-start-single-boot-root-20261006",
+      "base_sha": "500acd6779ddbc1d2a2cacabe55699436a849c6f",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
       ],
       "supersedes": [],
-      "result_ref": null,
-      "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "next_action": "After Continuity Core v1 is DONE, review and salvage/rebase PR #265 into the smallest single-boot-root implementation; do not create a second authority.",
-      "blocker": "WAITING_FOR_CONTINUITY_CORE_V1_DONE"
+      "result_ref": "PENDING_PR265_SALVAGE",
+      "handoff_ref": "docs/vnext/handoff/SINGLE_BOOT_ROOT_V1.md",
+      "next_action": "Review and salvage/rebase PR #265 into the smallest single-boot-root implementation; keep protected main as the single continuity authority and do not create a second authority.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-SEMANTIC-STALENESS-V1",
@@ -487,7 +487,7 @@
     {
       "task_id": "ARCH-RECOVERY-PROOF-GATE-V3-FINAL",
       "title": "Finalize fresh-seat proof by grading structured facts instead of prose keywords",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "eval/recovery/v2/attempts/C2_response.json",
         "eval/recovery/v2/attempts/C2_receipt.json",
@@ -506,10 +506,10 @@
       "supersedes": [
         "ARCH-RECOVERY-PROOF-GATE-V2"
       ],
-      "result_ref": "eval/recovery/v3/packet.json",
+      "result_ref": "PR#284 + PR#285 / eval/recovery/v3/attempts/C3_response.json / C3_score.json / C3_receipt.json",
       "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "next_action": "Merge v3 after CI, run C3 in a genuinely independent zero-chat seat, score structured facts, write immutable receipt, then close Core v1 only if the three-part completion rule passes.",
-      "blocker": "EXTERNAL_FRESH_SEAT_C3_EXECUTION_REQUIRED_AFTER_GATE_V3_MERGE"
+      "next_action": "Completed with C3 deterministic PASS, Owner-attested fresh-seat independence provenance PRESENT, and durable receipt merged.",
+      "blocker": null
     }
   ]
 }

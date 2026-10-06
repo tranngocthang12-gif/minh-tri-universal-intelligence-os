@@ -106,3 +106,17 @@ Approved final repair:
 - issue C3 with a fresh nonce;
 - require deterministic PASS + independence provenance PRESENT + durable receipt merged before Core v1 becomes DONE;
 - on PASS, close Continuity & Handoff Core v1 and continue Foundation Closure without another Owner approval unless a foundation-level decision is encountered.
+
+
+## Transition-Safe Proof v1 — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT TRANSITION-SAFE PROOF v1 — BẰNG CHỨNG LỊCH SỬ KHÔNG PHỤ THUỘC CURRENT STATE; PASS THÌ ĐÓNG CORE VÀ TIẾP SINGLE BOOT ROOT`
+
+Approved repair:
+- historical recovery proofs are graded against frozen proof-time facts, not the mutable current active task;
+- C1/C2/C3 responses and receipts remain immutable history;
+- current handoff follows the current active task independently of historical proof handoffs;
+- a task transition must not invalidate already-merged evidence;
+- after CI proves this transition-safe behavior, Continuity Core v1 may remain DONE and Single Boot Root v1 becomes the active continuation.
