@@ -17,5 +17,7 @@
     "return_only_json": true,
     "fresh_read_protected_main": true,
     "exact_nested_contract": true
-  }
+  },
+  "packet_ref": "eval/recovery/v6/packet.json",
+  "response_schema_ref": "eval/recovery/v6/response.schema.json"
 }
