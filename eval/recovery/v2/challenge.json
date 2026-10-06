@@ -5,7 +5,7 @@
   "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
   "purpose": "Fresh-seat recovery proof after fixing reference-normalization brittleness observed in C1.",
   "start_ref": "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
-  "packet_ref": "eval/recovery/v1/packet.json",
+  "packet_ref": "eval/recovery/v2/packet.json",
   "questions_ref": "eval/recovery/v1/questions.json",
   "response_schema_ref": "eval/recovery/v2/response.schema.json",
   "grader_ref": "tools/score_zero_chat_recovery.py",
