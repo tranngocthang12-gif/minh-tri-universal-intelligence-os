@@ -1,0 +1,28 @@
+{
+  "schema": "minhtri-current-boot-recovery-challenge/v4",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4",
+  "challenge_nonce": "mtc4-4d8d812f2f3b46a9916255cb3f1da21e",
+  "purpose": "Fresh-seat proof of the repaired current boot path: bootstrap -> law precedence -> current state -> task registry -> active handoff -> exact next action.",
+  "start_ref": "state/bootstrap.json",
+  "packet_ref": "eval/recovery/v4/packet.json",
+  "response_schema_ref": "eval/recovery/v4/response.schema.json",
+  "scorer_ref": "tools/score_current_boot_recovery_v4.py",
+  "snapshot_ref": "eval/recovery/v4/historical_snapshot.json",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v4/historical_snapshot.json",
+    "eval/recovery/v4/attempts/",
+    "eval/recovery/v1/gold.json",
+    "eval/recovery/v2/attempts/",
+    "eval/recovery/v3/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "structured_facts_authoritative_for_grading": true,
+    "prose_keywords_not_scored": true
+  }
+}
