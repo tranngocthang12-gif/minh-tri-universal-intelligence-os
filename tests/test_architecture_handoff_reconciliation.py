@@ -53,7 +53,7 @@ class ArchitectureHandoffReconciliationTests(unittest.TestCase):
         text = (ROOT / "docs" / "vnext" / "handoff" / "ARCHITECTURE_HANDOFF_20261006.md").read_text(encoding="utf-8")
         self.assertIn("Genuine zero-chat continuation proof", text)
         self.assertIn("has not yet passed", text)
-        self.assertIn("Static CI can prove", text)
+        self.assertIn("STATIC PASS is not behavioral recovery proof", text)
 
 
 if __name__ == "__main__":

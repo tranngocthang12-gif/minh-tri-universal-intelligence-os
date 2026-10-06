@@ -17,21 +17,21 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         by_id = {t["task_id"]: t for t in registry["tasks"]}
         self.assertEqual(current["active_task_id"], "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1")
         self.assertIn(current["active_task_id"], by_id)
-        self.assertEqual(by_id[current["active_task_id"]]["status"], "IN_PROGRESS")
+        self.assertEqual(by_id[current["active_task_id"]]["status"], "BLOCKED")
 
     def test_active_task_has_machine_checkable_handoff_contract(self):
         registry = self.load_json("state/tasks.yaml")
         task = next(t for t in registry["tasks"] if t["task_id"] == "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1")
         for field in ["scope", "base_sha", "result_ref", "handoff_ref", "next_action", "blocker"]:
             self.assertIn(field, task)
-        self.assertIsNone(task["blocker"])
+        self.assertEqual(task["blocker"], "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED")
         self.assertTrue((ROOT / task["handoff_ref"]).exists())
 
     def test_handoff_task_id_matches_current_active_task(self):
         current = self.load_json("state/current.yaml")
         text = (ROOT / "docs" / "vnext" / "handoff" / "ARCHITECTURE_HANDOFF_20261006.md").read_text(encoding="utf-8")
         self.assertIn(f"**TASK_ID:** {current['active_task_id']}", text)
-        for heading in ["## DONE BEFORE THIS TASK", "## BUILDING NOW", "## NOT DONE", "## NEXT ACTION", "## REQUIRED GATES"]:
+        for heading in ["## DONE BEFORE THIS TASK", "## NOT DONE", "## CURRENT TASK STATE", "## NEXT ACTION", "## REQUIRED GATES"]:
             self.assertIn(heading, text)
 
     def test_recovery_entrypoint_is_single_bounded_route(self):

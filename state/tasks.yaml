@@ -348,7 +348,7 @@
     {
       "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
       "title": "Build machine-checkable continuity and handoff core before further architecture expansion",
-      "status": "IN_PROGRESS",
+      "status": "BLOCKED",
       "scope": [
         "state/current.yaml",
         "state/tasks.yaml",
@@ -358,17 +358,17 @@
         "tools/validate_continuity_handoff.py",
         "tests/test_continuity_handoff_core_v1.py"
       ],
-      "branch": "owner/continuity-handoff-core-v1-20261006",
-      "base_sha": "93ea95f6ba1a7c2c969dbdcbc5c5a043e8aade25",
+      "branch": null,
+      "base_sha": "bf7c987196e1c84038c5fa11378d290cfc7282b3",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1.md",
+      "result_ref": "PR#278 / docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Build static validator, recovery entrypoint, and held-out zero-chat recovery fixture; merge only after CI passes.",
-      "blocker": null
+      "next_action": "Run eval/recovery/v1/packet.json in a genuinely independent zero-chat fresh seat; grade against eval/recovery/v1/gold.json without using this authoring chat; if PASS, record evidence and only then mark Core v1 DONE.",
+      "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
     }
   ]
 }
