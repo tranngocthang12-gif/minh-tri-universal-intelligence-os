@@ -1,0 +1,68 @@
+{
+  "schema": "minhtri-zero-chat-recovery-response/v3",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C3",
+  "challenge_nonce": "mtc3-87f6d6418f1b4e61a9ab4f1bf548cb55",
+  "attestations": {
+    "separate_zero_chat": true,
+    "used_prior_chat_history": false,
+    "read_gold": false
+  },
+  "recovered_facts": {
+    "foundation_law": {
+      "source_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md#8-project-wide-continuity--mandatory-handoff-law",
+      "routed_by_ref": "docs/LAW_INDEX_20261003.md"
+    },
+    "active_task": {
+      "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+      "status": "BLOCKED",
+      "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+      "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
+    },
+    "canonicality": {
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "unmerged_candidate_authoritative": false,
+      "chat_memory_canonical": false
+    },
+    "capability_truth": {
+      "core_v1_complete": false,
+      "fresh_seat_behavioral_recovery_proven": false,
+      "autonomous_learning_proven": false,
+      "automatic_self_critique_proven": false,
+      "meta_learning_proven": false
+    },
+    "next_gate": {
+      "challenge_ref": "eval/recovery/v3/challenge.json",
+      "response_schema_ref": "eval/recovery/v3/response.schema.json",
+      "scorer_ref": "tools/score_zero_chat_recovery.py",
+      "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+      "deterministic_pass_required": true,
+      "independence_provenance_required": true,
+      "durable_receipt_required": true
+    }
+  },
+  "evidence_refs": [
+    "eval/recovery/v3/challenge.json",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/PROJECT_STATE.json",
+    "docs/LAW_INDEX_20261003.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+    "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+    "docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
+    "eval/recovery/v3/packet.json",
+    "eval/recovery/v1/questions.json",
+    "eval/recovery/v3/response.schema.json",
+    "tools/score_zero_chat_recovery.py",
+    "eval/recovery/v2/evidence_receipt.schema.json"
+  ],
+  "answers": {
+    "Q1": "The foundational continuity and handoff law is section 8, PROJECT-WIDE CONTINUITY & MANDATORY HANDOFF LAW, in docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md. The current Law Index at docs/LAW_INDEX_20261003.md routes to that stable Owner law and requires durable GitHub handoffs, fresh-seat recovery from canonical authority, and fail-closed handling of missing, stale, or conflicting handoffs.",
+    "Q2": "The canonical active_task_id is ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1. Its current registry status is BLOCKED, with blocker GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED.",
+    "Q3": "Canonical continuity authority is protected GitHub main. The Core v1 static implementation merged through PR #278 and the recovery artifacts currently readable on main are canonical records. Unmerged branches or candidate work are not authoritative and cannot outrank current main; chat memory is also non-canonical.",
+    "Q4": "DONE: the foundation continuity/handoff law is canonical; active_task_id and task continuation metadata are machine-readable; the continuity validator and recovery entrypoint exist; the held-out recovery machinery exists; and the PR #278 static CI gate passed. NOT DONE: a genuine independent zero-chat behavioral recovery proof has not yet established completion; the required deterministic PASS, independence provenance, and durable merged receipt have not yet completed the gate; Core v1 therefore remains incomplete, and PR169 salvage remains paused behind it.",
+    "Q5": "Run eval/recovery/v3/challenge.json in a genuinely independent zero-chat fresh seat, return a response matching eval/recovery/v3/response.schema.json with structured recovered_facts, score it with tools/score_zero_chat_recovery.py, independently preserve independence provenance, and create the immutable evidence receipt. Core v1 may be marked DONE and dependent architecture work may continue only when the deterministic score is PASS, independence provenance is PRESENT, and the durable receipt is merged.",
+    "Q6": "Do not claim Continuity & Handoff Core v1 complete or fresh-seat behavioral recovery proven yet. Also do not claim autonomous learning, automatic self-critique, or meta-learning as proven capabilities; their runtimes remain off and the canonical capability truth for this recovery is false."
+  }
+}

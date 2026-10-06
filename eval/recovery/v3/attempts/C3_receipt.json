@@ -1,0 +1,15 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C3",
+  "challenge_nonce": "mtc3-87f6d6418f1b4e61a9ab4f1bf548cb55",
+  "response_ref": "eval/recovery/v3/attempts/C3_response.json",
+  "response_sha256_canonical_json": "8e0ced7dfc24bb3a2c013b7a864bacbc83b87f1324ad85c68cf702552c2f09b5",
+  "scorer_ref": "tools/score_zero_chat_recovery.py",
+  "scorer_version": "v3-structured-facts-no-prose-keywords",
+  "deterministic_score": "PASS",
+  "deterministic_errors": [],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner returned C3 after being instructed to execute the canonical C3 command in a completely new ChatGPT chat outside the MINH TRI project and paste the resulting JSON back unchanged. This is Owner-attested manual fresh-seat provenance; no platform-side UI telemetry is claimed.",
+  "main_sha": "72c1b784dc813e621de73728ed2bdd502eeb1249",
+  "completion_eligible": true
+}
