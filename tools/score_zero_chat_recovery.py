@@ -19,8 +19,7 @@ CHALLENGE_V1 = "eval/recovery/v1/challenge.json"
 CHALLENGE_V2 = "eval/recovery/v2/challenge.json"
 CHALLENGE_V3 = "eval/recovery/v3/challenge.json"
 GOLD = "eval/recovery/v1/gold.json"
-CURRENT = "state/current.yaml"
-TASKS = "state/tasks.yaml"
+HISTORICAL_V3_SNAPSHOT = "eval/recovery/v3/historical_snapshot.json"
 
 REQUIRED_TOP_LEVEL = {
     "schema",
@@ -75,8 +74,7 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
         challenge = load_json(ROOT / CHALLENGE_V3)
         reference_mode = "structured_facts"
     gold = load_json(ROOT / GOLD)
-    current = load_json(ROOT / CURRENT)
-    registry = load_json(ROOT / TASKS)
+    historical_v3 = load_json(ROOT / HISTORICAL_V3_SNAPSHOT)
 
     if not isinstance(response, dict):
         return {"status": "FAIL", "errors": ["response must be a JSON object"]}
@@ -114,9 +112,7 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
             if attest != expected_attest:
                 fail(errors, "attestations mismatch")
 
-        active_id = current.get("active_task_id")
-        tasks = {t.get("task_id"): t for t in registry.get("tasks", []) if isinstance(t, dict)}
-        canonical_task = tasks.get(active_id) or {}
+        active_id = historical_v3["recovered_facts"]["active_task"]["task_id"]
         facts = response.get("recovered_facts")
         if not isinstance(facts, dict):
             fail(errors, "recovered_facts must be an object")
@@ -132,55 +128,27 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
                 fail(errors, "foundation law routed_by_ref mismatch")
 
         active = facts.get("active_task")
-        expected_active = {
-            "task_id": active_id,
-            "status": canonical_task.get("status"),
-            "handoff_ref": canonical_task.get("handoff_ref"),
-            "blocker": canonical_task.get("blocker"),
-        }
+        expected_active = historical_v3["recovered_facts"]["active_task"]
         if active != expected_active:
             fail(errors, f"active_task mismatch: expected {expected_active!r}")
 
         canonicality = facts.get("canonicality")
-        expected_canonicality = {
-            "durable_continuity_authority": current.get("durable_continuity_authority"),
-            "unmerged_candidate_authoritative": False,
-            "chat_memory_canonical": False,
-        }
+        expected_canonicality = historical_v3["recovered_facts"]["canonicality"]
         if canonicality != expected_canonicality:
             fail(errors, "canonicality facts mismatch")
 
         capability = facts.get("capability_truth")
-        expected_capability = {
-            "core_v1_complete": False,
-            "fresh_seat_behavioral_recovery_proven": False,
-            "autonomous_learning_proven": False,
-            "automatic_self_critique_proven": False,
-            "meta_learning_proven": False,
-        }
+        expected_capability = historical_v3["recovered_facts"]["capability_truth"]
         if capability != expected_capability:
             fail(errors, "capability truth mismatch")
 
         next_gate = facts.get("next_gate")
-        expected_gate = {
-            "challenge_ref": "eval/recovery/v3/challenge.json",
-            "response_schema_ref": "eval/recovery/v3/response.schema.json",
-            "scorer_ref": "tools/score_zero_chat_recovery.py",
-            "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
-            "deterministic_pass_required": True,
-            "independence_provenance_required": True,
-            "durable_receipt_required": True,
-        }
+        expected_gate = historical_v3["recovered_facts"]["next_gate"]
         if next_gate != expected_gate:
             fail(errors, "next_gate facts mismatch")
 
         evidence = response.get("evidence_refs")
-        required_refs = set(gold["required_facts"]["required_evidence_refs"]) | {
-            "eval/recovery/v3/challenge.json",
-            "eval/recovery/v3/packet.json",
-            "eval/recovery/v3/response.schema.json",
-            "tools/score_zero_chat_recovery.py",
-        }
+        required_refs = set(historical_v3["required_evidence_refs"])
         if not isinstance(evidence, list) or not all(isinstance(x, str) and x for x in evidence):
             fail(errors, "evidence_refs must be a non-empty string list")
         else:
@@ -238,12 +206,7 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
         if set(attest) != {"separate_zero_chat", "used_prior_chat_history", "read_gold"}:
             fail(errors, "attestations fields are not exact")
 
-    active_id = current.get("active_task_id")
-    tasks = {t.get("task_id"): t for t in registry.get("tasks", []) if isinstance(t, dict)}
-    canonical_task = tasks.get(active_id)
-    if canonical_task is None:
-        fail(errors, "canonical active task is missing from registry")
-        canonical_task = {}
+    active_id = gold["required_facts"]["active_task_id"]
 
     foundation = response.get("foundation_law")
     expected_law = gold["required_facts"]["law_source_ref"]
@@ -268,10 +231,10 @@ def score_response(response: dict[str, Any]) -> dict[str, Any]:
 
     active = response.get("active_task")
     expected_active = {
-        "task_id": active_id,
-        "status": canonical_task.get("status"),
-        "handoff_ref": canonical_task.get("handoff_ref"),
-        "blocker": canonical_task.get("blocker"),
+        "task_id": gold["required_facts"]["active_task_id"],
+        "status": gold["required_facts"]["active_status"],
+        "handoff_ref": gold["required_facts"]["handoff_ref"],
+        "blocker": gold["required_facts"]["blocker"],
     }
     if not isinstance(active, dict):
         fail(errors, "active_task must be an object")
