@@ -5,6 +5,7 @@
 **Base main:** `a04300f8530c7f8413e8e386c607c7f9938ce32b`  
 **Critic gate:** ARCH-VNEXT-CRITIC-01 — three rounds complete  
 **Owner decision:** the architecture skeleton is approved; implementation details remain evidence-driven and reversible.
+**Master Blueprint relation:** this document is the current implementation/foundation architecture beneath `docs/vnext/MASTER_BLUEPRINT_V1_20261006.md`; it does not independently define project-wide governance, role authority, or lifecycle.
 
 ## 1. Purpose
 
