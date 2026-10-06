@@ -4,26 +4,26 @@
 
 ## DONE
 - Law Consolidation v1 merged through PR #293.
-- Grok Round 1 reviewed packet v1 and returned MATERIAL_DEFECTS_FOUND.
-- Smallest-repair pass is in progress on the red-team branch.
+- Grok Round 1 and Claude Round 1 both returned MATERIAL_DEFECTS_FOUND.
+- Smallest repairs merged through PR #294.
+- Current foundation state is a freeze candidate, not frozen.
 
 ## NOT DONE
-- Grok Round 1 defects are not yet canonical repairs.
-- Claude has not yet reviewed the repaired packet.
-- Grok has not yet re-reviewed the repaired packet.
+- Current bootstrap + consolidated-law route has not yet passed an independent fresh-seat recovery proof.
+- Red-Team Packet v2 has not yet been frozen.
+- Claude and Grok have not yet reviewed the identical repaired v2 packet.
 - Foundation is not frozen.
 
 ## NEXT ACTION
-- Finish and CI-test the Grok defect repairs.
-- Merge the repair candidate.
-- Freeze a v2 red-team packet from the repaired main state.
-- Run the identical v2 packet independently in Claude and Grok.
-- Record both receipts and resolve any remaining material defects before final freeze.
+- Run current boot-path Recovery Proof v4 from `eval/recovery/v4/challenge.json`.
+- Require deterministic PASS + Owner-attested independent fresh-seat provenance + durable receipt.
+- Then freeze Red-Team Packet v2 and run that identical packet independently in Claude and Grok.
+- Resolve any remaining material defects before final Foundation freeze.
 
 ## REQUIRED GATES
-- one authoritative law precedence entrypoint;
-- task registry/current state/handoff agree on exact next action;
-- proof-time SHAs remain explicit and bounded;
-- no duplicated normative law ladder in current architecture;
-- stale historical tasks cannot present themselves as the current frontier;
-- final freeze changes architecture generation/status only after both v2 red-team receipts pass.
+- one authoritative boot root and one authoritative law precedence entrypoint;
+- current state, task registry, handoff, and exact next action agree;
+- historical proofs remain bound to proof-time snapshots;
+- current-path recovery PASS is required before final freeze;
+- final Claude + Grok receipts must bind to the identical repaired v2 packet;
+- no autonomous merge, self-modification, or capability overclaim.
