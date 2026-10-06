@@ -608,7 +608,8 @@
         "docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md",
         "docs/vnext/MASTER_BLUEPRINT_SUPERVISOR_AUDIT_V1_20261006.md",
         "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md",
-        "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json"
+        "docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_MANIFEST.json",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md"
       ],
       "branch": "owner/master-blueprint-v1-20261006",
       "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
@@ -618,7 +619,7 @@
         "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted"
       ],
       "result_ref": "PR#300 / Supervisor PASS_TO_INDEPENDENT_REVIEW / MASTER_BLUEPRINT_RED_TEAM_PACKET_V1 frozen",
-      "handoff_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+      "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
       "next_action": "After PR #300 exact current head passes required CI, run the identical Master Blueprint Red-Team Packet v1 independently in Claude and Grok, bind both reports to the same target commit and packet digest, then disposition and repair all material findings before asking Owner for Master Blueprint acceptance.",
       "blocker": "PR300_CI_AND_TWO_IDENTICAL_INDEPENDENT_CRITIC_REVIEWS_REQUIRED"
     }
