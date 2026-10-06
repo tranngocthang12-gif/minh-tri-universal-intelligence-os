@@ -102,3 +102,10 @@ Disposition: **REVISE / REPAIRED FOR REREVIEW**, not a retroactive independent P
 The active task scope has been amended to include the bundled stable-law, recovery-route, subsystem-architecture, manifest, and test changes carried by PR #300. The Owner acceptance request must explicitly name those bundled amendments; acceptance of "Master Blueprint v1" must not silently imply acceptance of unlisted law/continuity changes.
 
 This same-seat Supervisor record remains non-independent evidence. Final judgment requires the new frozen packet to be independently rereviewed by Claude and Grok.
+
+
+## POST-v3 SCOPE CORRECTION — 2026-10-07
+
+Claude MB3-F04 and Grok MBV3-SCOPE-002 correctly found three PR #300 changed artifacts omitted from the registered task scope. The active task scope now explicitly includes `README.md`, `docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md`, and `docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md`, together with the v3 critic evidence and repair surfaces. Earlier wording claiming complete scope coverage is superseded by this correction.
+
+This is a same-seat Supervisor correction, not independent acceptance evidence.
