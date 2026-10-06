@@ -389,7 +389,7 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Complete ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1 genuine zero-chat fresh-seat proof before promoting any later Foundation Closure phase.",
+      "next_action": "Execute Foundation Closure v1 end-to-end under Owner delegation. Keep dependency order binding; prepare later bounded candidates while earlier external proof is blocked, but do not promote or mark later phases DONE out of order. Stop only for foundation-level Owner decisions.",
       "blocker": "DEPENDENCY_ARCH_VNEXT_CONTINUITY_HANDOFF_CORE_V1_NOT_DONE"
     },
     {
