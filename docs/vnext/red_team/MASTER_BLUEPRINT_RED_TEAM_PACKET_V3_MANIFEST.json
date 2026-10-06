@@ -18,5 +18,8 @@
   "supervisor_same_seat_audit_is_independent_evidence": false,
   "owner_acceptance_required_after_material_defect_resolution": true,
   "protected_merge_required_after_owner_acceptance": true,
-  "deterministic_recovery_v6_required_after_merge": true
+  "deterministic_recovery_v6_required_after_merge": true,
+  "status": "HISTORICAL_NOT_RETARGETABLE",
+  "final_acceptance_eligible": false,
+  "note": "Frozen Packet v3 remains byte-identical to its recorded digest and original target. Claude/Grok v3 material findings required later repairs and a new packet version; v3 must not be retargeted or dispatched for final acceptance."
 }
