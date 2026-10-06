@@ -1,7 +1,5 @@
 # MINH TRÍ — MASTER BLUEPRINT v1 — INDEPENDENT RED-TEAM PACKET v2 — 2026-10-07
 
-**HISTORICAL / NOT RETARGETABLE.** This packet remains bound to its original target and must not be dispatched as the final acceptance packet after later repairs.
-
 **Packet ref:** `docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V2_20261007.md`  
 **Review target candidate commit:** `efdb2d41ebf908a24d87b12cf2406c9ef011f256`  
 **PR:** #300 — Establish project-wide Master Blueprint governance  
