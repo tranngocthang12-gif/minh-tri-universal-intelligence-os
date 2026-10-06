@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "ARCHITECTURE_VNEXT_FOUNDATION_ACCEPTANCE_FREEZE_RED_TEAM",
-  "next_checkpoint": "RUN_IDENTICAL_FROZEN_PACKET_IN_CLAUDE_AND_GROK_AND_RECORD_BOTH_RECEIPTS",
+  "next_checkpoint": "MERGE_RED_TEAM_ROUND1_REPAIRS_THEN_REPROVE_CURRENT_BOOT_PATH_AND_RUN_CLAUDE_GROK_V2",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
