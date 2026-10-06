@@ -1,0 +1,35 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "claim",
+  "id": "bud:sn35.31:mannati-relational-conceiving",
+  "domain": "buddhist_thought",
+  "class": "ATTESTED",
+  "status": "ACTIVE",
+  "statement": "SN 35.31 repeatedly distinguishes conceiving a sense-domain item, conceiving in it, conceiving from it, and conceiving it as 'mine'; this supports multiple grammatical/appropriative relations for maññati without making 'identity construction' its universal lexical definition.",
+  "source_refs": [
+    "https://suttacentral.net/sn35.31/pli/ms",
+    "docs/vnext/history/BUDDHIST_A162_A165_COLLISION_T1_REVIEW_20261006.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "SuttaCentral SN 35.31 Pāli",
+      "locator": "cakkhuṁ na maññati; cakkhusmiṁ na maññati; cakkhuto na maññati; cakkhuṁ meti na maññati, repeated across the sense domains"
+    },
+    {
+      "source": "Legacy PR#227",
+      "locator": "BUDDHIST_THOUGHT_CHECKPOINT_A162_20261005.md @ ebc3434b680884a7656c4d9e2bf64b1564a94c8d"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "review_level": "T1",
+    "review_date": "2026-10-06",
+    "reviewed_on_base_sha": "3c61a37165232c148b4e9efb59423f5789d3a10b",
+    "source_pr": 227,
+    "source_head_sha": "ebc3434b680884a7656c4d9e2bf64b1564a94c8d",
+    "source_blob_sha": "683eae6929e008929caa43fce91d567cf1e7a6ab",
+    "review_note": "Narrow direct-source promotion only."
+  }
+}
