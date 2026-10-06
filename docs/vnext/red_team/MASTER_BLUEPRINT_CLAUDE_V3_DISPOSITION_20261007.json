@@ -12,41 +12,41 @@
       "finding_id": "MB3-F01",
       "severity": "MEDIUM",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     },
     {
       "finding_id": "MB3-F02",
       "severity": "MEDIUM",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     },
     {
       "finding_id": "MB3-F03",
       "severity": "MEDIUM",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     },
     {
       "finding_id": "MB3-F04",
       "severity": "LOW",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     },
     {
       "finding_id": "MB3-F05",
       "severity": "LOW",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     },
     {
       "finding_id": "MB3-F06",
       "severity": "LOW",
       "disposition": "ACCEPTED_FOR_REPAIR",
-      "repair_status": "NOT_APPLIED_WRITE_TOOL_BLOCKED"
+      "repair_status": "APPLIED_PENDING_INDEPENDENT_REREVIEW"
     }
   ],
   "packet_v3_status": "HISTORICAL_AFTER_MATERIAL_FINDINGS",
   "new_packet_required_after_repair": true,
   "final_acceptance_eligible": false,
-  "note": "Claude v3 findings are accepted. Review evidence is durable, but the repair pass has not been applied because repository update operations on existing files were blocked by the connector safety layer. No repair, CI, Packet v4, or acceptance claim is made."
+  "note": "Claude v3 findings were accepted and repairs are now applied on the candidate branch. This same-seat disposition is not independent closure; a new immutable Packet v4 and identical Claude/Grok rereview remain required."
 }
