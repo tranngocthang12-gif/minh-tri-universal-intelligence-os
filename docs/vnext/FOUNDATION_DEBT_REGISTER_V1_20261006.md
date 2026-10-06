@@ -8,7 +8,9 @@ Debt here does not keep Foundation permanently open unless it violates a freeze 
 | Owner-PC runtime assurance is not currently proven live | RUNTIME_DEBT | NO | PC remains optional non-canonical sidecar; re-prove only for PC-bound work |
 | Old Phase4 retrieval-only graded run remains blocked/stale | EVAL_HISTORY_DEBT | NO | Retrieval/Application Proof v1 supersedes the practical need for foundation closure; preserve history |
 | Autonomous learning / self-critique / meta-learning runtimes OFF | DEFERRED_CAPABILITY | NO | Requires separate future Owner decision + evidence |
-| Cross-provider Claude/Grok final red-team not yet complete | FREEZE_GATE | YES | Must complete before final freeze |
+| Post-Single-Boot-Root + post-consolidation fresh-seat recovery not yet re-proven | FREEZE_GATE | YES | Run a fresh-seat current-path recovery proof after the repair PR merges; do not inherit C3 to the new boot path |
+| Cross-provider Claude/Grok final red-team not yet complete | FREEZE_GATE | YES | Must complete against the repaired v2 packet before final freeze |
+| Semantic/Fast-Lane validators are deterministic primitives but not universal required-PR enforcement | ENFORCEMENT_DEBT | NO | Keep claims bounded; ACTIVE promotion requires explicit review evidence in the protected PR until a measured failure justifies stronger automation |
 | Architecture docs contain historical implementation snapshots | DOCUMENTATION_DEBT | NO | Consolidated law/current state outrank historical snapshots |
 | Knowledge corpus coverage is incomplete and will keep growing | NORMAL_LEARNING_WORK | NO | Use Fast Lane; knowledge growth is not architecture debt |
 
