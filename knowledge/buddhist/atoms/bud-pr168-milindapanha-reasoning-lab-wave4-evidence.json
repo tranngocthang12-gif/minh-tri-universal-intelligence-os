@@ -1,0 +1,29 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:pr168:milindapanha-reasoning-lab-wave4-evidence",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #168 contains a Milindapañha reasoning lab preserved as later/paracanonical comparative evidence only; it must not override early-discourse evidence.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/pr168/wave4/MILINDAPANHA_REASONING_LAB_V0_1_20261004.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#168",
+      "locator": "MILINDAPANHA_REASONING_LAB blob 47d721c5d73f31d08fc80d8e8c38dad6835a113c"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 168,
+    "source_head_sha": "80889a3e6b83f1cb4742b1abe3e796ddfc42ce76",
+    "salvaged_on_base_sha": "fcfecfb1c539fdc2c540f6f27ccce389990d2293",
+    "salvage_wave": "4",
+    "epistemic_layer": "LATER_PARACANONICAL",
+    "promotion_requirement": "BUDDHIST_DOMAIN_T1_REVIEW"
+  }
+}
