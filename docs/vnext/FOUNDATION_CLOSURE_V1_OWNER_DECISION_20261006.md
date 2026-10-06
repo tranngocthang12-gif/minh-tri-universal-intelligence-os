@@ -120,3 +120,18 @@ Approved repair:
 - current handoff follows the current active task independently of historical proof handoffs;
 - a task transition must not invalidate already-merged evidence;
 - after CI proves this transition-safe behavior, Continuity Core v1 may remain DONE and Single Boot Root v1 becomes the active continuation.
+
+
+## Knowledge Fast Lane v1 — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT KNOWLEDGE FAST LANE v1 — ĐƯỜNG HỌC NHẸ, CÓ PROVENANCE + STATUS + SUPERSESSION + SEMANTIC STALE CHECK; PASS THÌ TIẾP RETRIEVAL/APPLICATION PROOF`
+
+Approved bounded implementation:
+- keep the existing knowledge atom/hub schema;
+- require provenance, status, source/evidence references, supersession lineage, domain-rule references, and semantic stale checks for ordinary learning updates;
+- supersession must be explicit and protected rather than silently rewriting history;
+- protected-main review remains mandatory;
+- no self-VERIFIED promotion, autonomous merge, second canonical authority, workflow engine, or PC dependency;
+- after CI PASS and merge, continue directly to Retrieval/Application proof under the existing Foundation Closure delegation.

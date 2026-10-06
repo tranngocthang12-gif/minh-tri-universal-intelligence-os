@@ -389,8 +389,8 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Continue Foundation Closure v1 with Semantic Staleness Guard v1 now active, then Knowledge Fast Lane v1, Retrieval/Application proof, and Law consolidation.",
-      "blocker": "DEPENDENCY_ARCH_SEMANTIC_STALENESS_V1_NOT_DONE"
+      "next_action": "Continue Foundation Closure v1 with Knowledge Fast Lane v1 now active, then Retrieval/Application proof and Law consolidation.",
+      "blocker": "DEPENDENCY_ARCH_KNOWLEDGE_FAST_LANE_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
@@ -419,7 +419,7 @@
     {
       "task_id": "ARCH-SEMANTIC-STALENESS-V1",
       "title": "Reject writes that depend on stale or superseded semantic knowledge",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "state/tasks.yaml",
         "knowledge/",
@@ -434,32 +434,32 @@
         "ARCH-SINGLE-BOOT-ROOT-V1"
       ],
       "supersedes": [],
-      "result_ref": "src/minhtri/task_guard.py / src/minhtri/semantic_guard.py / docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md / PR_PENDING",
+      "result_ref": "PR#289 / src/minhtri/task_guard.py / src/minhtri/semantic_guard.py / docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md",
       "handoff_ref": "docs/vnext/handoff/SEMANTIC_STALENESS_V1.md",
-      "next_action": "Run required CI for the bounded Semantic Staleness Guard v1 candidate; if PASS, merge, fresh-read main, then activate Knowledge Fast Lane v1.",
+      "next_action": "Semantic Staleness Guard v1 complete. Future semantic freshness changes require a new bounded task.",
       "blocker": null
     },
     {
       "task_id": "ARCH-KNOWLEDGE-FAST-LANE-V1",
       "title": "Create lightweight protected path for ordinary learning updates",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "knowledge/",
         "tools/",
         "tests/",
         "docs/vnext/"
       ],
-      "branch": null,
-      "base_sha": "f5da0578e57475fe945469af0da65f34666fbe10",
+      "branch": "owner/knowledge-fast-lane-v1-20261006",
+      "base_sha": "9932b0c1061242473ad9b65cbfebb5ee161fb835",
       "requires": "none",
       "dependencies": [
         "ARCH-SEMANTIC-STALENESS-V1"
       ],
       "supersedes": [],
-      "result_ref": null,
-      "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "next_action": "After Semantic Staleness Guard v1 is DONE, implement the smallest knowledge fast lane preserving provenance, status, supersession, domain rules, stale checks, review, and no autonomous merge.",
-      "blocker": "WAITING_FOR_SEMANTIC_STALENESS_V1_DONE"
+      "result_ref": "knowledge/FAST_LANE_V1.json / src/minhtri/knowledge_fast_lane.py / tests/test_knowledge_fast_lane_v1.py / PR_PENDING",
+      "handoff_ref": "docs/vnext/handoff/KNOWLEDGE_FAST_LANE_V1.md",
+      "next_action": "Run required CI on the bounded Fast Lane candidate; if PASS, merge, fresh-read main, then activate Retrieval/Application proof.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-RECOVERY-PROOF-GATE-V2",
