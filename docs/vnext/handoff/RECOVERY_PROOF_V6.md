@@ -18,7 +18,7 @@
 - Foundation Freeze remains blocked.
 
 ## NEXT ACTION
-Build and merge the bounded Recovery Proof v6 transition and harness against the accepted Master Blueprint route, then run an independent fresh-seat response and deterministic scorer; Foundation Freeze remains blocked until v6 PASS with durable receipt.
+Complete CI and independent review of the bounded Recovery Proof v6 transition/harness, obtain explicit Owner acceptance, then protected-merge it; after fresh-read protected main, run an independent fresh-seat v6 response and deterministic scorer. Foundation Freeze remains blocked until v6 PASS with durable receipt.
 
 ## REQUIRED GATES
 - CI PASS on exact PR #301 head.
