@@ -15,5 +15,8 @@
   "supervisor_same_seat_audit_is_independent_evidence": false,
   "owner_acceptance_required_after_material_defect_resolution": true,
   "protected_merge_required_after_owner_acceptance": true,
-  "fresh_seat_recovery_proof_required_after_merge": true
+  "fresh_seat_recovery_proof_required_after_merge": true,
+  "status": "HISTORICAL_NOT_RETARGETABLE",
+  "final_acceptance_eligible": false,
+  "note": "Immutable packet bound to its original target; later repairs require a new packet version."
 }
