@@ -1,0 +1,29 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:legacy-pr233:nissaya-lexical-range-evidence",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "Legacy PR #233 records a lexical-range caution that nissaya/nissāya can mean support or reliance and is not intrinsically identical with attachment; the exact relation among nissaya, anissita/anissaya, upādāna, nivesana, and samuggahīta remains open for dedicated lexical review.",
+  "source_refs": [
+    "docs/vnext/history/BUDDHIST_A162_A165_COLLISION_T1_REVIEW_20261006.md"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#233",
+      "locator": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A164_20261005.md @ dfc16d99a4bc6c045343e3d401ab1c10554a76bd"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 233,
+    "source_head_sha": "dfc16d99a4bc6c045343e3d401ab1c10554a76bd",
+    "source_blob_sha": "97a63e07ec5f866fcdcc1f07be260ddcb1a57de0",
+    "review_level": "T1",
+    "promotion_requirement": "DEDICATED_NISSAYA_LEXICAL_REVIEW",
+    "note": "Preserved as bounded lexical-range evidence; not a completed concordance."
+  }
+}

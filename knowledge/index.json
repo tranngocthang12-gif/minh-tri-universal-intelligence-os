@@ -69,6 +69,42 @@
       "statement": "Snp 4.11 (Sn 874) directly states a relation in which papañcasaṅkhā are saññānidāna; this does not by itself define all papañca or prove a complete identity/dispute psychology."
     },
     {
+      "id": "bud:legacy-pr232:papanca-early-late-boundary-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-legacy-pr232-papanca-boundary-evidence.json",
+      "statement": "Legacy PR #232 records a bounded papañca review: MN 18 and Snp 4.11 support early process/conflict relations, while the formula identifying papañca with taṇhā, diṭṭhi, and māna is treated as later exegetical material rather than silently retrojected as an explicit early-discourse definition."
+    },
+    {
+      "id": "bud:legacy-pr233:nissaya-lexical-range-evidence",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-legacy-pr233-nissaya-range-evidence.json",
+      "statement": "Legacy PR #233 records a lexical-range caution that nissaya/nissāya can mean support or reliance and is not intrinsically identical with attachment; the exact relation among nissaya, anissita/anissaya, upādāna, nivesana, and samuggahīta remains open for dedicated lexical review."
+    },
+    {
+      "id": "bud:sn22.64:mannati-mara-bondage",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-sn22-64-mannati-mara-bondage.json",
+      "statement": "SN 22.64 directly states that conceiving form, feeling, perception, choices/formations, or consciousness binds one to Māra, while not conceiving them frees one from Māra; this is a passage-specific claim and does not redefine every ordinary use of maññati."
+    },
+    {
+      "id": "bud:sn35.31:mannati-relational-conceiving",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "ATTESTED",
+      "status": "ACTIVE",
+      "path": "knowledge/buddhist/atoms/bud-sn35-31-mannati-relations.json",
+      "statement": "SN 35.31 repeatedly distinguishes conceiving a sense-domain item, conceiving in it, conceiving from it, and conceiving it as 'mine'; this supports multiple grammatical/appropriative relations for maññati without making 'identity construction' its universal lexical definition."
+    },
+    {
       "id": "econ:program:identification-assumptions",
       "domain": "economics",
       "record_type": "claim",
