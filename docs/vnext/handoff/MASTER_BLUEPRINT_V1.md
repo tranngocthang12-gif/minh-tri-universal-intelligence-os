@@ -21,7 +21,7 @@
 
 ## NOT DONE
 - Required CI has not yet PASSed on the final repaired packet-bearing head.
-- Final review packet/manifest are not yet rebound to the repaired candidate commit and therefore are not frozen for rereview.
+- Packet v1 is historical because Grok reviewed it before repair. Packet v2 and its manifest are not yet bound to the repaired candidate commit.
 - Claude has not reviewed the repaired final packet; Grok R1 reviewed the superseded pre-repair target and must rereview the repaired packet.
 - Grok R1 dispositions are recorded as accepted/resolved-by-repair, but independent rereview is still required to verify closure.
 - Owner has not accepted Master Blueprint v1.
@@ -30,7 +30,7 @@
 - Foundation Freeze remains blocked.
 
 ## NEXT ACTION
-Repair Grok R1 HIGH findings, bind the review packet and manifest to one exact repaired candidate SHA and digest, require CI PASS on the packet-bearing PR head, then run that identical packet independently in Claude and Grok.
+Bind Master Blueprint Red-Team Packet v2 and its manifest to this exact repaired candidate SHA and packet digest, require CI PASS on the packet-bearing PR head, then run that identical v2 packet independently in Claude and Grok.
 
 ## REQUIRED GATES
 - No self-acceptance by Architect/Builder/Supervisor.
