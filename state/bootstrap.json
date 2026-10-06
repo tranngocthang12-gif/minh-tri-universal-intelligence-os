@@ -1,0 +1,19 @@
+{
+  "schema": "minhtri-bootstrap-root/v1",
+  "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
+  "status": "CURRENT_BOOT_ROOT",
+  "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+  "current_state": "state/current.yaml",
+  "task_registry": "state/tasks.yaml",
+  "law_index": "docs/LAW_INDEX_20261003.md",
+  "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+  "recovery_entrypoint": "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+  "resolve_current_architecture_from": "state/current.yaml:current_architecture",
+  "resolve_law_precedence_from": "state/current.yaml:law_precedence",
+  "resolve_active_task_from": "state/current.yaml:active_task_id",
+  "legacy_project_state": "docs/PROJECT_STATE.json",
+  "legacy_recovery_manifest": "docs/RECOVERY_MANIFEST.json",
+  "legacy_mode": "UNMIGRATED_KEYS_OR_HISTORY_ONLY",
+  "legacy_must_not_override_migrated_state": true,
+  "fail_closed_on_missing_or_conflicting_required_pointer": true
+}
