@@ -1,0 +1,17 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C1",
+  "challenge_nonce": "mtc1-8ad4b9d1f0f7419db9c6d5021bb640ce",
+  "response_ref": "OWNER_PROVIDED_IN_CHAT_2026-10-06",
+  "response_sha256_canonical_json": "2ae8680678e22fedb1cc9b753b9fd4e836def0bcad1c100fe635efebc8f64401",
+  "scorer_ref": "tools/score_zero_chat_recovery.py@pre-v2-normalization",
+  "scorer_version": "v1-exact-reference-match",
+  "deterministic_score": "FAIL",
+  "deterministic_errors": [
+    "foundation law source_ref mismatch because C1 returned the correct canonical file with a section anchor while v1 required exact path equality"
+  ],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports the response was produced in a separate new chat using only the canonical fresh-seat command; the response attested separate_zero_chat=true, used_prior_chat_history=false, read_gold=false.",
+  "main_sha": "1dc3c30f92f2333fb391e60307113bcf34e39ec5",
+  "completion_eligible": false
+}
