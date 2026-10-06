@@ -389,8 +389,8 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Continue Foundation Closure v1 with Knowledge Fast Lane v1 now active, then Retrieval/Application proof and Law consolidation.",
-      "blocker": "DEPENDENCY_ARCH_KNOWLEDGE_FAST_LANE_V1_NOT_DONE"
+      "next_action": "Complete Retrieval/Application proof with fresh-seat PASS + durable receipt, then perform Law consolidation.",
+      "blocker": "DEPENDENCY_ARCH_RETRIEVAL_APPLICATION_PROOF_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
@@ -442,7 +442,7 @@
     {
       "task_id": "ARCH-KNOWLEDGE-FAST-LANE-V1",
       "title": "Create lightweight protected path for ordinary learning updates",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "knowledge/",
         "tools/",
@@ -456,9 +456,9 @@
         "ARCH-SEMANTIC-STALENESS-V1"
       ],
       "supersedes": [],
-      "result_ref": "knowledge/FAST_LANE_V1.json / src/minhtri/knowledge_fast_lane.py / tests/test_knowledge_fast_lane_v1.py / PR_PENDING",
+      "result_ref": "PR#290 / knowledge/FAST_LANE_V1.json / src/minhtri/knowledge_fast_lane.py / tests/test_knowledge_fast_lane_v1.py",
       "handoff_ref": "docs/vnext/handoff/KNOWLEDGE_FAST_LANE_V1.md",
-      "next_action": "Run required CI on the bounded Fast Lane candidate; if PASS, merge, fresh-read main, then activate Retrieval/Application proof.",
+      "next_action": "Knowledge Fast Lane v1 complete. Future fast-lane changes require a new bounded task.",
       "blocker": null
     },
     {
@@ -510,6 +510,31 @@
       "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "next_action": "Completed with C3 deterministic PASS, Owner-attested fresh-seat independence provenance PRESENT, and durable receipt merged.",
       "blocker": null
+    },
+    {
+      "task_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1",
+      "title": "Prove fresh-seat retrieval plus application against active, pending, stale, and policy fixtures",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "eval/retrieval_application/v1/",
+        "tools/score_retrieval_application_eval.py",
+        "tests/test_retrieval_application_proof_v1.py",
+        "docs/vnext/RETRIEVAL_APPLICATION_PROOF_V1_20261006.md",
+        "docs/vnext/handoff/RETRIEVAL_APPLICATION_PROOF_V1.md",
+        "state/current.yaml",
+        "state/tasks.yaml"
+      ],
+      "branch": "owner/retrieval-application-proof-v1-20261006",
+      "base_sha": "b3a9b4cea0f9b17a7a53da14a8fa2d2a4c040e3e",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-KNOWLEDGE-FAST-LANE-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "eval/retrieval_application/v1/packet.json / PR_PENDING",
+      "handoff_ref": "docs/vnext/handoff/RETRIEVAL_APPLICATION_PROOF_V1.md",
+      "next_action": "Run required CI on the harness; if PASS, merge, then execute eval/retrieval_application/v1/FRESH_SEAT_COMMAND.txt in a genuinely fresh seat outside the MINH TRI project.",
+      "blocker": "FRESH_SEAT_GRADED_RUN_REQUIRED_AFTER_HARNESS_MERGE"
     }
   ]
 }
