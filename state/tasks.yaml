@@ -60,7 +60,10 @@
         "ARCH-VNEXT-PHASE2"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/KNOWLEDGE_PR_SALVAGE_WAVE2_INVENTORY_20261006.md"
+      "result_ref": "docs/vnext/history/KNOWLEDGE_PR_SALVAGE_WAVE2_INVENTORY_20261006.md",
+      "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+      "next_action": "Resume controlled salvage from PR169 only after Continuity & Handoff Core v1 static gate is canonical.",
+      "blocker": "PAUSED_BEHIND_OWNER_APPROVED_CONTINUITY_HANDOFF_CORE_V1"
     },
     {
       "task_id": "RUNTIME-ASSURANCE-PC",
@@ -75,7 +78,10 @@
       "requires": "pc",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": null,
+      "handoff_ref": "docs/RECOVERY_MANIFEST.json",
+      "next_action": "Restore and re-prove Owner-PC runtime only when Owner directs PC-bound work; this task must not block non-PC learning.",
+      "blocker": "OWNER_PC_OR_LOCAL_RUNTIME_REQUIRED_AND_CURRENT_LIVENESS_NOT_PROVEN"
     },
     {
       "task_id": "ARCH-VNEXT-PHASE3-PILOT",
@@ -138,7 +144,10 @@
         "ARCH-VNEXT-PHASE4-HARNESS"
       ],
       "supersedes": [],
-      "result_ref": "BLOCKED_NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06"
+      "result_ref": "BLOCKED_NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06",
+      "handoff_ref": "docs/vnext/ARCHITECTURE_VNEXT_PHASE4B_FRESH_SEAT_HANDOFF_20261006.md",
+      "next_action": "Run the sealed retrieval packet in a genuinely independent fresh seat when an eligible external/fresh seat is available.",
+      "blocker": "NEEDS_INDEPENDENT_FRESH_SEAT_NO_ELIGIBLE_EXTERNAL_LLM_CONNECTOR_AVAILABLE_2026-10-06"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
@@ -331,7 +340,35 @@
         "ARCH-VNEXT-SALVAGE-PR168"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": null,
+      "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+      "next_action": "Wait until Continuity & Handoff Core v1 static gate is canonical, then inspect PR169 changed files and create bounded salvage inventory.",
+      "blocker": "PAUSED_BEHIND_OWNER_APPROVED_CONTINUITY_HANDOFF_CORE_V1"
+    },
+    {
+      "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+      "title": "Build machine-checkable continuity and handoff core before further architecture expansion",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/continuity/",
+        "docs/vnext/handoff/",
+        "eval/recovery/v1/",
+        "tools/validate_continuity_handoff.py",
+        "tests/test_continuity_handoff_core_v1.py"
+      ],
+      "branch": "owner/continuity-handoff-core-v1-20261006",
+      "base_sha": "93ea95f6ba1a7c2c969dbdcbc5c5a043e8aade25",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1.md",
+      "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+      "next_action": "Build static validator, recovery entrypoint, and held-out zero-chat recovery fixture; merge only after CI passes.",
+      "blocker": null
     }
   ]
 }
