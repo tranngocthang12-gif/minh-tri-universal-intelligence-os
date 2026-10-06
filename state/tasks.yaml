@@ -412,9 +412,9 @@
       ],
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "HELD pending Master Blueprint v1 independent review, Owner acceptance, protected merge, and deterministic post-merge fresh-seat Recovery Proof v6.",
-      "blocker": "MASTER_BLUEPRINT_V1_ACCEPTANCE_MERGE_AND_RECOVERY_V6_REQUIRED",
+      "handoff_ref": "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
+      "next_action": "HELD pending deterministic post-merge fresh-seat Recovery Proof v6 PASS with durable receipt; only then may Foundation Freeze resume.",
+      "blocker": "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
@@ -698,16 +698,21 @@
         "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md",
         "eval/recovery/v6/",
         "tools/score_current_boot_recovery_v6.py",
-        "tests/test_current_boot_recovery_v6.py"
+        "tests/test_current_boot_recovery_v6.py",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "eval/recovery/v6/packet.json",
+        "eval/recovery/v6/response.schema.json",
+        "tests/test_master_blueprint_v1.py",
+        "tests/test_foundation_freeze_prep_v1.py"
       ],
       "branch": "owner/recovery-proof-v6-transition-20261007",
       "base_sha": "174d8817730063d51f6682c31e5f067094bcef95",
-      "requires": "independent_fresh_seat_response_after_harness_merge",
+      "requires": "none",
       "dependencies": [
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": null,
+      "result_ref": "PR#301 / eval/recovery/v6/challenge.json / eval/recovery/v6/packet.json / tools/score_current_boot_recovery_v6.py / tests/test_current_boot_recovery_v6.py",
       "handoff_ref": "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
       "next_action": "Build and merge the bounded Recovery Proof v6 transition and harness against the accepted Master Blueprint route, then run an independent fresh-seat response and deterministic scorer; Foundation Freeze remains blocked until v6 PASS with durable receipt.",
       "blocker": "INDEPENDENT_FRESH_SEAT_RESPONSE_REQUIRED_AFTER_V6_HARNESS_MERGE",
