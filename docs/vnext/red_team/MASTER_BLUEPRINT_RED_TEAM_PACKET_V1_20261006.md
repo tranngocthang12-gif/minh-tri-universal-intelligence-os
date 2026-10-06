@@ -1,7 +1,7 @@
 # MINH TRÍ — MASTER BLUEPRINT v1 — INDEPENDENT RED-TEAM PACKET — 2026-10-06
 
 **Packet ref:** `docs/vnext/red_team/MASTER_BLUEPRINT_RED_TEAM_PACKET_V1_20261006.md`  
-**Review target candidate commit:** `7e02885f0e43e9c15c5e3a3f40eafda94f9a0b45`  
+**Review target candidate commit:** `c3fed9bd60a02b30e61e482d6b08da5589588d43`  
 **PR:** #300 — Establish project-wide Master Blueprint governance  
 **Mode:** independent read-only architecture/governance critic  
 **Acceptance authority:** NONE  
@@ -9,7 +9,7 @@
 
 ## Mandatory target
 
-Review the candidate exactly at commit `7e02885f0e43e9c15c5e3a3f40eafda94f9a0b45`.
+Review the candidate exactly at commit `c3fed9bd60a02b30e61e482d6b08da5589588d43`.
 
 Read:
 - `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md`
@@ -21,6 +21,7 @@ Read:
 - `state/bootstrap.json`
 - `state/current.yaml`
 - `state/tasks.yaml`
+- `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md`
 - `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
 - `docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md`
 - `docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md`
