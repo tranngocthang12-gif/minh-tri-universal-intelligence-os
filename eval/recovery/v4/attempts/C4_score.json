@@ -1,0 +1,16 @@
+{
+  "schema": "minhtri-current-boot-recovery-score/v4",
+  "status": "FAIL",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4",
+  "active_task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+  "errors": [
+    "boot facts mismatch",
+    "law facts mismatch",
+    "active_task facts mismatch",
+    "canonicality facts mismatch",
+    "capability_truth facts mismatch",
+    "next_gate facts mismatch"
+  ],
+  "historical_snapshot_scoring": true,
+  "prose_keyword_scoring": false
+}
