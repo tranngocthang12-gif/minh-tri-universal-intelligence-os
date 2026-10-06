@@ -15,7 +15,8 @@ class SingleBootRootV1Tests(unittest.TestCase):
         current = load("state/current.yaml")
         self.assertEqual(boot["status"], "CURRENT_BOOT_ROOT")
         self.assertEqual(boot["durable_continuity_authority"], "GITHUB_PROTECTED_MAIN")
-        self.assertEqual(boot["current_state"], current["boot_root"])
+        self.assertEqual(boot["current_state"], "state/current.yaml")
+        self.assertEqual(current["boot_root"], "state/bootstrap.json")
         self.assertEqual(boot["task_registry"], current["task_registry"])
         self.assertEqual(boot["task_registry"], "state/tasks.yaml")
 
