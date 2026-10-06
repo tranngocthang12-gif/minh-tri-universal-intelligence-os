@@ -411,8 +411,8 @@
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
       ],
       "supersedes": [],
-      "result_ref": null,
-      "handoff_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
+      "result_ref": "PENDING_PR265_SALVAGE",
+      "handoff_ref": "docs/vnext/handoff/SINGLE_BOOT_ROOT_V1.md",
       "next_action": "Review and salvage/rebase PR #265 into the smallest single-boot-root implementation; keep protected main as the single continuity authority and do not create a second authority.",
       "blocker": null
     },
