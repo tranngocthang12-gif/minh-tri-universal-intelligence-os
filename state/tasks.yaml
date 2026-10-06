@@ -202,7 +202,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168",
       "title": "Inventory and selectively salvage high-value early-Buddhist source/audit artifacts from legacy PR 168",
-      "status": "REPORTED",
+      "status": "DONE",
       "scope": [
         "PR#168",
         "docs/learning/",
@@ -216,7 +216,7 @@
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
+      "result_ref": "PR#168 CLOSED WITHOUT MERGE / docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE3B",
@@ -261,7 +261,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION",
       "title": "Finalize disposition of remaining PR168 synthesis, program, memory/meta, and deep-dive files",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "PR#168:remaining-unpreserved-files",
         "docs/vnext/history/",
@@ -274,7 +274,7 @@
         "ARCH-VNEXT-SALVAGE-PR168-WAVE4"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
+      "result_ref": "PR#276 / docs/vnext/history/PR168_FINAL_DISPOSITION_20261006.md"
     },
     {
       "task_id": "ARCH-VNEXT-FOUNDATION-HANDOFF-LAW",
@@ -296,7 +296,7 @@
     {
       "task_id": "ARCH-VNEXT-HANDOFF-RECONCILE-20261006",
       "title": "Reconcile stale architecture state and create durable post-law handoff",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "state/current.yaml",
         "state/tasks.yaml",
@@ -312,7 +312,26 @@
       "supersedes": [
         "PR#273"
       ],
-      "result_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
+      "result_ref": "PR#276 / docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR169",
+      "title": "Controlled salvage of legacy Buddhist learning bundle PR169",
+      "status": "READY",
+      "scope": [
+        "PR#169",
+        "docs/learning/",
+        "knowledge/buddhist/",
+        "docs/vnext/history/"
+      ],
+      "branch": null,
+      "base_sha": "f535896d5d230f2c50c315ce296b6d31ddd474fd",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-SALVAGE-PR168"
+      ],
+      "supersedes": [],
+      "result_ref": null
     }
   ]
 }
