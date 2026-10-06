@@ -201,13 +201,7 @@ Every seat must recover role before doing material work.
    - Do not force Owner to open GitHub or type commands unless asked.
 
 9. **Handoff**
-   Every material task must leave:
-   - what was done;
-   - evidence/source;
-   - result status;
-   - unknowns;
-   - next step;
-   - whether any mutation occurred.
+   Every material task must satisfy the project-wide continuity/handoff law in section 8. A chat summary alone is never sufficient. The seat must leave a durable checkpoint that another zero-chat seat can recover without asking the Owner to restate recoverable context.
 
 10. **Project reminder**
    - Chat can forget.
@@ -226,20 +220,162 @@ Historical security findings and their current classification:
 
 Current status must be read from `PROJECT_STATE.json` and the current architecture, not inferred from this historical bootstrap section.
 
-## 8. GITHUB-FIRST HANDOFF RULE
+## 8. PROJECT-WIDE CONTINUITY & MANDATORY HANDOFF LAW
 
-For future material work:
+**Status:** STABLE OWNER LAW / FOUNDATION INVARIANT  
+**Scope:** ALL material MINH TRÍ work: law, architecture, learning, critique, security, runtime, implementation, research, content systems, and future domains.
+
+### 8.1 LAW-FIRST gate
+
+Before material architecture or implementation work, every seat must first resolve the current law authority.
+
+Mandatory order:
 
 ```text
-DISCOVER / DECIDE IN CHAT
-→ RECORD IN GITHUB
-→ MARK STATUS (CURRENT / CANDIDATE / UNTESTED / HISTORICAL)
-→ ONLY THEN TREAT AS DURABLE PROJECT MEMORY
+OWNER CURRENT INSTRUCTION
+→ PROJECT_STATE pointer layer
+→ CURRENT LAW INDEX
+→ RELEVANT STABLE LAWS / BOOTSTRAP LAW
+→ CURRENT STATE + TASK REGISTRY
+→ CURRENT ARCHITECTURE
+→ TASK/DOMAIN HANDOFF
+→ WORK
 ```
 
+Architecture may implement law but may not silently outrank, bypass, or redefine stable law.
+
+If law routing is missing, contradictory, stale, or unreadable, the affected architecture mutation is **BLOCKED** until the law conflict is resolved.
+
+### 8.2 NO UNIQUE STATE IN CHAT
+
+No material project state may exist only in a chat.
+
+Material state includes at least:
+- Owner decisions that affect future work;
+- law/architecture decisions;
+- active task state;
+- important completed work;
+- branch/PR/head/base identity;
+- blockers and unresolved risks;
+- evidence/claim status changes;
+- corrections/supersessions;
+- exact next action needed for continuation.
+
+A chat may be the working interface, but it is not the durable continuity authority.
+
+### 8.3 HANDOFF IS CONTINUOUS, NOT AN END-OF-CHAT CEREMONY
+
+A chat can end, truncate, crash, or be replaced without warning.
+
+Therefore a seat must not wait for the last message of a chat to create continuity.
+
+After every **material state transition**, the seat must durably update the task/checkpoint/handoff before relying on that transition in later work.
+
+Material transitions include:
+- a decision is made;
+- a PR is opened, merged, closed, superseded, or materially changed;
+- a task changes status;
+- a blocker is discovered or cleared;
+- a claim/lesson is promoted, narrowed, disputed, corrected, or superseded;
+- the exact next action changes;
+- work moves to another seat/chat/model;
+- a long-running task pauses.
+
+If the chat disappears immediately after a material transition, the latest durable checkpoint must still be sufficient for recovery.
+
+### 8.4 MANDATORY HANDOFF CONTRACT
+
+Every material task must leave a durable handoff containing, directly or by canonical references:
+
+- `TASK_ID` / workstream identity;
+- Owner objective and bounded scope;
+- authority/law references needed to continue;
+- last verified canonical main SHA;
+- working branch, base SHA, head SHA, and PR number when applicable;
+- current task status;
+- what is DONE;
+- what is NOT DONE;
+- important evidence/claim status and truth boundary;
+- blockers / risks / unresolved conflicts;
+- mutations already performed;
+- exact **NEXT ACTION**;
+- dependencies and required gates;
+- PC/Local Brain requirement when applicable;
+- durable result/evidence locations.
+
+The handoff must distinguish:
+- **canonical main state**;
+- **unmerged branch/candidate state**;
+- **historical/chat-only notes**.
+
+An unmerged branch handoff may guide resumption of that branch, but it never outranks current canonical main.
+
+### 8.5 NEW-SEAT RECOVERY RULE
+
+A new chat/seat/model must not start material work from model memory or an old chat summary when canonical recovery is available.
+
+It must fresh-read:
+1. `docs/PROJECT_STATE.json`;
+2. the current Law Index;
+3. this bootstrap/stable handoff law and other relevant Stable Laws;
+4. `state/current.yaml` and `state/tasks.yaml` when present for the migrated scope;
+5. the current architecture routed by authority;
+6. the active task result/handoff/branch state;
+7. task/domain sources.
+
+Then it must continue from the durable `NEXT ACTION` unless:
+- the Owner explicitly redirects;
+- the task is already completed/superseded;
+- fresh canonical evidence proves the handoff stale.
+
+A new seat should not ask the Owner to repeat information that can be recovered from canonical project records.
+
+### 8.6 STALE / MISSING / CONFLICTING HANDOFF — FAIL CLOSED
+
+If a handoff is missing, stale, or conflicts with current authority:
+- do not invent the missing state;
+- do not mutate canonical state based on chat recollection;
+- reconstruct from GitHub main, task registry, branch/PR history, and durable evidence;
+- record the reconciliation/correction;
+- only then resume mutation.
+
+Current canonical state and law always outrank an older handoff.
+
+### 8.7 INTERRUPTION AND WRITE-PATH FAILURE
+
 If GitHub write is unavailable:
-- the seat must explicitly say the item is not yet durably recorded;
-- it must not pretend that chat text equals canonical storage.
+- explicitly mark the new material state **NOT YET DURABLY RECORDED**;
+- do not claim handoff completion;
+- continue only work that is safe without the blocked mutation;
+- once write access returns, persist the missing checkpoint before depending on it for further architecture progression.
+
+### 8.8 ARCHITECTURE FOUNDATION GATE
+
+The vNext architecture may not be declared complete until project-wide continuity can demonstrate that a genuine zero-chat seat can:
+- recover current law;
+- recover current state/task;
+- identify the exact active work and next action;
+- distinguish canonical from unmerged/historical state;
+- continue without Owner recap;
+- reject a stale/conflicting handoff.
+
+Static CI routing tests are required immediately.
+A genuine fresh-seat recovery proof is required before final architecture completion.
+
+### 8.9 PROTECTED CHANGE
+
+This continuity/handoff law is foundational.
+
+Weakening or superseding it requires:
+- explicit Owner decision;
+- protected branch;
+- review appropriate to foundational law;
+- required CI;
+- merge;
+- fresh-read canonical main.
+
+No architecture PR, runtime automation, model, seat, or PC-side process may silently weaken this invariant.
+
 
 ## 9. THIS RECORD
 
