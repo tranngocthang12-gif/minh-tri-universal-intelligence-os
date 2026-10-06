@@ -30,6 +30,9 @@
   ],
   "review": {
     "protected_main_review_required": true,
-    "autonomous_merge": false
-  }
+    "autonomous_merge": false,
+    "active_promotion_requires_explicit_review_evidence": true,
+    "active_promotion_note": "New or changed knowledge must not be treated as ACTIVE merely because validation code passes; protected PR review must record the promotion basis. The validator is not universal write-path enforcement."
+  },
+  "enforcement_scope": "BOUNDED_VALIDATION_CONTRACT_NOT_UNIVERSAL_REQUIRED_CHECK"
 }
