@@ -7,8 +7,8 @@
   "current_architecture": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
   "law_precedence": "docs/vnext/ARCHITECTURE_VNEXT_PHASE0_1_MIGRATION_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "ARCHITECTURE_VNEXT_KNOWLEDGE_FAST_LANE_V1",
-  "next_checkpoint": "VALIDATE_KNOWLEDGE_FAST_LANE_V1_THEN_RUN_RETRIEVAL_APPLICATION_PROOF",
+  "active_workstream": "ARCHITECTURE_VNEXT_RETRIEVAL_APPLICATION_PROOF_V1",
+  "next_checkpoint": "MERGE_RETRIEVAL_APPLICATION_HARNESS_THEN_RUN_FRESH_SEAT_PROOF",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -43,7 +43,7 @@
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
     "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
   },
-  "active_task_id": "ARCH-KNOWLEDGE-FAST-LANE-V1",
+  "active_task_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1",
   "boot_root": "state/bootstrap.json",
   "task_registry": "state/tasks.yaml"
 }

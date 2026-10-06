@@ -1,0 +1,49 @@
+{
+  "schema": "minhtri-retrieval-application-gold/v1",
+  "set_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001",
+  "note": "Do not provide this file to the graded seat.",
+  "answers": [
+    {
+      "qid": "A1",
+      "decision": "USE_AS_SYNTHESIS",
+      "required_record_ids": [
+        "bud:a172:identity-shame-synthesis"
+      ],
+      "forbidden_record_ids": [
+        "decoy:bud:a172:identity-shame-attested"
+      ]
+    },
+    {
+      "qid": "A2",
+      "decision": "REQUIRE_REVIEW",
+      "required_record_ids": [
+        "bud:a172:hiri-lexical-open"
+      ],
+      "forbidden_record_ids": []
+    },
+    {
+      "qid": "A3",
+      "decision": "REQUIRE_IDENTIFICATION_ASSUMPTIONS",
+      "required_record_ids": [
+        "econ:program:identification-assumptions"
+      ],
+      "forbidden_record_ids": []
+    },
+    {
+      "qid": "A4",
+      "decision": "SUPERSEDE_EXPLICITLY",
+      "required_record_ids": [
+        "policy:knowledge-fast-lane-v1"
+      ],
+      "forbidden_record_ids": []
+    },
+    {
+      "qid": "A5",
+      "decision": "REJECT_STALE_DEPENDENCY",
+      "required_record_ids": [
+        "policy:semantic-staleness-v1"
+      ],
+      "forbidden_record_ids": []
+    }
+  ]
+}

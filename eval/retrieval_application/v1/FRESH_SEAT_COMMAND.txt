@@ -1,0 +1,1 @@
+Fresh-read protected main of GitHub repo tranngocthang12-gif/minh-tri-universal-intelligence-os starting only from eval/retrieval_application/v1/packet.json and eval/retrieval_application/v1/response.schema.json; do not use prior chat history, do not read eval/retrieval_application/v1/gold.json, and return only one JSON object matching minhtri-retrieval-application-response/v1.

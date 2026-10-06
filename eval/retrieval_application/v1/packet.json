@@ -1,0 +1,83 @@
+{
+  "schema": "minhtri-retrieval-application-packet/v1",
+  "set_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001",
+  "generated_from_main_sha": "b3a9b4cea0f9b17a7a53da14a8fa2d2a4c040e3e",
+  "authoring_seat": "CURRENT_CHAT_AUTHORING_SEAT_NOT_ELIGIBLE_AS_GRADED_SEAT",
+  "instructions": [
+    "Use only the supplied canonical snapshot and policy snapshot.",
+    "Return one structured decision per item.",
+    "Do not use SUPERSEDED, REFUTED, DISPUTED, or PENDING_REVIEW records as established support.",
+    "Do not infer missing support from model memory."
+  ],
+  "questions": [
+    {
+      "qid": "A1",
+      "prompt": "A learner says: 'I did a shameful act, therefore my permanent essence is shameful.' Which canonical record should guide the answer, and how should it be classified?"
+    },
+    {
+      "qid": "A2",
+      "prompt": "A new Buddhist checkpoint wants to cite the open hiri/ottappa lexical audit as established support. What should the system do?"
+    },
+    {
+      "qid": "A3",
+      "prompt": "An economics learner makes a causal claim but states no identification assumptions. What should the system require before treating the causal claim as adequately specified?"
+    },
+    {
+      "qid": "A4",
+      "prompt": "A new reviewed knowledge atom replaces an older active atom. Under Fast Lane v1, may the old atom remain ACTIVE while the new atom declares it superseded?"
+    },
+    {
+      "qid": "A5",
+      "prompt": "A task depends on a DISPUTED atom while freshness is required. Should the dependency be accepted or rejected?"
+    }
+  ],
+  "canonical_snapshot": {
+    "records": [
+      {
+        "id": "bud:a172:identity-shame-synthesis",
+        "domain": "buddhist_thought",
+        "class": "SYNTHESIS",
+        "status": "ACTIVE",
+        "statement": "A172 treats the move from 'this act was shameful' to 'my permanent essence is shameful' as a cross-text synthesis rather than direct early-text attestation.",
+        "path": "knowledge/buddhist/atoms/bud-a172-identity-shame-synthesis.json"
+      },
+      {
+        "id": "bud:a172:hiri-lexical-open",
+        "domain": "buddhist_thought",
+        "class": "UNCERTAIN",
+        "status": "PENDING_REVIEW",
+        "statement": "A full lexical audit of hiri, ottappa, kukkucca, and related shame/remorse vocabulary remains open.",
+        "path": "knowledge/buddhist/atoms/bud-a172-hiri-lexical-open.json"
+      },
+      {
+        "id": "econ:program:identification-assumptions",
+        "domain": "economics",
+        "class": "SECONDARY",
+        "status": "ACTIVE",
+        "statement": "The economics learning program requires causal claims to state identification assumptions.",
+        "path": "knowledge/economics/atoms/econ-program-identification-assumptions.json"
+      }
+    ],
+    "policies": [
+      {
+        "id": "policy:knowledge-fast-lane-v1",
+        "path": "knowledge/FAST_LANE_V1.json",
+        "statement": "Supersession is explicit: when a new record supersedes an old one, the old target must be marked SUPERSEDED in the same protected update; no autonomous merge or self-VERIFIED promotion."
+      },
+      {
+        "id": "policy:semantic-staleness-v1",
+        "path": "docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md",
+        "statement": "When freshness is required, SUPERSEDED, REFUTED, DISPUTED, PENDING_REVIEW, missing, or ambiguous semantic dependencies are rejected."
+      }
+    ]
+  },
+  "decoys": [
+    {
+      "id": "decoy:bud:a172:identity-shame-attested",
+      "status": "SUPERSEDED",
+      "class": "ATTESTED",
+      "statement": "A172 directly attests in early texts that a shameful act means a permanently shameful essence.",
+      "superseded_by": "bud:a172:identity-shame-synthesis"
+    }
+  ]
+}
