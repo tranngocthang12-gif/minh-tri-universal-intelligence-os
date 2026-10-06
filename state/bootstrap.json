@@ -16,5 +16,7 @@
   "legacy_must_not_override_migrated_state": true,
   "fail_closed_on_missing_or_conflicting_required_pointer": true,
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
-  "law_index_catalog": "docs/LAW_INDEX_20261003.md"
+  "law_index_catalog": "docs/LAW_INDEX_20261003.md",
+  "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+  "resolve_master_blueprint_from": "state/bootstrap.json:master_blueprint"
 }
