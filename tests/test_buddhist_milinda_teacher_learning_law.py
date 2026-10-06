@@ -21,7 +21,7 @@ class BuddhistMilindaTeacherLearningLawTests(unittest.TestCase):
     def test_early_discourse_priority_is_not_weakened(self):
         text = (ROOT / "docs" / "LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md").read_text(encoding="utf-8")
         self.assertIn("early discourses are the main attestation axis", text)
-        self.assertIn("does not override early-discourse evidence", text)
+        self.assertIn("not the authority that overrides early-discourse evidence", text)
         self.assertIn("No later explanation is protected from correction", text)
 
 
