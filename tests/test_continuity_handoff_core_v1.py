@@ -23,7 +23,8 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         task = next(t for t in registry["tasks"] if t["task_id"] == "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1")
         for field in ["scope", "base_sha", "result_ref", "handoff_ref", "next_action", "blocker"]:
             self.assertIn(field, task)
-        self.assertEqual(task["blocker"], "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED")
+        self.assertEqual(task["status"], "DONE")
+        self.assertIsNone(task["blocker"])
         self.assertTrue((ROOT / task["handoff_ref"]).exists())
 
     def test_handoff_task_id_matches_current_active_task(self):
