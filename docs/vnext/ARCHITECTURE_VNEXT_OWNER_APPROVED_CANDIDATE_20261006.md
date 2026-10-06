@@ -303,6 +303,8 @@ A deferred technology may be reconsidered only after a measured failure plus ADR
 
 Architecture vNext is not complete until it can demonstrate:
 
+**Law-first foundation gate:** before any remaining architecture-completion claim, project-wide continuity/handoff law must be canonical and enforced. A new zero-chat seat must recover law → current state → task registry → exact NEXT ACTION without Owner recap. Missing/stale/conflicting handoff must fail closed.
+
 1. cold-start recovery from canonical main without chat memory;
 2. one current-state authority;
 3. one task registry;
