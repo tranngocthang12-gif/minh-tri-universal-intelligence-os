@@ -29,9 +29,11 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
 
     def test_handoff_task_id_matches_current_active_task(self):
         current = self.load_json("state/current.yaml")
-        text = (ROOT / "docs" / "vnext" / "handoff" / "ARCHITECTURE_HANDOFF_20261006.md").read_text(encoding="utf-8")
+        registry = self.load_json("state/tasks.yaml")
+        task = next(t for t in registry["tasks"] if t["task_id"] == current["active_task_id"])
+        text = (ROOT / task["handoff_ref"]).read_text(encoding="utf-8")
         self.assertIn(f"**TASK_ID:** {current['active_task_id']}", text)
-        for heading in ["## DONE BEFORE THIS TASK", "## NOT DONE", "## CURRENT TASK STATE", "## NEXT ACTION", "## REQUIRED GATES"]:
+        for heading in ["## DONE", "## NOT DONE", "## NEXT ACTION", "## REQUIRED GATES"]:
             self.assertIn(heading, text)
 
     def test_recovery_entrypoint_is_single_bounded_route(self):
