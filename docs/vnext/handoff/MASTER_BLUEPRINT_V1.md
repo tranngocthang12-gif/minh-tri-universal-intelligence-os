@@ -25,19 +25,20 @@
 - Claude R1 independently reviewed the same Packet v1 target/digest as Grok and returned MATERIAL_DEFECTS_FOUND: one HIGH, six MEDIUM, and seven LOW findings.
 - Claude's governance/scope/legacy/freeze/lifecycle/dual-authority findings were accepted for repair; the candidate now explicitly records Class F/S/D/O acceptance authority, different-seat review for structural canonical-schema changes, semantic legacy demotion, Foundation Freeze hold, scope amendment, one normative law ladder, one lifecycle, and Recovery Proof v6 as the post-merge instrument.
 - PR #300 acceptance scope now explicitly bundles Master Blueprint plus the stable-law/recovery-route/subsystem-architecture/manifest/test amendments listed in task scope.
+- Claude v3 and Grok v3 independently found material defects; those findings were durably recorded, repaired, and superseded by Packet v4.
+- Claude v4 returned NO_MATERIAL_DEFECT_FOUND with LOW observations only; Grok v4 found two MEDIUM historical-packet integrity/retirement defects plus one LOW scope omission. Those findings are accepted for repair.
 
 ## NOT DONE
-- Required CI has not yet PASSed on the final repaired packet-bearing head.
-- Packet v1 is historical because Grok reviewed it before repair. Packet v2 and its manifest are not yet bound to the repaired candidate commit.
-- Claude R1 and Grok R1 reviewed the same pre-final Packet v1 target. Both must rereview one new identical post-repair packet.
-- Grok R1 dispositions are recorded as accepted/resolved-by-repair, but independent rereview is still required to verify closure.
+- Grok v4 material findings are being repaired; Packet v4 is therefore historical and cannot be the final acceptance packet.
+- Packets v1-v4 are historical evidence bound to their original targets and must not be retargeted.
+- A new immutable Packet v5 must be bound to the exact post-v4-repair candidate, pass required CI, and be reviewed identically by Claude and Grok.
 - Owner has not accepted Master Blueprint v1.
 - Master Blueprint v1 is not canonical.
-- Post-merge fresh-seat recovery proof has not run.
+- Post-merge fresh-seat Recovery Proof v6 has not run.
 - Foundation Freeze remains blocked.
 
 ## NEXT ACTION
-Complete Claude and Grok v3 material-defect repairs, then bind a new immutable Master Blueprint Red-Team Packet v4 to the exact repaired candidate SHA and digest, require CI PASS on that packet-bearing head, and run that identical v4 packet independently in Claude and Grok.
+Complete Grok v4 material-defect repairs, then bind a new immutable Master Blueprint Red-Team Packet v5 to the exact repaired candidate SHA and digest, require CI PASS on that packet-bearing head, and run that identical v5 packet independently in Claude and Grok.
 
 ## REQUIRED GATES
 - No self-acceptance by Architect/Builder/Supervisor.
