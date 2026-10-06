@@ -356,7 +356,9 @@
         "docs/vnext/handoff/",
         "eval/recovery/v1/",
         "tools/validate_continuity_handoff.py",
-        "tests/test_continuity_handoff_core_v1.py"
+        "tests/test_continuity_handoff_core_v1.py",
+        "tools/score_zero_chat_recovery.py",
+        "tests/test_zero_chat_recovery_gate.py"
       ],
       "branch": null,
       "base_sha": "bf7c987196e1c84038c5fa11378d290cfc7282b3",
@@ -367,7 +369,7 @@
       "supersedes": [],
       "result_ref": "PR#278 / docs/vnext/continuity/CONTINUITY_HANDOFF_CORE_V1_STATIC_PASS_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Run eval/recovery/v1/packet.json in a genuinely independent zero-chat fresh seat; grade against eval/recovery/v1/gold.json without using this authoring chat; if PASS, record evidence and only then mark Core v1 DONE.",
+      "next_action": "Run eval/recovery/v1/challenge.json in a genuinely independent zero-chat fresh seat; require response.schema.json output with no gold read; score using tools/score_zero_chat_recovery.py; independently preserve fresh-seat provenance; only after both deterministic PASS and genuine independence evidence may Core v1 be marked DONE.",
       "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
     }
   ]

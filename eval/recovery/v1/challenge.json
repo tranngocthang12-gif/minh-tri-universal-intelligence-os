@@ -1,0 +1,22 @@
+{
+  "schema": "minhtri-zero-chat-recovery-challenge/v1",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C1",
+  "challenge_nonce": "mtc1-8ad4b9d1f0f7419db9c6d5021bb640ce",
+  "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+  "purpose": "Prove a genuinely fresh seat reads the current canonical project instead of replaying prior chat context.",
+  "start_ref": "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+  "packet_ref": "eval/recovery/v1/packet.json",
+  "questions_ref": "eval/recovery/v1/questions.json",
+  "response_schema_ref": "eval/recovery/v1/response.schema.json",
+  "grader_ref": "tools/score_zero_chat_recovery.py",
+  "do_not_read": [
+    "eval/recovery/v1/gold.json"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_gold": false,
+    "return_only_json": true,
+    "authoring_seat_must_not_self_grade": true
+  }
+}

@@ -1,0 +1,1 @@
+Fresh-read MINH TRI protected main starting only from eval/recovery/v1/challenge.json; follow its recovery entrypoint, packet, questions, and response schema, do not use prior chat history and do not read eval/recovery/v1/gold.json, then return only one JSON object matching minhtri-zero-chat-recovery-response/v1.

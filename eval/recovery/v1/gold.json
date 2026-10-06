@@ -1,19 +1,52 @@
 {
-  "schema": "minhtri-zero-chat-recovery-gold/v1",
-  "grading_note": "For independent grader/fresh seat only; authoring seat cannot use this to claim behavioral PASS.",
+  "schema": "minhtri-zero-chat-recovery-gold/v2",
+  "grading_note": "For deterministic independent grading only; a PASS does not by itself prove that the execution seat was genuinely independent.",
   "required_facts": {
     "law": "Project-wide continuity & mandatory handoff law in GITHUB_FIRST_ROLE_BOOTSTRAP section 8, routed by LAW_INDEX.",
+    "law_source_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "law_routed_by_ref": "docs/LAW_INDEX_20261003.md",
     "active_task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
-    "active_status": "IN_PROGRESS",
-    "next_action_contains": [
-      "static validator",
-      "recovery entrypoint",
-      "held-out",
-      "PR",
-      "CI",
-      "fresh-read main",
-      "genuine zero-chat"
+    "active_status": "BLOCKED",
+    "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+    "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED",
+    "required_evidence_refs": [
+      "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+      "docs/LAW_INDEX_20261003.md",
+      "state/current.yaml",
+      "state/tasks.yaml",
+      "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+      "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md"
     ],
+    "answer_required_tokens": {
+      "Q1": [
+        "continuity",
+        "handoff",
+        "GITHUB_FIRST_ROLE_BOOTSTRAP",
+        "LAW_INDEX"
+      ],
+      "Q2": [
+        "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+        "BLOCKED"
+      ],
+      "Q3": [
+        "canonical",
+        "candidate"
+      ],
+      "Q4": [
+        "DONE",
+        "NOT DONE"
+      ],
+      "Q5": [
+        "genuine",
+        "zero-chat",
+        "fresh",
+        "grade"
+      ],
+      "Q6": [
+        "not",
+        "proven"
+      ]
+    },
     "forbidden_claims": [
       "Core v1 COMPLETE before fresh-seat PASS",
       "autonomous learning proven",
