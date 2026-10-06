@@ -623,15 +623,15 @@
       "supersedes": [],
       "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS / PR#299 CLOSED_UNMERGED_SUPERSEDED_BY_MASTER_BLUEPRINT_DIRECTIVE",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Resume Foundation Freeze only after Master Blueprint v1 is independently reviewed, Owner-accepted, merged to protected main, and fresh-seat recovery proves the Blueprint -> Law -> State -> Task route.",
-      "blocker": "MASTER_BLUEPRINT_V1_ACCEPTANCE_AND_RECOVERY_PROOF_REQUIRED",
+      "next_action": "Resume Foundation Freeze only after deterministic fresh-seat Recovery Proof v6 proves the accepted Blueprint -> Law -> State -> Task -> exact next action route with a durable receipt.",
+      "blocker": "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
     {
       "task_id": "ARCH-MASTER-BLUEPRINT-V1",
       "title": "Design and validate the project-wide Master Architecture / Master Blueprint",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md",
         "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
@@ -678,14 +678,43 @@
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#300 / Claude v4 NO_MATERIAL_DEFECT_FOUND with LOW observations / Grok v4 MATERIAL_DEFECTS_FOUND (2 MEDIUM, 1 LOW) / repairs applied pending Packet v5 rereview",
+      "result_ref": "PR#300 merged at 174d8817730063d51f6682c31e5f067094bcef95 / Owner acceptance durable in PR#300 conversation / Claude v5 + Grok v5 NO_MATERIAL_DEFECT_FOUND",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Complete Grok v4 material-defect repairs, then bind a new immutable Master Blueprint Red-Team Packet v5 to the exact repaired candidate SHA and digest, require CI PASS on that packet-bearing head, and run that identical v5 packet independently in Claude and Grok.",
-      "blocker": "GROK_V4_REPAIR_NEW_PACKET_V5_CI_AND_IDENTICAL_REREVIEW_REQUIRED",
+      "next_action": "Master Blueprint v1 accepted by Owner and merged to protected main. Post-merge Recovery Proof v6 is the next foundation gate.",
+      "blocker": null,
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
       "role": "ARCHITECT_AND_BUILDER_REPAIR_PASS_NON_INDEPENDENT"
+    },
+    {
+      "task_id": "ARCH-RECOVERY-PROOF-V6",
+      "title": "Prove post-merge fresh-seat recovery through accepted Master Blueprint v1",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
+        "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md",
+        "eval/recovery/v6/",
+        "tools/score_current_boot_recovery_v6.py",
+        "tests/test_current_boot_recovery_v6.py"
+      ],
+      "branch": "owner/recovery-proof-v6-transition-20261007",
+      "base_sha": "174d8817730063d51f6682c31e5f067094bcef95",
+      "requires": "independent_fresh_seat_response_after_harness_merge",
+      "dependencies": [
+        "ARCH-MASTER-BLUEPRINT-V1"
+      ],
+      "supersedes": [],
+      "result_ref": null,
+      "handoff_ref": "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
+      "next_action": "Build and merge the bounded Recovery Proof v6 transition and harness against the accepted Master Blueprint route, then run an independent fresh-seat response and deterministic scorer; Foundation Freeze remains blocked until v6 PASS with durable receipt.",
+      "blocker": "INDEPENDENT_FRESH_SEAT_RESPONSE_REQUIRED_AFTER_V6_HARNESS_MERGE",
+      "change_class": "F",
+      "acceptance_authority": "OWNER",
+      "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
+      "role": "ARCHITECT_AND_BUILDER_NON_INDEPENDENT"
     }
   ]
 }
