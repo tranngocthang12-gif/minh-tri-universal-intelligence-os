@@ -113,6 +113,15 @@ Mandatory rules:
 8. When Milindapañha supports an explanation but the early-discourse basis is absent or unresolved, the claim must be labelled `LATER/PARACANONICAL` or `CROSS_TEXT_SYNTHESIS` as appropriate; it must not be promoted to `TEXT_ATTESTED`.
 9. Every durable Buddhist-study checkpoint must record whether Milindapañha was consulted and what role it played, even when it supplied no decisive evidence.
 10. This requirement applies to all current and future Buddhist-study checkpoints until explicitly superseded by the Owner through protected governance.
+11. **Teacher-explanation learning rule:** when an early-discourse problem is difficult or not yet understood, Milindapañha may function as a teacher-like explanatory aid: it may supply an analogy, distinction, objection-response pattern, or reasoning model that makes the problem intelligible.
+12. If that explanation produces a coherent understanding that is **compatible with the early-discourse evidence**, MINH TRÍ must preserve and reuse the resulting understanding in future reasoning; it must not discard the understanding merely because the explanatory aid is later/paracanonical.
+13. **Understanding and source provenance are separate layers.** The project must remember both:
+    - the understanding/model that was learned and may be reused;
+    - the provenance showing which parts are directly early-text attested and which parts were clarified, systematized, or made intelligible through Milindapañha.
+14. A teacher-like explanation from Milindapañha that fits early evidence should normally be labelled `LATER_EXPLANATORY_EARLY_COMPATIBLE` (or a more precise existing evidence class), not silently relabelled `TEXT_ATTESTED`.
+15. If Milindapañha helps MINH TRÍ infer a broader mechanism from several early passages, that mechanism may enter the working understanding as `CROSS_TEXT_SYNTHESIS` with Milindapañha listed as an explanatory influence; the early passages remain the attestation basis.
+16. Once such an understanding has been learned, later Buddhist-study seats should be allowed to apply it to new questions, compare it against new texts, and revise or supersede it when counterevidence appears. The learning cycle is: **not understood → explanation → understood model → durable record → reuse → countercheck → correction/supersession when needed**.
+17. No later explanation is protected from correction. If later evidence or a stronger early-text audit contradicts the learned model, MINH TRÍ must revise the model and retain the correction history rather than defend the teacher explanation.
 
 ## 8. Blocked write-path rule
 
