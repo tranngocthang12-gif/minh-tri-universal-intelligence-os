@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/ARCHITECTURE_VNEXT_PHASE0_1_MIGRATION_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "ARCHITECTURE_VNEXT_SINGLE_BOOT_ROOT_V1",
-  "next_checkpoint": "SALVAGE_REBASE_PR265_INTO_SINGLE_CANONICAL_BOOT_ROOT_V1",
+  "next_checkpoint": "VERIFY_SINGLE_BOOT_ROOT_V1_AND_LEGACY_NON_OVERRIDE",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -36,10 +36,14 @@
       "meta_learning_runtime",
       "knowledge_learning_requires_owner_pc",
       "pc_local_brain_role",
-      "owner_learning_priority_order"
+      "owner_learning_priority_order",
+      "boot_root",
+      "task_registry"
     ],
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
     "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
   },
-  "active_task_id": "ARCH-SINGLE-BOOT-ROOT-V1"
+  "active_task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
+  "boot_root": "state/bootstrap.json",
+  "task_registry": "state/tasks.yaml"
 }
