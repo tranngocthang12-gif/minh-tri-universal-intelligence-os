@@ -8,11 +8,11 @@
 - Single Boot Root v1 passed CI and merged through PR #287.
 
 ## NOT DONE
-- Semantic dependency freshness checks are not yet implemented.
-- PR #266 stale-writer primitive has not yet been salvaged into current main.
+- Semantic dependency freshness checks are implemented on the working branch and await CI/merge.
+- The useful stale-writer primitive from PR #266 has been salvaged into the working branch without blind-merging the stale PR.
 
 ## NEXT ACTION
-- Salvage the bounded stale-writer primitive from PR #266, then add semantic dependency checks for superseded/refuted/disputed knowledge without adding a workflow engine.
+- Run required CI; if PASS, merge this bounded guard, fresh-read main, then activate Knowledge Fast Lane v1.
 
 ## REQUIRED GATES
 - Fail closed on ambiguous semantic freshness when policy requires freshness.
