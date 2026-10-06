@@ -390,7 +390,7 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Complete current boot-path Recovery Proof v4, then identical Claude/Grok Red-Team v2 receipts; freeze only after all material defects are resolved.",
+      "next_action": "Complete identical Claude/Grok Red-Team v2 receipts and resolve any material defects; then close Foundation Closure v1 and freeze the foundation.",
       "blocker": "DEPENDENCY_ARCH_FOUNDATION_ACCEPTANCE_FREEZE_V1_NOT_DONE"
     },
     {
@@ -581,17 +581,17 @@
         "tools/score_current_boot_recovery_v5.py",
         "tests/test_current_boot_recovery_v5.py"
       ],
-      "branch": "owner/current-boot-recovery-proof-v4-20261006",
-      "base_sha": "ca107150ae7597c060cde36845d5aa8b4e65e350",
+      "branch": "owner/foundation-red-team-v2-20261006",
+      "base_sha": "6decf677b1c4310e2398cfb747cc5ec1dd8d6083",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#294 + PR#295 / eval/recovery/v4/attempts/C4_receipt.json (FAIL preserved) / PENDING_V5_FRESH_SEAT_RECEIPT_AND_V2_RED_TEAM",
+      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Run a new independent fresh-seat Recovery Proof v5 from eval/recovery/v5/challenge.json after the v5 harness merges; preserve C4 as immutable deterministic FAIL; after v5 PASS plus durable independence receipt, build Red-Team Packet v2 for identical Claude/Grok review.",
-      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_V5_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED"
+      "next_action": "Freeze Red-Team Packet v2 against the repaired post-C5 canonical state, then run the identical packet independently in Claude and Grok. Record both receipts under the red-team receipt contract and resolve any material defects before final foundation freeze.",
+      "blocker": "TWO_V2_RED_TEAM_RECEIPTS_AND_MATERIAL_DEFECT_RESOLUTION_REQUIRED"
     }
   ]
 }

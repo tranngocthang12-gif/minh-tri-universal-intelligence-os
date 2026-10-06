@@ -5,27 +5,28 @@
 ## DONE
 - Law Consolidation v1 merged through PR #293.
 - Grok Round 1 and Claude Round 1 defects were repaired through PR #294.
-- Recovery Proof v4 harness merged through PR #295.
-- Owner ran C4 in a separate fresh ChatGPT chat and attested GPT-6.1 Sol as the provider.
-- C4 recovered the correct semantics but deterministic v4 scoring returned FAIL because the scorer demanded exact nested-object equality while the response schema allowed richer nested objects.
-- C4 response, score, receipt, and semantic review are preserved immutably.
+- Recovery Proof v4 C4 is preserved as deterministic FAIL caused by the v4 schema/scorer mismatch.
+- Recovery Proof v5 harness merged through PR #296.
+- C5 ran in a separate fresh ChatGPT chat; Owner attested ChatGPT 6.1 Sol as provider.
+- C5 deterministic score is PASS, independence provenance is PRESENT, and the durable receipt merged through PR #297.
+- Current boot-path recovery is therefore proven only for the bounded C5 current-path fixture.
 
 ## NOT DONE
-- Current boot path has not yet achieved a deterministic fresh-seat PASS under a non-brittle prospective harness.
-- Red-Team Packet v2 is not frozen.
-- Claude and Grok have not reviewed the identical repaired v2 packet.
+- Red-Team Packet v2 is not yet frozen on protected main.
+- Claude and Grok have not reviewed the identical v2 packet.
+- Material-defect disposition is not yet complete.
 - Foundation is not frozen.
 
 ## NEXT ACTION
-- Merge Recovery Proof v5 prospective harness.
-- Run one new independent fresh-seat C5 from `eval/recovery/v5/challenge.json`.
-- Require deterministic PASS + Owner-attested independent provenance + durable receipt.
-- Then freeze Red-Team Packet v2 and run it independently in Claude and Grok.
+- Merge this C5 transition so current state, task registry, baseline, truth matrix, debt register, and handoff agree.
+- From that merged protected-main SHA, create one immutable Red-Team Packet v2.
+- Run that identical packet independently in Claude and Grok.
+- Persist both receipts under the red-team receipt contract.
+- Resolve any material defects before final Foundation freeze.
 
 ## REQUIRED GATES
-- C4 FAIL remains historical evidence and is never rewritten to PASS;
-- v5 schema and scorer agree exactly on nested structured facts;
-- one authoritative boot root and law precedence entrypoint;
-- current state, task registry, handoff, and exact next action agree;
-- final Claude + Grok receipts bind to the identical repaired v2 packet;
-- no autonomous merge, self-modification, or capability overclaim.
+- C4 FAIL remains immutable historical evidence.
+- C5 PASS remains bounded to its fixture and proof-time SHA.
+- Final Claude + Grok receipts bind to identical packet_ref, packet_target_main_sha, and packet_content_sha.
+- Every CRITICAL/HIGH finding has durable disposition and repair reference or explicit Owner-approved rejection.
+- No autonomous merge, self-modification, or capability overclaim.

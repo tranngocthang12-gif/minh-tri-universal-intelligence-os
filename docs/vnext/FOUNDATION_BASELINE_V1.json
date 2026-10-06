@@ -1,7 +1,7 @@
 {
   "schema": "minhtri-foundation-baseline/v1",
   "status": "CANDIDATE_PENDING_RED_TEAM_AND_FREEZE",
-  "baseline_main_sha": "28476960fada05e390f04318dcef8135a34891ec",
+  "baseline_main_sha": "6decf677b1c4310e2398cfb747cc5ec1dd8d6083",
   "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
   "boot_root": "state/bootstrap.json",
   "current_state": "state/current.yaml",
@@ -35,6 +35,13 @@
       "attested_main_sha": "b30ed5b532b1448cdfe4c1b8fac92bd241816cc5",
       "proof_scope": "FIXTURE_ONLY",
       "inherits_to_baseline_sha": false
+    },
+    "current_boot_recovery": {
+      "ref": "eval/recovery/v5/attempts/C5_receipt.json",
+      "attested_main_sha": "83d8a8edf29b8f3adcc0cf8ad007bbfb6b2693d7",
+      "receipt_merged_main_sha": "6decf677b1c4310e2398cfb747cc5ec1dd8d6083",
+      "proof_scope": "C5_CURRENT_PATH_FIXTURE_ONLY",
+      "inherits_to_future_main_sha": false
     }
   },
   "freeze_gate": {
@@ -46,6 +53,7 @@
     "material_defects_resolved_required": true,
     "current_boot_path_fresh_seat_recovery_required": true,
     "red_team_receipt_contract_ref": "docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json",
-    "final_critics_must_bind_identical_repaired_packet": true
+    "final_critics_must_bind_identical_repaired_packet": true,
+    "current_boot_path_fresh_seat_recovery_satisfied": true
   }
 }
