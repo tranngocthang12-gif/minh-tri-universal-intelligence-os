@@ -427,16 +427,16 @@
         "tests/",
         "docs/vnext/"
       ],
-      "branch": "owner/advance-semantic-staleness-v1-20261006",
-      "base_sha": "1e91da934be8ad97c2e8b7051be4c6027717c66c",
+      "branch": "owner/semantic-staleness-v1-20261006",
+      "base_sha": "68a15e85a7b85737ebe7028bfbd883f3049df2c6",
       "requires": "none",
       "dependencies": [
         "ARCH-SINGLE-BOOT-ROOT-V1"
       ],
       "supersedes": [],
-      "result_ref": "PENDING_PR266_SALVAGE_AND_SEMANTIC_GUARD",
+      "result_ref": "src/minhtri/task_guard.py / src/minhtri/semantic_guard.py / docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md / PR_PENDING",
       "handoff_ref": "docs/vnext/handoff/SEMANTIC_STALENESS_V1.md",
-      "next_action": "Salvage PR #266 stale-writer primitive into current main, then add semantic dependency freshness checks for superseded/refuted/disputed knowledge without creating a workflow engine.",
+      "next_action": "Run required CI for the bounded Semantic Staleness Guard v1 candidate; if PASS, merge, fresh-read main, then activate Knowledge Fast Lane v1.",
       "blocker": null
     },
     {
