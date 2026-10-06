@@ -1,0 +1,9 @@
+{
+  "schema": "minhtri-recovery-proof-v6-transition-review-packet-manifest/v1",
+  "packet_ref": "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V1_20261007.md",
+  "packet_content_sha": "git-blob-sha1:6df72c0b303aa89f5f2b3d4f91258e5ee0794b5e",
+  "status": "SUPERSEDED_BEFORE_REVIEW",
+  "final_acceptance_eligible": false,
+  "supersession_reason": "Pre-review governance repair added explicit independent-review and Owner-acceptance gates plus complete packet scope before protected merge.",
+  "frozen_body_must_not_be_retargeted": true
+}

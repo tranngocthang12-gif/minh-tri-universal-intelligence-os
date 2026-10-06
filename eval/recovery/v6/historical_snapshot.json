@@ -1,0 +1,48 @@
+{
+  "schema": "minhtri-current-boot-recovery-snapshot/v6",
+  "expected_facts": {
+    "boot": {
+      "boot_root_ref": "state/bootstrap.json",
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "master_blueprint_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+      "law_precedence_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+      "current_state_ref": "state/current.yaml",
+      "task_registry_ref": "state/tasks.yaml"
+    },
+    "blueprint": {
+      "status": "OWNER_ACCEPTED_AND_MERGED",
+      "owner_acceptance_ref": "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md"
+    },
+    "active_task": {
+      "task_id": "ARCH-RECOVERY-PROOF-V6",
+      "status": "IN_PROGRESS",
+      "handoff_ref": "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
+      "blocker": "INDEPENDENT_FRESH_SEAT_RESPONSE_REQUIRED_AFTER_V6_HARNESS_MERGE",
+      "next_action": "Complete CI and independent review of the bounded Recovery Proof v6 transition/harness, obtain explicit Owner acceptance, then protected-merge it; after fresh-read protected main, run an independent fresh-seat v6 response and deterministic scorer. Foundation Freeze remains blocked until v6 PASS with durable receipt."
+    },
+    "canonicality": {
+      "chat_memory_canonical": false,
+      "pc_local_brain_canonical": false,
+      "unmerged_candidate_authoritative": false
+    },
+    "foundation_freeze": {
+      "status": "BLOCKED",
+      "required_next_gate": "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED"
+    },
+    "architecture": {
+      "current_architecture_ref": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+      "master_blueprint_is_structural_authority": true,
+      "subsystem_architecture_must_conform": true
+    }
+  },
+  "required_evidence_refs": [
+    "state/bootstrap.json",
+    "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
+    "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md",
+    "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md"
+  ]
+}

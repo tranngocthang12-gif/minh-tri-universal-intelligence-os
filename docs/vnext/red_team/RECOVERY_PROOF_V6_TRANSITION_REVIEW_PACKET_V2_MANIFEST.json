@@ -1,0 +1,16 @@
+{
+  "schema": "minhtri-recovery-proof-v6-transition-review-packet-manifest/v2",
+  "packet_ref": "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_20261007.md",
+  "review_target_candidate_commit": "5a345f5aeaf861d2a2b1e1b567dcfd6cf20bafea",
+  "packet_content_sha": "git-blob-sha1:c7f95ef87dbc11b8c39c429d6ed52abad9dcf126",
+  "packet_content_sha_algorithm": "git-blob-sha1",
+  "supersedes_packet_ref": "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V1_20261007.md",
+  "supersession_reason": "FINAL_GOVERNANCE_AND_SCOPE_REPAIR_BEFORE_INDEPENDENT_REVIEW",
+  "required_review": "INDEPENDENT_DIFFERENT_SEAT",
+  "identical_packet_binding_required": true,
+  "owner_acceptance_required_after_material_defect_resolution": true,
+  "protected_merge_required_after_owner_acceptance": true,
+  "independent_fresh_seat_response_required_after_merge": true,
+  "foundation_freeze_requires_v6_pass_and_durable_receipt": true,
+  "final_acceptance_eligible": true
+}
