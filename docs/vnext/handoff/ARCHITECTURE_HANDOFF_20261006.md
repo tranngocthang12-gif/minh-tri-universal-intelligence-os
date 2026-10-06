@@ -1,9 +1,9 @@
 # MINH TRÍ — ARCHITECTURE HANDOFF — 2026-10-06
 
-**TASK_ID:** ARCH-VNEXT-HANDOFF-RECONCILE-20261006  
-**Owner objective:** luật đi trước; mọi chat/seat mới phải tiếp tục đúng việc từ durable handoff; chỉ sau khi foundation law canonical mới tiếp tục kiến trúc.  
+**TASK_ID:** ARCH-VNEXT-POST-PR168-CLOSURE-HANDOFF  
+**Owner objective:** luật đi trước; mọi chat/seat mới phải tiếp tục đúng việc từ durable handoff; architecture chỉ tiến khi continuity/handoff foundation được giữ xuyên suốt.  
 **Foundation law:** PR #275 merged; `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md` section 8.  
-**Last verified canonical main SHA at handoff start:** `3285385a32ab693110339c00f3244719124c6e11`
+**Last verified canonical main SHA before this checkpoint:** `f535896d5d230f2c50c315ce296b6d31ddd474fd`
 
 ## CANONICAL MAIN STATE
 - Architecture: `docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md`
@@ -12,46 +12,48 @@
 - Continuity authority: GitHub protected main.
 - Autonomous learning / automatic self-critique / meta-learning runtimes remain OFF.
 
-## WORKING CANDIDATE STATE
-- Branch: `owner/architecture-handoff-reconcile-after-law-20261006`
-- Base SHA: `3285385a32ab693110339c00f3244719124c6e11`
-- Purpose: reconcile stale post-Wave4 architecture handoff and supersede stale PR #273 integration attempt.
-- PR number: to be assigned when opened.
-
 ## DONE
-- Project-wide continuity + mandatory handoff law merged via PR #275.
-- Law Index no longer hard-codes obsolete architecture pointer.
-- PR #272 Wave4 salvage already merged before this handoff.
-- PR #168 final-disposition content was recovered from stale PR #273 and rebased onto current main.
+- Foundation continuity/handoff law merged via PR #275.
+- Law Index dynamically resolves current architecture.
+- PR #276 merged the clean post-law reconciliation.
+- Stale PR #273 closed without merge.
+- PR #168 coverage checked: 31 changed files, 31/31 represented in canonical inventory/wave/final-disposition records.
+- PR #168 closed without merge.
+- Final disposition remains a migration classification, not doctrinal verification.
 
 ## NOT DONE
-- This reconciliation branch is not canonical until its PR passes CI and merges.
-- PR #168 is not yet closed.
-- PR #169/#170/#177 controlled salvage has not started.
+- Controlled salvage PR #169 has not started.
+- PR #170 and PR #177 remain later legacy salvage targets.
+- PR #249 remains a Buddhist learning draft unless separately reviewed.
 - Independent fresh-seat retrieval grade remains BLOCKED.
-- Genuine zero-chat continuation proof required by the new law has not yet passed.
+- Genuine zero-chat continuation proof required by the foundation law has not yet passed.
 
-## STALE / CONFLICTING STATE FOUND
-- `state/current.yaml` still named Wave4 as active after Wave4 had already merged.
-- `state/tasks.yaml` still marked Wave4 IN_PROGRESS.
-- PR #273 is OPEN but stale/conflicting against newer main and must not be merged blindly.
+## CURRENT TASK STATE
+- `ARCH-VNEXT-SALVAGE-PR168`: DONE.
+- `ARCH-VNEXT-SALVAGE-PR168-FINAL-DISPOSITION`: DONE.
+- `ARCH-VNEXT-HANDOFF-RECONCILE-20261006`: DONE.
+- `ARCH-VNEXT-SALVAGE-PR169`: READY.
 
 ## TRUTH BOUNDARY
-- A merged law/CI proves canonical routing and static enforcement, not genuine fresh-seat behavioral recovery.
-- Salvaged Buddhist evidence remains at its recorded evidence status; disposition does not promote doctrine.
+- Closed PR != verified knowledge.
+- CI PASS != proof that a fresh chat can behaviorally recover all context.
+- Knowledge claims retain their existing evidence/status.
+- PC/Local Brain is not required for the next salvage step.
 
 ## NEXT ACTION
-1. Merge the clean reconciliation PR after required CI PASS.
-2. Fresh-read main.
-3. Close stale PR #273 as superseded, without merge.
-4. Close PR #168 without merge if the merged final-disposition record still covers all 31 source files and no new unique evidence appears.
-5. Start controlled salvage PR #169.
-6. Later run a genuine zero-chat recovery proof before declaring Architecture vNext complete.
+1. Fresh-read canonical main.
+2. Fresh-read this handoff, `state/current.yaml`, and `state/tasks.yaml`.
+3. Inspect PR #169 changed files and source head.
+4. Create a bounded controlled-salvage inventory for PR #169.
+5. Preserve only unique high-value evidence with exact provenance.
+6. Do not merge PR #169 wholesale.
+7. Update durable handoff after each material transition.
 
 ## REQUIRED GATES
+- Law-first bootstrap before mutation.
 - Protected branch → PR → required CI → merge → fresh-read main.
 - Missing/stale/conflicting handoff fails closed.
-- No Owner recap should be required for a new seat when canonical records are readable.
+- No Owner recap should be required when canonical records are readable.
 
 ## PC / LOCAL BRAIN
-Not required for this reconciliation. PC/Local Brain remains non-canonical execution/mirror sidecar.
+Not required for PR #169 controlled salvage. PC/Local Brain remains a non-canonical execution/mirror sidecar.
