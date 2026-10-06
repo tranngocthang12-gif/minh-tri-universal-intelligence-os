@@ -46,7 +46,8 @@
       "dependencies": [],
       "supersedes": [],
       "result_ref": "PR#249",
-      "change_class": "UNCLASSIFIED_LEGACY"
+      "change_class": "UNCLASSIFIED_LEGACY",
+      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
@@ -66,7 +67,8 @@
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
       "next_action": "Legacy salvage is non-blocking knowledge/history debt after Continuity Core v1 completion; resume only when valuable.",
       "blocker": null,
-      "change_class": "UNCLASSIFIED_LEGACY"
+      "change_class": "UNCLASSIFIED_LEGACY",
+      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
     },
     {
       "task_id": "RUNTIME-ASSURANCE-PC",
@@ -85,7 +87,8 @@
       "handoff_ref": "docs/RECOVERY_MANIFEST.json",
       "next_action": "Restore and re-prove Owner-PC runtime only when Owner directs PC-bound work; this task must not block non-PC learning.",
       "blocker": "OWNER_PC_OR_LOCAL_RUNTIME_REQUIRED_AND_CURRENT_LIVENESS_NOT_PROVEN",
-      "change_class": "UNCLASSIFIED_LEGACY"
+      "change_class": "UNCLASSIFIED_LEGACY",
+      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
     },
     {
       "task_id": "ARCH-VNEXT-PHASE3-PILOT",
@@ -155,7 +158,8 @@
       "next_action": "Preserve as historical evaluation debt; Retrieval/Application Proof v1 supersedes this task for foundation closure.",
       "blocker": null,
       "superseded_by": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1",
-      "change_class": "UNCLASSIFIED_LEGACY"
+      "change_class": "UNCLASSIFIED_LEGACY",
+      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
     },
     {
       "task_id": "ARCH-VNEXT-SALVAGE-LEXICAL-230-216",
@@ -361,7 +365,8 @@
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
       "next_action": "PR169 salvage is optional bounded knowledge/history work and does not block foundation freeze.",
       "blocker": null,
-      "change_class": "UNCLASSIFIED_LEGACY"
+      "change_class": "UNCLASSIFIED_LEGACY",
+      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
     },
     {
       "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
@@ -654,19 +659,29 @@
         "tests/test_foundation_freeze_prep_v1.py",
         "tests/test_recovery_manifest.py",
         "tests/test_master_blueprint_v1.py",
-        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_REVIEW_R1_20261007.json"
+        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_REVIEW_R1_20261007.json",
+        "README.md",
+        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md",
+        "docs/ARCHITECTURE_NOW_20261003.md",
+        "docs/LAW_INDEX_20261002.md",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_REVIEW_V3_20261007.json",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_V3_DISPOSITION_20261007.json",
+        "docs/vnext/red_team/MASTER_BLUEPRINT_GROK_REVIEW_V3_20261007.json"
       ],
       "branch": "owner/master-blueprint-v1-20261006",
       "base_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#300 / Supervisor internal pass / Grok R1 MATERIAL_DEFECTS_FOUND / Claude R1 MATERIAL_DEFECTS_FOUND / material findings under repair / prior Packet v2 invalidated by post-review repairs",
+      "result_ref": "PR#300 / Claude v3 MATERIAL_DEFECTS_FOUND / Grok v3 MATERIAL_DEFECTS_FOUND / Packet v3 historical after material findings / repairs in progress",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Complete Claude R1 material-defect repairs and scope audit, then bind a new immutable Master Blueprint Red-Team packet to the exact repaired candidate SHA/digest, require CI PASS on that packet-bearing head, and run that identical packet independently in Claude and Grok.",
-      "blocker": "CLAUDE_R1_REPAIR_NEW_PACKET_CI_AND_IDENTICAL_CLAUDE_GROK_REREVIEW_REQUIRED",
+      "next_action": "Complete Claude and Grok v3 material-defect repairs, then bind a new immutable Master Blueprint Red-Team Packet v4 to the exact repaired candidate SHA and digest, require CI PASS on that packet-bearing head, and run that identical v4 packet independently in Claude and Grok.",
+      "blocker": "CLAUDE_AND_GROK_V3_REPAIR_NEW_PACKET_V4_CI_AND_IDENTICAL_REREVIEW_REQUIRED",
       "change_class": "F",
-      "acceptance_authority": "OWNER"
+      "acceptance_authority": "OWNER",
+      "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
+      "role": "ARCHITECT_AND_BUILDER_REPAIR_PASS_NON_INDEPENDENT"
     }
   ]
 }
