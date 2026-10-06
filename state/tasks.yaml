@@ -356,7 +356,9 @@
         "docs/vnext/handoff/",
         "eval/recovery/v1/",
         "tools/validate_continuity_handoff.py",
-        "tests/test_continuity_handoff_core_v1.py"
+        "tests/test_continuity_handoff_core_v1.py",
+        "tools/score_zero_chat_recovery.py",
+        "tests/test_zero_chat_recovery_gate.py"
       ],
       "branch": null,
       "base_sha": "bf7c987196e1c84038c5fa11378d290cfc7282b3",
