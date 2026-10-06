@@ -37,6 +37,8 @@ This rule does **not** mean every casual sentence must become a file. It means e
 
 ## 2. AUTHORITY ORDER
 
+This section is an informative orientation summary only. The sole normative precedence ladder is `docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md`; on any difference, that consolidated Foundation Law governs.
+
 Current intended authority order:
 
 ```text
