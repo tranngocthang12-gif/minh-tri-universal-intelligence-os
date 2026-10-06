@@ -3,7 +3,7 @@
 A new seat starts here. Do not use old chat memory as authority.
 
 1. Read `docs/PROJECT_STATE.json`.
-2. Read current Law Index routed by PROJECT_STATE.
+2. Read current Law Index routed by PROJECT_STATE (current file: `docs/LAW_INDEX_20261003.md`; do not hard-code it if PROJECT_STATE later routes elsewhere).
 3. Read `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`, especially section 8.
 4. Read `state/current.yaml`.
 5. Read `state/tasks.yaml`.
