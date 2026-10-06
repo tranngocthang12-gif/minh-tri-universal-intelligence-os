@@ -181,7 +181,7 @@
     {
       "task_id": "ARCH-VNEXT-REVIEW-A162-A165-COLLISION",
       "title": "Content-level review of stale PRs 227, 232, 233, 235 whose A162-A165 labels collide with different canonical content",
-      "status": "REPORTED",
+      "status": "DONE",
       "scope": [
         "PR#227",
         "PR#232",
@@ -198,6 +198,25 @@
       ],
       "supersedes": [],
       "result_ref": "docs/vnext/history/BUDDHIST_A162_A165_COLLISION_T1_REVIEW_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR168",
+      "title": "Inventory and selectively salvage high-value early-Buddhist source/audit artifacts from legacy PR 168",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "PR#168",
+        "docs/learning/",
+        "knowledge/buddhist/",
+        "docs/vnext/history/PR168_CONTROLLED_SALVAGE_KICKOFF_20261006.md"
+      ],
+      "branch": null,
+      "base_sha": "c1c5f2b2a94fb3a0997593f2fd685007b8e1a682",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-PR-SALVAGE"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_KICKOFF_20261006.md"
     }
   ]
 }
