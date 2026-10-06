@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "ARCHITECTURE_MASTER_BLUEPRINT_V1",
-  "next_checkpoint": "MASTER_BLUEPRINT_PACKET_V1_CI_THEN_IDENTICAL_CLAUDE_GROK_REVIEW",
+  "next_checkpoint": "Repair Grok R1 HIGH findings, bind the review packet and manifest to one exact repaired candidate SHA and digest, require CI PASS on the packet-bearing PR head, then run that identical packet independently in Claude and Grok.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
