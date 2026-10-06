@@ -1,0 +1,22 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4",
+  "challenge_nonce": "mtc4-4d8d812f2f3b46a9916255cb3f1da21e",
+  "response_ref": "eval/recovery/v4/attempts/C4_response.json",
+  "response_sha256_canonical_json": "b40c21cb4ad4445bae8e67686c3007743f39c3fc3e84f1e82ff0df080f7e6a6f",
+  "scorer_ref": "tools/score_current_boot_recovery_v4.py",
+  "scorer_version": "v4-exact-nested-object",
+  "deterministic_score": "FAIL",
+  "deterministic_errors": [
+    "boot facts mismatch",
+    "law facts mismatch",
+    "active_task facts mismatch",
+    "canonicality facts mismatch",
+    "capability_truth facts mismatch",
+    "next_gate facts mismatch"
+  ],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports this response was produced in a separate fresh ChatGPT chat outside the MINH TRI project using ChatGPT 6.1 Sol. Owner also supplied a screenshot showing the fresh ChatGPT UI/model label. No platform-side telemetry or independent model identity verification is claimed.",
+  "main_sha": "cb2176111bf2759349e12488c11f2eb04580b27a",
+  "completion_eligible": false
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "minhtri-current-boot-recovery-semantic-review/v1",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4",
+  "response_ref": "eval/recovery/v4/attempts/C4_response.json",
+  "verdict": "SEMANTICALLY_CORRECT_BUT_DETERMINISTIC_V4_FAIL",
+  "reason": "The response recovered the correct boot root, single law precedence, active task, blocker, exact next action, canonicality boundary, and capability limits. v4 scorer compares each nested object by exact equality while the v4 response schema leaves nested objects open, so additional correct fields and equivalent key names cause a false-negative.",
+  "does_not_satisfy_freeze_gate": true,
+  "next_action": "Preserve C4 FAIL immutably, repair the harness prospectively as v5 with an exact nested response contract, merge it, then run a new independent fresh-seat attempt."
+}

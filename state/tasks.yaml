@@ -576,7 +576,10 @@
         "eval/recovery/v4/",
         "tools/score_current_boot_recovery_v4.py",
         "tests/test_current_boot_recovery_v4.py",
-        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md"
+        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+        "eval/recovery/v5/",
+        "tools/score_current_boot_recovery_v5.py",
+        "tests/test_current_boot_recovery_v5.py"
       ],
       "branch": "owner/current-boot-recovery-proof-v4-20261006",
       "base_sha": "ca107150ae7597c060cde36845d5aa8b4e65e350",
@@ -585,10 +588,10 @@
         "ARCH-LAW-CONSOLIDATION-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#294 / eval/recovery/v4/challenge.json / eval/recovery/v4/historical_snapshot.json / PENDING_V4_FRESH_SEAT_RECEIPT_AND_V2_RED_TEAM",
+      "result_ref": "PR#294 + PR#295 / eval/recovery/v4/attempts/C4_receipt.json (FAIL preserved) / PENDING_V5_FRESH_SEAT_RECEIPT_AND_V2_RED_TEAM",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Run current boot-path fresh-seat Recovery Proof v4 from eval/recovery/v4/challenge.json; after deterministic PASS plus durable independence receipt, build one repaired Red-Team Packet v2 and run that identical packet independently in Claude and Grok.",
-      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED"
+      "next_action": "Run a new independent fresh-seat Recovery Proof v5 from eval/recovery/v5/challenge.json after the v5 harness merges; preserve C4 as immutable deterministic FAIL; after v5 PASS plus durable independence receipt, build Red-Team Packet v2 for identical Claude/Grok review.",
+      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_V5_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED"
     }
   ]
 }
