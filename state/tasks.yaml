@@ -181,7 +181,7 @@
     {
       "task_id": "ARCH-VNEXT-REVIEW-A162-A165-COLLISION",
       "title": "Content-level review of stale PRs 227, 232, 233, 235 whose A162-A165 labels collide with different canonical content",
-      "status": "IN_PROGRESS",
+      "status": "REPORTED",
       "scope": [
         "PR#227",
         "PR#232",
@@ -190,14 +190,14 @@
         "knowledge/buddhist/",
         "docs/learning/"
       ],
-      "branch": null,
+      "branch": "owner/architecture-vnext-t1-collision-review-227-232-233-235-20261006",
       "base_sha": "ef2050a080501aa78b1b19a519648534a7c14904",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PR-SALVAGE"
       ],
       "supersedes": [],
-      "result_ref": null
+      "result_ref": "docs/vnext/history/BUDDHIST_A162_A165_COLLISION_T1_REVIEW_20261006.md"
     }
   ]
 }
