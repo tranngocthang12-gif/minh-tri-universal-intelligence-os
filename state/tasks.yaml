@@ -703,7 +703,10 @@
         "eval/recovery/v6/packet.json",
         "eval/recovery/v6/response.schema.json",
         "tests/test_master_blueprint_v1.py",
-        "tests/test_foundation_freeze_prep_v1.py"
+        "tests/test_foundation_freeze_prep_v1.py",
+        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V1_20261007.md",
+        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_20261007.md",
+        "docs/vnext/red_team/RECOVERY_PROOF_V6_TRANSITION_REVIEW_PACKET_V2_MANIFEST.json"
       ],
       "branch": "owner/recovery-proof-v6-transition-20261007",
       "base_sha": "174d8817730063d51f6682c31e5f067094bcef95",
@@ -714,7 +717,7 @@
       "supersedes": [],
       "result_ref": "PR#301 / eval/recovery/v6/challenge.json / eval/recovery/v6/packet.json / tools/score_current_boot_recovery_v6.py / tests/test_current_boot_recovery_v6.py",
       "handoff_ref": "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
-      "next_action": "Build and merge the bounded Recovery Proof v6 transition and harness against the accepted Master Blueprint route, then run an independent fresh-seat response and deterministic scorer; Foundation Freeze remains blocked until v6 PASS with durable receipt.",
+      "next_action": "Complete CI and independent review of the bounded Recovery Proof v6 transition/harness, obtain explicit Owner acceptance, then protected-merge it; after fresh-read protected main, run an independent fresh-seat v6 response and deterministic scorer. Foundation Freeze remains blocked until v6 PASS with durable receipt.",
       "blocker": "INDEPENDENT_FRESH_SEAT_RESPONSE_REQUIRED_AFTER_V6_HARNESS_MERGE",
       "change_class": "F",
       "acceptance_authority": "OWNER",
