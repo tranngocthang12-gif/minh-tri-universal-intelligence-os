@@ -31,6 +31,8 @@ Same-level conflict requires explicit supersession or a bounded conflict-resolut
 
 ## Master Blueprint governance
 
+The Master Blueprint is structural authority, not a second law router. Constitution-level Owner decisions and applicable Stable Law outrank it; accepted subsystem architecture must conform to it within structural scope.
+
 The project must maintain one project-wide Master Blueprint that defines the total system structure, authority boundaries, stable foundation, extensible zones, lifecycle, role separation, and canonical-source map.
 
 Foundation roles are distinct in responsibility:
