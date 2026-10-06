@@ -43,6 +43,9 @@
     "debt_register_required": true,
     "claude_red_team_required": true,
     "grok_red_team_required": true,
-    "material_defects_resolved_required": true
+    "material_defects_resolved_required": true,
+    "current_boot_path_fresh_seat_recovery_required": true,
+    "red_team_receipt_contract_ref": "docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json",
+    "final_critics_must_bind_identical_repaired_packet": true
   }
 }
