@@ -169,8 +169,9 @@ class RecoveryManifestConsistency(unittest.TestCase):
         self.assertEqual(manifest["protocols"]["learning_assurance"], "minhtri-learning-assurance/v1.4")
         self.assertIn("adaptive deliberation", law.lower())
         self.assertIn("Learning Assurance v1.4", architecture)
-        self.assertIn("LAW_INDEX_20261003.md", bootstrap)
-        self.assertIn("ARCHITECTURE_NOW_20261003.md", bootstrap)
+        self.assertIn("state/bootstrap.json", bootstrap)
+        self.assertIn("MASTER BLUEPRINT", bootstrap)
+        self.assertIn("AUTHORITATIVE LAW PRECEDENCE", bootstrap)
         self.assertIn("HISTORICAL ARCHITECTURE ANALYSIS", roadmap)
 
     def test_current_liveness_is_fresh_observation_not_persistence_claim(self):
