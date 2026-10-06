@@ -249,6 +249,20 @@ A current chat instruction governs the current interaction, but does not durably
 
 ## 8. Conflict resolution
 
+## 8.1 Cross-hierarchy relation: Law vs Master Blueprint vs subsystem architecture
+
+The Master Blueprint is **not a second law-precedence router**.
+
+- Constitution-level Owner decisions and applicable Stable Foundation Law constrain the Master Blueprint.
+- The Master Blueprint is the highest structural-design authority for project-wide organization, roles, system layers, lifecycle, and canonical-source topology.
+- Current subsystem architecture must conform to the Master Blueprint within structural scope.
+- Current State and Task Registry remain operational-fact authorities only within their declared scope.
+- If the Master Blueprint conflicts with higher law, higher law wins and the Blueprint must be revised.
+- If subsystem architecture conflicts with the accepted Master Blueprint, the subsystem architecture must be revised unless Owner explicitly changes the Blueprint.
+
+This prevents the Blueprint from becoming a second law system while still giving it real architectural authority.
+
+
 When rules conflict:
 1. identify scope;
 2. compare authority level;
