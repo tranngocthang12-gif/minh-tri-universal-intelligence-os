@@ -69,6 +69,15 @@
       "statement": "Snp 4.11 (Sn 874) directly states a relation in which papañcasaṅkhā are saññānidāna; this does not by itself define all papañca or prove a complete identity/dispute psychology."
     },
     {
+      "id": "bud:pr168:structural-source-audit-bundle-wave3a",
+      "domain": "buddhist_thought",
+      "record_type": "evidence",
+      "class": "SECONDARY",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-pr168-structural-source-audit-bundle-wave3a.json",
+      "statement": "PR #168 contributed seven structured early-Buddhist source/index/translation-audit artifacts preserved exactly in Wave 3A; preservation does not validate their completeness or doctrinal conclusions."
+    },
+    {
       "id": "econ:program:identification-assumptions",
       "domain": "economics",
       "record_type": "claim",
