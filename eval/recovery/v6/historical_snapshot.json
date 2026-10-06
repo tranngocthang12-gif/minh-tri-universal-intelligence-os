@@ -28,6 +28,11 @@
     "foundation_freeze": {
       "status": "BLOCKED",
       "required_next_gate": "RECOVERY_PROOF_V6_PASS_AND_DURABLE_RECEIPT_REQUIRED"
+    },
+    "architecture": {
+      "current_architecture_ref": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+      "master_blueprint_is_structural_authority": true,
+      "subsystem_architecture_must_conform": true
     }
   },
   "required_evidence_refs": [
@@ -37,6 +42,7 @@
     "state/current.yaml",
     "state/tasks.yaml",
     "docs/vnext/handoff/RECOVERY_PROOF_V6.md",
-    "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md"
+    "docs/vnext/OWNER_ACCEPTANCE_MASTER_BLUEPRINT_V1_20261007.md",
+    "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md"
   ]
 }
