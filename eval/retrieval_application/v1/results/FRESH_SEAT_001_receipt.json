@@ -1,0 +1,16 @@
+{
+  "schema": "minhtri-retrieval-application-evidence-receipt/v1",
+  "set_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001",
+  "response_ref": "eval/retrieval_application/v1/results/FRESH_SEAT_001_response.json",
+  "score_ref": "eval/retrieval_application/v1/results/FRESH_SEAT_001_score.json",
+  "scorer_ref": "tools/score_retrieval_application_eval.py",
+  "deterministic_score": "PASS",
+  "passed": 5,
+  "total": 5,
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports the response was produced in a fresh ChatGPT chat outside the MINH TRI project after the canonical fresh-seat command was merged. Response attests fresh_seat=true, used_prior_chat_history=false, read_gold=false. No platform-side UI telemetry is claimed.",
+  "owner_reported_duration_seconds": 18,
+  "harness_main_sha": "b30ed5b532b1448cdfe4c1b8fac92bd241816cc5",
+  "completion_eligible": true,
+  "truth_boundary": "PASS establishes RETRIEVAL_APPLICATION_PASS_FOR_THIS_FIXTURE only; it does not prove global mastery, autonomous learning, universal memory, or correctness on unseen domains."
+}
