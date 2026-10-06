@@ -157,6 +157,26 @@
       ],
       "supersedes": [],
       "result_ref": "docs/vnext/history/BUDDHIST_T1_LEXICAL_REVIEW_216_230_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE3B",
+      "title": "Extract and preserve large SN22/SN35/SN45/SN46 structural indexes from PR168",
+      "status": "READY",
+      "scope": [
+        "PR#168:EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json",
+        "PR#168:EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
+        "PR#168:EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json",
+        "PR#168:EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json",
+        "knowledge/buddhist/evidence/pr168/raw/"
+      ],
+      "branch": null,
+      "base_sha": "9b4bf7f7c2fc89b0d534d2b9f6e71d1832aee598",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-SALVAGE-PR168"
+      ],
+      "supersedes": [],
+      "result_ref": null
     }
   ]
 }
