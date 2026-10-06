@@ -277,6 +277,7 @@ Required single routes:
 - Current architecture: pointer from current state
 - Active handoff: pointer from active task
 - Exact next action authority: the active handoff `NEXT ACTION`; `state/tasks.yaml.next_action` must be an identical sentence or an explicit pointer/summary that cannot conflict with the handoff. Any divergence fails closed before mutation.
+- `state/current.yaml.next_checkpoint` is only a mirror/pointer of that same exact next action and has no independent authority. If current state, active task, and active handoff differ, fail closed before mutation.
 - Knowledge truth: typed knowledge records + status/provenance
 - Evidence truth: immutable receipts/results bound to proof target
 - History: preserved historical records, non-current unless explicitly routed
@@ -342,6 +343,10 @@ Requires design review, supervision, validation, independent or different-seat r
 ### Class D — Domain
 Examples: Buddhist/economics domain rules and knowledge structures.
 Must obey foundation; cannot alter foundation authority. Acceptance authority is Owner or an Owner-designated approver other than the Builder seat; review depth is risk-based.
+
+### Legacy task resumption gate
+
+A task carrying `change_class: UNCLASSIFIED_LEGACY` is historical/unclassified debt and may not resume execution or protected merge until it is assigned exactly one class in `{F,S,D,O}` and records an `acceptance_authority` consistent with Gate 8. A pre-Blueprint workflow/merge delegation authorizes work only; it is not acceptance authority and cannot waive no-self-certification. Foundation Closure remains held until Owner acceptance explicitly reconciles its older execution delegation with this rule.
 
 ### Class O — Ordinary
 Examples: bounded knowledge updates, routine implementation, reports.
