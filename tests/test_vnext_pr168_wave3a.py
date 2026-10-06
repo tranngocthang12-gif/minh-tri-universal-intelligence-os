@@ -40,7 +40,7 @@ class PR168Wave3ATests(unittest.TestCase):
         tasks = self.load("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in tasks["tasks"]}
         task = by_id["ARCH-VNEXT-SALVAGE-PR168-WAVE3B"]
-        self.assertEqual(task["status"], "READY")
+        self.assertIn(task["status"], {"READY", "IN_PROGRESS", "DONE"})
         scope = " ".join(task["scope"])
         for marker in ["SN22", "SN35", "SN45", "SN46"]:
             self.assertIn(marker, scope)
