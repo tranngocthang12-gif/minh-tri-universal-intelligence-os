@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-current-boot-recovery-response/v4",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "challenge_id",
+    "challenge_nonce",
+    "attestations",
+    "recovered_facts",
+    "evidence_refs",
+    "answers"
+  ],
+  "properties": {
+    "schema": {
+      "const": "minhtri-current-boot-recovery-response/v4"
+    },
+    "challenge_id": {
+      "const": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C4"
+    },
+    "challenge_nonce": {
+      "const": "mtc4-4d8d812f2f3b46a9916255cb3f1da21e"
+    },
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "separate_zero_chat",
+        "used_prior_chat_history",
+        "read_snapshot"
+      ],
+      "properties": {
+        "separate_zero_chat": {
+          "const": true
+        },
+        "used_prior_chat_history": {
+          "const": false
+        },
+        "read_snapshot": {
+          "const": false
+        }
+      }
+    },
+    "recovered_facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boot",
+        "law",
+        "active_task",
+        "canonicality",
+        "capability_truth",
+        "next_gate"
+      ],
+      "properties": {
+        "boot": {
+          "type": "object"
+        },
+        "law": {
+          "type": "object"
+        },
+        "active_task": {
+          "type": "object"
+        },
+        "canonicality": {
+          "type": "object"
+        },
+        "capability_truth": {
+          "type": "object"
+        },
+        "next_gate": {
+          "type": "object"
+        }
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 10,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "Q6"
+      ],
+      "properties": {
+        "Q1": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Q2": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Q3": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Q4": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Q5": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Q6": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
