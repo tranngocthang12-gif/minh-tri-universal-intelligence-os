@@ -1,0 +1,54 @@
+{
+  "schema": "minhtri-recovery-proof-snapshot/v1",
+  "challenge_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1-20261006-C3",
+  "challenge_nonce": "mtc3-87f6d6418f1b4e61a9ab4f1bf548cb55",
+  "source_response_ref": "eval/recovery/v3/attempts/C3_response.json",
+  "source_receipt_ref": "eval/recovery/v3/attempts/C3_receipt.json",
+  "captured_main_sha": "72c1b784dc813e621de73728ed2bdd502eeb1249",
+  "recovered_facts": {
+    "foundation_law": {
+      "source_ref": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md#8-project-wide-continuity--mandatory-handoff-law",
+      "routed_by_ref": "docs/LAW_INDEX_20261003.md"
+    },
+    "active_task": {
+      "task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1",
+      "status": "BLOCKED",
+      "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+      "blocker": "GENUINE_ZERO_CHAT_FRESH_SEAT_RECOVERY_PROOF_REQUIRED"
+    },
+    "canonicality": {
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "unmerged_candidate_authoritative": false,
+      "chat_memory_canonical": false
+    },
+    "capability_truth": {
+      "core_v1_complete": false,
+      "fresh_seat_behavioral_recovery_proven": false,
+      "autonomous_learning_proven": false,
+      "automatic_self_critique_proven": false,
+      "meta_learning_proven": false
+    },
+    "next_gate": {
+      "challenge_ref": "eval/recovery/v3/challenge.json",
+      "response_schema_ref": "eval/recovery/v3/response.schema.json",
+      "scorer_ref": "tools/score_zero_chat_recovery.py",
+      "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+      "deterministic_pass_required": true,
+      "independence_provenance_required": true,
+      "durable_receipt_required": true
+    }
+  },
+  "required_evidence_refs": [
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
+    "eval/recovery/v3/challenge.json",
+    "eval/recovery/v3/packet.json",
+    "eval/recovery/v3/response.schema.json",
+    "tools/score_zero_chat_recovery.py"
+  ],
+  "note": "Frozen replay snapshot derived from the already-merged C3 response and receipt. It preserves historical proof semantics after current.active_task_id advances."
+}
