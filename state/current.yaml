@@ -1,14 +1,14 @@
 {
   "schema": "minhtri-current-state/v1",
   "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
-  "architecture_generation": "VNEXT_FOUNDATION_FREEZE_CANDIDATE",
-  "phase": "FOUNDATION_ACCEPTANCE",
+  "architecture_generation": "VNEXT_MASTER_BLUEPRINT_V1_CANDIDATE",
+  "phase": "MASTER_BLUEPRINT_DESIGN_AND_GOVERNANCE_REVIEW",
   "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
   "current_architecture": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "ARCHITECTURE_VNEXT_FOUNDATION_ACCEPTANCE_FREEZE_RED_TEAM",
-  "next_checkpoint": "MERGE_C5_TRANSITION_THEN_FREEZE_RED_TEAM_PACKET_V2_FOR_IDENTICAL_CLAUDE_GROK_REVIEW",
+  "active_workstream": "ARCHITECTURE_MASTER_BLUEPRINT_V1",
+  "next_checkpoint": "SUPERVISOR_INSPECTION_THEN_IDENTICAL_INDEPENDENT_CLAUDE_GROK_REVIEW",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -38,12 +38,14 @@
       "pc_local_brain_role",
       "owner_learning_priority_order",
       "boot_root",
-      "task_registry"
+      "task_registry",
+      "master_blueprint"
     ],
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
     "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
   },
-  "active_task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+  "active_task_id": "ARCH-MASTER-BLUEPRINT-V1",
   "boot_root": "state/bootstrap.json",
-  "task_registry": "state/tasks.yaml"
+  "task_registry": "state/tasks.yaml",
+  "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md"
 }
