@@ -1,0 +1,78 @@
+{
+  "schema": "minhtri-current-boot-recovery-response/v5",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C5",
+  "challenge_nonce": "mtc5-b7cf536ab7614b3993f388855cf61c90",
+  "attestations": {
+    "separate_zero_chat": true,
+    "used_prior_chat_history": false,
+    "read_snapshot": false
+  },
+  "recovered_facts": {
+    "boot": {
+      "boot_root_ref": "state/bootstrap.json",
+      "status": "CURRENT_BOOT_ROOT",
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "current_state_ref": "state/current.yaml",
+      "task_registry_ref": "state/tasks.yaml"
+    },
+    "law": {
+      "law_precedence_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+      "law_index_catalog_ref": "docs/LAW_INDEX_20261003.md",
+      "law_index_catalog_has_independent_precedence": false
+    },
+    "active_task": {
+      "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+      "status": "IN_PROGRESS",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "blocker": "CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_V5_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED",
+      "next_action": "Run a new independent fresh-seat Recovery Proof v5 from eval/recovery/v5/challenge.json after the v5 harness merges; preserve C4 as immutable deterministic FAIL; after v5 PASS plus durable independence receipt, build Red-Team Packet v2 for identical Claude/Grok review."
+    },
+    "canonicality": {
+      "chat_memory_canonical": false,
+      "unmerged_candidate_authoritative": false,
+      "pc_local_brain_canonical": false
+    },
+    "capability_truth": {
+      "historical_c3_current_path_proof": false,
+      "current_boot_path_fresh_seat_recovery_proven": false,
+      "autonomous_learning_proven": false,
+      "automatic_self_critique_proven": false,
+      "meta_learning_proven": false
+    },
+    "next_gate": {
+      "current_proof_ref": "eval/recovery/v5/challenge.json",
+      "scorer_ref": "tools/score_current_boot_recovery_v5.py",
+      "deterministic_pass_required": true,
+      "independence_provenance_required": true,
+      "durable_receipt_required": true,
+      "then_red_team_v2_required": true
+    }
+  },
+  "evidence_refs": [
+    "eval/recovery/v5/challenge.json",
+    "eval/recovery/v5/packet.json",
+    "eval/recovery/v5/response.schema.json",
+    "state/bootstrap.json",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
+    "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+    "docs/vnext/FOUNDATION_BASELINE_V1.json",
+    "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
+    "docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md",
+    "tools/score_current_boot_recovery_v5.py",
+    "eval/recovery/v2/evidence_receipt.schema.json"
+  ],
+  "answers": {
+    "Q1": "Fresh-read protected main at 83d8a8edf29b8f3adcc0cf8ad007bbfb6b2693d7. The current boot route is state/bootstrap.json -> docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md -> state/current.yaml -> state/tasks.yaml -> docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md -> the active task's exact next_action. Protected GitHub main is the durable continuity authority; legacy records cannot override migrated keys.",
+    "Q2": "The bootstrap and current state agree on docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md as normative law precedence. docs/LAW_INDEX_20261003.md is a discovery catalog without independent precedence. Missing or conflicting required authority fails closed for the affected mutation.",
+    "Q3": "The active task is ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1, IN_PROGRESS, with handoff docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md and blocker CURRENT_BOOT_PATH_FRESH_SEAT_PROOF_V5_AND_TWO_V2_RED_TEAM_RECEIPTS_REQUIRED. Exact next_action: Run a new independent fresh-seat Recovery Proof v5 from eval/recovery/v5/challenge.json after the v5 harness merges; preserve C4 as immutable deterministic FAIL; after v5 PASS plus durable independence receipt, build Red-Team Packet v2 for identical Claude/Grok review.",
+    "Q4": "Protected-main law, current state, and the exact task registry entry govern this recovery. Chat memory is non-canonical; unmerged candidates do not outrank main. PC/Local Brain is a non-canonical execution and mirror sidecar. The routed architecture is canonical despite historical candidate wording; the foundation baseline remains a freeze candidate.",
+    "Q5": "C3 proved only its historical pre-Single-Boot-Root fixture and does not prove the current bootstrap and consolidated-law route. C4's deterministic FAIL remains preserved; semantic review cannot turn it into PASS. Current-path fresh-seat recovery is not yet proven for freeze. Autonomous learning, automatic self-critique, and meta-learning runtimes remain OFF and NOT PROVEN.",
+    "Q6": "The v5 harness is present on the fresh-read protected main. Run the independent C5 response from eval/recovery/v5/challenge.json under the exact nested schema. Completion requires deterministic PASS, independent provenance PRESENT, and a durable merged receipt. Then freeze the repaired Red-Team Packet v2 for identical independent Claude/Grok review; resolve material defects before foundation freeze. This response does not itself establish PASS or complete those gates."
+  }
+}

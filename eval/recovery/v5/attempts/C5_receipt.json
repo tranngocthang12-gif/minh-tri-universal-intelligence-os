@@ -1,0 +1,15 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C5",
+  "challenge_nonce": "mtc5-b7cf536ab7614b3993f388855cf61c90",
+  "response_ref": "eval/recovery/v5/attempts/C5_response.json",
+  "response_sha256_canonical_json": "6726dd39cd94247269ad56ff4e1fa626bdc2f625e288ebe09aafc71d112bafd0",
+  "scorer_ref": "tools/score_current_boot_recovery_v5.py",
+  "scorer_version": "v5-exact-nested-contract",
+  "deterministic_score": "PASS",
+  "deterministic_errors": [],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports this response was produced in a separate fresh ChatGPT chat outside the MINH TRI project using ChatGPT 6.1 Sol. No platform-side telemetry or independent model identity verification is claimed.",
+  "main_sha": "83d8a8edf29b8f3adcc0cf8ad007bbfb6b2693d7",
+  "completion_eligible": true
+}
