@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-foundation-baseline/v1",
+  "status": "CANDIDATE_PENDING_RED_TEAM_AND_FREEZE",
+  "baseline_main_sha": "95e3e61cbc89251c132f9202581070b41686c731",
+  "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+  "boot_root": "state/bootstrap.json",
+  "current_state": "state/current.yaml",
+  "task_registry": "state/tasks.yaml",
+  "consolidated_law": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+  "current_architecture": "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+  "mechanisms": {
+    "continuity_core": "eval/recovery/v3/attempts/C3_receipt.json",
+    "single_boot_root": "state/bootstrap.json",
+    "semantic_staleness": "docs/vnext/SEMANTIC_STALENESS_GUARD_V1_20261006.md",
+    "knowledge_fast_lane": "knowledge/FAST_LANE_V1.json",
+    "retrieval_application": "eval/retrieval_application/v1/results/FRESH_SEAT_001_receipt.json"
+  },
+  "freeze_gate": {
+    "law_consolidation_merged_required": true,
+    "capability_truth_review_required": true,
+    "debt_register_required": true,
+    "claude_red_team_required": true,
+    "grok_red_team_required": true,
+    "material_defects_resolved_required": true
+  }
+}

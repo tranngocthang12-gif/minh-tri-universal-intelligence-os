@@ -135,3 +135,19 @@ Approved bounded implementation:
 - protected-main review remains mandatory;
 - no self-VERIFIED promotion, autonomous merge, second canonical authority, workflow engine, or PC dependency;
 - after CI PASS and merge, continue directly to Retrieval/Application proof under the existing Foundation Closure delegation.
+
+
+## Foundation Acceptance & Freeze v1 — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT FOUNDATION ACCEPTANCE & FREEZE v1 — SAU LAW CONSOLIDATION, CHỤP BASELINE + CAPABILITY TRUTH + DEBT REGISTER + CLAUDE/GROK RED-TEAM; PASS THÌ ĐÓNG KIẾN TRÚC NỀN, CHỈ MỞ LẠI KHI CÓ EVIDENCE FAILURE HOẶC OWNER ĐỔI MỤC TIÊU`
+
+Approved completion sequence:
+- first durably close Retrieval/Application Proof v1 and complete Law Consolidation;
+- then establish a Foundation Baseline, Capability Truth Matrix, and Debt Register;
+- run independent read-only Claude and Grok red-team reviews against the same frozen packet;
+- critics have no canonical or merge authority;
+- material defects must be repaired before final freeze;
+- after both red-team gates pass and evidence is durable, close the foundation architecture;
+- after freeze, architecture reopens only for measured evidence failure, real operational foundation defect, or explicit Owner change of foundation objective.

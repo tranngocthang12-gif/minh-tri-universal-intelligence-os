@@ -389,8 +389,8 @@
       "supersedes": [],
       "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
       "handoff_ref": "docs/vnext/handoff/ARCHITECTURE_HANDOFF_20261006.md",
-      "next_action": "Complete Retrieval/Application proof with fresh-seat PASS + durable receipt, then perform Law consolidation.",
-      "blocker": "DEPENDENCY_ARCH_RETRIEVAL_APPLICATION_PROOF_V1_NOT_DONE"
+      "next_action": "Complete Law Consolidation v1, then execute Owner-approved Foundation Acceptance & Freeze v1 red-team gate.",
+      "blocker": "DEPENDENCY_ARCH_LAW_CONSOLIDATION_V1_NOT_DONE"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
@@ -514,7 +514,7 @@
     {
       "task_id": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1",
       "title": "Prove fresh-seat retrieval plus application against active, pending, stale, and policy fixtures",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "eval/retrieval_application/v1/",
         "tools/score_retrieval_application_eval.py",
@@ -531,10 +531,58 @@
         "ARCH-KNOWLEDGE-FAST-LANE-V1"
       ],
       "supersedes": [],
-      "result_ref": "eval/retrieval_application/v1/packet.json / PR_PENDING",
+      "result_ref": "PR#291 + PR#292 / eval/retrieval_application/v1/results/FRESH_SEAT_001_receipt.json",
       "handoff_ref": "docs/vnext/handoff/RETRIEVAL_APPLICATION_PROOF_V1.md",
-      "next_action": "Run required CI on the harness; if PASS, merge, then execute eval/retrieval_application/v1/FRESH_SEAT_COMMAND.txt in a genuinely fresh seat outside the MINH TRI project.",
-      "blocker": "FRESH_SEAT_GRADED_RUN_REQUIRED_AFTER_HARNESS_MERGE"
+      "next_action": "Retrieval/Application Proof v1 complete with fresh-seat fixture PASS and durable receipt.",
+      "blocker": null
+    },
+    {
+      "task_id": "ARCH-LAW-CONSOLIDATION-V1",
+      "title": "Consolidate foundation law routing without destructive rewrite",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "docs/LAW_INDEX_20261003.md",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "docs/vnext/handoff/LAW_CONSOLIDATION_FREEZE_PREP_V1.md"
+      ],
+      "branch": "owner/law-consolidation-and-foundation-freeze-v1-20261006",
+      "base_sha": "95e3e61cbc89251c132f9202581070b41686c731",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-RETRIEVAL-APPLICATION-PROOF-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md / PR_PENDING",
+      "handoff_ref": "docs/vnext/handoff/LAW_CONSOLIDATION_FREEZE_PREP_V1.md",
+      "next_action": "Run CI and merge the consolidated law router plus freeze-preparation records; then start Claude/Grok final red-team.",
+      "blocker": "CI_AND_MERGE_REQUIRED"
+    },
+    {
+      "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+      "title": "Accept and freeze the foundation after final independent red-team",
+      "status": "READY",
+      "scope": [
+        "docs/vnext/FOUNDATION_BASELINE_V1.json",
+        "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
+        "docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md",
+        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V1_20261006.md",
+        "docs/vnext/red_team/",
+        "state/current.yaml",
+        "state/tasks.yaml"
+      ],
+      "branch": null,
+      "base_sha": "95e3e61cbc89251c132f9202581070b41686c731",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-LAW-CONSOLIDATION-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "PENDING_CLAUDE_GROK_RED_TEAM",
+      "handoff_ref": "docs/vnext/handoff/LAW_CONSOLIDATION_FREEZE_PREP_V1.md",
+      "next_action": "After Law Consolidation merges, run the same frozen packet through independent Claude and Grok read-only critics; resolve material defects, then perform final freeze transition.",
+      "blocker": "WAITING_FOR_LAW_CONSOLIDATION_AND_TWO_RED_TEAM_RECEIPTS"
     }
   ]
 }
