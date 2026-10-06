@@ -1,0 +1,15 @@
+{
+  "schema": "minhtri-foundation-red-team-packet-manifest/v2",
+  "packet_ref": "docs/vnext/red_team/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261006.md",
+  "packet_target_main_sha": "608386baa16de28ec8f4fa58c2216cc643afe36e",
+  "packet_content_sha": "git-blob-sha1:4ca992ec5e46ea9db259f1118f06f54bf5b3bd41",
+  "packet_content_sha_algorithm": "git-blob-sha1",
+  "c5_receipt_ref": "eval/recovery/v5/attempts/C5_receipt.json",
+  "receipt_contract_ref": "docs/vnext/red_team/FOUNDATION_RED_TEAM_RECEIPT_CONTRACT_V1.json",
+  "final_critics": [
+    "CLAUDE",
+    "GROK"
+  ],
+  "identical_binding_required": true,
+  "foundation_frozen": false
+}
