@@ -1,0 +1,286 @@
+{
+  "schema": "minhtri-early-buddhist-mn-dialogue-index/v1",
+  "updated": "2026-10-04",
+  "status": "EXPANDED_CLUSTER_INDEX_NOT_COMPLETE_MN",
+  "purpose": "Index Middle Discourses by problem-solving/dialogue method rather than only doctrine.",
+  "entries": [
+    {
+      "id": "MN 1",
+      "problem": "conceptual appropriation",
+      "response_modes": [
+        "ANALYTICAL",
+        "DE_APPROPRIATIVE"
+      ],
+      "core_move": "separate perception from conceiving/appropriation",
+      "risk_terms": [
+        "maññati"
+      ]
+    },
+    {
+      "id": "MN 2",
+      "problem": "taints/problems need different treatments",
+      "response_modes": [
+        "METHOD_SELECTION"
+      ],
+      "core_move": "seeing/restraint/use/endurance/avoidance/removal/development",
+      "risk_terms": [
+        "āsava",
+        "yoniso manasikāra"
+      ]
+    },
+    {
+      "id": "MN 9",
+      "problem": "what counts as right view",
+      "response_modes": [
+        "ANALYTICAL",
+        "CONDITIONAL"
+      ],
+      "core_move": "define right view through wholesome/unwholesome and dependent processes",
+      "risk_terms": [
+        "sammādiṭṭhi"
+      ]
+    },
+    {
+      "id": "MN 18",
+      "problem": "how perception/thought becomes conflict",
+      "response_modes": [
+        "ANALYTICAL",
+        "CONDITIONAL"
+      ],
+      "core_move": "contact-feeling-perception-thinking-papañca-conflict",
+      "risk_terms": [
+        "papañca"
+      ]
+    },
+    {
+      "id": "MN 19",
+      "problem": "thought classification",
+      "response_modes": [
+        "METHOD_SELECTION",
+        "ETHICAL_CAUSAL"
+      ],
+      "core_move": "sort thoughts by harm and train alternatives",
+      "risk_terms": [
+        "vitakka"
+      ]
+    },
+    {
+      "id": "MN 20",
+      "problem": "persistent unwholesome thought",
+      "response_modes": [
+        "METHOD_SELECTION",
+        "GRADUAL"
+      ],
+      "core_move": "graded five-method intervention",
+      "risk_terms": [
+        "vitakka"
+      ]
+    },
+    {
+      "id": "MN 21",
+      "problem": "hostility under abuse",
+      "response_modes": [
+        "PRACTICE_PRESCRIPTION",
+        "SIMILE"
+      ],
+      "core_move": "non-hatred even under extreme provocation",
+      "risk_terms": [
+        "mettā"
+      ]
+    },
+    {
+      "id": "MN 22",
+      "problem": "wrong grasp of doctrine",
+      "response_modes": [
+        "SOURCE_CORRECTION",
+        "SIMILE",
+        "DE_APPROPRIATIVE"
+      ],
+      "core_move": "snake/raft; distinguish Dhamma function from grasping",
+      "risk_terms": [
+        "dhamma",
+        "upādāna"
+      ]
+    },
+    {
+      "id": "MN 26",
+      "problem": "what is worth seeking",
+      "response_modes": [
+        "REFRAME",
+        "GRADUAL"
+      ],
+      "core_move": "ignoble search vs noble search for the unborn/unaging/deathless",
+      "risk_terms": [
+        "nibbāna"
+      ]
+    },
+    {
+      "id": "MN 38",
+      "problem": "same consciousness transmigrates",
+      "response_modes": [
+        "CORRECTION",
+        "CONDITIONAL"
+      ],
+      "core_move": "consciousness arises dependently; reject unchanged carrier",
+      "risk_terms": [
+        "viññāṇa"
+      ]
+    },
+    {
+      "id": "MN 39",
+      "problem": "what makes the title ascetic true",
+      "response_modes": [
+        "GRADUAL",
+        "NORMATIVE_IDENTITY"
+      ],
+      "core_move": "role claim must be embodied through gradual training",
+      "risk_terms": [
+        "samaṇa",
+        "samādhi"
+      ]
+    },
+    {
+      "id": "MN 58",
+      "problem": "does Buddha say unpleasant things",
+      "response_modes": [
+        "REFRAME",
+        "SPEECH_GATED"
+      ],
+      "core_move": "truth + benefit + timing, regardless of pleasantness",
+      "risk_terms": [
+        "attha"
+      ]
+    },
+    {
+      "id": "MN 60",
+      "problem": "decision under metaphysical/moral uncertainty",
+      "response_modes": [
+        "RISK_ASYMMETRY",
+        "ANALYTICAL"
+      ],
+      "core_move": "compare ethical downside across competing hypotheses",
+      "risk_terms": [
+        "diṭṭhi"
+      ]
+    },
+    {
+      "id": "MN 61",
+      "problem": "how to evaluate action",
+      "response_modes": [
+        "REFLECTIVE_AUDIT"
+      ],
+      "core_move": "before/during/after harm review",
+      "risk_terms": [
+        "paccavekkhati"
+      ]
+    },
+    {
+      "id": "MN 63",
+      "problem": "undeclared speculative questions",
+      "response_modes": [
+        "SET_ASIDE",
+        "REFRAME"
+      ],
+      "core_move": "liberative relevance over sterile speculation",
+      "risk_terms": [
+        "avyākata"
+      ]
+    },
+    {
+      "id": "MN 64",
+      "problem": "relation of samādhi and insight",
+      "response_modes": [
+        "PRACTICE_PRESCRIPTION"
+      ],
+      "core_move": "use collected states as basis for insight into impermanence/stress/not-self",
+      "risk_terms": [
+        "jhāna",
+        "samādhi"
+      ]
+    },
+    {
+      "id": "MN 72",
+      "problem": "postmortem predicates of the liberated",
+      "response_modes": [
+        "CATEGORY_NONAPPLICABILITY",
+        "SIMILE"
+      ],
+      "core_move": "extinguished-fire simile; ordinary categories fail",
+      "risk_terms": [
+        "Tathāgata",
+        "nibbāna"
+      ]
+    },
+    {
+      "id": "MN 90",
+      "problem": "misquotation, caste, devas",
+      "response_modes": [
+        "SOURCE_CORRECTION",
+        "INTENT_CLARIFY",
+        "ANALYTICAL"
+      ],
+      "core_move": "correct scope first; separate convention from liberative capacity",
+      "risk_terms": []
+    },
+    {
+      "id": "MN 95",
+      "problem": "how belief becomes knowledge",
+      "response_modes": [
+        "EPISTEMIC_GRADUAL"
+      ],
+      "core_move": "preserve truth honestly; investigate; distinguish belief from realization",
+      "risk_terms": [
+        "saddhā",
+        "sacca"
+      ]
+    },
+    {
+      "id": "MN 111",
+      "problem": "relation of deep samādhi and discernment",
+      "response_modes": [
+        "ANALYTICAL"
+      ],
+      "core_move": "analyze factors associated with meditative attainments",
+      "risk_terms": [
+        "jhāna",
+        "samādhi"
+      ]
+    },
+    {
+      "id": "MN 117",
+      "problem": "how path factors coordinate",
+      "response_modes": [
+        "SYSTEM_ANALYSIS"
+      ],
+      "core_move": "right view leads; effort/mindfulness support correction; path factors integrated",
+      "risk_terms": [
+        "sammādiṭṭhi",
+        "lokuttara"
+      ]
+    },
+    {
+      "id": "MN 118",
+      "problem": "how practices interlock",
+      "response_modes": [
+        "DEVELOPMENTAL_CASCADE"
+      ],
+      "core_move": "breath mindfulness -> satipaṭṭhāna -> awakening factors -> knowledge/freedom",
+      "risk_terms": [
+        "sati",
+        "samādhi"
+      ]
+    },
+    {
+      "id": "MN 139",
+      "problem": "avoid extremes and harmful modes of teaching",
+      "response_modes": [
+        "MIDDLE_WAY",
+        "SPEECH_DISCIPLINE"
+      ],
+      "core_move": "distinguish teaching Dhamma from flattering/rebuking",
+      "risk_terms": []
+    }
+  ],
+  "next_action": "Add remaining MN dialogue/problem-solving cases and align major entries with MA parallels.",
+  "invariant": "Indexing a discourse does not mean every doctrinal or textual problem in it is resolved."
+}
