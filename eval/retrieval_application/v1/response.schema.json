@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-retrieval-application-response/v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "set_id",
+    "attestations",
+    "answers"
+  ],
+  "properties": {
+    "schema": {
+      "const": "minhtri-retrieval-application-response/v1"
+    },
+    "set_id": {
+      "const": "ARCH-RETRIEVAL-APPLICATION-PROOF-V1-001"
+    },
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "fresh_seat",
+        "used_prior_chat_history",
+        "read_gold"
+      ],
+      "properties": {
+        "fresh_seat": {
+          "const": true
+        },
+        "used_prior_chat_history": {
+          "const": false
+        },
+        "read_gold": {
+          "const": false
+        }
+      }
+    },
+    "answers": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "qid",
+          "decision",
+          "record_ids",
+          "answer"
+        ],
+        "properties": {
+          "qid": {
+            "enum": [
+              "A1",
+              "A2",
+              "A3",
+              "A4",
+              "A5"
+            ]
+          },
+          "decision": {
+            "enum": [
+              "USE_AS_SYNTHESIS",
+              "REQUIRE_REVIEW",
+              "REQUIRE_IDENTIFICATION_ASSUMPTIONS",
+              "SUPERSEDE_EXPLICITLY",
+              "REJECT_STALE_DEPENDENCY"
+            ]
+          },
+          "record_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "answer": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}
