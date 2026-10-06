@@ -41,6 +41,8 @@ Law without architecture is unenforceable prose.
 Architecture without law becomes uncontrolled power.
 They are designed together, then versioned and changed under one governance lifecycle.
 
+This list is a design sequence, not an authority-precedence ladder. Authority precedence is governed only by the consolidated Foundation Law router referenced in sections 7-8.1.
+
 ## 3. Foundation that must remain stable
 
 Foundation invariants:
@@ -56,7 +58,7 @@ Foundation invariants:
 10. Corrections supersede; history is preserved.
 11. No role self-certifies its own material work.
 12. Foundation changes require explicit review, evidence, acceptance, and protected merge.
-13. No autonomous merge or self-modification in Foundation unless Owner later creates a new explicit constitutional decision.
+13. No autonomous merge or self-modification in any change class unless an explicit Owner-approved delegated-merge policy defines the bounded scope, acceptance authority, and no-self-certification controls. No such policy may weaken Foundation Owner acceptance.
 
 These are harder to change than modules, workflows, domain knowledge, or tools.
 
@@ -233,19 +235,9 @@ A seat is replaceable and gets authority only from current canonical records plu
 
 ## 7. Law hierarchy
 
-Normative hierarchy:
+This section is an informative structural map only. It is **not** a normative precedence router. The sole normative precedence ladder is `docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md`.
 
-1. Durable Constitution-level Owner Decision on protected main.
-2. Stable Foundation Law.
-3. Policy.
-4. Domain Rule.
-5. ADR / bounded operational decision.
-6. Current State / Task Registry for operational facts within their declared authority.
-7. Handoff for task continuity.
-8. Generated views / reports.
-9. Chat memory / model memory — non-canonical.
-
-A current chat instruction governs the current interaction, but does not durably supersede project-wide Stable Law until recorded through protected governance.
+For structural orientation, the Blueprint distinguishes Constitution/Stable Law, policy/domain/ADR rules, operational state/task facts, handoffs, generated views, and non-canonical chat memory. When authority levels matter, resolve them from the consolidated Foundation Law rather than from this summary.
 
 ## 8. Conflict resolution
 
@@ -284,6 +276,7 @@ Required single routes:
 - Task truth: `state/tasks.yaml`
 - Current architecture: pointer from current state
 - Active handoff: pointer from active task
+- Exact next action authority: the active handoff `NEXT ACTION`; `state/tasks.yaml.next_action` must be an identical sentence or an explicit pointer/summary that cannot conflict with the handoff. Any divergence fails closed before mutation.
 - Knowledge truth: typed knowledge records + status/provenance
 - Evidence truth: immutable receipts/results bound to proof target
 - History: preserved historical records, non-current unless explicitly routed
@@ -314,12 +307,11 @@ Inspector checks implementation against design/law/task.
 ### Gate 6 — Validation
 Machine or independent evidence verifies bounded claims.
 
-### Gate 7 — Independent review
-Required for foundation, constitution, architecture, major security, or phase transitions.
+### Gate 7 — Independent / different-seat review
+Required for Foundation/Constitution/Master-Architecture changes, major security or phase transitions, and Class S changes that touch canonical state, task/knowledge schemas, or core pipeline interfaces. Class D/O use risk-based review, but a Builder seat may never be its own acceptance authority.
 
 ### Gate 8 — Acceptance
-Approver accepts, rejects, or requires revision.
-Foundation acceptance remains Owner authority.
+The acceptance authority recorded by the task accepts, rejects, or requires revision. Foundation acceptance remains Owner authority. For Class S/D/O, acceptance authority is Owner or an Owner-designated approver that is not the Builder seat. A delegated merge policy, if one exists, must name this authority explicitly.
 
 ### Gate 9 — Protected merge + fresh-read
 Only merged protected main becomes durable canonical truth.
@@ -345,15 +337,15 @@ Requires:
 
 ### Class S — Structural
 Examples: task registry schema, knowledge schema, core pipeline interfaces.
-Requires design review, supervision, validation, protected merge.
+Requires design review, supervision, validation, independent or different-seat review when canonical state/schema/core interfaces are touched, acceptance by Owner or an Owner-designated approver other than the Builder seat, and protected merge.
 
 ### Class D — Domain
 Examples: Buddhist/economics domain rules and knowledge structures.
-Must obey foundation; cannot alter foundation authority.
+Must obey foundation; cannot alter foundation authority. Acceptance authority is Owner or an Owner-designated approver other than the Builder seat; review depth is risk-based.
 
 ### Class O — Ordinary
 Examples: bounded knowledge updates, routine implementation, reports.
-May use streamlined checks but never bypass provenance, scope, or canonicality.
+May use streamlined checks but never bypass provenance, scope, canonicality, or the rule that the Builder seat is not its own acceptance authority.
 
 ## 12. New-seat recovery protocol
 
@@ -393,6 +385,8 @@ Nothing is accepted merely because:
 - a fresh chat reproduced one fixture.
 
 Acceptance requires evidence appropriate to the claim.
+
+Material critic findings at CRITICAL/HIGH/MEDIUM may be repaired or explicitly rejected only by Owner; LOW observations may be dispositioned by the governed project. No Architect/Builder seat may reject a material finding on its own.
 
 Foundation acceptance requires:
 - architecture consistency;
@@ -457,7 +451,7 @@ Therefore the prior vNext architecture is a strong subsystem/foundation architec
 9. Resolve material findings.
 10. Owner accepts v1.
 11. Merge canonical Master Blueprint + final routing.
-12. Run fresh-seat recovery proving the new seat recovers Blueprint -> Law -> State -> Task -> exact next action.
+12. Run deterministic fresh-seat Recovery Proof v6, reusing the v5 structured-facts scorer pattern, with required facts for `master_blueprint`, `law_precedence`, `current_state`, `active_task`, and exact `next_action`; preserve challenge/response/score/receipt and prove the new seat recovers Blueprint -> Law -> State -> Task -> exact next action.
 13. Only then resume Foundation Freeze.
 
 ## 17. Total Architect operating contract
