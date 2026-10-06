@@ -134,7 +134,7 @@ No same-session self-written quiz is sufficient proof of memory.
 Every material seat is replaceable.
 
 Boot target:
-`state/bootstrap.json -> current state -> task registry -> authoritative law precedence -> current architecture -> active task handoff -> domain working set as needed`
+`state/bootstrap.json -> current Master Blueprint -> authoritative law precedence -> state/current.yaml -> state/tasks.yaml -> current architecture -> active task handoff -> domain working set as needed`
 
 Required properties:
 - fresh read;
