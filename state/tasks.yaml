@@ -617,10 +617,10 @@
       "supersedes": [
         "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 as active frontier until blueprint accepted"
       ],
-      "result_ref": "PR#300 / Master Blueprint v1 candidate / Owner Auto Total Architect directive / PENDING_SUPERVISOR_AND_EXTERNAL_REVIEW",
+      "result_ref": "PR#300 / Supervisor PASS_TO_INDEPENDENT_REVIEW / MASTER_BLUEPRINT_RED_TEAM_PACKET_V1 frozen",
       "handoff_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
-      "next_action": "Run and record Supervisor/Inspector audit against the complete Master Blueprint candidate; then freeze one identical review packet for independent Claude and Grok critique before Owner acceptance.",
-      "blocker": null
+      "next_action": "After PR #300 exact current head passes required CI, run the identical Master Blueprint Red-Team Packet v1 independently in Claude and Grok, bind both reports to the same target commit and packet digest, then disposition and repair all material findings before asking Owner for Master Blueprint acceptance.",
+      "blocker": "PR300_CI_AND_TWO_IDENTICAL_INDEPENDENT_CRITIC_REVIEWS_REQUIRED"
     }
   ]
 }
