@@ -87,5 +87,7 @@ This document consolidates routing; it does not destructively replace the follow
 - `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md`
 - `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`
 - `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`
+- `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md`
+- `docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md`
 
 Historical law routers and migration records remain provenance only unless routed here or by current state.
