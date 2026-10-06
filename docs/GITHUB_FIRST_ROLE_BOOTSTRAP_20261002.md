@@ -5,12 +5,12 @@
 For migrated Architecture vNext scope, the canonical boot entrypoint is `state/bootstrap.json`.
 
 Current recovery route:
-`state/bootstrap.json -> state/current.yaml -> state/tasks.yaml -> current law/bootstrap pointers -> current architecture -> active task handoff -> task/domain sources`.
+`state/bootstrap.json -> current Master Blueprint -> authoritative law precedence -> state/current.yaml -> state/tasks.yaml -> current architecture -> active task handoff -> task/domain sources`.
 
 Older sections in this file that begin from PROJECT_STATE remain historical/unmigrated compatibility guidance only and cannot override migrated keys in `state/current.yaml` or `state/tasks.yaml`.
 
 
-**Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT CAPABILITY MUST BE READ FROM PROJECT_STATE + CURRENT ARCHITECTURE  
+**Status:** STABLE OWNER BOOTSTRAP LAW / HISTORICAL IMPLEMENTATION SNAPSHOT BELOW / CURRENT MIGRATED AUTHORITY MUST BE READ FROM state/bootstrap.json -> Master Blueprint -> law -> state/current.yaml -> state/tasks.yaml  
 **Base main when recorded:** `620875e68c97ccc1734aff8a8ab34af0bbe82750`  
 **Scope:** MINH TRÍ project governance, architecture continuity, learning, critique, synchronization and handoff.
 
@@ -111,7 +111,7 @@ Do not build unrestricted bidirectional auto-write between chat, repo, library a
 
 ### Current runtime boundary
 
-The original 2026-10-02 implementation snapshot below is historical. Current capability must be read from `PROJECT_STATE.json` and `ARCHITECTURE_NOW_20261003.md`.
+The original 2026-10-02 implementation snapshot below is historical. For migrated vNext scope, current capability must be resolved from the single boot route and bounded capability/evidence records routed by current state; legacy `PROJECT_STATE.json` and `ARCHITECTURE_NOW_20261003.md` cannot override migrated authority.
 
 Current high-level rule:
 - learning, critique, meta-learning and Learning Assurance engines are implemented as bounded/proposal-only mechanisms;
@@ -228,7 +228,7 @@ Historical security findings and their current classification:
 - OPEN/PARTIAL: declared provider IDs and same-provider critic runs are not proof of independent actors.
 - CLOSED governance baseline: main PR + strict required `test` check + no ruleset bypass actors are enforced; additional reviewer/CODEOWNER hardening remains optional/open.
 
-Current status must be read from `PROJECT_STATE.json` and the current architecture, not inferred from this historical bootstrap section.
+For migrated vNext scope, current status must be resolved only through `state/bootstrap.json`, the routed Master Blueprint and law, then `state/current.yaml` and `state/tasks.yaml`. `docs/PROJECT_STATE.json` is legacy compatibility/history for unmigrated keys and cannot override migrated authority.
 
 ## 8. PROJECT-WIDE CONTINUITY & MANDATORY HANDOFF LAW
 
@@ -453,7 +453,7 @@ For every current or future learning track, material work requires this live can
 
 Every material checkpoint must be durably recorded in GitHub with learned/corrected content, evidence/status, CURRENT, NEXT, OPEN AUDITS/UNKNOWNS and provenance. Chat memory is not a durable substitute. Recorded does not mean VERIFIED. If the durable write path is blocked, state NOT YET DURABLY RECORDED and continue only the independent work that remains safe.
 
-The Buddhist-thought continuity route is `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_20261004.md`. Always read CURRENT/NEXT from the live checkpoint plus PROJECT_STATE and RECOVERY_MANIFEST; do not rely on a checkpoint number hard-coded in bootstrap prose.
+For Buddhist-thought work, resolve the live learning checkpoint from the current task/domain handoff reached through `state/bootstrap.json -> Master Blueprint -> law -> state/current.yaml -> state/tasks.yaml`. Legacy `PROJECT_STATE.json`, `RECOVERY_MANIFEST.json`, and older checkpoint files are provenance/compatibility only for migrated authority and must not define CURRENT/NEXT.
 
 ## 12. MILINDAPAÑHA / MI TIÊN VẤN ĐÁP — BUDDHIST STUDY REQUIREMENT
 
