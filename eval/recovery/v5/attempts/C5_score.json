@@ -1,0 +1,10 @@
+{
+  "schema": "minhtri-current-boot-recovery-score/v5",
+  "status": "PASS",
+  "challenge_id": "ARCH-FOUNDATION-FREEZE-CURRENT-BOOT-20261006-C5",
+  "active_task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
+  "errors": [],
+  "historical_snapshot_scoring": true,
+  "prose_keyword_scoring": false,
+  "exact_nested_contract": true
+}
