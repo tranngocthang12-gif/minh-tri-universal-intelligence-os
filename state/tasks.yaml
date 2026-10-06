@@ -209,8 +209,8 @@
         "knowledge/buddhist/",
         "docs/vnext/history/PR168_CONTROLLED_SALVAGE_KICKOFF_20261006.md"
       ],
-      "branch": "owner/architecture-vnext-pr168-wave3a-rebase-20261006",
-      "base_sha": "e88ee77c14b0a8407e46b838722b3f488309bed1",
+      "branch": "owner/architecture-vnext-pr168-wave3b-20261006",
+      "base_sha": "13832e672a5637d5522d4e85e4ccdfc19142b531",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-PR-SALVAGE"
@@ -221,7 +221,7 @@
     {
       "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE3B",
       "title": "Extract and preserve large SN22/SN35/SN45/SN46 structural indexes from PR168",
-      "status": "READY",
+      "status": "IN_PROGRESS",
       "scope": [
         "PR#168:EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json",
         "PR#168:EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
@@ -229,11 +229,31 @@
         "PR#168:EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json",
         "knowledge/buddhist/evidence/pr168/raw/"
       ],
-      "branch": null,
-      "base_sha": "e88ee77c14b0a8407e46b838722b3f488309bed1",
+      "branch": "owner/architecture-vnext-pr168-wave3b-20261006",
+      "base_sha": "13832e672a5637d5522d4e85e4ccdfc19142b531",
       "requires": "none",
       "dependencies": [
         "ARCH-VNEXT-SALVAGE-PR168"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/history/PR168_CONTROLLED_SALVAGE_WAVE3B_20261006.md"
+    },
+    {
+      "task_id": "ARCH-VNEXT-SALVAGE-PR168-WAVE4",
+      "title": "Review PR168 parallel-text, translation, lexical, and Milindapanha artifacts for selective salvage",
+      "status": "READY",
+      "scope": [
+        "PR#168:EARLY_BUDDHIST_ARTHAPADA_AGAMA_MILINDA_STRESS_TEST_V0_1_20261004.md",
+        "PR#168:EARLY_BUDDHIST_CLAUSE_ALIGNMENT_V0_7_20261004.md",
+        "PR#168:EARLY_BUDDHIST_PARALLEL_TRANSLATION_CONTRADICTION_V0_6_20261004.md",
+        "PR#168:EARLY_BUDDHIST_ATTHAKAVAGGA_LEXICAL_PASS_V0_3_20261004.md",
+        "PR#168:MILINDAPANHA_REASONING_LAB_V0_1_20261004.md"
+      ],
+      "branch": null,
+      "base_sha": "13832e672a5637d5522d4e85e4ccdfc19142b531",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-VNEXT-SALVAGE-PR168-WAVE3B"
       ],
       "supersedes": [],
       "result_ref": null

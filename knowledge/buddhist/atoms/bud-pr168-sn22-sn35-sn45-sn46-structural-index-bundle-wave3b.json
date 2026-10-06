@@ -1,0 +1,44 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:pr168:sn22-sn35-sn45-sn46-structural-index-bundle-wave3b",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #168 contributed four large structural ID indexes for SN 22, SN 35, SN 45, and SN 46; the indexes are preserved exactly for retrieval/audit use, while their completeness labels remain historical claims requiring domain review.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_SN22_ID_INDEX_V0_1.json @ blob 5b2ecaa2f6f81a883a0f4a5c7b5e657e0a969d2d"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_SN35_ID_INDEX_V0_1.json @ blob b8de6ffb140e39f70aa1515c49cc6dc0b1dec956"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_SN45_ID_INDEX_V0_1.json @ blob 7ee08ed6f94d32b73d4714dd65424f55ce8abb2f"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_SN46_ID_INDEX_V0_1.json @ blob cd751aa84a15ad11ef1a67778363f54e644022ca"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 168,
+    "source_head_sha": "80889a3e6b83f1cb4742b1abe3e796ddfc42ce76",
+    "salvaged_on_base_sha": "13832e672a5637d5522d4e85e4ccdfc19142b531",
+    "salvage_wave": "3B",
+    "promotion_requirement": "DOMAIN_T1_REVIEW_AS_NEEDED",
+    "note": "Structural indexing labels are preserved as historical metadata, not accepted as verification/mastery claims."
+  }
+}
