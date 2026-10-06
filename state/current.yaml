@@ -29,6 +29,7 @@
       "law_precedence",
       "role_bootstrap",
       "active_workstream",
+      "active_task_id",
       "next_checkpoint",
       "autonomous_learning_runtime",
       "automatic_self_critique_runtime",
@@ -39,5 +40,6 @@
     ],
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
     "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true
-  }
+  },
+  "active_task_id": "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
 }
