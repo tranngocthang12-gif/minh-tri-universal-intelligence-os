@@ -1,0 +1,59 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "evidence",
+  "id": "bud:pr168:structural-source-audit-bundle-wave3a",
+  "domain": "buddhist_thought",
+  "class": "SECONDARY",
+  "status": "PENDING_REVIEW",
+  "statement": "PR #168 contributed seven structured early-Buddhist source/index/translation-audit artifacts preserved exactly in Wave 3A; preservation does not validate their completeness or doctrinal conclusions.",
+  "source_refs": [
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_MN_DIALOGUE_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_TRANSLATION_CONTRADICTION_LEDGER_V0_1.json",
+    "knowledge/buddhist/evidence/pr168/raw/EARLY_BUDDHIST_WHOLE_CORPUS_INDEX_V0_1.json"
+  ],
+  "evidence_refs": [
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_ATTHAKAVAGGA_INDEX_V0_1.json @ blob 8d316bb2d31e4ebb81c9961ce37cb7feceddfdc8"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_ATTHAKAVAGGA_VERSE_AUDIT_V0_2.json @ blob ddae5ca5a868b9f86e962b59128d36fc48ba0804"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_MN_DIALOGUE_INDEX_V0_1.json @ blob e8e23a0f07272233e9cf7492aa88edfea3723885"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_SN36_DISCOURSE_INDEX_V0_1.json @ blob 7ed3cc15d27b56283afb511e78952ec0bd5943f0"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_TRANSLATION_CARDS_V0_2.json @ blob 841003cd68b90c6d7d8eebee22c60507b22c021e"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_TRANSLATION_CONTRADICTION_LEDGER_V0_1.json @ blob cb56c254f593b6cf3f2c2de5a1250268c04f670e"
+    },
+    {
+      "source": "PR#168",
+      "locator": "EARLY_BUDDHIST_WHOLE_CORPUS_INDEX_V0_1.json @ blob 34b1607c7a8494cbbb638193850f1c35df773e7c"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "source_pr": 168,
+    "source_head_sha": "80889a3e6b83f1cb4742b1abe3e796ddfc42ce76",
+    "salvaged_on_base_sha": "9b4bf7f7c2fc89b0d534d2b9f6e71d1832aee598",
+    "salvage_wave": "3A",
+    "promotion_requirement": "DOMAIN_T1_REVIEW_AS_NEEDED",
+    "note": "Raw structural artifacts preserved exactly; old PROJECT_STATE mutation rejected."
+  }
+}

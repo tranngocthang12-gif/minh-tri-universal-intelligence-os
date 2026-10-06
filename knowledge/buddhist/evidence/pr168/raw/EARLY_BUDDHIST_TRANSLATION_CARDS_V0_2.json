@@ -1,0 +1,185 @@
+{
+  "schema": "minhtri-early-buddhist-translation-cards/v2",
+  "updated": "2026-10-04",
+  "method": "lemma + local syntax + discourse function + parallel check + Vietnamese/English risk; no one-gloss rule",
+  "cards": [
+    {
+      "term": "viññāṇa",
+      "common_vi": [
+        "thức",
+        "nhận thức (contextual only)"
+      ],
+      "common_en": [
+        "consciousness"
+      ],
+      "core_functions": [
+        "sense-specific consciousness arising dependent on faculty and object",
+        "one aggregate among five",
+        "conditioned link in dependent origination",
+        "not-self/de-appropriation target"
+      ],
+      "anchor_texts": [
+        "MN 38",
+        "SN 35.93",
+        "SN 22.59",
+        "SN 12 cluster"
+      ],
+      "risks": [
+        "Vietnamese 'thức' can sound like a persisting entity",
+        "English 'consciousness' can invite a permanent witness model",
+        "do not assume one unchanged consciousness transmigrates"
+      ],
+      "working_rule": "Translate as 'thức/consciousness' but explicitly mark its condition-dependent mode and local type when relevant; never treat the lemma itself as proof of a soul-like carrier.",
+      "confidence": "STRONG_CORE_CONTEXT_SENSITIVE"
+    },
+    {
+      "term": "saṅkhāra",
+      "common_vi": [
+        "hành",
+        "các hành",
+        "tạo tác/hoạt động tạo tác (contextual)"
+      ],
+      "common_en": [
+        "choices",
+        "formations",
+        "volitional formations",
+        "fabrications"
+      ],
+      "core_functions": [
+        "aggregate category",
+        "conditioned/conditioning activities in dependent origination",
+        "context-specific bodily/verbal/mental processes in some texts"
+      ],
+      "anchor_texts": [
+        "SN 12.2/12.22",
+        "SN 22.59",
+        "MN 44"
+      ],
+      "risks": [
+        "one-word 'hành/formations' hides large contextual variation",
+        "aggregate and dependent-origination uses should not be assumed identical in every nuance",
+        "later Abhidhamma taxonomy should not be silently imported"
+      ],
+      "working_rule": "Preserve saṅkhāra in technical analysis; select 'hành/choices/formations/fabrication' only after identifying the specific syntactic and doctrinal role.",
+      "confidence": "HIGH_RISK_POLYSEMY"
+    },
+    {
+      "term": "papañca",
+      "common_vi": [
+        "hý luận",
+        "phóng diễn",
+        "tăng sinh ý niệm (working)"
+      ],
+      "common_en": [
+        "proliferation",
+        "objectification",
+        "conceptual proliferation"
+      ],
+      "core_functions": [
+        "process linked to perception/thought and conflict",
+        "causal role more secure than any single dictionary gloss"
+      ],
+      "anchor_texts": [
+        "MN 18",
+        "DN 21",
+        "Snp 4.11"
+      ],
+      "risks": [
+        "commentarial equation with craving/conceit/views may be useful but is not a simple lexical definition",
+        "Vietnamese 'hý luận' may sound merely like verbal debate",
+        "English 'proliferation' may omit appropriation/objectification"
+      ],
+      "working_rule": "Keep papañca when precision matters; explain the observed causal function—elaborative/objectifying mental proliferation that feeds conflict—before choosing a gloss.",
+      "confidence": "GLOSS_UNRESOLVED_FUNCTION_STRONG"
+    },
+    {
+      "term": "sati",
+      "common_vi": [
+        "niệm",
+        "chánh niệm (when sammā-sati)"
+      ],
+      "common_en": [
+        "mindfulness",
+        "memory/keeping in mind (contextual)"
+      ],
+      "core_functions": [
+        "remember/recall/keep in mind",
+        "continuity of attention in contemplative practice",
+        "path factor coordinated with view and effort"
+      ],
+      "anchor_texts": [
+        "SN 48.9",
+        "MN 10/DN 22",
+        "MN 117/MA 189"
+      ],
+      "risks": [
+        "modern 'nonjudgmental present awareness' is too narrow",
+        "Vietnamese 'niệm' may be opaque without functional explanation",
+        "memory sense must not erase active contemplative monitoring"
+      ],
+      "working_rule": "Use 'niệm/mindfulness' but preserve the keeping-in-mind/continuity function; in path contexts include active monitoring guided by right view and effort.",
+      "confidence": "STRONG_CORE_MULTI_FUNCTION"
+    },
+    {
+      "term": "samādhi",
+      "common_vi": [
+        "định",
+        "chánh định"
+      ],
+      "common_en": [
+        "immersion",
+        "concentration",
+        "collectedness"
+      ],
+      "core_functions": [
+        "unification/collected stability of mind",
+        "right samādhi in the eightfold path often specified through jhāna",
+        "broader meditative collected states in other contexts"
+      ],
+      "anchor_texts": [
+        "MN 117/MA 189",
+        "MN 118",
+        "SN 48.9",
+        "AN 10.6"
+      ],
+      "risks": [
+        "'concentration' can sound effortful/narrow",
+        "'immersion' may over-associate every samādhi with full absorption",
+        "Vietnamese 'định' can sound static"
+      ],
+      "working_rule": "Prefer context label: 'định/collectedness/immersion'; when the text explicitly defines sammā-samādhi by jhānas, say so; do not universalize that exact definition to every samādhi occurrence.",
+      "confidence": "STRONG_CORE_CONTEXT_SENSITIVE"
+    },
+    {
+      "term": "nibbāna",
+      "common_vi": [
+        "Niết-bàn"
+      ],
+      "common_en": [
+        "extinguishment",
+        "unbinding",
+        "Nibbāna"
+      ],
+      "core_functions": [
+        "cessation/extinguishing of greed, hate, delusion",
+        "goal/capstone of the holy life",
+        "described as unconditioned in SN 43 material",
+        "with-residue / without-residue distinction in Iti 44"
+      ],
+      "anchor_texts": [
+        "Iti 44",
+        "MN 44",
+        "SN 43.1",
+        "MN 1"
+      ],
+      "risks": [
+        "a single English metaphysical noun can prejudge ontology",
+        "'extinction' can be misread as annihilation of a self",
+        "'unbinding' is interpretive and not exhaustive"
+      ],
+      "working_rule": "Keep 'Nibbāna/Niết-bàn' in contested metaphysical contexts; first state textual functions (cessation, dispassion, release, unconditioned terminology) before offering any ontology.",
+      "confidence": "FUNCTION_STRONG_ONTOLOGY_UNDERDETERMINED"
+    }
+  ],
+  "invariant": "No translation card may erase contextual variation or convert a preferred gloss into a doctrinal proof."
+}

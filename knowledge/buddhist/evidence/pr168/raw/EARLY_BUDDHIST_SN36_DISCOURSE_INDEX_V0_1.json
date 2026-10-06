@@ -1,0 +1,287 @@
+{
+  "schema": "minhtri-early-buddhist-sn36-discourse-index/v1",
+  "updated": "2026-10-04",
+  "status": "ALL_31_IDS_STRUCTURALLY_INDEXED_SEMANTIC_DEPTH_VARIES",
+  "entries": [
+    {
+      "id": "SN 36.1",
+      "title": "Samādhi",
+      "theme": "contemplative observation of feeling; linked to samādhi",
+      "parallel": [
+        "SA 473"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.2",
+      "title": "Sukha",
+      "theme": "pleasure/feeling",
+      "parallel": [],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.3",
+      "title": "Pahāna",
+      "theme": "abandoning underlying tendencies associated with feelings",
+      "parallel": [
+        "SA 468"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.4",
+      "title": "Pātāla",
+      "theme": "pain and the abyss simile; training response",
+      "parallel": [
+        "SA 469"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.5",
+      "title": "Daṭṭhabba",
+      "theme": "how the three feelings are to be regarded",
+      "parallel": [
+        "SA 467"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.6",
+      "title": "Salla",
+      "theme": "first and second arrow; trained vs untrained reaction",
+      "parallel": [
+        "SA 470"
+      ],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.7",
+      "title": "Gelañña 1",
+      "theme": "illness and mindful feeling",
+      "parallel": [
+        "SA 1028"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.8",
+      "title": "Gelañña 2",
+      "theme": "illness and mindful feeling",
+      "parallel": [
+        "SA 1029"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.9",
+      "title": "Anicca",
+      "theme": "impermanence of feeling",
+      "parallel": [],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.10",
+      "title": "Phassamūlaka",
+      "theme": "feeling rooted in contact",
+      "parallel": [
+        "SA 466"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.11",
+      "title": "Rahogata",
+      "theme": "all felt experience described as dukkha in the sense of conditioned instability; classification context",
+      "parallel": [
+        "SA 474",
+        "SA 473",
+        "SA 476"
+      ],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.12",
+      "title": "Ākāsa 1",
+      "theme": "diversity/change of feelings",
+      "parallel": [
+        "SA 471"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.13",
+      "title": "Ākāsa 2",
+      "theme": "diversity/change of feelings",
+      "parallel": [
+        "SA 471"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.14",
+      "title": "Agāra",
+      "theme": "feeling diversity",
+      "parallel": [
+        "SA 472"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.15",
+      "title": "Santaka 1",
+      "theme": "feeling classification",
+      "parallel": [
+        "SA 474"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.16",
+      "title": "Santaka 2",
+      "theme": "feeling classification",
+      "parallel": [
+        "SA 474"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.17",
+      "title": "Aṭṭhaka 1",
+      "theme": "feeling classification",
+      "parallel": [
+        "SA 476"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.18",
+      "title": "Aṭṭhaka 2",
+      "theme": "feeling classification",
+      "parallel": [
+        "SA 476"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.19",
+      "title": "Pañcakaṅga",
+      "theme": "multiple valid taxonomies: 2/3/5/6/18/36/108; non-dispute",
+      "parallel": [
+        "SA 485",
+        "MN 59"
+      ],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.20",
+      "title": "Bhikkhu",
+      "theme": "feeling exposition",
+      "parallel": [],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.21",
+      "title": "Moḷiyasīvaka",
+      "theme": "multiple causal sources of feeling; past kamma not sole cause",
+      "parallel": [
+        "SA 977",
+        "SA2 211"
+      ],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.22",
+      "title": "Aṭṭhasatapariyāya",
+      "theme": "explicit construction of 2/3/5/6/18/36/108 feeling taxonomies",
+      "parallel": [],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.23",
+      "title": "Bhikkhu",
+      "theme": "feeling/origin/path/cessation/gratification/drawback/escape",
+      "parallel": [
+        "SA 476"
+      ],
+      "status": "DEEP"
+    },
+    {
+      "id": "SN 36.24",
+      "title": "Pubbe",
+      "theme": "prior-awakening investigation of feeling",
+      "parallel": [
+        "SA 475"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.25",
+      "title": "Ñāṇa",
+      "theme": "knowledge regarding feeling",
+      "parallel": [],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.26",
+      "title": "Sambahulabhikkhu",
+      "theme": "monastic dialogue on feeling",
+      "parallel": [
+        "SA 478"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.27",
+      "title": "Samaṇabrāhmaṇa 1",
+      "theme": "knowledge of feeling as criterion for contemplative understanding",
+      "parallel": [
+        "SA 480"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.28",
+      "title": "Samaṇabrāhmaṇa 2",
+      "theme": "knowledge of feeling as criterion for contemplative understanding",
+      "parallel": [
+        "SA 480"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.29",
+      "title": "Samaṇabrāhmaṇa 3",
+      "theme": "knowledge of feeling as criterion for contemplative understanding",
+      "parallel": [
+        "SA 480"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.30",
+      "title": "Suddhikavedanā",
+      "theme": "bare classification of feeling",
+      "parallel": [
+        "SA 483 (paired family)"
+      ],
+      "status": "STRUCTURAL"
+    },
+    {
+      "id": "SN 36.31",
+      "title": "Nirāmisa",
+      "theme": "worldly vs non-worldly/spiritual feeling",
+      "parallel": [
+        "SA 483"
+      ],
+      "status": "STRUCTURAL"
+    }
+  ],
+  "key_rules": [
+    "vedanā is contextually classified, not one fixed ontology",
+    "contact is a recurrent causal root",
+    "reaction to feeling is trainable",
+    "not all feeling is explained by past kamma",
+    "gratification/drawback/escape is a recurrent diagnostic frame"
+  ]
+}
