@@ -76,3 +76,18 @@ Operational meaning:
 - ordinary implementation choices, test repairs, rebases, candidate salvage, and evidence-preserving refactors do not require a new Owner decision.
 
 This delegation is workflow authorization only. It does not enable autonomous runtime, autonomous merge, self-modification, or any capability previously marked OFF/NOT PROVEN.
+
+
+## Recovery Proof Gate v2 — Owner approved 2026-10-06
+
+Owner command:
+
+`DUYỆT RECOVERY PROOF GATE v2 — ĐÓNG CORE v1 RỒI TIẾP TỤC FOUNDATION CLOSURE`
+
+Approved repair:
+- normalize canonical repository references by path while preserving optional section anchors as provenance detail;
+- issue a fresh C2 challenge with a new nonce rather than retroactively converting C1 to PASS;
+- preserve C1 as a failed deterministic attempt with its exact failure reason;
+- add immutable evidence receipts;
+- require both deterministic PASS and independence provenance PRESENT before Core v1 can become DONE;
+- after Core v1 closes, continue the already approved Foundation Closure dependency chain without another Owner approval unless a foundation-level decision is encountered.
