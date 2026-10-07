@@ -46,6 +46,8 @@ Foundation roles are distinct in responsibility:
 Material foundation work follows:
 `DESIGN -> LAW CHECK -> TASK AUTHORIZE -> BUILD -> SUPERVISE -> VALIDATE -> INDEPENDENT REVIEW (risk-based) -> OWNER/APPROVER ACCEPT -> PROTECTED MERGE -> FRESH-READ -> OPERATE -> OBSERVE -> CONTROLLED CHANGE`.
 
+For bounded non-Foundation and routine operational work, Owner may delegate approval and merge execution by durable policy. The current delegated policy is `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`. Delegation may remove GitHub clerical work from Owner but may not fabricate Owner acceptance, bypass required independent evidence, or weaken reserved Foundation acceptance.
+
 CRITICAL/HIGH/MEDIUM critic findings may be repaired or explicitly rejected only by Owner; LOW observations may be dispositioned under the governed task. No material role may treat its own output as sufficient acceptance evidence. Separation of duties may be performed by replaceable AI seats, but the responsibility boundary must remain explicit in durable records.
 
 A new seat must resolve the current Master Blueprint as part of cold-start recovery before material architecture or implementation work. Missing or conflicting Blueprint/Law/State/Task authority fails closed for the affected mutation.
@@ -91,5 +93,6 @@ This document consolidates routing; it does not destructively replace the follow
 - `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`
 - `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md`
 - `docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md`
+- `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`
 
 Historical law routers and migration records remain provenance only unless routed here or by current state.
