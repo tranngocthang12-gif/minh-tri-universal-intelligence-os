@@ -1,0 +1,27 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-challenge/v7",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V7-20261007-C7",
+  "challenge_nonce": "mtv7-60b670fbb3c6-20261007",
+  "purpose": "Independent fresh-seat proof after repair of the C6 hidden exact-nested-contract defect.",
+  "start_ref": "state/bootstrap.json",
+  "packet_ref": "eval/recovery/v7/packet.json",
+  "response_schema_ref": "eval/recovery/v7/response.schema.json",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v7.py",
+  "snapshot_ref": "eval/recovery/v7/historical_snapshot.json",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v7/historical_snapshot.json",
+    "eval/recovery/v7/attempts/",
+    "eval/recovery/v6/historical_snapshot.json",
+    "eval/recovery/v6/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "public_exact_nested_contract": true,
+    "hidden_expected_values": true
+  }
+}

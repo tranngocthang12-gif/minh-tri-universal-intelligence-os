@@ -1,0 +1,15 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V6-20261007-C6",
+  "challenge_nonce": "mtv6-2f4ecb822a09-20261007",
+  "response_ref": "eval/recovery/v6/attempts/C6_response.json",
+  "response_sha256_canonical_json": "584b8e30764ee4d39f9df551a810f7c91988159a1752a0bd16f33982511692cf",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v6.py",
+  "scorer_version": "v6-hidden-exact-nested-contract",
+  "deterministic_score": "FAIL",
+  "deterministic_errors": ["recovered_facts mismatch"],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner reports a separate fresh zero-chat seat. Response attestations report no prior-chat use and no snapshot read. No platform-side telemetry verification is claimed.",
+  "main_sha": "60b670fbb3c66d06da4a65a7d559d6fabee5a278",
+  "completion_eligible": false
+}

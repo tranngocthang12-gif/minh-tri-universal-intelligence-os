@@ -1,6 +1,6 @@
 # MINH TRÍ — MASTER ARCHITECTURE / MASTER BLUEPRINT v1 — 2026-10-06
 
-**Status:** OWNER-RATIFIED FOUNDATION ARCHITECTURE — RECOVERY PROOF v6 PENDING  
+**Status:** OWNER-RATIFIED FOUNDATION ARCHITECTURE — RECOVERY PROOF PENDING  
 **Canonical target:** project-wide organization + law + lifecycle architecture  
 **Durable authority:** GitHub protected main  
 **Acceptance record:** `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md`  

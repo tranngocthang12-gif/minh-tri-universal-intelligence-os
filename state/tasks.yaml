@@ -681,21 +681,28 @@
         "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_V5_DISPOSITION_20261007.json",
         "eval/recovery/v6/",
         "tools/score_master_blueprint_recovery_v6.py",
-        "tests/test_master_blueprint_recovery_v6.py"
+        "tests/test_master_blueprint_recovery_v6.py",
+        "eval/recovery/v6/attempts/C6_score.json",
+        "eval/recovery/v6/C6_HARNESS_DEFECT_20261007.md",
+        "eval/recovery/v7/",
+        "tools/score_master_blueprint_recovery_v7.py",
+        "tests/test_master_blueprint_recovery_v7.py",
+        "eval/recovery/v6/attempts/C6_response.json",
+        "eval/recovery/v6/attempts/C6_receipt.json"
       ],
-      "branch": "owner/recovery-v6-post-harness-reconcile-20261007",
-      "base_sha": "813c3e7d44c95b32420a28d643da75388dc36070",
+      "branch": "owner/recovery-v7-contract-repair-20261007",
+      "base_sha": "60b670fbb3c66d06da4a65a7d559d6fabee5a278",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#300 merged / Owner post-merge ratification durable / PR#302 reconciliation merged / PR#303 status reconciliation merged / PR#304 Recovery Proof v6 harness merged at 813c3e7d44c95b32420a28d643da75388dc36070 / Security P0 #1084 PASS / protected-main fresh-read completed",
+      "result_ref": "PR#304 Recovery Proof v6 harness merged / PR#305 post-harness reconciliation merged at 60b670fbb3c66d06da4a65a7d559d6fabee5a278 / C6 fresh zero-chat run returned deterministic FAIL: recovered_facts mismatch / v6 public-contract defect documented / v7 repair candidate prepared",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "After the Recovery Proof v6 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v6/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
-      "blocker": "RECOVERY_PROOF_V6_FRESH_SEAT_RESPONSE_AND_DURABLE_RECEIPT_REQUIRED",
+      "next_action": "After the repaired Recovery Proof v7 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v7/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
+      "blocker": "RECOVERY_PROOF_V7_FRESH_SEAT_RESPONSE_AND_DURABLE_RECEIPT_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_RECOVERY_V6_FRESH_SEAT_GATE_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_RECOVERY_V7_HARNESS_REPAIR_NON_INDEPENDENT"
     }
   ]
 }
