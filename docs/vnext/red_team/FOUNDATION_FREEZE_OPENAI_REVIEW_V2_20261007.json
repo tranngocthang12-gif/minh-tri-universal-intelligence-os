@@ -1,0 +1,42 @@
+{
+  "critic": "Codex — independent read-only Foundation critic",
+  "provider": "OpenAI",
+  "packet_ref": "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md",
+  "packet_content_sha": "3565d7cd76dfb69a2f4a5e8d5dc1d28119e16bde",
+  "review_target_main_sha": "923f177af4f065ba5c3dbcbc18d538b2f79cf712",
+  "findings": [
+    {
+      "finding_id": "FF-OPENAI-001",
+      "severity": "HIGH",
+      "evidence_ref": [
+        "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md#L17-L25",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md#L11-L22",
+        "eval/recovery/v6/attempts/C6_score.json",
+        "eval/recovery/v6/C6_HARNESS_DEFECT_20261007.md#Disposition",
+        "eval/recovery/v9/attempts/C9_receipt.json#L9-L14",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md#L19-L23",
+        "state/tasks.yaml#L400-L425"
+      ],
+      "defect": "Quyết định Owner vẫn yêu cầu Recovery Proof v6 PASS trước Foundation Freeze, trong khi C6 được giữ là FAIL bất biến. Handoff hiện hành tuyên bố recovery gate đã được đáp ứng bằng v9/C9, nhưng các canonical records tại target chưa ghi điều khoản Owner supersession rõ ràng cho phép C9 thay điều kiện v6 PASS. Disposition sửa harness có quy định tạo proof thay thế, nhưng chưa đối soát trực tiếp điều kiện trong quyết định Owner. C9 replay PASS và hash response khớp receipt; finding này là xung đột điều kiện chấp thuận, không phải C9 sai điểm.",
+      "consequence": "Ghế tiếp theo phải lựa chọn giữa điều kiện Owner chưa được thay thế và tuyên bố gate đã hoàn thành trong handoff. Freeze dựa riêng vào tuyên bố của handoff sẽ vượt quyền của operational state đối với quyết định Owner.",
+      "smallest_repair": "Ghi một điều khoản Owner rõ ràng, có thể ngay trong final acceptance, xác nhận v9/C9 thay thế yêu cầu v6 PASS cho recovery gate này; bind receipt và proof SHA 5c38243166339cd4e745c4e2b4b3ecfc2ae9bd0f. Giữ nguyên C6/C7/C8 FAIL và cập nhật các task còn giữ điều kiện v6 sang quyết định thay thế đó."
+    },
+    {
+      "finding_id": "FF-OPENAI-002",
+      "severity": "MEDIUM",
+      "evidence_ref": [
+        "state/current.yaml#L5-L11",
+        "state/tasks.yaml#L596-L629",
+        "state/tasks.yaml#L716-L723",
+        "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md#L19-L38",
+        "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md#L3-L26",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L3",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L270-L287"
+      ],
+      "defect": "Đối soát sau C9 chưa bao phủ hết các mô tả vận hành hiện hành. Handoff Foundation tự ghi ACTIVE và TASK_ID ARCH-MASTER-BLUEPRINT-V1, nhưng registry dùng file này làm handoff của ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1. File vẫn ghi reconciliation chưa merged và yêu cầu merge nó trước, dù target chính là commit đã merge reconciliation. Trong khi đó current state, active task và handoff Master Blueprint thống nhất bước tiếp theo là final review. Header của Blueprint cũng còn ghi RECOVERY PROOF PENDING dù active handoff ghi recovery gate đã hoàn thành.",
+      "consequence": "Primary active route nhất quán, nhưng handoff Foundation được registry trỏ tới vẫn sai danh tính và chứa bước tiếp tục đã lỗi thời. Một ghế tiếp quản freeze task có thể đi sai bước hoặc phải fail closed; điều kiện freeze yêu cầu law/Blueprint/state/task/handoff nhất quán chưa được đáp ứng.",
+      "smallest_repair": "Sửa handoff Foundation để mang đúng task identity, phản ánh trạng thái BLOCKED/HELD của task và dẫn rõ tới active handoff hiện hành; bỏ yêu cầu merge reconciliation đã hoàn thành. Cập nhật header Blueprint để ghi C9 hoàn thành trong phạm vi proof đã chứng minh, đồng thời giữ Foundation chưa frozen. Đối soát task/handoff và bind final review packet tới SHA sau sửa."
+    }
+  ],
+  "verdict": "MATERIAL_DEFECTS_FOUND"
+}
