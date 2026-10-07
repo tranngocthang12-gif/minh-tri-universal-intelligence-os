@@ -33,6 +33,10 @@
 - Independent fresh-seat v6 response, deterministic score, and durable receipt do not yet exist.
 - Foundation Freeze has not occurred.
 
+## C6 REPAIR STATUS
+- C6 deterministic result is FAIL (`recovered_facts mismatch`).
+- Recovery Proof v7 contract repair is in progress on this branch; Foundation Freeze remains blocked.
+
 ## NEXT ACTION
 After the Recovery Proof v6 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v6/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.
 
