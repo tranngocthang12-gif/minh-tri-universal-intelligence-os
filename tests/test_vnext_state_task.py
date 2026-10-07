@@ -54,9 +54,14 @@ class VNextStateTaskTests(unittest.TestCase):
 
     def test_vnext_architecture_is_canonical_target(self):
         current = self.load_json_yaml("state/current.yaml")
+        bootstrap = self.load_json_yaml("state/bootstrap.json")
         self.assertEqual(
             current["current_architecture"],
-            "docs/vnext/ARCHITECTURE_VNEXT_OWNER_APPROVED_CANDIDATE_20261006.md",
+            bootstrap["master_blueprint"],
+        )
+        self.assertEqual(
+            current["architecture_generation"],
+            "VNEXT_MASTER_BLUEPRINT_V1_OWNER_RATIFIED",
         )
 
 
