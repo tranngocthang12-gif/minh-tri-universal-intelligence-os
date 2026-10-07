@@ -628,7 +628,7 @@
       "result_ref": "PR#315 repaired FF-OPENAI-001/002 and Owner accepted v9-for-v6 supersession; final freeze remains blocked pending canonicalized decision + new v3 review.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
       "next_action": "Remain BLOCKED until post-repair canonicalization is merged/fresh-read and a new packet v3 independent review clears all material defects.",
-      "blocker": "POST_REPAIR_CANONICALIZATION_AND_V3_INDEPENDENT_REVIEW_REQUIRED",
+      "blocker": "POST_REPAIR_CANONICALIZATION_V3_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
