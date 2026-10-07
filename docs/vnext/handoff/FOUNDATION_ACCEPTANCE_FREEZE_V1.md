@@ -1,34 +1,31 @@
 # Foundation Acceptance & Freeze v2 handoff
 
-**STATUS: ACTIVE — FINAL INDEPENDENT FREEZE REVIEW GATE**
+**STATUS: BLOCKED / HELD — MATERIAL FINDINGS REQUIRE REPAIR AND NEW REVIEW**
 
-**TASK_ID:** ARCH-MASTER-BLUEPRINT-V1  
-**REVIEW TARGET MAIN SHA:** `923f177af4f065ba5c3dbcbc18d538b2f79cf712`  
-**REVIEW PACKET:** `docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md`
+**TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1  
+**ACTIVE FRONTIER:** `ARCH-MASTER-BLUEPRINT-V1`  
+**ACTIVE HANDOFF:** `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md`
 
-## DONE
-- Foundation Law Consolidated v1 is canonical.
-- Master Blueprint v1 is Owner-ratified prospectively.
-- C6/C7/C8 historical recovery failures are preserved.
-- Recovery Proof v9/C9 completed with deterministic PASS.
-- C9 receipt records independence_provenance=PRESENT and completion_eligible=true.
-- PR #313 merged C9 PASS evidence.
-- PR #314 merged post-C9 control-state reconciliation.
-- Protected main was fresh-read at `923f177af4f065ba5c3dbcbc18d538b2f79cf712`.
+## REVIEW RESULT
+- Review packet v2: `docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md`
+- Packet blob SHA: `3565d7cd76dfb69a2f4a5e8d5dc1d28119e16bde`
+- Review target main: `923f177af4f065ba5c3dbcbc18d538b2f79cf712`
+- Independent review verdict: `MATERIAL_DEFECTS_FOUND`
+- Material findings:
+  - `FF-OPENAI-001` HIGH — legacy v6 PASS condition lacks explicit Owner supersession by v9/C9.
+  - `FF-OPENAI-002` MEDIUM — Foundation task/handoff identity and stale post-C9 wording were inconsistent.
 
-## NOT DONE
-- Final independent critic review against the frozen v2 packet is not yet durable.
-- Material findings, if any, are not yet dispositioned for this target.
-- Owner final Foundation Freeze acceptance has not yet been recorded.
-- Foundation is not yet FROZEN.
+## CURRENT REPAIR
+- Proposed Owner supersession: `docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md`
+- Review evidence: `docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json`
+- Disposition: `docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md`
+- Foundation remains NOT FROZEN.
 
 ## NEXT ACTION
-Obtain independent final Foundation critic review bound to the v2 packet, packet blob SHA, and review target main SHA; preserve the receipt and disposition all material findings before Owner final Freeze acceptance.
+Remain BLOCKED; follow `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md` until the Owner supersession repair is accepted on the exact head, merged, fresh-read, and a new final Foundation review returns no unresolved material defect.
 
-## FINAL FREEZE CONDITIONS
-- Current law/Blueprint/state/task/handoff remain mutually consistent.
-- C9 PASS receipt remains intact and bounded to its proof target.
-- Independent review binds the frozen packet and target.
-- Every CRITICAL/HIGH/MEDIUM finding is repaired or explicitly Owner-dispositioned.
-- Owner accepts the exact final Foundation candidate.
-- Protected merge + fresh-read complete before FROZEN status is asserted.
+## FREEZE CONDITIONS
+- Owner exact-head acceptance must make the v9-for-v6 supersession durable through protected merge + fresh-read.
+- A new post-repair review packet must bind the repaired main SHA.
+- A new independent review must clear or disposition every material finding.
+- Final Owner Foundation Freeze acceptance remains required after the clean review.
