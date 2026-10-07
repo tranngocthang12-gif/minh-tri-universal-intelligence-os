@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V9_SNAPSHOT_BINDING_REPAIR_NON_INDEPENDENT`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_FINAL_FOUNDATION_AUDIT_PREP_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -8,43 +8,36 @@
 
 ## CANONICAL MAIN STATE
 - Protected main is the durable canonical authority.
-- Master Blueprint v1 remains Owner-ratified prospectively; the historical acceptance-order defect remains preserved.
-- C6, C7, and C8 remain immutable FAIL records.
-- PR #311 was Owner-accepted at exact head `0ca5034443b2fd95f33fedb038b7177e7b2d4fc0`, passed CI #1108, and merged as `58d3630678f1ac77c1af18fba3c7a66ae6606053`.
-- Protected main was fresh-read after PR #311.
-- C8 fresh seat recovered the canonical active-task blocker correctly; v8 failed because the hidden snapshot contained a stale blocker value.
-- Foundation Freeze remains blocked.
+- Master Blueprint v1 remains Owner-ratified prospectively; historical acceptance-order defect remains preserved.
+- C6, C7, and C8 remain immutable historical FAIL records.
+- Recovery Proof v9/C9 is the current successful bounded recovery proof.
+- PR #313 was Owner-accepted at exact head `9e42d86829d80c80aa7d3b89315447b71e3e10f1`, passed CI #1114, and merged as `3514178286bcf17d2956f1fa36eeb3699425a96f`.
+- C9 deterministic score is PASS; independence_provenance is PRESENT; receipt completion_eligible is true.
+- Protected main was fresh-read after PR #313.
+- Foundation Freeze is not yet declared.
 
 ## DONE
-- C8 response, deterministic FAIL score, fail receipt, and snapshot-defect record are durable on protected main.
-- v9 repair candidate binds hidden expected active-task values to canonical state/task records through regression tests.
+- Master Blueprint v1 is Owner-ratified prospectively.
+- C6/C7/C8 failures are durably preserved.
+- C9 response, PASS score, and completion-eligible receipt are durable on protected main.
+- Cold-start recovery gate required by the Master Blueprint is satisfied for the bounded v9/C9 proof.
 
 ## NOT DONE
-- Recovery Proof v9 harness is not yet merged to protected main.
-- No independent C9 fresh-seat response exists.
-- No v9 deterministic PASS or completion-eligible receipt exists.
-- Foundation Freeze has not occurred.
-
-## V9 REPAIR
-- v9 uses a new challenge id and nonce; C8 is never regraded.
-- Public exact nested contract and exact evidence-membership contract remain exposed.
-- Hidden expected values remain hidden.
-- Regression tests require hidden expected active-task fields to equal the canonical active task in `state/tasks.yaml`, with task id selected by `state/current.yaml`.
-- Current operating seat authors the harness only and cannot impersonate C9.
+- Final Foundation freeze review has not yet been completed against the current post-C9 protected main.
+- Required final independent critic receipts/dispositions for the current freeze target are not yet durable.
+- Owner has not issued the final Foundation Freeze acceptance on the current freeze target.
 
 ## NEXT ACTION
-After the Recovery Proof v9 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v9/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.
+Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.
 
 ## REQUIRED GATES
-- v9 harness must pass repository CI.
-- Owner acceptance must bind the exact v9 harness head before protected merge.
-- Fresh-read protected main after merge.
-- C9 must be produced by an independent separate zero-chat seat.
-- Preserve C9 response, deterministic score, target SHA, receipt, and independence provenance.
-- No Foundation Freeze before v9/C9 deterministic PASS plus durable evidence.
+- Freeze packet must bind the current post-C9 protected-main target.
+- Independent critic review must use the identical frozen packet/target.
+- Material findings must be durably repaired or explicitly Owner-dispositioned.
+- Owner final Foundation acceptance must bind the exact final candidate.
+- Protected merge + fresh-read must occur before Foundation is marked FROZEN.
 
 ## TRUTH BOUNDARY
-- CI proves bounded repository consistency only.
-- Current authoring seat cannot supply independent C9.
-- Owner-reported fresh-seat provenance is not platform telemetry.
-- Recovery Proof v9 proves the bounded continuity/recovery contract, not architectural perfection.
+- C9 proves bounded recovery continuity, not universal architectural perfection.
+- This authoring seat cannot serve as the independent final critic.
+- Foundation remains unfrozen until final review + Owner acceptance + protected merge + fresh-read.
