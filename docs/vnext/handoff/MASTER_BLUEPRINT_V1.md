@@ -17,6 +17,18 @@
 - C7 is not completion-eligible.
 - Foundation Freeze remains blocked.
 
+## DONE
+- C6 immutable FAIL is preserved on protected main.
+- C7 immutable deterministic FAIL is preserved on protected main with response, score, receipt, and defect record.
+- PR #308 merged the C7 evidence package and protected main was fresh-read.
+- v8 public contract repair candidate has been authored on this branch.
+
+## NOT DONE
+- Recovery Proof v8 harness is not yet merged to protected main.
+- No independent C8 fresh-seat response exists.
+- No v8 deterministic PASS or completion-eligible receipt exists.
+- Foundation Freeze has not occurred.
+
 ## V8 REPAIR
 - v8 uses a new challenge id and nonce; C7 is never regraded.
 - Every scorer-required evidence ref is published in allowed public inputs through `public_required_evidence_refs`.
