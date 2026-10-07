@@ -1,0 +1,297 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "minhtri-master-blueprint-recovery-response/v9",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "challenge_id",
+    "challenge_nonce",
+    "attestations",
+    "recovered_facts",
+    "evidence_refs"
+  ],
+  "properties": {
+    "schema": {
+      "const": "minhtri-master-blueprint-recovery-response/v9"
+    },
+    "challenge_id": {
+      "const": "ARCH-MASTER-BLUEPRINT-RECOVERY-V9-20261007-C9"
+    },
+    "challenge_nonce": {
+      "const": "mtv9-58d3630678f1-20261007"
+    },
+    "attestations": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "separate_zero_chat",
+        "used_prior_chat_history",
+        "read_snapshot"
+      ],
+      "properties": {
+        "separate_zero_chat": {
+          "const": true
+        },
+        "used_prior_chat_history": {
+          "const": false
+        },
+        "read_snapshot": {
+          "const": false
+        }
+      }
+    },
+    "recovered_facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "boot",
+        "blueprint",
+        "law",
+        "active_task",
+        "canonicality",
+        "capability_truth",
+        "design_intent",
+        "next_gate"
+      ],
+      "properties": {
+        "boot": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "boot_root_ref",
+            "status",
+            "durable_continuity_authority",
+            "current_state_ref",
+            "task_registry_ref",
+            "master_blueprint_ref"
+          ],
+          "properties": {
+            "boot_root_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "durable_continuity_authority": {
+              "type": "string",
+              "minLength": 1
+            },
+            "current_state_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "task_registry_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "master_blueprint_ref": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "blueprint": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "master_blueprint_ref",
+            "status",
+            "acceptance_ref",
+            "acceptance_is_backdated",
+            "historical_process_defect"
+          ],
+          "properties": {
+            "master_blueprint_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "acceptance_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "acceptance_is_backdated": {
+              "type": "boolean"
+            },
+            "historical_process_defect": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "law": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "law_precedence_ref",
+            "law_index_catalog_ref",
+            "law_index_catalog_has_independent_precedence"
+          ],
+          "properties": {
+            "law_precedence_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "law_index_catalog_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "law_index_catalog_has_independent_precedence": {
+              "type": "boolean"
+            }
+          }
+        },
+        "active_task": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "task_id",
+            "status",
+            "handoff_ref",
+            "blocker",
+            "next_action"
+          ],
+          "properties": {
+            "task_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "status": {
+              "type": "string",
+              "minLength": 1
+            },
+            "handoff_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "blocker": {
+              "type": "string",
+              "minLength": 1
+            },
+            "next_action": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "canonicality": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "chat_memory_canonical",
+            "unmerged_candidate_authoritative",
+            "pc_local_brain_canonical"
+          ],
+          "properties": {
+            "chat_memory_canonical": {
+              "type": "boolean"
+            },
+            "unmerged_candidate_authoritative": {
+              "type": "boolean"
+            },
+            "pc_local_brain_canonical": {
+              "type": "boolean"
+            }
+          }
+        },
+        "capability_truth": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "recovery_v6_proven",
+            "recovery_v7_proven",
+            "autonomous_learning_proven",
+            "automatic_self_critique_proven",
+            "meta_learning_proven"
+          ],
+          "properties": {
+            "recovery_v6_proven": {
+              "type": "boolean"
+            },
+            "recovery_v7_proven": {
+              "type": "boolean"
+            },
+            "autonomous_learning_proven": {
+              "type": "boolean"
+            },
+            "automatic_self_critique_proven": {
+              "type": "boolean"
+            },
+            "meta_learning_proven": {
+              "type": "boolean"
+            }
+          }
+        },
+        "design_intent": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "master_blueprint_is_project_wide_map",
+            "next_action_is_only_operational_coordinate",
+            "knowledge_growth_forces_architecture_growth"
+          ],
+          "properties": {
+            "master_blueprint_is_project_wide_map": {
+              "type": "boolean"
+            },
+            "next_action_is_only_operational_coordinate": {
+              "type": "boolean"
+            },
+            "knowledge_growth_forces_architecture_growth": {
+              "type": "boolean"
+            }
+          }
+        },
+        "next_gate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "current_proof_ref",
+            "scorer_ref",
+            "deterministic_pass_required",
+            "independence_provenance_required",
+            "durable_receipt_required",
+            "foundation_freeze_allowed_before_v9_pass"
+          ],
+          "properties": {
+            "current_proof_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "scorer_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "deterministic_pass_required": {
+              "type": "boolean"
+            },
+            "independence_provenance_required": {
+              "type": "boolean"
+            },
+            "durable_receipt_required": {
+              "type": "boolean"
+            },
+            "foundation_freeze_allowed_before_v9_pass": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 13,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
