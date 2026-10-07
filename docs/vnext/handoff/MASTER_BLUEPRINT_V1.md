@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_FINAL_FOUNDATION_AUDIT_PREP_NON_INDEPENDENT`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_FOUNDATION_REVIEW_V2_REPAIR_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -24,11 +24,11 @@
 
 ## NOT DONE
 - Final Foundation freeze review has not yet been completed against the current post-C9 protected main.
-- Required final independent critic receipts/dispositions for the current freeze target are not yet durable.
+- Final independent review v2 returned material findings FF-OPENAI-001 HIGH and FF-OPENAI-002 MEDIUM; repair + new review are required.
 - Owner has not issued the final Foundation Freeze acceptance on the current freeze target.
 
 ## NEXT ACTION
-Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.
+Obtain Owner exact-head acceptance of the v9-for-v6 supersession and FF-OPENAI-001/002 repair package; after protected merge and fresh-read, freeze a new Foundation review packet on the repaired main and rerun independent final review.
 
 ## REQUIRED GATES
 - Freeze packet must bind the current post-C9 protected-main target.

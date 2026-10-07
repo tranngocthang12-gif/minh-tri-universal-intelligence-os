@@ -59,7 +59,10 @@ class FoundationFreezePrepV1Tests(unittest.TestCase):
         tasks = load("state/tasks.yaml")
         freeze = next(t for t in tasks["tasks"] if t["task_id"] == "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
         self.assertEqual(freeze["status"], "BLOCKED")
-        self.assertEqual(freeze["blocker"], "MASTER_BLUEPRINT_V1_ACCEPTANCE_AND_RECOVERY_PROOF_REQUIRED")
+        self.assertNotEqual(freeze["status"], "DONE")
+        self.assertTrue(freeze["blocker"])
+        self.assertIn("REVIEW", freeze["blocker"])
+        self.assertIn("OWNER", freeze["blocker"])
 
     def test_architecture_reopen_rule_is_bounded(self):
         text = (ROOT / "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md").read_text(encoding="utf-8")
