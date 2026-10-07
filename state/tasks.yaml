@@ -617,18 +617,18 @@
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md",
         "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md"
       ],
-      "branch": "owner/foundation-freeze-final-review-packet-v2-20261007",
-      "base_sha": "923f177af4f065ba5c3dbcbc18d538b2f79cf712",
+      "branch": "owner/foundation-v3-review-gate-transition-20261008",
+      "base_sha": "380be1a546b01143c5e613d05b3b86cfa7ac0f39",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1",
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#315 repaired FF-OPENAI-001/002 and Owner accepted v9-for-v6 supersession; final freeze remains blocked pending canonicalized decision + new v3 review.",
+      "result_ref": "Post-repair canonicalization is complete on protected main 380be1a546b01143c5e613d05b3b86cfa7ac0f39; Foundation remains blocked pending new v3 independent review and Owner final acceptance.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Remain BLOCKED until post-repair canonicalization is merged/fresh-read and a new packet v3 independent review clears all material defects.",
-      "blocker": "POST_REPAIR_CANONICALIZATION_V3_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
+      "next_action": "Remain BLOCKED until packet v3 is frozen against the repaired protected-main SHA, a new independent final review is durable, all material findings are resolved, and Owner final Foundation acceptance is explicit.",
+      "blocker": "FOUNDATION_V3_INDEPENDENT_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
@@ -716,19 +716,19 @@
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md",
         "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md"
       ],
-      "branch": "owner/foundation-v9-supersession-postmerge-canonicalize-20261007",
-      "base_sha": "850b98c4be6ec054049794559082c0d38c9b1b11",
+      "branch": "owner/foundation-v3-review-gate-transition-20261008",
+      "base_sha": "380be1a546b01143c5e613d05b3b86cfa7ac0f39",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#315 Owner-accepted the v9-for-v6 supersession at exact head a94c9d26b0736f752c4fd26972e888cf40bd017c and merged as 850b98c4be6ec054049794559082c0d38c9b1b11; this candidate canonicalizes that effective decision and routes to v3 re-review.",
+      "result_ref": "PR#316 canonicalized the effective v9-for-v6 Owner supersession and merged as 380be1a546b01143c5e613d05b3b86cfa7ac0f39; protected main was fresh-read and is ready for a new v3 independent Foundation review target.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "After this post-merge canonicalization is Owner-accepted, merged, and fresh-read, freeze Foundation review packet v3 against the repaired protected-main SHA and obtain a new independent final review.",
-      "blocker": "POST_REPAIR_CANONICALIZATION_MERGE_FRESH_READ_THEN_V3_REVIEW_REQUIRED",
+      "next_action": "Freeze Foundation review packet v3 against the current repaired protected-main SHA, obtain a new independent final review, and preserve the bound review receipt before any final Owner Foundation Freeze acceptance.",
+      "blocker": "FOUNDATION_V3_INDEPENDENT_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_POST_REPAIR_CANONICALIZATION_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FOUNDATION_V3_REVIEW_PREP_NON_INDEPENDENT"
     }
   ]
 }
