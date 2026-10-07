@@ -688,21 +688,28 @@
         "tools/score_master_blueprint_recovery_v7.py",
         "tests/test_master_blueprint_recovery_v7.py",
         "eval/recovery/v6/attempts/C6_response.json",
-        "eval/recovery/v6/attempts/C6_receipt.json"
+        "eval/recovery/v6/attempts/C6_receipt.json",
+        "eval/recovery/v7/attempts/C7_response.json",
+        "eval/recovery/v7/attempts/C7_score.json",
+        "eval/recovery/v7/attempts/C7_receipt.json",
+        "eval/recovery/v7/C7_EVIDENCE_CONTRACT_DEFECT_20261007.md",
+        "eval/recovery/v8/",
+        "tools/score_master_blueprint_recovery_v8.py",
+        "tests/test_master_blueprint_recovery_v8.py"
       ],
-      "branch": "owner/recovery-v7-post-merge-reconcile-20261007",
-      "base_sha": "289324902d5373b4da70e5c3d6f54142fac415b2",
+      "branch": "owner/recovery-v8-contract-repair-20261007",
+      "base_sha": "2e2c8b653e11530645a69c9b667f39994a7b30de",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#304 Recovery Proof v6 harness merged / PR#305 post-harness reconciliation merged / C6 fresh zero-chat deterministic FAIL preserved with durable response, score, receipt, and harness-defect record / PR#306 Recovery Proof v7 contract repair Owner-accepted pre-merge, Security P0 #1091 PASS, merged at 289324902d5373b4da70e5c3d6f54142fac415b2 / protected-main fresh-read completed",
+      "result_ref": "PR#308 merged C7 immutable FAIL evidence at 2e2c8b653e11530645a69c9b667f39994a7b30de; C7 scorer error preserved as missing required evidence ref tools/score_master_blueprint_recovery_v7.py; v8 replacement harness publishes the full scorer-required evidence membership contract while keeping expected fact values hidden.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "After the repaired Recovery Proof v7 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v7/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
-      "blocker": "RECOVERY_PROOF_V7_FRESH_SEAT_RESPONSE_AND_DURABLE_RECEIPT_REQUIRED",
+      "next_action": "After the Recovery Proof v8 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v8/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
+      "blocker": "RECOVERY_PROOF_V8_HARNESS_MERGE_FRESH_READ_THEN_C8_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_RECOVERY_V7_FRESH_SEAT_GATE_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_RECOVERY_V8_HARNESS_REPAIR_NON_INDEPENDENT"
     }
   ]
 }

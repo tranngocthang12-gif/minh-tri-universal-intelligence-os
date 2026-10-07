@@ -1,0 +1,76 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-snapshot/v8",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V8-20261007-C8",
+  "challenge_nonce": "mtv8-2e2c8b653e11-20261007",
+  "proof_target": "POST_C7_EVIDENCE_CONTRACT_REPAIR_MASTER_BLUEPRINT_PROTECTED_MAIN_RECOVERY",
+  "expected_facts": {
+    "boot": {
+      "boot_root_ref": "state/bootstrap.json",
+      "status": "CURRENT_BOOT_ROOT",
+      "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
+      "current_state_ref": "state/current.yaml",
+      "task_registry_ref": "state/tasks.yaml",
+      "master_blueprint_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md"
+    },
+    "blueprint": {
+      "master_blueprint_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+      "status": "OWNER-RATIFIED FOUNDATION ARCHITECTURE — RECOVERY PROOF PENDING",
+      "acceptance_ref": "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md",
+      "acceptance_is_backdated": false,
+      "historical_process_defect": "POST_MERGE_ACCEPTANCE_ORDER_VIOLATION"
+    },
+    "law": {
+      "law_precedence_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+      "law_index_catalog_ref": "docs/LAW_INDEX_20261003.md",
+      "law_index_catalog_has_independent_precedence": false
+    },
+    "active_task": {
+      "task_id": "ARCH-MASTER-BLUEPRINT-V1",
+      "status": "IN_PROGRESS",
+      "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+      "blocker": "RECOVERY_PROOF_V8_FRESH_SEAT_RESPONSE_AND_DURABLE_RECEIPT_REQUIRED",
+      "next_action": "After the Recovery Proof v8 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v8/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze."
+    },
+    "canonicality": {
+      "chat_memory_canonical": false,
+      "unmerged_candidate_authoritative": false,
+      "pc_local_brain_canonical": false
+    },
+    "capability_truth": {
+      "recovery_v6_proven": false,
+      "recovery_v7_proven": false,
+      "autonomous_learning_proven": false,
+      "automatic_self_critique_proven": false,
+      "meta_learning_proven": false
+    },
+    "design_intent": {
+      "master_blueprint_is_project_wide_map": true,
+      "next_action_is_only_operational_coordinate": true,
+      "knowledge_growth_forces_architecture_growth": false
+    },
+    "next_gate": {
+      "current_proof_ref": "eval/recovery/v8/challenge.json",
+      "scorer_ref": "tools/score_master_blueprint_recovery_v8.py",
+      "deterministic_pass_required": true,
+      "independence_provenance_required": true,
+      "durable_receipt_required": true,
+      "foundation_freeze_allowed_before_v8_pass": false
+    }
+  },
+  "required_evidence_refs": [
+    "state/bootstrap.json",
+    "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+    "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "eval/recovery/v8/challenge.json",
+    "eval/recovery/v8/packet.json",
+    "eval/recovery/v8/response.schema.json",
+    "tools/score_master_blueprint_recovery_v8.py"
+  ],
+  "note": "Expected fact values remain hidden. Required evidence membership is fully public in challenge.json and packet.json."
+}
