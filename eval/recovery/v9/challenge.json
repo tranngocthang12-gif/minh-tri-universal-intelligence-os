@@ -1,0 +1,44 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-challenge/v9",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V9-20261007-C9",
+  "challenge_nonce": "mtv9-58d3630678f1-20261007",
+  "purpose": "Independent fresh-seat proof after C8 exposed a hidden snapshot/canonical-task mismatch.",
+  "start_ref": "state/bootstrap.json",
+  "packet_ref": "eval/recovery/v9/packet.json",
+  "response_schema_ref": "eval/recovery/v9/response.schema.json",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v9.py",
+  "snapshot_ref": "eval/recovery/v9/historical_snapshot.json",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "public_required_evidence_refs": [
+    "state/bootstrap.json",
+    "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+    "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "eval/recovery/v9/challenge.json",
+    "eval/recovery/v9/packet.json",
+    "eval/recovery/v9/response.schema.json",
+    "tools/score_master_blueprint_recovery_v9.py"
+  ],
+  "do_not_read": [
+    "eval/recovery/v9/historical_snapshot.json",
+    "eval/recovery/v9/attempts/",
+    "eval/recovery/v8/historical_snapshot.json",
+    "eval/recovery/v8/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "public_exact_nested_contract": true,
+    "public_exact_evidence_membership": true,
+    "hidden_expected_values": true,
+    "hidden_active_task_bound_to_canonical_registry": true
+  }
+}
