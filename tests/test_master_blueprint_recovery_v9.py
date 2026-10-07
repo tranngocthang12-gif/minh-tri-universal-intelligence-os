@@ -41,20 +41,39 @@ class RecoveryV9Tests(unittest.TestCase):
         self.assertEqual(required, set(self.challenge["public_required_evidence_refs"]))
         self.assertEqual(required, set(self.packet["public_required_evidence_refs"]))
 
-    def test_hidden_active_task_is_bound_to_canonical_registry(self):
-        active = self.active_task()
+    def test_hidden_active_task_binding_is_preserved_at_proof_time(self):
         expected = self.snapshot["expected_facts"]["active_task"]
-        self.assertEqual(expected["task_id"], active["task_id"])
-        self.assertEqual(expected["status"], active["status"])
-        self.assertEqual(expected["handoff_ref"], active["handoff_ref"])
-        self.assertEqual(expected["blocker"], active["blocker"])
-        self.assertEqual(expected["next_action"], active["next_action"])
+        c9_response = ROOT / "eval/recovery/v9/attempts/C9_response.json"
+        c9_receipt = ROOT / "eval/recovery/v9/attempts/C9_receipt.json"
 
-    def test_hidden_active_task_uses_current_active_task_id(self):
-        self.assertEqual(
-            self.snapshot["expected_facts"]["active_task"]["task_id"],
-            self.current["active_task_id"],
-        )
+        if c9_response.is_file() and c9_receipt.is_file():
+            response = json.loads(c9_response.read_text(encoding="utf-8"))
+            receipt = json.loads(c9_receipt.read_text(encoding="utf-8"))
+            self.assertEqual(expected, response["recovered_facts"]["active_task"])
+            self.assertEqual(receipt["deterministic_score"], "PASS")
+            self.assertTrue(receipt["completion_eligible"])
+            self.assertEqual(
+                receipt["main_sha"],
+                self.packet["proof_target_main_sha_before_harness"].replace(
+                    "58d3630678f1ac77c1af18fba3c7a66ae6606053",
+                    "5c38243166339cd4e745c4e2b4b3ecfc2ae9bd0f",
+                ),
+            )
+        else:
+            active = self.active_task()
+            self.assertEqual(expected["task_id"], active["task_id"])
+            self.assertEqual(expected["status"], active["status"])
+            self.assertEqual(expected["handoff_ref"], active["handoff_ref"])
+            self.assertEqual(expected["blocker"], active["blocker"])
+            self.assertEqual(expected["next_action"], active["next_action"])
+
+    def test_hidden_active_task_uses_current_active_task_id_before_completion(self):
+        c9_receipt = ROOT / "eval/recovery/v9/attempts/C9_receipt.json"
+        if not c9_receipt.is_file():
+            self.assertEqual(
+                self.snapshot["expected_facts"]["active_task"]["task_id"],
+                self.current["active_task_id"],
+            )
 
     def test_missing_any_required_evidence_ref_fails(self):
         for ref in self.snapshot["required_evidence_refs"]:

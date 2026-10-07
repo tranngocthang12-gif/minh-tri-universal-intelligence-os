@@ -1,30 +1,31 @@
-# Foundation Acceptance & Freeze v1 handoff
+# Foundation Acceptance & Freeze v2 handoff
 
-**STATUS: HELD — SUPERSEDED AS ACTIVE FRONTIER BY OWNER MASTER BLUEPRINT DIRECTIVE UNTIL BLUEPRINT ACCEPTANCE + RECOVERY PROOF v6.**
+**STATUS: ACTIVE — FINAL POST-C9 FREEZE REVIEW GATE**
 
-**TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1
+**TASK_ID:** ARCH-MASTER-BLUEPRINT-V1  
+**TARGET MAIN SHA:** `3514178286bcf17d2956f1fa36eeb3699425a96f`
 
 ## DONE
-- Law Consolidation v1 merged through PR #293.
-- Grok Round 1 and Claude Round 1 defects were repaired through PR #294.
-- Recovery Proof v4 C4 is preserved as deterministic FAIL caused by the v4 schema/scorer mismatch.
-- Recovery Proof v5 harness merged through PR #296.
-- C5 ran in a separate fresh ChatGPT chat; Owner attested ChatGPT 6.1 Sol as provider.
-- C5 deterministic score is PASS, independence provenance is PRESENT, and the durable receipt merged through PR #297.
-- Current boot-path recovery is therefore proven only for the bounded C5 current-path fixture.
+- Foundation Law Consolidated v1 is canonical.
+- Master Blueprint v1 is Owner-ratified prospectively.
+- Historical C6/C7/C8 recovery failures are preserved.
+- Recovery Proof v9/C9 completed with deterministic PASS.
+- C9 receipt records independence_provenance=PRESENT and completion_eligible=true.
+- PR #313 merged the C9 PASS evidence package to protected main.
 
 ## NOT DONE
-- Red-Team Packet v2 is not yet frozen on protected main.
-- Claude and Grok have not reviewed the identical v2 packet.
-- Material-defect disposition is not yet complete.
-- Foundation is not frozen.
+- Post-C9 control-state reconciliation is not yet merged; final independent Foundation freeze review must target the reconciled protected main.
+- Material critic findings, if any, have not yet been dispositioned for this target.
+- Owner final Foundation Freeze acceptance has not yet been recorded for the final candidate.
+- Foundation is not yet FROZEN.
 
 ## NEXT ACTION
-Resume this freeze path only after Master Blueprint v1 has independent final review, explicit Owner acceptance, protected merge, and deterministic post-merge Recovery Proof v6.
+Merge and fresh-read the post-C9 control-state reconciliation first. Then freeze a new review packet against that reconciled protected-main SHA and run independent final Foundation review before Owner Freeze acceptance.
 
-## REQUIRED GATES
-- C4 FAIL remains immutable historical evidence.
-- C5 PASS remains bounded to its fixture and proof-time SHA.
-- Final Claude + Grok receipts bind to identical packet_ref, packet_target_main_sha, and packet_content_sha.
-- Every CRITICAL/HIGH finding has durable disposition and repair reference or explicit Owner-approved rejection.
-- No autonomous merge, self-modification, or capability overclaim.
+## FINAL FREEZE CONDITIONS
+- Current law/Blueprint/state/task/handoff are mutually consistent.
+- C9 PASS receipt remains intact and bounded to its proof target.
+- Final independent review is bound to the same frozen packet and target SHA.
+- Every material finding is repaired or explicitly Owner-dispositioned.
+- Owner accepts the exact final candidate.
+- Protected merge and fresh-read complete before FROZEN status is asserted.
