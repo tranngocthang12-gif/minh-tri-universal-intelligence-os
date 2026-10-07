@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V6_PREP_NON_ACCEPTANCE`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V6_HARNESS_BUILDER_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -26,12 +26,12 @@
 - Post-merge protected-main fresh-read completed.
 
 ## NOT DONE
-- Deterministic fresh-seat Recovery Proof v6 has not yet run.
-- Immutable v6 challenge/response/score/receipt do not yet exist.
+- Recovery Proof v6 harness is being added in the current bounded branch and is not canonical until protected merge.
+- Independent fresh-seat v6 response, deterministic score, and durable receipt do not yet exist.
 - Foundation Freeze has not occurred.
 
 ## NEXT ACTION
-Prepare and run deterministic fresh-seat Recovery Proof v6 against protected main; preserve immutable challenge, response, score, and receipt before any Foundation Freeze.
+After the Recovery Proof v6 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v6/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.
 
 ## REQUIRED GATES
 - Use protected main as proof target.

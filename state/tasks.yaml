@@ -678,21 +678,24 @@
         "docs/vnext/red_team/MASTER_BLUEPRINT_GROK_REVIEW_V5_20261007.json",
         "docs/vnext/red_team/MASTER_BLUEPRINT_GROK_V5_DISPOSITION_20261007.json",
         "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_REVIEW_V5_20261007.json",
-        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_V5_DISPOSITION_20261007.json"
+        "docs/vnext/red_team/MASTER_BLUEPRINT_CLAUDE_V5_DISPOSITION_20261007.json",
+        "eval/recovery/v6/",
+        "tools/score_master_blueprint_recovery_v6.py",
+        "tests/test_master_blueprint_recovery_v6.py"
       ],
-      "branch": "owner/post-merge-status-reconcile-before-v6-20261007",
-      "base_sha": "70665a8bf03d25b5a7900f2fd01fbbb50e5e0237",
+      "branch": "owner/recovery-proof-v6-harness-20261007",
+      "base_sha": "2f4ecb822a09d5ef298519a4f1fe74096a9fe998",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
       "result_ref": "PR#300 merged / Owner post-merge ratification durable / PR#302 reconciliation merged at 70665a8bf03d25b5a7900f2fd01fbbb50e5e0237 / Security P0 #1080 PASS / protected-main fresh-read completed",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Prepare and run deterministic fresh-seat Recovery Proof v6 against protected main; preserve immutable challenge, response, score, and receipt before any Foundation Freeze.",
-      "blocker": "RECOVERY_PROOF_V6_REQUIRED_BEFORE_FOUNDATION_FREEZE",
+      "next_action": "After the Recovery Proof v6 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v6/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
+      "blocker": "RECOVERY_PROOF_V6_FRESH_SEAT_RESPONSE_AND_DURABLE_RECEIPT_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_RECOVERY_V6_PREP_NON_ACCEPTANCE"
+      "role": "TOTAL_ARCHITECT_RECOVERY_V6_HARNESS_BUILDER_NON_INDEPENDENT"
     }
   ]
 }
