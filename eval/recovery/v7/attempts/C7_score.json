@@ -1,0 +1,12 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-score/v7",
+  "status": "FAIL",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V7-20261007-C7",
+  "active_task_id": "ARCH-MASTER-BLUEPRINT-V1",
+  "errors": [
+    "missing required evidence refs: tools/score_master_blueprint_recovery_v7.py"
+  ],
+  "historical_snapshot_scoring": true,
+  "public_exact_nested_contract": true,
+  "hidden_expected_values": true
+}
