@@ -28,7 +28,7 @@
 - Owner has not issued the final Foundation Freeze acceptance on the current freeze target.
 
 ## NEXT ACTION
-Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.
+Obtain independent final Foundation critic review bound to the v2 packet, packet blob SHA, and review target main SHA; preserve the receipt and disposition all material findings before Owner final Freeze acceptance.
 
 ## REQUIRED GATES
 - Freeze packet must bind the current post-C9 protected-main target.
