@@ -611,20 +611,23 @@
         "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
         "eval/recovery/v5/",
         "tools/score_current_boot_recovery_v5.py",
-        "tests/test_current_boot_recovery_v5.py"
+        "tests/test_current_boot_recovery_v5.py",
+        "docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md"
       ],
-      "branch": "owner/foundation-red-team-v2-20261006",
-      "base_sha": "6decf677b1c4310e2398cfb747cc5ec1dd8d6083",
+      "branch": "owner/foundation-freeze-final-review-packet-v2-20261007",
+      "base_sha": "923f177af4f065ba5c3dbcbc18d538b2f79cf712",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1",
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#294 + PR#295 + PR#296 + PR#297 / eval/recovery/v5/attempts/C5_receipt.json (PASS) / PENDING_TWO_V2_RED_TEAM_RECEIPTS / PR#299 CLOSED_UNMERGED_SUPERSEDED_BY_MASTER_BLUEPRINT_DIRECTIVE",
+      "result_ref": "Final Foundation review v2 found FF-OPENAI-001 HIGH and FF-OPENAI-002 MEDIUM; repair candidate requires Owner supersession of legacy v6 condition and canonical handoff/task reconciliation before new review.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Resume Foundation Freeze only after Master Blueprint v1 is independently reviewed, Owner-accepted, merged to protected main, and fresh-seat recovery proves the Blueprint -> Law -> State -> Task route.",
-      "blocker": "MASTER_BLUEPRINT_V1_ACCEPTANCE_AND_RECOVERY_PROOF_REQUIRED",
+      "next_action": "Remain BLOCKED; follow docs/vnext/handoff/MASTER_BLUEPRINT_V1.md until the Owner supersession repair is accepted on the exact head, merged, fresh-read, and a new final Foundation review returns no unresolved material defect.",
+      "blocker": "OWNER_V9_SUPERSESSION_REPAIR_AND_NEW_FINAL_REVIEW_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
@@ -706,21 +709,24 @@
         "eval/recovery/v9/attempts/C9_response.json",
         "eval/recovery/v9/attempts/C9_score.json",
         "eval/recovery/v9/attempts/C9_receipt.json",
-        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md"
+        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md",
+        "docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md"
       ],
       "branch": "owner/foundation-freeze-final-review-packet-v2-20261007",
       "base_sha": "923f177af4f065ba5c3dbcbc18d538b2f79cf712",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#314 merged post-C9 reconciliation at 923f177af4f065ba5c3dbcbc18d538b2f79cf712; final independent Foundation review packet v2 is being frozen against that reconciled main.",
+      "result_ref": "Independent Foundation review v2 returned MATERIAL_DEFECTS_FOUND: FF-OPENAI-001 HIGH and FF-OPENAI-002 MEDIUM. This candidate repairs both; a new post-repair packet/review is mandatory.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Obtain independent final Foundation critic review bound to the v2 packet, packet blob SHA, and review target main SHA; preserve the receipt and disposition all material findings before Owner final Freeze acceptance.",
-      "blocker": "FINAL_INDEPENDENT_FOUNDATION_REVIEW_AND_OWNER_FREEZE_ACCEPTANCE_REQUIRED",
+      "next_action": "Obtain Owner exact-head acceptance of the v9-for-v6 supersession and FF-OPENAI-001/002 repair package; after protected merge and fresh-read, freeze a new Foundation review packet on the repaired main and rerun independent final review.",
+      "blocker": "OWNER_V9_SUPERSESSION_AND_MATERIAL_FINDING_REPAIR_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_FINAL_FREEZE_REVIEW_PACKET_AUTHOR_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FOUNDATION_REVIEW_V2_REPAIR_NON_INDEPENDENT"
     }
   ]
 }
