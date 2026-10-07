@@ -1,0 +1,15 @@
+{
+  "schema": "minhtri-recovery-evidence-receipt/v1",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V9-20261007-C9",
+  "challenge_nonce": "mtv9-58d3630678f1-20261007",
+  "response_ref": "eval/recovery/v9/attempts/C9_response.json",
+  "response_sha256_canonical_json": "15296fd3f951b608ea77ecd217eac3f5285e50ea455cc788cde19941d1f64ea8",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v9.py",
+  "scorer_version": "v9-public-exact-evidence-membership-canonical-active-task-binding",
+  "deterministic_score": "PASS",
+  "deterministic_errors": [],
+  "independence_provenance": "PRESENT",
+  "independence_note": "Owner relayed a response produced in a separate fresh zero-chat seat. The response self-attests separate_zero_chat=true, used_prior_chat_history=false, read_snapshot=false. No platform-side identity or telemetry verification is claimed.",
+  "main_sha": "5c38243166339cd4e745c4e2b4b3ecfc2ae9bd0f",
+  "completion_eligible": true
+}
