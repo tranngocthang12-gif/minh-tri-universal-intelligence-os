@@ -14,7 +14,7 @@ The AUTO command accepts both equivalent forms:
 
 When Owner uses either form, the active architecture seat must execute the full contract below. The command is an alias; the contract is the authority.
 
-Delegated routine approval and merge execution are governed by `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`.
+Delegated routine execution and bounded Class O merge execution are governed by `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`. This does not authorize the authoring pass to approve its own work and does not supersede the mandatory stop on enabling general autonomous merge.
 
 ## Objective
 
@@ -52,7 +52,7 @@ The Total Architect must:
 - prefer the smallest repair that restores architectural consistency;
 - avoid architecture growth that is not justified by a measured defect or Owner objective;
 - keep Owner out of routine GitHub/CI/implementation operation unless Owner explicitly asks;
-- use delegated approval/merge authority where permitted so Owner does not need to perform GitHub clerical steps manually.
+- use delegated clerical merge execution where the delegated policy permits it so Owner does not need to perform GitHub clerical steps manually; acceptance authority remains separate from the Builder/authoring pass.
 
 ## Work that proceeds automatically
 
