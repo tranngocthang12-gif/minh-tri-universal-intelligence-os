@@ -21,10 +21,10 @@
 - C6 immutable FAIL is preserved on protected main.
 - C7 immutable deterministic FAIL is preserved on protected main with response, score, receipt, and defect record.
 - PR #308 merged the C7 evidence package and protected main was fresh-read.
-- v8 public contract repair candidate has been authored on this branch.
+- Recovery Proof v8 contract repair was Owner-accepted at exact head `d7e656d24c3c7ee91f39f7891a2d6f26b3e97e0e`, passed CI #1101, and merged to protected main as `a77758718058b784ee1971b4c7319b0f419ba599`.
+- Protected main was fresh-read after PR #309.
 
 ## NOT DONE
-- Recovery Proof v8 harness is not yet merged to protected main.
 - No independent C8 fresh-seat response exists.
 - No v8 deterministic PASS or completion-eligible receipt exists.
 - Foundation Freeze has not occurred.
@@ -40,9 +40,8 @@
 After the Recovery Proof v8 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v8/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.
 
 ## REQUIRED GATES
-- v8 harness must pass repository CI.
-- Owner acceptance must bind the exact v8 harness head before protected merge.
-- Fresh-read protected main after merge.
+- Recovery Proof v8 harness is merged and canonical on protected main.
+- Protected main has been fresh-read after the v8 harness merge.
 - C8 must be produced by an independent separate zero-chat seat.
 - Preserve C8 response, deterministic score, target SHA, receipt, and independence provenance.
 - No Foundation Freeze before v8/C8 deterministic PASS plus durable evidence.
