@@ -14,13 +14,13 @@
 - PR #313 merged the C9 PASS evidence package to protected main.
 
 ## NOT DONE
-- Final independent Foundation freeze review of the post-C9 target is not yet durable.
+- Post-C9 control-state reconciliation is not yet merged; final independent Foundation freeze review must target the reconciled protected main.
 - Material critic findings, if any, have not yet been dispositioned for this target.
 - Owner final Foundation Freeze acceptance has not yet been recorded for the final candidate.
 - Foundation is not yet FROZEN.
 
 ## NEXT ACTION
-Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.
+Merge and fresh-read the post-C9 control-state reconciliation first. Then freeze a new review packet against that reconciled protected-main SHA and run independent final Foundation review before Owner Freeze acceptance.
 
 ## FINAL FREEZE CONDITIONS
 - Current law/Blueprint/state/task/handoff are mutually consistent.
