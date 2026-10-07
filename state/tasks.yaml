@@ -686,7 +686,9 @@
         "eval/recovery/v6/C6_HARNESS_DEFECT_20261007.md",
         "eval/recovery/v7/",
         "tools/score_master_blueprint_recovery_v7.py",
-        "tests/test_master_blueprint_recovery_v7.py"
+        "tests/test_master_blueprint_recovery_v7.py",
+        "eval/recovery/v6/attempts/C6_response.json",
+        "eval/recovery/v6/attempts/C6_receipt.json"
       ],
       "branch": "owner/recovery-v7-contract-repair-20261007",
       "base_sha": "60b670fbb3c66d06da4a65a7d559d6fabee5a278",
