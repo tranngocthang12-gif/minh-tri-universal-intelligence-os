@@ -1,0 +1,45 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-packet/v9",
+  "purpose": "Replacement recovery proof after C8 exposed stale hidden expected active-task state.",
+  "challenge_ref": "eval/recovery/v9/challenge.json",
+  "canonical_inputs": [
+    "state/bootstrap.json",
+    "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+    "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md"
+  ],
+  "response_schema_ref": "eval/recovery/v9/response.schema.json",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v9.py",
+  "public_required_evidence_refs": [
+    "state/bootstrap.json",
+    "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+    "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+    "docs/LAW_INDEX_20261003.md",
+    "state/current.yaml",
+    "state/tasks.yaml",
+    "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
+    "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+    "eval/recovery/v9/challenge.json",
+    "eval/recovery/v9/packet.json",
+    "eval/recovery/v9/response.schema.json",
+    "tools/score_master_blueprint_recovery_v9.py"
+  ],
+  "snapshot_excluded": true,
+  "prior_attempts_excluded": true,
+  "authoring_seat_must_not_self_grade": true,
+  "proof_target_main_sha_before_harness": "58d3630678f1ac77c1af18fba3c7a66ae6606053",
+  "replaces_failed_challenge": "ARCH-MASTER-BLUEPRINT-RECOVERY-V8-20261007-C8",
+  "replacement_reason": "C8 fresh seat recovered canonical active_task.blocker correctly, but the hidden v8 snapshot contained a stale blocker value.",
+  "completion_rule": {
+    "deterministic_score": "PASS",
+    "independence_provenance": "PRESENT",
+    "durable_receipt_merged": true,
+    "all_required": true
+  }
+}
