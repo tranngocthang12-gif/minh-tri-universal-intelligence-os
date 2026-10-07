@@ -708,19 +708,19 @@
         "eval/recovery/v9/attempts/C9_receipt.json",
         "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md"
       ],
-      "branch": "owner/post-c9-foundation-freeze-reconcile-20261007",
-      "base_sha": "3514178286bcf17d2956f1fa36eeb3699425a96f",
+      "branch": "owner/foundation-freeze-final-review-packet-v2-20261007",
+      "base_sha": "923f177af4f065ba5c3dbcbc18d538b2f79cf712",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#313 merged Recovery Proof v9/C9 PASS evidence at 3514178286bcf17d2956f1fa36eeb3699425a96f; C9 deterministic score PASS, independence_provenance PRESENT, completion_eligible true.",
+      "result_ref": "PR#314 merged post-C9 reconciliation at 923f177af4f065ba5c3dbcbc18d538b2f79cf712; final independent Foundation review packet v2 is being frozen against that reconciled main.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.",
-      "blocker": "FINAL_FOUNDATION_FREEZE_REVIEW_AND_OWNER_ACCEPTANCE_REQUIRED",
+      "next_action": "Obtain independent final Foundation critic review bound to the v2 packet, packet blob SHA, and review target main SHA; preserve the receipt and disposition all material findings before Owner final Freeze acceptance.",
+      "blocker": "FINAL_INDEPENDENT_FOUNDATION_REVIEW_AND_OWNER_FREEZE_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_FINAL_FOUNDATION_AUDIT_PREP_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FINAL_FREEZE_REVIEW_PACKET_AUTHOR_NON_INDEPENDENT"
     }
   ]
 }
