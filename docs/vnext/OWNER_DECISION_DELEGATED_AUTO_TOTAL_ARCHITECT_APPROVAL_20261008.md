@@ -2,15 +2,15 @@
 
 **Status:** OWNER-DIRECTED CANDIDATE — EFFECTIVE UPON PROTECTED-MAIN MERGE  
 **Authority:** Owner  
-**Decision class:** Governance / delegated execution and merge-execution authority
+**Decision class:** Governance / delegated execution and tightly bounded merge-execution authority
 
 ## Owner directive
 
 Owner delegates routine execution and bounded **merge execution** to **TỔNG CÔNG TRÌNH SƯ AUTO** so Owner does not need to perform GitHub clerical steps manually.
 
-**Owner operating intent:** Owner gives goals, commands, and approvals in MINH TRÍ chat. The Total Architect executes the governed workflow. Owner is not expected to perform GitHub, CI, branch, PR, merge, packet, receipt, or state/handoff operations by hand.
+**Owner operating intent:** Owner chooses goals and makes the decisions reserved to Owner. The Total Architect executes the governed workflow. Owner is not required to open GitHub, run CI, create branches/PRs/packets/receipts, or click merge by hand.
 
-This delegation is bounded by current project law and the accepted Master Blueprint. It does not authorize bypass of any required design, review, acceptance, evidence, stop condition, or protected-merge rule.
+This delegation is bounded by current project law and the accepted Master Blueprint. It does not authorize bypass of any required design, review, acceptance, exact-head binding, evidence, stop condition, or protected-merge rule.
 
 The following command forms are aliases of the same operating contract:
 - `AUTO TỔNG CÔNG TRÌNH SƯ`
@@ -22,28 +22,72 @@ A plain `TỔNG CÔNG TRÌNH SƯ` selects the role; when Owner explicitly says A
 
 Within an already Owner-approved objective, law, architecture, and task envelope, the Total Architect may without asking Owner for each routine step:
 
-- create/update branches, files, PRs, tests, packets, receipts, and dispositions within authorized scope;
+- create/update branches, candidate files, PRs, tests, packets, receipts, and dispositions within authorized scope;
 - run CI, validation, supervision, and evidence-preservation steps;
-- prepare exact-head acceptance material for the recorded acceptance authority;
-- execute the protected merge of an **already-accepted Class O exact head** after all required checks pass;
-- fresh-read protected main after merge and continue automatically to the next authorized step.
+- prepare exact-head acceptance material for the already-valid recorded acceptance authority;
+- execute the protected merge of an **already-accepted, substance-qualified Class O exact head** only after every rule in this policy passes;
+- fresh-read protected main after a governed merge and continue automatically to the next authorized step.
 
-This policy does **not** give the Total Architect authoring pass authority to approve its own work.
+This policy does **not** give the Total Architect authoring pass authority to approve its own work, choose its own acceptance authority, or choose its own lighter change class.
 
-## Acceptance authority
+## Acceptance-authority assignment gate
 
-Acceptance authority is never implied by AUTO.
+Acceptance authority is never implied by AUTO and is not created by an author-written task field.
 
-- The task's recorded `acceptance_authority` controls.
 - For Class F, acceptance remains Owner.
 - For Class S and D, acceptance is Owner or an Owner-designated approver other than the Builder/authoring pass, as required by the Master Blueprint.
 - For Class O, acceptance is Owner or an Owner-designated approver other than the Builder/authoring pass.
-- The Total Architect authoring pass cannot be its own acceptance authority.
-- This delegated policy authorizes clerical merge execution only after the recorded acceptance authority has accepted the exact head.
+- A non-Owner `acceptance_authority` is valid for delegated execution only when **protected main already contains a verbatim Owner utterance that names that approver for that specific task**.
+- The authoring seat may not create, set, change, select, broaden, or infer `acceptance_authority`; initial assignment and any reassignment are outside this delegated lane.
+- The authoring seat may not satisfy acceptance by changing roles or by later inhabiting the designated approver pass. The Builder/authoring seat is disqualified from performing acceptance for its own head even if it declares a later role.
+- A task record may mirror an already-valid authority, but the mirror is not the source of that authority.
+- If the required Owner designation is absent, ambiguous, not yet on protected main, or conflicts with the task record, fail closed before acceptance or delegated merge.
+- `UNCLASSIFIED_LEGACY` task classification/acceptance assignment remains a governance repair outside this delegated merge lane.
+
+## Substance-bound change-class rule
+
+Delegated merge qualification is determined by the **substance of every changed part of the exact-head diff** under Master Blueprint section 11, not by an author-written `change_class` label.
+
+- A recorded class is descriptive evidence only; it cannot make an ineligible diff eligible.
+- If any changed hunk is substantively Class F, Class S, or Class D, the exact head is outside the delegated Class O merge lane.
+- If a head mixes Class O with any higher/different class, the whole head is outside the delegated Class O merge lane.
+- If label and substance disagree, fail closed; do not use the delegated lane.
+- If classification is materially ambiguous, fail closed and route through the normal governed acceptance/merge path.
+
+Irrespective of label, **any exact head touching any of the following is outside delegated AUTO merge**:
+
+- `state/current.yaml`;
+- `state/tasks.yaml`;
+- the active handoff file, including its `NEXT ACTION`;
+- any law or law-router;
+- the Master Blueprint;
+- bootstrap/cold-start authority or role-power/separation-of-duties text;
+- a canonical pointer, authority pointer, active-task pointer, active-workstream pointer, architecture pointer, law-precedence pointer, handoff pointer, or exact-next-action pointer;
+- task/knowledge schemas or core pipeline interfaces;
+- canonical-authority creation/removal;
+- any other content that is substantively Class F, S, or D under Master Blueprint section 11.
+
+The delegated lane therefore cannot be obtained by editing a task label, acceptance field, pointer, next action, blocker, phase, or current-state record.
+
+## One exact-head binding rule for every acceptance used by AUTO
+
+For **every acceptance that the Total Architect records, relies on, or uses to execute a merge**, including Class O and all Owner-reserved gates:
+
+1. the acceptance must come from the **acceptor's own verbatim utterance**;
+2. that utterance must already contain the full 40-character exact candidate head SHA;
+3. if any frozen review/evidence packet was produced for that head, the same utterance must also contain that packet's git blob SHA;
+4. the Total Architect may preserve or relay the utterance, but may not insert, replace, infer, repair, or append a missing identifier after the fact;
+5. if the candidate head changes, acceptance for the old head expires and cannot be carried forward;
+6. merge may proceed only when the quoted full SHA is still the exact PR head and required checks/evidence pass on that exact head;
+7. a missing or mismatched required identifier is a **STOP**, not a clerical omission.
+
+The Total Architect may display the exact head SHA and packet blob SHA to the acceptor, or prepare a ready-to-send acceptance sentence, but the acceptance becomes valid only when the acceptor's own utterance actually includes the required identifiers.
+
+The bootstrap sentence “If Owner skips a step, state one risk sentence and continue” is **explicitly superseded for** acceptance-authority assignment, exact-head binding, packet binding, independence, and reserved acceptance/merge gates. These are fail-closed requirements and may not be skipped.
 
 ## Delegated merge boundary
 
-Delegated AUTO merge is limited to **already-accepted Class O exact heads**.
+Delegated AUTO merge is limited to an **already-accepted exact head whose entire diff is substance-qualified Class O** and that touches none of the excluded paths/authorities above.
 
 It is not a general enablement of autonomous merge.
 
@@ -51,34 +95,24 @@ The following are excluded from delegated AUTO merge and remain under their norm
 
 - all Class F changes;
 - all Class S changes;
-- Master Blueprint edits;
-- Foundation Law / law-router edits;
-- role-power or separation-of-duties edits;
-- canonical-authority creation/removal;
-- state/task mutations that change project phase, `acceptance_authority`, exact next action, blocker semantics, or the Foundation gate;
-- changes that enable autonomous merge, self-modification, autonomous-learning runtime, automatic self-critique runtime, meta-learning runtime, or another deferred Foundation capability;
+- all Class D changes;
+- every exact head excluded by the substance/path rules above;
 - changes accepting unresolved material risk;
 - choices among materially different Foundation designs;
-- scope expansion beyond an approved objective when current law/design does not resolve the choice.
+- scope expansion beyond an approved objective when current law/design does not resolve the choice;
+- changes enabling self-modification, autonomous-learning runtime, automatic self-critique runtime, meta-learning runtime, or another deferred Foundation capability.
 
-This policy does not supersede those AUTO stop conditions.
+### Explicit supersession of prior unqualified autonomous-merge stop
 
-## No fabricated Owner acceptance
+This Owner-directed candidate **expressly supersedes only the unqualified wording** “enabling autonomous merge” in the 2026-10-06 AUTO stop list, and only to permit **mechanical merge execution of an already-accepted, exact-head-bound, substance-qualified Class O head under this policy**.
 
-The Total Architect may relay an Owner decision; it may not invent one, infer one from silence, paraphrase it into a broader decision, or bind it post hoc to a head the Owner did not name where exact-head Owner acceptance is required.
+Autonomous merge beyond that narrow clerical execution remains prohibited and Owner-reserved. Nothing in this supersession permits self-acceptance, author-selected acceptance authority, author-selected lighter classification, Foundation/Structural/Domain merge, state/task gate mutation, or bypass of protected-main controls.
 
-### Reserved-gate exact-binding rule
+## No fabricated Owner or approver acceptance
 
-For any Owner-reserved gate, including final Foundation or Master Blueprint acceptance/freeze:
+The Total Architect may relay a decision; it may not invent one, infer one from silence, broaden it by paraphrase, manufacture the accepting authority, or bind it post hoc to a head or packet the acceptor did not name.
 
-- durable acceptance may be relayed only from a **verbatim Owner utterance** that already contains the full candidate commit SHA;
-- when a frozen packet is part of the gate, the Owner utterance must also contain the packet git blob SHA;
-- the Total Architect may record that verbatim statement and perform the mechanical GitHub steps;
-- the Total Architect may not replace the SHA, add a missing SHA, or create an "equivalent" acceptance;
-- if the candidate head changes after Owner acceptance, that acceptance expires for the new head;
-- merge may proceed only when the quoted SHA is still the exact PR head and required checks pass on that same head.
-
-For non-reserved Class O work, the task's recorded non-Builder acceptance authority may use the governed exact-head acceptance mechanism defined by the task/law.
+The single exact-head rule above governs both reserved and non-reserved work. There is no weaker Class O binding rule.
 
 ## Preserved separation of duties
 
@@ -86,7 +120,7 @@ This delegation does not remove no-self-certification.
 
 - A material authoring pass cannot use its own output as independent review evidence.
 - Where the Master Blueprint, law, or task requires independent/different-seat review, the reviewer pass must be independent from the authoring pass as required by that authority.
-- A second artifact or record from the same authoring pass does not become independent evidence merely because it is separately stored.
+- A second artifact, role label, or later pass from the same authoring seat does not become independent acceptance evidence for that seat's own head.
 - Deterministic CI/evidence proves only its bounded claim.
 - CRITICAL/HIGH/MEDIUM findings may be repaired; explicit rejection of such a finding remains Owner-only.
 - LOW observations may be dispositioned under the governed task.
@@ -101,9 +135,11 @@ Unless Owner issues a later explicit superseding decision through the protected 
 - changing law precedence;
 - creating/removing canonical authorities;
 - changing role powers or separation-of-duties rules;
+- initial assignment or reassignment of a non-Owner acceptance authority for a task;
 - accepting unresolved material risk;
 - explicitly rejecting CRITICAL/HIGH/MEDIUM material findings;
-- enabling autonomous merge, self-modification, autonomous-learning runtime, automatic self-critique runtime, meta-learning runtime, or another deferred Foundation capability;
+- enabling autonomous merge beyond the narrow clerical Class O lane defined here;
+- enabling self-modification, autonomous-learning runtime, automatic self-critique runtime, meta-learning runtime, or another deferred Foundation capability;
 - choosing among materially different Foundation designs where the choice depends on Owner preference;
 - expanding beyond the approved objective when canonical law/design does not resolve the choice.
 
@@ -111,29 +147,33 @@ The Total Architect may prepare all evidence and candidate records for these gat
 
 ## Owner approval interface
 
-Owner approval is a **decision**, not a requirement to perform the mechanical action personally.
+Owner approval is a **decision**, not a requirement to perform the GitHub mechanical action personally.
 
-When a gate is Owner-reserved, Owner decides in MINH TRÍ chat. If that gate requires exact-head binding, the reserved-gate exact-binding rule above applies before the Total Architect may record or execute the acceptance.
+When Owner is the acceptance authority, the Total Architect presents the exact head and any required frozen-packet blob SHA. The acceptance is valid only if Owner's own utterance contains the identifiers required by the one exact-head binding rule.
 
-Once a valid Owner decision exists, the Total Architect carries out the corresponding governed mechanical steps automatically: record the verbatim durable acceptance/rejection as applicable, verify required evidence/checks, merge when authorized, fresh-read, reconcile permitted state, and continue.
+Once a valid acceptance exists, the Total Architect may carry out only the corresponding governed mechanical steps: preserve the verbatim acceptance, verify required evidence/checks, execute a merge when this policy actually authorizes that exact head, fresh-read protected main, and continue within the remaining authorized envelope.
+
+This paragraph does **not** grant authority to reconcile or mutate canonical state as part of merge execution.
 
 ## GitHub-clerical delegation
 
 Owner is not required to:
 - open GitHub;
-- paste acceptance comments;
+- paste GitHub comments;
 - click merge;
-- copy CI/head/blob identifiers manually;
-- manually prepare packet, receipt, or acceptance records.
+- run CI;
+- manually prepare packet, receipt, or acceptance-record files.
 
-The Total Architect performs those mechanical steps, but it may not manufacture the decision, acceptance authority, independence, or exact-head binding those steps are meant to preserve.
+For any gate requiring exact-head/packet binding, the Total Architect may show Owner the required identifiers and prepare the exact acceptance wording. It may **not** convert an Owner utterance that omitted those identifiers into a bound acceptance.
+
+The Total Architect performs permitted mechanical steps, but it may not manufacture the decision, acceptance authority, independence, class qualification, or exact-head binding those steps are meant to preserve.
 
 ## Scope boundary
 
-This decision delegates execution and tightly bounded Class O merge execution. It does not make the Total Architect a second Owner, an independent critic of its own work, or a second canonical authority.
+This decision delegates execution and tightly bounded Class O merge execution. It does not make the Total Architect a second Owner, an independent critic of its own work, a self-appointed approver, or a second canonical authority.
 
 The intended operating model is:
 
-`OWNER CHOOSES / APPROVES -> TOTAL ARCHITECT AUTO EXECUTES -> REQUIRED INDEPENDENT EVIDENCE -> RECORDED NON-BUILDER ACCEPTANCE -> GOVERNED MERGE EXECUTION -> FRESH-READ -> CONTINUE`
+`OWNER CHOOSES / DESIGNATES WHEN REQUIRED -> TOTAL ARCHITECT AUTO EXECUTES -> REQUIRED INDEPENDENT EVIDENCE -> VALID NON-BUILDER ACCEPTANCE ON EXACT HEAD -> QUALIFICATION CHECK -> GOVERNED MECHANICAL MERGE (CLASS O ONLY) -> FRESH-READ -> CONTINUE`
 
 Protected main remains the durable authority. Chat-only instructions remain non-canonical for future seats until durably recorded and merged.
