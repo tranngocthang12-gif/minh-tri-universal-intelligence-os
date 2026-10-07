@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V6_HARNESS_BUILDER_NON_INDEPENDENT`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V6_FRESH_SEAT_GATE_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -24,9 +24,12 @@
 - Security P0 #1080 PASS on reconciliation head.
 - Reconciliation merged to protected main.
 - Post-merge protected-main fresh-read completed.
+- Recovery Proof v6 harness passed Security P0 #1084 and merged via PR #304.
+- Protected main was fresh-read after PR #304.
 
 ## NOT DONE
-- Recovery Proof v6 harness is being added in the current bounded branch and is not canonical until protected merge.
+- Recovery Proof v6 harness is merged and canonical on protected main at `813c3e7d44c95b32420a28d643da75388dc36070`.
+- Protected main was fresh-read after the harness merge.
 - Independent fresh-seat v6 response, deterministic score, and durable receipt do not yet exist.
 - Foundation Freeze has not occurred.
 
