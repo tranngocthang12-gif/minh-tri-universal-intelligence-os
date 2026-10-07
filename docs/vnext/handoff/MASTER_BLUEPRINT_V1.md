@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_FOUNDATION_REVIEW_V2_REPAIR_NON_INDEPENDENT`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_POST_REPAIR_CANONICALIZATION_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -24,11 +24,11 @@
 
 ## NOT DONE
 - Final Foundation freeze review has not yet been completed against the current post-C9 protected main.
-- Final independent review v2 returned material findings FF-OPENAI-001 HIGH and FF-OPENAI-002 MEDIUM; repair + new review are required.
+- Final independent review v2 returned FF-OPENAI-001 HIGH and FF-OPENAI-002 MEDIUM; PR #315 repaired both and Owner accepted the v9-for-v6 supersession. A new v3 review is still required.
 - Owner has not issued the final Foundation Freeze acceptance on the current freeze target.
 
 ## NEXT ACTION
-Obtain Owner exact-head acceptance of the v9-for-v6 supersession and FF-OPENAI-001/002 repair package; after protected merge and fresh-read, freeze a new Foundation review packet on the repaired main and rerun independent final review.
+After this post-merge canonicalization is Owner-accepted, merged, and fresh-read, freeze Foundation review packet v3 against the repaired protected-main SHA and obtain a new independent final review.
 
 ## REQUIRED GATES
 - Freeze packet must bind the current post-C9 protected-main target.

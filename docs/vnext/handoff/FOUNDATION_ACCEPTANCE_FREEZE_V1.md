@@ -1,31 +1,30 @@
 # Foundation Acceptance & Freeze v2 handoff
 
-**STATUS: BLOCKED / HELD — MATERIAL FINDINGS REQUIRE REPAIR AND NEW REVIEW**
+**STATUS: BLOCKED / HELD — POST-REPAIR CANONICALIZATION + NEW v3 REVIEW REQUIRED**
 
 **TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1  
 **ACTIVE FRONTIER:** `ARCH-MASTER-BLUEPRINT-V1`  
 **ACTIVE HANDOFF:** `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md`
 
-## REVIEW RESULT
-- Review packet v2: `docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md`
-- Packet blob SHA: `3565d7cd76dfb69a2f4a5e8d5dc1d28119e16bde`
-- Review target main: `923f177af4f065ba5c3dbcbc18d538b2f79cf712`
-- Independent review verdict: `MATERIAL_DEFECTS_FOUND`
-- Material findings:
-  - `FF-OPENAI-001` HIGH — legacy v6 PASS condition lacks explicit Owner supersession by v9/C9.
-  - `FF-OPENAI-002` MEDIUM — Foundation task/handoff identity and stale post-C9 wording were inconsistent.
-
-## CURRENT REPAIR
-- Proposed Owner supersession: `docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md`
-- Review evidence: `docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json`
-- Disposition: `docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md`
+## COMPLETED REPAIR
+- Independent review v2 returned `FF-OPENAI-001` HIGH and `FF-OPENAI-002` MEDIUM.
+- PR #315 repaired both findings.
+- Owner accepted PR #315 at exact head `a94c9d26b0736f752c4fd26972e888cf40bd017c`.
+- Owner explicitly accepted v9/C9 as superseding the legacy literal v6 PASS freeze condition.
+- PR #315 merged as `850b98c4be6ec054049794559082c0d38c9b1b11`.
+- C6/C7/C8 remain immutable FAIL.
+- C9 remains the bounded replacement recovery PASS.
 - Foundation remains NOT FROZEN.
 
-## NEXT ACTION
-Remain BLOCKED; follow `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md` until the Owner supersession repair is accepted on the exact head, merged, fresh-read, and a new final Foundation review returns no unresolved material defect.
+## CURRENT GATE
+Canonicalize the effective Owner supersession decision and remove stale post-acceptance operational text. Then merge/fresh-read before freezing packet v3.
 
-## FREEZE CONDITIONS
-- Owner exact-head acceptance must make the v9-for-v6 supersession durable through protected merge + fresh-read.
-- A new post-repair review packet must bind the repaired main SHA.
-- A new independent review must clear or disposition every material finding.
-- Final Owner Foundation Freeze acceptance remains required after the clean review.
+## NEXT ACTION
+Remain BLOCKED until post-repair canonicalization is merged/fresh-read and a new packet v3 independent review clears all material defects.
+
+## FINAL FREEZE CONDITIONS
+- Effective Owner supersession is durable on protected main.
+- Packet v3 binds the repaired protected-main SHA.
+- New independent review returns no unresolved CRITICAL/HIGH/MEDIUM defect, or every such finding is durably dispositioned.
+- Final Owner Foundation Freeze acceptance is explicit and exact-package bound.
+- Protected merge + fresh-read occur before FROZEN status is asserted.
