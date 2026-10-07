@@ -1,0 +1,27 @@
+{
+  "schema": "minhtri-master-blueprint-recovery-challenge/v6",
+  "challenge_id": "ARCH-MASTER-BLUEPRINT-RECOVERY-V6-20261007-C6",
+  "challenge_nonce": "mtv6-2f4ecb822a09-20261007",
+  "purpose": "Independent fresh-seat proof that protected main recovers the Owner-ratified Master Blueprint, law order, canonical state/task/handoff route, acceptance boundary, and exact next action after post-merge reconciliation.",
+  "start_ref": "state/bootstrap.json",
+  "packet_ref": "eval/recovery/v6/packet.json",
+  "response_schema_ref": "eval/recovery/v6/response.schema.json",
+  "scorer_ref": "tools/score_master_blueprint_recovery_v6.py",
+  "snapshot_ref": "eval/recovery/v6/historical_snapshot.json",
+  "receipt_schema_ref": "eval/recovery/v2/evidence_receipt.schema.json",
+  "do_not_read": [
+    "eval/recovery/v6/historical_snapshot.json",
+    "eval/recovery/v6/attempts/",
+    "eval/recovery/v5/historical_snapshot.json",
+    "eval/recovery/v5/attempts/"
+  ],
+  "required_rules": {
+    "separate_zero_chat": true,
+    "use_prior_chat_history": false,
+    "read_snapshot": false,
+    "return_only_json": true,
+    "fresh_read_protected_main": true,
+    "exact_nested_contract": true,
+    "prose_keywords_not_scored": true
+  }
+}
