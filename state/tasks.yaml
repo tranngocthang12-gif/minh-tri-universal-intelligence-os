@@ -702,21 +702,25 @@
         "eval/recovery/v8/C8_SNAPSHOT_DEFECT_20261007.md",
         "eval/recovery/v9/",
         "tools/score_master_blueprint_recovery_v9.py",
-        "tests/test_master_blueprint_recovery_v9.py"
+        "tests/test_master_blueprint_recovery_v9.py",
+        "eval/recovery/v9/attempts/C9_response.json",
+        "eval/recovery/v9/attempts/C9_score.json",
+        "eval/recovery/v9/attempts/C9_receipt.json",
+        "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V2_20261007.md"
       ],
-      "branch": "owner/recovery-v9-snapshot-binding-repair-20261007",
-      "base_sha": "58d3630678f1ac77c1af18fba3c7a66ae6606053",
+      "branch": "owner/post-c9-foundation-freeze-reconcile-20261007",
+      "base_sha": "3514178286bcf17d2956f1fa36eeb3699425a96f",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#311 merged C8 immutable FAIL evidence at 58d3630678f1ac77c1af18fba3c7a66ae6606053; C8 fresh seat matched canonical active_task.blocker, while hidden v8 snapshot carried a stale blocker value. v9 binds hidden expected active-task fields directly to canonical task state before fresh-seat execution.",
+      "result_ref": "PR#313 merged Recovery Proof v9/C9 PASS evidence at 3514178286bcf17d2956f1fa36eeb3699425a96f; C9 deterministic score PASS, independence_provenance PRESENT, completion_eligible true.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "After the Recovery Proof v9 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v9/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.",
-      "blocker": "RECOVERY_PROOF_V9_HARNESS_MERGE_FRESH_READ_THEN_C9_REQUIRED",
+      "next_action": "Run final Foundation freeze review on the current protected-main C9 PASS evidence and current Foundation law/Blueprint/state; preserve independent critic receipts and Owner disposition before Foundation Freeze.",
+      "blocker": "FINAL_FOUNDATION_FREEZE_REVIEW_AND_OWNER_ACCEPTANCE_REQUIRED",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_RECOVERY_V9_SNAPSHOT_BINDING_REPAIR_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FINAL_FOUNDATION_AUDIT_PREP_NON_INDEPENDENT"
     }
   ]
 }
