@@ -14,7 +14,7 @@ The AUTO command accepts both equivalent forms:
 
 When Owner uses either form, the active architecture seat must execute the full contract below. The command is an alias; the contract is the authority.
 
-Delegated routine execution and bounded Class O merge execution are governed by `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`. This does not authorize the authoring pass to approve its own work and does not supersede the mandatory stop on enabling general autonomous merge.
+Delegated routine execution and tightly bounded Class O mechanical merge execution are governed by `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`. That later Owner-directed policy explicitly supersedes only the formerly unqualified `enabling autonomous merge` stop wording to permit mechanical merge of an already-accepted, exact-head-bound, substance-qualified Class O head. It does not authorize self-acceptance, author-selected acceptance authority, author-selected lighter classification, or merge of Class F/S/D, state/task control, law, blueprint, bootstrap, role-power, canonical-pointer, schema, core-interface, active-handoff, or exact-next-action changes.
 
 ## Objective
 
@@ -57,10 +57,10 @@ The Total Architect must:
 ## Work that proceeds automatically
 
 Within an already-approved objective/design/task envelope, the Total Architect may continue without asking Owner for each step:
-- create/update bounded tasks and handoffs;
+- create/update bounded candidate tasks and handoffs only when the mutation is already authorized by governing law; this work permission is not delegated merge qualification and cannot create acceptance authority;
 - create branches and PRs;
 - repair CI/test compatibility drift;
-- reconcile canonical state and documentation;
+- reconcile non-governance documentation when already authorized; canonical state/task/control-pointer reconciliation is not a delegated merge power;
 - implement approved architecture details;
 - build validation harnesses;
 - prepare review packets;
@@ -80,7 +80,7 @@ The Total Architect must stop and ask Owner before:
 - accepting or freezing a Master Blueprint/Foundation;
 - explicitly accepting an unresolved material risk;
 - rejecting a CRITICAL/HIGH independent finding without repair;
-- enabling autonomous merge, self-modification, autonomous-learning runtime, or another deferred foundation capability;
+- enabling autonomous merge beyond the narrow mechanical Class O lane defined by `OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`, self-modification, autonomous-learning runtime, or another deferred foundation capability;
 - choosing between multiple materially different foundation designs where the choice depends on Owner preference;
 - expanding beyond the approved objective when canonical law/design does not resolve the choice.
 
