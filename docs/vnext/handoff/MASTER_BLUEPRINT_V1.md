@@ -1,6 +1,6 @@
 # MASTER BLUEPRINT v1 — ACTIVE HANDOFF
 
-**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V6_FRESH_SEAT_GATE_NON_INDEPENDENT`  
+**ACTIVE ROLE:** `TOTAL_ARCHITECT_RECOVERY_V7_FRESH_SEAT_GATE_NON_INDEPENDENT`  
 **SEAT:** `CHATGPT_CURRENT_OPERATING_SEAT`  
 **ACCEPTANCE AUTHORITY:** Owner for Foundation
 
@@ -14,6 +14,8 @@
 - `POST_MERGE_ACCEPTANCE_ORDER_VIOLATION` remains preserved; no backdating.
 - PR #302 post-merge canonical reconciliation passed Security P0 #1080 and merged as `70665a8bf03d25b5a7900f2fd01fbbb50e5e0237`.
 - Protected main was fresh-read after that merge.
+- PR #306 Recovery Proof v7 contract repair was Owner-accepted pre-merge at exact head `18aec5ebcef08a6de443a8450f5adb393e0fe5eb`, passed Security P0 #1091, and merged to protected main as `289324902d5373b4da70e5c3d6f54142fac415b2`.
+- Protected main was fresh-read after PR #306.
 - Foundation Freeze remains blocked until repaired Recovery Proof v7 passes with durable evidence.
 
 ## DONE
@@ -26,6 +28,8 @@
 - Post-merge protected-main fresh-read completed.
 - Recovery Proof v6 harness passed Security P0 #1084 and merged via PR #304.
 - Protected main was fresh-read after PR #304.
+- Recovery Proof v7/C7 repair harness is merged and canonical on protected main.
+- Protected main was fresh-read after the v7 repair merge.
 
 ## NOT DONE
 - Recovery Proof v6 harness is merged and canonical on protected main at `813c3e7d44c95b32420a28d643da75388dc36070`.
@@ -35,9 +39,12 @@
 - Independent v7 fresh-seat response, deterministic PASS, and durable receipt do not yet exist.
 - Foundation Freeze has not occurred.
 
-## C6 REPAIR STATUS
-- C6 deterministic result is FAIL (`recovered_facts mismatch`).
-- Recovery Proof v7 contract repair is in progress on this branch; Foundation Freeze remains blocked.
+## V7 GATE STATUS
+- C6 deterministic result remains immutable FAIL (`recovered_facts mismatch`).
+- The v6 contract defect is preserved as historical evidence.
+- Recovery Proof v7 repair is now canonical on protected main and has been fresh-read.
+- Current operating seat is not eligible to impersonate the independent C7 fresh seat.
+- Foundation Freeze remains blocked.
 
 ## NEXT ACTION
 After the repaired Recovery Proof v7 harness is merged to protected main and fresh-read, run one independent separate zero-chat response from eval/recovery/v7/challenge.json; preserve deterministic score and durable independence receipt before any Foundation Freeze.
@@ -55,4 +62,4 @@ The Master Blueprint is the project-wide map. Operational next actions are coord
 ## TRUTH BOUNDARY
 - Independent critic review is not Owner acceptance.
 - CI proves bounded repository consistency only.
-- Recovery Proof v6 must prove continuity/recovery, not architectural perfection.
+- Recovery Proof v7 must prove the bounded continuity/recovery contract, not architectural perfection.
