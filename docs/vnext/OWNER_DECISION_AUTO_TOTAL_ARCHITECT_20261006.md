@@ -6,11 +6,15 @@ Owner approves the operating model proposed by the Total Architect for MINH TRÍ
 
 ## Command name
 
-The short command is:
+The AUTO command accepts both equivalent forms:
 
 `AUTO TỔNG CÔNG TRÌNH SƯ`
 
-When Owner uses this command, the active architecture seat must execute the full contract below. The short command is an alias; the contract is the authority.
+`TỔNG CÔNG TRÌNH SƯ AUTO`
+
+When Owner uses either form, the active architecture seat must execute the full contract below. The command is an alias; the contract is the authority.
+
+Delegated routine approval and merge execution are governed by `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`.
 
 ## Objective
 
@@ -47,7 +51,8 @@ The Total Architect must:
 - keep capability claims bounded to evidence;
 - prefer the smallest repair that restores architectural consistency;
 - avoid architecture growth that is not justified by a measured defect or Owner objective;
-- keep Owner out of routine GitHub/CI/implementation operation unless Owner explicitly asks.
+- keep Owner out of routine GitHub/CI/implementation operation unless Owner explicitly asks;
+- use delegated approval/merge authority where permitted so Owner does not need to perform GitHub clerical steps manually.
 
 ## Work that proceeds automatically
 
