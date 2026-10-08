@@ -1,0 +1,18 @@
+{
+  "schema": "minhtri-foundation-independent-review-receipt/v1",
+  "review_ref": "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_REVIEW_V3_20261008.json",
+  "critic": "Grok — independent read-only Foundation critic",
+  "provider": "xAI",
+  "packet_ref": "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V3_20261008.md",
+  "packet_git_blob_sha": "f523f082a414265e0c159ab31a1511af62ff6185",
+  "packet_container_main_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
+  "review_target_main_sha": "80b92f2173e2d2ed58d0c12d40ca16a5c9f26811",
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "findings_count": 5,
+  "material_findings_count": 5,
+  "binding_check": "PASS",
+  "relay_provenance": "OWNER_RELAYED_FROM_EXTERNAL_GROK_CHAT",
+  "platform_side_reviewer_identity_verification_claimed": false,
+  "foundation_frozen": false,
+  "next_gate": "REPAIR_MATERIAL_FINDINGS_THEN_FRESH_SUPERVISION_AND_REREVIEW"
+}
