@@ -7,7 +7,7 @@ def specimen():
            "certainty":"POSSIBLE","relation_type":"CONDITIONAL","scope":"S only",
            "source_refs":["source/v1"],"nonclaims":["O is inevitable"],
            "uncertainties":["rate unknown"],"layer":"INTERPRETATION"}
-    atom={"id":"k1","statement":frame["proposition"],"source_refs":["source/v1"]}
+    atom={"schema":"minhtri-knowledge-atom/v1","status":"PENDING_REVIEW","id":"k1","statement":frame["proposition"],"source_refs":["source/v1"]}
     examples=[
         {"kind":"EXPLANATION","text":"When C holds, O is possible, not certain.","annotations":copy.deepcopy(frame)},
         {"kind":"SHORT_FORM","text":"In S, C may accompany O.","annotations":copy.deepcopy(frame)},
@@ -62,6 +62,24 @@ class MeaningGuardTests(unittest.TestCase):
         out=self.check(p,a)
         self.assertTrue(out["annotation_contract_pass"])
         self.assertFalse(out["prose_meaning_verified"])
+    def test_malformed_kind_is_structured_failure(self):
+        for invalid in ([], {}, None):
+            p,a=specimen()
+            p["renderings"][0]["kind"]=invalid
+            out=self.check(p,a)
+            self.assertFalse(out["annotation_contract_pass"])
+            self.assertIn("MEANING_KIND_INVALID",out["reasons"])
+    def test_nonpending_atom_is_rejected(self):
+        for status in ("ACTIVE","SUPERSEDED","REFUTED","VERIFIED"):
+            p,a=specimen();a["status"]=status
+            self.assertIn("MEANING_ATOM_INVALID",self.check(p,a)["reasons"])
+    def test_rendering_count_bound(self):
+        p,a=specimen()
+        p["renderings"].extend([
+          {"kind":"TEACH_BACK","text":"Example.","annotations":copy.deepcopy(p["reference"])},
+          {"kind":"EXPLANATION","text":"Repeated.","annotations":copy.deepcopy(p["reference"])}
+        ])
+        self.assertIn("MEANING_RENDERINGS_REQUIRED",self.check(p,a)["reasons"])
     def test_missing_rendering(self):
         p,a=specimen();p["renderings"]=p["renderings"][:1]
         self.assertIn("MEANING_RENDERINGS_REQUIRED",self.check(p,a)["reasons"])
