@@ -20,12 +20,19 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("law_precedence", current["authority_scope"]["mirrors_boot_root_pointers"])
         self.assertNotIn("law_precedence", current["authority_scope"]["this_file_is_authoritative_for"])
 
-    def test_master_blueprint_is_active_frontier(self):
+    def test_frozen_blueprint_routes_to_active_buddhist_learning(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
-        self.assertEqual(current["active_task_id"], "ARCH-MASTER-BLUEPRINT-V1")
-        t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
-        self.assertEqual(t["status"], "DONE")
+        self.assertEqual(current["foundation_status"], "FROZEN")
+        blueprint=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
+        self.assertEqual(blueprint["status"], "DONE")
+        self.assertEqual(current["active_task_id"], "BUDDHIST-A173")
+        learning=next(x for x in tasks["tasks"] if x["task_id"]=="BUDDHIST-A173")
+        self.assertEqual(learning["status"], "IN_PROGRESS")
+        self.assertEqual(learning["change_class"], "D")
+        self.assertEqual(learning["acceptance_authority"], "OWNER")
+        self.assertEqual(learning["next_action"], current["next_checkpoint"])
+        self.assertIn("A173", learning["handoff_ref"])
 
     def test_owner_accepted_foundation_freeze(self):
         tasks=load("state/tasks.yaml")
