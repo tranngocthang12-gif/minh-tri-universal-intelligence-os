@@ -27,14 +27,12 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
         self.assertEqual(t["status"], "DONE")
 
-    def test_foundation_freeze_is_held(self):
+    def test_owner_accepted_foundation_freeze(self):
         tasks=load("state/tasks.yaml")
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
         self.assertEqual(t["status"], "DONE")
-        self.assertNotEqual(t["status"], "DONE")
-        self.assertTrue(t["blocker"])
-        self.assertIn("REVIEW", t["blocker"])
-        self.assertIn("OWNER", t["blocker"])
+        self.assertIsNone(t["blocker"])
+        self.assertEqual(t["acceptance_authority"], "OWNER")
         closure=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-CLOSURE-V1")
         self.assertEqual(closure["status"], "STALE")
         self.assertEqual(closure.get("superseded_by"), "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
