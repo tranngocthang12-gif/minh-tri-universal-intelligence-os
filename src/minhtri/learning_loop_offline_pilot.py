@@ -14,12 +14,48 @@ def record_digest(value):
         return None
     return digest(data)
 
+def normalized_id(value):
+    return value.strip().casefold() if isinstance(value,str) else ""
+
+def dependency_closure(records, root):
+    table = {r.get("id"):r for r in records if isinstance(r.get("id"),str)}
+    errors=[]
+    relevant={}
+    visiting=set()
+    visited=set()
+    def walk(key):
+        if key in visiting:
+            errors.append("dependency cycle")
+            return
+        if key in visited:
+            return
+        obj=table.get(key)
+        if not isinstance(obj,dict):
+            errors.append("missing knowledge dependency")
+            return
+        if obj.get("status") not in {"ACTIVE","PENDING_REVIEW"}:
+            errors.append("invalid or stale dependency status")
+        visiting.add(key)
+        refs=obj.get("depends_on",[])
+        if not isinstance(refs,list) or any(not isinstance(v,str) or not v for v in refs):
+            errors.append("invalid dependency shape")
+        else:
+            for child in refs:
+                if child != root and table.get(child,{}).get("status") != "ACTIVE":
+                    errors.append("nonactive dependency")
+                walk(child)
+        visiting.remove(key)
+        visited.add(key)
+        relevant[key]=obj
+    walk(root)
+    return relevant,sorted(set(errors))
+
 def target_digest(packet):
     if not isinstance(packet,dict):
         return None
     keys=("schema","goal_id","domain","producer_id","sources","understanding",
-          "transfer","policy","atom_sha256")
-    return record_digest({k:packet.get(k) for k in keys})
+          "transfer","policy","atom_sha256","critic","dependency_closure_sha256","domain_rules_sha256")
+    return record_digest({k:( {"id":packet.get("critic",{}).get("id")} if k=="critic" and isinstance(packet.get("critic"),dict) else packet.get(k)) for k in keys})
 
 def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
     errors=[]
@@ -37,8 +73,11 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
     policy=packet.get("policy",{})
     if not isinstance(policy,dict) or policy.get("protected_review") is not True or policy.get("auto_merge") is not False or policy.get("auto_verified") is not False or policy.get("background_runtime") is not False:
         errors.append("unsafe learning policy")
+    if authorized_goal_id == "BUDDHIST-A173" and packet.get("domain") not in ("buddhist","buddhist_thought"):
+        errors.append("Buddhist goal domain mismatch")
     source_ids=set()
     roles=set()
+    source_roles={}
     sources=packet.get("sources")
     if not isinstance(sources,list) or not sources:
         errors.append("missing source snapshots")
@@ -60,6 +99,7 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 errors.append("source provenance missing")
             else:
                 roles.add(source["role"])
+                if isinstance(sid,str): source_roles[sid]=source["role"]
     u=packet.get("understanding")
     if not isinstance(u,dict) or any(not isinstance(u.get(k),str) or not u[k].strip() for k in ("record_id","own_words","alternative","counterexample","limits")):
         errors.append("understanding explanation incomplete")
@@ -70,8 +110,11 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 or any(not isinstance(x,str) for x in u["source_ids"])
                 or not set(u["source_ids"]).issubset(source_ids)):
             errors.append("explanation source references invalid")
-    if packet.get("domain")=="buddhist" and not {"EARLY_DISCOURSE","MILINDAPANHA"}.issubset(roles):
-        errors.append("Buddhist source hierarchy incomplete")
+    if packet.get("domain") in ("buddhist","buddhist_thought") or authorized_goal_id=="BUDDHIST-A173":
+        cited=u.get("source_ids",[]) if isinstance(u,dict) else []
+        cited_roles={source_roles.get(sid) for sid in cited if isinstance(sid,str)}
+        if not {"EARLY_DISCOURSE","MILINDAPANHA"}.issubset(cited_roles):
+            errors.append("Buddhist source hierarchy incomplete")
     transfer=packet.get("transfer")
     if not isinstance(transfer,list) or len(transfer)<2:
         errors.append("two frozen transfer questions required")
@@ -83,37 +126,51 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 continue
             q=item.get("question")
             if (not isinstance(q,str) or not q.strip()
-                or item.get("question_hash")!=digest(q)
+                or (not isinstance(q,str) or item.get("question_hash")!=digest(q))
                 or item.get("frozen_before_answer") is not True
                 or not isinstance(item.get("answer"),str) or not item["answer"].strip()):
                 errors.append("transfer integrity failure")
-            if q in seen:
-                errors.append("duplicate transfer question")
-            seen.add(q)
+            if isinstance(q,str):
+                if q in seen: errors.append("duplicate transfer question")
+                seen.add(q)
             judge=item.get("judge",{})
             if (not isinstance(judge,dict) or not isinstance(judge.get("id"),str)
-                    or not judge["id"].strip() or judge.get("id")==packet.get("producer_id")
+                    or not judge["id"].strip() or normalized_id(judge.get("id"))==normalized_id(packet.get("producer_id"))
                     or judge.get("verdict")!="PASS"):
                 errors.append("separate declared judge required")
     critic=packet.get("critic",{})
     if (not isinstance(critic,dict) or not isinstance(critic.get("id"),str)
-            or not critic["id"].strip() or critic.get("id")==packet.get("producer_id")
+            or not critic["id"].strip() or normalized_id(critic.get("id"))==normalized_id(packet.get("producer_id"))
             or critic.get("verdict")!="NO_MATERIAL_DEFECT"
             or target_digest(packet) is None
             or critic.get("target_digest")!=target_digest(packet)):
         errors.append("exact-target separate critic required")
+    critic_id=normalized_id(critic.get("id")) if isinstance(critic,dict) else ""
+    if isinstance(transfer,list):
+        for item in transfer:
+            if isinstance(item,dict):
+                judge=item.get("judge",{})
+                if isinstance(judge,dict) and normalized_id(judge.get("id"))==critic_id:
+                    errors.append("critic and transfer judge must be distinct")
     matched=[r for r in records if r.get("id")==rid]
     if len(matched)!=1 or matched[0].get("status")!="PENDING_REVIEW" or matched[0].get("domain")!=packet.get("domain"):
         errors.append("one matching pending knowledge atom required")
     if len(matched)==1:
         atom=matched[0]
-        if record_digest(atom)!=packet.get("atom_sha256"):
+        atom_hash=record_digest(atom)
+        if atom_hash is None or not isinstance(packet.get("atom_sha256"),str) or len(packet["atom_sha256"])!=64 or record_digest(atom)!=packet.get("atom_sha256"):
             errors.append("knowledge atom integrity mismatch")
         refs=atom.get("source_refs")
         locators={src["locator"] for src in sources or [] if isinstance(src,dict) and isinstance(src.get("locator"),str)}
         if not isinstance(refs,list) or not refs or any(not isinstance(ref,str) or ref not in locators for ref in refs):
             errors.append("knowledge atom sources not bound to snapshots")
     if rid:
+        closure,closure_errors=dependency_closure(records,rid)
+        errors.extend(closure_errors)
+        if record_digest(closure) is None or packet.get("dependency_closure_sha256")!=record_digest(closure):
+            errors.append("dependency closure integrity mismatch")
+        if record_digest(domain_rule_refs) is None or packet.get("domain_rules_sha256")!=record_digest(domain_rule_refs):
+            errors.append("domain rules integrity mismatch")
         try:
             gate=validate_fast_lane_change(all_records=records,changed_record_ids=[rid],domain_rule_refs=domain_rule_refs,protected_review_required=True,autonomous_merge=False,self_verified=False)
             errors.extend(gate.reasons)
