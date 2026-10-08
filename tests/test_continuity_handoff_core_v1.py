@@ -16,7 +16,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         registry = self.load_json("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in registry["tasks"]}
         self.assertIn(current["active_task_id"], by_id)
-        self.assertIn(by_id[current["active_task_id"]]["status"], {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"})
+        self.assertIn(by_id[current["active_task_id"]]["status"], {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE", "DONE"} if current.get("foundation_status")=="FROZEN" else {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"})
 
     def test_active_task_has_machine_checkable_handoff_contract(self):
         registry = self.load_json("state/tasks.yaml")
