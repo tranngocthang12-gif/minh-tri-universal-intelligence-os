@@ -114,7 +114,7 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         current=load("state/current.yaml")
         self.assertEqual(current["foundation_status"], "NOT_FROZEN")
         self.assertIn("foundation_status", current["authority_scope"]["this_file_is_authoritative_for"])
-        self.assertEqual(current["phase"], "FOUNDATION_V3_MATERIAL_REPAIR_AND_SUPERVISOR_GATE")
+        self.assertEqual(current["phase"], "FOUNDATION_V4_INTEGRATED_EXACT_HEAD_REVIEW_GATE")
 
     def test_blueprint_reopen_rule_defers_to_law_router(self):
         bp=(ROOT/"docs/vnext/MASTER_BLUEPRINT_V1_20261006.md").read_text(encoding="utf-8")
