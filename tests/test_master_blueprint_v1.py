@@ -73,6 +73,18 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         for task in tasks["tasks"]:
             self.assertIn("change_class", task, task["task_id"])
 
+    def test_a173_branch_is_not_stale_legacy_execution_ref(self):
+        import json
+        current=json.loads((ROOT/"state/current.yaml").read_text(encoding="utf-8"))
+        tasks=json.loads((ROOT/"state/tasks.yaml").read_text(encoding="utf-8"))["tasks"]
+        active=next(t for t in tasks if t["task_id"]==current["active_task_id"])
+        self.assertEqual(active["task_id"],"BUDDHIST-A173")
+        self.assertIsNone(active.get("branch"),"No pre-freeze branch may be bound to frozen main")
+        self.assertEqual(active.get("branch_binding"),"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        handoff=(ROOT/active["handoff_ref"]).read_text(encoding="utf-8")
+        self.assertIn("PR #249 is NOT a current execution branch",handoff)
+        self.assertIn("PR #319 remains Draft/Class F HOLD",handoff)
+
     def test_exact_next_action_is_identical_across_current_task_handoff(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
