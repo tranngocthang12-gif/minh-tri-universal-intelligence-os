@@ -16,6 +16,10 @@
 ## NEXT ACTION
 Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.
 
+## RECOVERY BRANCH SAFETY
+- Task branch is deliberately null: obsolete PR #249 is NOT a current execution branch. Future independent Class D assignments require an explicit new authorized branch, base SHA and exact target; current routing candidate does not confer write authority.
+- PR #319 remains Draft/Class F HOLD. Foundation V1 stays FROZEN; do not interpret A173 continuation as a Foundation reopen.
+
 ## REQUIRED GATES
 - Read boot root, current Blueprint, consolidated Foundation Law, universal learning law, current state/tasks, A172 and A173 DRAFT from protected main.
 - Use early discourses as attestation and Milindapañha as explanatory support; keep TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / UNCERTAINTY separate.
