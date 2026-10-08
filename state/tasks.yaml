@@ -399,7 +399,7 @@
     {
       "task_id": "ARCH-FOUNDATION-CLOSURE-V1",
       "title": "Execute Owner-approved Foundation Closure v1 in strict dependency order",
-      "status": "BLOCKED",
+      "status": "STALE",
       "scope": [
         "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
         "state/tasks.yaml"
@@ -411,12 +411,13 @@
         "ARCH-VNEXT-CONTINUITY-HANDOFF-CORE-V1"
       ],
       "supersedes": [],
-      "result_ref": "docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md",
-      "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "HELD pending Master Blueprint v1 independent review, Owner acceptance, protected merge, and deterministic post-merge fresh-seat Recovery Proof v6.",
-      "blocker": "MASTER_BLUEPRINT_V1_ACCEPTANCE_MERGE_AND_RECOVERY_V6_REQUIRED",
+      "result_ref": "Historical workflow authorization only; superseded by current Foundation Acceptance/Freeze task. Legacy v6 condition replaced by docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md.",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "next_action": "Historical Foundation Closure workflow is superseded by ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1; the legacy literal v6 blocker is superseded by the effective v9/C9 Owner decision, and no old execution delegation may serve as acceptance authority.",
+      "blocker": "SUPERSEDED_BY_FOUNDATION_ACCEPTANCE_FREEZE_V1",
       "change_class": "F",
-      "acceptance_authority": "OWNER"
+      "acceptance_authority": "OWNER",
+      "superseded_by": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1"
     },
     {
       "task_id": "ARCH-SINGLE-BOOT-ROOT-V1",
@@ -615,20 +616,29 @@
         "docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json",
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md",
-        "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md"
+        "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GEMINI_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_V3_DISPOSITION_20261008.md",
+        "docs/vnext/supervision/FOUNDATION_V3_POST_RECOVERY_SUPERVISOR_REQUEST_20261008.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_REVIEW_V3_RECEIPT_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_V3_DISPOSITION_20261008.md",
+        "docs/vnext/FOUNDATION_FINAL_REREVIEW_PACKET_V4_20261008.md",
+        "docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md"
       ],
-      "branch": "owner/foundation-v3-review-gate-transition-20261008",
-      "base_sha": "380be1a546b01143c5e613d05b3b86cfa7ac0f39",
+      "branch": "owner/foundation-v4-integrated-review-candidate-20261008",
+      "base_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
       "requires": "none",
       "dependencies": [
         "ARCH-LAW-CONSOLIDATION-V1",
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": "Post-repair canonicalization is complete on protected main 380be1a546b01143c5e613d05b3b86cfa7ac0f39; Foundation remains blocked pending new v3 independent review and Owner final acceptance.",
+      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Remain BLOCKED until packet v3 is frozen against the repaired protected-main SHA, a new independent final review is durable, all material findings are resolved, and Owner final Foundation acceptance is explicit.",
-      "blocker": "FOUNDATION_V3_INDEPENDENT_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
+      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+      "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
@@ -714,21 +724,57 @@
         "docs/vnext/PROPOSED_OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json",
         "docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md",
-        "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md"
+        "docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GEMINI_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_V3_DISPOSITION_20261008.md",
+        "docs/vnext/supervision/FOUNDATION_V3_POST_RECOVERY_SUPERVISOR_REQUEST_20261008.md",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_REVIEW_V3_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_REVIEW_V3_RECEIPT_20261008.json",
+        "docs/vnext/red_team/FOUNDATION_FREEZE_GROK_V3_DISPOSITION_20261008.md",
+        "docs/vnext/FOUNDATION_FINAL_REREVIEW_PACKET_V4_20261008.md",
+        "docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md"
       ],
-      "branch": "owner/foundation-v3-review-gate-transition-20261008",
-      "base_sha": "380be1a546b01143c5e613d05b3b86cfa7ac0f39",
+      "branch": "owner/foundation-v4-integrated-review-candidate-20261008",
+      "base_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#316 canonicalized the effective v9-for-v6 Owner supersession and merged as 380be1a546b01143c5e613d05b3b86cfa7ac0f39; protected main was fresh-read and is ready for a new v3 independent Foundation review target.",
+      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Freeze Foundation review packet v3 against the current repaired protected-main SHA, obtain a new independent final review, and preserve the bound review receipt before any final Owner Foundation Freeze acceptance.",
-      "blocker": "FOUNDATION_V3_INDEPENDENT_REVIEW_AND_OWNER_FINAL_ACCEPTANCE_REQUIRED",
+      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+      "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_FOUNDATION_V3_REVIEW_PREP_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FOUNDATION_V3_MATERIAL_REPAIR_NON_INDEPENDENT"
+    },
+    {
+      "task_id": "ARCH-DELEGATED-AUTO-TOTAL-ARCHITECT-PR319",
+      "title": "Hold PR #319 delegated AUTO role-powers amendment until post-Foundation-Freeze controlled reopen",
+      "status": "BLOCKED",
+      "scope": [
+        "PR#319",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md",
+        "docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md"
+      ],
+      "branch": "owner/delegated-auto-total-architect-approval-20261008",
+      "base_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
+      "review_target_sha": "31e6a48188907a7eb3ef3a9d8bdfab8c19c27e13",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "next_action": "Remain DRAFT and unmerged until Foundation is accepted/frozen; after that submit Class F controlled-reopen proposal, supervision, independent critique and explicit Owner authorization; do not auto-merge.",
+      "blocker": "OWNER_DISPOSITION_A_HOLD_PR319_UNTIL_POST_FREEZE_CLASS_F_REOPEN",
+      "change_class": "F",
+      "acceptance_authority": "OWNER",
+      "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
+      "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
     }
   ]
 }

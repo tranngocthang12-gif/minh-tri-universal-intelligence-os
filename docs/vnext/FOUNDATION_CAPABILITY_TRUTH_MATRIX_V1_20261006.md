@@ -14,7 +14,9 @@
 | Autonomous merge | OFF / FORBIDDEN_IN_FOUNDATION | Owner-approved Foundation Closure non-goal |
 | PC / Local Brain as canonical authority | FALSE | PC remains non-canonical sidecar |
 | Global memory / universal understanding | NOT PROVEN | No bounded fixture may be generalized to this claim |
-| Current bootstrap + consolidated-law zero-chat recovery | PROVEN_FOR_C5_CURRENT_PATH_FIXTURE | C5 deterministic PASS + Owner-attested fresh-seat provenance + durable merged receipt at PR #297; proves the bounded current boot-path fixture only |
-| Cross-provider critic independence | NOT YET PROVEN_FOR_FREEZE | Claude + Grok v2 red-team receipts still required |
+| Pre-Blueprint bootstrap + consolidated-law zero-chat recovery (C5) | PROVEN_FOR_C5_PRE_BLUEPRINT_FIXTURE_ONLY | C5 deterministic PASS + Owner-attested fresh-seat provenance + PR #297 merged receipt. Its route predates the current Master Blueprint boot pointer; not proof of the full current route. |
+| Master Blueprint recovery proof lineage C6/C7/C8/C9 | C6_C7_C8_HISTORICAL_FAIL__C9_BOUNDED_PASS | Keep C6/C7/C8 immutable FAIL; Owner v9-for-v6 decision and proof-time commit `5c38243` support only bounded C9 PASS, never a retroactive regrade or universal recovery claim. |
+| Deferred PR #319 delegated AUTO approval amendment | CLASS_F_HOLD_UNMERGED | Owner choice A 2026-10-08 keeps PR #319 Draft and excluded from Foundation Law blob `2faac92eff36a314fa120a1edf52da697ea04912`; any future change requires post-Freeze controlled reopen and explicit Owner authority. |
+| Cross-provider critic review for Foundation freeze | MATERIAL_FINDINGS_PRESENT_V4 | V3 repair target `9bd3214` was supervised with separate `SUPERVISION_PASS` evidence. Claude V4 remained MATERIAL, and Grok post-Owner-A kept FF-CLAUDE-V4-001/007 MEDIUM. Draft PR #327 needs clean independent exact-head rereview and Owner final acceptance; CI PASS alone is insufficient. |
 
 Rule: future seats must not promote an OFF / NOT PROVEN / FIXTURE-ONLY claim merely because code, CI, or a related PASS exists.

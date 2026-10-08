@@ -1,0 +1,147 @@
+{
+  "critic": "Claude — fresh-seat independent read-only Foundation critic",
+  "provider": "Anthropic",
+  "round": "FOUNDATION_V5R4_EXACT_HEAD_REREVIEW",
+  "target_commit": "c3f7cbe97d68922c822177a3d7ed576a84800fba",
+  "packet_ref": "docs/vnext/FOUNDATION_V5R4_EXACT_HEAD_REVIEW_PACKET_20261008.md (PR #331, head aa10e0bb899db2081246355ff681f8c159663e52)",
+  "packet_content_sha": "c5bbd4a1aab8cb293f830bacaa976c35e57acf53",
+  "foundation_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
+  "checked_evidence_refs": [
+    "git clone origin; refs/pull/327/head = c3f7cbe97d68922c822177a3d7ed576a84800fba; refs/pull/331/head = aa10e0bb899db2081246355ff681f8c159663e52; refs/pull/319/head = 31e6a48188907a7eb3ef3a9d8bdfab8c19c27e13; refs/pull/320-326,328-330",
+    "protected main = d2640da0911940dad7ee2344e7bfa0d20c508bc2",
+    "git diff d2640da..c3f7cbe (32 files, 37 commits); git diff 9bd3214..c3f7cbe (20 files); git diff c3f7cbe..aa10e0b (3 files)",
+    "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md (blob 223c308 on main, 2faac92 at target, 8e88f7c at PR #319)",
+    "state/current.yaml, state/tasks.yaml, tests/test_master_blueprint_v1.py, tests/test_vnext_state_task.py, both handoffs at target",
+    "docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md",
+    "docs/vnext/supervision/FOUNDATION_V3_GROK_SUPERVISOR_{PACKET,RESULT,RECEIPT,DISPOSITION}_V1_20261008.*",
+    "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_V3_DISPOSITION_20261008.md, FOUNDATION_FREEZE_CLAUDE_REVIEW_V4_20261008.json, FOUNDATION_GROK_V4_POST_OWNER_A_VERIFICATION_20261008.json and both Owner-chat intake receipts",
+    "docs/vnext/FOUNDATION_V5R4_EXACT_PACKAGE_COMPOSITION_PLAN_20261008.md",
+    "https://github.com/tranngocthang12-gif/minh-tri-universal-intelligence-os/actions/runs/37770654628 and /actions/runs/37770735667; /pull/319, /pull/327, /pull/331 pages",
+    ".github/workflows/test.yml, .github/CODEOWNERS at target",
+    "eval/recovery/v6..v9 score receipts (C6/C7/C8 FAIL, C9 PASS); local run at worktree c3f7cbe: PYTHONPATH=src unittest discover; tools/validate_continuity_handoff.py"
+  ],
+  "checks": [
+    {
+      "id": "C01_PACKET_BLOB",
+      "result": "PASS",
+      "evidence": "git rev-parse pr331:docs/vnext/FOUNDATION_V5R4_EXACT_HEAD_REVIEW_PACKET_20261008.md = c5bbd4a1…; identical at 3a8aad1, 842c785 and aa10e0b; the packet is not in the target tree, so it is an evidence-only child."
+    },
+    {
+      "id": "C02_TARGET_AND_MAIN_IDENTITY",
+      "result": "PASS",
+      "evidence": "refs/pull/327/head = c3f7cbe9…; protected main at read time = d2640da…, which is an ancestor of the target; target is 37 commits ahead and changes 32 files (19 A, 13 M), matching the packet ledger."
+    },
+    {
+      "id": "C03_REPAIR_ANCESTOR",
+      "result": "PASS",
+      "evidence": "9bd321410af0b1dff225eb6a5b8d77870698902e is an ancestor of the target."
+    },
+    {
+      "id": "C04_LAW_ROUTER_BLOB_AND_NO_319_TEXT",
+      "result": "PASS",
+      "evidence": "Law blob at the target is 2faac92e…, equal to the packet, Owner A and the plan. Law on main is 223c308 and PR #319 is 8e88f7c, so 2faac92 is a candidate, not canonical. The main→target diff is a single added paragraph: declaring Foundation reopened is a Class F transition requiring Owner acceptance, and canonical state is current.yaml.foundation_status. grep for delegat/319/role-power/trusted in the Law file returns nothing. OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md is unchanged at the target."
+    },
+    {
+      "id": "C05_SUPERVISOR_AND_V4_ARTIFACT_IDENTITY",
+      "result": "PASS_IDENTITY / BINDING_LIMITED",
+      "evidence": "Supervisor packet 0489e403, result 6067d599, receipt c48e094b and V4 packet 504b4cd4 match the ledger at the target and are byte-identical (same blob) to the files in sibling PRs #323, #324 and #325. The Supervisor binds only 9bd3214; see FF-CLAUDE-V5R4-001."
+    },
+    {
+      "id": "C06_CI_EXACT_HEAD_37770654628",
+      "result": "PASS",
+      "evidence": "actions/runs/37770654628: workflow 'Security P0' (test.yml), pull_request synchronize on #327, title references c3f7cbe, Status Success, total 1m 18s. Jobs test-matrix 3.10/3.11/3.12, powershell-parse, security-audit, realtime-lease-proof and the aggregate `test` all completed. The `test` job runs `test` assertions that all four prerequisites are 'success' (so its 3s duration is consistent). There are 6 annotations, all notices about the ubuntu-latest migration; no failure, no cancellation. CI is not review evidence."
+    },
+    {
+      "id": "C07_LOCAL_REPRODUCTION",
+      "result": "PASS_WITH_ENV_NOTE",
+      "evidence": "Worktree at c3f7cbe, PYTHONPATH=src: unittest discover ran 472 tests, 471 OK, 1 error (ModuleNotFoundError: mcp, an optional dependency absent in my sandbox and installed by CI via '.[mcp]'). tests.test_vnext_state_task + tests.test_master_blueprint_v1: 22 OK. tools/validate_continuity_handoff.py: CONTINUITY_HANDOFF_CORE_V1_PASS."
+    },
+    {
+      "id": "C08_TASK_SCHEMA_STATE_HANDOFF_CONSISTENCY",
+      "result": "PASS",
+      "evidence": "tasks.yaml `requires` values: none ×28, pc ×1 (no invalid value); no duplicate task_id. current.yaml.next_checkpoint is byte-equal to next_action of ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 and ARCH-MASTER-BLUEPRINT-V1 and appears verbatim in both handoffs. foundation_status = NOT_FROZEN and is listed under this_file_is_authoritative_for. ARCH-FOUNDATION-CLOSURE-V1 is STALE with superseded_by ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1 and no literal v6 blocker."
+    },
+    {
+      "id": "C09_PR319_CLASS_F_HOLD",
+      "result": "PASS",
+      "evidence": "PR #319 page state DRAFT/OPEN, not merged; head 31e6a48 equals task review_target_sha; its merge-base is main d2640da; it is not an ancestor of the target or of #331. The target registers ARCH-DELEGATED-AUTO-TOTAL-ARCHITECT-PR319 as status BLOCKED, change_class F, acceptance_authority OWNER, freeze_baseline_law_blob 2faac92, blocker OWNER_DISPOSITION_A_HOLD…. Owner A verbatim directive is preserved and says it is not final acceptance and does not allow declaring FROZEN. Matrix and debt register carry matching rows. Limit: the registration exists only in the candidate tree, not on protected main."
+    },
+    {
+      "id": "C10_FF_CLAUDE_V4_001",
+      "result": "REPAIRED_IN_CANDIDATE — no longer a material residual at the target",
+      "evidence": "The three consequences in the original finding are each addressed in the target tree: registered Class F task, Owner disposition, Law blob without #319 text and recorded as freeze baseline. It becomes canonical only through the Owner-accepted protected merge; the Owner acceptance record must bind blob 2faac92."
+    },
+    {
+      "id": "C11_FF_CLAUDE_V4_007",
+      "result": "PARTIALLY_REPAIRED — residual carried as FF-CLAUDE-V5R4-001",
+      "evidence": "A unified head now exists: #331 = target + 3 evidence-only files, 40 commits, single route to main, with an allowlist and a forbidden list in the composition plan. Sibling drift is accounted for: #328/#329/#330 contain no commit newer than the target (newest 18:24 vs target 18:31) and are marked superseded; #320/#321 add only #319 review packets. Remaining drift: the Supervisor PASS is bound to 9bd3214, not to the target."
+    },
+    {
+      "id": "C12_LOW_002_TO_006_REAUDIT",
+      "result": "NO_ELEVATION_TO_MATERIAL",
+      "evidence": "002: ARCH-MASTER-BLUEPRINT-V1.result_ref now describes PR #327 (repaired); v9 schema-shape and ancestry-assertion hardening is unchanged debt (eval/, tools/, src/ untouched), still LOW. 003: task STALE and superseded; AUTO decision L75-76 lists 'accepting or freezing a Master Blueprint/Foundation' as a stop condition and L91 keeps Owner as final authority; Closure annotation labelled CANDIDATE; Owner reconciliation still pending. 004: both handoff REQUIRED GATES rewritten; residual staleness in FF-CLAUDE-V5R4-002. 005: the v2 sentence 'The supersession is not effective until exact-head Owner acceptance + protected merge + fresh-read.' is present verbatim in the target; the later outcome is added as 'prospectively (not backdated)'; the Blueprint header labels the post-ratification changes as UNACCEPTED CANDIDATES; cited SHAs a94c9d2, 850b98c, 380be1a, 5c38243 exist and are ancestors of main (850b98c has second parent a94c9d2). 006: C5 row relabelled pre-Blueprint (bootstrap at 83d8a8e has 0 master_blueprint refs, main has 2); matrix and debt carry C6/C7/C8 FAIL and C9 bounded PASS (score receipts: C6/C7/C8 status FAIL, C9 status PASS; eval/, tools/, state/bootstrap.json have 0 changed files)."
+    },
+    {
+      "id": "C13_FINAL_PACKAGE_STRUCTURE",
+      "result": "PASS",
+      "evidence": "PR #331 (Draft) wants to merge 40 commits into main = 37 target + 3. Delta c3f7cbe..aa10e0b adds only the packet, the composition plan and FOUNDATION_CLAUDE_V4_OWNER_CHAT_INTAKE_RECEIPT_20261008.json; none of the plan's forbidden paths (state/*, Law, Blueprint, handoffs, tests, eval) is touched. No V5R4 critic result files are present in the #331 tree."
+    },
+    {
+      "id": "C14_OWNER_AUTHORITY",
+      "result": "PASS_WITH_LIMITS",
+      "evidence": "No file in the changed or added set claims Owner final acceptance or sets FROZEN; every foundation_status is NOT_FROZEN; Option A, the Closure annotation, both receipts and the plan state they are not acceptance. Limits: all commits are authored under one GitHub account (tranngocthang12-gif), so Owner and Builder actions cannot be distinguished from git metadata; .github/CODEOWNERS says 'Ownership metadata only. Enforcement remains a separate ruleset decision'; I could not verify branch-protection rulesets (unauthenticated, API rate-limited)."
+    },
+    {
+      "id": "C15_CI_ON_CURRENT_PR331_HEAD",
+      "result": "NOT_VERIFIED",
+      "evidence": "Run 37770735667 is Success but is on 3a8aad1 (initial packet-only head). PR #331 head is now aa10e0b; the checks page lists the 7 contexts without conclusions I could read. The plan itself requires CI on the final head."
+    }
+  ],
+  "findings": [
+    {
+      "id": "FF-CLAUDE-V5R4-001",
+      "severity": "MEDIUM",
+      "title": "Gate 5 Supervisor PASS does not bind the target, and FF-CLAUDE-V3-003 (MEDIUM) is still recorded 'NOT YET CLOSED' in the target tree",
+      "evidence_ref": "docs/vnext/supervision/FOUNDATION_V3_GROK_SUPERVISOR_DISPOSITION_V1_20261008.md ('subject to the packet/result binding above remaining unchanged'; 'modifying the supervised target would invalidate this supervision pass'; 'Do not mutate PR #322 solely to close these LOW findings before rereview'); docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_V3_DISPOSITION_20261008.md section FF-CLAUDE-V3-003 ('ROOT CAUSE ACCEPTED; NOT YET CLOSED'; closure requires inspection of 'this repair candidate'); tests/test_master_blueprint_v1.py::test_supervisor_gap_is_explicitly_held_not_waived pins 'NOT YET CLOSED'; git diff 9bd3214..c3f7cbe = 20 files, including MASTER_BLUEPRINT (blob 2a00bda→e410a3c), CAPABILITY_TRUTH_MATRIX, DEBT_REGISTER, FOUNDATION_CLOSURE decision, OPENAI_V2_DISPOSITION, both handoffs, state/current.yaml, state/tasks.yaml and tests; packet and plan list only V4-001/V4-007 as historical material findings and call the Supervisor PASS 'historical … for 9bd3214 only'.",
+      "defect": "The only Supervisor inspection (SUPERVISION_PASS) covers 9bd3214. The target mutates that supervised tree in normative and state files, which the Supervisor disposition itself says invalidates the pass. The one MEDIUM whose closure condition is a Supervisor inspection of the repair candidate therefore has no inspection bound to the target, while the target's own disposition (test-pinned) still says it is not closed. Neither the packet nor the plan lists V3-003 as an open material item. I read the 9bd3214..c3f7cbe delta line by line and found no content defect in it; the gap is the lifecycle gate (SUPERVISE before review/acceptance), not the delta's content. An independent critic does not substitute for the Supervisor role under the Law.",
+      "repair": "Either (a) a fresh different-seat Supervisor inspection bound to the final exact head, or at minimum to the 9bd3214..c3f7cbe delta, followed by a new exact-head review if any tree change results; or (b) an explicit Owner disposition under the Law, quoted in the final acceptance record without altering the reviewed tree, stating that the 9bd3214 Supervisor PASS plus independent V5R4 review of the delta satisfies Gate 5 and that FF-CLAUDE-V3-003 is closed. In either case list V3-003 as a material finding in the packet or acceptance record."
+    },
+    {
+      "id": "FF-CLAUDE-V5R4-002",
+      "severity": "LOW",
+      "title": "Stale and inconsistent next_action / handoff claims",
+      "evidence_ref": "state/current.yaml.next_checkpoint, ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1.next_action and both handoffs say 'publish a new same-target review packet'; the packet already exists in PR #331. docs/vnext/handoff/MASTER_BLUEPRINT_V1.md says the Grok V4 result 'is not yet durably archived as exact original JSON' while the tree contains it (blob 3d48a23) and handoff FOUNDATION_ACCEPTANCE_FREEZE_V1.md says it is included with an intake receipt. The plan forbids changing state/handoffs in the evidence-only delta.",
+      "defect": "If #331 merges as composed, protected main carries a next_action describing a step already done and a handoff line contradicting its sibling.",
+      "repair": "Fix in the post-merge Class F canonicalization PR, or have the Owner acceptance record state that these two lines are known-stale and superseded by the final package."
+    },
+    {
+      "id": "FF-CLAUDE-V5R4-003",
+      "severity": "LOW",
+      "title": "New tests are brittle and one is not portable to Windows checkouts",
+      "evidence_ref": "tests/test_master_blueprint_v1.py: test_grok_v4_intake_is_historical_not_v5_acceptance hashes working-tree bytes as a git blob (hashlib.sha1('blob N\\0' + raw)); no .gitattributes exists at the target. Also pins phase == FOUNDATION_V4_INTEGRATED_EXACT_HEAD_REVIEW_GATE, 'MATERIAL_FINDINGS_PRESENT_V4', 'FF-CLAUDE-V4-001/007 MEDIUM' and 'NOT YET CLOSED'.",
+      "defect": "With core.autocrlf=true on Windows (the repo ships ops/windows and .bat files) the multi-line JSON would be checked out as CRLF and the blob-SHA assertion would fail locally while Linux CI passes. The string pins mean the matrix, debt register, state and V3 disposition cannot record a clean post-review truth without editing tests.",
+      "repair": "Add .gitattributes with `docs/vnext/red_team/*.json text eol=lf` (or hash via `git cat-file`), and replace phase/status string pins with gate-state assertions in the canonicalization PR."
+    },
+    {
+      "id": "FF-CLAUDE-V5R4-004",
+      "severity": "LOW",
+      "title": "Superseded sibling PRs remain open merge routes into main",
+      "evidence_ref": "PR page states: #320, #321, #322, #323, #324, #325 are OPEN (non-draft); #326, #328, #329, #330 and #319 are DRAFT. #322 (27 commits, repair head 9bd3214) could be merged independently of #331.",
+      "defect": "The single-package rule exists only in a Builder-authored plan. Merging #322 or #325 separately would put an earlier, different tree on main and create overlapping or conflicting Class F changes. I could not verify rulesets that would prevent this.",
+      "repair": "Close or label #320–#330 superseded, or state in the Owner acceptance record that exactly one PR (#331, or its final head) may be merged."
+    },
+    {
+      "id": "FF-CLAUDE-V5R4-005",
+      "severity": "LOW",
+      "title": "Amendment provenance labelling is incomplete",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md: unchanged L3 Status 'OWNER-RATIFIED FOUNDATION ARCHITECTURE'; the header lists the unaccepted candidates as 'supersession routing, reopen governance, state/continuity instructions and Law paragraph', but the changed §18 closing sentence ('Master Blueprint v1 is Owner-ratified prospectively under the acceptance record above', replacing 'remains a candidate') is not named. docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md now contains an Architect-authored interpretation of the Owner's historical delegation inside an Owner-decision file, although labelled CANDIDATE.",
+      "defect": "A reader taking the file at face value can miss that §18 is also a post-ratification candidate change. The Owner's historical text ('PASS thì đóng kiến trúc nền') remains unannotated at its source.",
+      "repair": "Owner final acceptance should enumerate every post-2026-10-07 amendment, including §18, and explicitly reconcile the older delegation; add the 'Amended/accepted by' header lines in canonicalization."
+    }
+  ],
+  "unresolved_material_findings": [
+    "FF-CLAUDE-V5R4-001"
+  ],
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "independence_statement": "Tôi đọc trực tiếp repo công khai bằng git clone và các trang GitHub tại thời điểm review, rồi đối chiếu SHA, blob, diff và CI; không dùng lịch sử chat MINH TRÍ làm authority. Tôi không tìm, không đọc và không biết kết quả Grok V5R4 nào (cây PR #331 chưa có file kết quả V5R4 của bất kỳ critic nào). Tôi có đọc các JSON V4 lịch sử của Claude và Grok vì chúng nằm trong cây target; tôi không thể xác thực nguồn gốc byte hay tác giả của các file đó, và không có ký ức về phiên tạo ra bản Claude V4. Tôi không xác minh được quy tắc bảo vệ nhánh (rulesets) và không xác minh được CI của head hiện tại aa10e0b của PR #331 (chỉ thấy run Success trên 3a8aad1). Tôi chạy lại test cục bộ tại c3f7cbe: 471/472 OK, 1 lỗi là thiếu gói mcp trong sandbox của tôi. Tôi chỉ đọc, không sửa GitHub, không merge, không có quyền Owner acceptance, không tự phê duyệt và không tuyên bố Foundation FROZEN; foundation_status vẫn là NOT_FROZEN."
+}

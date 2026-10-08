@@ -78,6 +78,8 @@ Foundation architecture may reopen only when:
 - real operation exposes a foundation defect not covered by current mechanisms; or
 - Owner explicitly changes a foundation objective.
 
+A declaration that the Foundation is reopened is a Class F governance/state transition and requires explicit Owner acceptance through protected merge. Canonical freeze state is recorded in `state/current.yaml.foundation_status`; operational task states do not silently imply FROZEN.
+
 ## Preserved source laws
 
 This document consolidates routing; it does not destructively replace the following durable sources:

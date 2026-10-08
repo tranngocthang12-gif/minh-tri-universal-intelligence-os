@@ -1,0 +1,51 @@
+{
+  "critic": "Grok — independent read-only Foundation critic",
+  "provider": "xAI",
+  "packet_ref": "docs/vnext/FOUNDATION_FREEZE_RED_TEAM_PACKET_V3_20261008.md",
+  "packet_content_sha": "git-blob-sha1:f523f082a414265e0c159ab31a1511af62ff6185",
+  "review_target_main_sha": "80b92f2173e2d2ed58d0c12d40ca16a5c9f26811",
+  "findings": [
+    {
+      "finding_id": "FF-GROK-V3-001",
+      "severity": "HIGH",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L448-L462; docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md#L246-L254; docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md#L5-L7; docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md#L9-L38; eval/recovery/v6/attempts/C6_score.json",
+      "defect": "The effective Owner decision validly supersedes only ratification remediation items 5-6 for the Foundation Freeze recovery gate, and it correctly leaves C6/C7/C8 as immutable FAIL. It does not revise Master Blueprint section 16. Recovery reads the Blueprint before state, task, and handoff. Section 16 steps 12-13 still instruct a literal Recovery Proof v6 PASS, recovering the exact next_action, and say Foundation Freeze resumes only then. C6 remains FAIL. The v9/C9-for-v6 supersession therefore does not clear the literal-v6 condition from the mandatory structural document.",
+      "consequence": "A fresh seat can still treat literal v6 PASS as a live freeze prerequisite, or treat the Owner supersession and the Blueprint as an unresolved authority conflict and fail closed. Final Foundation Freeze on this target would lock that conflict.",
+      "smallest_repair": "Amend Blueprint section 16 in place with an explicit supersession marker: freeze-gate recovery is the Owner v9/C9 decision bound to receipt main SHA 5c38243166339cd4e745c4e2b4b3ecfc2ae9bd0f, not literal v6 PASS. Preserve the historical step text and do not regrade C6/C7/C8."
+    },
+    {
+      "finding_id": "FF-GROK-V3-002",
+      "severity": "MEDIUM",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L3; docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L472-L485; docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md#L11-L15; docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md#L254",
+      "defect": "The same current-architecture file says it is owner-ratified and not frozen, while its terminal success sentence still says Master Blueprint v1 remains a candidate until an undemonstrated condition. The Owner ratification accepts it as current foundation architecture from that decision forward. Law requires the Blueprint to be revised when it conflicts with a higher Owner decision. That revision was not made.",
+      "consequence": "A cold start can treat the structural authority as still a candidate, contradicting the acceptance record and the status line. Freezing would canonize both statuses.",
+      "smallest_repair": "Replace the terminal candidate sentence so it states prospective Owner ratification, not-frozen Foundation status, and that C9 did not convert the Blueprint into a claim of universal architectural completeness."
+    },
+    {
+      "finding_id": "FF-GROK-V3-003",
+      "severity": "MEDIUM",
+      "evidence_ref": "state/tasks.yaml#L400-L419; docs/vnext/handoff/MASTER_BLUEPRINT_V1.md#L28-L31; state/current.yaml#L5-L11; state/current.yaml active_task_id and next_checkpoint; docs/vnext/red_team/FOUNDATION_FREEZE_OPENAI_REVIEW_V2_20261007.json FF-OPENAI-001 smallest_repair",
+      "defect": "ARCH-FOUNDATION-CLOSURE-V1 remains BLOCKED, class F, with next_action still holding blueprint review, Owner acceptance, protected merge, and Recovery Proof v6 as pending, and blocker MASTER_BLUEPRINT_V1_ACCEPTANCE_MERGE_AND_RECOVERY_V6_REQUIRED. Its handoff_ref is the live Master Blueprint handoff, whose next action is the v3 review. Acceptance and merge already happened. FF-OPENAI-001 asked for tasks that still hold the v6 condition to be updated; this task was not.",
+      "consequence": "The active route is internally aligned, but the task registry still contains a contradictory class-F foundation blocker. A seat auditing remaining foundation blocks can revive literal v6 or follow a handoff that disagrees with the task next_action.",
+      "smallest_repair": "Change this task's next_action and blocker so they no longer require literal v6 and no longer describe completed blueprint acceptance and merge as pending. Point any remaining hold at the v3 review plus Owner freeze acceptance, or mark the task held by ARCH-MASTER-BLUEPRINT-V1 without a conflicting handoff instruction."
+    },
+    {
+      "finding_id": "FF-GROK-V3-004",
+      "severity": "HIGH",
+      "evidence_ref": "docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md#L12; docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md#L18; state/tasks.yaml#L596-L631; docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md#L16-L22; state/current.yaml next_checkpoint",
+      "defect": "The freeze task still scopes the debt register and capability matrix. Those records still say cross-provider Claude and Grok final red-team is incomplete, blocks Foundation Freeze, and must be completed against the repaired v2 packet. At this SHA the v2 review already exists, returned MATERIAL_DEFECTS_FOUND, and was dispositioned. Current state, the freeze task, and both live handoffs say the active gate is a new v3 independent review bound to this repaired main, not another v2 Claude/Grok pass.",
+      "consequence": "Two freeze-satisfying conditions are both canonical and disagree. Completing only the v3 review does not satisfy the register row that still blocks freeze, and following the register sends the seat back to an already-failed v2 target.",
+      "smallest_repair": "Update that debt-register row and the capability-matrix cross-provider row to record v2 as historical MATERIAL_DEFECTS_FOUND, and set the live freeze requirement to one independent review bound to packet v3 and main SHA 80b92f2173e2d2ed58d0c12d40ca16a5c9f26811. Remove the stale YES block on the finished v2 action."
+    },
+    {
+      "finding_id": "FF-GROK-V3-005",
+      "severity": "MEDIUM",
+      "evidence_ref": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md#L76-L79; docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L407-L420; docs/vnext/MASTER_BLUEPRINT_V1_20261006.md#L254",
+      "defect": "Law allows Foundation reopen only for a measured evidence or test failure that exposes a foundation defect, real operation exposing a foundation defect not covered by current mechanisms, or an explicit Owner objective change. Blueprint section 14 instead allows reopen for an unresolved operational contradiction and for a security or continuity failure as separate triggers. Section 8.1 says a Blueprint conflict with higher law must be revised. It has not been.",
+      "consequence": "Freezing would lock two reopen standards. A later seat could reopen, or refuse to reopen, by choosing the list that is not the law's closed list.",
+      "smallest_repair": "Make Blueprint section 14 defer reopen triggers verbatim to the consolidated law list, or have Owner amend the law if the broader triggers are intended. Keep a single reopen list."
+    }
+  ],
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "independence_statement": "Fresh-read only. Packet blob f523f082a414265e0c159ab31a1511af62ff6185 was read as the frozen v3 packet text, and every canonical input it names was read from protected main 80b92f2173e2d2ed58d0c12d40ca16a5c9f26811. Prior chat was not used as authority. C6, C7, and C8 were not regraded and remain FAIL. C9 was treated only as bounded recovery continuity at receipt main SHA 5c38243166339cd4e745c4e2b4b3ecfc2ae9bd0f; its sorted canonical response SHA-256 matches the receipt, and that match is not a fresh recovery of this review target. The Owner v9-for-v6 decision and the FF-OPENAI-002 active-route repair were checked and are not themselves void; the findings are unrevised conflicts those repairs left in place. This critic has no merge authority and does not declare Foundation frozen."
+}

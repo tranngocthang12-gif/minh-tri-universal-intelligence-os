@@ -13,13 +13,15 @@ class VNextStateTaskTests(unittest.TestCase):
         current = self.load_json_yaml("state/current.yaml")
         self.assertEqual(current["schema"], "minhtri-current-state/v1")
         self.assertTrue(current["architecture_generation"].startswith("VNEXT_"))
-        self.assertLessEqual(len(current), 20)
+        self.assertLessEqual(len(current), 21)
         scope = current["authority_scope"]
         self.assertTrue(scope["legacy_project_state_remains_authoritative_for_unmigrated_keys"])
         self.assertTrue(scope["duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only"])
         migrated = set(scope["this_file_is_authoritative_for"])
         self.assertIn("active_workstream", migrated)
         self.assertIn("owner_learning_priority_order", migrated)
+        self.assertIn("foundation_status", migrated)
+        self.assertEqual(current["foundation_status"], "NOT_FROZEN")
         self.assertNotIn("next_checkpoint", migrated)
         self.assertIn("next_checkpoint", set(scope["mirrors_active_handoff_fields"]))
 

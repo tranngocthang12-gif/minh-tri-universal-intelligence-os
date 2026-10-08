@@ -24,6 +24,8 @@ The historical merge is preserved. History is not rewritten.
 6. Foundation Freeze remains blocked until Recovery Proof v6 passes and its evidence is durable.
 7. Future Foundation merge must require durable Owner acceptance bound to the exact acceptance package before merge.
 
+**Forward supersession pointer:** Required remediation items 5-6 are superseded for the Foundation Freeze recovery gate by `docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md`. C6/C7/C8 remain historical FAIL; v9/C9 is the bounded replacement proof.
+
 ## Evidence boundary
 
 Claude v5 and Grok v5 both returned `NO_MATERIAL_DEFECT_FOUND` on Packet v5, with LOW observations only and zero unresolved material defects in their dispositions. Independent critic review does not substitute for Owner acceptance.

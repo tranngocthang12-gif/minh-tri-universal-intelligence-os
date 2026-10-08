@@ -4,6 +4,8 @@
 **Canonical target:** project-wide organization + law + lifecycle architecture  
 **Durable authority:** GitHub protected main  
 **Acceptance record:** `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md`  
+**Recovery-gate supersession:** `docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md` — v9/C9 replaces the legacy literal v6 PASS condition for Foundation Freeze; C6/C7/C8 remain historical FAIL.  
+**Post-ratification Class F repair provenance:** The 2026-10-07 prospective ratification covers its then-approved baseline only. Later V3/V4 Foundation repair changes (supersession routing, reopen governance, state/continuity instructions and Law paragraph) are **UNACCEPTED CANDIDATES** pending fresh same-head review and separate Owner acceptance. Owner Option A on 2026-10-08 defers PR #319's proposed role-power amendment; it does not accept these Foundation amendments.
 **Historical process defect:** `POST_MERGE_ACCEPTANCE_ORDER_VIOLATION` preserved; ratification is prospective, not backdated
 
 ## 1. Final system
@@ -411,13 +413,9 @@ Once Foundation is ACCEPTED/FROZEN:
 - foundation architecture does not reopen for ordinary growth;
 - no new foundational mechanism is added merely because it seems useful.
 
-Reopen only when:
-1. measured evidence/test failure shows a foundation defect;
-2. unresolved operational contradiction appears;
-3. security/continuity failure invalidates an invariant;
-4. Owner explicitly changes a foundation objective.
+Normative reopen authority is the consolidated Foundation Law router. The Blueprint does not create a second reopen rule. The following are structural examples of the Law conditions: measured evidence/test failure, a real operational contradiction or security/continuity failure that exposes a foundation defect, or an explicit Owner change to a foundation objective.
 
-Every reopen creates a new versioned foundation change.
+Declaring Foundation reopened is a Class F state transition requiring Owner acceptance and protected merge. Every reopen creates a new versioned foundation change.
 
 ## 15. Mapping current project to this blueprint
 
@@ -458,8 +456,8 @@ Therefore the prior vNext architecture is a strong subsystem/foundation architec
 9. Resolve material findings.
 10. Owner accepts v1.
 11. Merge canonical Master Blueprint + final routing.
-12. Run deterministic fresh-seat Recovery Proof v6, reusing the v5 structured-facts scorer pattern, with required facts for `master_blueprint`, `law_precedence`, `current_state`, `active_task`, and exact `next_action`; preserve challenge/response/score/receipt and prove the new seat recovers Blueprint -> Law -> State -> Task -> exact next action.
-13. Only then resume Foundation Freeze.
+12. Historical plan: run deterministic fresh-seat Recovery Proof v6. The literal v6 PASS condition was later superseded for the Foundation Freeze recovery gate by `docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md`. C6/C7/C8 remain immutable FAIL; v9/C9 is the bounded replacement proof and is not a retroactive PASS.
+13. Foundation Freeze may resume only under that effective supersession, after the required independent review, supervision/evidence, and Owner acceptance gates are satisfied.
 
 ## 17. Total Architect operating contract
 
@@ -482,4 +480,4 @@ MINH TRÍ has a valid Master Blueprint only when a fresh seat can identify, with
 - how conflicts fail closed;
 - how the system continues after every chat/model/tool is replaced.
 
-Until that is independently demonstrated, Master Blueprint v1 remains a candidate.
+Master Blueprint v1 is Owner-ratified prospectively under the acceptance record above. Independent recovery evidence remains bounded evidence for continuity and does not backdate the historical acceptance-order defect.

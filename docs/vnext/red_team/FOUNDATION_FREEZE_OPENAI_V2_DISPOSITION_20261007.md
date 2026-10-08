@@ -17,6 +17,8 @@ Repair candidate:
 
 The supersession is not effective until exact-head Owner acceptance + protected merge + fresh-read.
 
+**Later outcome, added prospectively (not backdated):** Owner accepted the v9-for-v6 supersession on PR #315 exact head `a94c9d26b0736f752c4fd26972e888cf40bd017c`; it merged as `850b98c4be6ec054049794559082c0d38c9b1b11` and was fresh-read. The effective record is `docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md`.
+
 ## FF-OPENAI-002 — MEDIUM
 
 **Disposition:** REPAIR REQUIRED.
