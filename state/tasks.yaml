@@ -49,7 +49,7 @@
       "change_class": "D",
       "resume_gate": "CLASS_D_ROUTED_FOR_STUDY_ONLY_CHECKPOINT_PROMOTION_REQUIRES_PROTECTED_REVIEW",
       "acceptance_authority": "OWNER",
-      "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
+      "holder": "BUDDHIST_THOUGHT_EXECUTION_SEAT_REPLACEABLE",
       "role": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
       "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
       "next_action": "Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.",
@@ -782,6 +782,30 @@
       "acceptance_authority": "OWNER",
       "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
       "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
+    },
+    {
+      "task_id": "ARCH-BUDDHIST-A173-ROUTING-V1",
+      "title": "Class S correction of active Buddhist learning route after Foundation Freeze",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "tests/test_master_blueprint_v1.py",
+        "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md"
+      ],
+      "branch": "owner/buddhist-a173-learning-routing-20261009",
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": null,
+      "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
+      "change_class": "S",
+      "acceptance_authority": "OWNER",
+      "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
+      "next_action": "Independent review of exact-head canonical state/task routing changes, then Owner Class S acceptance and protected merge; no Foundation reopen or A173 checkpoint promotion.",
+      "blocker": "INDEPENDENT_CLASS_S_REREVIEW_AND_OWNER_ACCEPTANCE_PENDING",
+      "resume_gate": "NO_SELF_ACCEPTANCE_EXACT_HEAD_REVIEW_REQUIRED"
     }
   ]
 }
