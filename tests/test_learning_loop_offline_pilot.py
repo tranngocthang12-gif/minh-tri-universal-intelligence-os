@@ -1,6 +1,6 @@
 import copy
 import unittest
-from minhtri.learning_loop_offline_pilot import digest, inspect, target_digest, record_digest
+from minhtri.learning_loop_offline_pilot import digest, inspect, target_digest, record_digest, dependency_closure
 
 
 def fixture():
@@ -19,6 +19,8 @@ def fixture():
         "status":"PENDING_REVIEW","statement":"Hypothesis, not certified truth.","source_refs":["synthetic/early","synthetic/milinda"],"evidence_refs":[],
         "contradicts":[],"supersedes":[],"depends_on":[],"provenance":{"source_kind":"synthetic-test"}}
     packet["atom_sha256"]=record_digest(atom)
+    packet["dependency_closure_sha256"]=record_digest(dependency_closure([atom],"k1")[0])
+    packet["domain_rules_sha256"]=record_digest({"buddhist":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
     packet["critic"]["target_digest"]=target_digest(packet)
     return packet,[atom]
 
@@ -87,6 +89,37 @@ class OfflineLearningPilotTests(unittest.TestCase):
         p,r=fixture();r[0]["status"]="ACTIVE"
         self.assertIn("one matching pending knowledge atom required",self.check(p,r)["reasons"])
 
+    def test_unhashable_question_fails_structured(self):
+        for q in ([],{},None):
+            p,r=fixture();p["transfer"][0]["question"]=q
+            out=self.check(p,r)
+            self.assertFalse(out["ready_for_review"])
+            self.assertIn("transfer integrity failure",out["reasons"])
+    def test_nonserializable_atom_without_digest_fails(self):
+        p,r=fixture();r[0]["provenance"]["bad"]={"not json"}
+        p.pop("atom_sha256",None)
+        self.assertIn("knowledge atom integrity mismatch",self.check(p,r)["reasons"])
+    def test_buddhist_goal_cannot_be_economics(self):
+        p,r=fixture();p["domain"]="economics";r[0]["domain"]="economics"
+        p["atom_sha256"]=record_digest(r[0])
+        p["dependency_closure_sha256"]=record_digest(dependency_closure(r,"k1")[0])
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("Buddhist goal domain mismatch",self.check(p,r)["reasons"])
+    def test_unused_early_source_cannot_satisfy_hierarchy(self):
+        p,r=fixture();p["understanding"]["source_ids"]=["s2"]
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("Buddhist source hierarchy incomplete",self.check(p,r)["reasons"])
+    def test_dependency_cycle_cannot_be_accepted(self):
+        p,r=fixture();r[0]["depends_on"]=["k2"]
+        r.append(dict(r[0],id="k2",status="ACTIVE",depends_on=["k1"]))
+        p["atom_sha256"]=record_digest(r[0])
+        p["dependency_closure_sha256"]=record_digest(dependency_closure(r,"k1")[0])
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("dependency cycle",self.check(p,r)["reasons"])
+    def test_critic_normalization(self):
+        p,r=fixture();p["critic"]["id"]=" AUTHOR "
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("exact-target separate critic required",self.check(p,r)["reasons"])
     def test_stale_dependency_is_rejected(self):
         p,r=fixture();r[0]["depends_on"]=["old"]
         r.append(dict(r[0],id="old",status="SUPERSEDED",depends_on=[]))
