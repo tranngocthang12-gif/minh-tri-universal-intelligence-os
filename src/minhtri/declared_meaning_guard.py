@@ -51,7 +51,7 @@ def inspect_meaning_annotations(pack, *, atom):
     A separate independently inspected prose specimen remains mandatory.
     """
     errors = []
-    if not isinstance(atom, dict):
+    if not isinstance(atom, dict) or atom.get("status") != "PENDING_REVIEW" or atom.get("schema") != "minhtri-knowledge-atom/v1":
         errors.append("MEANING_ATOM_INVALID")
     if not isinstance(pack, dict) or set(pack) != {"schema", "reference", "renderings"}:
         errors.append("MEANING_PACK_INVALID")
@@ -71,7 +71,7 @@ def inspect_meaning_annotations(pack, *, atom):
         if not _string_list(atom_sources, nonempty=True) or set(ref["source_refs"]) != set(atom_sources):
             errors.append("MEANING_ATOM_SOURCE_MISMATCH")
     samples = pack["renderings"]
-    if not isinstance(samples, list) or not 2 <= len(samples) <= 4:
+    if not isinstance(samples, list) or not 2 <= len(samples) <= len(KINDS):
         errors.append("MEANING_RENDERINGS_REQUIRED")
         return _out(errors)
     used = set()
@@ -80,7 +80,7 @@ def inspect_meaning_annotations(pack, *, atom):
             errors.append("MEANING_RENDERING_INVALID")
             continue
         kind = sample["kind"]
-        if kind not in KINDS or kind in used:
+        if not isinstance(kind, str) or kind not in KINDS or kind in used:
             errors.append("MEANING_KIND_INVALID")
         elif isinstance(kind, str):
             used.add(kind)
