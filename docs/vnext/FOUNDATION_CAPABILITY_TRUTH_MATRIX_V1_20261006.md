@@ -15,6 +15,6 @@
 | PC / Local Brain as canonical authority | FALSE | PC remains non-canonical sidecar |
 | Global memory / universal understanding | NOT PROVEN | No bounded fixture may be generalized to this claim |
 | Current bootstrap + consolidated-law zero-chat recovery | PROVEN_FOR_C5_CURRENT_PATH_FIXTURE | C5 deterministic PASS + Owner-attested fresh-seat provenance + durable merged receipt at PR #297; proves the bounded current boot-path fixture only |
-| Cross-provider critic independence | NOT YET PROVEN_FOR_FREEZE | Claude + Grok v2 red-team receipts still required |
+| Cross-provider critic review for Foundation freeze | MATERIAL_FINDINGS_PRESENT_V3 | v2 is historical failed-target evidence. v3 packet/target has Gemini `NO_MATERIAL_DEFECT_FOUND`, Claude `MATERIAL_DEFECTS_FOUND`, and Grok `MATERIAL_DEFECTS_FOUND`. Freeze remains blocked pending repair, fresh different-seat Supervisor inspection, and new exact-head rereview. |
 
 Rule: future seats must not promote an OFF / NOT PROVEN / FIXTURE-ONLY claim merely because code, CI, or a related PASS exists.
