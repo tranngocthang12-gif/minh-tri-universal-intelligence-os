@@ -596,7 +596,7 @@
     {
       "task_id": "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1",
       "title": "Accept and freeze the foundation after final independent red-team",
-      "status": "BLOCKED",
+      "status": "DONE",
       "scope": [
         "docs/vnext/FOUNDATION_BASELINE_V1.json",
         "docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md",
@@ -635,17 +635,17 @@
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
+      "result_ref": "Owner accepted PR331 exact b1f7d8e3d84d43239ff6edf0f53df302f62007ba; protected merge 99066692f8fc1eb2db10ba0d0a712940d6e9c0fe; Owner decision comment 6061255299; material findings closed, LOW debt retained.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
-      "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
+      "next_action": "Foundation V1 frozen; resume Owner-directed learning through governed Knowledge Fast Lane. PR #319 remains Draft/Class F HOLD until separate Owner-authorized reopen.",
+      "blocker": null,
       "change_class": "F",
       "acceptance_authority": "OWNER"
     },
     {
       "task_id": "ARCH-MASTER-BLUEPRINT-V1",
       "title": "Design and validate the project-wide Master Architecture / Master Blueprint",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "scope": [
         "docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md",
         "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
@@ -740,14 +740,14 @@
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
+      "result_ref": "Owner accepted PR331 exact b1f7d8e3d84d43239ff6edf0f53df302f62007ba; protected merge 99066692f8fc1eb2db10ba0d0a712940d6e9c0fe; Owner decision comment 6061255299; material findings closed, LOW debt retained.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
-      "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
+      "next_action": "Foundation V1 frozen; resume Owner-directed learning through governed Knowledge Fast Lane. PR #319 remains Draft/Class F HOLD until separate Owner-authorized reopen.",
+      "blocker": null,
       "change_class": "F",
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
-      "role": "TOTAL_ARCHITECT_FOUNDATION_V3_MATERIAL_REPAIR_NON_INDEPENDENT"
+      "role": "TOTAL_ARCHITECT_FOUNDATION_V1_MAINTENANCE_NON_INDEPENDENT"
     },
     {
       "task_id": "ARCH-DELEGATED-AUTO-TOTAL-ARCHITECT-PR319",

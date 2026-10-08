@@ -21,7 +21,7 @@ class VNextStateTaskTests(unittest.TestCase):
         self.assertIn("active_workstream", migrated)
         self.assertIn("owner_learning_priority_order", migrated)
         self.assertIn("foundation_status", migrated)
-        self.assertEqual(current["foundation_status"], "NOT_FROZEN")
+        self.assertEqual(current["foundation_status"], "FROZEN")
         self.assertNotIn("next_checkpoint", migrated)
         self.assertIn("next_checkpoint", set(scope["mirrors_active_handoff_fields"]))
 

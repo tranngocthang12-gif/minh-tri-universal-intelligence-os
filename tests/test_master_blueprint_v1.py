@@ -25,16 +25,14 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         tasks=load("state/tasks.yaml")
         self.assertEqual(current["active_task_id"], "ARCH-MASTER-BLUEPRINT-V1")
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
-        self.assertEqual(t["status"], "IN_PROGRESS")
+        self.assertEqual(t["status"], "DONE")
 
-    def test_foundation_freeze_is_held(self):
+    def test_owner_accepted_foundation_freeze(self):
         tasks=load("state/tasks.yaml")
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
-        self.assertEqual(t["status"], "BLOCKED")
-        self.assertNotEqual(t["status"], "DONE")
-        self.assertTrue(t["blocker"])
-        self.assertIn("REVIEW", t["blocker"])
-        self.assertIn("OWNER", t["blocker"])
+        self.assertEqual(t["status"], "DONE")
+        self.assertIsNone(t["blocker"])
+        self.assertEqual(t["acceptance_authority"], "OWNER")
         closure=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-CLOSURE-V1")
         self.assertEqual(closure["status"], "STALE")
         self.assertEqual(closure.get("superseded_by"), "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
@@ -113,9 +111,9 @@ class MasterBlueprintV1Tests(unittest.TestCase):
 
     def test_foundation_freeze_state_is_explicit_and_not_frozen_during_repair(self):
         current=load("state/current.yaml")
-        self.assertEqual(current["foundation_status"], "NOT_FROZEN")
+        self.assertEqual(current["foundation_status"], "FROZEN")
         self.assertIn("foundation_status", current["authority_scope"]["this_file_is_authoritative_for"])
-        self.assertEqual(current["phase"], "FOUNDATION_V4_INTEGRATED_EXACT_HEAD_REVIEW_GATE")
+        self.assertEqual(current["phase"], "FOUNDATION_V1_FROZEN_LEARNING_RESUMPTION")
 
     def test_blueprint_reopen_rule_defers_to_law_router(self):
         bp=(ROOT/"docs/vnext/MASTER_BLUEPRINT_V1_20261006.md").read_text(encoding="utf-8")

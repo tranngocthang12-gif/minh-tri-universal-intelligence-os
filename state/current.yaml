@@ -2,13 +2,13 @@
   "schema": "minhtri-current-state/v1",
   "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
   "architecture_generation": "VNEXT_MASTER_BLUEPRINT_V1_OWNER_RATIFIED",
-  "phase": "FOUNDATION_V4_INTEGRATED_EXACT_HEAD_REVIEW_GATE",
+  "phase": "FOUNDATION_V1_FROZEN_LEARNING_RESUMPTION",
   "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
   "current_architecture": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
-  "active_workstream": "FOUNDATION_FINAL_AUDIT_AND_FREEZE",
-  "next_checkpoint": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+  "active_workstream": "OWNER_DIRECTED_LEARNING",
+  "next_checkpoint": "Foundation V1 frozen; resume Owner-directed learning through governed Knowledge Fast Lane. PR #319 remains Draft/Class F HOLD until separate Owner-authorized reopen.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -52,5 +52,5 @@
   "boot_root": "state/bootstrap.json",
   "task_registry": "state/tasks.yaml",
   "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
-  "foundation_status": "NOT_FROZEN"
+  "foundation_status": "FROZEN"
 }
