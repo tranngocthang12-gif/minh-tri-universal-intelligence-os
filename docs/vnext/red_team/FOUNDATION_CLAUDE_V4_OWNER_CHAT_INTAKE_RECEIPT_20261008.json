@@ -1,0 +1,21 @@
+{
+  "schema": "minhtri-owner-critic-intake/v1",
+  "source": "Owner-provided Claude V4 review content in MINH TRI project chat, recorded during 2026-10-08 Foundation V4 review workflow",
+  "provenance_class": "OWNER_CHAT_INTAKE_AUTHORING_SEAT",
+  "independent_receipt": false,
+  "independent_authenticity_verified": false,
+  "original_chat_bytes_verified": false,
+  "original_provider_authorship_cryptographically_verified": false,
+  "is_current_v5r4_critic_review": false,
+  "review_round": "FOUNDATION_FINAL_REREVIEW_V4",
+  "provider_claim": "Anthropic",
+  "archived_path": "docs/vnext/red_team/FOUNDATION_FREEZE_CLAUDE_REVIEW_V4_20261008.json",
+  "archived_blob_sha": "b380c33aca49d24f48d02b3115ec77a4c618f6fe",
+  "source_candidate_pr": 327,
+  "evidence_append_branch": "owner/foundation-v5r4-exact-head-review-packet-20261008",
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "finding_count": 7,
+  "material_finding_id": "FF-CLAUDE-V4-001",
+  "foundation_status": "NOT_FROZEN",
+  "note": "This is an authoring-seat evidence-inventory receipt for previously supplied review content, not an independently authenticated verbatim transcript, not a fresh V5R4 independent review and not a final acceptance."
+}
