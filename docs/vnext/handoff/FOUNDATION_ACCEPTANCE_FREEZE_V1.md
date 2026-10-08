@@ -1,6 +1,6 @@
 # Foundation Acceptance & Freeze v3 handoff
 
-**STATUS: BLOCKED / HELD — CLAUDE V3 MATERIAL REPAIR + DIFFERENT-SEAT SUPERVISOR + REREVIEW REQUIRED**
+**STATUS: BLOCKED / HELD — CLAUDE + GROK V3 MATERIAL REPAIR + DIFFERENT-SEAT SUPERVISOR + REREVIEW REQUIRED**
 
 **TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1  
 **ACTIVE FRONTIER:** `ARCH-MASTER-BLUEPRINT-V1`  
@@ -17,10 +17,10 @@
 - Foundation remains NOT FROZEN.
 
 ## CURRENT GATE
-Gemini V3 returned clean; Claude V3 returned three MEDIUM and four LOW findings on the same packet/target. Repair the material findings, complete a fresh different-seat Supervisor inspection for the post-ratification evidence/recovery work, then freeze a new rereview packet on the exact repaired head.
+Gemini V3 returned clean; Claude V3 returned three MEDIUM and four LOW findings; Grok V3 returned two HIGH and three MEDIUM findings on the same packet/target. Repair all material findings, complete a fresh different-seat Supervisor inspection for the post-ratification evidence/recovery work, then freeze a new rereview packet on the exact repaired head.
 
 ## NEXT ACTION
-Preserve Claude V3 findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.
+Preserve Claude and Grok V3 material findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.
 
 ## FINAL FREEZE CONDITIONS
 - Packet v3 binds the repaired protected-main SHA.
