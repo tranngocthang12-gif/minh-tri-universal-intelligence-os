@@ -1,0 +1,8 @@
+{
+  "schema": "minhtri-pc-sync-selection/v1",
+  "authority": "PROTECTED_MAIN_ONLY",
+  "selected_main_paths": [
+    "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md"
+  ],
+  "excluded": "unmerged PR candidates and Local Brain ledger"
+}
