@@ -5,6 +5,7 @@
 **Durable authority:** GitHub protected main  
 **Acceptance record:** `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_V1_POST_MERGE_RATIFICATION_20261007.md`  
 **Recovery-gate supersession:** `docs/vnext/OWNER_DECISION_RECOVERY_V9_SUPERSEDES_V6_FREEZE_GATE_20261007.md` — v9/C9 replaces the legacy literal v6 PASS condition for Foundation Freeze; C6/C7/C8 remain historical FAIL.  
+**Post-ratification Class F repair provenance:** The 2026-10-07 prospective ratification covers its then-approved baseline only. Later V3/V4 Foundation repair changes (supersession routing, reopen governance, state/continuity instructions and Law paragraph) are **UNACCEPTED CANDIDATES** pending fresh same-head review and separate Owner acceptance. Owner Option A on 2026-10-08 defers PR #319's proposed role-power amendment; it does not accept these Foundation amendments.
 **Historical process defect:** `POST_MERGE_ACCEPTANCE_ORDER_VIOLATION` preserved; ratification is prospective, not backdated
 
 ## 1. Final system

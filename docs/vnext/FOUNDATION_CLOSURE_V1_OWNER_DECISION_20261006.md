@@ -151,3 +151,7 @@ Approved completion sequence:
 - material defects must be repaired before final freeze;
 - after both red-team gates pass and evidence is durable, close the foundation architecture;
 - after freeze, architecture reopens only for measured evidence failure, real operational foundation defect, or explicit Owner change of foundation objective.
+
+## Prospective continuation annotation — 2026-10-08 (CANDIDATE, not an Owner decision)
+
+This section is an additive project-workflow note and does **not** change the Owner's historical 2026-10-06 text above. The older Foundation Closure execution delegation authorized work sequence/implementation only; it **did not** grant the Builder final Foundation acceptance or remove the Owner final gate. The old `ARCH-FOUNDATION-CLOSURE-V1` task is STALE and superseded by `ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1`. The Owner's later Option A in `docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md` holds PR #319 as a separate, unmerged Class F change until after Freeze and an expressly authorized controlled reopen. The 2026-10-08 Owner final Foundation acceptance, if later issued, must explicitly ratify the specific post-2026-10-07 amendments and reconcile the earlier workflow delegation. This annotation is unmerged candidate provenance only; it is neither an Owner acceptance nor a historical rewrite.
