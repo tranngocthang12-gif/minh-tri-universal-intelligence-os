@@ -142,6 +142,7 @@ def build_snapshot(fetch=fetch_public_github):
     routes = {"boot_root": ("state/bootstrap.json", current.get("boot_root")),
               "current_state": ("state/current.yaml", boot.get("current_state")),
               "task_registry": ("state/tasks.yaml", boot.get("task_registry")),
+              "task_registry_current": ("state/tasks.yaml", current.get("task_registry")),
               "master_blueprint": (boot.get("master_blueprint"), current.get("master_blueprint")),
               "law_precedence": (boot.get("law_precedence"), current.get("law_precedence")),
               "role_bootstrap": (boot.get("role_bootstrap"), current.get("role_bootstrap"))}
