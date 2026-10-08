@@ -1,29 +1,27 @@
-# Foundation Acceptance & Freeze v3 handoff
+# FOUNDATION ACCEPTANCE & FREEZE — V4 INTEGRATED CANDIDATE HANDOFF
 
-**STATUS: BLOCKED / HELD — CLAUDE + GROK V3 MATERIAL REPAIR + DIFFERENT-SEAT SUPERVISOR + REREVIEW REQUIRED**
+**TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1
+**STATUS:** BLOCKED / NOT_FROZEN
+**ACTIVE FRONTIER:** ARCH-MASTER-BLUEPRINT-V1
 
-**TASK_ID:** ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1  
-**ACTIVE FRONTIER:** `ARCH-MASTER-BLUEPRINT-V1`  
-**ACTIVE HANDOFF:** `docs/vnext/handoff/MASTER_BLUEPRINT_V1.md`
+## DONE
+- V3 repair target 9bd3214 preserved; different-seat Supervisor PASS evidence included in Draft PR #327.
+- Owner A separated Draft PR #319 as held Class F, requiring post-freeze controlled reopen and explicit Owner gate.
+- Claude V4 and Grok post-Owner-A review both returned MATERIAL; Grok elevated FF-CLAUDE-V4-007 to MEDIUM.
+- Consolidated Law freeze candidate remains `2faac92eff36a314fa120a1edf52da697ea04912`.
+- CI task contract corrected from invalid requires value to `none`; Owner gate retained in blocker.
 
-## COMPLETED REPAIR
-- Independent review v2 returned `FF-OPENAI-001` HIGH and `FF-OPENAI-002` MEDIUM.
-- PR #315 repaired both findings and Owner accepted v9/C9 as superseding the legacy literal v6 PASS freeze condition.
-- PR #316 canonicalized the effective Owner supersession decision.
-- PR #316 merged as `380be1a546b01143c5e613d05b3b86cfa7ac0f39`.
-- Protected main was fresh-read after that merge.
-- C6/C7/C8 remain immutable FAIL.
-- C9 remains the bounded replacement recovery PASS.
-- Foundation remains NOT FROZEN.
-
-## CURRENT GATE
-Gemini V3 returned clean; Claude V3 returned three MEDIUM and four LOW findings; Grok V3 returned two HIGH and three MEDIUM findings on the same packet/target. Repair all material findings, complete a fresh different-seat Supervisor inspection for the post-ratification evidence/recovery work, then freeze a new rereview packet on the exact repaired head.
+## NOT DONE
+- Complete latest exact-head CI and prospective independent review.
+- Preserve full Grok post-A JSON with independently verifiable source receipt.
+- Resolve findings 001/007 on exact final package.
+- Owner final Foundation acceptance, protected merge and fresh-read.
 
 ## NEXT ACTION
-Preserve Claude and Grok V3 material findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.
+Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.
 
-## FINAL FREEZE CONDITIONS
-- Packet v3 binds the repaired protected-main SHA.
-- New independent review returns no unresolved CRITICAL/HIGH/MEDIUM defect, or every such finding is durably dispositioned.
-- Final Owner Foundation Freeze acceptance is explicit and exact-package bound.
-- Protected merge + fresh-read occur before FROZEN status is asserted.
+## REQUIRED GATES
+- Identical exact-head packet and reviews on finalized candidate.
+- No material open findings or unresolved authority splits.
+- Owner-only final Class F acceptance, explicit reconciliation of pre-Blueprint workflow delegation.
+- Protected merge and post-merge fresh-read precede FROZEN.
