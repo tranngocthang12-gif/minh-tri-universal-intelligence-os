@@ -1,6 +1,6 @@
 import copy
 import unittest
-from minhtri.learning_loop_offline_pilot import digest, inspect, target_digest
+from minhtri.learning_loop_offline_pilot import digest, inspect, target_digest, record_digest
 
 
 def fixture():
@@ -18,6 +18,8 @@ def fixture():
     atom={"schema":"minhtri-knowledge-atom/v1","record_type":"claim","id":"k1","domain":"buddhist","class":"SYNTHESIS",
         "status":"PENDING_REVIEW","statement":"Hypothesis, not certified truth.","source_refs":["synthetic/early","synthetic/milinda"],"evidence_refs":[],
         "contradicts":[],"supersedes":[],"depends_on":[],"provenance":{"source_kind":"synthetic-test"}}
+    packet["atom_sha256"]=record_digest(atom)
+    packet["critic"]["target_digest"]=target_digest(packet)
     return packet,[atom]
 
 
@@ -31,6 +33,28 @@ class OfflineLearningPilotTests(unittest.TestCase):
         self.assertTrue(out["ready_for_review"],out)
         for name in ("understanding_proven","behavioral_learning_proven","durable_written","automatic_verified","background_runtime_enabled"):
             self.assertFalse(out[name])
+
+    def test_atom_mutated_after_critic_blocks(self):
+        p,r=fixture();r[0]["statement"]="Changed after review."
+        self.assertIn("knowledge atom integrity mismatch",self.check(p,r)["reasons"])
+
+    def test_atom_source_not_in_snapshot_blocks(self):
+        p,r=fixture();r[0]["source_refs"]=["unseen/source"]
+        self.assertIn("knowledge atom sources not bound to snapshots",self.check(p,r)["reasons"])
+
+    def test_policy_changed_after_critic_blocks(self):
+        p,r=fixture();p["policy"]["background_runtime"]=True
+        self.assertIn("exact-target separate critic required",self.check(p,r)["reasons"])
+
+    def test_malformed_inputs_fail_closed(self):
+        p,r=fixture()
+        self.assertFalse(self.check(None,r)["ready_for_review"])
+        p["sources"][0]["role"]=["bad-role"]
+        self.assertFalse(self.check(p,r)["ready_for_review"])
+
+    def test_invalid_explanation_source_shape_rejected(self):
+        p,r=fixture();p["understanding"]["source_ids"]={"s1":"s2"}
+        self.assertIn("explanation source references invalid",self.check(p,r)["reasons"])
 
     def test_wrong_owner_goal_fails_closed(self):
         p,r=fixture();self.assertFalse(self.check(p,r,goal="OTHER")["ready_for_review"])
