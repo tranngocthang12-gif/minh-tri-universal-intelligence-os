@@ -40,12 +40,12 @@
       "scope": [
         "docs/learning/"
       ],
-      "branch": "learning/buddhist-a173-20261005-2205",
+      "branch": null,
       "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "A172 completed on main; A173 draft remains unaccepted; legacy PR #249 held as Draft; no promotion.",
+      "result_ref": "A172 completed on protected main; A173 draft unaccepted; PR #249 legacy Draft NOT ACTIVE; new Class D studies separate candidate PR #336 pending review.",
       "change_class": "D",
       "resume_gate": "CLASS_D_ROUTED_FOR_STUDY_ONLY_CHECKPOINT_PROMOTION_REQUIRES_PROTECTED_REVIEW",
       "acceptance_authority": "OWNER",
@@ -53,7 +53,8 @@
       "role": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
       "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
       "next_action": "Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.",
-      "blocker": null
+      "blocker": null,
+      "branch_binding": "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT"
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
