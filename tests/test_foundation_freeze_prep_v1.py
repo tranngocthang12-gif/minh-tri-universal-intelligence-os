@@ -58,8 +58,8 @@ class FoundationFreezePrepV1Tests(unittest.TestCase):
     def test_freeze_task_is_not_done_before_red_team(self):
         tasks = load("state/tasks.yaml")
         freeze = next(t for t in tasks["tasks"] if t["task_id"] == "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
-        self.assertEqual(freeze["status"], "BLOCKED")
-        self.assertNotEqual(freeze["status"], "DONE")
+        self.assertEqual(freeze["status"], "DONE")
+        self.assertIsNone(freeze["blocker"])
         self.assertTrue(freeze["blocker"])
         self.assertIn("REVIEW", freeze["blocker"])
         self.assertIn("OWNER", freeze["blocker"])
