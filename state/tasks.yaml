@@ -775,6 +775,25 @@
       "acceptance_authority": "OWNER",
       "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
       "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
+    },
+    {
+      "task_id": "PC-WORKSHOP-LEARNING-V1",
+      "title": "Owner-approved PC workshop learning: PC01 through PC08",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md"
+      ],
+      "branch": "owner/pc-workshop-learning-v1-20261009",
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
+      "requires": "pc",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": "docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md",
+      "handoff_ref": "docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md",
+      "change_class": "D",
+      "acceptance_authority": "OWNER",
+      "next_action": "Continue PC01 safe read-only system inventory and quiz; do not promote PC learning to VERIFIED, modify Owner PC, or imply autonomous learning. Review Class D checkpoint through PR/CI.",
+      "blocker": null
     }
   ]
 }
