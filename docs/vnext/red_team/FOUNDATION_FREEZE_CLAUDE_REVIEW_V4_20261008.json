@@ -1,0 +1,69 @@
+{
+  "critic": "Claude — fresh-seat independent read-only Foundation critic (không dùng lịch sử chat MINH TRÍ làm authority)",
+  "provider": "Anthropic",
+  "round": "FOUNDATION_FINAL_REREVIEW_V4",
+  "packet_ref": "docs/vnext/FOUNDATION_FINAL_REREVIEW_PACKET_V4_20261008.md",
+  "packet_content_sha": "git-blob-sha1:504b4cd4adb2b4e0f9c5300041d6706911c30302",
+  "review_target_candidate_commit": "9bd321410af0b1dff225eb6a5b8d77870698902e",
+  "supervisor_evidence_commit": "beffd5e67ef273d5110a7e1cc5ee2f4dd30c0ada",
+  "findings": [
+    {
+      "finding_id": "FF-CLAUDE-V4-001",
+      "severity": "MEDIUM",
+      "evidence_ref": "refs/pull/319/head = 31e6a48188907a7eb3ef3a9d8bdfab8c19c27e13, base d2640da, chưa merge. PR #319 sửa docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md, blob 2faac92e… tại target so với 8e88f7ce… tại #319. Thay đổi gồm: thêm delegated Class O merge lane và thêm OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md vào Preserved source laws. PR #319 cũng sửa docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md, một preserved source law. Grok review v2 của #319 trả MATERIAL_DEFECTS_FOUND (DAT-005/006/007 HIGH). Target 9bd3214 sửa cùng file Law router (L81). Merge thử 9bd3214 với #319 tự động thành công, không báo conflict. git grep tại 9bd3214, efdb437 (packet V4) và beffd5e (Supervisor) không có tham chiếu nào tới delegated AUTO hoặc #319. state/tasks.yaml tại target không có task cho workstream này. Căn cứ: Blueprint §10 Gate 3 và §11 Class F ('role powers'); debt register freeze rule ('unresolved authority split … blocks freeze').",
+      "defect": "Có một workstream Class F đang chạy song song: PR #319 thay đổi role/merge powers và Law router chuẩn tắc, dùng cùng base d2640da, đã có packet v1/v2/v3 và hai vòng review material. Workstream này không được đăng ký trong canonical task registry và không xuất hiện trong current state hay handoff. Packet V4, Supervisor và repair package cũng không sequencing nó so với Foundation freeze. Hai candidate cùng sửa một file Law router và git hợp nhất mà không cảnh báo.",
+      "consequence": "Owner có thể freeze Law router blob 2faac92e trong khi một amendment về role powers vẫn đang chờ. Nếu #319 merge trước, text Law được merge không còn là exact target đã rereview. Nếu #319 merge sau, một thay đổi Class F về role powers đi vào Foundation đã frozen mà không có reopen basis được ghi nhận. Đây là 'unresolved authority split' mà freeze rule chặn. Seat cold-start từ canonical state không thấy thay đổi đang chờ này.",
+      "smallest_repair": "Trước Owner final acceptance, Owner ghi disposition tường minh cho PR #319 so với freeze, chọn một trong ba hướng: (a) giữ #319 đến sau freeze như controlled change theo đường reopen của Law, và đăng ký task Class F/OWNER khi canonicalize; (b) đóng #319; (c) gộp #319 vào final package và rereview lại trên exact Law router mới. Owner acceptance record phải bind git blob SHA của FOUNDATION_LAW_CONSOLIDATED_V1 được freeze. Hướng (a) và (b) không cần sửa 9bd3214."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-002",
+      "severity": "LOW",
+      "evidence_ref": "Supervisor result 6067d599…, các finding FF-SUP-V3-001/002/003. Kiểm lại tại target: eval/recovery/v9 và tools/score_master_blueprint_recovery_v9.py không đổi so với 5c38243. Shape của recovered_facts trong schema bằng shape của expected_facts trong snapshot. 'const' trong schema chỉ nằm ở schema/challenge_id/nonce/attestations, không leak fact. Parent đầu của 5c38243 là 58d36306. RECOVERY_ENTRYPOINT_V1 bước 9 đọc result_ref, bước 10 theo next_action. next_action trùng nguyên văn ở current.yaml, hai task và hai handoff.",
+      "defect": "Đánh giá lại 3 LOW của Supervisor. (001) Suite v9 thiếu assertion khóa schema-shape. (002) Kiểm tra ancestry dùng string-replace hardcode. (003) result_ref của ARCH-MASTER-BLUEPRINT-V1 vẫn ghi 'ready for a new v3 … review target'.",
+      "consequence": "Cả ba vẫn đúng là LOW. 001 và 002 chỉ là regression-hardening trên artifact v9 đã đóng băng, và giá trị hiện tại đã được xác minh độc lập. 003 không gây sai route vì next_action là trường điều khiển và thống nhất ở mọi nơi. Không finding nào cần nâng lên MEDIUM.",
+      "smallest_repair": "Xử lý theo disposition hiện có của Supervisor trong lần canonicalization tiếp theo, không mutate PR #322."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-003",
+      "severity": "LOW",
+      "evidence_ref": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md L352 ('Foundation Closure remains held until Owner acceptance explicitly reconciles its older execution delegation with this rule'). docs/vnext/FOUNDATION_CLOSURE_V1_OWNER_DECISION_20261006.md: phần 'Execution delegation' và phần 'Foundation Acceptance & Freeze v1' ('after both red-team gates pass … close the foundation architecture'), không có forward pointer. state/tasks.yaml ARCH-FOUNDATION-CLOSURE-V1 = STALE, superseded_by ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1.",
+      "defect": "Task đã STALE và không còn mang blocker literal-v6. Tuy vậy, Blueprint vẫn giữ một điều kiện đang chờ Owner hòa giải execution delegation cũ, và packet V4 hay handoff đều không route điều kiện này vào Owner acceptance gate. Câu 'no old execution delegation may serve as acceptance authority' hiện chỉ nằm ở tầng operational do Architect viết.",
+      "consequence": "Không có đường revive thực tế. AUTO TOTAL ARCHITECT là preserved source law và có stop condition 'accepting or freezing a Master Blueprint/Foundation'. Thêm vào đó còn Gate 8 và ratification item 7. Phần còn lại chỉ là một mệnh đề treo trong structural authority sẽ bị freeze.",
+      "smallest_repair": "Owner final acceptance ghi tường minh việc hòa giải: delegation cũ chỉ là workflow authorization và đã bị Freeze task supersede. Khi canonicalize sau merge, sửa L352 thành lịch sử và thêm forward pointer trong Closure decision."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-004",
+      "severity": "LOW",
+      "evidence_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md, mục FINAL FREEZE CONDITIONS ('Packet v3 binds the repaired protected-main SHA'; không có Supervisor và rereview V4). docs/vnext/handoff/MASTER_BLUEPRINT_V1.md, mục REQUIRED GATES ('Freeze packet must bind the current post-C9 protected-main target'), trong khi V4 bind head chưa merge của PR #322.",
+      "defect": "Hai checklist gate trong handoff là text còn sót từ trước. Chúng yếu hơn hoặc lệch so với live gate đã ghi ở CURRENT GATE và NEXT ACTION cùng file, ở current.yaml, tasks.yaml và debt register.",
+      "consequence": "Không gây split-brain về next action vì các chỉ dẫn cụ thể và mới hơn đều thống nhất. Rủi ro chỉ là đọc checklist tách rời khỏi ngữ cảnh.",
+      "smallest_repair": "Khi canonicalize, cập nhật hai mục này cho khớp chuỗi repair → Supervisor → rereview V4 trên exact head → Owner acceptance."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-005",
+      "severity": "LOW",
+      "evidence_ref": "Blueprint header 'Acceptance record' và §18 ('Owner-ratified prospectively under the acceptance record above') chỉ trỏ ratification 2026-10-07. Target thêm các amendment Class F chưa được Owner chấp nhận: dòng supersession ở header, §14 reopen, §16 bước 12-13, §18, Law L81. Target cũng chèn pointer vào một Owner decision record. Trong FOUNDATION_FREEZE_OPENAI_V2_DISPOSITION_20261007.md, câu 'The supersession is not effective until …' bị xóa trong khi text mới ghi 'Historical candidate statement above is preserved'.",
+      "defect": "Thiếu provenance cho amendment. Không có marker nào phân biệt baseline đã ratify với các sửa đổi V3-repair đang chờ Owner acceptance. Thêm vào đó, một câu lịch sử trong disposition v2 đã bị thay thế, trái với chính lời ghi là được giữ nguyên.",
+      "consequence": "Sau merge, phần text đã sửa (bao gồm reopen rule) sẽ trông như được ratify theo record 10-07, tức một dạng backdate nhẹ đối với amendment. Không có xung đột authority.",
+      "smallest_repair": "Owner final acceptance liệt kê các amendment được chấp nhận. Khi canonicalize, thêm dòng 'Amended/accepted by …' vào header của Blueprint và Law. Khôi phục nguyên văn câu lịch sử, hoặc đánh dấu struck, trong disposition v2."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-006",
+      "severity": "LOW",
+      "evidence_ref": "Hai file FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1 và FOUNDATION_DEBT_REGISTER_V1 không có dòng nào cho lineage C6/C7/C8 FAIL → v9/C9 bounded tại 5c38243. Dòng 'Current bootstrap + consolidated-law zero-chat recovery | PROVEN_FOR_C5…' trỏ C5 main 83d8a8e, mà state/bootstrap.json tại 83d8a8e chưa có master_blueprint (Blueprint được thêm sau, tại a77c5a5).",
+      "defect": "Capability truth và freeze-gate ledger bỏ sót recovery gate của Master Blueprint. Nhãn 'current' của C5 đã cũ vì route hiện tại có Blueprint pointer.",
+      "consequence": "Đây là under-claim, không phải overclaim. Truth đầy đủ nằm ở Blueprint, handoff và quyết định v9. Baseline freeze chưa đầy đủ ở đúng gate từng gây tranh chấp nhiều nhất.",
+      "smallest_repair": "Khi canonicalize, thêm dòng bounded cho C6/C7/C8 FAIL và C9 replacement tại 5c38243 theo Owner supersession, và đổi nhãn dòng C5 thành pre-Blueprint path."
+    },
+    {
+      "finding_id": "FF-CLAUDE-V4-007",
+      "severity": "LOW",
+      "evidence_ref": "Repair #322 (9bd3214), Supervisor packet #323 (41224c2), Supervisor evidence #324 (beffd5e) và packet V4 #325 (efdb437) là bốn nhánh anh em từ d2640da. next_action tại target vẫn là bước trước Supervisor. tests/test_master_blueprint_v1.py ghim chuỗi 'NOT YET CLOSED' trong Claude V3 disposition. Mục Advancement rule của packet V4 chỉ nói 'exact final package' và 'a final rereview', không nêu critic set.",
+      "defect": "Chưa xác định thành phần của exact final package và phạm vi delta được phép sau review: FROZEN flip, cập nhật handoff/debt/matrix/result_ref, đóng FF-CLAUDE-V3-003. Cũng chưa có quy tắc tổng hợp nhiều critic cho V4, trong khi V3 dùng set semantics và Owner Freeze approval nêu rõ Claude và Grok.",
+      "consequence": "Cây được freeze sẽ khác commit đã review ở nhiều file. Ratification item 7 vẫn yêu cầu Owner exact-head acceptance trước merge, nên rủi ro được giới hạn.",
+      "smallest_repair": "Owner acceptance record cần làm ba việc: bind 9bd3214 cùng các commit evidence-only được liệt kê; giới hạn diff canonicalization vào danh sách file cụ thể; liệt kê toàn bộ kết quả rereview V4 và coi bất kỳ kết quả material nào là chặn."
+    }
+  ],
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "independence_statement": "Fresh-read bằng git clone public repo tại exact commit 9bd321410af0b1dff225eb6a5b8d77870698902e. Packet blob 504b4cd4… được xác minh tại efdb437, và blob của Supervisor result, receipt, disposition và packet (6067d599/c48e094b/76c2d20f/0489e403) khớp. git ls-remote xác nhận head của #322/#323/#324/#325, main là d2640da và chưa PR nào merge. Không thể xác minh số CI run qua GitHub API vì bị rate-limit; reviewer không khẳng định các run đó. Reviewer đã chạy lại tests: 28 test Foundation/v9 PASS; full suite 470 PASS, loại trừ test_mcp_runtime_integration do thiếu dependency. validate_continuity_handoff PASS. Replay scorer v9 trên C9 cho PASS, sha256 canonical khớp receipt. C6/C7/C8 được giữ nguyên là FAIL, không regrade; C9 chỉ được coi là bounded recovery tại 5c38243. Các finding material của Claude và Grok V3 đều được xác minh là đã sửa trong tree tại target, không chấp nhận chỉ dựa trên disposition. Supervisor PASS bind đúng target và packet, không có finding material. Verdict MATERIAL dựa trên FF-CLAUDE-V4-001: một workstream Class F song song sửa Law router chưa được sequencing. Reviewer không sửa repo, không merge, không có quyền Owner acceptance và không tuyên bố Foundation frozen; foundation_status vẫn là NOT_FROZEN."
+}
