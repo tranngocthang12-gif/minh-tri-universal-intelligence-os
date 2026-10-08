@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "FOUNDATION_FINAL_AUDIT_AND_FREEZE",
-  "next_checkpoint": "Preserve Claude V3 findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.",
+  "next_checkpoint": "Preserve Claude and Grok V3 material findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
