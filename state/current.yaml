@@ -2,13 +2,13 @@
   "schema": "minhtri-current-state/v1",
   "project": "MINH_TRI_UNIVERSAL_INTELLIGENCE_OS",
   "architecture_generation": "VNEXT_MASTER_BLUEPRINT_V1_OWNER_RATIFIED",
-  "phase": "FOUNDATION_V3_INDEPENDENT_REVIEW_GATE",
+  "phase": "FOUNDATION_V3_MATERIAL_REPAIR_AND_SUPERVISOR_GATE",
   "durable_continuity_authority": "GITHUB_PROTECTED_MAIN",
   "current_architecture": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "FOUNDATION_FINAL_AUDIT_AND_FREEZE",
-  "next_checkpoint": "Freeze Foundation review packet v3 against the current repaired protected-main SHA, obtain a new independent final review, and preserve the bound review receipt before any final Owner Foundation Freeze acceptance.",
+  "next_checkpoint": "Preserve Claude V3 findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -32,7 +32,8 @@
       "automatic_self_critique_runtime",
       "meta_learning_runtime",
       "pc_local_brain_role",
-      "owner_learning_priority_order"
+      "owner_learning_priority_order",
+      "foundation_status"
     ],
     "legacy_project_state_remains_authoritative_for_unmigrated_keys": true,
     "duplicate_legacy_values_for_migrated_keys_are_non_authoritative_compatibility_only": true,
@@ -50,5 +51,6 @@
   "active_task_id": "ARCH-MASTER-BLUEPRINT-V1",
   "boot_root": "state/bootstrap.json",
   "task_registry": "state/tasks.yaml",
-  "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md"
+  "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+  "foundation_status": "NOT_FROZEN"
 }
