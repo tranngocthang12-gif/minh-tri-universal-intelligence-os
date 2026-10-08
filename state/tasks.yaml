@@ -36,18 +36,24 @@
     {
       "task_id": "BUDDHIST-A173",
       "title": "Continue Buddhist thought checkpoint A173 without blocking on architecture migration",
-      "status": "DRAFT",
+      "status": "IN_PROGRESS",
       "scope": [
         "docs/learning/"
       ],
       "branch": "learning/buddhist-a173-20261005-2205",
-      "base_sha": "a04300f8530c7f8413e8e386c607c7f9938ce32b",
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#249",
-      "change_class": "UNCLASSIFIED_LEGACY",
-      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
+      "result_ref": "A172 completed on main; A173 draft remains unaccepted; legacy PR #249 held as Draft; no promotion.",
+      "change_class": "D",
+      "resume_gate": "CLASS_D_ROUTED_FOR_STUDY_ONLY_CHECKPOINT_PROMOTION_REQUIRES_PROTECTED_REVIEW",
+      "acceptance_authority": "OWNER",
+      "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
+      "role": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
+      "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
+      "next_action": "Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.",
+      "blocker": null
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
