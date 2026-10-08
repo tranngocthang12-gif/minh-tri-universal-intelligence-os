@@ -1,6 +1,7 @@
 """Read-only contract for one Owner-directed learning proposal, not a learner."""
 import hashlib
 import json
+import unicodedata
 from minhtri.knowledge_fast_lane import validate_fast_lane_change
 
 def digest(text):
@@ -15,7 +16,7 @@ def record_digest(value):
     return digest(data)
 
 def normalized_id(value):
-    return value.strip().casefold() if isinstance(value,str) else ""
+    return unicodedata.normalize("NFKC", value).strip().casefold() if isinstance(value,str) else ""
 
 def dependency_closure(records, root):
     table = {r.get("id"):r for r in records if isinstance(r.get("id"),str)}
@@ -73,7 +74,7 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
     policy=packet.get("policy",{})
     if not isinstance(policy,dict) or policy.get("protected_review") is not True or policy.get("auto_merge") is not False or policy.get("auto_verified") is not False or policy.get("background_runtime") is not False:
         errors.append("unsafe learning policy")
-    if authorized_goal_id == "BUDDHIST-A173" and packet.get("domain") not in ("buddhist","buddhist_thought"):
+    if authorized_goal_id == "BUDDHIST-A173" and packet.get("domain") != "buddhist_thought":
         errors.append("Buddhist goal domain mismatch")
     source_ids=set()
     roles=set()
@@ -110,11 +111,13 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 or any(not isinstance(x,str) for x in u["source_ids"])
                 or not set(u["source_ids"]).issubset(source_ids)):
             errors.append("explanation source references invalid")
-    if packet.get("domain") in ("buddhist","buddhist_thought") or authorized_goal_id=="BUDDHIST-A173":
+    if packet.get("domain") == "buddhist_thought" or authorized_goal_id=="BUDDHIST-A173":
         cited=u.get("source_ids",[]) if isinstance(u,dict) else []
         cited_roles={source_roles.get(sid) for sid in cited if isinstance(sid,str)}
         if not {"EARLY_DISCOURSE","MILINDAPANHA"}.issubset(cited_roles):
             errors.append("Buddhist source hierarchy incomplete")
+    if packet.get("domain") == "buddhist" and authorized_goal_id == "BUDDHIST-A173":
+        errors.append("legacy Buddhist domain alias not canonical")
     transfer=packet.get("transfer")
     if not isinstance(transfer,list) or len(transfer)<2:
         errors.append("two frozen transfer questions required")
@@ -131,8 +134,9 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 or not isinstance(item.get("answer"),str) or not item["answer"].strip()):
                 errors.append("transfer integrity failure")
             if isinstance(q,str):
-                if q in seen: errors.append("duplicate transfer question")
-                seen.add(q)
+                normalized_question=" ".join(q.split()).casefold()
+                if normalized_question in seen: errors.append("duplicate transfer question")
+                seen.add(normalized_question)
             judge=item.get("judge",{})
             if (not isinstance(judge,dict) or not isinstance(judge.get("id"),str)
                     or not judge["id"].strip() or normalized_id(judge.get("id"))==normalized_id(packet.get("producer_id"))
@@ -164,6 +168,10 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
         locators={src["locator"] for src in sources or [] if isinstance(src,dict) and isinstance(src.get("locator"),str)}
         if not isinstance(refs,list) or not refs or any(not isinstance(ref,str) or ref not in locators for ref in refs):
             errors.append("knowledge atom sources not bound to snapshots")
+    if len(matched)==1 and matched[0].get("class")=="ATTESTED":
+        early={src.get("locator") for src in sources or [] if isinstance(src,dict) and src.get("role")=="EARLY_DISCOURSE"}
+        if not (set(matched[0].get("source_refs",[]) if isinstance(matched[0].get("source_refs"),list) else []) & early):
+            errors.append("ATTESTED claim lacks cited early discourse")
     if rid:
         closure,closure_errors=dependency_closure(records,rid)
         errors.extend(closure_errors)
