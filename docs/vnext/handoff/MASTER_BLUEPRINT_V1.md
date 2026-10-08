@@ -26,13 +26,13 @@
 - Cold-start recovery gate required by the Master Blueprint is satisfied for the bounded v9/C9 proof.
 
 ## NOT DONE
-- Foundation v3 independent review is not clean as a set: Gemini returned `NO_MATERIAL_DEFECT_FOUND`, while Claude returned `MATERIAL_DEFECTS_FOUND` with three MEDIUM and four LOW findings on the identical packet/target.
-- Claude's material findings require Class F repair and a fresh different-seat Supervisor inspection of the post-ratification v9/C9 evidence layer and PR #315/#316 repair package.
+- Foundation v3 independent review is not clean as a set: Gemini returned `NO_MATERIAL_DEFECT_FOUND`; Claude returned `MATERIAL_DEFECTS_FOUND` with three MEDIUM and four LOW findings; Grok returned `MATERIAL_DEFECTS_FOUND` with two HIGH and three MEDIUM findings on the identical packet/target.
+- Claude/Grok material findings require Class F repair and a fresh different-seat Supervisor inspection of the post-ratification v9/C9 evidence layer and PR #315/#316 repair package.
 - A new rereview packet must bind the exact repaired head after those steps.
 - Owner has not issued final Foundation Freeze acceptance.
 
 ## NEXT ACTION
-Preserve Claude V3 findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.
+Preserve Claude and Grok V3 material findings, complete a fresh different-seat Supervisor inspection of the v9/C9 evidence layer and PR #315/#316 repair package, then freeze a new Foundation rereview packet on the exact repaired head before any Owner final Foundation acceptance.
 
 ## REQUIRED GATES
 - Freeze packet must bind the current post-C9 protected-main target.
