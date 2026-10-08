@@ -35,9 +35,9 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("REVIEW", t["blocker"])
         self.assertIn("OWNER", t["blocker"])
         closure=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-CLOSURE-V1")
-        self.assertEqual(closure["status"], "BLOCKED")
-        self.assertIn("Master Blueprint v1", closure["next_action"])
-        self.assertEqual(closure["handoff_ref"], "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md")
+        self.assertEqual(closure["status"], "STALE")
+        self.assertEqual(closure.get("superseded_by"), "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
+        self.assertEqual(closure["handoff_ref"], "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md")
 
     def test_role_separation_and_lifecycle_are_durable(self):
         bp=(ROOT/"docs/vnext/MASTER_BLUEPRINT_V1_20261006.md").read_text(encoding="utf-8")
