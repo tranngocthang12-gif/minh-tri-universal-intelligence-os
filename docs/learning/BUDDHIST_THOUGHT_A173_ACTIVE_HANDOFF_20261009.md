@@ -20,6 +20,15 @@ Continue Buddhist thought A173 from completed A172 under early-discourse primacy
 - Task branch is deliberately null: obsolete PR #249 is NOT a current execution branch. Future independent Class D assignments require an explicit new authorized branch, base SHA and exact target; current routing candidate does not confer write authority.
 - PR #319 remains Draft/Class F HOLD. Foundation V1 stays FROZEN; do not interpret A173 continuation as a Foundation reopen.
 
+## DEPENDENT DRAFTS AND LEGACY DISPOSITION
+- Protected main already has A174, A175 and A176 DRAFT; they depend on A173 and must NOT be promoted until prior checkpoints are accepted in order.
+- Legacy PR #249 contains `docs/learning/BUDDHIST_THOUGHT_COMPLIANCE_AUDIT_20261005.md`, blob 80df16b240bd070a4d047bc5b0bff41da40b1d0d: **PROCESS / RECORD-CONTRACT NON-COMPLIANCE** was reported for old A173–A177. Preserve as historical evidence, not current authority. Its PROJECT_STATE/RECOVERY_MANIFEST changes are NOT to be merged.
+- PR #249 contains a non-draft `BUDDHIST_THOUGHT_CHECKPOINT_A173_20261005.md`, blob 319793bc10f9127f3b9ac9a577c968175a9d0dd1: **UNACCEPTED historical candidate** claiming completion, NOT CURRENT. Salvage source reasoning only after independent source-level audit and reconcile metadata/continuity fields; never import its completion label.
+- PR #249 contains `BUDDHIST_THOUGHT_CHECKPOINT_A177_DRAFT_20261005.md`, blob 67cf266cb7ade27aebacfd38f4f0ee678e359928: **DEFERRED dependent draft**, do not promote or treat as current; require sequential acceptance A173–A176 and source review.
+- Current-main A173 DRAFT does not itself contain all the added continuity-compliance fields documented in the historical audit. Current A173 source-audit candidate PR #336 can supply new evidence but does not retroactively approve legacy draft records.
+- Routing change is independently registered as Class S task `ARCH-BUDDHIST-A173-ROUTING-V1` in `state/tasks.yaml`; studying A173 remains separate Class D. No self-acceptance or merge.
+- Fresh-seat recovery proof after accepted protected merge is PENDING; previous archived recovery receipts are not proof of this new route.
+
 ## REQUIRED GATES
 - Read boot root, current Blueprint, consolidated Foundation Law, universal learning law, current state/tasks, A172 and A173 DRAFT from protected main.
 - Use early discourses as attestation and Milindapañha as explanatory support; keep TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / UNCERTAINTY separate.
