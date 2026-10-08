@@ -744,6 +744,33 @@
       "acceptance_authority": "OWNER",
       "holder": "CHATGPT_CURRENT_OPERATING_SEAT",
       "role": "TOTAL_ARCHITECT_FOUNDATION_V3_MATERIAL_REPAIR_NON_INDEPENDENT"
+    },
+    {
+      "task_id": "ARCH-DELEGATED-AUTO-TOTAL-ARCHITECT-PR319",
+      "title": "Hold PR #319 delegated AUTO role-powers amendment until post-Foundation-Freeze controlled reopen",
+      "status": "BLOCKED",
+      "scope": [
+        "PR#319",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md",
+        "docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md"
+      ],
+      "branch": "owner/delegated-auto-total-architect-approval-20261008",
+      "base_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
+      "review_target_sha": "31e6a48188907a7eb3ef3a9d8bdfab8c19c27e13",
+      "requires": "OWNER_CLASS_F_ACCEPTANCE_AFTER_FOUNDATION_FREEZE_AND_CONTROLLED_REOPEN",
+      "dependencies": [
+        "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/OWNER_DISPOSITION_FOUNDATION_V4_PR319_HOLD_20261008.md",
+      "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
+      "next_action": "Remain DRAFT and unmerged until Foundation is accepted/frozen; after that submit Class F controlled-reopen proposal, supervision, independent critique and explicit Owner authorization; do not auto-merge.",
+      "blocker": "OWNER_DISPOSITION_A_HOLD_PR319_UNTIL_POST_FREEZE_CLASS_F_REOPEN",
+      "change_class": "F",
+      "acceptance_authority": "OWNER",
+      "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
+      "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
     }
   ]
 }
