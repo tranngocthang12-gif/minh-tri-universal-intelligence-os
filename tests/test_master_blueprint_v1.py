@@ -128,5 +128,13 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("fresh different-seat Supervisor inspection", disp)
         self.assertIn("SUPERVISOR_INSPECTOR_DIFFERENT_SEAT", req)
 
+    def test_debt_register_and_capability_matrix_point_to_v3_gate_not_v2(self):
+        debt=(ROOT/"docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md").read_text(encoding="utf-8")
+        matrix=(ROOT/"docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md").read_text(encoding="utf-8")
+        self.assertIn("Gemini clean; Claude and Grok material findings", debt)
+        self.assertIn("MATERIAL_FINDINGS_PRESENT_V3", matrix)
+        self.assertNotIn("Must complete against the repaired v2 packet before final freeze", debt)
+        self.assertNotIn("Claude + Grok v2 red-team receipts still required", matrix)
+
 if __name__=="__main__":
     unittest.main()
