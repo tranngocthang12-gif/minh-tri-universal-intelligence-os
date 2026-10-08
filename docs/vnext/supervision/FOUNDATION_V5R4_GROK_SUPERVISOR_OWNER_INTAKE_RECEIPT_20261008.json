@@ -1,0 +1,33 @@
+{
+  "schema": "minhtri-supervisor-intake/v1",
+  "source": "Owner-uploaded Grok supervisor JSON in project conversation",
+  "archive_path": "docs/vnext/supervision/FOUNDATION_V5R4_GROK_SUPERVISOR_RESULT_20261008.json",
+  "archive_git_blob_sha": "ee0eebbf8d05db3a44ff211e2ee30fa617885188",
+  "round": "FOUNDATION_V5R4_TARGET_SUPERVISOR_REINSPECTION",
+  "target_commit": "c3f7cbe97d68922c822177a3d7ed576a84800fba",
+  "packet_git_blob_sha": "1f4c346da11d5ac46156cd5d94c3b443aad033fc",
+  "verdict": "SUPERVISION_PASS",
+  "findings": [
+    {
+      "id": "FF-SUP-V5R4-001",
+      "severity": "LOW"
+    },
+    {
+      "id": "FF-SUP-V5R4-002",
+      "severity": "LOW"
+    },
+    {
+      "id": "FF-SUP-V5R4-003",
+      "severity": "LOW"
+    },
+    {
+      "id": "FF-SUP-V5R4-004",
+      "severity": "LOW"
+    }
+  ],
+  "origin_independently_authenticated": false,
+  "original_provider_bytes_verified": false,
+  "receipt_type": "AUTHORING_SEAT_OWNER_RELAY",
+  "foundation_status": "NOT_FROZEN",
+  "gate_note": "SUPERVISION_PASS is not automatic closure of FF-CLAUDE-V5R4-001; requires independent critic acknowledgment against same target and separate Owner final gate."
+}
