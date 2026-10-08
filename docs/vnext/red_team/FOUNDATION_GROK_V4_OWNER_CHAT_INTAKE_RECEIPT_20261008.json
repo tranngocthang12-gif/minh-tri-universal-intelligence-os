@@ -1,0 +1,26 @@
+{
+  "schema": "minhtri-owner-critic-intake/v1",
+  "source": "Owner-provided JSON in MINH TRI project chat on 2026-10-08",
+  "provenance_class": "OWNER_CHAT_INTAKE_AUTHORING_SEAT",
+  "independent_receipt": false,
+  "independent_authenticity_verified": false,
+  "original_chat_bytes_verified": false,
+  "is_v5_critic_review": false,
+  "review_round": "FOUNDATION_V4_POST_OWNER_A_VERIFICATION",
+  "review_provider_claim": "xAI",
+  "archived_path": "docs/vnext/red_team/FOUNDATION_GROK_V4_POST_OWNER_A_VERIFICATION_20261008.json",
+  "archived_blob_sha": "3d48a23b18010edfdfe9f4b3b01439146b082dbc",
+  "source_evidence_branch": "owner/foundation-v5r2-exact-head-review-packet-20261008",
+  "source_evidence_commit": "45bb4130370f45264a148e0361647ace85c8388c",
+  "verdict": "MATERIAL_DEFECTS_FOUND",
+  "unresolved_material_findings": [
+    "FF-CLAUDE-V4-001",
+    "FF-CLAUDE-V4-007"
+  ],
+  "current_pr": "327",
+  "current_review_target_at_intake": "ced26a954ef6ee38cc0cc3016f45b67e565d01ce",
+  "candidate_only": true,
+  "is_owner_final_acceptance": false,
+  "foundation_status": "NOT_FROZEN",
+  "note": "Authoring-seat capture verifies Git blob identity only, not independent source authenticity, closure of material findings or later V5 exact-head review."
+}

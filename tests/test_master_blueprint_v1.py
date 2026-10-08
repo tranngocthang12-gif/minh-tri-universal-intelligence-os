@@ -1,3 +1,4 @@
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -128,13 +129,29 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("fresh different-seat Supervisor inspection", disp)
         self.assertIn("SUPERVISOR_INSPECTOR_DIFFERENT_SEAT", req)
 
-    def test_debt_register_and_capability_matrix_point_to_v3_gate_not_v2(self):
+    def test_debt_register_preserves_v3_and_matrix_points_to_current_v4_gate(self):
         debt=(ROOT/"docs/vnext/FOUNDATION_DEBT_REGISTER_V1_20261006.md").read_text(encoding="utf-8")
         matrix=(ROOT/"docs/vnext/FOUNDATION_CAPABILITY_TRUTH_MATRIX_V1_20261006.md").read_text(encoding="utf-8")
         self.assertIn("Gemini clean; Claude and Grok material findings", debt)
-        self.assertIn("MATERIAL_FINDINGS_PRESENT_V3", matrix)
+        self.assertIn("MATERIAL_FINDINGS_PRESENT_V4", matrix)
+        self.assertIn("C6_C7_C8_HISTORICAL_FAIL__C9_BOUNDED_PASS", matrix)
+        self.assertIn("FF-CLAUDE-V4-001/007 MEDIUM", matrix)
         self.assertNotIn("Must complete against the repaired v2 packet before final freeze", debt)
         self.assertNotIn("Claude + Grok v2 red-team receipts still required", matrix)
+
+    def test_grok_v4_intake_is_historical_not_v5_acceptance(self):
+        path=ROOT/"docs/vnext/red_team/FOUNDATION_GROK_V4_POST_OWNER_A_VERIFICATION_20261008.json"
+        raw=path.read_bytes()
+        saved=json.loads(raw)
+        receipt=load("docs/vnext/red_team/FOUNDATION_GROK_V4_OWNER_CHAT_INTAKE_RECEIPT_20261008.json")
+        sha=hashlib.sha1(f"blob {len(raw)}".encode("ascii") + bytes([0]) + raw).hexdigest()
+        self.assertEqual(saved["round"], "FOUNDATION_V4_POST_OWNER_A_VERIFICATION")
+        self.assertEqual(saved["verdict"], "MATERIAL_DEFECTS_FOUND")
+        self.assertEqual(set(saved["unresolved_material_findings"]), {"FF-CLAUDE-V4-001", "FF-CLAUDE-V4-007"})
+        self.assertEqual(sha, receipt["archived_blob_sha"])
+        self.assertEqual(receipt["provenance_class"], "OWNER_CHAT_INTAKE_AUTHORING_SEAT")
+        self.assertFalse(receipt["independent_receipt"])
+        self.assertFalse(receipt["is_v5_critic_review"])
 
 if __name__=="__main__":
     unittest.main()

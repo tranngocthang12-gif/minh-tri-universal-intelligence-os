@@ -635,9 +635,9 @@
         "ARCH-MASTER-BLUEPRINT-V1"
       ],
       "supersedes": [],
-      "result_ref": "PR#327 DRAFT integrated Foundation V4 candidate; exact repair target 9bd321410af0b1dff225eb6a5b8d77870698902e is ancestor; separate Supervisor PASS packet/result/receipt and V4 packet are present on candidate. Claude V4 and Grok post-Owner-A both MATERIAL_DEFECTS_FOUND; FF-CLAUDE-V4-001/007 remain blocked pending exact-head review and Owner gate. PR#319 remains Draft Class F held by Owner option A.",
+      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
       "handoff_ref": "docs/vnext/handoff/FOUNDATION_ACCEPTANCE_FREEZE_V1.md",
-      "next_action": "Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
       "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
       "change_class": "F",
       "acceptance_authority": "OWNER"
@@ -740,9 +740,9 @@
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#327 DRAFT integrated Foundation V4 candidate; exact repair target 9bd321410af0b1dff225eb6a5b8d77870698902e is ancestor; separate Supervisor PASS packet/result/receipt and V4 packet are present on candidate. Claude V4 and Grok post-Owner-A both MATERIAL_DEFECTS_FOUND; FF-CLAUDE-V4-001/007 remain blocked pending exact-head review and Owner gate. PR#319 remains Draft Class F held by Owner option A.",
+      "result_ref": "Draft PR#327 integrates V3 repair 9bd3214, exact Supervisor historical PASS artifacts, V4 packet, Owner A hold PR#319, and supplied Claude+Grok V4 MATERIAL reviews. Grok V4 result is archived as a non-independent Owner-chat intake on PR#327, not a V5 critic receipt. Latest exact-head CI and fresh independent Claude+Grok same-packet reviews are required; no final Foundation acceptance.",
       "handoff_ref": "docs/vnext/handoff/MASTER_BLUEPRINT_V1.md",
-      "next_action": "Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+      "next_action": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
       "blocker": "FOUNDATION_V4_MATERIAL_001_007_EXACT_HEAD_CI_INDEPENDENT_REVIEWS_AND_OWNER_ACCEPTANCE",
       "change_class": "F",
       "acceptance_authority": "OWNER",

@@ -13,12 +13,12 @@
 
 ## NOT DONE
 - Complete latest exact-head CI and prospective independent review.
-- Preserve full Grok post-A JSON with independently verifiable source receipt.
+- Grok post-A historical JSON is included with an authoring-seat intake receipt; independent source-byte verification remains open.
 - Resolve findings 001/007 on exact final package.
 - Owner final Foundation acceptance, protected merge and fresh-read.
 
 ## NEXT ACTION
-Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.
+Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.
 
 ## REQUIRED GATES
 - Identical exact-head packet and reviews on finalized candidate.

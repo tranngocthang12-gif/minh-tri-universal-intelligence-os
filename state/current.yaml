@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "FOUNDATION_FINAL_AUDIT_AND_FREEZE",
-  "next_checkpoint": "Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
+  "next_checkpoint": "Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,

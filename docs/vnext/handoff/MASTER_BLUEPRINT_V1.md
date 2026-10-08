@@ -16,13 +16,13 @@ Protected main last verified `d2640da0911940dad7ee2344e7bfa0d20c508bc2`; authori
 
 ## NOT DONE
 - Independent exact-head Claude+Grok reviews of final integrated target; no self-certification.
-- Post-Owner-A Grok JSON receipt and proof that it matches Owner-provided bytes.
+- Independent review of the current exact head and independent provenance verification of the archived Owner-submitted Grok result.
 - Exact-head CI and final bounded canonicalization validation.
 - Any final Owner Foundation acceptance, merge or fresh-read.
 - FF-CLAUDE-V4-001 and 007 remain materially unresolved until independently cleared on accepted final tree.
 
 ## NEXT ACTION
-Validate PR #327 exact-head CI, preserve post-Owner-A Grok evidence, freeze a same-target Foundation V5 review packet, obtain independent Claude and Grok verdicts, resolve any material findings, then seek explicit exact-package Owner acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.
+Check CI on PR #327's latest exact head, publish a new same-target review packet after all fixes, obtain independent fresh Claude and Grok reviews on that identical target and packet, resolve all material findings, and only then seek Owner exact-package final acceptance; keep PR #319 Draft/Class F and Foundation NOT_FROZEN.
 
 ## REQUIRED GATES
 - Freeze candidate Law router blob must remain `2faac92eff36a314fa120a1edf52da697ea04912`.
