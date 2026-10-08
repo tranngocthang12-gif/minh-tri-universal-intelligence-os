@@ -758,7 +758,7 @@
       "branch": "owner/delegated-auto-total-architect-approval-20261008",
       "base_sha": "d2640da0911940dad7ee2344e7bfa0d20c508bc2",
       "review_target_sha": "31e6a48188907a7eb3ef3a9d8bdfab8c19c27e13",
-      "requires": "OWNER_CLASS_F_ACCEPTANCE_AFTER_FOUNDATION_FREEZE_AND_CONTROLLED_REOPEN",
+      "requires": "none",
       "dependencies": [
         "ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1"
       ],
