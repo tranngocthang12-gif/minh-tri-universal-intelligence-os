@@ -11,16 +11,16 @@ def fixture():
     checks=[]
     for q in ("Apply the distinction to case A?","What would falsify the interpretation in case B?"):
         checks.append({"question":q,"question_hash":digest(q),"frozen_before_answer":True,"answer":"A bounded test answer.","judge":{"id":"critic-other","verdict":"PASS"}})
-    packet={"schema":"minhtri-learning-pilot/v1","goal_id":"BUDDHIST-A173","domain":"buddhist","producer_id":"author","sources":sources,
+    packet={"schema":"minhtri-learning-pilot/v1","goal_id":"BUDDHIST-A173","domain":"buddhist_thought","producer_id":"author","sources":sources,
         "understanding":{"record_id":"k1","own_words":"Bounded account.","alternative":"Other reading.","counterexample":"Countercase.","limits":"Not universal.","source_ids":["s1","s2"]},
         "transfer":checks,"policy":{"protected_review":True,"auto_merge":False,"auto_verified":False,"background_runtime":False}}
     packet["critic"]={"id":"independent-critic","verdict":"NO_MATERIAL_DEFECT","target_digest":target_digest(packet)}
-    atom={"schema":"minhtri-knowledge-atom/v1","record_type":"claim","id":"k1","domain":"buddhist","class":"SYNTHESIS",
+    atom={"schema":"minhtri-knowledge-atom/v1","record_type":"claim","id":"k1","domain":"buddhist_thought","class":"SYNTHESIS",
         "status":"PENDING_REVIEW","statement":"Hypothesis, not certified truth.","source_refs":["synthetic/early","synthetic/milinda"],"evidence_refs":[],
         "contradicts":[],"supersedes":[],"depends_on":[],"provenance":{"source_kind":"synthetic-test"}}
     packet["atom_sha256"]=record_digest(atom)
     packet["dependency_closure_sha256"]=record_digest(dependency_closure([atom],"k1")[0])
-    packet["domain_rules_sha256"]=record_digest({"buddhist":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
+    packet["domain_rules_sha256"]=record_digest({"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
     packet["critic"]["target_digest"]=target_digest(packet)
     return packet,[atom]
 
@@ -28,7 +28,7 @@ def fixture():
 class OfflineLearningPilotTests(unittest.TestCase):
     def check(self,p,records=None,goal="BUDDHIST-A173"):
         if records is None: records=fixture()[1]
-        return inspect(p,authorized_goal_id=goal,records=records,domain_rule_refs={"buddhist":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
+        return inspect(p,authorized_goal_id=goal,records=records,domain_rule_refs={"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
 
     def test_eligible_proposal_never_becomes_verified_or_durable(self):
         p,r=fixture();out=self.check(p,r)
@@ -88,6 +88,22 @@ class OfflineLearningPilotTests(unittest.TestCase):
     def test_record_must_remain_pending_review(self):
         p,r=fixture();r[0]["status"]="ACTIVE"
         self.assertIn("one matching pending knowledge atom required",self.check(p,r)["reasons"])
+
+    def test_canonical_buddhist_goal_and_attestation(self):
+        p,r=fixture()
+        self.assertTrue(self.check(p,r)["ready_for_review"])
+        p["understanding"]["source_ids"]=["s2"]
+        r[0]["class"]="ATTESTED";r[0]["source_refs"]=["synthetic/milinda"]
+        p["atom_sha256"]=record_digest(r[0])
+        p["dependency_closure_sha256"]=record_digest(dependency_closure(r,"k1")[0])
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("ATTESTED claim lacks cited early discourse",self.check(p,r)["reasons"])
+    def test_canonical_alias_rejected(self):
+        p,r=fixture();p["domain"]="buddhist";r[0]["domain"]="buddhist"
+        p["atom_sha256"]=record_digest(r[0])
+        p["dependency_closure_sha256"]=record_digest(dependency_closure(r,"k1")[0])
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("Buddhist goal domain mismatch",self.check(p,r)["reasons"])
 
     def test_unhashable_question_fails_structured(self):
         for q in ([],{},None):
