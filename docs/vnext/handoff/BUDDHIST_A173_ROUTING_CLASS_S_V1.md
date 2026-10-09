@@ -20,9 +20,12 @@ BOUNDARY: This is the **routing control task**, not the Class D Buddhist study t
 - This handoff is NOT authority to modify Foundation, edit Local Brain, or auto-merge.
 
 ## NEXT ACTION
-Independent review of exact-head canonical state/task routing changes, then Owner Class S acceptance and protected merge; no Foundation reopen or A173 checkpoint promotion.
+Repair and independently rereview exact-head PR #334; after explicit Owner Class S acceptance and protected merge, fresh-read main, obtain independent zero-chat recovery evidence and perform separately governed Class S closure; no Foundation reopen or A173 promotion.
 
 ## REQUIRED GATES
+- Routing effective at protected merge; an Evidence/Validation seat must then independently prove zero-chat recovery and a separately gated change must close the Class S task. This proof is NOT already done.
+- Gate 3 ordering deviation: initial build preceded separate Class S task registration commit 44e7b62. Explicit Owner acceptance consideration.
+- Older verbatim independent reports for historical HEAD 26d2902 are not available; builder paraphrase is not their substitute.
 1. Fresh-read protected main bootstrap -> Master Blueprint -> Foundation Law -> continuity law -> current/tasks.
 2. Verify exact PR #334 head and the COMPLETE changed-file diff (including study handoff, separate Class S handoff, critic disposition, current/tasks, tests and any later review packet/manifest), same-head CI, and branch ancestry to main. An older four-file scope is NOT the final review target.
 3. Confirm in proposed state: active task BUDDHIST-A173 Class D, branch null, A172 last completed, recovery NEXT ACTION identical in current/task/learning handoff; PR #249 not an executable branch; PR #319 still HOLD; autonomy flags false.
