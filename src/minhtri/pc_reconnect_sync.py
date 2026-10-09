@@ -315,68 +315,102 @@ def _atomic_json(path, value):
 
 
 def apply_snapshot(snapshot, root, fetch=fetch_public_github):
-    """Atomic pointer to a versioned *noncanonical* copy; never overwrite Tier-1."""
+    """Verified single-writer noncanonical cache. No Local Brain or code execution."""
     root = _safe_cache_root(root)
+    if not isinstance(snapshot, dict) or not isinstance(snapshot.get("manifest"), dict):
+        raise SyncBlocked("invalid proposed snapshot")
     manifest = snapshot["manifest"]
-    head = snapshot["head"]
+    head = snapshot.get("head")
     if not _sha(head) or manifest.get("head") != head:
         raise SyncBlocked("snapshot head mismatch")
-    pointer = root / "current.json"
-    old = None
-    if pointer.exists():
-        try:
-            record = json.loads(pointer.read_text(encoding="utf-8"))
-        except (ValueError, OSError, UnicodeError) as exc:
-            raise SyncBlocked("local cache pointer corrupted") from exc
-        old = record.get("head") if isinstance(record, dict) else None
-        if not _sha(old) or record.get("schema") != "minhtri-pc-cache-pointer/v1":
-            raise SyncBlocked("local cache pointer invalid")
-        old_dir = root / "snapshots" / old
-        try:
-            old_manifest = json.loads((old_dir / "manifest.json").read_text(encoding="utf-8"))
-        except (OSError, ValueError, UnicodeError) as exc:
-            raise SyncBlocked("previous snapshot manifest missing") from exc
-        if old_manifest.get("head") != old:
-            raise SyncBlocked("previous snapshot head altered")
-        _verify_stored(old_dir, old_manifest)
-        if old != head:
-            status = fetch("compare/" + old + "..." + head)
-            if not isinstance(status, dict) or status.get("status") != "ahead":
-                raise SyncBlocked("non-fast-forward GitHub main; refusing rollback")
-    target = root / "snapshots" / head
-    root.joinpath("snapshots").mkdir(parents=True, exist_ok=True)
-    if target.exists():
-        try:
-            present = json.loads((target / "manifest.json").read_text(encoding="utf-8"))
-        except (OSError, ValueError, UnicodeError) as exc:
-            raise SyncBlocked("existing target snapshot corrupt") from exc
-        if present != manifest:
-            raise SyncBlocked("existing target snapshot metadata differs")
-        _verify_stored(target, manifest)
-    else:
-        temp = Path(tempfile.mkdtemp(prefix="stage-", dir=root / "snapshots"))
-        try:
-            for path, data in sorted(snapshot["files"].items()):
-                _safe_path(path)
-                out = temp / "files" / Path(*path.split("/"))
-                out.parent.mkdir(parents=True, exist_ok=True)
-                out.write_bytes(data)
-            (temp / "manifest.json").write_text(
-                json.dumps(manifest, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
-                encoding="utf-8")
-            _verify_stored(temp, manifest)
-            os.replace(temp, target)
-        finally:
-            if temp.exists():
-                shutil.rmtree(temp)
-    _atomic_json(pointer, {"schema": "minhtri-pc-cache-pointer/v1",
-                           "head": head, "role": "NON_CANONICAL_READ_ONLY_GITHUB_MIRROR",
-                           "local_brain_unchanged": True})
-    return {"status": "NONCANONICAL_CACHE_UPDATED" if old != head else "CACHE_ALREADY_CURRENT",
-            "head": head, "old_head": old, "file_count": len(snapshot["files"]),
-            "route_warnings": manifest["route_warnings"],
-            "local_brain_written": False}
-
+    fresh = build_snapshot(fetch)
+    if (fresh["head"] != head or fresh["files"] != snapshot.get("files")
+            or fresh["manifest"] != manifest):
+        raise SyncBlocked("snapshot not bound to freshly fetched protected main")
+    _reject_reparse_chain(root.parent)
+    root.parent.mkdir(parents=True, exist_ok=True)
+    _reject_reparse_chain(root.parent)
+    root.mkdir(exist_ok=True)
+    _reject_reparse_chain(root)
+    with _exclusive_sync_lock(root):
+        _reject_reparse_chain(root)
+        pointer = root / "current.json"
+        _reject_reparse_chain(pointer)
+        old = None
+        if pointer.exists():
+            try:
+                record = json.loads(pointer.read_text(encoding="utf-8"))
+            except (ValueError, OSError, UnicodeError) as exc:
+                raise SyncBlocked("local cache pointer corrupted") from exc
+            old = record.get("head") if isinstance(record, dict) else None
+            if not _sha(old) or record.get("schema") != "minhtri-pc-cache-pointer/v1":
+                raise SyncBlocked("local cache pointer invalid")
+            old_dir = root / "snapshots" / old
+            _reject_reparse_chain(old_dir)
+            try:
+                old_manifest = json.loads((old_dir / "manifest.json").read_text(encoding="utf-8"))
+            except (OSError, ValueError, UnicodeError) as exc:
+                raise SyncBlocked("previous snapshot manifest missing") from exc
+            if old_manifest.get("head") != old:
+                raise SyncBlocked("previous snapshot head altered")
+            _verify_stored(old_dir, old_manifest)
+            if old != head:
+                compare = fetch("compare/" + old + "..." + head + "?per_page=1")
+                if not isinstance(compare, dict) or compare.get("status") != "ahead":
+                    raise SyncBlocked("non-fast-forward main; refusing rollback")
+        snapshots = root / "snapshots"
+        _reject_reparse_chain(snapshots)
+        snapshots.mkdir(exist_ok=True)
+        _reject_reparse_chain(snapshots)
+        target = snapshots / head
+        _reject_reparse_chain(target)
+        if target.exists():
+            try:
+                present = json.loads((target / "manifest.json").read_text(encoding="utf-8"))
+            except (OSError, ValueError, UnicodeError) as exc:
+                raise SyncBlocked("existing target snapshot corrupt") from exc
+            if present != manifest:
+                raise SyncBlocked("existing snapshot metadata mismatch")
+            _verify_stored(target, manifest)
+        else:
+            temp = Path(tempfile.mkdtemp(prefix="stage-", dir=snapshots))
+            try:
+                _reject_reparse_chain(temp)
+                for path, data in sorted(snapshot["files"].items()):
+                    _safe_path(path)
+                    out = temp / "files" / Path(*path.split("/"))
+                    _reject_reparse_chain(out)
+                    out.parent.mkdir(parents=True, exist_ok=True)
+                    _reject_reparse_chain(out.parent)
+                    with out.open("xb") as handle:
+                        handle.write(data)
+                        handle.flush()
+                        os.fsync(handle.fileno())
+                marker = temp / "manifest.json"
+                with marker.open("x", encoding="utf-8") as handle:
+                    json.dump(manifest, handle, indent=2, ensure_ascii=False, sort_keys=True)
+                    handle.write("\n")
+                    handle.flush()
+                    os.fsync(handle.fileno())
+                _verify_stored(temp, manifest)
+                if os.name != "nt":
+                    for current_dir, _dirs, _files in os.walk(temp, topdown=False):
+                        _fsync_directory(current_dir)
+                _reject_reparse_chain(target)
+                os.replace(temp, target)
+                _fsync_directory(snapshots)
+            finally:
+                if temp.exists():
+                    _reject_reparse_chain(temp)
+                    shutil.rmtree(temp)
+        _reject_reparse_chain(pointer)
+        _atomic_json(pointer, {"schema": "minhtri-pc-cache-pointer/v1",
+                               "head": head, "role": "NON_CANONICAL_READ_ONLY_GITHUB_MIRROR",
+                               "local_brain_unchanged": True})
+        return {"status": "NONCANONICAL_CACHE_UPDATED" if old != head else "CACHE_ALREADY_CURRENT",
+                "head": head, "old_head": old, "file_count": len(snapshot["files"]),
+                "route_warnings": manifest["route_warnings"],
+                "local_brain_written": False}
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="Protected-main read-only PC reconnect cache")
