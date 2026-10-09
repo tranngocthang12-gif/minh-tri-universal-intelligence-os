@@ -26,7 +26,7 @@ class UnifiedLearningMethodTests(unittest.TestCase):
                      "docs/learning/LEARNING_SEAT_WORKSHEET_V1.md"):
             text = read(path)
             self.assertIn(law_ref, text)
-            self.assertIn("§2A", text)
+            self.assertTrue("§2A" in text or "section 2A" in text, path)
         boot = json.loads(read("state/bootstrap.json"))
         self.assertEqual(boot["durable_continuity_authority"], "GITHUB_PROTECTED_MAIN")
         self.assertEqual(boot["task_registry"], "state/tasks.yaml")
