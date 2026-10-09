@@ -63,7 +63,7 @@ class OwnerLawSupersessionTests(unittest.TestCase):
     def test_law_07_uncertain_scope_blocks_only_affected_mutation(self):
         self.assertIn("affected mutation",self.router)
         self.assertIn("read-only",self.router)
-        self.assertIn("safe read-only learning",self.blueprint)
+        self.assertIn("read-only learning continues",self.blueprint)
 
     def test_law_08_recovery_resolves_effective_law_not_candidate(self):
         self.assertIn("sole",self.recovery)
@@ -79,7 +79,7 @@ class OwnerLawSupersessionTests(unittest.TestCase):
 
     def test_law_10_class_f_gate_and_no_auto_merge(self):
         self.assertIn("Owner acceptance",self.router)
-        self.assertIn("independent critic",self.router)
+        self.assertIn("Independent Reviewer/Critic",self.router)
         task=next(t for t in self.tasks if t["task_id"]=="MT-OWNER-LAW-SUPERSESSION-20261009")
         self.assertEqual(task["change_class"],"F")
         self.assertEqual(task["acceptance_authority"],"OWNER")
