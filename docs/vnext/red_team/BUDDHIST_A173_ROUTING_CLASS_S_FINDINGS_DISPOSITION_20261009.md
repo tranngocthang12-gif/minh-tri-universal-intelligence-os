@@ -41,9 +41,20 @@ Owner-provided pasted Grok, Codex and Claude JSON reports were ingested as **unv
 - CI success must be proven for the **final** exact SHA of PR #334 after this document and the Class S handoff are added.
 - Independent reviewer must fresh-read all changed files and recompute/determine route consistency, compare against protected main, challenge old defects, and report limitations.
 - Owner acceptance must be a distinct explicit instruction referencing exact head and critic disposition; an operational priority approval is NOT acceptance.
-- After protected merge: fresh-read main, prove recovery route in a new seat without chat, and only then promote active learning routing. A173 content still unaccepted, not A174.
+- Routing effective on protected merge after explicit Owner acceptance; next, independently fresh-read main, record a different-seat zero-chat recovery witness, then close Class S task by separately gated canonical change. A173 stays DRAFT.
 - A separate Class S task handoff must not contradict the Class D learning handoff: they are different tasks with different NEXT ACTIONs.
 - PR #319 remains HOLD; auto runtime remains OFF. PC and Local Brain receive no writes from this proposal.
 
 CLASS_S_ROUTING_HANDOFF: docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md
 CLASS_D_LEARNING_HANDOFF: docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md
+
+## Claude finding intake and current blockers
+- Prior head 951fed27a9f106d9cd1c465a8fa2364d1c38c0e3: Owner-pasted Grok reported NO_MATERIAL_DEFECT_FOUND; Claude reported MATERIAL_DEFECTS_FOUND (F1-F3 MEDIUM, F4-F7 LOW). These are unverified-provenance chat intakes, not provider-authenticated attestations.
+- F1 repair candidate: PR #336 explicitly UNBOUND; Owner-authorized exact branch/base/head required before any Class D write. Read-only research allowed.
+- F2 repair candidate: routing effective at merge; independent post-merge zero-chat recovery witness and separately gated task closure required.
+- F3 BLOCKED: older Grok/Codex/Claude verbatim original reports against 26d2902 not accessible. Archive originals with provenance-unverified receipts and explicit Owner HIGH/MEDIUM disposition before acceptance; do not fabricate missing texts.
+- F4: all six PR #249 learning-file blob references now inventoried in active handoff; archival/salvage remains open.
+- F5: role bootstrap and architecture routing explicitly required by study handoff.
+- F6: Gate 3 task-authorize-after-build ordering deviation disclosed. Both tasks declare Builder role, not independent critic.
+- F7: earlier A173 draft promotion condition explicitly superseded by stronger gates.
+- Repair commits invalidate both older exact-head verdicts. New CI and fresh Grok/Claude independent rereview required. NO MERGE.
