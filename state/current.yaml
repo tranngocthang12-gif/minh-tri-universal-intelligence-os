@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "OWNER_DIRECTED_LEARNING",
-  "next_checkpoint": "Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.",
+  "next_checkpoint": "Continue read-only A173 research from completed A172 under early-discourse primacy and mandatory Milindapañha; before any Class D branch mutation including PR #336 obtain explicit Owner assignment and exact branch/base/head binding; A173 remains DRAFT and PR #249 remains unmerged.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
