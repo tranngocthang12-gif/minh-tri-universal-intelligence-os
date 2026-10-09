@@ -85,6 +85,54 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("PR #249 is NOT a current execution branch",handoff)
         self.assertIn("PR #319 remains Draft/Class F HOLD",handoff)
 
+    def test_class_s_routing_is_separate_from_class_d_study(self):
+        state=load("state/current.yaml")
+        records=load("state/tasks.yaml")["tasks"]
+        by_id={r["task_id"]:r for r in records}
+        routing=by_id["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        study=by_id["BUDDHIST-A173"]
+        self.assertEqual(state["foundation_status"],"FROZEN")
+        self.assertEqual(routing["change_class"],"S")
+        self.assertEqual(routing["acceptance_authority"],"OWNER")
+        self.assertEqual(routing["status"],"IN_PROGRESS")
+        self.assertIn("INDEPENDENT_CLASS_S_REREVIEW",routing["blocker"])
+        self.assertEqual(routing["base_sha"],"a5ed9d8347a60b95503fe2e5de6b95fd8375eb76")
+        self.assertEqual(routing["branch"],"owner/buddhist-a173-learning-routing-20261009")
+        self.assertTrue({"state/current.yaml","state/tasks.yaml","tests/test_master_blueprint_v1.py"}.issubset(set(routing["scope"])))
+        self.assertEqual(study["change_class"],"D")
+        self.assertEqual(study["acceptance_authority"],"OWNER")
+        self.assertIsNone(study["branch"])
+        self.assertEqual(study["branch_binding"],"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        self.assertEqual(state["active_task_id"],study["task_id"])
+        self.assertFalse(state["autonomous_learning_runtime"])
+        self.assertFalse(state["automatic_self_critique_runtime"])
+        self.assertFalse(state["meta_learning_runtime"])
+
+    def test_zero_chat_route_recovers_handoff_and_dependent_drafts(self):
+        boot=load("state/bootstrap.json")
+        state=load(boot["current_state"])
+        tasks=load(boot["task_registry"])
+        current=next(x for x in tasks["tasks"] if x["task_id"]==state["active_task_id"])
+        self.assertEqual(current["task_id"],"BUDDHIST-A173")
+        self.assertIsNone(current["branch"],"legacy PR #249 must not be executed")
+        handoff_path=ROOT/current["handoff_ref"]
+        self.assertTrue(handoff_path.is_file())
+        handoff=handoff_path.read_text(encoding="utf-8")
+        self.assertIn("## NEXT ACTION",handoff)
+        self.assertEqual(handoff.split("## NEXT ACTION",1)[1].strip().splitlines()[0],current["next_action"])
+        self.assertEqual(current["next_action"],state["next_checkpoint"])
+        self.assertIn("PR #319 remains Draft/Class F HOLD",handoff)
+        self.assertIn("BUDDHIST_THOUGHT_COMPLIANCE_AUDIT_20261005.md",handoff)
+        self.assertIn("BUDDHIST_THOUGHT_CHECKPOINT_A177_DRAFT_20261005.md",handoff)
+        for step in (174,175,176):
+            path=ROOT/f"docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A{step}_DRAFT_20261005.md"
+            self.assertTrue(path.is_file(),str(path))
+            self.assertIn(f"A{step}",handoff)
+        self.assertTrue((ROOT/"docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md").is_file())
+        draft=(ROOT/"docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.md").read_text(encoding="utf-8")
+        self.assertIn("A173",draft)
+        self.assertIn("NOT CURRENT",handoff)
+
     def test_exact_next_action_is_identical_across_current_task_handoff(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
