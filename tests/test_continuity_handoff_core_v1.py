@@ -157,7 +157,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             ("Builder as Owner holder", lambda route: route.__setitem__("holder", "OWNER"),
              "routing Builder cannot be Owner acceptance authority"),
             ("missing F3 key", lambda route: route["material_findings_owner_gate"]["provisional_intake_keys"].pop(),
-             "routing Class S eight historical material keys must remain open"),
+             "routing Class S exact eight historical risk identities changed"),
         ]
         for name, modify_route, expected in cases:
             with self.subTest(case=name):
