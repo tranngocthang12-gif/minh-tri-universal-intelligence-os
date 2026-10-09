@@ -42,6 +42,19 @@ class UnifiedLearningMethodTests(unittest.TestCase):
         self.assertIn("A205/A206", worksheet)
         self.assertIn("zero-chat", law)
 
+    def test_pc_offline_is_not_a_github_learning_blocker(self):
+        law = read("docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md")
+        self.assertIn("## 2B. PC-OFFLINE CONTINUITY", law)
+        self.assertIn("GitHub protected main alone remains durable canonical authority", law)
+        self.assertIn("NOT YET DURABLY RECORDED", law)
+        self.assertIn("LOCAL_BRAIN_MIRROR=NOT_WRITTEN", law)
+        worksheet = read("docs/learning/LEARNING_SEAT_WORKSHEET_V1.md")
+        recovery = read("docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md")
+        self.assertIn("PC-offline operating mode", worksheet)
+        self.assertIn("PC independence note", recovery)
+        current = json.loads(read("state/current.yaml"))
+        self.assertEqual(current["pc_local_brain_role"], "NON_CANONICAL_EXECUTION_AND_MIRROR_SIDECAR")
+
     def test_does_not_mutate_canonical_task_or_checkpoint(self):
         current = json.loads(read("state/current.yaml"))
         registry = json.loads(read("state/tasks.yaml"))
