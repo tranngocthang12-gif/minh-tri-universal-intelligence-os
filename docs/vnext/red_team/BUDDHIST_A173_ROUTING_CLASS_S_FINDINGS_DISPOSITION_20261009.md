@@ -74,3 +74,22 @@ CLASS_D_LEARNING_HANDOFF: docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_202
 - At exact-head Class S acceptance Owner must appoint accountable replaceable Evidence/Validation witness and Class S closure holders; both are currently UNASSIGNED and Builder cannot self-certify.
 - Protected merge must bind REVIEWED_HEAD_SHA, OWNER_ACCEPTANCE_COMMENT_ID and EXACT_HEAD_CI_RUN_ID. Historical pre-merge candidate status is superseded after protected merge only by these durable binding receipts; recovery requires independent zero-chat witness and separate protected closure.
 - No Owner HIGH/MEDIUM disposition, assignment, acceptance, protected merge, or Local Brain write is claimed by this candidate.
+
+
+## Owner-confirmed loss of historical F3 originals — replacement audit proposal (2026-10-09)
+
+OWNER DIRECTIVE (project chat): Owner no longer has the original historical F3 reports for old head `26d29022d2196691879fb152d2d9d3657979568a`; architect is instructed to prepare a governed replacement verification. This is Owner confirmation of **unavailability only**, NOT an attestation that the builder summaries are complete, not a rejection of any historical HIGH/MEDIUM, and not exact-head Class S acceptance.
+
+**Honest provenance disposition:** the original Grok/Codex/Claude verdict text and original reviewer identities/provenance are permanently **UNVERIFIED unless newly located**. Their eight builder-derived provisional intake keys remain the historical risk inventory, not authenticated original reviewer finding IDs. Never reconstruct fabricated originals or claim historical review completed.
+
+**Proposed replacement evidence route (not yet approved):**
+1. Retain each of the eight provisional keys and the corresponding suspected failure mechanism; build a new trace table with the original suspected error, exact *current* candidate state, source/line, negative test, new independent reviewer decision, and unresolved uncertainty.
+2. A fresh different-seat reviewer with no original chat context reads protected main, full PR #334 changed-file diff and exact new HEAD, then checks all eight *failure mechanisms* directly, including old PR #249 branch divergence, dependent A174-A177, missing Class S task authorization, proposed Class D mutation gate, post-merge recovery, and absence of the original F3 reports. Report any additional findings independently, not limited by builder intake.
+3. Machine validation: exact-head GitHub workflow jobs, regression/negative controls and current/task/handoff NEXT ACTION equality. These show bounded mechanics, not independent human/AI critique or source authenticity.
+4. Preserve reviewer response and limitations as new evidence, not a retroactive copy of the 26d reports. New independent verdict **cannot establish historical summary completeness**.
+5. Owner separately disposes each HIGH/MEDIUM historical risk key based on present-day direct evidence as REPAIR_CONFIRMED, EXPLICITLY_REJECTED_WITH_REASON, or UNRESOLVED; Owner also explicitly decides whether to accept **residual missing-originals provenance risk**. A zero-chat independent Evidence/Validation holder and distinct Class S closure holder must be named at the exact-head Owner gate.
+6. Only later exact-head Owner Class S acceptance plus protected merge and post-merge independent zero-chat witness can change authoritative state. The existing one-time Gate 3 exception is accepted only for past ordering; never re-waive it or silently grant Gate 8.
+
+**Crucial difference from the historical candidate route:** since the originals are unavailable, DO NOT ask Owner to certify that summaries are 'complete and accurate'. Instead request an explicit Owner decision about eight currently inspectable *risk mechanisms* and the disclosed evidence gap, after independent full-target re-review. Until formal approval of this replacement evidence route, both old F3 and its replacement remain OPEN.
+
+CURRENT: REPLACEMENT_PROPOSED, HISTORICAL_F3_UNVERIFIED, INDEPENDENT_NEW_HEAD_REVIEW_PENDING, PER_FINDING_OWNER_DISPOSITION_PENDING, CLASS_S_OWNER_ACCEPTANCE_NOT_GRANTED, NO_MERGE, NO_A173_COMPLETION.
