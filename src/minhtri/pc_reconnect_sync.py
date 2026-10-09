@@ -223,14 +223,57 @@ def build_snapshot(fetch=fetch_public_github):
     return {"head": sha, "files": files, "manifest": manifest}
 
 
+def _reject_reparse_chain(path):
+    path = Path(path).absolute()
+    for child in (path, *path.parents):
+        try:
+            info = os.lstat(child)
+        except FileNotFoundError:
+            continue
+        if (stat.S_ISLNK(info.st_mode)
+                or getattr(info, "st_file_attributes", 0) & getattr(stat, "FILE_ATTRIBUTE_REPARSE_POINT", 0x400)):
+            raise SyncBlocked("cache path contains symlink or Windows reparse point")
+
+
 def _safe_cache_root(root):
     path = Path(root)
-    if path.name != "pc-reconnect-sync" or path.parent.name != "minhtri-runtime-current":
+    if (not path.is_absolute() or path.name != "pc-reconnect-sync"
+            or path.parent.name != "minhtri-runtime-current"):
         raise SyncBlocked("cache destination outside dedicated runtime directory")
-    for candidate in (path.parent, path):
-        if candidate.is_symlink() or getattr(candidate, "is_junction", lambda: False)():
-            raise SyncBlocked("cache destination may not be a link or junction")
+    if any(part.casefold() in {"ledger", "local-brain", "local_brain", "brain-ledger"} for part in path.parts):
+        raise SyncBlocked("cache cannot be placed under a ledger path")
+    _reject_reparse_chain(path)
     return path
+
+
+def _fsync_directory(path):
+    if os.name != "nt":
+        fd = os.open(str(path), os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+
+
+@contextmanager
+def _exclusive_sync_lock(root):
+    lock = root / ".pc-sync.lock"
+    _reject_reparse_chain(lock)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
+    try:
+        fd = os.open(str(lock), flags, 0o600)
+    except FileExistsError as exc:
+        raise SyncBlocked("sync already running; refuse concurrent writer") from exc
+    try:
+        with os.fdopen(fd, "wb") as out:
+            out.write(b"MINHTRI_SYNC_LOCKED\n")
+            out.flush()
+            os.fsync(out.fileno())
+        yield
+    finally:
+        lock.unlink()
 
 
 def _verify_stored(directory, manifest):
@@ -241,7 +284,8 @@ def _verify_stored(directory, manifest):
             raise SyncBlocked("invalid cached file entry")
         path = _safe_path(item.get("path"))
         file = directory / "files" / Path(*path.split("/"))
-        if file.is_symlink() or not file.is_file():
+        _reject_reparse_chain(file)
+        if not file.is_file():
             raise SyncBlocked("cached file missing or linked")
         data = file.read_bytes()
         if (len(data) != item.get("bytes")
@@ -251,7 +295,9 @@ def _verify_stored(directory, manifest):
 
 
 def _atomic_json(path, value):
+    _reject_reparse_chain(path)
     path.parent.mkdir(parents=True, exist_ok=True)
+    _reject_reparse_chain(path)
     handle = None
     try:
         with tempfile.NamedTemporaryFile("w", dir=path.parent, suffix=".tmp",
@@ -260,7 +306,9 @@ def _atomic_json(path, value):
             json.dump(value, out, ensure_ascii=False, sort_keys=True, indent=2)
             out.flush()
             os.fsync(out.fileno())
+        _reject_reparse_chain(path)
         os.replace(handle, path)
+        _fsync_directory(path.parent)
     finally:
         if handle is not None and handle.exists():
             handle.unlink()
