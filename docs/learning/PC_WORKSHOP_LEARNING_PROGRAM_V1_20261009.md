@@ -1,6 +1,7 @@
 # MINH TRI — PC WORKSHOP LEARNING PROGRAM V1
 Date: 2026-10-09
 Status: OWNER APPROVED LEARNING OBJECTIVE / CLASS D IMPLEMENTATION CANDIDATE / NOT YET MAIN
+**TASK_ID:** PC-WORKSHOP-LEARNING-V1
 
 ## Intent and boundaries
 Owner approves a distinct PC workshop learning track. Learn PC hardware, Windows, storage, BIOS/UEFI, networks, fault diagnosis and maintenance; read current evidence before making claims. This is an EDUCATION program, not permission to autonomously change the Owner PC.
@@ -23,8 +24,8 @@ Understand/remember != a test PASS. A question or model answer alone is NOT proo
 No autonomous PC activity or timed background learning is authorized by this program.
 
 ## PC01 — first observation and learning
-A live Desktop Commander ping returned PONG for device WIN-VBIQNFFDKIR on 2026-10-09 (+07 offset implied by 2026-10-08T18:41:04Z). Earlier live list indicated Windows PC Online with Desktop Commander 0.2.52. Local Brain brain.verify returned VALID, event_count 12, focus remains YouTube 'chat quen, so khong' with UNTESTED_EXPECTATION; no PC-workshop lesson matches.
-These observations establish remote connectivity only. They do not prove CPU, RAM, disk size, thermal conditions, PC safety, installed packages, a student learning outcome or durable PC lesson in the machine ledger.
+- Previous candidate-only session identifiers, runtime counters and Local Brain focus metadata are intentionally excluded from the public learning record. No new connection check was made for this lesson.
+A reported connector ping, even if accurately recorded in a prior review, is not a fresh verification of connectivity or a basis for claiming CPU, RAM, storage, temperatures, machine safety, software state, learning outcomes or machine-ledger writes.
 
 ### PC01 content
 - CPU executes instructions; RAM holds actively used working data; persistent SSD/HDD survives power-off. Storage type and speed require evidence, not assumptions.
@@ -46,3 +47,6 @@ NEXT: PC01 read-only factual hardware inventory and independently assessed exerc
 OPEN: machine hardware specifications, temperature, disk reliability, backups, independent teacher/critic check, fresh-chat recall, secure ledger write path.
 RECORD: docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md (unmerged candidate).
 MACHINE_LEDGER: NOT WRITTEN.
+
+## NEXT ACTION
+Continue PC01 theory and Owner-friendly exercise using source-bound materials without requiring a live PC; any later read-only hardware inventory needs its own Owner-directed PC-bound step and connectivity proof. Do not claim machine specs, VERIFIED learning or Local Brain writes; retain Class D PR/CI gate.

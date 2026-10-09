@@ -785,15 +785,17 @@
       ],
       "branch": "owner/pc-workshop-learning-v1-20261009",
       "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
-      "requires": "pc",
+      "requires": "none",
       "dependencies": [],
       "supersedes": [],
       "result_ref": "docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md",
       "handoff_ref": "docs/learning/PC_WORKSHOP_LEARNING_PROGRAM_V1_20261009.md",
       "change_class": "D",
       "acceptance_authority": "OWNER",
-      "next_action": "Continue PC01 safe read-only system inventory and quiz; do not promote PC learning to VERIFIED, modify Owner PC, or imply autonomous learning. Review Class D checkpoint through PR/CI.",
-      "blocker": null
+      "next_action": "Continue PC01 theory and Owner-friendly exercise using source-bound materials without requiring a live PC; any later read-only hardware inventory needs its own Owner-directed PC-bound step and connectivity proof. Do not claim machine specs, VERIFIED learning or Local Brain writes; retain Class D PR/CI gate.",
+      "blocker": null,
+      "pc_liveness_boundary": "PC_WORKSHOP_THEORY_NOT_PC_DEPENDENT; LIVE_INVENTORY_SEPARATE_OWNER_DIRECTED_SCOPE",
+      "privacy_boundary": "PUBLIC_LEARNING_RECORD_OMITS_HOST_IDENTIFIERS_SESSION_COUNTERS_AND_LOCAL_BRAIN_FOCUS"
     }
   ]
 }
