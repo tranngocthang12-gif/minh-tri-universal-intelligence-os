@@ -52,4 +52,4 @@ Material findings remain pending Owner dispositions; assistant-authored repair i
 - The requested Claude and Grok outputs were received in separate user turns, but independence beyond self-attestation has not been technically proven.
 - Owner retains authority for material finding rejection/acceptance. This summary records findings but does not close them.
 
-**Finding count:** R1=6, R2=9, R3=6. CRITICAL=2, HIGH=9, MEDIUM=8, LOW=2 (check counts against the table before relying on this metadata).
+**Finding count:** R1=6, R2=9, R3=6. CRITICAL=2, HIGH=9, MEDIUM=7, LOW=3 (check counts against the table before relying on this metadata).
