@@ -2,7 +2,7 @@
 import hashlib
 import json
 import unicodedata
-from minhtri.knowledge_fast_lane import validate_fast_lane_change
+from minhtri.knowledge_fast_lane import validate_fast_lane_change, REQUIRED_FIELDS, ALLOWED_CLASSES
 
 def digest(text):
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
@@ -19,8 +19,14 @@ def normalized_id(value):
     return unicodedata.normalize("NFKC", value).strip().casefold() if isinstance(value,str) else ""
 
 def dependency_closure(records, root):
-    table = {r.get("id"):r for r in records if isinstance(r.get("id"),str)}
+    """Bounded closure; all supporting atoms need valid status and schema."""
     errors=[]
+    if len(records) > 500:
+        return {}, ["knowledge graph exceeds safe bound"]
+    record_ids = [r.get("id") for r in records]
+    if len([x for x in record_ids if isinstance(x,str)]) != len(set(x for x in record_ids if isinstance(x,str))):
+        errors.append("duplicate knowledge record id")
+    table = {r.get("id"):r for r in records if isinstance(r.get("id"),str)}
     relevant={}
     visiting=set()
     visited=set()
@@ -30,12 +36,19 @@ def dependency_closure(records, root):
             return
         if key in visited:
             return
+        if len(visiting) >= 60:
+            errors.append("dependency depth exceeds safe bound")
+            return
         obj=table.get(key)
         if not isinstance(obj,dict):
             errors.append("missing knowledge dependency")
             return
-        if obj.get("status") not in {"ACTIVE","PENDING_REVIEW"}:
+        if obj.get("status") not in ({"PENDING_REVIEW"} if key == root else {"ACTIVE"}):
             errors.append("invalid or stale dependency status")
+        if (obj.get("schema") != "minhtri-knowledge-atom/v1"
+                or not REQUIRED_FIELDS.issubset(obj)
+                or obj.get("class") not in ALLOWED_CLASSES):
+            errors.append("malformed supporting knowledge atom")
         visiting.add(key)
         refs=obj.get("depends_on",[])
         if not isinstance(refs,list) or any(not isinstance(v,str) or not v for v in refs):
@@ -66,11 +79,19 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
         return {"ready_for_review":False,"reasons":["invalid pilot input shape"],
                 "target_digest":None,"understanding_proven":False,
                 "behavioral_learning_proven":False,"durable_written":False,
-                "automatic_verified":False,"background_runtime_enabled":False}
+                "automatic_verified":False,"background_runtime_enabled":False,"critic_independence_proven":False,"transfer_precommitment_proven":False}
     if not isinstance(packet.get("producer_id"),str) or not packet["producer_id"].strip():
         errors.append("producer identity declaration missing")
-    if packet.get("schema")!="minhtri-learning-pilot/v1" or packet.get("goal_id")!=authorized_goal_id or not authorized_goal_id:
+    if (packet.get("schema")!="minhtri-learning-pilot/v1"
+            or packet.get("goal_id")!=authorized_goal_id
+            or authorized_goal_id != "BUDDHIST-A173"):
         errors.append("unauthorized learning goal")
+    expected_rules=[
+        "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+        "knowledge/schema/KNOWLEDGE_SCHEMA_V1.md",
+    ]
+    if domain_rule_refs.get("buddhist_thought") != expected_rules:
+        errors.append("canonical Buddhist Fast Lane rules mismatch")
     policy=packet.get("policy",{})
     if not isinstance(policy,dict) or policy.get("protected_review") is not True or policy.get("auto_merge") is not False or policy.get("auto_verified") is not False or policy.get("background_runtime") is not False:
         errors.append("unsafe learning policy")
@@ -134,7 +155,7 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
                 or not isinstance(item.get("answer"),str) or not item["answer"].strip()):
                 errors.append("transfer integrity failure")
             if isinstance(q,str):
-                normalized_question=" ".join(q.split()).casefold()
+                normalized_question=normalized_id(" ".join(q.split()))
                 if normalized_question in seen: errors.append("duplicate transfer question")
                 seen.add(normalized_question)
             judge=item.get("judge",{})
@@ -162,10 +183,10 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
     if len(matched)==1:
         atom=matched[0]
         atom_hash=record_digest(atom)
-        if atom_hash is None or not isinstance(packet.get("atom_sha256"),str) or len(packet["atom_sha256"])!=64 or record_digest(atom)!=packet.get("atom_sha256"):
+        if atom_hash is None or not isinstance(packet.get("atom_sha256"),str) or len(packet["atom_sha256"])!=64 or any(c not in "0123456789abcdef" for c in packet["atom_sha256"].lower()) or atom_hash!=packet.get("atom_sha256"):
             errors.append("knowledge atom integrity mismatch")
         refs=atom.get("source_refs")
-        locators={src["locator"] for src in sources or [] if isinstance(src,dict) and isinstance(src.get("locator"),str)}
+        locators={src["locator"] for src in (sources if isinstance(sources,list) else []) if isinstance(src,dict) and isinstance(src.get("locator"),str)}
         if not isinstance(refs,list) or not refs or any(not isinstance(ref,str) or ref not in locators for ref in refs):
             errors.append("knowledge atom sources not bound to snapshots")
     if len(matched)==1 and matched[0].get("class")=="ATTESTED":
@@ -184,4 +205,4 @@ def inspect(packet, *, authorized_goal_id, records, domain_rule_refs):
             errors.extend(gate.reasons)
         except (TypeError,ValueError,KeyError):
             errors.append("malformed knowledge atom rejected by Fast Lane")
-    return {"ready_for_review":not errors,"reasons":sorted(set(errors)),"target_digest":target_digest(packet),"understanding_proven":False,"behavioral_learning_proven":False,"durable_written":False,"automatic_verified":False,"background_runtime_enabled":False}
+    return {"ready_for_review":not errors,"reasons":sorted(set(errors)),"target_digest":target_digest(packet),"understanding_proven":False,"behavioral_learning_proven":False,"durable_written":False,"automatic_verified":False,"background_runtime_enabled":False,"critic_independence_proven":False,"transfer_precommitment_proven":False}
