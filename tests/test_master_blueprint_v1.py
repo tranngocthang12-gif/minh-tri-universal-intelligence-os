@@ -193,7 +193,11 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         gate=routing["material_findings_owner_gate"]
         self.assertEqual(gate["owner_acceptance"],"NOT_GRANTED")
         self.assertEqual(gate["status"],"OWNER_PER_FINDING_DISPOSITION_PENDING")
-        self.assertIn("OWNER_ATTACH_VERBATIM",gate["originals_or_attestation"])
+        self.assertIn("OWNER_REPORTED_ORIGINALS_LOST",gate["originals_or_attestation"])
+        self.assertIn("OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION",gate["gate_3_build_before_task_authorize"])
+        self.assertIn("replacement route",routing["next_action"])
+        self.assertIn("residual historical uncertainty",sh)
+        self.assertNotIn("durably attest the builder intake summaries are complete and accurate",sh)
         for k in gate["provisional_intake_keys"]:
             self.assertIn(k,dispo)
         self.assertIn("Gate 3 authorization-after-build",dispo)
