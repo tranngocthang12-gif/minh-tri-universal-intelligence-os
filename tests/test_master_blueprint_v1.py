@@ -133,6 +133,21 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("A173",draft)
         self.assertIn("NOT CURRENT",handoff)
 
+    def test_class_s_handoff_distinct_from_class_d_and_exact_next_action(self):
+        records=load("state/tasks.yaml")["tasks"]
+        routes={r["task_id"]:r for r in records}
+        routing=routes["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        study=routes["BUDDHIST-A173"]
+        self.assertNotEqual(routing["handoff_ref"],study["handoff_ref"])
+        for task in (routing,study):
+            handoff=(ROOT/task["handoff_ref"]).read_text(encoding="utf-8")
+            self.assertIn("## NEXT ACTION",handoff)
+            self.assertEqual(task["next_action"],handoff.split("## NEXT ACTION",1)[1].strip().splitlines()[0])
+        self.assertEqual(routing["change_class"],"S")
+        self.assertIn("CLASS_S_FINDINGS_DISPOSITION",routing["result_ref"])
+        self.assertIn("PR #319 remains", (ROOT/routing["handoff_ref"]).read_text(encoding="utf-8"))
+        self.assertEqual(study["change_class"],"D")
+
     def test_exact_next_action_is_identical_across_current_task_handoff(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
