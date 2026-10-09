@@ -1,7 +1,7 @@
 # Buddhist Thought Checkpoint A173 — SOURCE-AUDITED CANDIDATE — 2026-10-09
 
 **Track:** Học hiểu tư duy, tư tưởng Phật  
-**Status:** PROMOTION CANDIDATE / SOURCE-AUDITED / NOT CURRENT UNTIL MERGE  
+**Status:** SOURCE-AUDITED CANDIDATE / PENDING INDEPENDENT REVIEW + GOVERNED ACCEPTANCE / NOT CURRENT  
 **Canonical predecessor:** PHASE 4 — A172 COMPLETED  
 **Target:** PHASE 4 — A173  
 **Topic:** Fear of consequences vs wisdom — how ottappa, prudence, fear, and courage interact without collapsing moral caution into anxiety or cowardice.
@@ -29,18 +29,19 @@ Fresh source check completed against:
 2. AN 7.65 — conscience/prudence are presented as a vital condition for sense restraint, which supports ethical conduct, concentration, knowledge-and-vision, dispassion, and knowledge-and-vision of freedom.
 3. MN 61 — action is reviewed before, during, and after in terms of harm to oneself, others, or both; harmful action is to be stopped and future restraint established.
 4. MN 4 — fear and terror in wilderness practice are linked to unpurified conduct and unwholesome qualities; the Bodhisatta deliberately remains in the posture in which fear arises until fear is subdued.
-5. Milindapañha, fearlessness dilemma — later/paracanonical discussion distinguishes withdrawal from fear-driven flight. The translator also notes that this elephant episode differs from the older Vinaya version.
+5. Milindapañha **Mil 5.4.9**, *On the Fearlessness of the Arahats* — later/paracanonical discussion distinguishes outward withdrawal from an inference of inward fear. The translator notes that this elephant story differs from the older Vinaya version.
+6. **MN 2**, *Sabbāsava Sutta* — distinguishes endurance of hardship from avoidance of specific hazards, including a wild elephant, dog, snake and precipice. This early text is a necessary countercheck against generalizing MN 4 into a universal no-retreat command.
 
 ## Mandatory Milindapañha consultation
 
-**Consulted:** YES.
+**Consulted:** YES — **Mil 5.4.9**, *On the Fearlessness of the Arahats*, Rhys Davids translation (Book 4, chapter 4 in the translator's division): https://mail.dhammatalks.net/suttacentral/sc2016/sc/en/mil5.4.9.html .
 
 Role is strictly LATER/PARACANONICAL:
 - test the distinction between fearlessness and reckless exposure;
 - test whether withdrawal necessarily proves fear;
 - support disciplined distinction-making.
 
-Milindapañha supplies no authority to redefine ottappa, bhaya, or bherava against the early discourses.
+Milindapañha supplies no authority to redefine ottappa, bhaya, or bherava against the early discourses. This is a dialogue attributed to Nāgasena, not a direct verbatim statement of the early Buddha.
 
 ## TEXT_ATTESTED
 
@@ -101,6 +102,12 @@ This proves at minimum that the project must not treat every English occurrence 
 
 It does not yet prove a complete lexical theory of ottappa, bhaya, and bherava; that remains OPEN.
 
+### 6. MN 2 establishes context-dependent endurance **and** avoidance
+
+MN 2, *Sabbāsava Sutta*, explicitly enumerates different ways to abandon effluents (āsavā): some through appropriate endurance of hardship, others through wise avoidance of hazards (wild elephant, dog, snake, cliff, and more). Direct source: https://www.dhammatalks.org/suttas/MN/MN2.html , sections [4] tolerating and [5] avoiding.
+
+TEXT_ATTESTED scope: the early passage depicts both actions as potentially appropriate means to abandon effluents. It does **not** define bravery, distinguish every sort of fear, or give modern hazard instructions. The A173 lesson that unconditional 'stand your ground' is too broad is a CROSS_TEXT_SYNTHESIS made by comparing MN 2 with MN 4; it is not a quotation from either text.
+
 ## CROSS_TEXT_SYNTHESIS
 
 ### A. Five functionally different “fear-like” situations
@@ -152,7 +159,7 @@ This can include:
 MN 4 shows non-avoidance in the specific context of training fear in seclusion.
 It does not establish a universal rule that one must never retreat.
 
-Milindapañha later makes the conceptual point more explicitly: withdrawal can be purposeful rather than fear-driven.
+Milindapañha later makes the conceptual point more explicitly: withdrawal can be purposeful rather than fear-driven (Mil 5.4.9). Independently, early MN 2 supplies the practical countercase that avoiding real hazards can be a fitting method under appropriate reflection.
 
 Therefore:
 
@@ -193,7 +200,7 @@ So development is not measured by “how afraid am I?” but by whether conduct 
 
 ## LATER/PARACANONICAL — MILINDAPAÑHA
 
-The fearlessness dilemma is useful because it asks whether outward withdrawal necessarily proves inner fear.
+Mil 5.4.9 (https://mail.dhammatalks.net/suttacentral/sc2016/sc/en/mil5.4.9.html) is useful because it asks whether outward withdrawal necessarily proves inner fear.
 Nāgasena answers no: the arahants withdraw for a foreseen purpose, not because they are afraid.
 
 A173 uses only the methodological point:
@@ -253,9 +260,10 @@ This Vietnamese formula is CROSS_TEXT SYNTHESIS, not a canonical quotation.
 ### Early-discourse primary axis
 - AN 2.9 — hiri/ottappa as two bright qualities guarding the world.
 - Itivuttaka 42 — parallel bright-quality/world-guardian formulation.
-- AN 7.65 — hiri/ottappa as condition supporting sense restraint through to knowledge and vision of freedom.
+- AN 7.65 — hiri/ottappa as condition supporting sense restraint through to knowledge and vision of freedom. Pāli “hirottappe ... upanisā” is a conditional-support expression, not a precise modern causal coefficient or guarantee: https://mail.dhammatalks.net/suttacentral/sc2016/sc/pi/an7.65.html ; translation: https://suttacentral.net/an7.65/en/sujato .
 - MN 61 — harm-based review before/during/after action and future restraint.
 - MN 4 — purification, fear/terror in seclusion, and remaining in posture until fear/terror is subdued.
+- MN 2 — two different early-discourse responses: appropriate endurance and context-sensitive avoidance of dangers, both framed as dealing with effluents: https://www.dhammatalks.org/suttas/MN/MN2.html .
 
 ### Project continuity inputs
 - A132 — danger-awareness vs identity-threat.
@@ -264,25 +272,37 @@ This Vietnamese formula is CROSS_TEXT SYNTHESIS, not a canonical quotation.
 - A172 — hiri/ottappa vs shame-identity/remorse.
 
 ### Mandatory later/paracanonical support
-- Milindapañha — fearlessness dilemma / purposeful withdrawal, with explicit historical-text caveat.
+- Mil 5.4.9 — fearlessness dilemma / purposeful withdrawal, with explicit historical-text caveat. The older Vinaya account does not contain the same story details; do not launder this later narrative as early-text history.
 
-## Claim class
+## Claim-by-claim evidence class (bounded candidate; no independent acceptance)
 
-TEXT_ATTESTED_AN2_9_ITI42_HIRI_OTTAPPA_BRIGHT_WORLD_GUARDIANS_AN7_65_HIRI_OTTAPPA_TO_RESTRAINT_ETHICS_CONCENTRATION_KNOWLEDGE_FREEDOM_MN61_HARM_BASED_ACTION_REVIEW_MN4_PURIFICATION_FEAR_TERROR_AND_POSTURE_TRAINING_PLUS_CROSS_TEXT_MORAL_GUARD_PRUDENCE_DANGER_AWARENESS_VS_ANXIETY_STATUS_FEAR_COWARDICE_AND_RECKLESSNESS_WITH_LATER_MILINDAPANHA_PURPOSEFUL_WITHDRAWAL_SUPPORT
+| Claim | Classification | Exact source / boundary |
+| --- | --- | --- |
+| Hirī/ottappa are praised as world-protecting virtues | TEXT_ATTESTED | AN 2.9; Itivuttaka 42, not a theory of ordinary anxiety |
+| Hirī/ottappa condition a supportive practice sequence | TEXT_ATTESTED | AN 7.65, `upani(sā)` conditional support; no deterministic psychological theory |
+| Harm-review guides intentional acts before/during/after | TEXT_ATTESTED | MN 61, scope of body/speech/mind ethical reflection |
+| Training with fear in a particular wilderness posture | TEXT_ATTESTED | MN 4, specific ascetic setting |
+| Endurance and danger-avoidance are different approved approaches | TEXT_ATTESTED | MN 2 §§[4]/[5], in āsava-abandoning context |
+| Courage need not ban avoidance or collapse into 'never fear' | CROSS_TEXT_SYNTHESIS | A173 inference from MN 2, MN 4, MN 61, AN 2.9; NOT a canonical taxonomy |
+| The outward act of withdrawing does not by itself show fear | LATER/PARACANONICAL | Mil 5.4.9 Nāgasena dialogue; historical narrative differs from older Vinaya |
+| Precise morphology and early parallel agreement | UNCERTAINTY | full Pāli lexical and parallel-text comparison remain OPEN |
+
 
 ## Milindapañha role record
 
-CONSULTED_FEARLESSNESS_DILEMMA_AS_LATER_SUPPORT_FOR_WITHDRAWAL_NOT_EQUAL_FEAR_WITH_TRANSLATOR_TEXT_HISTORY_CAVEAT_NO_OVERRIDE_OF_AN2_9_AN7_65_MN61_MN4
+CONSULTED_MIL_5_4_9_AS_LATER_EXPLANATION_PURPOSEFUL_WITHDRAWAL_NOT_AUTOMATICALLY_FEAR_MN2_EARLY_AVOIDANCE_COUNTERCHECK_NO_PROMOTION_TO_TEXT_ATTESTED
 
 ## Handoff
 
 CANDIDATE CHECKPOINT: PHASE 4 — A173  
-CANONICAL PREDECESSOR VERIFIED: PHASE 4 — A172 COMPLETED  
-MERGE REQUIRED BEFORE A173 MAY BE CALLED CURRENT  
-PROVISIONAL NEXT: PHASE 4 — A174
+CANONICAL PREDECESSOR CONTINUITY RECORD: PHASE 4 — A172 COMPLETED (independent source verification is separate)  
+INDEPENDENT CRITIC + GOVERNED ACCEPTANCE + PROTECTED MERGE REQUIRED BEFORE A173 MAY BE CALLED CURRENT  
+SUGGESTED POST-ACCEPTANCE NEXT (NOT CANONICAL YET): PHASE 4 — A174
 
 ### A174 provisional topic
 
 **Courage without ego:** how decisive action changes when there is no need to prove bravery, superiority, invulnerability, or status.
 
-OPEN AUDITS: SN12, SN22, SN35, SN36, SN45_46, ATTHAKAVAGGA_LEXICAL, EARLY_PARALLEL_STRESS_TESTS, VINAYA_DISCIPLINE_SCOPE, HIRI_OTTAPPA_LEXICAL, FEAR_LEXICAL.
+OPEN AUDITS: SN12, SN22, SN35, SN36, SN45_46, ATTHAKAVAGGA_LEXICAL, EARLY_PARALLEL_STRESS_TESTS, VINAYA_DISCIPLINE_SCOPE, HIRI_OTTAPPA_LEXICAL, FEAR_LEXICAL, FULL_MIL_5_4_9_PALI_VINAYA_VARIANTS, INDEPENDENT_SOURCE_REVIEW, UNSEEN_TRANSFER_NOT_TESTED.
+
+**Audit receipt 2026-10-09:** bounded independent-of-author source spot checks of AN 7.65 (Pāli/translation), MN 2 (direct early text) and Mil 5.4.9 (later text). This is an architectial research correction on an unmerged PR, NOT a separate expert critic, raw test result or proof of model mastery. PC/Local Brain mirror: NOT WRITTEN.
