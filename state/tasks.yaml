@@ -45,16 +45,17 @@
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "A172 completed on protected main; A173 draft unaccepted; PR #249 legacy Draft NOT ACTIVE; new Class D studies separate candidate PR #336 pending review.",
+      "result_ref": "A172 complete; A173 DRAFT; PR #249 unbound; PR #336 head e7264cce9730bc82bff8bd890cd7251779b51e8d is Draft/UNBOUND and not authorized execution ref.",
       "change_class": "D",
       "resume_gate": "CLASS_D_ROUTED_FOR_STUDY_ONLY_CHECKPOINT_PROMOTION_REQUIRES_PROTECTED_REVIEW",
       "acceptance_authority": "OWNER",
       "holder": "BUDDHIST_THOUGHT_EXECUTION_SEAT_REPLACEABLE",
-      "role": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
+      "role": "Builder",
       "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
-      "next_action": "Continue Buddhist thought A173 from completed A172 under early-discourse primacy and mandatory Milindapañha consultation; verify text locations and classify claims, preserve uncertainties, and promote A173 only through its separate Class D protected review/CI gate; PR #249 stays Draft/unmerged.",
-      "blocker": null,
-      "branch_binding": "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT"
+      "next_action": "Continue read-only A173 research from completed A172 under early-discourse primacy and mandatory Milindapañha; before any Class D branch mutation including PR #336 obtain explicit Owner assignment and exact branch/base/head binding; A173 remains DRAFT and PR #249 remains unmerged.",
+      "blocker": "OWNER_CLASS_D_EXECUTION_REF_ASSIGNMENT_PENDING_FOR_MUTATION",
+      "branch_binding": "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT",
+      "role_detail": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT"
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
@@ -806,10 +807,13 @@
       "change_class": "S",
       "acceptance_authority": "OWNER",
       "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
-      "next_action": "Independent review of exact-head canonical state/task routing changes, then Owner Class S acceptance and protected merge; no Foundation reopen or A173 checkpoint promotion.",
+      "next_action": "Repair and independently rereview exact-head PR #334; after explicit Owner Class S acceptance and protected merge, fresh-read main, obtain independent zero-chat recovery evidence and perform separately governed Class S closure; no Foundation reopen or A173 promotion.",
       "blocker": "INDEPENDENT_CLASS_S_REREVIEW_AND_OWNER_ACCEPTANCE_PENDING",
       "resume_gate": "INDEPENDENT_EXACT_HEAD_REVIEW_THEN_EXPLICIT_OWNER_CLASS_S_ACCEPTANCE",
-      "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md"
+      "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
+      "role": "Builder",
+      "post_merge_validation_gate": "INDEPENDENT_ZERO_CHAT_RECOVERY_AND_SEPARATE_CLASS_S_CLOSURE_REQUIRED",
+      "prior_review_intake": "ORIGINAL_OLD_HEAD_VERBATIM_REPORTS_UNAVAILABLE_OWNER_DISPOSITION_PENDING"
     }
   ]
 }
