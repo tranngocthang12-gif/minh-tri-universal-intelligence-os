@@ -52,6 +52,21 @@ A pasted SHA, model memory, chat summary, or user restatement is not sufficient 
 
 **Risk-proportionate execution.** The seven activities apply to all material learning; the depth of source comparison, external critique and transfer test scales with importance. An ordinary low-risk finding may remain PENDING_REVIEW while a critical lexical/doctrinal claim receives deeper audit. Blocked G1/G2/G3 does not prohibit continuing clearly labelled research or forcing Owner to repeat instructions, but prevents claims of VERIFIED mastery, accepted progress or durable recovery. A chat following this law must disclose which gates it truly completed and which remain OPEN.
 
+## 2B. PC-OFFLINE CONTINUITY — GitHub-first learning must continue
+
+**Owner directive, 2026-10-09.** An offline PC, unreachable Desktop Commander, unavailable tunnel-client or read-only Local Brain must **not block study, research, proposal writing, source critique, GitHub branch/PR recording, or GitHub-based new-chat recovery** when those services are independently available. GitHub protected main alone remains durable canonical authority; Local Brain is only an optional sidecar/mirror and never a required consensus vote.
+
+**When PC/Local Brain is OFFLINE and GitHub is reachable:**
+1. Execute section 2A's seven study activities as far as evidence and permissions allow; do not reduce source quality, omit the mandatory specific Milindapañha consultation for Buddhist study, or imply local model training.
+2. Use the authorized GitHub connector to persist a **candidate** on a protected-workflow branch/PR, including base/head SHA, claim-level source/evidence, current/next from main, corrections and open audits. Read the candidate commit back. State CANDIDATE / PENDING_REVIEW; a PR is not accepted knowledge.
+3. Request the applicable independent review, CI and approved acceptance. Only protected merge and fresh-read allow claims of a canonical update. Test a new zero-chat reader against protected main for recovery; an author's read-back is not G3 proof.
+4. Record PC status accurately: PC_OFFLINE or UNREACHABLE; LOCAL_BRAIN_MIRROR=NOT_WRITTEN or UNVERIFIED. Keep a clear mirror backlog reference to the GitHub record; when PC returns, mirror **from approved protected main**, verifying hashes/provenance and never overwriting GitHub with stale local state.
+5. Do not block independent GitHub actions waiting for a PC reconnection. Do not invent background retries, automatic sync, automatic AI learning, CI PASS, or recovery PASS.
+
+**If GitHub is also unavailable:** learning and reasoning may continue in chat, but label the output NOT YET DURABLY RECORDED. No claim of cross-chat memory, canonical checkpoint advancement or guaranteed later recovery. Resume the governed write/read-back path only when connectivity is restored.
+
+**Three distinguishable facts:** (a) study content authored in chat; (b) draft/candidate recorded in GitHub; (c) reviewed and accepted canonical learning on protected main. Never collapse these. Offline-PC operation is guaranteed only to the extent GitHub and other required source/review tools are available; it does not guarantee uninterrupted availability of every service.
+
 ## 3. Mandatory durable learning record
 
 Every material learning checkpoint in any domain must durably record at least:
