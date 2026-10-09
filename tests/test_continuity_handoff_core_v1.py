@@ -189,6 +189,35 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 self.assertEqual(code, 1, details)
                 self.assertIn(expected, details)
 
+    def test_f3_exact_identity_provenance_and_scope_adversarial(self):
+        cases = [
+            ("F3 key substitution", lambda r: r["material_findings_owner_gate"]["provisional_intake_keys"].__setitem__(0, "INTAKE_FAKE_UNIQUE"),
+             "routing Class S exact eight historical risk identities changed"),
+            ("F3 loss falsely VERIFIED", lambda r: r["material_findings_owner_gate"].__setitem__("missing_verbatim_originals", "VERIFIED_COMPLETE"),
+             "routing Class S lost F3 originals cannot be marked verified"),
+            ("F3 original shadow", lambda r: r["material_findings_owner_gate"].__setitem__("historical_f3_verified", True),
+             "routing Class S shadow approval/provenance fields forbidden"),
+            ("Class S forged gate3", lambda r: r["material_findings_owner_gate"].__setitem__("gate_3_build_before_task_authorize", "6076001277 NEW HEAD ACCEPTED"),
+             "routing Class S Gate 3 exception cannot be expanded"),
+        ]
+        for name, change, expected in cases:
+            with self.subTest(case=name):
+                code, output = self._run_isolated_validator(lambda *_: None, mutate_routing=change)
+                self.assertEqual(code, 1, output)
+                self.assertIn(expected, output)
+
+        def forge_scope(current, active, root):
+            active["scope"].append("state/tasks.yaml")
+        code, output = self._run_isolated_validator(forge_scope)
+        self.assertEqual(code, 1, output)
+        self.assertIn("Class D cannot edit canonical architecture or law", output)
+
+        def change_id(current, active, root):
+            current["active_task_id"] = "ARCH-BUDDHIST-A173-ROUTING-V1"
+        code, output = self._run_isolated_validator(change_id)
+        self.assertEqual(code, 1, output)
+        self.assertIn("Buddhist learning route cannot silently change its task ID", output)
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])
