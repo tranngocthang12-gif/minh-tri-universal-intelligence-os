@@ -20,7 +20,7 @@ def fixture():
         "contradicts":[],"supersedes":[],"depends_on":[],"provenance":{"source_kind":"synthetic-test"}}
     packet["atom_sha256"]=record_digest(atom)
     packet["dependency_closure_sha256"]=record_digest(dependency_closure([atom],"k1")[0])
-    packet["domain_rules_sha256"]=record_digest({"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
+    packet["domain_rules_sha256"]=record_digest({"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md","knowledge/schema/KNOWLEDGE_SCHEMA_V1.md"]})
     packet["critic"]["target_digest"]=target_digest(packet)
     return packet,[atom]
 
@@ -28,7 +28,34 @@ def fixture():
 class OfflineLearningPilotTests(unittest.TestCase):
     def check(self,p,records=None,goal="BUDDHIST-A173"):
         if records is None: records=fixture()[1]
-        return inspect(p,authorized_goal_id=goal,records=records,domain_rule_refs={"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md"]})
+        return inspect(p,authorized_goal_id=goal,records=records,domain_rule_refs={"buddhist_thought":["docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md","knowledge/schema/KNOWLEDGE_SCHEMA_V1.md"]})
+
+    def test_non_list_sources_return_not_ready(self):
+        for x in ({"s1":"bad"},42,"source"):
+            p,r=fixture();p["sources"]=x
+            result=self.check(p,r)
+            self.assertFalse(result["ready_for_review"])
+            self.assertIn("missing source snapshots",result["reasons"])
+
+    def test_canonical_domain_rules_cannot_be_laundered(self):
+        p,r=fixture()
+        outcome=inspect(p,authorized_goal_id="BUDDHIST-A173",records=r,
+                        domain_rule_refs={"buddhist_thought":["fake-law.md"]})
+        self.assertIn("canonical Buddhist Fast Lane rules mismatch",outcome["reasons"])
+
+    def test_normalized_question_duplicates_rejected(self):
+        p,r=fixture()
+        p["transfer"][1]["question"]="  Apply  the distinction to case A?  "
+        p["transfer"][1]["question_hash"]=digest(p["transfer"][1]["question"])
+        p["critic"]["target_digest"]=target_digest(p)
+        self.assertIn("duplicate transfer question",self.check(p,r)["reasons"])
+
+    def test_declared_receipts_are_not_independence_proof(self):
+        p,r=fixture()
+        out=self.check(p,r)
+        self.assertTrue(out["ready_for_review"])
+        self.assertFalse(out["critic_independence_proven"])
+        self.assertFalse(out["transfer_precommitment_proven"])
 
     def test_eligible_proposal_never_becomes_verified_or_durable(self):
         p,r=fixture();out=self.check(p,r)
