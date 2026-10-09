@@ -26,8 +26,21 @@ def main():
         fail(errors, f"active_task_id not found in registry: {active_id}")
     else:
         task = tasks[active_id]
-        if task.get("status") not in ACTIVE_STATUSES and not (current.get("foundation_status") == "FROZEN" and active_id == "ARCH-MASTER-BLUEPRINT-V1" and task.get("status") == "DONE"):
+        if task.get("status") not in ACTIVE_STATUSES:
             fail(errors, f"active task status is not active: {task.get('status')}")
+        if task.get("change_class") not in {"F", "S", "D", "O"}:
+            fail(errors, "active task change_class is not authorized")
+        authority = task.get("acceptance_authority")
+        if not isinstance(authority, str) or not authority.strip() or authority.strip().lower() in {"builder", "builder/implementer"}:
+            fail(errors, "active task acceptance_authority is missing or self-approving")
+        if task.get("next_action") and current.get("next_checkpoint") != task.get("next_action"):
+            fail(errors, "current.next_checkpoint does not match active task.next_action")
+        if (
+            active_id == "BUDDHIST-A173"
+            and task.get("branch_binding") == "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT"
+            and task.get("branch") is not None
+        ):
+            fail(errors, "active A173 has an execution branch but is marked unbound")
         for field in ("scope", "base_sha", "result_ref", "handoff_ref", "next_action"):
             if task.get(field) in (None, "", []):
                 fail(errors, f"active task missing {field}")
@@ -48,6 +61,17 @@ def main():
                 for heading in ("## DONE", "## NOT DONE", "## NEXT ACTION", "## REQUIRED GATES"):
                     if heading not in text:
                         fail(errors, f"handoff missing heading {heading}")
+                sections = text.splitlines()
+                next_headings = [i for i, line in enumerate(sections) if line.strip() == "## NEXT ACTION"]
+                if len(next_headings) != 1:
+                    fail(errors, "active handoff must have exactly one NEXT ACTION heading")
+                else:
+                    following = sections[next_headings[0] + 1:]
+                    first_action = next((line.strip() for line in following if line.strip()), None)
+                    if first_action is None or first_action.startswith("## "):
+                        fail(errors, "active handoff NEXT ACTION is empty")
+                    elif first_action != task.get("next_action"):
+                        fail(errors, "active handoff NEXT ACTION does not match task.next_action")
 
     for field in ("current_architecture", "role_bootstrap"):
         ref = current.get(field)

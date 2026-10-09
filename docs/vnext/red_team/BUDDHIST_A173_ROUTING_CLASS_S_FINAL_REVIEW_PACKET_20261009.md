@@ -20,6 +20,8 @@ At this packet's preparation, Class S PR #334 affects:
 - `state/current.yaml`
 - `state/tasks.yaml`
 - `tests/test_master_blueprint_v1.py`
+- `tools/validate_continuity_handoff.py`
+- `tests/test_continuity_handoff_core_v1.py`
 - `docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md`
 - `docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md`
 - `docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md`
@@ -36,6 +38,16 @@ D. Foundation status FROZEN, autonomous/background learning flags false, and PR 
 E. All referenced source checkpoints/drafts and historical audit salvage are accurately classified. No A173 completion/verification or fresh-seat recovery proof is falsely claimed.
 F. Existing CI is synthetic validation, not independent receipt; critic must probe extra failures and historical counterexamples.
 G. No implicit Owner Class S acceptance from instruction to *prioritize* or *finalize the review packet*. No protected merge before explicit exact-head Owner gate.
+
+## Integrated audit P0 regression repair — exact final HEAD review
+
+- The old FROZEN/DONE exception in the live continuity validator is removed; active task MUST have an active status, recognized change class and non-builder acceptance authority.
+- The current NEXT ACTION is checked against the active task and the actual next-action line in the routed handoff; conflicting mirrors must fail closed.
+- Isolated negative-control fixtures must reject the DONE Blueprint route, unclassified task, mismatched mirrors, mismatched handoff, unbound A173 legacy branch, and Builder self-approval. A valid A173 task IN_PROGRESS does NOT mean A173 checkpoint COMPLETED.
+- The old test relying on the exact historical phrase "Gate 3 authorization-after-build" is replaced by a check of the actual Gate 3 status, recorded comment ID, eight provisional finding keys, and missing-original F3 risk.
+- Candidate assertions no longer universally pin the active task, witness to null, or review flag NOT_GRANTED as a permanent future truth. A GitHub green CI does NOT supply a missing Owner approval.
+- Review ALL live changed files, not just prior packet inventory. Re-evaluate Class S scope extension to tools/validator and tests. Both independent source reports were received as Owner-pasted intake; Grok Round 2 was reported complete, Claude Round 2 remained incomplete at patch preparation.
+- Only final exact-head CI, fresh different-seat critique, per-key Owner dispositions and separate exact-head Class S decision permit protected integration. Foundation stays FROZEN; PC ledger remains unwritten.
 
 ## Machine evidence required
 

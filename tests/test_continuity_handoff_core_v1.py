@@ -1,7 +1,13 @@
+import contextlib
+import importlib.util
+import io
 import json
+import shutil
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
+from unittest import mock
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,7 +22,10 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         registry = self.load_json("state/tasks.yaml")
         by_id = {t["task_id"]: t for t in registry["tasks"]}
         self.assertIn(current["active_task_id"], by_id)
-        self.assertIn(by_id[current["active_task_id"]]["status"], {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE", "DONE"} if current.get("foundation_status")=="FROZEN" else {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"})
+        active = by_id[current["active_task_id"]]
+        self.assertIn(active["status"], {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"})
+        self.assertIn(active["change_class"], {"F", "S", "D", "O"})
+        self.assertTrue(active.get("acceptance_authority"))
 
     def test_active_task_has_machine_checkable_handoff_contract(self):
         registry = self.load_json("state/tasks.yaml")
@@ -52,6 +61,72 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         )
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
         self.assertIn("CONTINUITY_HANDOFF_CORE_V1_PASS", proc.stdout)
+
+    def _run_isolated_validator(self, mutate):
+        spec = importlib.util.spec_from_file_location(
+            "minhtri_continuity_candidate_validator", ROOT / "tools" / "validate_continuity_handoff.py"
+        )
+        validator = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(validator)
+        current = self.load_json("state/current.yaml")
+        registry = self.load_json("state/tasks.yaml")
+        active = next(t for t in registry["tasks"] if t["task_id"] == current["active_task_id"])
+
+        with tempfile.TemporaryDirectory() as folder:
+            fixture_root = Path(folder)
+            paths = {
+                "state/current.yaml", "state/tasks.yaml",
+                "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+                current["current_architecture"], current["role_bootstrap"], active["handoff_ref"],
+            }
+            for rel in paths:
+                target = fixture_root / rel
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(ROOT / rel, target)
+            mutate(current, active, fixture_root)
+            (fixture_root / "state/current.yaml").write_text(
+                json.dumps(current, ensure_ascii=False), encoding="utf-8"
+            )
+            (fixture_root / "state/tasks.yaml").write_text(
+                json.dumps(registry, ensure_ascii=False), encoding="utf-8"
+            )
+            output = io.StringIO()
+            with mock.patch.object(validator, "ROOT", fixture_root), contextlib.redirect_stdout(output):
+                code = validator.main()
+            return code, output.getvalue()
+
+    def test_validator_rejects_six_false_routes_and_accepts_bounded_route(self):
+        ok, details = self._run_isolated_validator(lambda *_: None)
+        self.assertEqual(ok, 0, details)
+
+        def damage_handoff(current, active, fixture_root):
+            file = fixture_root / active["handoff_ref"]
+            source = file.read_text(encoding="utf-8")
+            old = "## NEXT ACTION\n" + active["next_action"]
+            self.assertIn(old, source)
+            file.write_text(source.replace(old, "## NEXT ACTION\nCORRUPT ACTION", 1), encoding="utf-8")
+
+        failures = [
+            ("DONE task", lambda c, t, r: t.__setitem__("status", "DONE"),
+             "active task status is not active: DONE"),
+            ("old Blueprint route", lambda c, t, r: c.__setitem__("active_task_id", "ARCH-MASTER-BLUEPRINT-V1"),
+             "active task status is not active: DONE"),
+            ("unclassified route", lambda c, t, r: t.__setitem__("change_class", "UNCLASSIFIED_LEGACY"),
+             "active task change_class is not authorized"),
+            ("current/task divergence", lambda c, t, r: c.__setitem__("next_checkpoint", "CORRUPT ACTION"),
+             "current.next_checkpoint does not match active task.next_action"),
+            ("handoff divergence", damage_handoff,
+             "active handoff NEXT ACTION does not match task.next_action"),
+            ("unbound legacy branch", lambda c, t, r: t.__setitem__("branch", "learning/buddhist-a173-20261005-2205"),
+             "active A173 has an execution branch but is marked unbound"),
+            ("builder self-approval", lambda c, t, r: t.__setitem__("acceptance_authority", "Builder"),
+             "active task acceptance_authority is missing or self-approving"),
+        ]
+        for name, mutate, expected in failures:
+            with self.subTest(case=name):
+                code, details = self._run_isolated_validator(mutate)
+                self.assertEqual(code, 1, details)
+                self.assertIn(expected, details)
 
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")

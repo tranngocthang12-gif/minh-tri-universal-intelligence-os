@@ -795,7 +795,9 @@
         "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
         "docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md",
         "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md",
-        "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md"
+        "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
+        "tools/validate_continuity_handoff.py",
+        "tests/test_continuity_handoff_core_v1.py"
       ],
       "branch": "owner/buddhist-a173-learning-routing-20261009",
       "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
