@@ -12,6 +12,9 @@ import json
 import os
 from pathlib import Path
 import re
+import stat
+from contextlib import contextmanager
+from http.client import HTTPException
 import shutil
 import tempfile
 from urllib.error import HTTPError, URLError
@@ -28,6 +31,7 @@ MAX_SELECTED = 12
 MAX_HTTP_BYTES = 800000
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 ALLOWED_ROOTS = frozenset({"state", "config", "docs", "knowledge"})
+WINDOWS_RESERVED = frozenset({"CON", "PRN", "AUX", "NUL"} | {f"COM{i}" for i in range(1, 10)} | {f"LPT{i}" for i in range(1, 10)})
 
 
 class SyncBlocked(ValueError):
@@ -41,7 +45,9 @@ def _safe_path(path):
         raise SyncBlocked("unsafe repository path")
     parts = path.split("/")
     if (len(parts) < 2 or parts[0] not in ALLOWED_ROOTS
-            or any(not part or part.startswith(".") or any(ord(c) < 32 for c in part)
+            or any(not part or part.startswith(".") or part != part.rstrip(" .")
+                   or part.split(".", 1)[0].upper() in WINDOWS_RESERVED
+                   or any(ord(c) < 32 for c in part)
                    for part in parts)):
         raise SyncBlocked("repository path outside safe scope")
     return path
@@ -66,7 +72,7 @@ def fetch_public_github(endpoint):
     try:
         with urlopen(req, timeout=12) as stream:
             data = stream.read(MAX_HTTP_BYTES + 1)
-    except (HTTPError, URLError, TimeoutError, OSError) as exc:
+    except (HTTPError, URLError, HTTPException, TimeoutError, OSError) as exc:
         raise SyncBlocked("GitHub unavailable or unauthorized") from exc
     if len(data) > MAX_HTTP_BYTES:
         raise SyncBlocked("GitHub metadata exceeds size limit")
@@ -118,11 +124,15 @@ def build_snapshot(fetch=fetch_public_github):
     if not _sha(sha):
         raise SyncBlocked("invalid protected main SHA")
     files = {}
+    folded_paths = set()
 
     def add(path):
         _safe_path(path)
+        if path.lower() in folded_paths and path not in files:
+            raise SyncBlocked("case-folded repository path collision")
         if path not in files:
             files[path] = _fetch_file(fetch, path, sha)
+            folded_paths.add(path.lower())
         if sum(map(len, files.values())) > MAX_BUNDLE_BYTES:
             raise SyncBlocked("snapshot exceeds byte budget")
 
@@ -177,10 +187,22 @@ def build_snapshot(fetch=fetch_public_github):
     for path in selected:
         _safe_path(path)
         if (not path.startswith(("docs/learning/", "knowledge/"))
-                or "_DRAFT" in path.upper()):
+                or re.search(r"(^|[_-])DRAFT([_.-]|$)", path, flags=re.I)):
             raise SyncBlocked("learning snapshot selection invalid")
         add(path)
     active = next(t for t in task_rows if t["task_id"] == current["active_task_id"])
+    if not isinstance(active.get("next_action"), str) or current.get("next_checkpoint") != active["next_action"]:
+        raise SyncBlocked("active task and current NEXT ACTION disagree")
+    handoff_ref = active.get("handoff_ref")
+    if not isinstance(handoff_ref, str) or not handoff_ref.startswith("docs/"):
+        raise SyncBlocked("active task handoff reference missing or invalid")
+    add(handoff_ref)
+    handoff = files[handoff_ref].decode("utf-8")
+    if "## NEXT ACTION\n" not in handoff:
+        raise SyncBlocked("active handoff has no NEXT ACTION section")
+    actual_action = handoff.split("## NEXT ACTION\n", 1)[1].strip().splitlines()[0].strip()
+    if not actual_action or actual_action != active["next_action"]:
+        raise SyncBlocked("active handoff NEXT ACTION disagrees with canonical route")
     warnings = []
     if active.get("status") in ("DONE", "STALE", "BLOCKED", "DRAFT"):
         warnings.append("ACTIVE_TASK_NOT_EXECUTABLE_" + str(active.get("status")))
