@@ -24,7 +24,7 @@ Independent review of exact-head canonical state/task routing changes, then Owne
 
 ## REQUIRED GATES
 1. Fresh-read protected main bootstrap -> Master Blueprint -> Foundation Law -> continuity law -> current/tasks.
-2. Verify exact PR #334 head, its four-file diff plus Class S handoff/disposition documents, test results at same head, and branch ancestry to main.
+2. Verify exact PR #334 head and the COMPLETE changed-file diff (including study handoff, separate Class S handoff, critic disposition, current/tasks, tests and any later review packet/manifest), same-head CI, and branch ancestry to main. An older four-file scope is NOT the final review target.
 3. Confirm in proposed state: active task BUDDHIST-A173 Class D, branch null, A172 last completed, recovery NEXT ACTION identical in current/task/learning handoff; PR #249 not an executable branch; PR #319 still HOLD; autonomy flags false.
 4. Independently critique historical findings, including dependent A174-A177 drafts and rejected legacy completion/salvage.
 5. Report material findings bound to files/lines and SHA, or BLOCKED if evidence inaccessible. NO self-review acceptance.
