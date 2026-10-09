@@ -6,6 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ACTIVE_STATUSES = {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"}
+REQUIRED_F3_KEYS = frozenset(["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS","INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION","INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF","INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY","INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"])
+
 
 def load_json(rel):
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
@@ -17,7 +19,25 @@ def main():
     errors = []
     current = load_json("state/current.yaml")
     registry = load_json("state/tasks.yaml")
-    tasks = {t["task_id"]: t for t in registry["tasks"]}
+    records = registry["tasks"]
+    ids = [t["task_id"] for t in records]
+    if len(ids) != len(set(ids)):
+        fail(errors, "duplicate task_id in canonical registry")
+    tasks = {t["task_id"]: t for t in records}
+    for record in records:
+        if record.get("change_class") == "D":
+            scope = record.get("scope")
+            if not isinstance(scope, list):
+                fail(errors, "Class D requires explicit scope list")
+            elif any(isinstance(p, str) and
+                     (p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/"))
+                      or p.startswith("docs/LAW_")) for p in scope):
+                fail(errors, "Class D cannot edit canonical architecture or law")
+    if current.get("active_workstream") == "OWNER_DIRECTED_LEARNING" and current.get("active_task_id") != "BUDDHIST-A173":
+        fail(errors, "Buddhist learning route cannot silently change its task ID")
+    if "ARCH-BUDDHIST-A173-ROUTING-V1" not in tasks:
+        fail(errors, "Class S routing gate missing")
+
 
     active_id = current.get("active_task_id")
     if not active_id:
@@ -118,12 +138,17 @@ def main():
             fail(errors, "routing Class S approval cannot be self-asserted in candidate snapshot")
         if isinstance(gate, dict):
             keys = gate.get("provisional_intake_keys")
-            if not isinstance(keys, list) or len(keys) != 8 or len(set(keys)) != 8:
-                fail(errors, "routing Class S eight historical material keys must remain open")
-            if "OWNER_REPORTED_ORIGINALS_LOST" not in str(gate.get("originals_or_attestation", "")):
-                fail(errors, "routing Class S F3 loss limitation cannot be waived")
-            if "6076001277" not in str(gate.get("gate_3_build_before_task_authorize", "")):
-                fail(errors, "routing Class S historic Gate 3 receipt reference missing")
+            if not isinstance(keys, list) or len(keys) != 8 or set(keys) != REQUIRED_F3_KEYS:
+                fail(errors, "routing Class S exact eight historical risk identities changed")
+            if set(gate) != {"status","source","provisional_intake_keys","required_disposition_each",
+                             "originals_or_attestation","missing_verbatim_originals",
+                             "gate_3_build_before_task_authorize","owner_acceptance"}:
+                fail(errors, "routing Class S shadow approval/provenance fields forbidden")
+            if (gate.get("originals_or_attestation") != "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED"
+                    or gate.get("missing_verbatim_originals") != "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN"):
+                fail(errors, "routing Class S lost F3 originals cannot be marked verified")
+            if gate.get("gate_3_build_before_task_authorize") != "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE":
+                fail(errors, "routing Class S Gate 3 exception cannot be expanded")
         if (not isinstance(witness, dict)
                 or witness.get("witness_status") != "NOT_CLAIMED_BY_THIS_CANDIDATE"
                 or witness.get("witness_holder") is not None
