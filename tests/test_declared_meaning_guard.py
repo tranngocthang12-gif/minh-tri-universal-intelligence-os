@@ -7,7 +7,7 @@ def specimen():
            "certainty":"POSSIBLE","relation_type":"CONDITIONAL","scope":"S only",
            "source_refs":["source/v1"],"nonclaims":["O is inevitable"],
            "uncertainties":["rate unknown"],"layer":"INTERPRETATION"}
-    atom={"schema":"minhtri-knowledge-atom/v1","status":"PENDING_REVIEW","id":"k1","statement":frame["proposition"],"source_refs":["source/v1"]}
+    atom={"schema":"minhtri-knowledge-atom/v1","record_type":"claim","id":"k1","domain":"buddhist_thought","class":"SYNTHESIS","status":"PENDING_REVIEW","statement":frame["proposition"],"source_refs":["source/v1"],"evidence_refs":[],"contradicts":[],"supersedes":[],"depends_on":[],"provenance":{"fixture":"synthetic"}}
     examples=[
         {"kind":"EXPLANATION","text":"When C holds, O is possible, not certain.","annotations":copy.deepcopy(frame)},
         {"kind":"SHORT_FORM","text":"In S, C may accompany O.","annotations":copy.deepcopy(frame)},
@@ -19,6 +19,32 @@ class MeaningGuardTests(unittest.TestCase):
         if pack is None or atom is None:
             p,a=specimen();pack=p if pack is None else pack;atom=a if atom is None else atom
         return inspect_meaning_annotations(pack,atom=atom)
+    def test_synthesis_cannot_be_promoted_to_source_report(self):
+        p,a=specimen()
+        p["reference"]["layer"]="SOURCE_REPORT"
+        for sample in p["renderings"]:
+            sample["annotations"]["layer"]="SOURCE_REPORT"
+        self.assertIn("MEANING_SOURCE_LAYER_CLASS_MISMATCH",self.check(p,a)["reasons"])
+
+    def test_attested_must_use_source_report(self):
+        p,a=specimen()
+        a["class"]="ATTESTED"
+        self.assertIn("MEANING_SOURCE_LAYER_CLASS_MISMATCH",self.check(p,a)["reasons"])
+
+    def test_uncertain_claim_cannot_assert_certainty(self):
+        p,a=specimen()
+        a["class"]="UNCERTAIN"
+        p["reference"]["certainty"]="ASSERTED"
+        for sample in p["renderings"]:
+            sample["annotations"]["certainty"]="ASSERTED"
+        self.assertIn("MEANING_UNCERTAINTY_CLASS_MISMATCH",self.check(p,a)["reasons"])
+
+    def test_minimal_atom_is_rejected(self):
+        p,a=specimen()
+        for k in ("record_type","domain","class","provenance"):
+            a.pop(k)
+        self.assertIn("MEANING_ATOM_INVALID",self.check(p,a)["reasons"])
+
     def test_valid_annotations_still_do_not_prove_prose(self):
         p,a=specimen();out=self.check(p,a)
         self.assertTrue(out["annotation_contract_pass"],out)
