@@ -59,10 +59,15 @@ class UnifiedLearningMethodTests(unittest.TestCase):
         current = json.loads(read("state/current.yaml"))
         registry = json.loads(read("state/tasks.yaml"))
         self.assertEqual(current["foundation_status"], "FROZEN")
-        self.assertEqual(current["active_task_id"], "ARCH-MASTER-BLUEPRINT-V1")
-        item = {t["task_id"]:t for t in registry["tasks"]}["BUDDHIST-A173"]
-        self.assertEqual(item["status"], "DRAFT")
-        self.assertEqual(item["change_class"], "UNCLASSIFIED_LEGACY")
+        # A Class F learning-law proposal must not fix, prescribe, or freeze
+        # operational Class S routing. Compatible with either main or an
+        # independently accepted future A173 routing repair.
+        self.assertIn(current["active_task_id"], {t["task_id"] for t in registry["tasks"]})
+        active = {t["task_id"]: t for t in registry["tasks"]}[current["active_task_id"]]
+        self.assertIn(active["status"], registry["task_states"])
+        item = {t["task_id"]: t for t in registry["tasks"]}["BUDDHIST-A173"]
+        self.assertIn(item["status"], registry["task_states"])
+        self.assertIn(item["change_class"], {"UNCLASSIFIED_LEGACY", "D"})
         inventory = read("docs/learning/BUDDHIST_CROSS_CHAT_CHECKPOINT_RECONCILIATION_20261009.md")
         self.assertIn("NOT COMPLETED", inventory)
         self.assertIn("PR #342", inventory)
