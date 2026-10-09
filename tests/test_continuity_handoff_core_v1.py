@@ -62,7 +62,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
         self.assertIn("CONTINUITY_HANDOFF_CORE_V1_PASS", proc.stdout)
 
-    def _run_isolated_validator(self, mutate):
+    def _run_isolated_validator(self, mutate, mutate_routing=None):
         spec = importlib.util.spec_from_file_location(
             "minhtri_continuity_candidate_validator", ROOT / "tools" / "validate_continuity_handoff.py"
         )
@@ -71,6 +71,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         current = self.load_json("state/current.yaml")
         registry = self.load_json("state/tasks.yaml")
         active = next(t for t in registry["tasks"] if t["task_id"] == current["active_task_id"])
+        routing = next(t for t in registry["tasks"] if t["task_id"] == "ARCH-BUDDHIST-A173-ROUTING-V1")
 
         with tempfile.TemporaryDirectory() as folder:
             fixture_root = Path(folder)
@@ -78,12 +79,15 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 "state/current.yaml", "state/tasks.yaml",
                 "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
                 current["current_architecture"], current["role_bootstrap"], active["handoff_ref"],
+                routing["handoff_ref"], active["learning_checkpoint"]["last_accepted_checkpoint_ref"],
             }
             for rel in paths:
                 target = fixture_root / rel
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(ROOT / rel, target)
             mutate(current, active, fixture_root)
+            if mutate_routing is not None:
+                mutate_routing(routing)
             (fixture_root / "state/current.yaml").write_text(
                 json.dumps(current, ensure_ascii=False), encoding="utf-8"
             )
@@ -118,13 +122,70 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             ("handoff divergence", damage_handoff,
              "active handoff NEXT ACTION does not match task.next_action"),
             ("unbound legacy branch", lambda c, t, r: t.__setitem__("branch", "learning/buddhist-a173-20261005-2205"),
-             "active A173 has an execution branch but is marked unbound"),
+             "A173 execution branch requires separate Owner-authorized Class D binding"),
+            ("forged Class D branch authorization", lambda c, t, r: t.update(branch="new-branch", branch_binding="OWNER_APPROVED_BY_BUILDER"),
+             "A173 execution branch requires separate Owner-authorized Class D binding"),
+            ("study falsely classified S", lambda c, t, r: t.__setitem__("change_class", "S"),
+             "learning workstream must route to Class D study task"),
+            ("unregistered approver", lambda c, t, r: t.__setitem__("acceptance_authority", "BuilderBot999"),
+             "A173 acceptance authority lacks verified Owner designation"),
+            ("holder self-approves", lambda c, t, r: t.__setitem__("holder", "OWNER"),
+             "active task holder/Builder cannot self-approve"),
+            ("fake accepted checkpoint", lambda c, t, r: t["learning_checkpoint"].__setitem__("checkpoint_acceptance", "COMPLETED"),
+             "A173 checkpoint checkpoint_acceptance cannot claim acceptance without Owner receipt"),
+            ("fake checkpoint receipt", lambda c, t, r: t["learning_checkpoint"].__setitem__("acceptance_receipt_ref", "CLAIMED"),
+             "A173 checkpoint acceptance_receipt_ref cannot claim acceptance without Owner receipt"),
             ("builder self-approval", lambda c, t, r: t.__setitem__("acceptance_authority", "Builder"),
-             "active task acceptance_authority is missing or self-approving"),
+             "active task holder/Builder cannot self-approve"),
         ]
         for name, mutate, expected in failures:
             with self.subTest(case=name):
                 code, details = self._run_isolated_validator(mutate)
+                self.assertEqual(code, 1, details)
+                self.assertIn(expected, details)
+
+    def test_class_s_fake_approvals_and_false_a173_handoff_fail(self):
+        cases = [
+            ("forged GRANTED", lambda route: route["material_findings_owner_gate"].__setitem__("owner_acceptance", "GRANTED"),
+             "routing Class S approval cannot be self-asserted in candidate snapshot"),
+            ("forged DONE", lambda route: route.__setitem__("status", "DONE"),
+             "routing Class S closure requires separate protected evidence"),
+            ("forged review phase", lambda route: route.__setitem__("candidate_gate_phase", "OWNER_APPROVED"),
+             "routing Class S candidate phase is not pending"),
+            ("forged witness", lambda route: route["post_merge_witness"].__setitem__("witness_status", "PASS"),
+             "routing Class S witness/closure cannot be self-certified"),
+            ("Builder as Owner holder", lambda route: route.__setitem__("holder", "OWNER"),
+             "routing Builder cannot be Owner acceptance authority"),
+            ("missing F3 key", lambda route: route["material_findings_owner_gate"]["provisional_intake_keys"].pop(),
+             "routing Class S eight historical material keys must remain open"),
+        ]
+        for name, modify_route, expected in cases:
+            with self.subTest(case=name):
+                code, details = self._run_isolated_validator(lambda *_: None, mutate_routing=modify_route)
+                self.assertEqual(code, 1, details)
+                self.assertIn(expected, details)
+
+        def corrupt_handoff_status(current, active, fixture_root):
+            path = fixture_root / active["handoff_ref"]
+            body = path.read_text(encoding="utf-8")
+            path.write_text(body.replace(
+                "**CHECKPOINT_ACCEPTANCE:** NOT_CURRENT",
+                "**CHECKPOINT_ACCEPTANCE:** COMPLETED", 1
+            ), encoding="utf-8")
+
+        def forge_completed_prose(current, active, fixture_root):
+            path = fixture_root / active["handoff_ref"]
+            with path.open("a", encoding="utf-8") as dest:
+                dest.write("\nA173 COMPLETED.\n")
+
+        for name, mutation, expected in (
+            ("handoff falsely marks completion", corrupt_handoff_status,
+             "A173 handoff CHECKPOINT_ACCEPTANCE disagrees with unaccepted checkpoint"),
+            ("handoff claims completion in prose", forge_completed_prose,
+             "A173 handoff falsely claims checkpoint completion"),
+        ):
+            with self.subTest(case=name):
+                code, details = self._run_isolated_validator(mutation)
                 self.assertEqual(code, 1, details)
                 self.assertIn(expected, details)
 

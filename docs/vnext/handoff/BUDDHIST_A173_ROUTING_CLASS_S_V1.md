@@ -1,6 +1,6 @@
 # MINH TRI — A173 ROUTING CLASS S FRESH-SEAT HANDOFF
 STATUS: CLASS S LIFECYCLE — before merge candidate; after merge independently witnessed recovery and separate closure. Verify live Owner decision and merge receipt.
-TASK_ID: ARCH-BUDDHIST-A173-ROUTING-V1
+**TASK_ID:** ARCH-BUDDHIST-A173-ROUTING-V1
 CHANGE_CLASS: S
 ACCEPTANCE_AUTHORITY: OWNER
 BOUNDARY: This is the **routing control task**, not the Class D Buddhist study task.
@@ -11,6 +11,12 @@ BOUNDARY: This is the **routing control task**, not the Class D Buddhist study t
 - Legacy PR #249 branch must NOT be used to resume A173; the study task branch is null by design.
 - Routing task registered separately from BUDDHIST-A173 Class D.
 - CI and synthetic recovery tests are machine evidence only and are not independent review.
+
+## NOT DONE
+- Original historical F3 reviewers' texts are Owner-reported unavailable; eight provisional HIGH/MEDIUM risks are not Owner-disposed.
+- This candidate has no independent accepted exact-head verdict, explicit Owner Class S acceptance, or protected merge.
+- No post-merge zero-chat witness or Class S closure is claimed.
+- The NOT_GRANTED field is only an unaccepted candidate snapshot, not a substitute for a future authenticated Owner decision.
 
 ## PHASE-BOUND STATUS — NO SELF-ACCEPTANCE
 - Before protected merge: the candidate requires exact-head independent review, explicit Owner HIGH/MEDIUM per-finding decisions and missing-F3 residual-risk decision, documented one-time Gate 3 exception, assigned post-merge evidence/closure seats and exact-head Owner Class S acceptance. Verify live receipts; this document is not approval.

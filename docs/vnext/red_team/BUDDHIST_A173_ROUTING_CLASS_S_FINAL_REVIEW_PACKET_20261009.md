@@ -46,8 +46,17 @@ G. No implicit Owner Class S acceptance from instruction to *prioritize* or *fin
 - Isolated negative-control fixtures must reject the DONE Blueprint route, unclassified task, mismatched mirrors, mismatched handoff, unbound A173 legacy branch, and Builder self-approval. A valid A173 task IN_PROGRESS does NOT mean A173 checkpoint COMPLETED.
 - The old test relying on the exact historical phrase "Gate 3 authorization-after-build" is replaced by a check of the actual Gate 3 status, recorded comment ID, eight provisional finding keys, and missing-original F3 risk.
 - Candidate assertions no longer universally pin the active task, witness to null, or review flag NOT_GRANTED as a permanent future truth. A GitHub green CI does NOT supply a missing Owner approval.
-- Review ALL live changed files, not just prior packet inventory. Re-evaluate Class S scope extension to tools/validator and tests. Both independent source reports were received as Owner-pasted intake; Grok Round 2 was reported complete, Claude Round 2 remained incomplete at patch preparation.
+- Review ALL live changed files. The continuity validator and tests are candidate Class S compliance checks under the existing Foundation; no Foundation authority or law has been reopened. Claude subsequently completed R2 and reported HR-01..HR-08 on old HEAD 9aed814; old Grok verdict is for the earlier HEAD and neither is an independent final-head approval.
 - Only final exact-head CI, fresh different-seat critique, per-key Owner dispositions and separate exact-head Class S decision permit protected integration. Foundation stays FROZEN; PC ledger remains unwritten.
+
+## HR-01..HR-08 scoped anti-forgery and truthful-study guards
+
+- **Phase-bound candidate**: routing task IN_PROGRESS; candidate_gate_phase PRE_MERGE_UNACCEPTED_SNAPSHOT; Owner status NOT_GRANTED. Forged GRANTED/DONE, witness or changed phase must FAIL. Genuine later Owner acceptance is a separate authenticated exact-head receipt; separate protected Class S closure after post-merge independent recovery requires a different reviewed state transition.
+- Owner-directed learning must route to an active Class D study task. This study task has OWNER as recorded approver and a distinct non-Owner holder. No delegated approver is authorized by this candidate; a future Owner delegation must be reviewed and recorded, never inferred from arbitrary text.
+- A173 study task IN_PROGRESS does not imply checkpoint COMPLETED: machine state and handoff explicitly bind A172 accepted, A173 NOT_CURRENT, no accepted A173 receipt. Tampering with structured state, text status, completion prose, or A173 execution branch without separate Owner Class D binding is fail-closed.
+- PR #341/#336/#345 are unaccepted study candidates. Updated Class S handoff now has TASK_ID and NOT DONE.
+- Static tests **cannot authenticate an actual GitHub account's identity**, prove missing F3 originals, or substitute for different-seat review and protected merge. An independent critic should deliberately challenge combined text+structured edits and actor-impersonation, and report any novel bypass.
+- HR-05 Class S-vs-Class F concern is explicitly OPEN for competent independent and Owner review. If a proposed change would alter Foundation law or powers, stop for separate Class F authorization; this candidate does not assert Foundation V2 or thaw.
 
 ## Machine evidence required
 

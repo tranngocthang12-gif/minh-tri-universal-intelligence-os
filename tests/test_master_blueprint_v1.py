@@ -93,9 +93,9 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(state["foundation_status"],"FROZEN")
         self.assertEqual(routing["change_class"],"S")
         self.assertEqual(routing["acceptance_authority"],"OWNER")
-        self.assertIn(routing["status"],{"IN_PROGRESS","DONE"})
-        if routing["status"]=="IN_PROGRESS":
-            self.assertTrue(routing.get("blocker"))
+        self.assertEqual(routing["candidate_gate_phase"],"PRE_MERGE_UNACCEPTED_SNAPSHOT")
+        self.assertEqual(routing["status"],"IN_PROGRESS")
+        self.assertTrue(routing.get("blocker"))
         self.assertTrue({
             "state/current.yaml", "state/tasks.yaml", "tests/test_master_blueprint_v1.py",
             "tools/validate_continuity_handoff.py", "tests/test_continuity_handoff_core_v1.py",
@@ -170,12 +170,18 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         dh=(ROOT/study["handoff_ref"]).read_text(encoding="utf-8")
         sh=(ROOT/routing["handoff_ref"]).read_text(encoding="utf-8")
         dispo=(ROOT/"docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md").read_text(encoding="utf-8")
+        self.assertEqual(study["learning_checkpoint"]["checkpoint_acceptance"],"NOT_CURRENT")
+        self.assertEqual(study["learning_checkpoint"]["last_accepted_checkpoint_id"],"A172")
+        self.assertIsNone(study["learning_checkpoint"]["acceptance_receipt_ref"])
+        self.assertIn("**CHECKPOINT_ACCEPTANCE:** NOT_CURRENT",dh)
+        self.assertIn("PR #341",dh)
+        self.assertIn("PR #345",dh)
         self.assertIn("A172",dh)
         self.assertIn("A173",dh)
         self.assertIn("PR #249",dh)
         gate=routing["material_findings_owner_gate"]
-        self.assertIn(gate["owner_acceptance"],{"NOT_GRANTED","GRANTED"})
-        self.assertTrue(gate["status"])
+        self.assertEqual(gate["owner_acceptance"],"NOT_GRANTED")
+        self.assertEqual(gate["status"],"OWNER_PER_FINDING_DISPOSITION_PENDING")
         self.assertIn("OWNER_REPORTED_ORIGINALS_LOST",gate["originals_or_attestation"])
         self.assertIn("OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION",gate["gate_3_build_before_task_authorize"])
         self.assertIn("6076001277",gate["gate_3_build_before_task_authorize"])

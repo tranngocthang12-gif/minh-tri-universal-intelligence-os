@@ -55,7 +55,14 @@
       "next_action": "Continue read-only A173 research from completed A172 under early-discourse primacy and mandatory Milindapañha; before any Class D branch mutation including PR #336 obtain explicit Owner assignment and exact branch/base/head binding; A173 remains DRAFT and PR #249 remains unmerged.",
       "blocker": "OWNER_CLASS_D_EXECUTION_REF_ASSIGNMENT_PENDING_FOR_MUTATION",
       "branch_binding": "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT",
-      "role_detail": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT"
+      "role_detail": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
+      "learning_checkpoint": {
+        "current_checkpoint_id": "A173",
+        "checkpoint_acceptance": "NOT_CURRENT",
+        "last_accepted_checkpoint_id": "A172",
+        "last_accepted_checkpoint_ref": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md",
+        "acceptance_receipt_ref": null
+      }
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
@@ -850,7 +857,8 @@
         "closure_method": "SEPARATE_PROTECTED_CLASS_S_TASK_STATE_CHANGE",
         "builder_self_certification_allowed": false,
         "pre_merge_status_interpretation": "AFTER_ACCEPTED_MERGE_HISTORICAL_PRE_MERGE_SNAPSHOTS_SUPERSEDED_BY_DURABLE_OWNER_DECISION_AND_PROTECTED_MERGE_RECEIPT"
-      }
+      },
+      "candidate_gate_phase": "PRE_MERGE_UNACCEPTED_SNAPSHOT"
     }
   ]
 }

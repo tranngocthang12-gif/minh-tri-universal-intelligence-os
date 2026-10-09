@@ -1,6 +1,10 @@
 # Buddhist Thought — A173 active learning handoff candidate
 
 **TASK_ID:** BUDDHIST-A173
+**LAST_ACCEPTED_CHECKPOINT:** A172
+**CURRENT_CHECKPOINT:** A173
+**CHECKPOINT_ACCEPTANCE:** NOT_CURRENT
+**CHECKPOINT_ACCEPTANCE_RECEIPT:** NONE
 
 ## DONE
 - Protected main already contains A170–A172 durable checkpoints.
@@ -27,7 +31,8 @@ Continue read-only A173 research from completed A172 under early-discourse prima
 - Legacy PR #249 contains `docs/learning/BUDDHIST_THOUGHT_COMPLIANCE_AUDIT_20261005.md`, blob 80df16b240bd070a4d047bc5b0bff41da40b1d0d: **PROCESS / RECORD-CONTRACT NON-COMPLIANCE** was reported for old A173–A177. Preserve as historical evidence, not current authority. Its PROJECT_STATE/RECOVERY_MANIFEST changes are NOT to be merged.
 - PR #249 contains a non-draft `BUDDHIST_THOUGHT_CHECKPOINT_A173_20261005.md`, blob 319793bc10f9127f3b9ac9a577c968175a9d0dd1: **UNACCEPTED historical candidate** claiming completion, NOT CURRENT. Salvage source reasoning only after independent source-level audit and reconcile metadata/continuity fields; never import its completion label.
 - PR #249 contains `BUDDHIST_THOUGHT_CHECKPOINT_A177_DRAFT_20261005.md`, blob 67cf266cb7ade27aebacfd38f4f0ee678e359928: **DEFERRED dependent draft**, do not promote or treat as current; require sequential acceptance A173–A176 and source review.
-- Current-main A173 DRAFT does not itself contain all the added continuity-compliance fields documented in the historical audit. Current A173 source-audit candidate PR #336 can supply new evidence but does not retroactively approve legacy draft records.
+- Current-main A173 DRAFT does not itself contain all the added continuity-compliance fields documented in the historical audit.
+- PR #341, PR #336 and PR #345 are unaccepted source candidates only; none supplies an authorized Class D execution branch, independently verified passages, or A173 completion.
 - Routing change is independently registered as Class S task `ARCH-BUDDHIST-A173-ROUTING-V1` in `state/tasks.yaml`; studying A173 remains separate Class D. No self-acceptance or merge.
 - This candidate does not certify post-merge fresh-seat recovery. After Owner-accepted protected merge a separately assigned Evidence/Validation seat must produce an independent zero-chat witness; previous archived recovery receipts are not proof of this new route.
 
