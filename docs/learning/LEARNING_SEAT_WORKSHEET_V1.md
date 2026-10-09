@@ -44,6 +44,10 @@ LOCAL_BRAIN: NOT_WRITTEN/PROVEN_WRITTEN evidence ...
 
 If another chat says A205/A206 while protected route still says A172/A173, report both **with different labels**; never fabricate intermediate history or overwrite canonical pointers. Save accessible material as candidate evidence for later controlled reconciliation.
 
+## PC-offline operating mode
+
+When PC/Local Brain is offline but GitHub remains reachable, keep the seven-step study workflow running. Commit a candidate to branch/PR, read it back, then use the normal CI, independent review, acceptance and protected-main merge route. Explicitly mark LOCAL_BRAIN=NOT_WRITTEN/UNVERIFIED and keep a GitHub provenance pointer for later optional mirroring. No automatic retry or fake sync. If GitHub is down too, continue study in chat as NOT YET DURABLY RECORDED; do not claim cross-chat memory. See existing Learning Law §2B for the normative rule.
+
 ## Zero-chat recovery acceptance challenge
 
 A separate reader with no prior chat sees only GitHub protected main starting from `state/bootstrap.json` and reconstructs: (1) authority chain (2) applicable §2A/§7A rules (3) accepted Buddhist CURRENT/NEXT (4) open audits and corrections (5) candidates NOT ACCEPTED (6) exact next action (7) evidence that read-back is post-merge. A new chat reading this worksheet alone has NOT demonstrated recovery.
