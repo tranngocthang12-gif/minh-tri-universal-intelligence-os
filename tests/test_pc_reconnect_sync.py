@@ -18,7 +18,7 @@ PATHS={
 "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md":"Law",
 "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md":"Boot",
 "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md":"Recovery",
-"docs/vnext/handoff/MASTER_BLUEPRINT_V1.md":"# Handoff\\n\\n## NEXT ACTION\\nContinue learning only.\\n",
+"docs/vnext/handoff/MASTER_BLUEPRINT_V1.md":"# Handoff\n\n## NEXT ACTION\nContinue learning only.\n",
 "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md":"Learning",
 "docs/learning/A172.md":"Accepted"
 }
