@@ -807,7 +807,7 @@
       "change_class": "S",
       "acceptance_authority": "OWNER",
       "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
-      "next_action": "Before merge, independently review exact PR #334 HEAD and require OWNER disposition of every HIGH/MEDIUM finding, Gate 3 ordering decision, post-merge seat assignments and explicit Class S acceptance; after protected merge, verify receipt binding reviewed HEAD, Owner decision comment and CI run, obtain an Owner-assigned independent zero-chat recovery witness, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
+      "next_action": "Before merge, independently re-review exact PR #334 HEAD under the proposed lost-F3-originals replacement route; seek separate Owner decision on that route, all eight provisional HIGH/MEDIUM risk keys and residual historical uncertainty, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
       "blocker": "CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE",
       "resume_gate": "EXACT_HEAD_INDEPENDENT_REVIEW_THEN_OWNER_PER_FINDING_HIGH_MEDIUM_AND_GATE3_DECISIONS_WITH_SEAT_ASSIGNMENTS_THEN_EXPLICIT_CLASS_S_ACCEPTANCE_THEN_PROTECTED_MERGE_AND_WITNESS_CLOSURE",
       "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
@@ -828,9 +828,9 @@
           "INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"
         ],
         "required_disposition_each": "OWNER_REPAIR_CONFIRMED_OR_EXPLICIT_REJECTION_WITH_EVIDENCE",
-        "originals_or_attestation": "OWNER_ATTACH_VERBATIM_WITH_PROVENANCE_UNVERIFIED_OR_DURABLY_ATTEST_SUMMARY_COMPLETE_AND_ACCURATE",
-        "missing_verbatim_originals": "OPEN_PROVENANCE_LIMITATION_NOT_PERMANENT_AUTOMATIC_BLOCK",
-        "gate_3_build_before_task_authorize": "PENDING_EXPLICIT_OWNER_ACCEPT_OR_REJECT",
+        "originals_or_attestation": "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED",
+        "missing_verbatim_originals": "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN",
+        "gate_3_build_before_task_authorize": "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE",
         "owner_acceptance": "NOT_GRANTED"
       },
       "post_merge_witness": {
