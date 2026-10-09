@@ -13,6 +13,10 @@ A new seat starts from the single boot root. Do not use old chat memory as autho
 9. Read its `result_ref` and task/domain sources as needed.
 10. Continue from its `next_action` unless fresh canonical evidence proves the handoff stale or Owner redirects.
 
+## PC independence note
+
+Read existing Universal Learning Continuity Law §2B when PC or Local Brain cannot be reached: current GitHub protected main remains authoritative, candidate PRs are recoverable only as drafts, and no PC mirror is required for ongoing study. If both GitHub and PC are unreachable, do not claim that a chat-only lesson is durably recorded.
+
 ## Learning-seat cold-start addendum (subordinate to existing law)
 
 For every material learning request, after the ten recovery steps above, read **`docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md` §2A** (seven activities and three gates), and for Buddhist study also §7A (early discourse priority and mandatory *specific* Milindapañha consultation). The non-normative `docs/learning/LEARNING_SEAT_WORKSHEET_V1.md` is a concise execution aid. Resolve CURRENT/NEXT only from accepted routed state, task, handoff and checkpoint; distinguish unmerged PRs or chat-only A-numbers as candidates. If an active task is DONE/stale or the learning route conflicts, disclose the conflict and block promotion; continue appropriately scoped provisional study and request a governed Class S routing repair. Never fill missing checkpoints by guessing. Record G1/G2/G3 status honestly. Independent recovery is demonstrated only after protected merge and a separate zero-chat reader; do not claim it after merely rereading an author's draft.
