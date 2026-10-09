@@ -7,6 +7,12 @@ For migrated Architecture vNext scope, the canonical boot entrypoint is `state/b
 Current recovery route:
 `state/bootstrap.json -> current Master Blueprint -> authoritative law precedence -> state/current.yaml -> state/tasks.yaml -> current architecture -> active task handoff -> task/domain sources`.
 
+## ALL LEARNING SEATS — ONE SHARED METHOD (routed, not a second law)
+
+When Owner requests learning in this or any other chat (including "TIẾP TỤC HỌC HIỂU TƯ DUY TƯ TƯỞNG PHẬT"), a seat must fresh-read the boot-root authority chain and then **section 2A of `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md`**. Buddhist learning also reads section 7A. Use the subordinate working aid `docs/learning/LEARNING_SEAT_WORKSHEET_V1.md`; it has no separate normative authority. Carry out the same seven activities and report G1/G2/G3 evidence or OPEN gaps, keeping candidate work PENDING_REVIEW until required protected gates pass. Do not use a higher A-number from another chat as a substitute for an accepted learning checkpoint or claim learning mastery from AI prose alone.
+
+Existing older chats must refresh this GitHub route on their **next** material learning turn; they do not receive automatic updates while idle. This GitHub record does not itself modify ChatGPT Project Instructions, push changes into live chats, or certify that a fresh-seat recovery occurred.
+
 Older sections in this file that begin from PROJECT_STATE remain historical/unmigrated compatibility guidance only and cannot override migrated keys in `state/current.yaml` or `state/tasks.yaml`.
 
 
