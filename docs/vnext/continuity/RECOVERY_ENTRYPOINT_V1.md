@@ -4,7 +4,7 @@ A new seat starts from the single boot root. Do not use old chat memory as autho
 
 1. Read `state/bootstrap.json`.
 2. Read the `master_blueprint` routed by the boot root.
-3. Read the authoritative `law_precedence`; `law_index_catalog` is discovery/catalog only and has no independent precedence authority.
+3. Read the authoritative `law_precedence`; `law_index_catalog` is discovery/catalog only and has no independent precedence authority. Resolve newer law's effective partial supersession by the **sole** Foundation Law router; preserve older nonconflicting clauses and historical evidence. Do not treat unmerged law PRs as durable effective law.
 4. Follow the boot root's `current_state` and `task_registry` pointers.
 5. Resolve current architecture from `state/current.yaml`; confirm the current-state law and Master Blueprint pointers agree with the boot root.
 6. Resolve `active_task_id` from current state.

@@ -262,12 +262,14 @@ This prevents the Blueprint from becoming a second law system while still giving
 When rules conflict:
 1. identify scope;
 2. compare authority level;
-3. compare explicit supersession;
-4. prefer narrower valid rule within its scope if authority level permits;
-5. prefer newer only when same-level supersession is explicit;
-6. if unresolved, fail closed for the affected mutation;
-7. create a durable resolution record;
-8. never silently rewrite history.
+3. establish which norm was validly issued by a competent authority and when it became effective;
+4. if a newer effective rule at the same or higher legal level truly conflicts in overlapping scope, the older conflicting part ceases to operate automatically; no separate repeal of each clause is needed;
+5. preserve older nonconflicting provisions and never use a newer lower-level rule to override higher law;
+6. if unresolved, fail closed for the affected mutation while safe independent read-only learning continues;
+7. record the superseded scope and effective time durably without making that later bookkeeping a precondition for an already effective law;
+8. never silently rewrite history or retrospectively ratify an earlier unauthorized action.
+
+This is an informative implementation of the **single Foundation Law router**, not a second legal precedence authority. The Owner's current-chat decision controls the current seat; a new project-wide Class F law remains a candidate until exact-head Owner acceptance and protected merge.
 
 ## 9. Canonical source-of-truth map
 

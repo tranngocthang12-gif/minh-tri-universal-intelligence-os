@@ -19,7 +19,18 @@ Provide one compact normative route after Foundation Closure without rewriting o
 
 A current-chat Owner instruction controls the present seat operationally, but it does not durably supersede Stable Law for future seats until the material decision is recorded on protected main through the protected governance path.
 
-Same-level conflict requires explicit supersession or a bounded conflict-resolution task. Missing/conflicting authority fails closed for the affected mutation.
+## Effective-law partial supersession — Owner directive 2026-10-09 (Class F candidate)
+
+A new rule promulgated by a competent authority becomes effective at its duly established effective time. Within its valid subject and authority scope, its actually conflicting provision **automatically displaces** an older provision at the same or lower legal precedence from that time. No additional clause-by-clause repeal is required. Nonconflicting older provisions remain valid. A lower-ranking rule never overrides a higher-ranking constitution-level Owner decision or Stable Law merely because it is newer.
+
+Apply precedence before chronology: verify (1) competent authority and lawful issuance, (2) actual effective time, (3) same or higher normative rank, (4) overlapping subject and a real irreconcilable conflict. A newer document alone, including a chat summary, candidate PR, Builder-authored "GRANTED", or an unmerged change, cannot satisfy these conditions. A later valid higher- or same-level provision governs the **conflicting scope only**, without retroactively legalizing earlier acts.
+
+Record supersession/retained provisions in the project-wide conflict register with citations and dates as **evidence and operational reconciliation, not a condition delaying an already effective competent law**. Preserve the superseded text, older receipts and decision history; never grant them continued operative force for the displaced scope.
+
+An unresolved conflict about authority, effective time or scope fails closed for the **affected mutation**, not for unrelated safe read-only learning and research. Normal lawful learning proceeds under the continuing learning-law source/evidence, review and recording rules. Owner acceptance, separated independent critique, protected merge and genuine fresh-seat recovery remain mandatory for governed canonical mutations.
+
+**Durability boundary:** The Owner's current-chat directive operates immediately for the present seat. This Class F text is a candidate until independently reviewed, Owner-approved for its exact HEAD and protected-merged; it is **not** retroactively a durable project-wide law on an unmerged branch. The constitutional authority chain, Foundation FROZEN state, Class F/S/D/O gates and Buddhist study source hierarchy are otherwise unchanged.
+
 
 ## Durable authority
 

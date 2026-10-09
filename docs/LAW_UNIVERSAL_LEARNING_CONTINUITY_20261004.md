@@ -2,7 +2,7 @@
 
 **Status:** STABLE OWNER LAW / CROSS-ARCHITECTURE INVARIANT  
 **Scope:** ALL current and future learning tracks in MINH TRÍ  
-**Authority:** Owner directive dated 2026-10-04. This law remains in force until explicitly superseded by a new Owner decision through protected project governance.
+**Authority:** Owner directive dated 2026-10-04. This stable learning law remains in force except for any provision actually displaced, from its lawful effective time, by a competent newer rule of the same or higher authority under the sole Foundation Law router. The 2026-10-09 Class F supersession amendment remains a candidate until Owner exact-head acceptance and protected merge.
 
 ## 1. Purpose
 
