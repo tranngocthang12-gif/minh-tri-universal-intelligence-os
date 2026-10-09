@@ -5,6 +5,7 @@ Human/model semantic review of the actual prose remains a separate gate.
 No source ingestion, model calls, persistence, authority or autonomy.
 """
 from __future__ import annotations
+from minhtri.knowledge_fast_lane import REQUIRED_FIELDS, ALLOWED_CLASSES, LIST_FIELDS as ATOM_LIST_FIELDS
 
 FIELDS = frozenset({
     "claim_id", "proposition", "conditions", "certainty", "relation_type",
@@ -16,6 +17,8 @@ MODALITIES = frozenset({"UNKNOWN", "POSSIBLE", "CONDITIONAL", "ASSERTED"})
 RELATIONS = frozenset({"UNSPECIFIED", "ASSOCIATION", "SEQUENCE", "CONDITIONAL", "CAUSAL", "DEFINITION"})
 LAYERS = frozenset({"SOURCE_REPORT", "INTERPRETATION", "APPLICATION"})
 KINDS = frozenset({"EXPLANATION", "SHORT_FORM", "TEACH_BACK"})
+DIRECT_SOURCE_CLASSES = frozenset({"ATTESTED"})
+INTERPRETIVE_CLASSES = frozenset({"SYNTHESIS", "SECONDARY", "UNCERTAIN"})
 
 
 def _text(value):
@@ -51,7 +54,20 @@ def inspect_meaning_annotations(pack, *, atom):
     A separate independently inspected prose specimen remains mandatory.
     """
     errors = []
-    if not isinstance(atom, dict) or atom.get("status") != "PENDING_REVIEW" or atom.get("schema") != "minhtri-knowledge-atom/v1":
+    if (not isinstance(atom, dict)
+            or atom.get("status") != "PENDING_REVIEW"
+            or atom.get("schema") != "minhtri-knowledge-atom/v1"
+            or atom.get("record_type") != "claim"
+            or not REQUIRED_FIELDS.issubset(atom)
+            or atom.get("class") not in ALLOWED_CLASSES
+            or atom.get("class") == "REFUTED"
+            or not isinstance(atom.get("domain"), str)
+            or not atom["domain"].strip()
+            or not isinstance(atom.get("provenance"), dict)
+            or not atom["provenance"]
+            or any(not isinstance(atom.get(k), list) for k in ATOM_LIST_FIELDS)
+            or not _text(atom.get("statement"))
+            or not _text(atom.get("id"))):
         errors.append("MEANING_ATOM_INVALID")
     if not isinstance(pack, dict) or set(pack) != {"schema", "reference", "renderings"}:
         errors.append("MEANING_PACK_INVALID")
@@ -70,6 +86,13 @@ def inspect_meaning_annotations(pack, *, atom):
         atom_sources = atom.get("source_refs")
         if not _string_list(atom_sources, nonempty=True) or set(ref["source_refs"]) != set(atom_sources):
             errors.append("MEANING_ATOM_SOURCE_MISMATCH")
+        atom_class = atom.get("class")
+        if atom_class in DIRECT_SOURCE_CLASSES and ref["layer"] != "SOURCE_REPORT":
+            errors.append("MEANING_SOURCE_LAYER_CLASS_MISMATCH")
+        elif atom_class in INTERPRETIVE_CLASSES and ref["layer"] == "SOURCE_REPORT":
+            errors.append("MEANING_SOURCE_LAYER_CLASS_MISMATCH")
+        if atom_class == "UNCERTAIN" and ref["certainty"] == "ASSERTED":
+            errors.append("MEANING_UNCERTAINTY_CLASS_MISMATCH")
     samples = pack["renderings"]
     if not isinstance(samples, list) or not 2 <= len(samples) <= len(KINDS):
         errors.append("MEANING_RENDERINGS_REQUIRED")
