@@ -29,14 +29,15 @@ Continue read-only A173 research from completed A172 under early-discourse prima
 - PR #249 contains `BUDDHIST_THOUGHT_CHECKPOINT_A177_DRAFT_20261005.md`, blob 67cf266cb7ade27aebacfd38f4f0ee678e359928: **DEFERRED dependent draft**, do not promote or treat as current; require sequential acceptance A173–A176 and source review.
 - Current-main A173 DRAFT does not itself contain all the added continuity-compliance fields documented in the historical audit. Current A173 source-audit candidate PR #336 can supply new evidence but does not retroactively approve legacy draft records.
 - Routing change is independently registered as Class S task `ARCH-BUDDHIST-A173-ROUTING-V1` in `state/tasks.yaml`; studying A173 remains separate Class D. No self-acceptance or merge.
-- Fresh-seat recovery proof after accepted protected merge is PENDING; previous archived recovery receipts are not proof of this new route.
+- This candidate does not certify post-merge fresh-seat recovery. After Owner-accepted protected merge a separately assigned Evidence/Validation seat must produce an independent zero-chat witness; previous archived recovery receipts are not proof of this new route.
 
 ## REQUIRED GATES
 - Read role bootstrap `docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md` and current architecture routed by current state; declare Blueprint role for each material pass.
 - PR #336 (head e7264cce9730bc82bff8bd890cd7251779b51e8d) remains Draft/UNBOUND: no Class D write is allowed without separate explicit Owner task assignment and branch/base/head binding.
+- Every read-only A173 research output without an authorized Class D execution ref and protected merge must carry **NOT YET DURABLY RECORDED**; it cannot be cited as durable checkpoint progress or VERIFIED knowledge until a governed write, CI, independent review, and protected merge.
 - Old A173 DRAFT PROMOTION CONDITION is superseded by stricter source-audit, independent review, Owner and protected-merge gates.
 - Read boot root, current Blueprint, consolidated Foundation Law, universal learning law, current state/tasks, A172 and A173 DRAFT from protected main.
 - Use early discourses as attestation and Milindapañha as explanatory support; keep TEXT_ATTESTED / CROSS_TEXT_SYNTHESIS / LATER-PARACANONICAL / UNCERTAINTY separate.
 - Keep existing open audits: SN12, SN22, SN35, SN36, SN45–46, Aṭṭhakavagga lexical, early parallels, Vinaya scope, hiri/ottappa/fear lexical.
-- A173 completion requires independently reviewable source proof, protected CI, appropriate Owner-designated acceptance and fresh-read of protected main.
+- A173 completion requires independently reviewable source proof, protected CI, acceptance by the acceptance_authority recorded in state/tasks.yaml (currently OWNER; any designated approver must first be durably recorded in that task), and fresh-read of protected main.
 - This Class S *routing* candidate is not a Foundation reopen; Foundation stays FROZEN; no automatic learning runtime or self-VERIFIED.

@@ -81,9 +81,16 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(active["task_id"],"BUDDHIST-A173")
         self.assertIsNone(active.get("branch"),"No pre-freeze branch may be bound to frozen main")
         self.assertEqual(active.get("branch_binding"),"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        self.assertEqual(active.get("blocker"),"OWNER_CLASS_D_EXECUTION_REF_ASSIGNMENT_PENDING_FOR_MUTATION")
+        self.assertIn("before any Class D branch mutation including PR #336",active["next_action"])
+        self.assertIn("explicit Owner assignment and exact branch/base/head binding",active["next_action"])
         handoff=(ROOT/active["handoff_ref"]).read_text(encoding="utf-8")
         self.assertIn("PR #249 is NOT a current execution branch",handoff)
         self.assertIn("PR #319 remains Draft/Class F HOLD",handoff)
+        self.assertIn("PR #336 (head",handoff)
+        self.assertIn("Draft/UNBOUND",handoff)
+        self.assertIn("NOT YET DURABLY RECORDED",handoff)
+        self.assertIn("authorized Class D execution ref and protected merge",handoff)
 
     def test_class_s_routing_is_separate_from_class_d_study(self):
         state=load("state/current.yaml")
@@ -95,7 +102,7 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(routing["change_class"],"S")
         self.assertEqual(routing["acceptance_authority"],"OWNER")
         self.assertEqual(routing["status"],"IN_PROGRESS")
-        self.assertIn("INDEPENDENT_CLASS_S_REREVIEW",routing["blocker"])
+        self.assertEqual(routing["blocker"],"CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE")
         self.assertEqual(routing["base_sha"],"a5ed9d8347a60b95503fe2e5de6b95fd8375eb76")
         self.assertEqual(routing["branch"],"owner/buddhist-a173-learning-routing-20261009")
         self.assertTrue({"state/current.yaml","state/tasks.yaml","tests/test_master_blueprint_v1.py"}.issubset(set(routing["scope"])))
@@ -103,6 +110,15 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(study["acceptance_authority"],"OWNER")
         self.assertIsNone(study["branch"])
         self.assertEqual(study["branch_binding"],"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        self.assertEqual(study["blocker"],"OWNER_CLASS_D_EXECUTION_REF_ASSIGNMENT_PENDING_FOR_MUTATION")
+        self.assertEqual(routing["material_findings_owner_gate"]["status"],"OWNER_PER_FINDING_DISPOSITION_PENDING")
+        self.assertEqual(routing["material_findings_owner_gate"]["provisional_intake_keys"],["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS","INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION","INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF","INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY","INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"])
+        self.assertEqual(routing["post_merge_witness"]["assignment_authority"],"OWNER")
+        self.assertEqual(routing["post_merge_witness"]["evidence_role"],"Evidence/Validation")
+        self.assertIsNone(routing["post_merge_witness"]["witness_holder"])
+        self.assertIsNone(routing["post_merge_witness"]["closure_holder"])
+        self.assertFalse(routing["post_merge_witness"]["builder_self_certification_allowed"])
+        self.assertEqual(routing["post_merge_witness"]["merge_commit_evidence"],["reviewed_head_sha","owner_acceptance_comment_id","exact_head_ci_run_id"])
         self.assertEqual(state["active_task_id"],study["task_id"])
         self.assertFalse(state["autonomous_learning_runtime"])
         self.assertFalse(state["automatic_self_critique_runtime"])
@@ -158,6 +174,39 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(current["next_checkpoint"], active["next_action"])
         self.assertEqual(active["next_action"], handoff_next)
         self.assertNotIn("Packet v2", current["next_checkpoint"])
+
+    def test_n1_n4_owner_gate_post_merge_and_class_d_regressions(self):
+        state=load("state/current.yaml")
+        records={r["task_id"]:r for r in load("state/tasks.yaml")["tasks"]}
+        study=records["BUDDHIST-A173"]
+        routing=records["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        dh=(ROOT/study["handoff_ref"]).read_text(encoding="utf-8")
+        sh=(ROOT/routing["handoff_ref"]).read_text(encoding="utf-8")
+        dispo=(ROOT/"docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md").read_text(encoding="utf-8")
+        self.assertEqual(state["next_checkpoint"],study["next_action"])
+        self.assertIn("before any Class D branch mutation including PR #336",state["next_checkpoint"])
+        self.assertIn("explicit Owner assignment and exact branch/base/head binding",state["next_checkpoint"])
+        self.assertIn("PR #336",dh)
+        self.assertIn("Draft/UNBOUND",dh)
+        self.assertIn("NOT YET DURABLY RECORDED",dh)
+        self.assertIn("acceptance by the acceptance_authority recorded in state/tasks.yaml (currently OWNER",dh)
+        gate=routing["material_findings_owner_gate"]
+        self.assertEqual(gate["owner_acceptance"],"NOT_GRANTED")
+        self.assertEqual(gate["status"],"OWNER_PER_FINDING_DISPOSITION_PENDING")
+        self.assertIn("OWNER_ATTACH_VERBATIM",gate["originals_or_attestation"])
+        for k in gate["provisional_intake_keys"]:
+            self.assertIn(k,dispo)
+        self.assertIn("Gate 3 authorization-after-build",dispo)
+        self.assertIn("## PHASE-BOUND STATUS",sh)
+        self.assertNotIn("STATUS: REVIEW PENDING / NO OWNER ACCEPTANCE / NO MERGE.",sh)
+        self.assertNotIn("Independent different-seat review of the EXACT current PR #334 SHA is NOT present.",sh)
+        self.assertEqual(routing["next_action"],sh.split("## NEXT ACTION",1)[1].strip().splitlines()[0])
+        for label in ("REVIEWED_HEAD_SHA","OWNER_ACCEPTANCE_COMMENT_ID","EXACT_HEAD_CI_RUN_ID"):
+            self.assertIn(label,sh)
+        self.assertIn("Owner must appoint",sh)
+        self.assertIn("Evidence/Validation",sh)
+        self.assertIn("separately gate Class S closure",routing["next_action"])
+        self.assertFalse(state["autonomous_learning_runtime"])
 
     def test_change_class_and_acceptance_resume_gate(self):
         tasks=load("state/tasks.yaml")

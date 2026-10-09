@@ -52,9 +52,25 @@ CLASS_D_LEARNING_HANDOFF: docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_202
 - Prior head 951fed27a9f106d9cd1c465a8fa2364d1c38c0e3: Owner-pasted Grok reported NO_MATERIAL_DEFECT_FOUND; Claude reported MATERIAL_DEFECTS_FOUND (F1-F3 MEDIUM, F4-F7 LOW). These are unverified-provenance chat intakes, not provider-authenticated attestations.
 - F1 repair candidate: PR #336 explicitly UNBOUND; Owner-authorized exact branch/base/head required before any Class D write. Read-only research allowed.
 - F2 repair candidate: routing effective at merge; independent post-merge zero-chat recovery witness and separately gated task closure required.
-- F3 BLOCKED: older Grok/Codex/Claude verbatim original reports against 26d2902 not accessible. Archive originals with provenance-unverified receipts and explicit Owner HIGH/MEDIUM disposition before acceptance; do not fabricate missing texts.
+- F3 OWNER-GATE OPEN: older Grok/Codex/Claude verbatim original reports against 26d2902 are unavailable. Owner must either attach originals (provenance-unverified) OR explicitly attest in a durable exact-head decision that builder intake summaries are complete and accurate; separately dispose of EACH HIGH/MEDIUM as repair-confirmed or expressly rejected. Missing originals remain a provenance limitation, not an impossible permanent bar; do not fabricate text.
 - F4: all six PR #249 learning-file blob references now inventoried in active handoff; archival/salvage remains open.
 - F5: role bootstrap and architecture routing explicitly required by study handoff.
 - F6: Gate 3 task-authorize-after-build ordering deviation disclosed. Both tasks declare Builder role, not independent critic.
 - F7: earlier A173 draft promotion condition explicitly superseded by stronger gates.
 - Repair commits invalidate both older exact-head verdicts. New CI and fresh Grok/Claude independent rereview required. NO MERGE.
+
+## N1/N2 explicit Owner gate (candidate requirements, NOT decisions)
+- The following are INTERNAL PROVISIONAL INTAKE KEYS based only on builder summaries, NOT reviewer-assigned IDs or authenticated originals. Each needs an explicit Owner repair-confirmed or rejected decision with supporting evidence:
+  - INTAKE_26D_GROK_HIGH_BRANCH_BASE: OWNER_DISPOSITION_PENDING
+  - INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE: OWNER_DISPOSITION_PENDING
+  - INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE: OWNER_DISPOSITION_PENDING
+  - INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS: OWNER_DISPOSITION_PENDING
+  - INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION: OWNER_DISPOSITION_PENDING
+  - INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF: OWNER_DISPOSITION_PENDING
+  - INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY: OWNER_DISPOSITION_PENDING
+  - INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE: OWNER_DISPOSITION_PENDING
+- Owner must explicitly ACCEPT/REJECT the Gate 3 authorization-after-build ordering deviation (earlier build commits preceded 44e7b62). Disclosure does not ratify the deviation.
+- Owner must either attach old originals with provenance-unverified receipts or durably attest that summaries are complete and accurate. Missing originals remain a disclosed provenance limitation.
+- At exact-head Class S acceptance Owner must appoint accountable replaceable Evidence/Validation witness and Class S closure holders; both are currently UNASSIGNED and Builder cannot self-certify.
+- Protected merge must bind REVIEWED_HEAD_SHA, OWNER_ACCEPTANCE_COMMENT_ID and EXACT_HEAD_CI_RUN_ID. Historical pre-merge candidate status is superseded after protected merge only by these durable binding receipts; recovery requires independent zero-chat witness and separate protected closure.
+- No Owner HIGH/MEDIUM disposition, assignment, acceptance, protected merge, or Local Brain write is claimed by this candidate.

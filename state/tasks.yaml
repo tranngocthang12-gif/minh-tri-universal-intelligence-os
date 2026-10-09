@@ -807,13 +807,48 @@
       "change_class": "S",
       "acceptance_authority": "OWNER",
       "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
-      "next_action": "Repair and independently rereview exact-head PR #334; after explicit Owner Class S acceptance and protected merge, fresh-read main, obtain independent zero-chat recovery evidence and perform separately governed Class S closure; no Foundation reopen or A173 promotion.",
-      "blocker": "INDEPENDENT_CLASS_S_REREVIEW_AND_OWNER_ACCEPTANCE_PENDING",
-      "resume_gate": "INDEPENDENT_EXACT_HEAD_REVIEW_THEN_EXPLICIT_OWNER_CLASS_S_ACCEPTANCE",
+      "next_action": "Before merge, independently review exact PR #334 HEAD and require OWNER disposition of every HIGH/MEDIUM finding, Gate 3 ordering decision, post-merge seat assignments and explicit Class S acceptance; after protected merge, verify receipt binding reviewed HEAD, Owner decision comment and CI run, obtain an Owner-assigned independent zero-chat recovery witness, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
+      "blocker": "CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE",
+      "resume_gate": "EXACT_HEAD_INDEPENDENT_REVIEW_THEN_OWNER_PER_FINDING_HIGH_MEDIUM_AND_GATE3_DECISIONS_WITH_SEAT_ASSIGNMENTS_THEN_EXPLICIT_CLASS_S_ACCEPTANCE_THEN_PROTECTED_MERGE_AND_WITNESS_CLOSURE",
       "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
       "role": "Builder",
       "post_merge_validation_gate": "INDEPENDENT_ZERO_CHAT_RECOVERY_AND_SEPARATE_CLASS_S_CLOSURE_REQUIRED",
-      "prior_review_intake": "ORIGINAL_OLD_HEAD_VERBATIM_REPORTS_UNAVAILABLE_OWNER_DISPOSITION_PENDING"
+      "prior_review_intake": "ORIGINAL_OLD_HEAD_VERBATIM_REPORTS_UNAVAILABLE_OWNER_DISPOSITION_PENDING",
+      "material_findings_owner_gate": {
+        "status": "OWNER_PER_FINDING_DISPOSITION_PENDING",
+        "source": "OWNER_CHAT_BUILDER_SUMMARY_UNVERIFIED_NOT_ORIGINAL_CRITIC_RECEIPTS",
+        "provisional_intake_keys": [
+          "INTAKE_26D_GROK_HIGH_BRANCH_BASE",
+          "INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE",
+          "INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE",
+          "INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS",
+          "INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION",
+          "INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF",
+          "INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY",
+          "INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"
+        ],
+        "required_disposition_each": "OWNER_REPAIR_CONFIRMED_OR_EXPLICIT_REJECTION_WITH_EVIDENCE",
+        "originals_or_attestation": "OWNER_ATTACH_VERBATIM_WITH_PROVENANCE_UNVERIFIED_OR_DURABLY_ATTEST_SUMMARY_COMPLETE_AND_ACCURATE",
+        "missing_verbatim_originals": "OPEN_PROVENANCE_LIMITATION_NOT_PERMANENT_AUTOMATIC_BLOCK",
+        "gate_3_build_before_task_authorize": "PENDING_EXPLICIT_OWNER_ACCEPT_OR_REJECT",
+        "owner_acceptance": "NOT_GRANTED"
+      },
+      "post_merge_witness": {
+        "assignment_authority": "OWNER",
+        "evidence_role": "Evidence/Validation",
+        "witness_holder": null,
+        "closure_holder": null,
+        "assignment_condition": "OWNER_MUST_NAME_REPLACEABLE_INDEPENDENT_EVIDENCE_SEAT_AND_CLASS_S_CLOSURE_SEAT_AT_EXACT_HEAD_ACCEPTANCE",
+        "merge_commit_evidence": [
+          "reviewed_head_sha",
+          "owner_acceptance_comment_id",
+          "exact_head_ci_run_id"
+        ],
+        "witness_status": "NOT_CLAIMED_BY_THIS_CANDIDATE",
+        "closure_method": "SEPARATE_PROTECTED_CLASS_S_TASK_STATE_CHANGE",
+        "builder_self_certification_allowed": false,
+        "pre_merge_status_interpretation": "AFTER_ACCEPTED_MERGE_HISTORICAL_PRE_MERGE_SNAPSHOTS_SUPERSEDED_BY_DURABLE_OWNER_DECISION_AND_PROTECTED_MERGE_RECEIPT"
+      }
     }
   ]
 }
