@@ -69,6 +69,8 @@ def false_a173_positive_claim(value):
     )
     for line in value.splitlines():
         for clause in re.split(r"[.!?;]", line):
+            if re.search(r"\bOwner\s+has\s+not\s+accepted\s+(?:checkpoint\s+)?A173\b", clause, re.IGNORECASE):
+                continue
             if conditional.search(clause):
                 continue
             for pattern in patterns:
@@ -77,6 +79,49 @@ def false_a173_positive_claim(value):
                         continue
                     return True
     return False
+
+
+def evaluate_class_s_transition(*, phase, reviewed_head, expected_head, ci_head,
+                                owner_receipt=None, merge_receipt=None,
+                                witness_receipt=None, closure_receipt=None,
+                                verify_owner=None, verify_merge=None,
+                                verify_witness=None, verify_closure=None):
+    """Evidence gate, not an approval issuer.
+
+    Verifier callbacks must read independently trusted evidence OUTSIDE this
+    candidate branch. Fixture callbacks have zero real-world authority.
+    """
+    if not expected_head or reviewed_head != expected_head or ci_head != expected_head:
+        return False, "reviewed HEAD / CI mismatch"
+    if not isinstance(owner_receipt, dict) or owner_receipt.get("head_sha") != expected_head:
+        return False, "missing or stale Owner receipt"
+    if owner_receipt.get("actor_role") == "BUILDER":
+        return False, "Builder cannot self-approve"
+    if not callable(verify_owner) or not verify_owner(owner_receipt):
+        return False, "Owner evidence unverified by independent trust source"
+    if phase == "PRE_MERGE":
+        return True, "pre-merge prerequisites verified externally, NOT merged"
+    if not isinstance(merge_receipt, dict) or merge_receipt.get("reviewed_head_sha") != expected_head:
+        return False, "missing/mismatched protected merge receipt"
+    if not merge_receipt.get("merged_main_sha") or not callable(verify_merge) or not verify_merge(merge_receipt):
+        return False, "merge main SHA unverified externally"
+    if phase not in {"POST_MERGE_WITNESS", "CLOSURE"}:
+        return False, "unsupported transition phase"
+    if not isinstance(witness_receipt, dict) or witness_receipt.get("merged_main_sha") != merge_receipt["merged_main_sha"]:
+        return False, "independent witness absent or wrong merged SHA"
+    if not callable(verify_witness) or not verify_witness(witness_receipt):
+        return False, "witness evidence unverified externally"
+    if witness_receipt.get("actor_role") in {"BUILDER", "OWNER"}:
+        return False, "witness is not an independent validation seat"
+    if phase == "POST_MERGE_WITNESS":
+        return True, "post-merge witness evidence eligible, NOT closure"
+    if not isinstance(closure_receipt, dict) or closure_receipt.get("merged_main_sha") != merge_receipt["merged_main_sha"]:
+        return False, "missing/mismatched closure receipt"
+    if closure_receipt.get("actor_id") == witness_receipt.get("actor_id"):
+        return False, "witness cannot self-close"
+    if not callable(verify_closure) or not verify_closure(closure_receipt):
+        return False, "separate protected closure receipt unverified"
+    return True, "independent three-phase evidence eligible, not self-authorization"
 
 
 def _unique_json_object(pairs):
@@ -258,7 +303,15 @@ def main():
         if routing.get("holder") == routing.get("acceptance_authority"):
             fail(errors, "routing Builder cannot be Owner acceptance authority")
         if routing.get("candidate_gate_phase") != "PRE_MERGE_UNACCEPTED_SNAPSHOT":
-            fail(errors, "routing Class S candidate phase is not pending")
+            # A normal static registry/PR cannot issue its own Owner, merge,
+            # witness or closure receipts. External verifier integration is
+            # required before any post-merge state mutation is accepted.
+            allowed, reason = evaluate_class_s_transition(
+                phase=routing.get("candidate_gate_phase"),
+                reviewed_head=None, expected_head=None, ci_head=None,
+            )
+            if not allowed:
+                fail(errors, "routing Class S candidate phase is not pending; external evidence required: " + reason)
         if routing.get("status") != "IN_PROGRESS":
             fail(errors, "routing Class S closure requires separate protected evidence")
         if not isinstance(gate, dict) or gate.get("owner_acceptance") != "NOT_GRANTED" or gate.get("status") != "OWNER_PER_FINDING_DISPOSITION_PENDING":

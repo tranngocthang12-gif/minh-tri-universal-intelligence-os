@@ -516,6 +516,43 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 code, output = self._run_isolated_validator(mutate)
                 self.assertEqual(code, 0, output)
 
+    def test_three_phase_external_receipt_contract(self):
+        from tools.validate_continuity_handoff import evaluate_class_s_transition
+        head = "a" * 40
+        main = "b" * 40
+        base = dict(phase="CLOSURE", reviewed_head=head, expected_head=head, ci_head=head,
+                    owner_receipt={"head_sha": head, "actor_role": "OWNER", "actor_id": "owner-seat"},
+                    merge_receipt={"reviewed_head_sha": head, "merged_main_sha": main},
+                    witness_receipt={"merged_main_sha": main, "actor_id": "validator-seat", "actor_role": "EVIDENCE"},
+                    closure_receipt={"merged_main_sha": main, "actor_id": "closure-seat"},
+                    verify_owner=lambda receipt: True, verify_merge=lambda receipt: True,
+                    verify_witness=lambda receipt: True, verify_closure=lambda receipt: True)
+        # All callbacks are SYNTHETIC fixtures. No real Owner authentication.
+        self.assertTrue(evaluate_class_s_transition(**base)[0])
+        self.assertTrue(evaluate_class_s_transition(**{**base, "phase": "PRE_MERGE"})[0])
+        self.assertTrue(evaluate_class_s_transition(**{**base, "phase": "POST_MERGE_WITNESS"})[0])
+        bad = [
+            {"reviewed_head": "wrong"}, {"ci_head": "wrong"},
+            {"owner_receipt": None},
+            {"owner_receipt": {"head_sha":head,"actor_role":"BUILDER"}},
+            {"verify_owner": None}, {"merge_receipt": None},
+            {"merge_receipt": {"reviewed_head_sha":head,"merged_main_sha":"wrong"}},
+            {"verify_merge": None}, {"witness_receipt": None},
+            {"verify_witness": None}, {"closure_receipt": None},
+            {"verify_closure": None},
+            {"closure_receipt": {"merged_main_sha":main,"actor_id":"validator-seat"}},
+        ]
+        for change in bad:
+            with self.subTest(change=change):
+                self.assertFalse(evaluate_class_s_transition(**{**base, **change})[0])
+
+    def test_a173_negated_owner_claim_is_not_approval(self):
+        from tools.validate_continuity_handoff import false_a173_positive_claim
+        self.assertFalse(false_a173_positive_claim("Owner has not accepted checkpoint A173"))
+        self.assertTrue(false_a173_positive_claim("Owner has accepted checkpoint A173"))
+        self.assertFalse(false_a173_positive_claim(
+            "Nếu A173 đã được Owner nghiệm thu thì mới được chuyển sang A174."))
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])
