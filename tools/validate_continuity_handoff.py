@@ -24,42 +24,42 @@ def unsafe_class_d_path(p):
 
 
 def false_a173_positive_claim(value):
-    """Conservative contradiction alert only, never an Owner acceptance verifier."""
+    """Conservative negative gate for contradictory A173 claims, NOT an acceptance authenticator."""
     if not isinstance(value, str):
         return False
-    pattern = re.compile(
-        r"(?:\bA173\b(?:\s+(?:(?:checkpoint)\s+)?(?:is|was|has\s+been|now)\s+|\s+(?:checkpoint\s+)?)?(?P<english>\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b)"
-        r"|\bA173\b.{0,160}?(?P<vietnamese>\bđã\s+(?:được\s+)?"
-        r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất)\b)"
-        r"|\b(?:Owner\s+)?đã\s+(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+tất)"
-        r"(?:\s+và\s+hoàn\s+tất)?\s+(?:checkpoint\s+)?\bA173\b)",
+    patterns = (
+        re.compile(
+            r"\bA173\b\s+(?:checkpoint\s+)?"
+            r"(?:(?:is\s+both\s+DRAFT\s+and|status\s+is|is|was|has\s+been|marked\s+as|now)\s+)?"
+            r"\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b", re.IGNORECASE
+        ),
+        re.compile(
+            r"\bA173\b[^.!?;\n]{0,120}?\bđã\s+(?:được\s+)?"
+            r"(?:\w+\s+){0,6}?"
+            r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất)\b",
+            re.IGNORECASE,
+        ),
+        re.compile(
+            r"\b(?:Owner\s+)?đã\s+(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+tất)"
+            r"(?:\s+và\s+hoàn\s+tất)?\s+(?:checkpoint\s+)?\bA173\b",
+            re.IGNORECASE,
+        ),
+    )
+    qualifier = re.compile(
+        r"(?:\b(?:before|until|unless|if|when)\b|không\s+được\s+nói|"
+        r"đừng\s+nói|chưa\s+được|không\s+được)(?:\s+\S+){0,9}\s*$",
         re.IGNORECASE,
     )
-    negation = re.compile(
-        r"\b(?:NOT|NO|NEVER|UNACCEPTED|UNVERIFIED|PENDING)\b"
-        r"|\b(?:chưa|không(?:\s+được)?)\b", re.IGNORECASE
-    )
     for line in value.splitlines():
-        for match in pattern.finditer(line):
-            if match.group("english"):
-                before = line[max(0, match.start("english") - 26):match.start("english")]
-                if negation.search(before):
-                    continue
-                between = line[match.start():match.start("english")]
-                if len(between) > 48 and not re.search(
-                    r"(?:\b(?:is|was|now|promoted|marked)\b|chuyển\s+sang).{0,36}$",
-                    between, re.IGNORECASE
-                ):
-                    continue
-            elif match.group("vietnamese"):
-                before = line[max(0, match.start("vietnamese") - 16):match.start("vietnamese")]
-                if negation.search(before):
-                    continue
-            else:
-                before = line[max(0, match.start() - 15):match.start()]
-                if negation.search(before):
-                    continue
-            return True
+        for clause in re.split(r"[.!?;]", line):
+            for pattern in patterns:
+                for hit in pattern.finditer(clause):
+                    if qualifier.search(clause[:hit.start()].strip()):
+                        continue
+                    if re.search(r"\b(?:NOT|NEVER|NO|chưa|không)\b",
+                                 hit.group(), re.IGNORECASE):
+                        continue
+                    return True
     return False
 
 
@@ -100,7 +100,7 @@ def main():
                 fail(errors, "A173 checkpoint shadow/missing schema fields")
         if re.fullmatch(r"BUDDHIST-A17[3-7](?:[-_].+)?", str(record.get("task_id", ""))):
             if record.get("task_id") != "BUDDHIST-A173" and (
-                record.get("status") == "DONE" or checkpoint is not None
+                (isinstance(record.get("status"), str) and record["status"].upper() in {"DONE", "COMPLETED", "ACCEPTED", "VERIFIED", "GRANTED"}) or checkpoint is not None
             ):
                 fail(errors, "unreceipted A173-dependent checkpoint promotion")
         if record.get("task_id") == "BUDDHIST-A173":
@@ -111,10 +111,17 @@ def main():
                 if not draft_path.is_file():
                     fail(errors, "A173 result_ref DRAFT source is missing")
                 else:
-                    first_part = draft_path.read_text(encoding="utf-8")[:550]
-                    if (not first_part.startswith("# Buddhist Thought Checkpoint A173 — DRAFT")
-                            or "**Status:** DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED" not in first_part):
+                    draft_text = draft_path.read_text(encoding="utf-8")
+                    statuses = [
+                        line.split("**Status:**", 1)[1].strip()
+                        for line in draft_text.splitlines()
+                        if line.lstrip().startswith("**Status:**")
+                    ]
+                    if (not draft_text.startswith("# Buddhist Thought Checkpoint A173 — DRAFT")
+                            or statuses != ["DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED"]):
                         fail(errors, "A173 result_ref is not an unaccepted DRAFT source")
+                    if false_a173_positive_claim(draft_text):
+                        fail(errors, "A173 DRAFT source falsely claims checkpoint acceptance")
     if current.get("active_workstream") == "OWNER_DIRECTED_LEARNING" and current.get("active_task_id") != "BUDDHIST-A173":
         fail(errors, "Buddhist learning route cannot silently change its task ID")
     if "ARCH-BUDDHIST-A173-ROUTING-V1" not in tasks:
@@ -144,6 +151,10 @@ def main():
             fail(errors, "A173 acceptance authority lacks verified Owner designation")
         if task.get("next_action") and current.get("next_checkpoint") != task.get("next_action"):
             fail(errors, "current.next_checkpoint does not match active task.next_action")
+        if active_id == "BUDDHIST-A173" and (
+                false_a173_positive_claim(task.get("next_action"))
+                or false_a173_positive_claim(current.get("next_checkpoint"))):
+            fail(errors, "A173 next action falsely claims checkpoint completion")
         if active_id == "BUDDHIST-A173":
             # No branch mutation is authorized by this Class S routing candidate.
             if task.get("branch") is not None:
@@ -229,12 +240,30 @@ def main():
             if (gate.get("originals_or_attestation") != "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED"
                     or gate.get("missing_verbatim_originals") != "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN"):
                 fail(errors, "routing Class S lost F3 originals cannot be marked verified")
+            if (gate.get("source") != "OWNER_CHAT_BUILDER_SUMMARY_UNVERIFIED_NOT_ORIGINAL_CRITIC_RECEIPTS"
+                    or gate.get("required_disposition_each") != "OWNER_REPAIR_CONFIRMED_OR_EXPLICIT_REJECTION_WITH_EVIDENCE"):
+                fail(errors, "routing Class S F3 source/disposition cannot claim approval")
             if gate.get("gate_3_build_before_task_authorize") != "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE":
                 fail(errors, "routing Class S Gate 3 exception cannot be expanded")
         if (not isinstance(witness, dict)
+                or set(witness) != {
+                    "assignment_authority", "evidence_role", "witness_holder",
+                    "closure_holder", "assignment_condition", "merge_commit_evidence",
+                    "witness_status", "closure_method",
+                    "builder_self_certification_allowed", "pre_merge_status_interpretation",
+                }
+                or witness.get("assignment_authority") != "OWNER"
+                or witness.get("evidence_role") != "Evidence/Validation"
+                or witness.get("assignment_condition") != "OWNER_MUST_NAME_REPLACEABLE_INDEPENDENT_EVIDENCE_SEAT_AND_CLASS_S_CLOSURE_SEAT_AT_EXACT_HEAD_ACCEPTANCE"
+                or witness.get("merge_commit_evidence") != [
+                    "reviewed_head_sha", "owner_acceptance_comment_id",
+                    "exact_head_ci_run_id",
+                ]
                 or witness.get("witness_status") != "NOT_CLAIMED_BY_THIS_CANDIDATE"
                 or witness.get("witness_holder") is not None
                 or witness.get("closure_holder") is not None
+                or witness.get("closure_method") != "SEPARATE_PROTECTED_CLASS_S_TASK_STATE_CHANGE"
+                or witness.get("pre_merge_status_interpretation") != "AFTER_ACCEPTED_MERGE_HISTORICAL_PRE_MERGE_SNAPSHOTS_SUPERSEDED_BY_DURABLE_OWNER_DECISION_AND_PROTECTED_MERGE_RECEIPT"
                 or witness.get("builder_self_certification_allowed") is not False):
             fail(errors, "routing Class S witness/closure cannot be self-certified")
         handoff = routing.get("handoff_ref")
@@ -244,8 +273,18 @@ def main():
             body = (ROOT / handoff).read_text(encoding="utf-8")
             if f"**TASK_ID:** {routing['task_id']}" not in body or "## NOT DONE" not in body:
                 fail(errors, "routing Class S handoff contract missing")
-            if "## NEXT ACTION\n" + str(routing.get("next_action")) not in body:
-                fail(errors, "routing Class S handoff NEXT ACTION mismatch")
+            if false_a173_positive_claim(body):
+                fail(errors, "routing Class S handoff falsely claims A173 completion")
+            lines = body.splitlines()
+            heads = [i for i, line in enumerate(lines)
+                     if line.strip() == "## NEXT ACTION"]
+            if len(heads) != 1:
+                fail(errors, "routing Class S handoff must have exactly one NEXT ACTION")
+            else:
+                tail = lines[heads[0] + 1:]
+                first = next((line.strip() for line in tail if line.strip()), None)
+                if first != routing.get("next_action"):
+                    fail(errors, "routing Class S handoff NEXT ACTION mismatch")
 
     if active_id == "BUDDHIST-A173" and active_id in tasks:
         ref = tasks[active_id].get("handoff_ref")
