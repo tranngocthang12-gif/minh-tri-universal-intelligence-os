@@ -1,0 +1,123 @@
+name: Gemini Architecture Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-genai requests
+
+      - name: Analyze Code & Architecture
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          python - << 'EOF'
+          import os
+          import subprocess
+          import requests
+          from google import genai
+
+          api_key = os.environ.get("GEMINI_API_KEY")
+          if not api_key:
+              print("Lỗi: GEMINI_API_KEY chưa được thiết lập trong Secrets.")
+              exit(1)
+
+          client = genai.Client(api_key=api_key)
+
+          try:
+              diff = subprocess.check_output(["git", "diff", "origin/main...HEAD"]).decode("utf-8", errors="ignore")
+          except Exception:
+              diff = ""
+
+          if not diff.strip():
+              print("Không có diff mã nguồn để review.")
+              exit(0)
+
+          prompt = f"""
+          Bạn là Cố vấn Kiến trúc Cấp cao (Architecture Advisor) cho hệ điều hành trí tuệ 'Minh Tri Universal Intelligence OS'.
+          Hãy thẩm định các thay đổi mã nguồn sau đây:
+          1. Đánh giá tính chuẩn mực kiến trúc và rủi ro hiệu năng.
+          2. Phát hiện lỗi tiềm ẩn, memory leak hoặc race conditions.
+          3. Đề xuất cải tiến cụ thể (nếu có).
+
+          Code Diff:
+          {diff[:15000]}
+          """
+
+          # 1. Tự động lấy danh sách model thực tế từ API key
+          candidate_models = []
+          try:
+              for m in client.models.list():
+                  m_name = getattr(m, "name", "")
+                  clean_name = m_name.replace("models/", "")
+                  if "gemini" in clean_name.lower():
+                      candidate_models.append(clean_name)
+          except Exception as e:
+              print(f"Không thể đọc danh sách model tự động: {e}")
+
+          # Danh sách model dự phòng
+          fallback_list = ["gemini-1.5-flash-latest", "gemini-1.5-pro-latest", "gemini-2.0-flash-exp", "gemini-1.5-flash-8b"]
+          for fb in fallback_list:
+              if fb not in candidate_models:
+                  candidate_models.append(fb)
+
+          print(f"Danh sách model thử nghiệm: {candidate_models}")
+
+          # 2. Thử lần lượt các model cho đến khi thành công
+          response = None
+          selected_model = None
+          for m_name in candidate_models:
+              try:
+                  print(f"Đang thẩm định với: {m_name}...")
+                  response = client.models.generate_content(
+                      model=m_name,
+                      contents=prompt,
+                  )
+                  selected_model = m_name
+                  print(f"==> Thành công với model: {m_name}")
+                  break
+              except Exception as err:
+                  print(f"Thử {m_name} không thành công: {err}")
+
+          if not response:
+              print("Không có model nào khả dụng.")
+              exit(1)
+
+          pr_num = os.environ.get("PR_NUMBER")
+          repo = os.environ.get("REPO")
+          token = os.environ.get("GITHUB_TOKEN")
+
+          if pr_num and token:
+              url = f"https://api.github.com/repos/{repo}/issues/{pr_num}/comments"
+              headers = {
+                  "Authorization": f"Bearer {token}",
+                  "Accept": "application/vnd.github.v3+json"
+              }
+              body = {"body": f"### 🤖 Gemini Architecture Review ({selected_model})\n\n{response.text}"}
+              res = requests.post(url, json=body, headers=headers)
+              print(f"Đã đăng bình luận lên PR (Status: {res.status_code})")
+          else:
+              print(response.text)
+          EOF
