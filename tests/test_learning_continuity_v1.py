@@ -220,6 +220,31 @@ class LearningContinuityV1Tests(unittest.TestCase):
                                         live_pr_head_sha=PR341_SHA)
         self.assertEqual(pos.cursor_id, CURSOR03)
 
+    def test_06b_newer_malformed_cursor_must_not_replay_old_question(self):
+        bad = comment(6100784908, "A173-MN4-MN2-COLLATION-04", "6096480057")
+        bad["body"] = bad["body"].replace("SUPERSEDES:", "SUPERSEDES_CURSOR:")
+        with self.assertRaisesRegex(LearningContinuityError, "unreconciled malformed"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment(), bad], live_pr_head_sha=PR341_SHA)
+
+    def test_06c_explicit_reconciliation_recovers_new_question(self):
+        bad = comment(6100784908, "A173-MN4-MN2-COLLATION-04", "6096480057")
+        bad["body"] = bad["body"].replace("SUPERSEDES:", "SUPERSEDES_CURSOR:")
+        fixed = comment(6100903518, "A173-MN4-MN2-COLLATION-04", "6096480057")
+        fixed["body"] = fixed["body"].replace(
+            "ALREADY_STUDIED:", "RECONCILES_INVALID_COMMENT: 6100784908\\nALREADY_STUDIED:")
+        fixed["body"] = fixed["body"].replace(
+            "Read MN 4 fear-posture passage and MN 2 §§2–7, compare Pāli verbs "
+            "and two translations without relying on the stock formula.",
+            "Compare MN 2 section 4 painful feelings against section 5 dangerous "
+            "elephant avoidance with two translations and counter-reading.")
+        position = recover_learning_position(
+            self.root, TRACK, active_task_id="BUDDHIST-A173",
+            comments=[comment(), bad, fixed], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(position.cursor_id, "A173-MN4-MN2-COLLATION-04")
+        self.assertIn("elephant avoidance", position.next_question)
+
     def test_07_two_successive_sessions_recover_from_latest_delta(self):
         first = delta()
         path = validate_append_intent(
