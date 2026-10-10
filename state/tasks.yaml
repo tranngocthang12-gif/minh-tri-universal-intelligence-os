@@ -816,7 +816,7 @@
       "change_class": "S",
       "acceptance_authority": "OWNER",
       "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
-      "next_action": "Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight provisional HIGH/MEDIUM risk keys and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
+      "next_action": "Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight historical provisional HIGH/MEDIUM keys and every later-round MEDIUM-or-higher finding in the open registry and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
       "blocker": "CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE",
       "resume_gate": "EXACT_HEAD_INDEPENDENT_REVIEW_THEN_OWNER_PER_FINDING_HIGH_MEDIUM_AND_GATE3_DECISIONS_WITH_SEAT_ASSIGNMENTS_THEN_EXPLICIT_CLASS_S_ACCEPTANCE_THEN_PROTECTED_MERGE_AND_WITNESS_CLOSURE",
       "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
@@ -840,7 +840,166 @@
         "originals_or_attestation": "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED",
         "missing_verbatim_originals": "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN",
         "gate_3_build_before_task_authorize": "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE",
-        "owner_acceptance": "NOT_GRANTED"
+        "owner_acceptance": "NOT_GRANTED",
+        "finding_records": [
+          {
+            "finding_id": "INTAKE_26D_GROK_HIGH_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "HIGH",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-01",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-02",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-03",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-11",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          }
+        ],
+        "source_gap_rounds": [
+          {
+            "round_id": "GROK_MEDIUM_01_05",
+            "claimed_finding_ids": [
+              "GROK_MEDIUM_01",
+              "GROK_MEDIUM_02",
+              "GROK_MEDIUM_03",
+              "GROK_MEDIUM_04",
+              "GROK_MEDIUM_05"
+            ],
+            "review_head_hint": null,
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "CLAUDE_HR_01_08",
+            "claimed_finding_ids": [
+              "CLAUDE_HR_01",
+              "CLAUDE_HR_02",
+              "CLAUDE_HR_03",
+              "CLAUDE_HR_04",
+              "CLAUDE_HR_05",
+              "CLAUDE_HR_06",
+              "CLAUDE_HR_07",
+              "CLAUDE_HR_08"
+            ],
+            "review_head_hint": "9aed814",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "ROUND_9FFC122",
+            "claimed_finding_ids": [],
+            "review_head_hint": "9ffc122",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "ROUND_65B0FA8",
+            "claimed_finding_ids": [],
+            "review_head_hint": "65b0fa8",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          }
+        ]
       },
       "post_merge_witness": {
         "assignment_authority": "OWNER",
