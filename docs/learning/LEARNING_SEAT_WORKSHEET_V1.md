@@ -1,0 +1,53 @@
+# MINH TRÍ — Learning seat worksheet v1 (execution aid; NOT a second law)
+
+**Authority:** `state/bootstrap.json` -> Blueprint -> consolidated law -> `docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md` §2A and (for Buddhist study) §7A -> `state/current.yaml` and `state/tasks.yaml` -> active handoff. If conflict: fail closed on promotion, continue bounded study PENDING_REVIEW.
+
+This worksheet is a short memory aid, **not an alternate current-state authority**. Apply equally in existing and new chats when the chat next receives a material Owner learning instruction. Nothing here makes the model learn persistently without protected records.
+
+## Seven-step learning receipt (mark DONE/PARTIAL/BLOCKED with source, never assume)
+
+| Step | Required evidence |
+| --- | --- |
+| 1 RECOVER | protected-main base SHA; exact state/task/handoff/checkpoint, inherited corrections and open audits |
+| 2 SOURCES | exact early discourse IDs, passages, edition/translation; Pāli/parallel scope and remaining limits |
+| 3 MILINDA | exact relevant Milindapañha question/passages + specific contribution; explicitly LATER/PARACANONICAL; conflict/open when absent |
+| 4 CRITIQUE | alternate explanation, counterexample, possible overclaim, sources in conflict |
+| 5 TRANSFER | what changed from prior knowledge; dependencies; held-out question and independently evaluated result where needed |
+| 6 RECORD | PR/commit candidate ID, proposed claim/status, evidence and correction links, Local Brain result |
+| 7 READ BACK | exact candidate read-back; AFTER approved protected merge, separate zero-chat retrieval report |
+
+## Three gates (never substitute one for another)
+
+- **G1 SOURCE**: precise source-role and claim-level attestation. Open until inspected sources support each attributed claim.
+- **G2 UNDERSTANDING**: explanation, rebuttal and genuinely unseen transfer tested and independently assessed. A simulated exercise or self-assessment is insufficient.
+- **G3 CONTINUITY**: approved protected main + independently repeated recovery without prior chat; no Local Brain requirement for GitHub-first canonical knowledge.
+
+**Four claim/evidence classes:** TEXT_ATTESTED, CROSS_TEXT_SYNTHESIS, LATER/PARACANONICAL, UNCERTAINTY. Preserve uncertainty and provenance per claim. Knowledge Schema persists only compatible statuses: PENDING_REVIEW, ACTIVE, UNCERTAIN, DISPUTED, SUPERSEDED, REFUTED. Neither `VERIFIED` nor `PROVISIONAL` is an extra stored status.
+
+## Final receipt for every material study pass
+
+TRACK: ...  
+MAIN_SHA_READ: ...  
+CANONICAL_CURRENT/NEXT: ...  
+DRAFT_TOPIC/CANDIDATE: ...  
+LEARNED/CORRECTED: ...  
+EARLY_SOURCE_IDS and exact LOCATORS: ...  
+PALi/TRANSLATION/PARALLEL_SCOPE: ...  
+MILINDA_ID / ROLE / CONFLICT: ...  
+CLAIM_CLASSES / CLAIM_STATUS: ...  
+G1: PASS/PARTIAL/BLOCKED + evidence ...  
+G2: PASS/PARTIAL/BLOCKED + evaluator evidence ...  
+G3: PASS/PARTIAL/BLOCKED + protected-main and fresh-seat evidence ...  
+OPEN_AUDITS / DEPENDENCIES / NEXT_ACTION: ...  
+DURABLE_PR_OR_MAIN_LINK: ...  
+LOCAL_BRAIN: NOT_WRITTEN/PROVEN_WRITTEN evidence ...
+
+If another chat says A205/A206 while protected route still says A172/A173, report both **with different labels**; never fabricate intermediate history or overwrite canonical pointers. Save accessible material as candidate evidence for later controlled reconciliation.
+
+## PC-offline operating mode
+
+When PC/Local Brain is offline but GitHub remains reachable, keep the seven-step study workflow running. Commit a candidate to branch/PR, read it back, then use the normal CI, independent review, acceptance and protected-main merge route. Explicitly mark LOCAL_BRAIN=NOT_WRITTEN/UNVERIFIED and keep a GitHub provenance pointer for later optional mirroring. No automatic retry or fake sync. If GitHub is down too, continue study in chat as NOT YET DURABLY RECORDED; do not claim cross-chat memory. See existing Learning Law §2B for the normative rule.
+
+## Zero-chat recovery acceptance challenge
+
+A separate reader with no prior chat sees only GitHub protected main starting from `state/bootstrap.json` and reconstructs: (1) authority chain (2) applicable §2A/§7A rules (3) accepted Buddhist CURRENT/NEXT (4) open audits and corrections (5) candidates NOT ACCEPTED (6) exact next action (7) evidence that read-back is post-merge. A new chat reading this worksheet alone has NOT demonstrated recovery.
