@@ -384,5 +384,58 @@ class LearningContinuityV1Tests(unittest.TestCase):
             validate_delta(d)
 
 
+    def test_26_existing_file_cannot_be_silently_overwritten(self):
+        proposed = delta()
+        self.save_delta(proposed)
+        with self.assertRaisesRegex(LearningContinuityError, "already exists"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=proposed,
+                expected_parent_cursor_id=None,
+                expected_registry_sha256=self.registry_digest())
+
+    def test_27_dangling_symlink_cannot_replace_missing_file(self):
+        proposed = delta()
+        directory = self.root / "docs" / "learning" / "deltas" / TRACK
+        directory.mkdir(parents=True)
+        try:
+            (directory / (proposed["cursor_id"] + ".json")).symlink_to(
+                self.root / "missing.json")
+        except (OSError, NotImplementedError):
+            self.skipTest("symlink creation unavailable")
+        with self.assertRaisesRegex(LearningContinuityError, "already exists"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=proposed,
+                expected_parent_cursor_id=None,
+                expected_registry_sha256=self.registry_digest())
+
+    def test_28_self_superseding_cursor_rejected_before_write(self):
+        r = registry()
+        r["tracks"][0]["latest_delta_id"] = "A173-Q03-01"
+        r["tracks"][0]["latest_delta_path"] = (
+            "docs/learning/deltas/BUDDHIST_THOUGHT/A173-Q03-01.json")
+        self.save_registry(r)
+        proposed = delta(parent="A173-Q03-01")
+        with self.assertRaisesRegex(LearningContinuityError, "cannot supersede itself"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=proposed,
+                expected_parent_cursor_id="A173-Q03-01",
+                expected_registry_sha256=self.registry_digest())
+
+    def test_29_parent_symlink_cannot_redirect_append_target(self):
+        proposed = delta()
+        outside = self.root / "outside"
+        outside.mkdir()
+        (self.root / "docs").mkdir()
+        try:
+            (self.root / "docs" / "learning").symlink_to(
+                outside, target_is_directory=True)
+        except (OSError, NotImplementedError):
+            self.skipTest("symlink creation unavailable")
+        with self.assertRaisesRegex(LearningContinuityError, "symlink parent"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=proposed,
+                expected_parent_cursor_id=None,
+                expected_registry_sha256=self.registry_digest())
+
 if __name__ == "__main__":
     unittest.main()

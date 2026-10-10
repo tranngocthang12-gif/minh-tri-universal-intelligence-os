@@ -388,4 +388,15 @@ def validate_append_intent(root: Path, *, track_id: str, proposed: Mapping[str, 
     _require(proposed["provenance"]["source_head_sha"] ==
              track["working_cursor_source"]["source_head_sha"],
              "delta based on a different source head")
-    return f"docs/learning/deltas/{track_id}/{proposed['cursor_id']}.json"
+    _require(proposed["cursor_id"] != proposed["parent_cursor_id"],
+             "candidate cursor cannot supersede itself")
+    relative = f"docs/learning/deltas/{track_id}/{proposed['cursor_id']}.json"
+    _require(_valid_path(relative, track_id), "invalid append-only delta path")
+    destination = root / relative
+    _require(not destination.exists() and not destination.is_symlink(),
+             "append-only delta destination already exists")
+    for parent in destination.parents:
+        if parent == root:
+            break
+        _require(not parent.is_symlink(), "symlink parent for append-only delta")
+    return relative
