@@ -379,6 +379,67 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
                             proof=f"PR#{source['pr_number']}:comment#{valid[-1][0]}")
 
 
+
+def validate_canonical_learning_route(root: Path, track_id: str, *,
+                                      for_mutation: bool = False) -> str:
+    """Read active route from canonical project facts, never caller assertions.
+
+    For mutation only: check declared Class D branch binding. This is still
+    NOT an Owner authentication, branch CAS, acceptance, or write permission.
+    """
+    registry = read_json(root / "state" / "learning_tracks.json")
+    tracks = validate_registry(registry)
+    _require(track_id in tracks, "learning track not registered")
+    track = tracks[track_id]
+    boot = read_json(root / "state" / "bootstrap.json")
+    current = read_json(root / "state" / "current.yaml")
+    tasks = read_json(root / "state" / "tasks.yaml")
+    _require(boot.get("current_state") == "state/current.yaml"
+             and boot.get("task_registry") == "state/tasks.yaml",
+             "invalid canonical boot root routing")
+    _require(current.get("boot_root") == "state/bootstrap.json"
+             and current.get("task_registry") == boot["task_registry"],
+             "boot/current authority pointers conflict")
+    _require(isinstance(boot.get("law_precedence"), str)
+             and bool(boot["law_precedence"])
+             and current.get("law_precedence") == boot["law_precedence"],
+             "boot/current learning law routing conflict")
+    _require(isinstance(boot.get("master_blueprint"), str)
+             and bool(boot["master_blueprint"])
+             and current.get("master_blueprint") == boot["master_blueprint"]
+             and current.get("current_architecture") == boot["master_blueprint"],
+             "boot/current blueprint routing conflict")
+    _require(current.get("active_workstream") == "OWNER_DIRECTED_LEARNING",
+             "canonical active workstream is not learning")
+    task_id = track["task_id"]
+    _require(current.get("active_task_id") == task_id,
+             "canonical active task mismatch: do not infer route from caller data")
+    _require(isinstance(tasks.get("tasks"), list),
+             "canonical task registry has no task list")
+    matched = [task for task in tasks["tasks"]
+               if isinstance(task, dict) and task.get("task_id") == task_id]
+    _require(len(matched) == 1,
+             "canonical active task missing or duplicated")
+    task = matched[0]
+    _require(task.get("status") == "IN_PROGRESS"
+             and task.get("change_class") == "D",
+             "canonical active learning task not IN_PROGRESS Class D")
+    checkpoint = task.get("learning_checkpoint")
+    _require(isinstance(checkpoint, dict)
+             and checkpoint.get("current_checkpoint_id") == track["checkpoint_id"]
+             and checkpoint.get("last_accepted_checkpoint_id") ==
+             track["last_durable_checkpoint_id"],
+             "learning checkpoint chain conflicts with canonical task")
+    _require(checkpoint.get("checkpoint_acceptance") == "NOT_CURRENT"
+             and checkpoint.get("acceptance_receipt_ref") is None,
+             "unaccepted study route carries unauthorized checkpoint promotion")
+    if for_mutation:
+        binding = task.get("branch_binding")
+        _require(_nonempty(task.get("branch"))
+                 and _nonempty(binding) and not binding.startswith("NONE_"),
+                 "Class D study branch is not Owner-bound for mutation")
+    return task_id
+
 def recover_learning_position(root: Path, track_id: str, *, active_task_id: str,
                               comments: Sequence[Mapping[str, Any]] | None = None,
                               live_pr_head_sha: str | None = None) -> LearningPosition:
@@ -387,8 +448,9 @@ def recover_learning_position(root: Path, track_id: str, *, active_task_id: str,
     tracks = validate_registry(registry)
     _require(track_id in tracks, "track not registered; Owner must choose learning work")
     track = tracks[track_id]
-    _require(active_task_id == track["task_id"],
-             "canonical active task mismatch: cannot promote candidate route")
+    authoritative_id = validate_canonical_learning_route(root, track_id)
+    _require(active_task_id == authoritative_id,
+             "canonical active task mismatch: caller does not match protected route")
     if track["latest_delta_id"] is not None:
         return _load_file_chain(root, track)
     _require(comments is not None and live_pr_head_sha is not None,
@@ -410,6 +472,7 @@ def validate_append_intent(root: Path, *, track_id: str, proposed: Mapping[str, 
     tracks = validate_registry(json.loads(raw, object_pairs_hook=_no_duplicate_keys))
     _require(track_id in tracks, "learning track missing")
     track = tracks[track_id]
+    validate_canonical_learning_route(root, track_id, for_mutation=True)
     validate_delta(proposed)
     _require(proposed["track_id"] == track_id, "delta track mismatch")
     _require(proposed["checkpoint_id"] == track["checkpoint_id"],

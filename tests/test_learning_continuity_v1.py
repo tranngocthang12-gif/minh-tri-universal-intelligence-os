@@ -115,10 +115,55 @@ class LearningContinuityV1Tests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         (self.root / "state").mkdir()
         self.save_registry(registry())
+        self.save_canonical_route()
 
     def save_registry(self, value):
         (self.root / "state" / "learning_tracks.json").write_text(
             json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+    def save_canonical_route(self, *, active_task="BUDDHIST-A173",
+                             status="IN_PROGRESS", change_class="D",
+                             branch="study/test-owner-bound-branch",
+                             branch_binding="OWNER_TEST_FIXTURE_ONLY",
+                             checkpoint="A173", accepted="A172"):
+        boot = {
+            "current_state": "state/current.yaml",
+            "task_registry": "state/tasks.yaml",
+            "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+            "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        }
+        current = {
+            "boot_root": "state/bootstrap.json",
+            "task_registry": "state/tasks.yaml",
+            "law_precedence": boot["law_precedence"],
+            "master_blueprint": boot["master_blueprint"],
+            "current_architecture": boot["master_blueprint"],
+            "active_workstream": "OWNER_DIRECTED_LEARNING",
+            "active_task_id": active_task,
+        }
+        tasks = {
+            "tasks": [{
+                "task_id": "BUDDHIST-A173",
+                "status": status,
+                "change_class": change_class,
+                "branch": branch,
+                "branch_binding": branch_binding,
+                "learning_checkpoint": {
+                    "current_checkpoint_id": checkpoint,
+                    "last_accepted_checkpoint_id": accepted,
+                    "checkpoint_acceptance": "NOT_CURRENT",
+                    "acceptance_receipt_ref": None,
+                },
+            }],
+        }
+        for filename, document in (
+            ("bootstrap.json", boot), ("current.yaml", current),
+            ("tasks.yaml", tasks),
+        ):
+            (self.root / "state" / filename).write_text(
+                json.dumps(document, ensure_ascii=False, indent=2) + "\n",
+                encoding="utf-8")
 
     def registry_digest(self):
         return hashlib.sha256((self.root / "state" / "learning_tracks.json").read_bytes()).hexdigest()
@@ -503,6 +548,77 @@ class LearningContinuityV1Tests(unittest.TestCase):
         ]
         with self.assertRaisesRegex(LearningContinuityError, "unsupported"):
             validate_registry(x)
+
+
+    def test_36_fake_caller_task_does_not_override_protected_route(self):
+        self.save_canonical_route(active_task="ARCH-MASTER-BLUEPRINT-V1")
+        with self.assertRaisesRegex(LearningContinuityError, "canonical active task mismatch"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_37_completed_learning_task_is_not_active(self):
+        self.save_canonical_route(status="DONE")
+        with self.assertRaisesRegex(LearningContinuityError, "not IN_PROGRESS Class D"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_38_wrong_change_class_cannot_resume_learning(self):
+        self.save_canonical_route(change_class="F")
+        with self.assertRaisesRegex(LearningContinuityError, "not IN_PROGRESS Class D"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_39_unbound_study_branch_can_read_but_not_append(self):
+        self.save_canonical_route(branch=None,
+                                  branch_binding="NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        found = recover_learning_position(
+            self.root, TRACK, active_task_id="BUDDHIST-A173",
+            comments=[comment()], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(found.cursor_id, CURSOR03)
+        with self.assertRaisesRegex(LearningContinuityError, "not Owner-bound"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=delta(),
+                expected_parent_cursor_id=None,
+                expected_registry_sha256=self.registry_digest())
+
+    def test_40_canonical_checkpoint_mismatch_blocks_recovery(self):
+        self.save_canonical_route(checkpoint="A177")
+        with self.assertRaisesRegex(LearningContinuityError, "checkpoint chain conflicts"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_41_conflicting_boot_learning_law_pointer_blocks_recovery(self):
+        document = self.root / "state" / "current.yaml"
+        value = json.loads(document.read_text(encoding="utf-8"))
+        value["law_precedence"] = "docs/legacy_law.md"
+        document.write_text(json.dumps(value), encoding="utf-8")
+        with self.assertRaisesRegex(LearningContinuityError, "law routing conflict"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_42_duplicate_canonical_task_blocked(self):
+        document = self.root / "state" / "tasks.yaml"
+        value = json.loads(document.read_text(encoding="utf-8"))
+        value["tasks"].append(dict(value["tasks"][0]))
+        document.write_text(json.dumps(value), encoding="utf-8")
+        with self.assertRaisesRegex(LearningContinuityError, "missing or duplicated"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment()], live_pr_head_sha=PR341_SHA)
+
+    def test_43_missing_branch_binding_blocks_append(self):
+        self.save_canonical_route(branch_binding=None)
+        with self.assertRaisesRegex(LearningContinuityError, "not Owner-bound"):
+            validate_append_intent(
+                self.root, track_id=TRACK, proposed=delta(),
+                expected_parent_cursor_id=None,
+                expected_registry_sha256=self.registry_digest())
+
 
 if __name__ == "__main__":
     unittest.main()
