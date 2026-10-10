@@ -241,7 +241,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         def vietnamese_fake(current, active, root):
             path = root / active["handoff_ref"]
             path.write_text(path.read_text(encoding="utf-8") +
-                            "\\nA173 đã được chấp nhận.\\n", encoding="utf-8")
+                            "\nA173 đã được chấp nhận.\n", encoding="utf-8")
         code, details = self._run_isolated_validator(vietnamese_fake)
         self.assertEqual(code, 1, details)
         self.assertIn("A173 handoff falsely claims checkpoint completion", details)
