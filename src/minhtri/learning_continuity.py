@@ -348,22 +348,41 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
     _require(live_pr_head_sha == source["source_head_sha"],
              "PR HEAD changed: Owner decision needed before more study")
     valid: list[tuple[int, dict[str, str]]] = []
+    malformed: set[int] = set()
     for comment in comments:
         identity = comment.get("author")
         if identity is None and isinstance(comment.get("user"), dict):
             identity = comment["user"].get("login")
         if identity != source["author_login"]:
             continue
-        fields = _comment_fields(comment.get("body", ""))
+        body = comment.get("body", "")
+        # Never silently fall back to an old cursor if a newer cursor
+        # is malformed. Later explicit reconciliation can clear that risk.
+        candidate = isinstance(body, str) and body.splitlines()[:1] == [_COMMENT_LABEL]
+        fields = _comment_fields(body)
+        if fields is None and not candidate:
+            continue
+        ident = comment.get("id")
+        _require(type(ident) is int and ident > 0, "cursor comment lacks GitHub ID")
         if fields is None:
+            malformed.add(ident)
             continue
         _require(fields["SOURCE_HEAD_SHA"] == live_pr_head_sha,
                  "cursor provenance SHA differs from PR HEAD")
-        ident = comment.get("id")
-        _require(type(ident) is int and ident > 0, "cursor comment lacks GitHub ID")
         valid.append((ident, fields))
     _require(bool(valid), "no valid learning cursor: stop; do not repeat old lesson")
     valid.sort(key=lambda item: item[0])
+    reconciled: set[int] = set()
+    for ident, fields in valid:
+        value = fields.get("RECONCILES_INVALID_COMMENT", "")
+        if value:
+            _require(value.isdecimal(), "invalid cursor reconciliation ID")
+            prior = int(value)
+            _require(prior in malformed and prior < ident,
+                     "cursor reconciliation does not refer to an earlier malformed note")
+            reconciled.add(prior)
+    _require(not (malformed - reconciled),
+             "unreconciled malformed learning cursor: stop; do not replay old lesson")
     for previous, later in zip(valid, valid[1:]):
         supersedes = later[1]["SUPERSEDES"].split(" ", 1)[0]
         _require(supersedes == str(previous[0]),
