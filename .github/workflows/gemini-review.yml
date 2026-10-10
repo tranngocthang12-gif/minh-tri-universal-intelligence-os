@@ -39,7 +39,12 @@ jobs:
           import requests
           from google import genai
 
-          client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY"))
+          api_key = os.environ.get("GEMINI_API_KEY")
+          if not api_key:
+              print("Lỗi: GEMINI_API_KEY chưa được thiết lập trong Secrets.")
+              exit(1)
+
+          client = genai.Client(api_key=api_key)
 
           try:
               diff = subprocess.check_output(["git", "diff", "origin/main...HEAD"]).decode("utf-8", errors="ignore")
@@ -47,7 +52,7 @@ jobs:
               diff = ""
 
           if not diff.strip():
-              print("No diff to review.")
+              print("Không có diff mã nguồn để review.")
               exit(0)
 
           prompt = f"""
@@ -61,10 +66,44 @@ jobs:
           {diff[:15000]}
           """
 
-          response = client.models.generate_content(
-              model='gemini-1.5-flash',
-              contents=prompt,
-          )
+          # 1. Tự động lấy danh sách model thực tế từ API key
+          candidate_models = []
+          try:
+              for m in client.models.list():
+                  m_name = getattr(m, "name", "")
+                  clean_name = m_name.replace("models/", "")
+                  if "gemini" in clean_name.lower():
+                      candidate_models.append(clean_name)
+          except Exception as e:
+              print(f"Không thể đọc danh sách model tự động: {e}")
+
+          # Danh sách model dự phòng
+          fallback_list = ["gemini-1.5-flash-latest", "gemini-1.5-pro-latest", "gemini-2.0-flash-exp", "gemini-1.5-flash-8b"]
+          for fb in fallback_list:
+              if fb not in candidate_models:
+                  candidate_models.append(fb)
+
+          print(f"Danh sách model thử nghiệm: {candidate_models}")
+
+          # 2. Thử lần lượt các model cho đến khi thành công
+          response = None
+          selected_model = None
+          for m_name in candidate_models:
+              try:
+                  print(f"Đang thẩm định với: {m_name}...")
+                  response = client.models.generate_content(
+                      model=m_name,
+                      contents=prompt,
+                  )
+                  selected_model = m_name
+                  print(f"==> Thành công với model: {m_name}")
+                  break
+              except Exception as err:
+                  print(f"Thử {m_name} không thành công: {err}")
+
+          if not response:
+              print("Không có model nào khả dụng.")
+              exit(1)
 
           pr_num = os.environ.get("PR_NUMBER")
           repo = os.environ.get("REPO")
@@ -76,9 +115,9 @@ jobs:
                   "Authorization": f"Bearer {token}",
                   "Accept": "application/vnd.github.v3+json"
               }
-              body = {"body": f"### 🤖 Gemini Architecture Review\n\n{response.text}"}
+              body = {"body": f"### 🤖 Gemini Architecture Review ({selected_model})\n\n{response.text}"}
               res = requests.post(url, json=body, headers=headers)
-              print(f"Comment posted with status: {res.status_code}")
+              print(f"Đã đăng bình luận lên PR (Status: {res.status_code})")
           else:
               print(response.text)
           EOF
