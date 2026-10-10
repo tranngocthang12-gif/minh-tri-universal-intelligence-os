@@ -9,6 +9,39 @@ ACTIVE_STATUSES = {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STA
 REQUIRED_F3_KEYS = frozenset(["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS","INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION","INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF","INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY","INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"])
 
 
+
+def unsafe_class_d_path(p):
+    """Bounded path guard: no traversal, globs, backslashes or protected areas."""
+    if not isinstance(p, str) or not p or p.startswith("/") or "\\" in p:
+        return True
+    parts = p.split("/")
+    if ".." in parts or any(ch in p for ch in ("*", "?", "[", "]", "{", "}")):
+        return True
+    if p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/", "docs/LAW_")):
+        return True
+    return False
+
+
+def false_a173_positive_claim(value):
+    """Conservative red-flag check, NOT general natural-language understanding."""
+    if not isinstance(value, str):
+        return False
+    positive = re.compile(
+        r"(?:A173.{0,120}(?:has been accepted|is complete|completion is granted|"
+        r"(?:is\s+)?(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b|"
+        r"đã được chấp nhận|đã hoàn thành|đã nghiệm thu|được phép tiến A174))",
+        re.IGNORECASE,
+    )
+    negation = re.compile(
+        r"\b(?:NOT|NO|NEVER|UNACCEPTED|DRAFT|PENDING|UNVERIFIED)\b|"
+        r"chưa|không được|chưa được", re.IGNORECASE
+    )
+    for line in value.splitlines():
+        if positive.search(line) and not negation.search(line):
+            return True
+    return False
+
+
 def load_json(rel):
     return json.loads((ROOT / rel).read_text(encoding="utf-8"))
 
@@ -29,10 +62,28 @@ def main():
             scope = record.get("scope")
             if not isinstance(scope, list):
                 fail(errors, "Class D requires explicit scope list")
-            elif any(isinstance(p, str) and
-                     (p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/"))
-                      or p.startswith("docs/LAW_")) for p in scope):
+            elif any(unsafe_class_d_path(p) for p in scope):
                 fail(errors, "Class D cannot edit canonical architecture or law")
+            if record.get("task_id") == "BUDDHIST-A173" and isinstance(scope, list):
+                if not scope or any(not isinstance(p, str) or not p.startswith("docs/learning/") for p in scope):
+                    fail(errors, "A173 Class D scope must remain inside docs/learning/")
+        checkpoint = record.get("learning_checkpoint")
+        if checkpoint is not None:
+            if record.get("task_id") != "BUDDHIST-A173":
+                fail(errors, "shadow A173 learning checkpoint task")
+            elif not isinstance(checkpoint, dict) or set(checkpoint) != {
+                "current_checkpoint_id", "checkpoint_acceptance",
+                "last_accepted_checkpoint_id", "last_accepted_checkpoint_ref",
+                "acceptance_receipt_ref"
+            }:
+                fail(errors, "A173 checkpoint shadow/missing schema fields")
+        if re.fullmatch(r"BUDDHIST-A17[3-7](?:[-_].+)?", str(record.get("task_id", ""))):
+            if record.get("task_id") != "BUDDHIST-A173" and (
+                record.get("status") == "DONE" or checkpoint is not None
+            ):
+                fail(errors, "unreceipted A173-dependent checkpoint promotion")
+        if record.get("task_id") == "BUDDHIST-A173" and false_a173_positive_claim(record.get("result_ref")):
+            fail(errors, "A173 result_ref contradicts pending study checkpoint")
     if current.get("active_workstream") == "OWNER_DIRECTED_LEARNING" and current.get("active_task_id") != "BUDDHIST-A173":
         fail(errors, "Buddhist learning route cannot silently change its task ID")
     if "ARCH-BUDDHIST-A173-ROUTING-V1" not in tasks:
@@ -179,7 +230,7 @@ def main():
                 matches = re.findall(rf"^\*\*{key}:\*\*\s*(\S.*?)\s*$", body, flags=re.MULTILINE)
                 if matches != [value]:
                     fail(errors, f"A173 handoff {key} disagrees with unaccepted checkpoint")
-            if re.search(r"\bA173\s+(?:checkpoint\s+)?(?:is\s+)?(?:COMPLETED|ACCEPTED|VERIFIED)\b", body, re.IGNORECASE):
+            if false_a173_positive_claim(body):
                 fail(errors, "A173 handoff falsely claims checkpoint completion")
 
     for field in ("current_architecture", "role_bootstrap"):
