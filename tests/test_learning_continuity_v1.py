@@ -36,6 +36,7 @@ def registry():
                 "source_head_sha": PR341_SHA,
                 "required_label": "LEARNING_CURSOR_V1",
             },
+            "research_intake": [],
             "status": "WORKING_NOTE_NOT_ACCEPTED",
         }],
     }
@@ -436,6 +437,72 @@ class LearningContinuityV1Tests(unittest.TestCase):
                 self.root, track_id=TRACK, proposed=proposed,
                 expected_parent_cursor_id=None,
                 expected_registry_sha256=self.registry_digest())
+
+    def test_30_research_sources_are_non_authoritative(self):
+        from minhtri.learning_continuity import validate_registry
+        x = registry()
+        x["tracks"][0]["research_intake"] = [
+            {"source_type": "PR", "number": 351, "checkpoint_id": "A173",
+             "record_role": "SOURCE_AUDITED_CANDIDATE", "source_head_sha": "a" * 40,
+             "may_advance_cursor": False, "may_promote_checkpoint": False},
+            {"source_type": "ISSUE", "number": 352, "checkpoint_id": "A177",
+             "record_role": "RESEARCH_TRACE_ONLY", "source_head_sha": None,
+             "may_advance_cursor": False, "may_promote_checkpoint": False},
+        ]
+        self.assertEqual(validate_registry(x)[TRACK]["checkpoint_id"], "A173")
+
+    def test_31_research_cannot_promote_checkpoint(self):
+        x = registry()
+        x["tracks"][0]["research_intake"] = [
+            {"source_type": "PR", "number": 249, "checkpoint_id": "A173",
+             "record_role": "UNMERGED_LEGACY_DRAFT", "source_head_sha": "a" * 40,
+             "may_advance_cursor": False, "may_promote_checkpoint": True},
+        ]
+        with self.assertRaisesRegex(LearningContinuityError, "must never create"):
+            validate_registry(x)
+
+    def test_32_duplicate_research_pr_rejected(self):
+        x = registry()
+        candidate = {"source_type": "PR", "number": 351, "checkpoint_id": "A173",
+                     "record_role": "SOURCE_AUDITED_CANDIDATE", "source_head_sha": "b" * 40,
+                     "may_advance_cursor": False, "may_promote_checkpoint": False}
+        x["tracks"][0]["research_intake"] = [candidate, dict(candidate)]
+        with self.assertRaisesRegex(LearningContinuityError, "duplicate research"):
+            validate_registry(x)
+
+    def test_33_issue_cannot_claim_pr_sha(self):
+        x = registry()
+        x["tracks"][0]["research_intake"] = [
+            {"source_type": "ISSUE", "number": 352, "checkpoint_id": "A177",
+             "record_role": "RESEARCH_TRACE_ONLY", "source_head_sha": "f" * 40,
+             "may_advance_cursor": False, "may_promote_checkpoint": False},
+        ]
+        with self.assertRaisesRegex(LearningContinuityError, "revision pin"):
+            validate_registry(x)
+
+    def test_34_research_cannot_replace_cursor_source(self):
+        x = registry()
+        x["tracks"][0]["research_intake"] = [
+            {"source_type": "ISSUE", "number": 352, "checkpoint_id": "A177",
+             "record_role": "RESEARCH_TRACE_ONLY", "source_head_sha": None,
+             "may_advance_cursor": False, "may_promote_checkpoint": False},
+        ]
+        self.save_registry(x)
+        pos = recover_learning_position(
+            self.root, TRACK, active_task_id="BUDDHIST-A173",
+            comments=[comment()], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(pos.cursor_id, CURSOR03)
+        self.assertEqual(pos.checkpoint_id, "A173")
+
+    def test_35_research_source_claims_accepted_role_rejected(self):
+        x = registry()
+        x["tracks"][0]["research_intake"] = [
+            {"source_type": "PR", "number": 249, "checkpoint_id": "A173",
+             "record_role": "ACCEPTED", "source_head_sha": "a" * 40,
+             "may_advance_cursor": False, "may_promote_checkpoint": False},
+        ]
+        with self.assertRaisesRegex(LearningContinuityError, "unsupported"):
+            validate_registry(x)
 
 if __name__ == "__main__":
     unittest.main()

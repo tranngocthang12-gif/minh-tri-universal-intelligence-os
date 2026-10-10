@@ -20,9 +20,16 @@ REGISTRY_SCHEMA = "minhtri-learning-tracks/v1"
 DELTA_SCHEMA = "minhtri-learning-delta/v1"
 TRACK_FIELDS = frozenset({
     "track_id", "task_id", "checkpoint_id", "last_durable_checkpoint_id",
-    "latest_delta_id", "latest_delta_path", "working_cursor_source", "status",
+    "latest_delta_id", "latest_delta_path", "working_cursor_source", "research_intake", "status",
 })
 REGISTRY_FIELDS = frozenset({"schema", "tracks"})
+RESEARCH_FIELDS = frozenset({
+    "source_type", "number", "checkpoint_id", "record_role",
+    "source_head_sha", "may_advance_cursor", "may_promote_checkpoint",
+})
+RESEARCH_ROLES = frozenset({
+    "UNMERGED_LEGACY_DRAFT", "SOURCE_AUDITED_CANDIDATE", "RESEARCH_TRACE_ONLY",
+})
 SOURCE_FIELDS = frozenset({
     "provider", "pr_number", "author_login", "source_head_sha", "required_label",
 })
@@ -158,6 +165,32 @@ def validate_registry(registry: Mapping[str, Any]) -> dict[str, dict[str, Any]]:
         _require(isinstance(source["source_head_sha"], str)
                  and _SHA_RE.fullmatch(source["source_head_sha"]) is not None,
                  "invalid source SHA")
+        intake = track["research_intake"]
+        _require(isinstance(intake, list), "research intake must be a list")
+        seen_refs: set[tuple[str, int]] = set()
+        for candidate in intake:
+            _keys(candidate, RESEARCH_FIELDS, "research intake source")
+            kind = candidate["source_type"]
+            number = candidate["number"]
+            _require(kind in ("PR", "ISSUE") and type(number) is int and number > 0,
+                     "invalid research source reference")
+            _require((kind, number) not in seen_refs, "duplicate research source reference")
+            seen_refs.add((kind, number))
+            _require(_nonempty(candidate["checkpoint_id"]) and
+                     re.fullmatch(r"[A-Za-z0-9_-]{2,80}", candidate["checkpoint_id"]) is not None,
+                     "research checkpoint identifier malformed")
+            _require(candidate["record_role"] in RESEARCH_ROLES,
+                     "research role could be promoted or is unsupported")
+            _require(candidate["may_advance_cursor"] is False and
+                     candidate["may_promote_checkpoint"] is False,
+                     "research source must never create canonical authority")
+            source_sha = candidate["source_head_sha"]
+            _require((kind == "PR" and isinstance(source_sha, str) and
+                      _SHA_RE.fullmatch(source_sha) is not None) or
+                     (kind == "ISSUE" and source_sha is None),
+                     "research source revision pin invalid")
+            if candidate["record_role"] == "RESEARCH_TRACE_ONLY":
+                _require(kind == "ISSUE", "research trace role requires ISSUE")
         lookup[name] = track
     return lookup
 
