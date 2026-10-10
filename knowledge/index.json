@@ -24,6 +24,15 @@
       "statement": "A172 treats the move from 'this act was shameful' to 'my permanent essence is shameful' as a cross-text synthesis rather than direct early-text attestation."
     },
     {
+      "id": "bud:a173:retreat-does-not-prove-fear",
+      "domain": "buddhist_thought",
+      "record_type": "claim",
+      "class": "SYNTHESIS",
+      "status": "PENDING_REVIEW",
+      "path": "knowledge/buddhist/atoms/bud-a173-retreat-does-not-prove-fear.json",
+      "statement": "A visible retreat from danger alone does not prove inner fear or cowardice, just as outward confrontation alone does not prove wisdom. This is a bounded cross-text inference informed by Milindapañha 5.4.9 and contrasted with Vinaya Pi Tv Kd 17, not a directly attested early-discourse definition."
+    },
+    {
       "id": "bud:atthaka:lex01:ditthi-sacca-audit-evidence",
       "domain": "buddhist_thought",
       "record_type": "evidence",
