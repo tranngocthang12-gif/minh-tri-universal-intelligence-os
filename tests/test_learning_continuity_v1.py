@@ -233,7 +233,7 @@ class LearningContinuityV1Tests(unittest.TestCase):
         bad["body"] = bad["body"].replace("SUPERSEDES:", "SUPERSEDES_CURSOR:")
         fixed = comment(6100903518, "A173-MN4-MN2-COLLATION-04", "6096480057")
         fixed["body"] = fixed["body"].replace(
-            "ALREADY_STUDIED:", "RECONCILES_INVALID_COMMENT: 6100784908\\nALREADY_STUDIED:")
+            "ALREADY_STUDIED:", "RECONCILES_INVALID_COMMENT: 6100784908\nALREADY_STUDIED:")
         fixed["body"] = fixed["body"].replace(
             "Read MN 4 fear-posture passage and MN 2 §§2–7, compare Pāli verbs "
             "and two translations without relying on the stock formula.",
