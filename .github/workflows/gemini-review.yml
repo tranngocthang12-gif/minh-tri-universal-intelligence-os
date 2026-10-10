@@ -1,0 +1,76 @@
+name: Gemini Architecture Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  workflow_dispatch:
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-genai requests
+
+      - name: Analyze Code & Architecture
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          python - << 'EOF'
+          import os, requests
+          from google import genai
+
+          client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+          
+          import subprocess
+          diff = subprocess.check_output(["git", "diff", "origin/main...HEAD"]).decode("utf-8", errors="ignore")
+          
+          if not diff.strip():
+              print("No diff to review.")
+              exit(0)
+
+          prompt = f"""
+          Bạn là Cố vấn Kiến trúc Cấp cao (Architecture Advisor) cho hệ điều hành trí tuệ 'Minh Tri Universal Intelligence OS'.
+          Hãy thẩm định các thay đổi mã nguồn sau đây:
+          1. Đánh giá tính chuẩn mực kiến trúc và rủi ro hiệu năng.
+          2. Phát hiện lỗi tiềm ẩn, memory leak hoặc race conditions.
+          3. Đề xuất cải tiến cụ thể (nếu có).
+
+          Code Diff:
+          {diff[:15000]}
+          """
+
+          response = client.models.generate_content(
+              model='gemini-2.5-flash',
+              contents=prompt,
+          )
+
+          pr_num = os.environ.get("PR_NUMBER")
+          repo = os.environ.get("REPO")
+          token = os.environ.get("GITHUB_TOKEN")
+          
+          if pr_num and token:
+              url = f"https://api.github.com/repos/{repo}/issues/{pr_num}/comments"
+              headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github.v3+json"}
+              body = {"body": f"### 🤖 Gemini Architecture Review\n\n{response.text}"}
+              requests.post(url, json=body, headers=headers)
+          else:
+              print(response.text)
+          EOF
