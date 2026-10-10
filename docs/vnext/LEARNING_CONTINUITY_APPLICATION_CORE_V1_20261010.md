@@ -46,3 +46,6 @@ This module deliberately **does not** implement automatic extraction from conver
 
 ### Technical receipt limitations
 A claimed \`ACCEPTED\` status and a nonempty review reference can be fabricated in JSON. A schema-only test cannot authenticate that receipt, the source content, or the semantic validity of the context tags. No module in this draft makes an Owner decision. Do not count synthetic unit tests as fresh-chat retention, real-world transfer, model improvement, or independent verification.
+
+## Comprehension integration and review hardening
+New candidate delta requires a bounded semantic skeleton and an opaque namespaced application trial reference. Comment recovery normalizes GitHub author structures, sorts by comment ID, and rejects symlinked delta directories. Opaque evidence refs are not URLs or file paths. Syntax validation alone cannot prove understanding, authentic independent review or actual learning transfer. Real fresh-seat proof remains pending, and the hard-coded Buddhist Milindapanha rule must eventually move behind a domain-governed contract without dropping the mandated consultation.

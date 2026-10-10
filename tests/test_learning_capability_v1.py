@@ -1,6 +1,7 @@
 """Negative controls for bounded understanding and independently scored trials."""
 import copy
 import unittest
+from types import MappingProxyType
 
 from minhtri.learning_capability import (
     CapabilityEvidenceError, summarize_transfer_trials, transfer_observation,
@@ -25,6 +26,7 @@ def skeleton():
 def trial(case="heldout:case001"):
     return {
         "schema": "minhtri-learning-transfer-trial/v1",
+        "trial_ref": "trial:case001",
         "track_id": "BUDDHIST_THOUGHT",
         "candidate_cursor_id": "A173-Q03-01",
         "frozen_case_ref": case,
@@ -58,6 +60,7 @@ def delta():
             "attempt_ref": "evidence:using-recovered-knowledge",
             "reviewer_seat": "INDEPENDENT_REVIEWER_OTHER_SEAT",
             "review_receipt_ref": "evidence:external-judgment",
+            "transfer_trial_ref": "trial:case001",
         },
     }
 
@@ -177,6 +180,30 @@ class CapabilityEvidenceContractTests(unittest.TestCase):
         self.assertFalse(s["all_cases_improved_without_safety_regression"])
         self.assertTrue(s["any_safety_regression"])
 
+
+    def test_21_traversal_refs_rejected(self):
+        for value in ("heldout:../key", "heldout:a/../key", "heldout:%2e%2e", "/etc/passwd", "file:///tmp"):
+            with self.subTest(value=value):
+                t = trial()
+                t["frozen_case_ref"] = value
+                with self.assertRaisesRegex(CapabilityEvidenceError, "unsafe"):
+                    validate_transfer_trial(t)
+
+    def test_22_mappingproxy_supported(self):
+        validate_semantic_skeleton(MappingProxyType(skeleton()))
+        validate_transfer_trial(MappingProxyType(trial()))
+
+    def test_23_trial_identifier_bound_to_delta(self):
+        d = delta()
+        d["application"]["transfer_trial_ref"] = "trial:other"
+        with self.assertRaisesRegex(CapabilityEvidenceError, "do not match"):
+            validate_application_trial_binding(d, trial())
+
+    def test_24_missing_binding_must_not_pass(self):
+        d = delta()
+        del d["track_id"]
+        with self.assertRaisesRegex(CapabilityEvidenceError, "do not match"):
+            validate_application_trial_binding(d, trial())
 
 if __name__ == "__main__":
     unittest.main()

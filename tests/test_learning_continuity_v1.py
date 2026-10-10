@@ -57,11 +57,22 @@ def delta(cursor_id="A173-Q03-01", parent=None, next_question=None):
             "evidence_class": "CROSS_TEXT_SYNTHESIS",
             "counter_reading": "A textual-genre difference may explain distinct wording.",
             "limits": "No complete MN 4 lexical attestation yet.",
+            "semantic_skeleton": {
+                "core_proposition": "External actions alone do not determine wise response.",
+                "conditions": ["Determine situation, actual risk, and source context."],
+                "mechanism_or_structure": "Distinguish endurance, avoidance, and purpose.",
+                "scope_boundary": "Cannot conclude always stay or always retreat.",
+                "non_claims": ["MN 4 is not a universal instruction to face physical danger."],
+                "uncertainty": "Exact morphology and two translations require further work.",
+                "counter_reading": "MN 2 and MN 4 have different textual genres.",
+                "source_vs_interpretation": "BOUNDED_SYNTHESIS",
+            },
         },
         "application": {
             "status": "NOT_TESTED", "heldout_case_ref": None,
             "frozen_rubric_ref": None, "frozen_rubric_sha256": None,
             "attempt_ref": None, "reviewer_seat": None, "review_receipt_ref": None,
+            "transfer_trial_ref": None,
         },
         "milindapanha": {
             "consulted": True, "role": "LATER/PARACANONICAL_NO_DECISIVE_EVIDENCE",
@@ -244,6 +255,7 @@ class LearningContinuityV1Tests(unittest.TestCase):
             "heldout_case_ref": "case-001", "frozen_rubric_ref": "rubric-001",
             "frozen_rubric_sha256": "a" * 64, "attempt_ref": "attempt-001",
             "reviewer_seat": "BUDDHIST_MAIN_04", "review_receipt_ref": "review-001",
+            "transfer_trial_ref": "trial:case001",
         }
         with self.assertRaisesRegex(LearningContinuityError, "self-reviewed"):
             validate_delta(bad)
@@ -297,6 +309,79 @@ class LearningContinuityV1Tests(unittest.TestCase):
                                            comments=[injected], live_pr_head_sha=PR341_SHA)
         self.assertEqual(result.source_kind, "PR_COMMENT_WORKING_NOTE_NOT_CANONICAL")
         self.assertNotIn("MERGE", result.next_question)
+
+
+    def test_18_semantic_structure_is_required(self):
+        d = delta()
+        d["model"]["semantic_skeleton"]["conditions"] = []
+        with self.assertRaisesRegex(LearningContinuityError, "understanding record invalid"):
+            validate_delta(d)
+
+    def test_19_synthesis_must_remain_interpretation(self):
+        d = delta()
+        d["model"]["semantic_skeleton"]["source_vs_interpretation"] = "SOURCE_REPORT"
+        with self.assertRaisesRegex(LearningContinuityError, "synthesis must be labeled"):
+            validate_delta(d)
+
+    def test_20_github_user_login_shape_supported(self):
+        item = comment()
+        del item["author"]
+        item["user"] = {"login": "tranngocthang12-gif"}
+        pos = recover_learning_position(self.root, TRACK, active_task_id="BUDDHIST-A173",
+                                        comments=[item], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(pos.cursor_id, CURSOR03)
+
+    def test_21_comment_input_order_does_not_replay_old_cursor(self):
+        later = comment(6096500000, "A173-Q03-01", "6096480057")
+        pos = recover_learning_position(self.root, TRACK, active_task_id="BUDDHIST-A173",
+                                        comments=[later, comment()], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(pos.cursor_id, "A173-Q03-01")
+
+    def test_22_symlinked_delta_directory_rejected(self):
+        first = delta()
+        real = self.root / "outside"
+        real.mkdir()
+        (real / (first["cursor_id"] + ".json")).write_text(json.dumps(first), encoding="utf-8")
+        parent = self.root / "docs" / "learning" / "deltas"
+        parent.mkdir(parents=True)
+        try:
+            (parent / TRACK).symlink_to(real, target_is_directory=True)
+        except (OSError, NotImplementedError):
+            self.skipTest("symlink unavailable on this OS")
+        r = registry()
+        r["tracks"][0]["latest_delta_id"] = first["cursor_id"]
+        r["tracks"][0]["latest_delta_path"] = (
+            "docs/learning/deltas/BUDDHIST_THOUGHT/A173-Q03-01.json")
+        self.save_registry(r)
+        with self.assertRaisesRegex(LearningContinuityError, "symlink directory"):
+            recover_learning_position(self.root, TRACK, active_task_id="BUDDHIST-A173")
+
+    def test_23_semantic_extra_fields_rejected(self):
+        d = delta()
+        d["model"]["semantic_skeleton"]["owner_accepted"] = True
+        with self.assertRaisesRegex(LearningContinuityError, "understanding record invalid"):
+            validate_delta(d)
+
+    def test_24_other_track_does_not_force_buddhist_consultation(self):
+        d = delta()
+        d["track_id"] = "PC_WORKSHOP"
+        d["milindapanha"]["consulted"] = False
+        validate_delta(d)
+
+    def test_25_external_application_needs_trial_id(self):
+        d = delta()
+        d["application"] = {
+            "status": "INDEPENDENT_REVIEW_RECORDED_NOT_VERIFIED",
+            "heldout_case_ref": "heldout:case001",
+            "frozen_rubric_ref": "heldout:rubric001",
+            "frozen_rubric_sha256": "a" * 64,
+            "attempt_ref": "evidence:candidate001",
+            "reviewer_seat": "INDEPENDENT_OTHER_SEAT",
+            "review_receipt_ref": "evidence:review001",
+            "transfer_trial_ref": None,
+        }
+        with self.assertRaisesRegex(LearningContinuityError, "transfer_trial_ref"):
+            validate_delta(d)
 
 
 if __name__ == "__main__":

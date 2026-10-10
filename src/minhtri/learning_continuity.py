@@ -13,6 +13,8 @@ from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any, Mapping, Sequence
 
+from .learning_capability import CapabilityEvidenceError, validate_semantic_skeleton
+
 
 REGISTRY_SCHEMA = "minhtri-learning-tracks/v1"
 DELTA_SCHEMA = "minhtri-learning-delta/v1"
@@ -30,10 +32,10 @@ DELTA_FIELDS = frozenset({
     "application", "milindapanha", "open_questions", "exact_next_question",
     "provenance", "status",
 })
-MODEL_FIELDS = frozenset({"claim", "evidence_class", "counter_reading", "limits"})
+MODEL_FIELDS = frozenset({"claim", "evidence_class", "counter_reading", "limits", "semantic_skeleton"})
 APPLICATION_FIELDS = frozenset({
     "status", "heldout_case_ref", "frozen_rubric_ref", "frozen_rubric_sha256",
-    "attempt_ref", "reviewer_seat", "review_receipt_ref",
+    "attempt_ref", "reviewer_seat", "review_receipt_ref", "transfer_trial_ref",
 })
 MILINDA_FIELDS = frozenset({"consulted", "role", "source_refs"})
 PROVENANCE_FIELDS = frozenset({
@@ -194,6 +196,15 @@ def validate_delta(delta: Mapping[str, Any]) -> None:
         _require(_nonempty(model[k]), f"model.{k} required")
     _require(model["evidence_class"] in EVIDENCE_CLASSES,
              "unsupported evidence class or self-promotion")
+    try:
+        validate_semantic_skeleton(model["semantic_skeleton"])
+    except CapabilityEvidenceError as exc:
+        raise LearningContinuityError(f"understanding record invalid: {exc}") from exc
+    label = model["semantic_skeleton"]["source_vs_interpretation"]
+    if model["evidence_class"] == "TEXT_ATTESTED":
+        _require(label == "SOURCE_REPORT", "attested source cannot silently become synthesis")
+    elif model["evidence_class"] == "CROSS_TEXT_SYNTHESIS":
+        _require(label == "BOUNDED_SYNTHESIS", "synthesis must be labeled interpretation")
     provenance = delta["provenance"]
     _keys(provenance, PROVENANCE_FIELDS, "provenance")
     _require(_nonempty(provenance["author_seat"]) and _nonempty(provenance["recorded_at"]),
@@ -229,6 +240,9 @@ def _load_file_chain(root: Path, track: Mapping[str, Any]) -> LearningPosition:
     track_id = track["track_id"]
     delta_dir = root / "docs" / "learning" / "deltas" / track_id
     _require(delta_dir.is_dir(), "recorded delta directory missing")
+    for directory in (root / "docs", root / "docs" / "learning",
+                      root / "docs" / "learning" / "deltas", delta_dir):
+        _require(not directory.is_symlink(), "symlink directory in delta path")
     entries: dict[str, dict[str, Any]] = {}
     for path in delta_dir.iterdir():
         _require(path.suffix == ".json" and path.is_file() and not path.is_symlink(),
@@ -264,7 +278,7 @@ def _load_file_chain(root: Path, track: Mapping[str, Any]) -> LearningPosition:
     return LearningPosition(track_id=track_id, checkpoint_id=last["checkpoint_id"],
                             cursor_id=last["cursor_id"],
                             next_question=last["exact_next_question"],
-                            source_kind="REVIEWED_FILE_CHAIN_NOT_ACCEPTED",
+                            source_kind="CANDIDATE_FILE_CHAIN_NOT_ACCEPTED",
                             proof=expected_path)
 
 
@@ -302,7 +316,10 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
              "PR HEAD changed: Owner decision needed before more study")
     valid: list[tuple[int, dict[str, str]]] = []
     for comment in comments:
-        if comment.get("author") != source["author_login"]:
+        identity = comment.get("author")
+        if identity is None and isinstance(comment.get("user"), dict):
+            identity = comment["user"].get("login")
+        if identity != source["author_login"]:
             continue
         fields = _comment_fields(comment.get("body", ""))
         if fields is None:
@@ -313,6 +330,7 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
         _require(type(ident) is int and ident > 0, "cursor comment lacks GitHub ID")
         valid.append((ident, fields))
     _require(bool(valid), "no valid learning cursor: stop; do not repeat old lesson")
+    valid.sort(key=lambda item: item[0])
     for previous, later in zip(valid, valid[1:]):
         supersedes = later[1]["SUPERSEDES"].split(" ", 1)[0]
         _require(supersedes == str(previous[0]),

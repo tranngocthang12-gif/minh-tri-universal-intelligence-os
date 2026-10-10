@@ -16,7 +16,7 @@ SKELETON_FIELDS = frozenset({
     "non_claims", "uncertainty", "counter_reading", "source_vs_interpretation",
 })
 TRIAL_FIELDS = frozenset({
-    "schema", "track_id", "candidate_cursor_id", "frozen_case_ref",
+    "schema", "track_id", "candidate_cursor_id", "trial_ref", "frozen_case_ref",
     "frozen_case_sha256", "rubric_ref", "rubric_sha256",
     "frozen_before_attempt_ref", "baseline_attempt_ref", "candidate_attempt_ref",
     "independent_review_ref", "generator_seat", "reviewer_seat",
@@ -26,6 +26,7 @@ TRIAL_FIELDS = frozenset({
 TRIAL_SCHEMA = "minhtri-learning-transfer-trial/v1"
 TRIAL_STATUS = "RECORDED_NOT_VERIFIED"
 _SHA256 = re.compile(r"^[0-9a-f]{64}$")
+_REF = re.compile(r"^[a-z][a-z0-9_-]{1,31}:[A-Za-z0-9][A-Za-z0-9._/-]{0,191}$")
 _INTERPRETATIONS = {
     "SOURCE_REPORT", "BOUNDED_SYNTHESIS", "UNCERTAIN_INTERPRETATION",
 }
@@ -48,9 +49,14 @@ def _texts(value: Any) -> bool:
     return isinstance(value, list) and bool(value) and all(_text(v) for v in value)
 
 
+def _safe_ref(value: Any) -> bool:
+    return (isinstance(value, str) and _REF.fullmatch(value) is not None
+            and all(part not in ("", ".", "..") for part in value.split(":", 1)[1].split("/")))
+
+
 def validate_semantic_skeleton(value: Mapping[str, Any]) -> None:
     """Validate a bounded meaning sketch, not whether its claims are true."""
-    _require(isinstance(value, dict) and set(value) == SKELETON_FIELDS,
+    _require(isinstance(value, Mapping) and set(value) == SKELETON_FIELDS,
              "semantic skeleton requires its exact fields")
     for name in ("core_proposition", "mechanism_or_structure", "scope_boundary",
                  "uncertainty", "counter_reading"):
@@ -63,14 +69,15 @@ def validate_semantic_skeleton(value: Mapping[str, Any]) -> None:
 
 def validate_transfer_trial(trial: Mapping[str, Any]) -> None:
     """Check comparator metadata without attesting real-world authenticity."""
-    _require(isinstance(trial, dict) and set(trial) == TRIAL_FIELDS,
+    _require(isinstance(trial, Mapping) and set(trial) == TRIAL_FIELDS,
              "transfer trial missing or shadow fields")
     _require(trial["schema"] == TRIAL_SCHEMA, "unsupported transfer-trial schema")
-    for name in ("track_id", "candidate_cursor_id", "frozen_case_ref", "rubric_ref",
-                 "frozen_before_attempt_ref", "baseline_attempt_ref",
-                 "candidate_attempt_ref", "independent_review_ref",
-                 "generator_seat", "reviewer_seat"):
+    for name in ("track_id", "candidate_cursor_id", "generator_seat", "reviewer_seat"):
         _require(_text(trial[name]), f"transfer trial missing {name}")
+    for name in ("trial_ref", "frozen_case_ref", "rubric_ref",
+                 "frozen_before_attempt_ref", "baseline_attempt_ref",
+                 "candidate_attempt_ref", "independent_review_ref"):
+        _require(_safe_ref(trial[name]), f"transfer trial unsafe reference {name}")
     for name in ("frozen_case_sha256", "rubric_sha256"):
         _require(isinstance(trial[name], str) and _SHA256.fullmatch(trial[name]) is not None,
                  f"transfer trial malformed {name}")
@@ -98,8 +105,8 @@ def validate_application_trial_binding(delta: Mapping[str, Any],
     independent reviewer must examine timestamps, source objects and identity.
     """
     validate_transfer_trial(trial)
-    _require(isinstance(delta, dict) and isinstance(delta.get("application"), dict)
-             and isinstance(delta.get("provenance"), dict),
+    _require(isinstance(delta, Mapping) and isinstance(delta.get("application"), Mapping)
+             and isinstance(delta.get("provenance"), Mapping),
              "missing delta application/provenance")
     app = delta["application"]
     _require(app.get("status") in {
@@ -108,6 +115,7 @@ def validate_application_trial_binding(delta: Mapping[str, Any],
     }, "no externally reviewable application receipt")
     bindings = (
         (trial["track_id"], delta.get("track_id")),
+        (trial["trial_ref"], app.get("transfer_trial_ref")),
         (trial["candidate_cursor_id"], delta.get("cursor_id")),
         (trial["generator_seat"], delta["provenance"].get("author_seat")),
         (trial["frozen_case_ref"], app.get("heldout_case_ref")),
@@ -117,7 +125,7 @@ def validate_application_trial_binding(delta: Mapping[str, Any],
         (trial["reviewer_seat"], app.get("reviewer_seat")),
         (trial["independent_review_ref"], app.get("review_receipt_ref")),
     )
-    _require(all(a == b for a, b in bindings),
+    _require(all(a is not None and b is not None and a == b for a, b in bindings),
              "transfer trial and delta evidence references do not match")
 
 
