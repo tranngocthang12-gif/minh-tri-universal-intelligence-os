@@ -79,7 +79,7 @@ class PriorStudyTests(unittest.TestCase):
     def test_05_wrong_cursor_refused(self):
         study, track, pos = context()
         pos.cursor_id = "A173-WRONG"
-        with self.assertRaisesRegex(PriorStudyError, "wrong working cursor"):
+        with self.assertRaisesRegex(PriorStudyError, "prior study stale: cursor/question differs"):
             make_carry_forward_plan(study, track, pos, live_pr_heads=HEADS)
 
     def test_06_research_from_a177_not_admitted_as_a173(self):
@@ -100,7 +100,7 @@ class PriorStudyTests(unittest.TestCase):
     def test_08_comment_must_match_cursor(self):
         study, track, pos = context()
         study["claims"][0]["source_comment_id"] = 6096412284
-        with self.assertRaisesRegex(PriorStudyError, "exact recovered cursor"):
+        with self.assertRaisesRegex(PriorStudyError, "exact recovered comment"):
             validate_working_prior_study(study, track, pos, live_pr_heads=HEADS)
 
     def test_09_empty_prior_inventory_blocked(self):
