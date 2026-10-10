@@ -549,6 +549,9 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
     def test_a173_negated_owner_claim_is_not_approval(self):
         from tools.validate_continuity_handoff import false_a173_positive_claim
         self.assertFalse(false_a173_positive_claim("Owner has not accepted checkpoint A173"))
+        self.assertFalse(false_a173_positive_claim("Owner hasn\u0027t accepted A173".replace("\u2019", "\u0027")))
+        self.assertFalse(false_a173_positive_claim("Owner has not yet accepted checkpoint A173"))
+        self.assertTrue(false_a173_positive_claim("Owner has not accepted checkpoint A173, Owner has accepted checkpoint A173"))
         self.assertTrue(false_a173_positive_claim("Owner has accepted checkpoint A173"))
         self.assertFalse(false_a173_positive_claim(
             "Nếu A173 đã được Owner nghiệm thu thì mới được chuyển sang A174."))

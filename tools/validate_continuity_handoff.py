@@ -68,9 +68,13 @@ def false_a173_positive_claim(value):
         r"|never\s+(?:say|claim))\s*$", re.IGNORECASE,
     )
     for line in value.splitlines():
-        for clause in re.split(r"[.!?;]", line):
-            if re.search(r"\bOwner\s+has\s+not\s+accepted\s+(?:checkpoint\s+)?A173\b", clause, re.IGNORECASE):
-                continue
+        for clause in re.split(r"[.!?;,]", line):
+            # Text is only an advisory contradiction signal, never receipt authority.
+            # Strip narrowly recognized negated acceptance before testing positives.
+            clause = re.sub(
+                r"\bOwner\s+(?:has\s+not|hasn't|has\s+not\s+yet)\s+accepted\s+(?:checkpoint\s+)?A173\b",
+                "", clause, flags=re.IGNORECASE,
+            )
             if conditional.search(clause):
                 continue
             for pattern in patterns:
@@ -303,15 +307,10 @@ def main():
         if routing.get("holder") == routing.get("acceptance_authority"):
             fail(errors, "routing Builder cannot be Owner acceptance authority")
         if routing.get("candidate_gate_phase") != "PRE_MERGE_UNACCEPTED_SNAPSHOT":
-            # A normal static registry/PR cannot issue its own Owner, merge,
-            # witness or closure receipts. External verifier integration is
-            # required before any post-merge state mutation is accepted.
-            allowed, reason = evaluate_class_s_transition(
-                phase=routing.get("candidate_gate_phase"),
-                reviewed_head=None, expected_head=None, ci_head=None,
-            )
-            if not allowed:
-                fail(errors, "routing Class S candidate phase is not pending; external evidence required: " + reason)
+            # DESIGN_ONLY: the static validator has no independently trusted
+            # Owner/merge/witness receipt provider. Fail closed without faking
+            # a transition call with None inputs or a misleading HEAD error.
+            fail(errors, "routing Class S candidate phase is not pending; external evidence verifier not configured (DESIGN_ONLY)")
         if routing.get("status") != "IN_PROGRESS":
             fail(errors, "routing Class S closure requires separate protected evidence")
         if not isinstance(gate, dict) or gate.get("owner_acceptance") != "NOT_GRANTED" or gate.get("status") != "OWNER_PER_FINDING_DISPOSITION_PENDING":
