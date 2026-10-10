@@ -26,3 +26,13 @@ The registry is a candidate example only: BUDDHIST_THOUGHT/A173, latest file del
 2. At least one previously unseen case with frozen rubric, an actual independent reviewer and counterexample. Record limitations; self-grading does not count.
 3. Negative tests for missing GitHub, stale SHA, competing writers, copied false Owner receipt, malformed paths and unsupported future phase.
 4. Independent exact-head Class S review, CI, Owner acceptance, protected merge, fresh-read. The existing 17 local tests are simulated contract tests only.
+
+## Architecture inheritance — deep understanding and transfer (candidate extension)
+
+Historical MINH TRI Layer 1's SOURCE->EVIDENCE->CLAIM->PREDICTION->RESOLUTION->LESSON and skill promotion/suspension are useful precedents but are NOT proven as runtime on this branch. Its documented defects include baseline gaming, unverifiable reviewer identity, and predictions not durably frozen before outcome. No legacy law or owner authority is imported.
+
+From the neighboring research repository's deep-understanding contract, an optional semantic skeleton records: core proposition, conditions, mechanism or relations, scope, non-claims, uncertainty, counter-reading, and explicit source-versus-interpretation classification. `src/minhtri/learning_capability.py` validates the exact shape without pretending that text correctness is machine-verified. Candidate delta model remains backward-compatible; a separate proof artifact must be reviewed before treating understanding as demonstrated.
+
+From the prior skill ledger and sealed benchmark approach, the proposed transfer record ties a candidate cursor to a previously frozen unseen case, case/rubric SHA-256, the documented freeze-before-attempt evidence reference, baseline and assisted attempts, distinct declared reviewer seat, and score/safety outcomes. The comparator is a PROVISIONAL OBSERVATION ONLY: nominally separate seat strings and receipt paths do not authenticate independence, novelty, scoring, timing or causality. Even a positive score delta is never `VERIFIED`, `PROMOTED` or Owner acceptance. The aggregate helper requires at least two distinct case IDs, rejects duplicates and safety regression, and does not hide per-case failures behind a single average.
+
+Two pure modules now provide separately testable record contracts, while the PR remains **DRAFT and not wired into the canonical recovery or test requirement**. Future integration must bind actual source objects, schema paths and authorized write gates; add cross-source provenance, real independently sealed hidden-case material, repeated fresh-seat behavioral tests and governed post-#334 Class S closure. Do not alter current protected Foundation law or #334 to force a green answer.
