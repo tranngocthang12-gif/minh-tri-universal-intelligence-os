@@ -25,7 +25,7 @@ def context():
                           checkpoint_id=track["checkpoint_id"],
                           cursor_id=study["working_cursor_id"],
                           next_question=study["working_question"],
-                          proof="PR#341:comment#6096480057")
+                          proof="PR#341:comment#6100903518")
     return study, track, pos
 
 
@@ -99,7 +99,7 @@ class PriorStudyTests(unittest.TestCase):
 
     def test_08_comment_must_match_cursor(self):
         study, track, pos = context()
-        study["claims"][0]["source_comment_id"] = 6096412284
+        study["claims"][0]["source_comment_id"] = 6096480057
         with self.assertRaisesRegex(PriorStudyError, "exact recovered comment"):
             validate_working_prior_study(study, track, pos, live_pr_heads=HEADS)
 
