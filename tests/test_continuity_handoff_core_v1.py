@@ -530,6 +530,43 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertEqual(code, 1, details)
         self.assertIn("A173 handoff CHECKPOINT_ACCEPTANCE has duplicate or untrusted assertion", details)
 
+    def test_candidate_top_level_shadow_fields_fail_closed(self):
+        # Negative controls reproduce independent review's old-HEAD bypass.
+        cases = (
+            ("route_shadow_approval", lambda c, a, root: None,
+             lambda route: route.update(owner_class_s_acceptance="GRANTED",
+                                        owner_acceptance_comment_id="FAKE")),
+            ("study_shadow_status", lambda c, a, root: a.update(
+                checkpoint_status="ACCEPTED", owner_acceptance_receipt="FAKE"), None),
+            ("current_shadow_acceptance", lambda c, a, root: c.update(
+                a173_checkpoint="ACCEPTED_BY_OWNER"), None),
+            ("study_shadow_execution_ref", lambda c, a, root: a.update(
+                execution_branch="learning/buddhist-a173-20261005-2205",
+                execution_ref="PR#249"), None),
+        )
+        for name, mutate, mutate_route in cases:
+            with self.subTest(name=name):
+                code, detail = self._run_isolated_validator(
+                    mutate, mutate_routing=mutate_route)
+                self.assertEqual(code, 1, detail)
+                self.assertIn("candidate schema has unexpected or missing fields", detail)
+
+    def test_candidate_base_sha_is_exact_and_well_formed(self):
+        for bad_base in (
+            "a04300f8530c7f8413e8e386c607c7f9938ce32b",
+            "not-a-sha",
+        ):
+            for target in ("study", "routing"):
+                with self.subTest(base=bad_base, target=target):
+                    mutate = ((lambda c, a, root: a.__setitem__("base_sha", bad_base))
+                              if target == "study" else (lambda c, a, root: None))
+                    mutate_route = ((lambda route: route.__setitem__(
+                        "base_sha", bad_base)) if target == "routing" else None)
+                    code, detail = self._run_isolated_validator(
+                        mutate, mutate_routing=mutate_route)
+                    self.assertEqual(code, 1, detail)
+                    self.assertIn("base_sha is not bound to the approved candidate base", detail)
+
     def test_three_phase_external_receipt_contract(self):
         from tools.validate_continuity_handoff import evaluate_class_s_transition
         head = "a" * 40

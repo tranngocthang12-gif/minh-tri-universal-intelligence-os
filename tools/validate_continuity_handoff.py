@@ -10,6 +10,81 @@ A173_DRAFT_REF = "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.
 REQUIRED_F3_KEYS = frozenset(["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS","INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION","INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF","INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY","INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"])
 
 
+# Schema seal applies only to the current pre-merge Class S candidate.
+CANDIDATE_CURRENT_KEYS = frozenset({
+    "schema",
+    "project",
+    "architecture_generation",
+    "phase",
+    "durable_continuity_authority",
+    "current_architecture",
+    "law_precedence",
+    "role_bootstrap",
+    "active_workstream",
+    "next_checkpoint",
+    "autonomous_learning_runtime",
+    "automatic_self_critique_runtime",
+    "meta_learning_runtime",
+    "pc_local_brain_role",
+    "owner_learning_priority_order",
+    "authority_scope",
+    "active_task_id",
+    "boot_root",
+    "task_registry",
+    "master_blueprint",
+    "foundation_status",
+})
+CANDIDATE_A173_KEYS = frozenset({
+    "task_id",
+    "title",
+    "status",
+    "scope",
+    "branch",
+    "base_sha",
+    "requires",
+    "dependencies",
+    "supersedes",
+    "result_ref",
+    "change_class",
+    "resume_gate",
+    "acceptance_authority",
+    "holder",
+    "role",
+    "handoff_ref",
+    "next_action",
+    "blocker",
+    "branch_binding",
+    "role_detail",
+    "learning_checkpoint",
+})
+CANDIDATE_ROUTING_KEYS = frozenset({
+    "task_id",
+    "title",
+    "status",
+    "scope",
+    "branch",
+    "base_sha",
+    "requires",
+    "dependencies",
+    "supersedes",
+    "result_ref",
+    "handoff_ref",
+    "change_class",
+    "acceptance_authority",
+    "holder",
+    "next_action",
+    "blocker",
+    "resume_gate",
+    "review_packet_ref",
+    "role",
+    "post_merge_validation_gate",
+    "prior_review_intake",
+    "material_findings_owner_gate",
+    "post_merge_witness",
+    "candidate_gate_phase",
+})
+CANDIDATE_BASE_SHA = "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76"
+
 
 def unsafe_class_d_path(p):
     """Registry scope guard only: deny ambiguous paths and protected root areas.
@@ -160,12 +235,24 @@ def main():
         print("CONTINUITY_HANDOFF_CORE_V1_FAIL")
         print(f"- canonical state/task invalid: {exc}")
         return 1
+    if set(current) != CANDIDATE_CURRENT_KEYS:
+        fail(errors, "current candidate schema has unexpected or missing fields")
     records = registry["tasks"]
     ids = [t["task_id"] for t in records]
     if len(ids) != len(set(ids)):
         fail(errors, "duplicate task_id in canonical registry")
     tasks = {t["task_id"]: t for t in records}
     for record in records:
+        record_id = record.get("task_id")
+        if record_id in {"BUDDHIST-A173", "ARCH-BUDDHIST-A173-ROUTING-V1"}:
+            schema_keys = (CANDIDATE_A173_KEYS if record_id == "BUDDHIST-A173"
+                           else CANDIDATE_ROUTING_KEYS)
+            if set(record) != schema_keys:
+                fail(errors, f"{record_id} candidate schema has unexpected or missing fields")
+            base = record.get("base_sha")
+            if (not isinstance(base, str) or re.fullmatch(r"[0-9a-f]{40}", base) is None
+                    or base != CANDIDATE_BASE_SHA):
+                fail(errors, f"{record_id} base_sha is not bound to the approved candidate base")
         if record.get("change_class") == "D":
             scope = record.get("scope")
             if not isinstance(scope, list):

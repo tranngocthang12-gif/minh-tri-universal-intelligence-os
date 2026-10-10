@@ -11,7 +11,7 @@
 1. `state/bootstrap.json` -> Master Blueprint -> Foundation Law -> Learning Continuity Law -> `state/current.yaml` -> `state/tasks.yaml`.
 2. `docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md` is the Class S routing task's own NEXT ACTION, independent from the Class D teaching task.
 3. `docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md` is the Class D active study NEXT ACTION.
-4. Main's accepted A172: `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md`. Main's A173 DRAFT remains unaccepted. A174–A176 drafts dependent; legacy PR #249 audit and A173/A177 candidates are history only.
+4. Main's durable-completed A172 (not automatically VERIFIED): `docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md`. Main's A173 DRAFT remains unaccepted. A174–A176 drafts dependent; legacy PR #249 audit and A173/A177 candidates are history only.
 5. `docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md` summarizes Owner-chat Grok, Codex and Claude defect reports as builder intake only, NOT authenticated independent receipts.
 
 ## Changed-scope inventory
@@ -45,7 +45,7 @@ G. No implicit Owner Class S acceptance from instruction to *prioritize* or *fin
 - The current NEXT ACTION is checked against the active task and the actual next-action line in the routed handoff; conflicting mirrors must fail closed.
 - Isolated negative-control fixtures must reject the DONE Blueprint route, unclassified task, mismatched mirrors, mismatched handoff, unbound A173 legacy branch, and Builder self-approval. A valid A173 task IN_PROGRESS does NOT mean A173 checkpoint COMPLETED.
 - The old test relying on the exact historical phrase "Gate 3 authorization-after-build" is replaced by a check of the actual Gate 3 status, recorded comment ID, eight provisional finding keys, and missing-original F3 risk.
-- Candidate assertions no longer universally pin the active task, witness to null, or review flag NOT_GRANTED as a permanent future truth. A GitHub green CI does NOT supply a missing Owner approval.
+- This validator seals the exact PRE_MERGE_UNACCEPTED_SNAPSHOT schema and historical a5ed9d8 candidate base, not a permanent future-state schema. Post-merge Owner/witness/closure and future learning-track transitions require independently authorized, receipt-bound validator evolution; the DESIGN_ONLY adapter cannot authenticate an actor. Green CI is not Owner approval.
 - Review ALL live changed files. The continuity validator and tests are candidate Class S compliance checks under the existing Foundation; no Foundation authority or law has been reopened. Claude subsequently completed R2 and reported HR-01..HR-08 on old HEAD 9aed814; old Grok verdict is for the earlier HEAD and neither is an independent final-head approval.
 - Only final exact-head CI, fresh different-seat critique, per-key Owner dispositions and separate exact-head Class S decision permit protected integration. Foundation stays FROZEN; PC ledger remains unwritten.
 
@@ -57,6 +57,12 @@ G. No implicit Owner Class S acceptance from instruction to *prioritize* or *fin
 - PR #341/#336/#345 are unaccepted study candidates. Updated Class S handoff now has TASK_ID and NOT DONE.
 - Static tests **cannot authenticate an actual GitHub account's identity**, prove missing F3 originals, or substitute for different-seat review and protected merge. An independent critic should deliberately challenge combined text+structured edits and actor-impersonation, and report any novel bypass.
 - HR-05 Class S-vs-Class F concern is explicitly OPEN for competent independent and Owner review. If a proposed change would alter Foundation law or powers, stop for separate Class F authorization; this candidate does not assert Foundation V2 or thaw.
+
+## Reviewer chronology and bounded remediation
+
+- Reviews against 9ffc122 and earlier heads are historical after subsequent Builder repairs. Independent reviewers found candidate-status shadow fields, unverified base_sha, and snapshot assertions that cannot authorize post-merge transitions; findings remain OPEN until a new exact-head independent review and Owner disposition.
+- No historical Gate 3 exception, actor label, or Builder-authored comment is authenticated Owner acceptance. Base_sha matching a frozen candidate constant is a deterministic snapshot check, not proof of live-main ancestry; reviewers must inspect the git graph.
+- The current Class S validator checks a pre-merge snapshot, NOT real post-merge closure or an Owner-designated delegate. Foundation Gate 8 delegation still requires externally verified Owner authorization.
 
 ## Machine evidence required
 
@@ -72,4 +78,4 @@ Return JSON containing `reviewer`, `independence`, `pr`, `verified_head_sha`, `v
 
 A reviewer may flag a material issue on the final HEAD. Builder repair then invalidates older-head acceptance. Only an explicitly distinct Owner acceptance and protected merge can make the Class S routing canonical.
 
-**CURRENT GATE:** INDEPENDENT_EXACT_HEAD_REREVIEW_PENDING. OWNER_ACCEPTANCE_NOT_GRANTED. MAIN_UNCHANGED. MACHINE_LEDGER_NOT_WRITTEN.
+**CURRENT GATE:** INDEPENDENT_EXACT_HEAD_REREVIEW_PENDING. OWNER_ACCEPTANCE_NOT_GRANTED. PROTECTED_MAIN_ADVANCED_AFTER_BASE_BY_PR348; REVALIDATE_LIVE_MAIN_AND_EXACT_HEAD. MACHINE_LEDGER_NOT_WRITTEN.
