@@ -103,3 +103,20 @@ CURRENT: REPLACEMENT_REVIEW_PROCEDURE_OWNER_APPROVED_CHAT_RELAYED_6099623000, HI
 - This is an append-only evidence index for future separate Owner-gated disposition, NOT a ninth field shoehorned into the sealed eight-item premerge schema. Before promotion, propose a reviewed extensible round/HEAD finding registry with authenticated receipts and negative controls. Until then N-11 REMAINS OPEN.
 - N-01 lifecycle/phase hard-pin is NOT fixed by this packet: any postmerge receipt and later Owner Class D binding require independently reviewed phase-compatible Class S control change.
 - N-02 action guard and N-03 provisional PR#351 inventory are candidate repairs. This text is not independent verification, CI success, Owner acceptance or merge permission.
+
+## N-11 - Extensible material finding intake (candidate only; 2026-10-11)
+
+Source: Owner-supplied Claude F3 R2 JSON, PR #334 comment 6100257619, reviewed OLD head be76cb501a141c84d359ccd9eee8337e6c662e4c. Provider identity and independence are NOT authenticated. This report is not an exact-HEAD review of subsequent Builder repairs.
+
+Authority boundary: The existing state/tasks.yaml Class S task has a material_findings_owner_gate. Its original eight historical provisional IDs remain intact. The new finding_records array stores finding ID, review round, reviewed HEAD or source-gap disclosure, severity, source locator, authenticity limits and owner_disposition=PENDING. The new source_gap_rounds list tracks reported later review rounds with unlocated originals. This registry is NOT an independent reviewer receipt, Owner disposition, Class S acceptance or merge authority.
+
+- Eight historical F3 IDs: PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST. Owner reported those older originals unavailable, so no builder summary can impersonate the originals.
+- N-01, N-02, N-03 and N-11: MEDIUM, owner-supplied Claude R2 at be76cb5, all OWNER_DISPOSITION_PENDING. N-02/N-03 may have candidate repairs after that head but independent closure remains absent.
+- GROK_MEDIUM_01_05: five purported Grok MEDIUM IDs inferred from subsequent revision commentary, NOT authenticated original reviewer finding IDs.
+- CLAUDE_HR_01_08: eight purported Claude HR IDs from review chronology, NOT authenticated original finding IDs, severity or full texts.
+- ROUND_9FFC122 and ROUND_65B0FA8: references to older-head review rounds; specific findings and original reports are not verified.
+- All four later rounds use original_status=NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST. Owner did NOT confirm that these particular later originals were lost. Absence from PR intake is not proof they never existed.
+
+The validator keeps all eight original keys plus R2 MEDIUM N-01/N-02/N-03/N-11, accepts additional well-formed PENDING MEDIUM/HIGH records, rejects duplicates, missing entries, shadow fields, invented source authentication and forged Owner dispositions. These are synthetic checks, not identity verification. When original review reports are recovered, record the actual full text/hash, reviewed SHA, finding IDs and source before requesting separate Owner decisions.
+
+Before any merge: fresh different-seat, full-current-HEAD and live-main review; all open HIGH/MEDIUM risks and source gaps evaluated with negative tests; exact-head CI; separate Owner per-finding and residual-risk decisions; independently assigned witness/closure seats; explicit exact-head Class S acceptance. Neither Builder nor automatic Gemini CI can grant these gates.
