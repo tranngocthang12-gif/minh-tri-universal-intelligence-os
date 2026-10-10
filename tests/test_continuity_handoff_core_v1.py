@@ -608,6 +608,21 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertFalse(false_a173_positive_claim(
             "Nếu A173 đã được Owner nghiệm thu thì mới được chuyển sang A174."))
 
+    def test_owner_approved_f3_review_procedure_does_not_reopen_owner_gate(self):
+        registry = self.load_json("state/tasks.yaml")
+        routing = next(x for x in registry["tasks"] if x["task_id"] == "ARCH-BUDDHIST-A173-ROUTING-V1")
+        next_action = routing["next_action"]
+        handoff = (ROOT / "docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md").read_text(encoding="utf-8")
+        findings = (ROOT / "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md").read_text(encoding="utf-8")
+        self.assertIn("6099623000", next_action)
+        self.assertIn("6099623000", handoff)
+        self.assertIn("6099623000", findings)
+        self.assertNotIn("seek separate Owner decision on that route", next_action)
+        self.assertNotIn("Until formal approval of this replacement evidence route", findings)
+        self.assertEqual(routing["material_findings_owner_gate"]["owner_acceptance"], "NOT_GRANTED")
+        self.assertEqual(routing["material_findings_owner_gate"]["status"], "OWNER_PER_FINDING_DISPOSITION_PENDING")
+        self.assertIsNone(routing["post_merge_witness"]["witness_holder"])
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])

@@ -816,7 +816,7 @@
       "change_class": "S",
       "acceptance_authority": "OWNER",
       "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
-      "next_action": "Before merge, independently re-review exact PR #334 HEAD under the proposed lost-F3-originals replacement route; seek separate Owner decision on that route, all eight provisional HIGH/MEDIUM risk keys and residual historical uncertainty, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
+      "next_action": "Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight provisional HIGH/MEDIUM risk keys and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
       "blocker": "CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE",
       "resume_gate": "EXACT_HEAD_INDEPENDENT_REVIEW_THEN_OWNER_PER_FINDING_HIGH_MEDIUM_AND_GATE3_DECISIONS_WITH_SEAT_ASSIGNMENTS_THEN_EXPLICIT_CLASS_S_ACCEPTANCE_THEN_PROTECTED_MERGE_AND_WITNESS_CLOSURE",
       "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
