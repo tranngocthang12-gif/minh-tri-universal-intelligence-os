@@ -12,14 +12,32 @@ REQUIRED_F3_KEYS = frozenset(["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_COD
 
 
 def unsafe_class_d_path(p):
-    """Bounded path guard: no traversal, globs, backslashes or protected areas."""
-    if not isinstance(p, str) or not p or p.startswith("/") or "\\" in p:
+    """Registry scope guard only: deny ambiguous paths and protected root areas.
+
+    This does not compare actual PR changed files to authorized task scopes.
+    """
+    if not isinstance(p, str) or not p or p.startswith(("/", "~")):
         return True
-    parts = p.split("/")
-    if ".." in parts or any(ch in p for ch in ("*", "?", "[", "]", "{", "}")):
+    if any(ch in p for ch in ('\\', '%', '*', '?', '[', ']', '{', '}')):
         return True
-    if p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/", "docs/LAW_", "docs/OWNER_", "docs/ONE_DOOR_", "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_", "docs/PROJECT_STATE", "docs/RECOVERY_MANIFEST", "docs/ARCHITECTURE_")):
+    if ':' in p.split('/', 1)[0]:
         return True
+    normalized = p[:-1] if p.endswith('/') else p
+    parts = normalized.split('/')
+    if any(not part or part in ('.', '..') for part in parts):
+        return True
+    if len(parts) == 1 and parts[0] in ('docs', 'state', 'tools', 'tests', 'src', 'runtime', '.github'):
+        return True
+    if parts[0] in ('state', 'tools', 'tests', 'src', 'runtime', '.github'):
+        return True
+    if parts[0] == 'docs':
+        if len(parts) < 2:
+            return True
+        if parts[1] == 'vnext' or parts[1].startswith((
+            'LAW_', 'OWNER_', 'ONE_DOOR_', 'GITHUB_FIRST_ROLE_BOOTSTRAP_',
+            'PROJECT_STATE', 'RECOVERY_MANIFEST', 'ARCHITECTURE_',
+        )):
+            return True
     return False
 
 
@@ -63,16 +81,33 @@ def false_a173_positive_claim(value):
     return False
 
 
+def _unique_json_object(pairs):
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError("duplicate JSON key: " + key)
+        obj[key] = value
+    return obj
+
+
 def load_json(rel):
-    return json.loads((ROOT / rel).read_text(encoding="utf-8"))
+    return json.loads(
+        (ROOT / rel).read_text(encoding="utf-8"),
+        object_pairs_hook=_unique_json_object,
+    )
 
 def fail(errors, msg):
     errors.append(msg)
 
 def main():
     errors = []
-    current = load_json("state/current.yaml")
-    registry = load_json("state/tasks.yaml")
+    try:
+        current = load_json("state/current.yaml")
+        registry = load_json("state/tasks.yaml")
+    except (ValueError, OSError, UnicodeError) as exc:
+        print("CONTINUITY_HANDOFF_CORE_V1_FAIL")
+        print(f"- canonical state/task invalid: {exc}")
+        return 1
     records = registry["tasks"]
     ids = [t["task_id"] for t in records]
     if len(ids) != len(set(ids)):

@@ -62,7 +62,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertEqual(proc.returncode, 0, proc.stdout + proc.stderr)
         self.assertIn("CONTINUITY_HANDOFF_CORE_V1_PASS", proc.stdout)
 
-    def _run_isolated_validator(self, mutate, mutate_routing=None, mutate_registry=None):
+    def _run_isolated_validator(self, mutate, mutate_routing=None, mutate_registry=None, mutate_raw=None):
         spec = importlib.util.spec_from_file_location(
             "minhtri_continuity_candidate_validator", ROOT / "tools" / "validate_continuity_handoff.py"
         )
@@ -97,6 +97,8 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             (fixture_root / "state/tasks.yaml").write_text(
                 json.dumps(registry, ensure_ascii=False), encoding="utf-8"
             )
+            if mutate_raw is not None:
+                mutate_raw(fixture_root)
             output = io.StringIO()
             with mock.patch.object(validator, "ROOT", fixture_root), contextlib.redirect_stdout(output):
                 code = validator.main()
@@ -413,6 +415,57 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                     "routing Class S witness/closure cannot be self-certified" in output
                     or "routing Class S F3 source/disposition cannot claim approval" in output,
                     output)
+
+    def test_reject_duplicate_json_keys_at_all_levels(self):
+        cases = (
+            ("current task", "state/current.yaml",
+             '"active_task_id": "BUDDHIST-A173"',
+             '"active_task_id": "ARCH-MASTER-BLUEPRINT-V1", "active_task_id": "BUDDHIST-A173"',
+             "duplicate JSON key: active_task_id"),
+            ("checkpoint acceptance", "state/tasks.yaml",
+             '"checkpoint_acceptance": "NOT_CURRENT"',
+             '"checkpoint_acceptance": "ACCEPTED", "checkpoint_acceptance": "NOT_CURRENT"',
+             "duplicate JSON key: checkpoint_acceptance"),
+            ("F3 Owner acceptance", "state/tasks.yaml",
+             '"owner_acceptance": "NOT_GRANTED"',
+             '"owner_acceptance": "GRANTED", "owner_acceptance": "NOT_GRANTED"',
+             "duplicate JSON key: owner_acceptance"),
+        )
+        for name, rel, before, after, expected in cases:
+            with self.subTest(name=name):
+                def inject(root):
+                    path = root / rel
+                    body = path.read_text(encoding="utf-8")
+                    self.assertEqual(body.count(before), 1)
+                    path.write_text(body.replace(before, after, 1), encoding="utf-8")
+                code, output = self._run_isolated_validator(
+                    lambda *_: None, mutate_raw=inject
+                )
+                self.assertEqual(code, 1, output)
+                self.assertIn(expected, output)
+
+    def test_other_class_d_task_cannot_claim_protected_or_ambiguous_scope(self):
+        paths = (
+            "./state/current.yaml",
+            "docs//vnext/MASTER_BLUEPRINT_V1_20261006.md",
+            "docs/./LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+            "state", "tools", "docs/vnext", "tests/", "src/", ".github",
+            "docs/learning/%2e%2e/%2e%2e/state/current.yaml",
+            "docs",
+        )
+        for bad in paths:
+            with self.subTest(bad_scope=bad):
+                def inject(registry):
+                    registry["tasks"].append({
+                        "task_id": "TEST-D-EXTERNAL-LEARNING",
+                        "change_class": "D", "scope": [bad],
+                        "status": "IN_PROGRESS"
+                    })
+                code, output = self._run_isolated_validator(
+                    lambda *_: None, mutate_registry=inject
+                )
+                self.assertEqual(code, 1, output)
+                self.assertIn("Class D cannot edit canonical architecture or law", output)
 
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
