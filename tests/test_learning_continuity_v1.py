@@ -254,11 +254,14 @@ class LearningContinuityV1Tests(unittest.TestCase):
                 self.root, TRACK, active_task_id="BUDDHIST-A173",
                 comments=[comment(), broken], live_pr_head_sha=PR341_SHA)
 
-    def test_06e_malformed_predecessor_explicitly_superseded(self):
+    def test_06e_malformed_prefix_requires_explicit_reconciliation(self):
         broken = comment(6100905000, "A173-BROKEN", "6096480057")
         broken["body"] = broken["body"].replace(
             "LEARNING_CURSOR_V1\\n", "LEARNING_CURSOR_V1 — unparseable\\n", 1)
-        successor = comment(6100905001, "A173-NEXT", "6100905000")
+        successor = comment(6100905001, "A173-NEXT", "6096480057")
+        successor["body"] = successor["body"].replace(
+            "ALREADY_STUDIED:",
+            "RECONCILES_INVALID_COMMENT: 6100905000\\nALREADY_STUDIED:")
         result = recover_learning_position(
             self.root, TRACK, active_task_id="BUDDHIST-A173",
             comments=[comment(), broken, successor], live_pr_head_sha=PR341_SHA)
