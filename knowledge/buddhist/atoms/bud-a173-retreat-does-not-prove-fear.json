@@ -1,0 +1,44 @@
+{
+  "schema": "minhtri-knowledge-atom/v1",
+  "record_type": "claim",
+  "id": "bud:a173:retreat-does-not-prove-fear",
+  "domain": "buddhist_thought",
+  "class": "SYNTHESIS",
+  "status": "PENDING_REVIEW",
+  "statement": "A visible retreat from danger alone does not prove inner fear or cowardice, just as outward confrontation alone does not prove wisdom. This is a bounded cross-text inference informed by Milindapañha 5.4.9 and contrasted with Vinaya Pi Tv Kd 17, not a directly attested early-discourse definition.",
+  "source_refs": [
+    "docs/learning/BUDDHIST_A173_SOURCE_AUDIT_MILINDA_20261010.md",
+    "https://dhammatalks.net/suttacentral/sc2016/sc/en/mil5.4.9.html",
+    "https://dhammatalks.net/suttacentral/sc2016/sc/en/pi-tv-kd17.html",
+    "https://www.dhammatalks.org/suttas/MN/MN4.html",
+    "https://suttacentral.net/mn61/en/sujato"
+  ],
+  "evidence_refs": [
+    {
+      "source": "Milindapañha 5.4.9 (Rhys Davids translation)",
+      "locator": "5.4.9, dialogue on arahants withdrawing before charging elephant; reasons stated by Nāgasena are not ordinary safety"
+    },
+    {
+      "source": "Vinaya Pi Tv Kd 17",
+      "locator": "Sending out Nālāgiri: monks warn Buddha; no five hundred arahants fleeing in this passage"
+    },
+    {
+      "source": "BUDDHIST_A173_SOURCE_AUDIT_MILINDA_20261010.md",
+      "locator": "Sections 3-6: later narrative conflict, synthesis, counter-readings and application tests"
+    }
+  ],
+  "contradicts": [],
+  "supersedes": [],
+  "depends_on": [],
+  "provenance": {
+    "task_id": "BUDDHIST-A173-SOURCE-AUDIT-20261010",
+    "study_track": "Học hiểu tư duy, tư tưởng Phật",
+    "base_main_sha": "a4d3c39d6ff98c32cecd7d353cbada83bf0b20c0",
+    "date": "2026-10-10",
+    "review_level": "SAME_SEAT_SOURCE_AUDIT_ONLY",
+    "mandatory_milindapanha": "CONSULTED_EXACT_LOCATOR_MIL5_4_9",
+    "source_hierarchy": "EARLY_DISCOURSE_PRIMARY_MILINDAPANHA_LATER_SUPPORT",
+    "promotion_gate": "PROTECTED_PR_REVIEW_REQUIRED_NO_AUTOMATIC_VERIFIED",
+    "interpretive_limit": "Mil5.4.9's narrative details conflict with earlier Vinaya; direct early-source evidence does not establish the later scene."
+  }
+}
