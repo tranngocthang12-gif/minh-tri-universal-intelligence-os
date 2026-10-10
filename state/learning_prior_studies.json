@@ -1,0 +1,98 @@
+{
+  "schema": "minhtri-working-prior-study/v1",
+  "track_id": "BUDDHIST_THOUGHT",
+  "checkpoint_id": "A173",
+  "working_cursor_id": "A173-MN4-MN2-COLLATION-04",
+  "working_question": "Compare MN 2 section 4 pāṇaharānaṃ (painful feelings to be borne) against section 5 caṇḍaṃ hatthiṃ parivajjeti (avoiding dangerous elephant), using two translations and relevant early context; specify exact verbs and targets, a counter-reading, and limits without inferring a universal safety algorithm.",
+  "claims": [
+    {
+      "claim_key": "bud:a173:mn2-reflection-repetition",
+      "finding": "MN 2 §§2–7 repeat paṭisaṅkhā yoniso; MN 2 §4 endures difficult sensations, §5 avoids dangerous elephants, §6 rejects unwholesome thoughts; MN 4's paṭivinemi addresses fear in wilderness/posture practice. The same external action or shared reflection formula alone cannot determine wisdom; the binary of inner endurance versus external avoidance is an overgeneralization.",
+      "evidence_class": "TEXT_ATTESTED",
+      "review_status": "WORKING_NOTE_NOT_ACCEPTED",
+      "source_pr": 341,
+      "source_head_sha": "2119d2bda13f90f08ab00b22aca7d413d3a5a9a1",
+      "source_comment_id": 6100903518,
+      "source_path": null,
+      "source_blob_sha": null,
+      "primary_locators": [
+        "mn2:2",
+        "mn2:3",
+        "mn2:4",
+        "mn2:5",
+        "mn2:6",
+        "mn2:7",
+        "mn4:fear-posture"
+      ],
+      "uncertainty": "MN 2 §4 pāṇaharānaṃ versus §5 dangerous elephant needs two-translation contextual counter-reading; editions and early parallels unresolved."
+    },
+    {
+      "claim_key": "bud:a173:retreat-does-not-prove-fear",
+      "finding": "Observable retreat does not by itself prove inner fear or cowardice. Mil 5.4.9 explains purposeful withdrawal differently from ordinary safety; its story diverges from Vinaya Nālāgiri account.",
+      "evidence_class": "CROSS_TEXT_SYNTHESIS",
+      "review_status": "SOURCE_AUDITED_CANDIDATE",
+      "source_pr": 351,
+      "source_head_sha": "5c90bf810f3ff56af73b1046b851e972bfe988c6",
+      "source_comment_id": null,
+      "source_path": "knowledge/buddhist/atoms/bud-a173-retreat-does-not-prove-fear.json",
+      "source_blob_sha": "029b72780d06fbae744ec2e5ac79b4a380ed73cf",
+      "primary_locators": [
+        "mil5.4.9:elephant-episode",
+        "pi-tv-kd17:nalagiri"
+      ],
+      "uncertainty": "Not an early discourse definition; original narrative differences and interpretive bridge require independent checking."
+    },
+    {
+      "claim_key": "bud:a173:mn4-fear-training-context",
+      "finding": "MN 4 frames fear-and-posture practice in a specific wilderness training situation and does not supply a universal command to remain physically exposed to threats.",
+      "evidence_class": "CROSS_TEXT_SYNTHESIS",
+      "review_status": "SOURCE_AUDITED_CANDIDATE",
+      "source_pr": 351,
+      "source_head_sha": "5c90bf810f3ff56af73b1046b851e972bfe988c6",
+      "source_comment_id": null,
+      "source_path": "docs/learning/BUDDHIST_A173_SOURCE_AUDIT_MILINDA_20261010.md",
+      "source_blob_sha": "881b8d3e86d14642d468c2d141dc3eb5a0b4a483",
+      "primary_locators": [
+        "mn4:fear-posture"
+      ],
+      "uncertainty": "Original Pali verbs and at least two translations of the fear-and-posture passage remain open."
+    },
+    {
+      "claim_key": "bud:a173:hiri-ottappa-guardians",
+      "finding": "AN 2.9 discusses hiri and ottappa as beneficial guardians; this does not equate ottappa with all fearful states or modern anxiety.",
+      "evidence_class": "TEXT_ATTESTED",
+      "review_status": "SOURCE_AUDITED_CANDIDATE",
+      "source_pr": 351,
+      "source_head_sha": "5c90bf810f3ff56af73b1046b851e972bfe988c6",
+      "source_comment_id": null,
+      "source_path": "docs/learning/BUDDHIST_A173_SOURCE_AUDIT_MILINDA_20261010.md",
+      "source_blob_sha": "881b8d3e86d14642d468c2d141dc3eb5a0b4a483",
+      "primary_locators": [
+        "an2.9:lokapala"
+      ],
+      "uncertainty": "Hiri/ottappa lexical comparisons across Pali editions and early parallels remain open."
+    },
+    {
+      "claim_key": "bud:a173:mn61-harm-review",
+      "finding": "MN 61 requires reflection on consequences of actions before, during, and after undertaking them; a modern safety decision framework extrapolating from it is synthesis.",
+      "evidence_class": "TEXT_ATTESTED",
+      "review_status": "SOURCE_AUDITED_CANDIDATE",
+      "source_pr": 351,
+      "source_head_sha": "5c90bf810f3ff56af73b1046b851e972bfe988c6",
+      "source_comment_id": null,
+      "source_path": "docs/learning/BUDDHIST_A173_SOURCE_AUDIT_MILINDA_20261010.md",
+      "source_blob_sha": "881b8d3e86d14642d468c2d141dc3eb5a0b4a483",
+      "primary_locators": [
+        "mn61:before-during-after"
+      ],
+      "uncertainty": "Specific proposed contemporary application remains unreviewed."
+    }
+  ],
+  "open_audits": [
+    "MN 2 §4 pāṇaharānaṃ vs §5 caṇḍaṃ hatthiṃ parivajjeti: contrast endurance with avoidance using two translations and counter-reading",
+    "Full MN 4 versus MN 2 lexical and genre source audit, including paṭivinemi and paṭisaṅkhā yoniso",
+    "hiri/ottappa versus bhaya/bherava semantic ranges and source parallels",
+    "Milindapañha 5.4.9 versus Vinaya Nālāgiri source discrepancy",
+    "Independent source/semantic review and held-out novel-case transfer still pending"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "minhtri-learning-tracks/v1",
+  "tracks": [
+    {
+      "track_id": "BUDDHIST_THOUGHT",
+      "task_id": "BUDDHIST-A173",
+      "checkpoint_id": "A173",
+      "last_durable_checkpoint_id": "A172",
+      "latest_delta_id": null,
+      "latest_delta_path": null,
+      "working_cursor_source": {
+        "provider": "github_pr_comments",
+        "pr_number": 341,
+        "author_login": "tranngocthang12-gif",
+        "source_head_sha": "2119d2bda13f90f08ab00b22aca7d413d3a5a9a1",
+        "required_label": "LEARNING_CURSOR_V1"
+      },
+      "status": "WORKING_NOTE_NOT_ACCEPTED",
+      "research_intake": [
+        {
+          "source_type": "PR",
+          "number": 249,
+          "checkpoint_id": "A173",
+          "record_role": "UNMERGED_LEGACY_DRAFT",
+          "source_head_sha": "e0bf34be43ca87264914bfb9c25cfeb595815c51",
+          "may_advance_cursor": false,
+          "may_promote_checkpoint": false
+        },
+        {
+          "source_type": "PR",
+          "number": 351,
+          "checkpoint_id": "A173",
+          "record_role": "SOURCE_AUDITED_CANDIDATE",
+          "source_head_sha": "5c90bf810f3ff56af73b1046b851e972bfe988c6",
+          "may_advance_cursor": false,
+          "may_promote_checkpoint": false
+        },
+        {
+          "source_type": "ISSUE",
+          "number": 352,
+          "checkpoint_id": "A177",
+          "record_role": "RESEARCH_TRACE_ONLY",
+          "source_head_sha": null,
+          "may_advance_cursor": false,
+          "may_promote_checkpoint": false
+        }
+      ]
+    }
+  ]
+}
