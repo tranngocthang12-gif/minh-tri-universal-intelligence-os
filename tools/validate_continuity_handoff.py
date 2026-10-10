@@ -22,7 +22,7 @@ def unsafe_class_d_path(p):
         return True
     if ':' in p.split('/', 1)[0]:
         return True
-    normalized = p[:-1] if p.endswith('/') else p
+    normalized = (p[:-1] if p.endswith('/') else p).casefold()
     parts = normalized.split('/')
     if any(not part or part in ('.', '..') for part in parts):
         return True
@@ -34,8 +34,8 @@ def unsafe_class_d_path(p):
         if len(parts) < 2:
             return True
         if parts[1] == 'vnext' or parts[1].startswith((
-            'LAW_', 'OWNER_', 'ONE_DOOR_', 'GITHUB_FIRST_ROLE_BOOTSTRAP_',
-            'PROJECT_STATE', 'RECOVERY_MANIFEST', 'ARCHITECTURE_',
+            'law_', 'owner_', 'one_door_', 'github_first_role_bootstrap_',
+            'project_state', 'recovery_manifest', 'architecture_',
         )):
             return True
     return False
@@ -49,7 +49,11 @@ def false_a173_positive_claim(value):
         r"\bA173\b\s*(?:[:\u2014-]\s*)?"
         r"(?:(?:is\s+(?:now\s+|both\s+DRAFT\s+and\s+)?|was\s+|"
         r"has\s+been\s+|status\s+is\s+|marked\s+(?:as\s+)?))?"
-        r"(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED|complete)\b",
+        r"(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED|complete|DONE)\b",
+        r"\bA173\b\s*\(\s*(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED|DONE)\s*\)",
+        r"\bA173\b\s+(?:but|yet|and)\s+(?:it\s+)?is\s+"
+        r"(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED|DONE)\b",
+        r"\bA173\b\s+được\s+(?:nghiệm\s+thu|chấp\s+nhận)\b",
         r"\b(?:Owner\s+)?(?:has\s+)?(?:accepted|approved|verified)"
         r"\s+(?:checkpoint\s+)?\bA173\b",
         r"\bA173\b[^.!?;\n]{0,100}?\b(?:đã\s+(?:được\s+)?(?:Owner\s+)?"
@@ -69,11 +73,12 @@ def false_a173_positive_claim(value):
     )
     for line in value.splitlines():
         for clause in re.split(r"[.!?;,]", line):
+            clause = clause.replace("\u2019", "\u0027").replace("\u2018", "\u0027")
             # Text is only an advisory contradiction signal, never receipt authority.
             # Strip narrowly recognized negated acceptance before testing positives.
             clause = re.sub(
                 r"\bOwner\s+(?:has\s+not|hasn't|has\s+not\s+yet)\s+accepted\s+(?:checkpoint\s+)?A173\b",
-                "", clause, flags=re.IGNORECASE,
+                "A173", clause, flags=re.IGNORECASE,
             )
             if conditional.search(clause):
                 continue
@@ -386,6 +391,12 @@ def main():
                 matches = re.findall(rf"^\*\*{key}:\*\*\s*(\S.*?)\s*$", body, flags=re.MULTILINE)
                 if matches != [value]:
                     fail(errors, f"A173 handoff {key} disagrees with unaccepted checkpoint")
+            acceptance_lines = re.findall(
+                r"(?im)^\s*(?:\*\*CHECKPOINT_ACCEPTANCE:\*\*|CHECKPOINT_ACCEPTANCE\s*:)\s*(.*?)\s*$",
+                body,
+            )
+            if acceptance_lines != ["NOT_CURRENT"]:
+                fail(errors, "A173 handoff CHECKPOINT_ACCEPTANCE has duplicate or untrusted assertion")
             if false_a173_positive_claim(body):
                 fail(errors, "A173 handoff falsely claims checkpoint completion")
 

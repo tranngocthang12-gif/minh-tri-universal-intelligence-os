@@ -451,6 +451,8 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             "docs/./LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
             "state", "tools", "docs/vnext", "tests/", "src/", ".github",
             "docs/learning/%2e%2e/%2e%2e/state/current.yaml",
+            "Docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+            "docs/law_index_20261003.md",
             "docs",
         )
         for bad in paths:
@@ -480,6 +482,9 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             "A173: ACCEPTED",
             "Owner ACCEPTED A173.",
             "A173 is complete.",
+            "Owner has not accepted A173 but it is COMPLETED.",
+            "A173 (ACCEPTED).",
+            "A173 được nghiệm thu.",
             "PR #249 is NOT current; A173 is ACCEPTED.",
             "No longer DRAFT: A173 is ACCEPTED.",
             "A173 đã qua nghiệm thu.",
@@ -516,6 +521,15 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 code, output = self._run_isolated_validator(mutate)
                 self.assertEqual(code, 0, output)
 
+    def test_unbolded_checkpoint_acceptance_shadow_rejected(self):
+        def tamper(current, active, root):
+            path = root / active["handoff_ref"]
+            path.write_text(path.read_text(encoding="utf-8") +
+                            "\nCHECKPOINT_ACCEPTANCE: ACCEPTED\n", encoding="utf-8")
+        code, details = self._run_isolated_validator(tamper)
+        self.assertEqual(code, 1, details)
+        self.assertIn("A173 handoff CHECKPOINT_ACCEPTANCE has duplicate or untrusted assertion", details)
+
     def test_three_phase_external_receipt_contract(self):
         from tools.validate_continuity_handoff import evaluate_class_s_transition
         head = "a" * 40
@@ -551,6 +565,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertFalse(false_a173_positive_claim("Owner has not accepted checkpoint A173"))
         self.assertFalse(false_a173_positive_claim("Owner hasn\u0027t accepted A173".replace("\u2019", "\u0027")))
         self.assertFalse(false_a173_positive_claim("Owner has not yet accepted checkpoint A173"))
+        self.assertFalse(false_a173_positive_claim("Owner hasn\u2019t accepted A173"))
         self.assertTrue(false_a173_positive_claim("Owner has not accepted checkpoint A173, Owner has accepted checkpoint A173"))
         self.assertTrue(false_a173_positive_claim("Owner has accepted checkpoint A173"))
         self.assertFalse(false_a173_positive_claim(
