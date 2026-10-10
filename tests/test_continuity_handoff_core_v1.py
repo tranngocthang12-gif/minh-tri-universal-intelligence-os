@@ -230,7 +230,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             active["scope"].append("docs/**")
         for name, modify, message in (
             ("shadow checkpoint", shadow_checkpoint, "A173 checkpoint shadow/missing schema fields"),
-            ("result-ref forge", fake_result, "A173 result_ref contradicts pending study checkpoint"),
+            ("result-ref forge", fake_result, "A173 result_ref must point to the existing canonical A173 DRAFT source"),
             ("scope traversal", traversal, "Class D cannot edit canonical architecture or law"),
             ("scope glob", unsafe_glob, "Class D cannot edit canonical architecture or law"),
         ):

@@ -28,7 +28,7 @@ def false_a173_positive_claim(value):
     if not isinstance(value, str):
         return False
     pattern = re.compile(
-        r"(?:\bA173\b.{0,160}?(?P<english>\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b)"
+        r"(?:\bA173\b(?:\s+(?:(?:checkpoint)\s+)?(?:is|was|has\s+been|now)\s+|\s+(?:checkpoint\s+)?)?(?P<english>\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b)"
         r"|\bA173\b.{0,160}?(?P<vietnamese>\bđã\s+(?:được\s+)?"
         r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất)\b)"
         r"|\b(?:Owner\s+)?đã\s+(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+tất)"
