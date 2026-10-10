@@ -267,6 +267,24 @@ class LearningContinuityV1Tests(unittest.TestCase):
             comments=[comment(), broken, successor], live_pr_head_sha=PR341_SHA)
         self.assertEqual(result.cursor_id, "A173-NEXT")
 
+    def test_06f_actual_historical_malformed_ancestor_is_explicitly_superseded(self):
+        historical = comment(6096412284, "A173-OLD", "6096376562")
+        historical["body"] = historical["body"].replace(
+            "LEARNING_CURSOR_V1\n", "LEARNING_CURSOR_V1 — historical\n", 1)
+        position = recover_learning_position(
+            self.root, TRACK, active_task_id="BUDDHIST-A173",
+            comments=[historical, comment()], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(position.cursor_id, CURSOR03)
+
+    def test_06g_unlinked_malformed_ancestor_still_blocks(self):
+        historical = comment(6096412283, "A173-OLD", "6096376562")
+        historical["body"] = historical["body"].replace(
+            "LEARNING_CURSOR_V1\n", "LEARNING_CURSOR_V1 — historical\n", 1)
+        with self.assertRaisesRegex(LearningContinuityError, "unreconciled malformed"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[historical, comment()], live_pr_head_sha=PR341_SHA)
+
     def test_07_two_successive_sessions_recover_from_latest_delta(self):
         first = delta()
         path = validate_append_intent(
