@@ -4,10 +4,10 @@
 **Status:** DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED  
 **Dependency:** A170, A171, and A172 must be promoted in order before A173 can become current.  
 **Topic:** Fear of consequences vs wisdom — how `ottappa`, prudence, fear, and courage interact without collapsing moral caution into anxiety or cowardice.
- 
+
 ## Current provisional research discovery (2026-10-11; NOT a checkpoint promotion)
 
-Before repeating any A173 research, read the bounded, **PENDING_REVIEW / not Owner-accepted** prior-study record:
+Before repeating any A173 research, read the bounded, **PENDING_REVIEW / not Owner-accepted Class O archival candidate** prior-study record:
 [`BUDDHIST_A173_PROVISIONAL_RESUME_RECORD_20261011.md`](BUDDHIST_A173_PROVISIONAL_RESUME_RECORD_20261011.md).
 It cites PR #341 working cursor comment #6100903518 and underlying #6100784908, plus separate PR #351 source audit. These remain noncanonical candidates while unmerged; they must not override `state/bootstrap.json` -> `state/current.yaml` -> `state/tasks.yaml`.
 
