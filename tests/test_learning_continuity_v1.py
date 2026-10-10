@@ -245,6 +245,25 @@ class LearningContinuityV1Tests(unittest.TestCase):
         self.assertEqual(position.cursor_id, "A173-MN4-MN2-COLLATION-04")
         self.assertIn("elephant avoidance", position.next_question)
 
+    def test_06d_malformed_prefix_cursor_cannot_be_silently_skipped(self):
+        broken = comment(6100905000, "A173-BROKEN", "6096480057")
+        broken["body"] = broken["body"].replace(
+            "LEARNING_CURSOR_V1\\n", "LEARNING_CURSOR_V1 — unparseable\\n", 1)
+        with self.assertRaisesRegex(LearningContinuityError, "unreconciled malformed"):
+            recover_learning_position(
+                self.root, TRACK, active_task_id="BUDDHIST-A173",
+                comments=[comment(), broken], live_pr_head_sha=PR341_SHA)
+
+    def test_06e_malformed_predecessor_explicitly_superseded(self):
+        broken = comment(6100905000, "A173-BROKEN", "6096480057")
+        broken["body"] = broken["body"].replace(
+            "LEARNING_CURSOR_V1\\n", "LEARNING_CURSOR_V1 — unparseable\\n", 1)
+        successor = comment(6100905001, "A173-NEXT", "6100905000")
+        result = recover_learning_position(
+            self.root, TRACK, active_task_id="BUDDHIST-A173",
+            comments=[comment(), broken, successor], live_pr_head_sha=PR341_SHA)
+        self.assertEqual(result.cursor_id, "A173-NEXT")
+
     def test_07_two_successive_sessions_recover_from_latest_delta(self):
         first = delta()
         path = validate_append_intent(
