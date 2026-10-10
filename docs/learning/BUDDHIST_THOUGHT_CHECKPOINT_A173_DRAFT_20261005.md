@@ -5,6 +5,16 @@
 **Dependency:** A170, A171, and A172 must be promoted in order before A173 can become current.  
 **Topic:** Fear of consequences vs wisdom — how `ottappa`, prudence, fear, and courage interact without collapsing moral caution into anxiety or cowardice.
 
+## Current provisional research discovery (2026-10-11; NOT a checkpoint promotion)
+
+Before repeating any A173 research, read the bounded, **PENDING_REVIEW / not Owner-accepted Class O archival candidate** prior-study record:
+[`BUDDHIST_A173_PROVISIONAL_RESUME_RECORD_20261011.md`](BUDDHIST_A173_PROVISIONAL_RESUME_RECORD_20261011.md).
+It cites PR #341 working cursor comment #6100903518 and underlying #6100784908, plus separate PR #351 source audit. These remain noncanonical candidates while unmerged; they must not override `state/bootstrap.json` -> `state/current.yaml` -> `state/tasks.yaml`.
+
+**ALREADY_STUDIED:** AN 2.9, MN 61, MN 4 fear/posture, MN 2 §§2–7 repeated formula and differing remedies, Milindapañha 5.4.9 / Vinaya story distinction. **CORRECTED:** a shared formula is not unique to endurance/avoidance, and there is no text-attested absolute inner-endure/outer-avoid binary. **EXACT WORKING NEXT:** A173-Q03 — contrast MN 2 §4 `pāṇaharānaṃ` with §5 `caṇḍaṃ hatthiṃ parivajjeti` via two translations, context and counter-reading. Re-evaluate from fresh sources and preserve uncertainty; do not report A173 complete. The older **A174 PROVISIONAL NEXT** below is a dependent future draft, **not the live A173 research question**.
+
+
+
 ## Central question
 
 When is fear of consequences a wholesome moral safeguard, and when does fear become confusion, avoidance, projection, or cowardice?
