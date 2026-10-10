@@ -639,6 +639,60 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertIn("5c90bf810f3ff56af73b1046b851e972bfe988c6", text)
         self.assertIn("no write permission", text)
 
+    def test_n11_material_gate_preserves_provenance_and_owner_decisions(self):
+        registry = self.load_json("state/tasks.yaml")
+        task = next(t for t in registry["tasks"] if t["task_id"] == "ARCH-BUDDHIST-A173-ROUTING-V1")
+        gate = task["material_findings_owner_gate"]
+        records = {x["finding_id"]: x for x in gate["finding_records"]}
+        self.assertEqual(set(gate["provisional_intake_keys"]) | {"N-01", "N-02", "N-03", "N-11"}, set(records))
+        self.assertTrue(all(x["owner_disposition"] == "PENDING" for x in records.values()))
+        self.assertEqual(records["N-11"]["source_ref"], "PR#334:comment:6100257619")
+        self.assertEqual(records["N-11"]["reviewed_head_sha"], "be76cb501a141c84d359ccd9eee8337e6c662e4c")
+        self.assertTrue(all(x["original_status"] == "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST"
+                            for x in gate["source_gap_rounds"]))
+        document = (ROOT / "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md").read_text(encoding="utf-8")
+        for marker in ("N-11", "6100257619", "GROK_MEDIUM_01_05", "CLAUDE_HR_01_08",
+                       "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST"):
+            self.assertIn(marker, document)
+
+    def test_n11_intake_negative_controls_block_self_acceptance_and_loss(self):
+        edits = [
+            ("false_owner_disposition", lambda g: g["finding_records"][0].update(owner_disposition="REPAIR_CONFIRMED")),
+            ("false_authenticated_source", lambda g: g["finding_records"][-1].update(source_status="PROVIDER_AUTHENTICATED")),
+            ("forged_r2_head", lambda g: g["finding_records"][-1].update(reviewed_head_sha="0" * 40)),
+            ("missing_n11", lambda g: g.update(finding_records=[
+                r for r in g["finding_records"] if r["finding_id"] != "N-11"])),
+            ("duplicate_id", lambda g: g["finding_records"].append(dict(g["finding_records"][-1]))),
+            ("missing_old_f3", lambda g: g.update(finding_records=[
+                r for r in g["finding_records"] if r["finding_id"] != "INTAKE_26D_GROK_HIGH_BRANCH_BASE"])),
+            ("forged_missing_round_closure", lambda g: g["source_gap_rounds"][0].update(owner_disposition="CLOSED")),
+            ("deleted_missing_round", lambda g: g.update(source_gap_rounds=g["source_gap_rounds"][1:])),
+            ("shadow_field", lambda g: g.update(owner_signed_acceptance=True)),
+        ]
+        for label, edit in edits:
+            with self.subTest(label=label):
+                def mutate(routing):
+                    edit(routing["material_findings_owner_gate"])
+                code, output = self._run_isolated_validator(lambda *_: None, mutate_routing=mutate)
+                self.assertEqual(code, 1, output)
+                self.assertIn("routing", output)
+
+    def test_n11_intake_accepts_new_open_material_finding_not_autoclosure(self):
+        def mutate(routing):
+            gate = routing["material_findings_owner_gate"]
+            extra = dict(gate["finding_records"][-1])
+            extra.update(
+                finding_id="N-12",
+                review_round="FUTURE_REVIEW_PENDING",
+                reviewed_head_sha=None,
+                source_status="SOURCE_NOT_LOCATED_NOT_CONFIRMED_LOST",
+                source_ref="PR#334:comment:6100257619",
+                owner_disposition="PENDING",
+            )
+            gate["finding_records"].append(extra)
+        code, output = self._run_isolated_validator(lambda *_: None, mutate_routing=mutate)
+        self.assertEqual(code, 0, output)
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])
