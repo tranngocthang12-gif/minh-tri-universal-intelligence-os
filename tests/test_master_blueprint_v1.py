@@ -20,13 +20,20 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertIn("law_precedence", current["authority_scope"]["mirrors_boot_root_pointers"])
         self.assertNotIn("law_precedence", current["authority_scope"]["this_file_is_authoritative_for"])
 
-    def test_master_blueprint_is_active_frontier(self):
+    def test_frozen_blueprint_routes_to_active_open_task(self):
         current=load("state/current.yaml")
-        tasks=load("state/tasks.yaml")
-        self.assertEqual(current["active_task_id"], "ARCH-MASTER-BLUEPRINT-V1")
-        t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-MASTER-BLUEPRINT-V1")
-        self.assertEqual(t["status"], "DONE")
-
+        tasks={x["task_id"]:x for x in load("state/tasks.yaml")["tasks"]}
+        self.assertEqual(current["foundation_status"],"FROZEN")
+        self.assertEqual(tasks["ARCH-MASTER-BLUEPRINT-V1"]["status"],"DONE")
+        self.assertIn(current["active_task_id"],tasks)
+        active=tasks[current["active_task_id"]]
+        self.assertNotEqual(active["task_id"],"ARCH-MASTER-BLUEPRINT-V1")
+        self.assertIn(active["status"],{"IN_PROGRESS","BLOCKED","REPORTED","REVIEWED_REVISE","STALE"})
+        self.assertIn(active["change_class"],{"F","S","D","O"})
+        self.assertTrue(active.get("acceptance_authority"))
+        self.assertEqual(current["next_checkpoint"],active["next_action"])
+        if current["active_workstream"]=="OWNER_DIRECTED_LEARNING":
+            self.assertTrue(any(str(path).startswith("docs/learning/") for path in active.get("scope",[])))
     def test_owner_accepted_foundation_freeze(self):
         tasks=load("state/tasks.yaml")
         t=next(x for x in tasks["tasks"] if x["task_id"]=="ARCH-FOUNDATION-ACCEPTANCE-FREEZE-V1")
@@ -66,6 +73,84 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         for task in tasks["tasks"]:
             self.assertIn("change_class", task, task["task_id"])
 
+    def test_a173_never_uses_obsolete_legacy_execution_branch(self):
+        tasks=load("state/tasks.yaml")["tasks"]
+        study=next(t for t in tasks if t["task_id"]=="BUDDHIST-A173")
+        self.assertEqual(study["change_class"],"D")
+        self.assertNotEqual(study.get("branch"),"learning/buddhist-a173-20261005-2205")
+        if study.get("branch") is None:
+            self.assertEqual(study.get("branch_binding"),"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+        else:
+            self.assertNotEqual(study.get("branch_binding"),"NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT")
+            self.assertTrue(study.get("base_sha"))
+        handoff=(ROOT/study["handoff_ref"]).read_text(encoding="utf-8")
+        self.assertIn("PR #249",handoff)
+    def test_class_s_routing_is_separate_from_class_d_study(self):
+        state=load("state/current.yaml")
+        records={r["task_id"]:r for r in load("state/tasks.yaml")["tasks"]}
+        routing=records["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        study=records["BUDDHIST-A173"]
+        self.assertEqual(state["foundation_status"],"FROZEN")
+        self.assertEqual(routing["change_class"],"S")
+        self.assertEqual(routing["acceptance_authority"],"OWNER")
+        self.assertEqual(routing["candidate_gate_phase"],"PRE_MERGE_UNACCEPTED_SNAPSHOT")
+        self.assertEqual(routing["status"],"IN_PROGRESS")
+        self.assertTrue(routing.get("blocker"))
+        self.assertTrue({
+            "state/current.yaml", "state/tasks.yaml", "tests/test_master_blueprint_v1.py",
+            "tools/validate_continuity_handoff.py", "tests/test_continuity_handoff_core_v1.py",
+        }.issubset(set(routing["scope"])))
+        self.assertEqual(study["change_class"],"D")
+        self.assertEqual(study["acceptance_authority"],"OWNER")
+        self.assertNotEqual(study.get("branch"),"learning/buddhist-a173-20261005-2205")
+        gate=routing["material_findings_owner_gate"]
+        self.assertEqual(len(gate["provisional_intake_keys"]),8)
+        self.assertEqual(len(set(gate["provisional_intake_keys"])),8)
+        self.assertIn("OWNER_REPORTED_ORIGINALS_LOST",gate["originals_or_attestation"])
+        self.assertIn("OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION",gate["gate_3_build_before_task_authorize"])
+        witness=routing["post_merge_witness"]
+        self.assertEqual(witness["assignment_authority"],"OWNER")
+        self.assertEqual(witness["evidence_role"],"Evidence/Validation")
+        self.assertFalse(witness["builder_self_certification_allowed"])
+        self.assertEqual(witness["merge_commit_evidence"],[
+            "reviewed_head_sha", "owner_acceptance_comment_id", "exact_head_ci_run_id"
+        ])
+        self.assertFalse(state["autonomous_learning_runtime"])
+        self.assertFalse(state["automatic_self_critique_runtime"])
+        self.assertFalse(state["meta_learning_runtime"])
+    def test_bootstrap_route_and_study_predecessor_do_not_promote_drafts(self):
+        boot=load("state/bootstrap.json")
+        state=load(boot["current_state"])
+        tasks={x["task_id"]:x for x in load(boot["task_registry"])["tasks"]}
+        active=tasks[state["active_task_id"]]
+        self.assertIn(active["status"],{"IN_PROGRESS","BLOCKED","REPORTED","REVIEWED_REVISE","STALE"})
+        handoff_path=ROOT/active["handoff_ref"]
+        self.assertTrue(handoff_path.is_file())
+        handoff=handoff_path.read_text(encoding="utf-8")
+        self.assertEqual(handoff.split("## NEXT ACTION",1)[1].strip().splitlines()[0],active["next_action"])
+        self.assertEqual(active["next_action"],state["next_checkpoint"])
+        self.assertTrue((ROOT/"docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md").is_file())
+        if active["task_id"]=="BUDDHIST-A173":
+            self.assertIsNone(active["branch"])
+            self.assertIn("NOT CURRENT",handoff)
+            self.assertIn("PR #249",handoff)
+            for step in (174,175,176):
+                self.assertTrue((ROOT/f"docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A{step}_DRAFT_20261005.md").is_file())
+    def test_class_s_handoff_distinct_from_class_d_and_exact_next_action(self):
+        records=load("state/tasks.yaml")["tasks"]
+        routes={r["task_id"]:r for r in records}
+        routing=routes["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        study=routes["BUDDHIST-A173"]
+        self.assertNotEqual(routing["handoff_ref"],study["handoff_ref"])
+        for task in (routing,study):
+            handoff=(ROOT/task["handoff_ref"]).read_text(encoding="utf-8")
+            self.assertIn("## NEXT ACTION",handoff)
+            self.assertEqual(task["next_action"],handoff.split("## NEXT ACTION",1)[1].strip().splitlines()[0])
+        self.assertEqual(routing["change_class"],"S")
+        self.assertIn("CLASS_S_FINDINGS_DISPOSITION",routing["result_ref"])
+        self.assertIn("PR #319 remains", (ROOT/routing["handoff_ref"]).read_text(encoding="utf-8"))
+        self.assertEqual(study["change_class"],"D")
+
     def test_exact_next_action_is_identical_across_current_task_handoff(self):
         current=load("state/current.yaml")
         tasks=load("state/tasks.yaml")
@@ -77,6 +162,40 @@ class MasterBlueprintV1Tests(unittest.TestCase):
         self.assertEqual(active["next_action"], handoff_next)
         self.assertNotIn("Packet v2", current["next_checkpoint"])
 
+    def test_f3_and_class_s_owner_gate_are_explicit_without_prose_lock(self):
+        state=load("state/current.yaml")
+        records={r["task_id"]:r for r in load("state/tasks.yaml")["tasks"]}
+        study=records["BUDDHIST-A173"]
+        routing=records["ARCH-BUDDHIST-A173-ROUTING-V1"]
+        dh=(ROOT/study["handoff_ref"]).read_text(encoding="utf-8")
+        sh=(ROOT/routing["handoff_ref"]).read_text(encoding="utf-8")
+        dispo=(ROOT/"docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md").read_text(encoding="utf-8")
+        self.assertEqual(study["learning_checkpoint"]["checkpoint_acceptance"],"NOT_CURRENT")
+        self.assertEqual(study["learning_checkpoint"]["last_accepted_checkpoint_id"],"A172")
+        self.assertIsNone(study["learning_checkpoint"]["acceptance_receipt_ref"])
+        self.assertIn("**CHECKPOINT_ACCEPTANCE:** NOT_CURRENT",dh)
+        self.assertIn("PR #341",dh)
+        self.assertIn("PR #345",dh)
+        self.assertIn("A172",dh)
+        self.assertIn("A173",dh)
+        self.assertIn("PR #249",dh)
+        gate=routing["material_findings_owner_gate"]
+        self.assertEqual(gate["owner_acceptance"],"NOT_GRANTED")
+        self.assertEqual(gate["status"],"OWNER_PER_FINDING_DISPOSITION_PENDING")
+        self.assertIn("OWNER_REPORTED_ORIGINALS_LOST",gate["originals_or_attestation"])
+        self.assertIn("OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION",gate["gate_3_build_before_task_authorize"])
+        self.assertIn("6076001277",gate["gate_3_build_before_task_authorize"])
+        self.assertIn("HISTORICAL_F3_UNVERIFIED",dispo)
+        self.assertEqual(len(gate["provisional_intake_keys"]),8)
+        for key in gate["provisional_intake_keys"]:
+            self.assertIn(key,dispo)
+        self.assertIn("## PHASE-BOUND STATUS",sh)
+        self.assertEqual(routing["next_action"],sh.split("## NEXT ACTION",1)[1].strip().splitlines()[0])
+        witness=routing["post_merge_witness"]
+        for field in ("reviewed_head_sha","owner_acceptance_comment_id","exact_head_ci_run_id"):
+            self.assertIn(field,witness["merge_commit_evidence"])
+        self.assertFalse(witness["builder_self_certification_allowed"])
+        self.assertFalse(state["autonomous_learning_runtime"])
     def test_change_class_and_acceptance_resume_gate(self):
         tasks=load("state/tasks.yaml")
         allowed={"F","S","D","O","UNCLASSIFIED_LEGACY"}

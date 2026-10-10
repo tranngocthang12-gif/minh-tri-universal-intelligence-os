@@ -36,18 +36,33 @@
     {
       "task_id": "BUDDHIST-A173",
       "title": "Continue Buddhist thought checkpoint A173 without blocking on architecture migration",
-      "status": "DRAFT",
+      "status": "IN_PROGRESS",
       "scope": [
         "docs/learning/"
       ],
-      "branch": "learning/buddhist-a173-20261005-2205",
-      "base_sha": "a04300f8530c7f8413e8e386c607c7f9938ce32b",
+      "branch": null,
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
       "requires": "none",
       "dependencies": [],
       "supersedes": [],
-      "result_ref": "PR#249",
-      "change_class": "UNCLASSIFIED_LEGACY",
-      "resume_gate": "MUST_ASSIGN_CHANGE_CLASS_F_S_D_O_AND_ACCEPTANCE_AUTHORITY_BEFORE_RESUMPTION_OR_PROTECTED_MERGE"
+      "result_ref": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.md",
+      "change_class": "D",
+      "resume_gate": "CLASS_D_ROUTED_FOR_STUDY_ONLY_CHECKPOINT_PROMOTION_REQUIRES_PROTECTED_REVIEW",
+      "acceptance_authority": "OWNER",
+      "holder": "BUDDHIST_THOUGHT_EXECUTION_SEAT_REPLACEABLE",
+      "role": "Builder",
+      "handoff_ref": "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
+      "next_action": "Continue read-only A173 research from completed A172 under early-discourse primacy and mandatory Milindapañha; before any Class D branch mutation including PR #336 obtain explicit Owner assignment and exact branch/base/head binding; A173 remains DRAFT and PR #249 remains unmerged.",
+      "blocker": "OWNER_CLASS_D_EXECUTION_REF_ASSIGNMENT_PENDING_FOR_MUTATION",
+      "branch_binding": "NONE_NO_EXECUTION_REF_UNTIL_OWNER_APPROVED_ASSIGNMENT",
+      "role_detail": "BUDDHIST_THOUGHT_MAIN_NON_INDEPENDENT",
+      "learning_checkpoint": {
+        "current_checkpoint_id": "A173",
+        "checkpoint_acceptance": "NOT_CURRENT",
+        "last_accepted_checkpoint_id": "A172",
+        "last_accepted_checkpoint_ref": "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A172_20261005.md",
+        "acceptance_receipt_ref": null
+      }
     },
     {
       "task_id": "ARCH-VNEXT-PR-SALVAGE",
@@ -775,6 +790,234 @@
       "acceptance_authority": "OWNER",
       "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
       "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
+    },
+    {
+      "task_id": "ARCH-BUDDHIST-A173-ROUTING-V1",
+      "title": "Class S correction of active Buddhist learning route after Foundation Freeze",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "state/current.yaml",
+        "state/tasks.yaml",
+        "tests/test_master_blueprint_v1.py",
+        "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md",
+        "docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md",
+        "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md",
+        "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
+        "tools/validate_continuity_handoff.py",
+        "tests/test_continuity_handoff_core_v1.py"
+      ],
+      "branch": "owner/buddhist-a173-learning-routing-20261009",
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
+      "requires": "none",
+      "dependencies": [],
+      "supersedes": [],
+      "result_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINDINGS_DISPOSITION_20261009.md",
+      "handoff_ref": "docs/vnext/handoff/BUDDHIST_A173_ROUTING_CLASS_S_V1.md",
+      "change_class": "S",
+      "acceptance_authority": "OWNER",
+      "holder": "ROUTING_BUILDER_SEAT_REPLACEABLE",
+      "next_action": "Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight historical provisional HIGH/MEDIUM keys and every later-round MEDIUM-or-higher finding in the open registry and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.",
+      "blocker": "CLASS_S_LIFECYCLE_OWNER_FINDING_AND_WITNESS_EVIDENCE_REQUIRED_BEFORE_CLOSURE",
+      "resume_gate": "EXACT_HEAD_INDEPENDENT_REVIEW_THEN_OWNER_PER_FINDING_HIGH_MEDIUM_AND_GATE3_DECISIONS_WITH_SEAT_ASSIGNMENTS_THEN_EXPLICIT_CLASS_S_ACCEPTANCE_THEN_PROTECTED_MERGE_AND_WITNESS_CLOSURE",
+      "review_packet_ref": "docs/vnext/red_team/BUDDHIST_A173_ROUTING_CLASS_S_FINAL_REVIEW_PACKET_20261009.md",
+      "role": "Builder",
+      "post_merge_validation_gate": "INDEPENDENT_ZERO_CHAT_RECOVERY_AND_SEPARATE_CLASS_S_CLOSURE_REQUIRED",
+      "prior_review_intake": "ORIGINAL_OLD_HEAD_VERBATIM_REPORTS_UNAVAILABLE_OWNER_DISPOSITION_PENDING",
+      "material_findings_owner_gate": {
+        "status": "OWNER_PER_FINDING_DISPOSITION_PENDING",
+        "source": "OWNER_CHAT_BUILDER_SUMMARY_UNVERIFIED_NOT_ORIGINAL_CRITIC_RECEIPTS",
+        "provisional_intake_keys": [
+          "INTAKE_26D_GROK_HIGH_BRANCH_BASE",
+          "INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE",
+          "INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE",
+          "INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS",
+          "INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION",
+          "INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF",
+          "INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY",
+          "INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"
+        ],
+        "required_disposition_each": "OWNER_REPAIR_CONFIRMED_OR_EXPLICIT_REJECTION_WITH_EVIDENCE",
+        "originals_or_attestation": "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED",
+        "missing_verbatim_originals": "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN",
+        "gate_3_build_before_task_authorize": "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE",
+        "owner_acceptance": "NOT_GRANTED",
+        "finding_records": [
+          {
+            "finding_id": "INTAKE_26D_GROK_HIGH_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "HIGH",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION",
+            "review_round": "F3_26D",
+            "reviewed_head_sha": "26d29022d2196691879fb152d2d9d3657979568a",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE",
+            "review_round": "F3_951",
+            "reviewed_head_sha": "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6099629284",
+            "source_status": "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-01",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-02",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-03",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "finding_id": "N-11",
+            "review_round": "CLAUDE_F3_R2",
+            "reviewed_head_sha": "be76cb501a141c84d359ccd9eee8337e6c662e4c",
+            "severity": "MEDIUM",
+            "source_ref": "PR#334:comment:6100257619",
+            "source_status": "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "owner_disposition": "PENDING"
+          }
+        ],
+        "source_gap_rounds": [
+          {
+            "round_id": "GROK_MEDIUM_01_05",
+            "claimed_finding_ids": [
+              "GROK_MEDIUM_01",
+              "GROK_MEDIUM_02",
+              "GROK_MEDIUM_03",
+              "GROK_MEDIUM_04",
+              "GROK_MEDIUM_05"
+            ],
+            "review_head_hint": null,
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "CLAUDE_HR_01_08",
+            "claimed_finding_ids": [
+              "CLAUDE_HR_01",
+              "CLAUDE_HR_02",
+              "CLAUDE_HR_03",
+              "CLAUDE_HR_04",
+              "CLAUDE_HR_05",
+              "CLAUDE_HR_06",
+              "CLAUDE_HR_07",
+              "CLAUDE_HR_08"
+            ],
+            "review_head_hint": "9aed814",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "ROUND_9FFC122",
+            "claimed_finding_ids": [],
+            "review_head_hint": "9ffc122",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          },
+          {
+            "round_id": "ROUND_65B0FA8",
+            "claimed_finding_ids": [],
+            "review_head_hint": "65b0fa8",
+            "source_ref": "PR#334:comment:6100257619",
+            "original_status": "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST",
+            "owner_disposition": "PENDING"
+          }
+        ]
+      },
+      "post_merge_witness": {
+        "assignment_authority": "OWNER",
+        "evidence_role": "Evidence/Validation",
+        "witness_holder": null,
+        "closure_holder": null,
+        "assignment_condition": "OWNER_MUST_NAME_REPLACEABLE_INDEPENDENT_EVIDENCE_SEAT_AND_CLASS_S_CLOSURE_SEAT_AT_EXACT_HEAD_ACCEPTANCE",
+        "merge_commit_evidence": [
+          "reviewed_head_sha",
+          "owner_acceptance_comment_id",
+          "exact_head_ci_run_id"
+        ],
+        "witness_status": "NOT_CLAIMED_BY_THIS_CANDIDATE",
+        "closure_method": "SEPARATE_PROTECTED_CLASS_S_TASK_STATE_CHANGE",
+        "builder_self_certification_allowed": false,
+        "pre_merge_status_interpretation": "AFTER_ACCEPTED_MERGE_HISTORICAL_PRE_MERGE_SNAPSHOTS_SUPERSEDED_BY_DURABLE_OWNER_DECISION_AND_PROTECTED_MERGE_RECEIPT"
+      },
+      "candidate_gate_phase": "PRE_MERGE_UNACCEPTED_SNAPSHOT"
     }
   ]
 }

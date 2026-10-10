@@ -8,7 +8,7 @@
   "law_precedence": "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
   "role_bootstrap": "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_20261002.md",
   "active_workstream": "OWNER_DIRECTED_LEARNING",
-  "next_checkpoint": "Foundation V1 frozen; resume Owner-directed learning through governed Knowledge Fast Lane. PR #319 remains Draft/Class F HOLD until separate Owner-authorized reopen.",
+  "next_checkpoint": "Continue read-only A173 research from completed A172 under early-discourse primacy and mandatory Milindapañha; before any Class D branch mutation including PR #336 obtain explicit Owner assignment and exact branch/base/head binding; A173 remains DRAFT and PR #249 remains unmerged.",
   "autonomous_learning_runtime": false,
   "automatic_self_critique_runtime": false,
   "meta_learning_runtime": false,
@@ -48,7 +48,7 @@
       "next_checkpoint"
     ]
   },
-  "active_task_id": "ARCH-MASTER-BLUEPRINT-V1",
+  "active_task_id": "BUDDHIST-A173",
   "boot_root": "state/bootstrap.json",
   "task_registry": "state/tasks.yaml",
   "master_blueprint": "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
