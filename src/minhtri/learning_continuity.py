@@ -358,7 +358,7 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
         body = comment.get("body", "")
         # Never silently fall back to an old cursor if a newer cursor
         # is malformed. Later explicit reconciliation can clear that risk.
-        candidate = isinstance(body, str) and body.splitlines()[:1] == [_COMMENT_LABEL]
+        candidate = isinstance(body, str) and body.startswith(_COMMENT_LABEL)
         fields = _comment_fields(body)
         if fields is None and not candidate:
             continue
@@ -374,6 +374,12 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
     valid.sort(key=lambda item: item[0])
     reconciled: set[int] = set()
     for ident, fields in valid:
+        # Legacy malformed cursor headers are recognized only when a later
+        # valid note explicitly supersedes that same GitHub comment ID.
+        predecessor = fields["SUPERSEDES"].split(" ", 1)[0]
+        if predecessor.isdecimal() and int(predecessor) in malformed:
+            _require(int(predecessor) < ident, "cursor predecessor comes from future")
+            reconciled.add(int(predecessor))
         value = fields.get("RECONCILES_INVALID_COMMENT", "")
         if value:
             _require(value.isdecimal(), "invalid cursor reconciliation ID")
