@@ -775,6 +775,41 @@
       "acceptance_authority": "OWNER",
       "freeze_baseline_law_blob": "2faac92eff36a314fa120a1edf52da697ea04912",
       "review_packet_v4_blob": "504b4cd4adb2b4e0f9c5300041d6706911c30302"
+    },
+    {
+      "task_id": "MT-OWNER-LAW-SUPERSESSION-20261009",
+      "title": "Owner-directed automatic partial supersession of conflicting old law; synchronize Foundation V1 law route, Blueprint, learning and recovery",
+      "status": "IN_PROGRESS",
+      "scope": [
+        "docs/vnext/OWNER_DECISION_LAW_SUPERSESSION_20261009.md",
+        "docs/vnext/FOUNDATION_LAW_CONSOLIDATED_V1_20261006.md",
+        "docs/vnext/MASTER_BLUEPRINT_V1_20261006.md",
+        "docs/LAW_UNIVERSAL_LEARNING_CONTINUITY_20261004.md",
+        "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
+        "state/tasks.yaml",
+        "docs/vnext/handoff/OWNER_LAW_SUPERSESSION_20261009.md",
+        "docs/vnext/red_team/OWNER_LAW_SUPERSESSION_CONFLICT_REGISTER_20261009.md",
+        "docs/vnext/red_team/OWNER_LAW_SUPERSESSION_INDEPENDENT_REVIEW_PACKET_20261009.md",
+        "tests/test_owner_law_supersession_20261009.py"
+      ],
+      "branch": "owner/law-supersession-20261009",
+      "base_sha": "a5ed9d8347a60b95503fe2e5de6b95fd8375eb76",
+      "requires": "none",
+      "dependencies": [
+        "ARCH-MASTER-BLUEPRINT-V1"
+      ],
+      "supersedes": [],
+      "result_ref": "docs/vnext/OWNER_DECISION_LAW_SUPERSESSION_20261009.md",
+      "handoff_ref": "docs/vnext/handoff/OWNER_LAW_SUPERSESSION_20261009.md",
+      "next_action": "Review the bounded Class F law-supersession amendment on exact final HEAD, obtain independent critique and Owner's specific approval of the effective-date/partial-repeal rule, then protected merge and independent cold recovery; permit unrelated read-only study throughout.",
+      "blocker": "CLASS_F_INDEPENDENT_CRITIQUE_AND_OWNER_EXACT_HEAD_ACCEPTANCE_PENDING; NO_MERGE",
+      "change_class": "F",
+      "acceptance_authority": "OWNER",
+      "holder": "CHATGPT_TOTAL_ARCHITECT_BUILDER_SEAT_NON_INDEPENDENT",
+      "role": "CLASS_F_LAW_AMENDMENT_IMPLEMENTER_NON_INDEPENDENT",
+      "governance_phase": "OWNER_DIRECTED_CANDIDATE_ONLY_NOT_ACCEPTED",
+      "foundation_status_effect": "DO_NOT_MUTATE_FROZEN_IN_CANDIDATE",
+      "owner_directive_source": "Owner full 2026-10-09 current-project chat directive; protected-main ratification pending"
     }
   ]
 }
