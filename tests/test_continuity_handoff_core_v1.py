@@ -467,6 +467,55 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 self.assertEqual(code, 1, output)
                 self.assertIn("Class D cannot edit canonical architecture or law", output)
 
+    def test_claude_n4_n5_positive_and_future_condition_probes(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "a173_conditional_detector", ROOT / "tools" / "validate_continuity_handoff.py"
+        )
+        guard = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(guard)
+        forbidden = (
+            "Owner has accepted checkpoint A173.",
+            "A173 is now COMPLETED.",
+            "A173: ACCEPTED",
+            "Owner ACCEPTED A173.",
+            "A173 is complete.",
+            "PR #249 is NOT current; A173 is ACCEPTED.",
+            "No longer DRAFT: A173 is ACCEPTED.",
+            "A173 đã qua nghiệm thu.",
+            "Owner đã duyệt A173.",
+        )
+        allowed = (
+            "Nếu A173 đã được Owner nghiệm thu thì mới được chuyển sang A174.",
+            "After A173 is ACCEPTED by Owner, continue to A174.",
+            "When A173 is COMPLETED, open A174.",
+            "If A173 is VERIFIED later, record a receipt.",
+            "Khi A173 đã được nghiệm thu thì chuyển sang A174.",
+            "Sau khi Owner đã nghiệm thu A173, mới mở A174.",
+            "Nếu A173 đã hoàn thành thì cập nhật receipt.",
+            "Không được nói A173 đã hoàn thành.",
+            "before A173 is ACCEPTED obtain receipt",
+        )
+        for claim in forbidden:
+            with self.subTest(forbidden=claim):
+                self.assertTrue(guard.false_a173_positive_claim(claim))
+                def mutate(current, active, root):
+                    p = root / active["handoff_ref"]
+                    p.write_text(p.read_text(encoding="utf-8") + "\n" + claim,
+                                 encoding="utf-8")
+                code, output = self._run_isolated_validator(mutate)
+                self.assertEqual(code, 1, output)
+                self.assertIn("A173 handoff falsely claims checkpoint completion", output)
+        for condition in allowed:
+            with self.subTest(allowed=condition):
+                self.assertFalse(guard.false_a173_positive_claim(condition))
+                def mutate(current, active, root):
+                    p = root / active["handoff_ref"]
+                    p.write_text(p.read_text(encoding="utf-8") + "\n" + condition,
+                                 encoding="utf-8")
+                code, output = self._run_isolated_validator(mutate)
+                self.assertEqual(code, 0, output)
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])

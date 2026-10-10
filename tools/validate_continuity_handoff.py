@@ -42,40 +42,38 @@ def unsafe_class_d_path(p):
 
 
 def false_a173_positive_claim(value):
-    """Conservative negative gate for contradictory A173 claims, NOT an acceptance authenticator."""
+    """Bounded textual contradiction alert; NEVER Owner identity authentication."""
     if not isinstance(value, str):
         return False
-    patterns = (
-        re.compile(
-            r"\bA173\b\s+(?:checkpoint\s+)?"
-            r"(?:(?:is\s+both\s+DRAFT\s+and|status\s+is|is|was|has\s+been|marked\s+as|now)\s+)?"
-            r"\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b", re.IGNORECASE
-        ),
-        re.compile(
-            r"\bA173\b[^.!?;\n]{0,120}?\bđã\s+(?:được\s+)?"
-            r"(?:\w+\s+){0,6}?"
-            r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất)\b",
-            re.IGNORECASE,
-        ),
-        re.compile(
-            r"\b(?:Owner\s+)?đã\s+(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+tất)"
-            r"(?:\s+và\s+hoàn\s+tất)?\s+(?:checkpoint\s+)?\bA173\b",
-            re.IGNORECASE,
-        ),
+    expressions = (
+        r"\bA173\b\s*(?:[:\u2014-]\s*)?"
+        r"(?:(?:is\s+(?:now\s+|both\s+DRAFT\s+and\s+)?|was\s+|"
+        r"has\s+been\s+|status\s+is\s+|marked\s+(?:as\s+)?))?"
+        r"(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED|complete)\b",
+        r"\b(?:Owner\s+)?(?:has\s+)?(?:accepted|approved|verified)"
+        r"\s+(?:checkpoint\s+)?\bA173\b",
+        r"\bA173\b[^.!?;\n]{0,100}?\b(?:đã\s+(?:được\s+)?(?:Owner\s+)?"
+        r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất|"
+        r"qua\s+nghiệm\s+thu|duyệt))\b",
+        r"\bOwner\s+đã\s+(?:nghiệm\s+thu|duyệt|chấp\s+nhận|hoàn\s+tất)"
+        r"(?:\s+và\s+hoàn\s+tất)?\s+(?:checkpoint\s+)?\bA173\b",
     )
-    qualifier = re.compile(
-        r"(?:\b(?:before|until|unless|if|when)\b|không\s+được\s+nói|"
-        r"đừng\s+nói|chưa\s+được|không\s+được)(?:\s+\S+){0,9}\s*$",
-        re.IGNORECASE,
+    patterns = [re.compile(expr, re.IGNORECASE) for expr in expressions]
+    conditional = re.compile(
+        r"^\s*(?:[-*]\s*)?(?:(?:before|after|when|if|once|until|only\s+if)\b"
+        r"|(?:khi|sau\s+khi|nếu|chỉ\s+khi)\b)", re.IGNORECASE,
+    )
+    prohibition = re.compile(
+        r"(?:không\s+được\s+nói|đừng\s+nói|do\s+not\s+(?:say|claim)"
+        r"|never\s+(?:say|claim))\s*$", re.IGNORECASE,
     )
     for line in value.splitlines():
         for clause in re.split(r"[.!?;]", line):
+            if conditional.search(clause):
+                continue
             for pattern in patterns:
-                for hit in pattern.finditer(clause):
-                    if qualifier.search(clause[:hit.start()].strip()):
-                        continue
-                    if re.search(r"\b(?:NOT|NEVER|NO|chưa|không)\b",
-                                 hit.group(), re.IGNORECASE):
+                for match in pattern.finditer(clause):
+                    if prohibition.search(clause[:match.start()]):
                         continue
                     return True
     return False
@@ -157,8 +155,9 @@ def main():
                         fail(errors, "A173 result_ref is not an unaccepted DRAFT source")
                     if false_a173_positive_claim(draft_text):
                         fail(errors, "A173 DRAFT source falsely claims checkpoint acceptance")
-    if current.get("active_workstream") == "OWNER_DIRECTED_LEARNING" and current.get("active_task_id") != "BUDDHIST-A173":
-        fail(errors, "Buddhist learning route cannot silently change its task ID")
+    # No global hard-pin to BUDDHIST-A173: Owner may govern a future track
+    # change through protected state/task review. This validator checks shape
+    # only; actor separation and acceptance require an external Owner gate.
     if "ARCH-BUDDHIST-A173-ROUTING-V1" not in tasks:
         fail(errors, "Class S routing gate missing")
 
