@@ -64,6 +64,10 @@ G. No implicit Owner Class S acceptance from instruction to *prioritize* or *fin
 - No historical Gate 3 exception, actor label, or Builder-authored comment is authenticated Owner acceptance. Base_sha matching a frozen candidate constant is a deterministic snapshot check, not proof of live-main ancestry; reviewers must inspect the git graph.
 - The current Class S validator checks a pre-merge snapshot, NOT real post-merge closure or an Owner-designated delegate. Foundation Gate 8 delegation still requires externally verified Owner authorization.
 
+## N-11 source-ledger reviewer challenge
+
+Read the structured finding_records and source_gap_rounds under the EXISTING Class S routing task in state/tasks.yaml. Independently inspect all eight provisional old F3 risk mechanisms, R2 MEDIUM N-01/N-02/N-03/N-11 and alleged later review rounds with missing originals. Claude R2 reviewed older be76cb5, NOT the current repaired head. Challenge forged Owner dispositions, duplicate IDs, bad source refs, fake provider authentication, missing required records, historical HEAD mismatches and insertion of properly marked new PENDING findings. Treat reported Grok/Claude/old-head round groups as gaps, not recovered full reviews or Owner-confirmed missing originals. Report independently verified findings and unresolved provenance without fabricating reviewer reports.
+
 ## Machine evidence required
 
 - PR head and base SHAs fresh-read live.
