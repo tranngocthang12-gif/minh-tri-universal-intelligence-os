@@ -218,6 +218,34 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertEqual(code, 1, output)
         self.assertIn("Buddhist learning route cannot silently change its task ID", output)
 
+    def test_a173_candidate_rejects_shadow_fields_and_unreceipted_dependents(self):
+        def shadow_checkpoint(current, active, root):
+            active["learning_checkpoint"]["accepted_shadow"] = "VERIFIED"
+        def fake_result(current, active, root):
+            active["result_ref"] = "Checkpoint A173 has been accepted by the Owner."
+        def traversal(current, active, root):
+            active["scope"].append("docs/learning/../../state/tasks.yaml")
+        def unsafe_glob(current, active, root):
+            active["scope"].append("docs/**")
+        for name, modify, message in (
+            ("shadow checkpoint", shadow_checkpoint, "A173 checkpoint shadow/missing schema fields"),
+            ("result-ref forge", fake_result, "A173 result_ref contradicts pending study checkpoint"),
+            ("scope traversal", traversal, "Class D cannot edit canonical architecture or law"),
+            ("scope glob", unsafe_glob, "Class D cannot edit canonical architecture or law"),
+        ):
+            with self.subTest(case=name):
+                code, details = self._run_isolated_validator(modify)
+                self.assertEqual(code, 1, details)
+                self.assertIn(message, details)
+
+        def vietnamese_fake(current, active, root):
+            path = root / active["handoff_ref"]
+            path.write_text(path.read_text(encoding="utf-8") +
+                            "\\nA173 đã được chấp nhận.\\n", encoding="utf-8")
+        code, details = self._run_isolated_validator(vietnamese_fake)
+        self.assertEqual(code, 1, details)
+        self.assertIn("A173 handoff falsely claims checkpoint completion", details)
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])
