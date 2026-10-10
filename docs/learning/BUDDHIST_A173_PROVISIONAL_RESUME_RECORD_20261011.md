@@ -1,6 +1,6 @@
 # MINH TRÍ — A173 provisional prior-study recovery record (2026-10-11)
 
-**Record class:** bounded Class O/D study provenance candidate, no change to architecture, law, state or task registry.
+**Record class:** Class O bounded archival record of provisional research only; this change does not resume the legacy A173 task, alter domain rules, or modify architecture, law, state, task registry, or acceptance authority.
 **Status:** PENDING_REVIEW / NOT ACCEPTED / NOT VERIFIED / NOT CANONICAL UNTIL PROTECTED MERGE.
 **Track:** BUDDHIST_THOUGHT. **Last recorded completed checkpoint:** A172. **Current research:** A173 DRAFT.
 **Main at creation:** a4d3c39d6ff98c32cecd7d353cbada83bf0b20c0.
@@ -37,4 +37,4 @@ This is **a discovery/provisional prior-research note**, not a second active cur
 
 **Change boundary:** no state/current.yaml, state/tasks.yaml, Foundation Law, workflow or PC mutations. Keep PENDING_REVIEW after merge unless reviewed separately. A record on main would prove retrievability/provenance only, not truth, task promotion or capability mastery.
 
-**Local Brain:** NOT WRITTEN. **Review gate:** builder cannot self-accept; require scoped non-builder acceptance, exact-head CI/protected review, merge and fresh-read. Then test a zero-chat reader locating this note through a governed discovery route; do not claim automatic recovery merely because file exists.
+**Local Brain:** NOT WRITTEN. **Review gate:** acceptance authority is Owner or an Owner-designated non-Builder approver; require exact-head CI, independent non-Builder source/continuity review, recorded acceptance, protected merge and fresh-read. Then test a zero-chat reader locating this note through a governed discovery route; do not claim automatic recovery merely because file exists.
