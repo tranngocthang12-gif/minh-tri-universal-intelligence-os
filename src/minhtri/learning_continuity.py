@@ -373,6 +373,15 @@ def recover_working_comment(track: Mapping[str, Any], comments: Sequence[Mapping
     _require(bool(valid), "no valid learning cursor: stop; do not repeat old lesson")
     valid.sort(key=lambda item: item[0])
     reconciled: set[int] = set()
+    # Historical A173 predecessor notes may have had a cursor-like heading
+    # but no machine-readable fields. A valid *first* successor must name
+    # that exact malformed predecessor; otherwise do not skip it.
+    first_ident, first_fields = valid[0]
+    first_parent = first_fields["SUPERSEDES"].split(" ", 1)[0]
+    if first_parent.isdecimal():
+        parent_id = int(first_parent)
+        if parent_id in malformed and parent_id < first_ident:
+            reconciled.add(parent_id)
     for ident, fields in valid:
         value = fields.get("RECONCILES_INVALID_COMMENT", "")
         if value:
