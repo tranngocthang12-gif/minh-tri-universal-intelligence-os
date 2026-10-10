@@ -1,0 +1,21 @@
+{
+  "schema": "minhtri-learning-tracks/v1",
+  "tracks": [
+    {
+      "track_id": "BUDDHIST_THOUGHT",
+      "task_id": "BUDDHIST-A173",
+      "checkpoint_id": "A173",
+      "last_durable_checkpoint_id": "A172",
+      "latest_delta_id": null,
+      "latest_delta_path": null,
+      "working_cursor_source": {
+        "provider": "github_pr_comments",
+        "pr_number": 341,
+        "author_login": "tranngocthang12-gif",
+        "source_head_sha": "2119d2bda13f90f08ab00b22aca7d413d3a5a9a1",
+        "required_label": "LEARNING_CURSOR_V1"
+      },
+      "status": "WORKING_NOTE_NOT_ACCEPTED"
+    }
+  ]
+}
