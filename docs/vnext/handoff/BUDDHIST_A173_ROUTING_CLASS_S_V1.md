@@ -26,7 +26,7 @@ BOUNDARY: This is the **routing control task**, not the Class D Buddhist study t
 - No Foundation change, Local Brain write, self-certification or automatic merge is authorized.
 
 ## NEXT ACTION
-Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight provisional HIGH/MEDIUM risk keys and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.
+Before merge, obtain a genuine fresh independent full-diff review of exact PR #334 HEAD under the Owner-approved F3 replacement procedure relayed in PR #334 comment 6099623000; then seek separate Owner dispositions for all eight historical provisional HIGH/MEDIUM keys and every later-round MEDIUM-or-higher finding in the open registry and residual unverifiable historical evidence, name independent post-merge validation and closure holders, and obtain explicit exact-head Class S acceptance; after protected merge, verify reviewed HEAD, Owner decision and CI receipts, obtain independent zero-chat recovery, then separately gate Class S closure; Foundation stays FROZEN and A173 stays DRAFT.
 
 ## REQUIRED GATES
 - Routing becomes effective on protected merge. At exact-head acceptance the Owner must appoint an independent Evidence/Validation holder and a Class S closure assignee; this handoff does not certify any witness.
