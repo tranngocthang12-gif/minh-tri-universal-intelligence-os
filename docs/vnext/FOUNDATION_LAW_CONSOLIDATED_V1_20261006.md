@@ -46,6 +46,8 @@ Foundation roles are distinct in responsibility:
 Material foundation work follows:
 `DESIGN -> LAW CHECK -> TASK AUTHORIZE -> BUILD -> SUPERVISE -> VALIDATE -> INDEPENDENT REVIEW (risk-based) -> OWNER/APPROVER ACCEPT -> PROTECTED MERGE -> FRESH-READ -> OPERATE -> OBSERVE -> CONTROLLED CHANGE`.
 
+For bounded Class O work, Owner may delegate only tightly bounded clerical merge execution by durable policy, never self-acceptance by the Builder/authoring pass. The current delegated policy is `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`. A non-Owner acceptance authority is valid only when protected main already contains a verbatim Owner utterance naming that approver for that specific task; a task field may mirror but cannot create that authority, and the authoring seat may not set, change, select, infer, or later perform it for its own head. Delegated merge qualification is bound to the substance of every hunk under Master Blueprint section 11, not to an author-written class label; any Class F/S/D substance or any touch to `state/current.yaml`, `state/tasks.yaml`, the active handoff/NEXT ACTION, law/law-router, Master Blueprint, bootstrap/role power, canonical pointers, schemas, or core pipeline interfaces excludes the whole exact head from the delegated lane. Every acceptance used or recorded by AUTO requires the acceptor's own utterance to contain the full exact-head SHA and, when a frozen packet exists for that head, that packet's git blob SHA; missing identifiers are a stop, a new head expires acceptance, and bootstrap step-skipping does not apply to these gates. Delegation may remove GitHub clerical work from Owner but may not fabricate acceptance, authority, independence, classification, exact-head binding, or reserved Foundation acceptance.
+
 CRITICAL/HIGH/MEDIUM critic findings may be repaired or explicitly rejected only by Owner; LOW observations may be dispositioned under the governed task. No material role may treat its own output as sufficient acceptance evidence. Separation of duties may be performed by replaceable AI seats, but the responsibility boundary must remain explicit in durable records.
 
 A new seat must resolve the current Master Blueprint as part of cold-start recovery before material architecture or implementation work. Missing or conflicting Blueprint/Law/State/Task authority fails closed for the affected mutation.
@@ -93,5 +95,6 @@ This document consolidates routing; it does not destructively replace the follow
 - `docs/OWNER_DECISION_24H_SELF_UPGRADE_LEASE_20261003.md`
 - `docs/vnext/OWNER_DECISION_MASTER_BLUEPRINT_FIRST_20261006.md`
 - `docs/vnext/OWNER_DECISION_AUTO_TOTAL_ARCHITECT_20261006.md`
+- `docs/vnext/OWNER_DECISION_DELEGATED_AUTO_TOTAL_ARCHITECT_APPROVAL_20261008.md`
 
 Historical law routers and migration records remain provenance only unless routed here or by current state.
