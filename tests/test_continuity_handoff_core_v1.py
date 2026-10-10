@@ -370,7 +370,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 "\n## NEXT ACTION\n", 1), encoding="utf-8")
         code, output = self._run_isolated_validator(duplicate_heading)
         self.assertEqual(code, 1, output)
-        self.assertIn("routing Class S handoff must have exactly one NEXT ACTION", output)
+        self.assertIn("routing Class S handoff must have exactly one NEXT ACTION line", output)
 
         draft_ref = "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.md"
         for appended, expected in (
