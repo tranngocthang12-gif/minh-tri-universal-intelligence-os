@@ -6,6 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 ACTIVE_STATUSES = {"IN_PROGRESS", "BLOCKED", "REPORTED", "REVIEWED_REVISE", "STALE"}
+A173_DRAFT_REF = "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.md"
 REQUIRED_F3_KEYS = frozenset(["INTAKE_26D_GROK_HIGH_BRANCH_BASE","INTAKE_26D_CODEX_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_BRANCH_BASE","INTAKE_26D_CLAUDE_MEDIUM_DEPENDENT_DRAFTS","INTAKE_26D_CLAUDE_MEDIUM_CLASS_S_AUTHORIZATION","INTAKE_951_CLAUDE_F1_MEDIUM_EXECUTION_REF","INTAKE_951_CLAUDE_F2_MEDIUM_POST_MERGE_RECOVERY","INTAKE_951_CLAUDE_F3_MEDIUM_VERBATIM_INTAKE"])
 
 
@@ -17,27 +18,47 @@ def unsafe_class_d_path(p):
     parts = p.split("/")
     if ".." in parts or any(ch in p for ch in ("*", "?", "[", "]", "{", "}")):
         return True
-    if p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/", "docs/LAW_")):
+    if p.startswith(("state/", "tools/", "docs/vnext/", ".github/", "runtime/", "docs/LAW_", "docs/OWNER_", "docs/ONE_DOOR_", "docs/GITHUB_FIRST_ROLE_BOOTSTRAP_", "docs/PROJECT_STATE", "docs/RECOVERY_MANIFEST", "docs/ARCHITECTURE_")):
         return True
     return False
 
 
 def false_a173_positive_claim(value):
-    """Conservative red-flag check, NOT general natural-language understanding."""
+    """Conservative contradiction alert only, never an Owner acceptance verifier."""
     if not isinstance(value, str):
         return False
-    positive = re.compile(
-        r"(?:A173.{0,120}(?:has been accepted|is complete|completion is granted|"
-        r"(?:is\s+)?(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b|"
-        r"đã được chấp nhận|đã hoàn thành|đã nghiệm thu|được phép tiến A174))",
+    pattern = re.compile(
+        r"(?:\bA173\b.{0,160}?(?P<english>\b(?:COMPLETED|ACCEPTED|VERIFIED|GRANTED)\b)"
+        r"|\bA173\b.{0,160}?(?P<vietnamese>\bđã\s+(?:được\s+)?"
+        r"(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+thành|hoàn\s+tất)\b)"
+        r"|\b(?:Owner\s+)?đã\s+(?:nghiệm\s+thu|chấp\s+nhận|hoàn\s+tất)"
+        r"(?:\s+và\s+hoàn\s+tất)?\s+(?:checkpoint\s+)?\bA173\b)",
         re.IGNORECASE,
     )
     negation = re.compile(
-        r"\b(?:NOT|NO|NEVER|UNACCEPTED|DRAFT|PENDING|UNVERIFIED)\b|"
-        r"chưa|không được|chưa được", re.IGNORECASE
+        r"\b(?:NOT|NO|NEVER|UNACCEPTED|UNVERIFIED|PENDING)\b"
+        r"|\b(?:chưa|không(?:\s+được)?)\b", re.IGNORECASE
     )
     for line in value.splitlines():
-        if positive.search(line) and not negation.search(line):
+        for match in pattern.finditer(line):
+            if match.group("english"):
+                before = line[max(0, match.start("english") - 26):match.start("english")]
+                if negation.search(before):
+                    continue
+                between = line[match.start():match.start("english")]
+                if len(between) > 48 and not re.search(
+                    r"(?:\b(?:is|was|now|promoted|marked)\b|chuyển\s+sang).{0,36}$",
+                    between, re.IGNORECASE
+                ):
+                    continue
+            elif match.group("vietnamese"):
+                before = line[max(0, match.start("vietnamese") - 16):match.start("vietnamese")]
+                if negation.search(before):
+                    continue
+            else:
+                before = line[max(0, match.start() - 15):match.start()]
+                if negation.search(before):
+                    continue
             return True
     return False
 
@@ -82,8 +103,18 @@ def main():
                 record.get("status") == "DONE" or checkpoint is not None
             ):
                 fail(errors, "unreceipted A173-dependent checkpoint promotion")
-        if record.get("task_id") == "BUDDHIST-A173" and false_a173_positive_claim(record.get("result_ref")):
-            fail(errors, "A173 result_ref contradicts pending study checkpoint")
+        if record.get("task_id") == "BUDDHIST-A173":
+            if record.get("result_ref") != A173_DRAFT_REF:
+                fail(errors, "A173 result_ref must point to the existing canonical A173 DRAFT source")
+            else:
+                draft_path = ROOT / A173_DRAFT_REF
+                if not draft_path.is_file():
+                    fail(errors, "A173 result_ref DRAFT source is missing")
+                else:
+                    first_part = draft_path.read_text(encoding="utf-8")[:550]
+                    if (not first_part.startswith("# Buddhist Thought Checkpoint A173 — DRAFT")
+                            or "**Status:** DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED" not in first_part):
+                        fail(errors, "A173 result_ref is not an unaccepted DRAFT source")
     if current.get("active_workstream") == "OWNER_DIRECTED_LEARNING" and current.get("active_task_id") != "BUDDHIST-A173":
         fail(errors, "Buddhist learning route cannot silently change its task ID")
     if "ARCH-BUDDHIST-A173-ROUTING-V1" not in tasks:

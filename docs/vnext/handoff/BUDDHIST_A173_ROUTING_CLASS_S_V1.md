@@ -20,7 +20,7 @@ BOUNDARY: This is the **routing control task**, not the Class D Buddhist study t
 
 ## PHASE-BOUND STATUS — NO SELF-ACCEPTANCE
 - Before protected merge: the candidate requires exact-head independent review, explicit Owner HIGH/MEDIUM per-finding decisions and missing-F3 residual-risk decision, documented one-time Gate 3 exception, assigned post-merge evidence/closure seats and exact-head Owner Class S acceptance. Verify live receipts; this document is not approval.
-- After protected merge: historical pre-merge status/pending-review wording is superseded only by the durable Owner decision comment and protected merge commit. The Class S task remains IN_PROGRESS until an independent zero-chat recovery witness and separately governed closure.
+- After protected merge: the candidate PRE_MERGE marker stays historical provenance, not a current acceptance grant. The Class S task remains IN_PROGRESS until an independently evidenced zero-chat recovery and a **new, separately authorized Class S closure change** bound to the merged main SHA, authenticated Owner receipt and assigned independent witness. That follow-on must update closure-specific task fields through its own protected review; do not edit the historical candidate marker in this PR to fake the transition.
 - This handoff does NOT claim a post-merge zero-chat witness; verify an Evidence/Validation receipt before asserting recovery.
 - A173 remains DRAFT in this routing scope; dependent A174–A177 records cannot be promoted by this PR.
 - No Foundation change, Local Brain write, self-certification or automatic merge is authorized.

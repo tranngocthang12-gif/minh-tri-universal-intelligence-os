@@ -80,6 +80,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
                 "docs/vnext/continuity/RECOVERY_ENTRYPOINT_V1.md",
                 current["current_architecture"], current["role_bootstrap"], active["handoff_ref"],
                 routing["handoff_ref"], active["learning_checkpoint"]["last_accepted_checkpoint_ref"],
+                active["result_ref"],
             }
             for rel in paths:
                 target = fixture_root / rel
@@ -245,6 +246,66 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         code, details = self._run_isolated_validator(vietnamese_fake)
         self.assertEqual(code, 1, details)
         self.assertIn("A173 handoff falsely claims checkpoint completion", details)
+
+    def test_source_bound_result_ref_and_owner_law_are_enforced(self):
+        expected_source = "docs/learning/BUDDHIST_THOUGHT_CHECKPOINT_A173_DRAFT_20261005.md"
+        registry = self.load_json("state/tasks.yaml")
+        active = next(t for t in registry["tasks"] if t["task_id"] == "BUDDHIST-A173")
+        self.assertEqual(active["result_ref"], expected_source)
+        self.assertIn("DURABLE DRAFT / NOT CURRENT / NOT AUTOMATICALLY VERIFIED",
+                      (ROOT / expected_source).read_text(encoding="utf-8")[:550])
+
+        def forged_ref(current, task, root):
+            task["result_ref"] = "Owner đã nghiệm thu checkpoint A173."
+        def missing_file(current, task, root):
+            (root / expected_source).unlink()
+        def fake_draft_content(current, task, root):
+            (root / expected_source).write_text(
+                "# Buddhist Thought Checkpoint A173 — ACCEPTED\n"
+                "**Status:** VERIFIED\n", encoding="utf-8"
+            )
+        def illegal_owner_law_scope(current, task, root):
+            task["scope"].append("docs/OWNER_LEARNING_CONTRACT_20260930.md")
+        for name, alter, expected in (
+            ("fake result_ref", forged_ref, "A173 result_ref must point"),
+            ("missing result source", missing_file, "A173 result_ref DRAFT source is missing"),
+            ("forged DRAFT content", fake_draft_content, "A173 result_ref is not an unaccepted DRAFT source"),
+            ("Owner law in Class D scope", illegal_owner_law_scope, "Class D cannot edit canonical architecture or law"),
+        ):
+            with self.subTest(case=name):
+                code, output = self._run_isolated_validator(alter)
+                self.assertEqual(code, 1, output)
+                self.assertIn(expected, output)
+
+    def test_vietnamese_completion_claims_rejected_without_draft_false_positive(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "minhtri_claim_alert_candidate", ROOT / "tools" / "validate_continuity_handoff.py"
+        )
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        for statement in (
+            "Owner đã nghiệm thu và hoàn tất checkpoint A173. Tiến lên A174.",
+            "A173 đã nghiệm thu; từ DRAFT chuyển sang ACCEPTED.",
+            "Owner đã nghiệm thu checkpoint A173.",
+            "A173 COMPLETED.",
+        ):
+            with self.subTest(statement=statement):
+                self.assertTrue(module.false_a173_positive_claim(statement))
+                def forged_handoff(current, task, root):
+                    path = root / task["handoff_ref"]
+                    path.write_text(path.read_text(encoding="utf-8") + "\n" + statement + "\n", encoding="utf-8")
+                code, output = self._run_isolated_validator(forged_handoff)
+                self.assertEqual(code, 1, output)
+                self.assertIn("A173 handoff falsely claims checkpoint completion", output)
+
+        for statement in (
+            "A173 chưa được nghiệm thu.",
+            "A173 DRAFT; NOT automatically VERIFIED.",
+            "A173 remains DRAFT; it cannot be cited as durable checkpoint progress or VERIFIED knowledge",
+        ):
+            with self.subTest(statement=statement):
+                self.assertFalse(module.false_a173_positive_claim(statement))
 
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
