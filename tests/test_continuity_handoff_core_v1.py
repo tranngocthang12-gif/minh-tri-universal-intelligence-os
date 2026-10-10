@@ -221,7 +221,7 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
             current["active_task_id"] = "ARCH-BUDDHIST-A173-ROUTING-V1"
         code, output = self._run_isolated_validator(change_id)
         self.assertEqual(code, 1, output)
-        self.assertIn("Buddhist learning route cannot silently change its task ID", output)
+        self.assertIn("learning workstream must route to Class D study task", output)
 
     def test_a173_candidate_rejects_shadow_fields_and_unreceipted_dependents(self):
         def shadow_checkpoint(current, active, root):
