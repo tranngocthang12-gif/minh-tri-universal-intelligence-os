@@ -253,6 +253,131 @@ def load_json(rel):
 def fail(errors, msg):
     errors.append(msg)
 
+
+# The first eight provisional historical IDs are immutable; additional
+# MEDIUM/HIGH findings can be appended without granting Builder acceptance.
+REQUIRED_R2_MATERIAL_KEYS = frozenset({"N-01", "N-02", "N-03", "N-11"})
+REQUIRED_SOURCE_GAP_ROUNDS = frozenset({
+    "GROK_MEDIUM_01_05", "CLAUDE_HR_01_08",
+    "ROUND_9FFC122", "ROUND_65B0FA8",
+})
+FINDING_RECORD_FIELDS = frozenset({
+    "finding_id", "review_round", "reviewed_head_sha", "severity",
+    "source_ref", "source_status", "owner_disposition",
+})
+SOURCE_GAP_FIELDS = frozenset({
+    "round_id", "claimed_finding_ids", "review_head_hint", "source_ref",
+    "original_status", "owner_disposition",
+})
+
+
+def validate_open_finding_registry(gate, errors):
+    """Candidate intake guard only; never authenticates provider or Owner."""
+    records = gate.get("finding_records")
+    if not isinstance(records, list):
+        fail(errors, "routing material finding records missing")
+        return
+    found = []
+    for record in records:
+        if not isinstance(record, dict) or set(record) != FINDING_RECORD_FIELDS:
+            fail(errors, "routing material finding record schema invalid")
+            continue
+        key = record["finding_id"]
+        if not isinstance(key, str) or re.fullmatch(r"[A-Z0-9_-]+", key) is None:
+            fail(errors, "routing material finding ID invalid")
+            continue
+        found.append(key)
+        round_id = record["review_round"]
+        if not isinstance(round_id, str) or re.fullmatch(r"[A-Z0-9_]+", round_id) is None:
+            fail(errors, "routing material finding review round invalid")
+        if not isinstance(record["severity"], str) or record["severity"] not in {"HIGH", "MEDIUM"}:
+            fail(errors, "routing material finding severity invalid")
+        source = record["source_ref"]
+        if not isinstance(source, str) or re.fullmatch(r"PR#334:comment:[1-9][0-9]*", source) is None:
+            fail(errors, "routing material finding source ref invalid")
+        if record["owner_disposition"] != "PENDING":
+            fail(errors, "routing material finding Owner disposition cannot be forged")
+        allowed_provenance = {
+            "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST",
+            "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED",
+            "SOURCE_NOT_LOCATED_NOT_CONFIRMED_LOST",
+        }
+        prov = record["source_status"]
+        if not isinstance(prov, str) or prov not in allowed_provenance:
+            fail(errors, "routing material finding provenance cannot be promoted")
+        sha = record["reviewed_head_sha"]
+        if sha is not None and (
+                not isinstance(sha, str) or re.fullmatch(r"[0-9a-f]{40}", sha) is None):
+            fail(errors, "routing material finding reviewed HEAD invalid")
+        if sha is None and prov != "SOURCE_NOT_LOCATED_NOT_CONFIRMED_LOST":
+            fail(errors, "routing material finding without HEAD must disclose source gap")
+        if key in REQUIRED_F3_KEYS:
+            is_26d = key.startswith("INTAKE_26D_")
+            expected_sha = ("26d29022d2196691879fb152d2d9d3657979568a"
+                            if is_26d else "951fed27a9f106d9cd1c465a8fa2364d1c38c0e3")
+            if (sha != expected_sha or round_id != ("F3_26D" if is_26d else "F3_951")
+                    or source != "PR#334:comment:6099629284"
+                    or prov != "PROVISIONAL_BUILDER_SUMMARY_ORIGINALS_LOST"
+                    or record["severity"] != ("HIGH" if key == "INTAKE_26D_GROK_HIGH_BRANCH_BASE" else "MEDIUM")):
+                fail(errors, "routing historical F3 risk provenance changed")
+        if key in REQUIRED_R2_MATERIAL_KEYS and (
+                sha != "be76cb501a141c84d359ccd9eee8337e6c662e4c"
+                or round_id != "CLAUDE_F3_R2"
+                or record["severity"] != "MEDIUM"
+                or source != "PR#334:comment:6100257619"
+                or prov != "OWNER_SUPPLIED_REVIEW_TEXT_UNAUTHENTICATED"):
+            fail(errors, "routing R2 material finding provenance changed")
+    if len(found) != len(set(found)):
+        fail(errors, "routing duplicate material finding ID")
+    if not (REQUIRED_F3_KEYS | REQUIRED_R2_MATERIAL_KEYS).issubset(set(found)):
+        fail(errors, "routing missing required historical or R2 material finding")
+    provisional = gate.get("provisional_intake_keys")
+    if not isinstance(provisional, list) or not set(provisional).issubset(set(found)):
+        fail(errors, "routing historical provisional intake excluded from finding records")
+
+    groups = gate.get("source_gap_rounds")
+    if not isinstance(groups, list):
+        fail(errors, "routing unlocated review round inventory missing")
+        return
+    seen = []
+    for group in groups:
+        if not isinstance(group, dict) or set(group) != SOURCE_GAP_FIELDS:
+            fail(errors, "routing unlocated review round schema invalid")
+            continue
+        rid = group["round_id"]
+        if not isinstance(rid, str) or re.fullmatch(r"[A-Z0-9_]+", rid) is None:
+            fail(errors, "routing unlocated review round ID invalid")
+            continue
+        seen.append(rid)
+        claimed = group["claimed_finding_ids"]
+        good_claimed = (
+            isinstance(claimed, list)
+            and all(isinstance(x, str) and re.fullmatch(r"[A-Z0-9_]+", x) for x in claimed)
+            and len(claimed) == len(set(claimed))
+        )
+        if not good_claimed:
+            fail(errors, "routing unlocated review claimed IDs invalid")
+        if (group["owner_disposition"] != "PENDING"
+                or group["original_status"] != "NOT_LOCATED_NOT_OWNER_CONFIRMED_LOST"):
+            fail(errors, "routing unlocated review round cannot claim Owner closure or source recovery")
+        if group["source_ref"] != "PR#334:comment:6100257619":
+            fail(errors, "routing unlocated review round source is not anchored")
+        hint = group["review_head_hint"]
+        if hint is not None and (not isinstance(hint, str)
+                                 or re.fullmatch(r"[0-9a-f]{7,40}", hint) is None):
+            fail(errors, "routing unlocated review head hint invalid")
+        claims = {
+            "GROK_MEDIUM_01_05": {"GROK_MEDIUM_" + f"{n:02d}" for n in range(1, 6)},
+            "CLAUDE_HR_01_08": {"CLAUDE_HR_" + f"{n:02d}" for n in range(1, 9)},
+        }
+        if good_claimed and rid in claims and set(claimed) != claims[rid]:
+            fail(errors, "routing claimed historical review identifiers altered")
+    if len(seen) != len(set(seen)):
+        fail(errors, "routing duplicate unlocated review round")
+    if not REQUIRED_SOURCE_GAP_ROUNDS.issubset(set(seen)):
+        fail(errors, "routing later-round source gaps omitted")
+
+
 def main():
     errors = []
     try:
@@ -436,7 +561,8 @@ def main():
                 fail(errors, "routing Class S exact eight historical risk identities changed")
             if set(gate) != {"status","source","provisional_intake_keys","required_disposition_each",
                              "originals_or_attestation","missing_verbatim_originals",
-                             "gate_3_build_before_task_authorize","owner_acceptance"}:
+                             "gate_3_build_before_task_authorize","owner_acceptance",
+                             "finding_records","source_gap_rounds"}:
                 fail(errors, "routing Class S shadow approval/provenance fields forbidden")
             if (gate.get("originals_or_attestation") != "OWNER_REPORTED_ORIGINALS_LOST_NO_SUMMARY_COMPLETENESS_ATTESTATION_FRESH_INDEPENDENT_EXACT_HEAD_REVIEW_AND_OWNER_RESIDUAL_RISK_DECISION_REQUIRED"
                     or gate.get("missing_verbatim_originals") != "OWNER_REPORTED_LOST_HISTORICAL_COMPLETENESS_UNVERIFIABLE_PROVENANCE_LIMITATION_OPEN"):
@@ -446,6 +572,7 @@ def main():
                 fail(errors, "routing Class S F3 source/disposition cannot claim approval")
             if gate.get("gate_3_build_before_task_authorize") != "OWNER_CHAT_ONE_TIME_GATE3_EXCEPTION_RELAYED_PR334_COMMENT_6076001277_NOT_CLASS_S_ACCEPTANCE":
                 fail(errors, "routing Class S Gate 3 exception cannot be expanded")
+            validate_open_finding_registry(gate, errors)
         if (not isinstance(witness, dict)
                 or set(witness) != {
                     "assignment_authority", "evidence_role", "witness_holder",
