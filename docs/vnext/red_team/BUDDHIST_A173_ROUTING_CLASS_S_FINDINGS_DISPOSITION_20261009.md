@@ -93,3 +93,13 @@ OWNER DIRECTIVE (project chat): Owner no longer has the original historical F3 r
 **Approved replacement procedure (Owner chat relayed in PR #334 comment 6099623000):** The original reports cannot be reconstructed. A genuine fresh independent full-target review is approved as NEW prospective evidence. Do not ask Owner to attest completeness of missing originals. The Owner must still decide each of the eight historically suspected *risk mechanisms* and the separate residual unknown-history risk **after** that review. This recorded procedural approval is NOT independent review, an Owner risk disposition, Class S acceptance or permission to merge.
 
 CURRENT: REPLACEMENT_REVIEW_PROCEDURE_OWNER_APPROVED_CHAT_RELAYED_6099623000, HISTORICAL_F3_UNVERIFIED, INDEPENDENT_NEW_HEAD_FULL_DIFF_REVIEW_PENDING, PER_FINDING_OWNER_DISPOSITION_PENDING, OWNER_RESIDUAL_RISK_DECISION_PENDING, CLASS_S_OWNER_ACCEPTANCE_NOT_GRANTED, NO_MERGE, NO_A173_COMPLETION.
+
+
+## Claude R2 — follow-on material findings receipt (candidate)
+
+- Owner-supplied full R2 JSON preserved at PR #334 comment 6100257619, exact reviewed HEAD be76cb501a141c84d359ccd9eee8337e6c662e4c, provider independence UNAUTHENTICATED. Replaces R1 comment 6100185147 (not second reviewer).
+- R2 finding IDs N-01, N-02, N-03 and N-11 all MEDIUM / OWNER_DISPOSITION_PENDING. N-04..N-10 LOW / REVIEW_PENDING. Historical eight keys remain in the existing registry and none is Owner-closed.
+- N-11 notes historic later rounds Grok MEDIUM 01-05 and Claude HR-01..08 plus rounds @9ffc122/@65b0fa8 have no verified verbatim intake. Status ORIGINAL_REPORT_NOT_LOCATED / SOURCE_COMPLETENESS_UNVERIFIED; don't reconstruct originals or call repairs accepted.
+- This is an append-only evidence index for future separate Owner-gated disposition, NOT a ninth field shoehorned into the sealed eight-item premerge schema. Before promotion, propose a reviewed extensible round/HEAD finding registry with authenticated receipts and negative controls. Until then N-11 REMAINS OPEN.
+- N-01 lifecycle/phase hard-pin is NOT fixed by this packet: any postmerge receipt and later Owner Class D binding require independently reviewed phase-compatible Class S control change.
+- N-02 action guard and N-03 provisional PR#351 inventory are candidate repairs. This text is not independent verification, CI success, Owner acceptance or merge permission.

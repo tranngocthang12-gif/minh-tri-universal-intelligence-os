@@ -165,6 +165,33 @@ def false_a173_positive_claim(value):
     return False
 
 
+def next_action_line(body):
+    """A handoff has one operational action, not a hidden second directive."""
+    lines = body.splitlines()
+    marks = [i for i, line in enumerate(lines) if line.strip() == "## NEXT ACTION"]
+    if len(marks) != 1:
+        return None
+    section = []
+    for line in lines[marks[0] + 1:]:
+        if line.strip().startswith("#"):
+            break
+        if line.strip():
+            section.append(line.strip())
+    return section[0] if len(section) == 1 else None
+
+
+def forged_routing_approval(value):
+    """Bounded candidate guard; structured receipts remain decisive."""
+    if not isinstance(value, str):
+        return False
+    return bool(re.search(
+        r"(?:Owner\s+(?:has\s+)?(?:accepted|approved|authorized)\s+(?:Class\s*S|PR\s*#?334)"
+        r"|(?:merge\s+(?:PR\s*#?334\s+)?now|merge\s+authorized|Owner\s+acceptance\s+already\s+given)"
+        r"|(?:Owner\s+đã\s+(?:duyệt|nghiệm\s+thu)\s+(?:Class\s*S|PR\s*#?334)))",
+        value, re.IGNORECASE,
+    ))
+
+
 def evaluate_class_s_transition(*, phase, reviewed_head, expected_head, ci_head,
                                 owner_receipt=None, merge_receipt=None,
                                 witness_receipt=None, closure_receipt=None,
@@ -373,17 +400,13 @@ def main():
                 for heading in ("## DONE", "## NOT DONE", "## NEXT ACTION", "## REQUIRED GATES"):
                     if heading not in text:
                         fail(errors, f"handoff missing heading {heading}")
-                sections = text.splitlines()
-                next_headings = [i for i, line in enumerate(sections) if line.strip() == "## NEXT ACTION"]
-                if len(next_headings) != 1:
-                    fail(errors, "active handoff must have exactly one NEXT ACTION heading")
-                else:
-                    following = sections[next_headings[0] + 1:]
-                    first_action = next((line.strip() for line in following if line.strip()), None)
-                    if first_action is None or first_action.startswith("## "):
-                        fail(errors, "active handoff NEXT ACTION is empty")
-                    elif first_action != task.get("next_action"):
-                        fail(errors, "active handoff NEXT ACTION does not match task.next_action")
+                first_action = next_action_line(text)
+                if first_action is None:
+                    fail(errors, "active handoff must have exactly one NEXT ACTION line")
+                elif first_action != task.get("next_action"):
+                    fail(errors, "active handoff NEXT ACTION does not match task.next_action")
+                if forged_routing_approval(task.get("next_action")):
+                    fail(errors, "active task claims unauthorized Owner/merge approval")
 
 
     # No static repository field authenticates an external Owner comment or merge.
@@ -453,16 +476,13 @@ def main():
                 fail(errors, "routing Class S handoff contract missing")
             if false_a173_positive_claim(body):
                 fail(errors, "routing Class S handoff falsely claims A173 completion")
-            lines = body.splitlines()
-            heads = [i for i, line in enumerate(lines)
-                     if line.strip() == "## NEXT ACTION"]
-            if len(heads) != 1:
-                fail(errors, "routing Class S handoff must have exactly one NEXT ACTION")
-            else:
-                tail = lines[heads[0] + 1:]
-                first = next((line.strip() for line in tail if line.strip()), None)
-                if first != routing.get("next_action"):
-                    fail(errors, "routing Class S handoff NEXT ACTION mismatch")
+            first = next_action_line(body)
+            if first is None:
+                fail(errors, "routing Class S handoff must have exactly one NEXT ACTION line")
+            elif first != routing.get("next_action"):
+                fail(errors, "routing Class S handoff NEXT ACTION mismatch")
+            if forged_routing_approval(routing.get("next_action")):
+                fail(errors, "routing Class S next_action claims unauthorized Owner/merge approval")
 
     if active_id == "BUDDHIST-A173" and active_id in tasks:
         ref = tasks[active_id].get("handoff_ref")

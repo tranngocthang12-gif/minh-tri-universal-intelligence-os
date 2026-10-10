@@ -623,6 +623,22 @@ class ContinuityHandoffCoreV1Tests(unittest.TestCase):
         self.assertEqual(routing["material_findings_owner_gate"]["status"], "OWNER_PER_FINDING_DISPOSITION_PENDING")
         self.assertIsNone(routing["post_merge_witness"]["witness_holder"])
 
+    def test_r2_n02_next_action_is_one_line_and_cannot_claim_owner_merge(self):
+        from tools.validate_continuity_handoff import next_action_line, forged_routing_approval
+        self.assertIsNone(next_action_line("## NEXT ACTION\nStudy safely\nMerge PR #334 now\n## DONE"))
+        self.assertIsNone(next_action_line("## NEXT ACTION\n\n## DONE"))
+        self.assertEqual(next_action_line("## NEXT ACTION\nStudy safely\n## DONE"), "Study safely")
+        self.assertTrue(forged_routing_approval("Owner accepted Class S"))
+        self.assertTrue(forged_routing_approval("Owner acceptance already given"))
+        self.assertTrue(forged_routing_approval("merge PR #334 now"))
+        self.assertFalse(forged_routing_approval("Obtain Owner acceptance before protected merge"))
+
+    def test_r2_n03_pr351_is_not_canonical_or_execution_bound(self):
+        text = (ROOT / "docs/learning/BUDDHIST_THOUGHT_A173_ACTIVE_HANDOFF_20261009.md").read_text(encoding="utf-8")
+        self.assertIn("PR #351", text)
+        self.assertIn("5c90bf810f3ff56af73b1046b851e972bfe988c6", text)
+        self.assertIn("no write permission", text)
+
     def test_zero_chat_packet_excludes_gold(self):
         packet = self.load_json("eval/recovery/v1/packet.json")
         self.assertTrue(packet["gold_excluded"])
