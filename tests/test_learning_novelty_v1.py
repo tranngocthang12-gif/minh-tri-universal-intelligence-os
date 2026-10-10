@@ -185,7 +185,9 @@ class NoveltyGateTests(unittest.TestCase):
         b = brief()
         b["known_claim_keys"] = []
         b["known_primary_locators"] = []
-        r = assess_learning_novelty(b, new_attempt())
+        proposed = new_attempt()
+        proposed["claim_keys_reused"] = []
+        r = assess_learning_novelty(b, proposed)
         self.assertTrue(r["candidate_delta_eligible"])
 
     def test_19_restatement_with_new_locus_is_contradictory(self):
